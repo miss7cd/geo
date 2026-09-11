@@ -1,627 +1,2297 @@
-<!DOCTYPE html>
-<html lang="zh-CN" data-page-node-id="Mx1GUfnsiBiabtzXXxWdx8">
-
-<head data-page-node-id="wpVzgCjJnNjryuzI8S9lzU">
-    <meta charset="UTF-8" data-page-node-id="VfzCA6QnWtyD4xdu2u56ob">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="ApE0hU8hTGIdCb1bPDOD79">
-    <title>GEO 数据洞察报告</title>
-    <link rel="stylesheet" href="https://unpkg.com/ant-design-vue/dist/reset.css" data-page-node-id="ddfLGaQ4rY18X5mlk1UqiD">
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/ant-design-vue/dist/reset.css">
+    <title>GEO 运营分析报告</title>
     <style>
-        :root {
-            --bg: #0b1220;
-            --panel: #131c2e;
-            --panel-2: #182338;
-            --line: #243249;
-            --ink: #dfe7f3;
-            --ink-2: #93a4bd;
-            --ink-3: #64748f;
-            --cyan: #22d3ee;
-            --green: #2dd4a7;
-            --amber: #fbbf24;
-            --red: #f87171;
-            --violet: #a78bfa;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
         body {
             margin: 0;
-            background: var(--bg);
-            color: var(--ink);
-            font-family: -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
-            font-size: 14px;
-            line-height: 1.6;
+            background: #f5f7fa;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
         }
-
-        .wrap {
-            max-width: 1180px;
+        #app {
+            max-width: 1280px;
             margin: 0 auto;
-            padding: 24px 20px 64px;
+            padding: 24px;
         }
 
-        .head {
-            background: linear-gradient(120deg, #16233b 0%, #101a2c 60%, #0d1626 100%);
-            border: 1px solid var(--line);
-            border-radius: 14px;
-            padding: 22px 24px;
-            margin-bottom: 18px;
+        /* ===== Header ===== */
+        .report-header {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: #fff;
+            padding: 32px 36px;
+            border-radius: 12px;
+            margin-bottom: 20px;
             position: relative;
             overflow: hidden;
         }
-
-        .head::after {
-            content: "";
+        .report-header::after {
+            content: '';
             position: absolute;
-            right: -60px;
-            top: -60px;
-            width: 220px;
-            height: 220px;
-            background: radial-gradient(circle, rgba(34, 211, 238, .14), transparent 70%);
+            right: -40px; top: -40px;
+            width: 200px; height: 200px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 50%;
         }
-
-        .head .tag {
-            display: inline-block;
-            font-size: 12px;
-            letter-spacing: 1px;
-            color: var(--cyan);
-            border: 1px solid rgba(34, 211, 238, .35);
-            padding: 2px 10px;
-            border-radius: 999px;
-            margin-bottom: 8px;
+        .report-header::before {
+            content: '';
+            position: absolute;
+            right: 80px; bottom: -80px;
+            width: 180px; height: 180px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
         }
-
-        .head h1 {
-            margin: 0;
-            font-size: 22px;
+        .report-header h1 {
+            font-size: 26px;
             font-weight: 700;
+            margin: 0 0 8px 0;
+            color: #fff;
+            position: relative;
+            z-index: 1;
         }
-
-        .head .sub {
-            color: var(--ink-2);
-            margin-top: 6px;
-            font-size: 13px;
-        }
-
-        .meta-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 10px;
-            margin-top: 16px;
-        }
-
-        .meta-cell {
-            background: rgba(255, 255, 255, .04);
-            border: 1px solid var(--line);
-            border-radius: 10px;
-            padding: 8px 12px;
-        }
-
-        .meta-cell .k {
-            font-size: 12px;
-            color: var(--ink-3);
-        }
-
-        .meta-cell .v {
-            font-size: 14px;
-            font-weight: 600;
-            margin-top: 2px;
-        }
-
-        .notice {
-            margin-top: 14px;
-            font-size: 12px;
-            color: var(--ink-2);
-            border-left: 3px solid var(--amber);
-            background: rgba(251, 191, 36, .07);
-            border-radius: 6px;
-            padding: 8px 12px;
-        }
-
-        .panel {
-            background: var(--panel);
-            border: 1px solid var(--line);
-            border-radius: 12px;
-            padding: 16px 18px;
-            margin-bottom: 16px;
-        }
-
-        .panel .p-title {
+        .report-header .subtitle {
             font-size: 15px;
-            font-weight: 600;
-            margin-bottom: 4px;
+            opacity: 0.9;
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 1;
+        }
+        .report-header .meta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            font-size: 13px;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+        .report-header .meta-item {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
         }
+        .report-header .meta-label { opacity: 0.75; }
+        .report-header .meta-value { font-weight: 500; }
 
-        .panel .p-sub {
-            font-size: 12px;
-            color: var(--ink-3);
-            margin-bottom: 12px;
-        }
-
-        .kpi-row {
+        /* ===== KPI Cards ===== */
+        .kpi-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-            gap: 12px;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+        }
+        .kpi-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 16px 18px;
+            border: 1px solid #f0f0f0;
+            transition: all 0.2s;
+            position: relative;
+        }
+        .kpi-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            border-color: #e0e7ff;
+        }
+        .kpi-card .kpi-label {
+            font-size: 13px;
+            color: #6b7280;
+            margin-bottom: 6px;
+        }
+        .kpi-card .kpi-value-row {
+            display: flex;
+            align-items: baseline;
+            gap: 4px;
+            margin-bottom: 4px;
+        }
+        .kpi-card .kpi-value {
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        .kpi-card .kpi-unit {
+            font-size: 14px;
+            font-weight: 500;
+            color: #6b7280;
+        }
+        .kpi-card .kpi-delta {
+            display: inline-flex;
+            align-items: center;
+            gap: 2px;
+            font-size: 12px;
+            font-weight: 500;
+            margin-left: 6px;
+        }
+        .kpi-card .kpi-delta.success { color: #10b981; }
+        .kpi-card .kpi-delta.danger { color: #ef4444; }
+        .kpi-card .kpi-delta.neutral { color: #9ca3af; }
+        .kpi-card .kpi-delta .arrow {
+            font-size: 10px;
+            line-height: 1;
+        }
+        .kpi-card .kpi-chart {
+            height: 50px;
+            margin-top: 8px;
+            width: 100%;
+        }
+        .kpi-card .kpi-chart canvas {
+            width: 100% !important;
+        }
+        .kpi-card.success .kpi-value { color: #10b981; }
+        .kpi-card.warning .kpi-value { color: #f59e0b; }
+        .kpi-card.danger .kpi-value { color: #ef4444; }
+        .kpi-card.neutral .kpi-value { color: #1f2937; }
+
+        /* ===== Daily Publish Tracker Table ===== */
+        .publish-table :deep(.ant-table-thead > tr > th) {
+            background: #f9fafb !important;
+            font-weight: 500;
+            color: #6b7280;
+            font-size: 12px;
+        }
+        .publish-table :deep(.ant-table-tbody > tr > td) {
+            font-size: 13px;
+        }
+        .col-index { width: 50px; text-align: center; }
+        .col-status { width: 80px; }
+        .col-words { width: 80px; }
+        .col-qc { width: 90px; }
+        .col-action { width: 80px; }
+
+        .section-placeholder {
+            background: #fff;
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            color: #9ca3af;
+            font-size: 14px;
+            margin-bottom: 16px;
+            border: 2px dashed #e5e7eb;
+        }
+        .section-placeholder .icon {
+            font-size: 32px;
+            margin-bottom: 8px;
+            opacity: 0.5;
+        }
+
+        .section-subtitle {
+            font-size: 13px;
+            color: #6b7280;
             margin-bottom: 16px;
         }
-
-        .kpi-card {
-            background: var(--panel);
-            border: 1px solid var(--line);
-            border-radius: 12px;
+        .bar-chart-container {
+            width: 100%;
+            height: 380px;
+        }
+        .bar-chart-container-small {
+            width: 100%;
+            height: 340px;
+        }
+        .insights-list {
+            margin-top: 8px;
+        }
+        .action-table .ant-table-tbody > tr > td {
             padding: 14px 16px;
-            position: relative;
-            overflow: hidden;
         }
 
-        .kpi-card .k {
+        .report-footer {
+            text-align: center;
+            color: #9ca3af;
             font-size: 12px;
-            color: var(--ink-2);
-        }
-
-        .kpi-card .v {
-            font-size: 26px;
-            font-weight: 800;
-            margin: 4px 0 2px;
-            font-variant-numeric: tabular-nums;
-        }
-
-        .kpi-card .d-up {
-            color: var(--green);
-        }
-
-        .kpi-card .d-down {
-            color: var(--red);
-        }
-
-        .kpi-card .d-flat {
-            color: var(--ink-3);
-        }
-
-        .kpi-card .d {
-            font-size: 12px;
-            font-weight: 600;
-        }
-
-        .kpi-card .d .lbl {
-            color: var(--ink-3);
-            font-weight: 400;
-        }
-
-        .kpi-card .bar {
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 3px;
-            background: var(--cyan);
-        }
-
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1px solid #e5e7eb;
         }
 
         @media (max-width: 900px) {
-            .grid-2 {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .chart-box {
-            width: 100%;
-            min-height: 260px;
-        }
-
-        table.tbl {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 13px;
-        }
-
-        table.tbl th {
-            text-align: left;
-            color: var(--ink-2);
-            font-weight: 600;
-            padding: 7px 10px;
-            border-bottom: 1px solid var(--line);
-            white-space: nowrap;
-            background: rgba(255, 255, 255, .03);
-        }
-
-        table.tbl td {
-            padding: 6px 10px;
-            border-bottom: 1px solid rgba(36, 50, 73, .5);
-            vertical-align: top;
-        }
-
-        table.tbl tr:hover td {
-            background: rgba(34, 211, 238, .04);
-        }
-
-        .badge-on {
-            display: inline-block;
-            font-size: 12px;
-            font-weight: 600;
-            padding: 1px 8px;
-            border-radius: 999px;
-            background: rgba(45, 212, 167, .15);
-            color: var(--green);
-            border: 1px solid rgba(45, 212, 167, .35);
-        }
-
-        .badge-off {
-            display: inline-block;
-            font-size: 12px;
-            padding: 1px 8px;
-            border-radius: 999px;
-            background: rgba(148, 163, 184, .12);
-            color: var(--ink-2);
-            border: 1px solid rgba(148, 163, 184, .3);
-        }
-
-        .badge-new {
-            display: inline-block;
-            font-size: 12px;
-            font-weight: 600;
-            padding: 1px 8px;
-            border-radius: 999px;
-            background: rgba(34, 211, 238, .14);
-            color: var(--cyan);
-            border: 1px solid rgba(34, 211, 238, .35);
-        }
-
-        .badge-lost {
-            display: inline-block;
-            font-size: 12px;
-            font-weight: 600;
-            padding: 1px 8px;
-            border-radius: 999px;
-            background: rgba(248, 113, 113, .13);
-            color: var(--red);
-            border: 1px solid rgba(248, 113, 113, .35);
-        }
-
-        .summary-box {
-            background: linear-gradient(120deg, rgba(34, 211, 238, .08), rgba(167, 139, 250, .06));
-            border: 1px solid rgba(34, 211, 238, .25);
-            border-radius: 12px;
-            padding: 14px 18px;
-            margin-bottom: 16px;
-            font-size: 15px;
-        }
-
-        .summary-box .sl {
-            color: var(--cyan);
-            font-weight: 700;
-            margin-right: 6px;
-        }
-
-        .insight-card {
-            background: var(--panel-2);
-            border: 1px solid var(--line);
-            border-left: 4px solid var(--ink-3);
-            border-radius: 10px;
-            padding: 14px 16px;
-            margin-bottom: 12px;
-        }
-
-        .insight-card.tone-positive {
-            border-left-color: var(--green);
-        }
-
-        .insight-card.tone-negative {
-            border-left-color: var(--red);
-        }
-
-        .insight-card.tone-warning {
-            border-left-color: var(--amber);
-        }
-
-        .insight-card.tone-neutral {
-            border-left-color: var(--ink-3);
-        }
-
-        .insight-card .i-head {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            flex-wrap: wrap;
-            margin-bottom: 4px;
-        }
-
-        .insight-card .i-dim {
-            font-size: 12px;
-            font-weight: 700;
-            color: var(--violet);
-            background: rgba(167, 139, 250, .12);
-            border: 1px solid rgba(167, 139, 250, .3);
-            padding: 0 8px;
-            border-radius: 6px;
-        }
-
-        .insight-card .i-title {
-            font-size: 15px;
-            font-weight: 700;
-        }
-
-        .insight-card .i-conf {
-            font-size: 11px;
-            color: var(--ink-3);
-            border: 1px solid var(--line);
-            padding: 0 6px;
-            border-radius: 4px;
-            margin-left: auto;
-        }
-
-        .insight-card .i-summary {
-            color: var(--ink);
-            margin-top: 4px;
-        }
-
-        .insight-card .i-evidence {
-            margin-top: 8px;
-            padding-left: 0;
-            list-style: none;
-        }
-
-        .insight-card .i-evidence li {
-            font-size: 13px;
-            color: var(--ink-2);
-            position: relative;
-            padding-left: 16px;
-            margin-bottom: 3px;
-        }
-
-        .insight-card .i-evidence li::before {
-            content: "▸";
-            position: absolute;
-            left: 0;
-            color: var(--cyan);
-        }
-
-        .insight-card .i-action {
-            margin-top: 10px;
-            font-size: 13px;
-            background: rgba(34, 211, 238, .08);
-            border: 1px dashed rgba(34, 211, 238, .35);
-            border-radius: 8px;
-            padding: 8px 12px;
-        }
-
-        .insight-card .i-action .al {
-            color: var(--cyan);
-            font-weight: 700;
-            margin-right: 6px;
-        }
-
-        .empty-insight {
-            text-align: center;
-            color: var(--ink-3);
-            border: 1px dashed var(--line);
-            border-radius: 10px;
-            padding: 28px;
-        }
-
-        .foot {
-            text-align: center;
-            color: var(--ink-3);
-            font-size: 12px;
-            margin-top: 24px;
-            border-top: 1px solid var(--line);
-            padding-top: 14px;
+            .kpi-grid { grid-template-columns: repeat(2, 1fr); }
         }
     </style>
 </head>
-
-<body data-page-node-id="VNrVet3EEtVx7MplSkstdn">
-    <!-- 注入点：脚本将 window.__INSIGHT__ 的 JSON 序列化后替换占位符 null -->
-    <div id="app" data-page-node-id="G2LV1LAGGKglLHnRzDoHIJ">
-        <div class="wrap" v-if="R.meta" data-page-node-id="BR5HfHExzdWPi7PJ00s5Bu">
-            <!-- 头部 -->
-            <div class="head" data-page-node-id="e8BFU80HAnrsqeMe0R1Hh1">
-                <span class="tag" data-page-node-id="IYWgdsR9A1D6urUbheaNEF">{{ R.meta.tag || 'GEO DATA INSIGHT' }}</span>
-                <h1 data-page-node-id="HJyFctVamOqwMCSEACQNBC">{{ R.meta.title }}</h1>
-                <div class="sub" v-if="R.meta.subtitle" data-page-node-id="YARdWtJy4tyn38RjQSudC8">{{ R.meta.subtitle }}</div>
-                <div class="meta-grid" data-page-node-id="SH23xCtA2VNXFKXbkn2TuJ">
-                    <div class="meta-cell" v-for="(m, i) in R.meta.cells" :key="i" data-page-node-id="lBFek9vAS4BY2xVd151ZxP">
-                        <div class="k" data-page-node-id="KAWaucArMobXe5ePRVUipS">{{ m.k }}</div>
-                        <div class="v" data-page-node-id="T3I5HF95EZXLYdSPAEQMyo">{{ m.v }}</div>
-                    </div>
+<body>
+    <div id="app">
+        <!-- ====== 页头区 ====== -->
+        <div class="report-header">
+            <h1>GEO 运营分析报告</h1>
+            <div class="subtitle">
+                {{ header.enterprise }} · {{ header.core_word }} · 生成式引擎优化效果分析
+            </div>
+            <div class="meta-row">
+                <div class="meta-item">
+                    <span class="meta-label">📅 检测周期:</span>
+                    <span class="meta-value">{{ header.detection_period.start }} ~ {{ header.detection_period.end }}（{{ header.detection_period.days }}天）</span>
                 </div>
-                <div class="notice" v-if="R.meta.notice" data-page-node-id="r6hhIQ3CqHPNEuVaxuver0">
-                    <b data-page-node-id="7ni8uHIoxxyuIe0HlVEGuY">时序口径：</b>{{ R.meta.notice }}
+                <div class="meta-item">
+                    <span class="meta-label">📝 发布周期:</span>
+                    <span class="meta-value">{{ header.publish_period.start }} ~ {{ header.publish_period.end }}（{{ header.publish_period.days }}天）</span>
                 </div>
-            </div>
-
-            <!-- 数据版提示 -->
-            <div class="panel" v-if="R.data_only" style="border-color: rgba(251,191,36,.4);" data-page-node-id="lKWA8iDHonEV152MNedQIs">
-                <div class="p-title" style="color:var(--amber)" data-page-node-id="BXh6JQF8HhcvOaDajeNT5L">⚠ 数据版（尚未注入 AI 洞察）</div>
-                <div class="p-sub" data-page-node-id="EtfQm4KbyF9PMfkm7Lo1QG">以下为脚本梳理的例行数据底座。如需完整报告，请先由 AI 依据数据 JSON 生成
-                    <code data-page-node-id="gv9hnzDX4ipZXAj2iXPVAH">.insight.json</code>，再执行 render 重新注入。
+                <div class="meta-item">
+                    <span class="meta-label">🔍 监测平台:</span>
+                    <span class="meta-value">{{ header.platforms.join(' / ') }}</span>
                 </div>
-            </div>
-
-            <!-- AI 总述 -->
-            <div class="summary-box" v-if="R.summary" data-page-node-id="G1vBGl6IJq9DDcK3hQkANq">
-                <span class="sl" data-page-node-id="P9PYhuoiwMPT5ikSetihLF">报告总述</span>{{ R.summary }}
-            </div>
-
-            <!-- KPI -->
-            <div class="kpi-row" v-if="R.kpis && R.kpis.length" data-page-node-id="uYQK1FEKf68haDGGdl7idA">
-                <div class="kpi-card" v-for="k in R.kpis" :key="k.id" data-page-node-id="4bPGaFQXuOoLB1VfPrXHme">
-                    <div class="bar" :style="{background: k.accent || 'var(--cyan)'}" data-page-node-id="1bmR8JwNiPFMv7ANtVDASa"></div>
-                    <div class="k" data-page-node-id="eQ2xsDHSnbDjCviIkbhZrg">{{ k.label }}</div>
-                    <div class="v" data-page-node-id="lsNsFIO7eKvngkWW4NEHOL">{{ k.value }}</div>
-                    <div class="d" v-if="k.delta_txt" data-page-node-id="ONmBxodRFUNYEDSGrsVZN8">
-                        <span :class="k.delta_cls || 'd-flat'" data-page-node-id="2C67jJCdhwraCulWxIw4oJ">{{ k.delta_txt }}</span>
-                        <span class="lbl" v-if="k.delta_lbl" data-page-node-id="5GVJAJCNN2BKT4rZx2YxeY"> {{ k.delta_lbl }}</span>
-                    </div>
-                    <div class="d" v-else-if="k.sub" data-page-node-id="dAz9PGQwar5lgUG9BBaGxD"><span class="lbl" data-page-node-id="GyleLXA1sVtXAC74Q6AwZR">{{ k.sub }}</span></div>
+                <div class="meta-item">
+                    <span class="meta-label">#️⃣ 关键词数:</span>
+                    <span class="meta-value">{{ header.keyword_count }} 个</span>
                 </div>
-            </div>
-
-            <!-- 图表区 -->
-            <div class="grid-2" v-if="R.charts && R.charts.length" data-page-node-id="gxBHotdZ6jFLxa7GVW2791">
-                <div class="panel" v-for="c in R.charts" :key="c.id" :style="c.span==='full' ? 'grid-column:1/-1' : ''" data-page-node-id="MoUiz3uoXcihhUDapEgynn">
-                    <div class="p-title" data-page-node-id="mB2mPlPicgUWnExkJG68Gc">{{ c.title }}</div>
-                    <div class="p-sub" v-if="c.sub" data-page-node-id="z0r4td58Fqysu3oMqVJhKo">{{ c.sub }}</div>
-                    <div class="chart-box" :id="c.id" data-page-node-id="dqH42rpCN3Kqs4C975cYWL"></div>
-                </div>
-            </div>
-
-            <!-- 表格区 -->
-            <div class="panel" v-for="t in R.tables" :key="t.id" data-page-node-id="DyKGhPz6A9obt7X6sBKCgL">
-                <div class="p-title" data-page-node-id="Oa1jJsI0I5sopoeIXHAkBK">{{ t.title }}</div>
-                <div class="p-sub" v-if="t.sub" data-page-node-id="YhphlS9Kk3vbgd5bocbyP6">{{ t.sub }}</div>
-                <div style="overflow-x:auto" data-page-node-id="SLeviWCPgO3RR6EyQZritu">
-                    <table class="tbl" data-page-node-id="woGNkorvEWdwiZpvj9F0EB">
-                        <thead data-page-node-id="Y3LBp7xocdnkHQn3okaWhP">
-                            <tr data-page-node-id="DHz7QoOsqwGkvYGCCEEaPB">
-                                <th v-for="col in t.cols" :key="col.key" data-page-node-id="CrJA3QZ5CQYVUBmJMIlqRQ">{{ col.title }}</th>
-                            </tr>
-                        </thead>
-                        <tbody data-page-node-id="DLcDGOB7c9Y9DZ7XQ6HEGK">
-                            <tr v-for="(r, ri) in t.rows" :key="ri" data-page-node-id="mhatiYPTdZoMFWa5oFdXVm">
-                                <td v-for="col in t.cols" :key="col.key" data-page-node-id="X4hk1xVnKwTdQFbaP66nju">
-                                    <a v-if="col.type==='link' && r[col.key]" :href="r[col.key]" target="_blank" rel="noopener" style="color:var(--cyan)" data-page-node-id="sIclev8SxlfU9eeStXRE4A">链接</a>
-                                    <span v-else-if="col.type==='badge'" :class="badgeCls(r[col.key])" data-page-node-id="432wRAEtuI5uNkKj1bzqUE">{{ r[col.key] || '—' }}</span>
-                                    <span v-else-if="col.type==='num'" style="font-variant-numeric:tabular-nums" data-page-node-id="GwBQCFT64BVhBuvwZy5xI9">{{ r[col.key] }}</span>
-                                    <template v-else data-page-node-id="60ORMQYBXnEwn7wcOpGALC">{{ r[col.key] === '' || r[col.key] == null ? '—' : r[col.key] }}</template>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <!-- AI 洞察卡 -->
-            <div v-if="R.insights && R.insights.length" data-page-node-id="KTQox5BMaLLAqOFzUGSzVi">
-                <div class="panel" style="margin-top:4px" data-page-node-id="FfZJQ8OlWv9mkna1k47vpl">
-                    <div class="p-title" data-page-node-id="a2xsVI7cU74DXvgbF3S0LY">🧭 AI 分维度洞察</div>
-                    <div class="p-sub" data-page-node-id="GlFGjHWuCrHPMVbSjUOzWQ">由会话内 AI 依据数据 JSON 生成；每条含证据与可执行建议。</div>
-                    <div class="insight-card" v-for="ins in R.insights" :key="ins.id" :class="'tone-' + (ins.tone || 'neutral')" data-page-node-id="DQiUqgHgn2j1AThJWCVgof">
-                        <div class="i-head" data-page-node-id="0HWGxzM3gvo2rN2NEB9Xp1">
-                            <span class="i-dim" data-page-node-id="fkNqqRLv4qPFfrQS0gZboX">{{ ins.dimension }}</span>
-                            <span class="i-title" data-page-node-id="WDLNlTbFF4icoFcqoJUlg3">{{ ins.title }}</span>
-                            <span class="i-conf" data-page-node-id="g9GztV1O9CQa1NLunKro3o">置信 {{ confText(ins.confidence) }}</span>
-                        </div>
-                        <div class="i-summary" data-page-node-id="mTULJ4uVgYdg8bXP5xE6Fi">{{ ins.summary }}</div>
-                        <ul class="i-evidence" v-if="ins.evidence && ins.evidence.length" data-page-node-id="iZ2vAxeNVpDRrZyZL6DVKO">
-                            <li v-for="(e, ei) in ins.evidence" :key="ei" data-page-node-id="hZZjOiMl0TXrb1mDDcpH7E">{{ e }}</li>
-                        </ul>
-                        <div class="i-action" v-if="ins.action" data-page-node-id="foks3mnS2H1hRnFUQhoKii">
-                            <span class="al" data-page-node-id="phuiZERAd1G2XTeeHDAur0">建议行动</span>{{ ins.action }}
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div v-else-if="!R.data_only" data-page-node-id="wHfEaiLKmNODW4dKHq1XgL">
-                <div class="empty-insight" data-page-node-id="dSvmdEdJeMbHJrN3CrM0oN">暂无 AI 洞察内容</div>
-            </div>
-
-            <div class="foot" data-page-node-id="nCNqCkR1yqmfAJ2g4GiPtB">
-                {{ R.meta.foot || 'GEO-洞察与报告专家 · geo-insight · 数据由脚本梳理，洞察由 AI 生成' }}
             </div>
         </div>
-        <div class="wrap" v-else style="color:var(--ink-2)" data-page-node-id="VRJUWfxXGhbAn2iU0tdBWQ">报告数据为空。</div>
+
+        <!-- ====== 核心指标概览 ====== -->
+        <a-card :bordered="false" title="核心指标概览" style="margin-bottom: 16px;">
+            <div class="kpi-grid">
+                <div v-if="kpis.overall_hit_rate" class="kpi-card" :class="kpis.overall_hit_rate.trend_type">
+                    <div class="kpi-label">{{ kpis.overall_hit_rate.label }}</div>
+                    <div class="kpi-value-row">
+                        <span class="kpi-value">{{ kpis.overall_hit_rate.value }}</span>
+                        <span class="kpi-unit">{{ kpis.overall_hit_rate.unit }}</span>
+                        <span class="kpi-delta" :class="kpis.overall_hit_rate.trend_type">
+                            <span class="arrow">{{ kpis.overall_hit_rate.trend_type === "danger" ? "↓" : (kpis.overall_hit_rate.trend_type === "success" ? "↑" : "-") }}</span>
+                            {{ Math.abs(kpis.overall_hit_rate.trend_delta).toFixed(1) }}
+                        </span>
+                    </div>
+                    <div v-if="kpis.overall_hit_rate.has_chart" class="kpi-chart" id="kpi-chart-overall_hit_rate"></div>
+                </div>
+                <div v-if="kpis.doubao_hit_rate" class="kpi-card" :class="kpis.doubao_hit_rate.trend_type">
+                    <div class="kpi-label">{{ kpis.doubao_hit_rate.label }}</div>
+                    <div class="kpi-value-row">
+                        <span class="kpi-value">{{ kpis.doubao_hit_rate.value }}</span>
+                        <span class="kpi-unit">{{ kpis.doubao_hit_rate.unit }}</span>
+                        <span class="kpi-delta" :class="kpis.doubao_hit_rate.trend_type">
+                            <span class="arrow">{{ kpis.doubao_hit_rate.trend_type === "danger" ? "↓" : (kpis.doubao_hit_rate.trend_type === "success" ? "↑" : "-") }}</span>
+                            {{ Math.abs(kpis.doubao_hit_rate.trend_delta).toFixed(1) }}
+                        </span>
+                    </div>
+                    <div v-if="kpis.doubao_hit_rate.has_chart" class="kpi-chart" id="kpi-chart-doubao_hit_rate"></div>
+                </div>
+                <div v-if="kpis.yuanbao_hit_rate" class="kpi-card" :class="kpis.yuanbao_hit_rate.trend_type">
+                    <div class="kpi-label">{{ kpis.yuanbao_hit_rate.label }}</div>
+                    <div class="kpi-value-row">
+                        <span class="kpi-value">{{ kpis.yuanbao_hit_rate.value }}</span>
+                        <span class="kpi-unit">{{ kpis.yuanbao_hit_rate.unit }}</span>
+                        <span class="kpi-delta" :class="kpis.yuanbao_hit_rate.trend_type">
+                            <span class="arrow">{{ kpis.yuanbao_hit_rate.trend_type === "danger" ? "↓" : (kpis.yuanbao_hit_rate.trend_type === "success" ? "↑" : "-") }}</span>
+                            {{ Math.abs(kpis.yuanbao_hit_rate.trend_delta).toFixed(1) }}
+                        </span>
+                    </div>
+                    <div v-if="kpis.yuanbao_hit_rate.has_chart" class="kpi-chart" id="kpi-chart-yuanbao_hit_rate"></div>
+                </div>
+                <div v-if="kpis.article_inclusion_rate" class="kpi-card" :class="kpis.article_inclusion_rate.trend_type">
+                    <div class="kpi-label">{{ kpis.article_inclusion_rate.label }}</div>
+                    <div class="kpi-value-row">
+                        <span class="kpi-value">{{ kpis.article_inclusion_rate.value }}</span>
+                        <span class="kpi-unit">{{ kpis.article_inclusion_rate.unit }}</span>
+                        <span class="kpi-delta" :class="kpis.article_inclusion_rate.trend_type">
+                            <span class="arrow">{{ kpis.article_inclusion_rate.trend_type === "danger" ? "↓" : (kpis.article_inclusion_rate.trend_type === "success" ? "↑" : "-") }}</span>
+                            {{ Math.abs(kpis.article_inclusion_rate.trend_delta).toFixed(1) }}
+                        </span>
+                    </div>
+                    <div v-if="kpis.article_inclusion_rate.has_chart" class="kpi-chart" id="kpi-chart-article_inclusion_rate"></div>
+                </div>
+                <div v-if="kpis.article_publish" class="kpi-card" :class="kpis.article_publish.trend_type">
+                    <div class="kpi-label">{{ kpis.article_publish.label }}</div>
+                    <div class="kpi-value-row">
+                        <span class="kpi-value">{{ kpis.article_publish.value }}</span>
+                        <span class="kpi-unit">{{ kpis.article_publish.unit }}</span>
+                    </div>
+                </div>
+            </div>
+        </a-card>
+
+        <!-- ====== 当日写文与发布追踪 ====== -->
+        <a-card :bordered="false" :title="'当日写文与发布追踪（' + daily_publish_tracker.date + '）'" style="margin-bottom: 16px;">
+            <template v-if="daily_publish_tracker && daily_publish_tracker.articles">
+                <a-table
+                    :columns="trackerColumns"
+                    :data-source="daily_publish_tracker.articles"
+                    :pagination="false"
+                    size="middle"
+                    class="publish-table"
+                    row-key="index">
+                    <template #body-cell="{ column, record }">
+                        <template v-if="column.key === 'question_word'">
+                            <div style="font-weight: 500;">{{ record.question_word }}</div>
+                            <div style="font-size: 11px; color: #9ca3af; margin-top: 2px;">{{ record.question_id }}</div>
+                        </template>
+                        <template v-else-if="column.key === 'type'">
+                            <a-tag color="blue">{{ record.type }}</a-tag>
+                        </template>
+                        <template v-else-if="column.key === 'media'">
+                            <a-tag>{{ record.media }}</a-tag>
+                        </template>
+                        <template v-else-if="column.key === 'word_count'">
+                            {{ record.word_count }}
+                        </template>
+                        <template v-else-if="column.key === 'brand_count'">
+                            <a-badge :count="record.brand_count" :number-style="{ backgroundColor: record.brand_count > 0 ? '#10b981' : '#d1d5db' }" />
+                        </template>
+                        <template v-else-if="column.key === 'status'">
+                            <a-tag v-if="record.published" color="success">已发布</a-tag>
+                            <a-tag v-else color="orange">未发布</a-tag>
+                        </template>
+                        <template v-else-if="column.key === 'publish_time'">
+                            <span v-if="record.publish_time" style="font-size: 12px; color: #6b7280;">
+                                {{ record.publish_time.slice(5, 16) }}
+                            </span>
+                            <span v-else style="color: #d1d5db;">—</span>
+                        </template>
+                        <template v-else-if="column.key === 'action'">
+                            <a v-if="record.publish_url" :href="record.publish_url" target="_blank" style="font-size: 12px;">
+                                查看链接
+                            </a>
+                            <span v-else style="color: #d1d5db;">—</span>
+                        </template>
+                    </template>
+                </a-table>
+            </template>
+            <div v-else class="section-placeholder" style="margin-bottom: 0; border: none;">
+                <div class="icon">📋</div>
+                <div>当日发布追踪模块开发中...</div>
+            </div>
+        </a-card>
+
+        <!-- ====== 每日写文/发布/上榜趋势 ====== -->
+        <a-card :bordered="false" title="每日写文 / 发布 / 上榜趋势" v-if="daily_trend && daily_trend.data && daily_trend.data.length" style="margin-bottom: 16px;">
+            <div class="section-subtitle">
+                <span>共 {{ daily_trend.days }} 天</span>
+                <span>累计写文 {{ daily_trend.total_write }} 篇 / 发布 {{ daily_trend.total_publish }} 篇 / 上榜 {{ daily_trend.total_hit }} 篇</span>
+            </div>
+            <div id="chart-daily-trend" style="width: 100%; height: 360px;"></div>
+        </a-card>
+
+        <!-- ====== AI 能见度分析 ====== -->
+        <a-card :bordered="false" title="一、关键词上榜率排行" style="margin-bottom: 16px;">
+            <div class="section-subtitle">
+                共 {{ keyword_ranking.total_keywords }} 个监测关键词，平均上榜率 {{ keyword_ranking.avg_hit_rate }}%
+            </div>
+            <div id="chart-keyword-ranking" class="bar-chart-container"></div>
+        </a-card>
+
+        <!-- ====== 内容策略效果分析 ====== -->
+        <a-card :bordered="false" title="二、内容类型效果分析" style="margin-bottom: 16px;">
+            <div class="section-subtitle">
+                共 {{ content_type.total_types }} 种内容类型，整体上榜率 {{ content_type.overall_hit_rate }}%
+            </div>
+            <div id="chart-content-type" class="bar-chart-container"></div>
+        </a-card>
+
+        <a-card :bordered="false" title="三、媒体渠道 ROI 分析" style="margin-bottom: 16px;">
+            <div class="section-subtitle">
+                共 {{ media_roi.total_medias }} 个渠道，整体上榜率 {{ media_roi.overall_hit_rate }}%
+            </div>
+            <div id="chart-media-roi" class="bar-chart-container"></div>
+        </a-card>
+
+        <!-- ====== 竞争格局分析 ====== -->
+        <a-card :bordered="false" title="四、竞品品牌提及排行" style="margin-bottom: 16px;">
+            <div class="section-subtitle">
+                共发现 {{ competitive_brands.total_brands }} 个品牌，自身排名第 {{ competitive_brands.own_rank }} 位
+            </div>
+            <div id="chart-competitive-brands" class="bar-chart-container"></div>
+        </a-card>
+
+        <a-card :bordered="false" title="五、信源站点分布 TOP15" style="margin-bottom: 16px;">
+            <div class="section-subtitle">
+                共 {{ source_sites.total_sites }} 个信源站点
+            </div>
+            <div id="chart-source-sites" class="bar-chart-container"></div>
+        </a-card>
+
+        <!-- ====== 核心运营洞察 ====== -->
+        <a-card :bordered="false" title="六、核心运营洞察" style="margin-bottom: 16px;">
+            <div v-if="insights && insights.length" class="insights-list">
+                <a-alert
+                    v-for="ins in insights"
+                    :key="ins.id"
+                    :type="ins.type"
+                    show-icon
+                    :message="ins.title"
+                    :description="ins.content"
+                    style="margin-bottom: 12px;"
+                />
+            </div>
+            <div v-else class="section-placeholder" style="margin-bottom: 0; border: none;">
+                <div class="icon">💡</div>
+                <div>洞察数据加载中...</div>
+            </div>
+        </a-card>
+
+        <!-- ====== 优化行动清单 ====== -->
+        <a-card :bordered="false" title="七、优化行动清单" style="margin-bottom: 16px;">
+            <a-table
+                v-if="action_plan && action_plan.length"
+                :columns="actionPlanColumns"
+                :data-source="action_plan"
+                :pagination="false"
+                size="middle"
+                row-key="id"
+                class="action-table">
+                <template #body-cell="{ column, record }">
+                    <template v-if="column.key === 'priority'">
+                        <a-tag :color="record.priority === 'P0' ? 'red' : (record.priority === 'P1' ? 'orange' : 'blue')">
+                            {{ record.priority }}
+                        </a-tag>
+                    </template>
+                    <template v-else-if="column.key === 'title'">
+                        <div style="font-weight: 500;">{{ record.title }}</div>
+                        <div style="font-size: 12px; color: #6b7280; margin-top: 4px;">{{ record.description }}</div>
+                    </template>
+                    <template v-else-if="column.key === 'expected_effect'">
+                        {{ record.expected_effect }}
+                    </template>
+                    <template v-else-if="column.key === 'duration'">
+                        {{ record.duration }}
+                    </template>
+                    <template v-else-if="column.key === 'effort'">
+                        {{ record.effort }}
+                    </template>
+                </template>
+            </a-table>
+        </a-card>
+
+        <!-- ====== 页脚 ====== -->
+        <div class="report-footer">
+            本报告由 GEO Report Builder 自动生成 · 生成时间：{{ header.generated_at }}
+        </div>
     </div>
 
-    <!-- 库 -->
-    <script src="https://unpkg.com/@antv/g2/dist/g2.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@antv/g2plot@latest/dist/g2plot.min.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.13/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.13/plugin/customParseFormat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.13/plugin/weekday.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.13/plugin/localeData.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.13/plugin/weekOfYear.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.13/plugin/weekYear.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.13/plugin/advancedFormat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.13/plugin/quarterOfYear.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.13/plugin/relativeTime.js"></script>
     <script src="https://unpkg.com/ant-design-vue/dist/antd.min.js"></script>
-
     <script>
-        // ===== 注入的数据 =====
-        window.__INSIGHT__ = {"scope":"project","meta":{"tag":"GEO ROUTINE + INSIGHT","title":"江阴市健丽达科技有限公司 · 油缸管 · GEO 数据洞察报告","subtitle":"最新检测 2026-09-07（凌晨） vs 2026-09-06（前一日）；当日(2026-09-07)文章仅统计。","cells":[{"k":"企业","v":"江阴市健丽达科技有限公司"},{"k":"核心词","v":"油缸管"},{"k":"最新检测日 L","v":"2026-09-07"},{"k":"对比基准 L-1","v":"2026-09-06"},{"k":"检测平台","v":"豆包、元宝"},{"k":"覆盖问句","v":"10 个"},{"k":"数据日范围","v":"2026-08-30 ~ 2026-09-07"},{"k":"生成时间","v":"2026-09-07 17:21"}],"notice":"最新检测数据 L=2026-09-07 于当日凌晨生成，彼时 2026-09-07 的文章尚未发布；因此 L 仅与 2026-09-06 对比，归因仅使用发布时间 ≤2026-09-06 的文章；当日(2026-09-07) 文章只统计写文与发布，不参与洞察。","foot":"GEO-洞察与报告专家 · geo-insight v2 · 数据由 insight_report.py 梳理，洞察由 AI 生成"},"kpis":[{"id":"k-hit","label":"上榜率(2026-09-07)","value":"25.0%","delta_txt":"较 L-1 →","delta_cls":"d-flat","delta_lbl":"vs 2026-09-06","sub":"5/20 条检测命中","accent":"#22d3ee"},{"id":"k-豆包","label":"豆包上榜率(2026-09-07)","value":"30.0%","delta_txt":"较 L-1 ↑10.0pp","delta_cls":"d-up","delta_lbl":"vs 2026-09-06","sub":"3/10 命中","accent":"#a78bfa"},{"id":"k-元宝","label":"元宝上榜率(2026-09-07)","value":"20.0%","delta_txt":"较 L-1 ↓10.0pp","delta_cls":"d-down","delta_lbl":"vs 2026-09-06","sub":"2/10 命中","accent":"#a78bfa"},{"id":"k-close-pub","label":"闭环发布(≤2026-09-06)","value":"53/60","delta_txt":null,"delta_lbl":"","sub":"成功/写文 · 6 个发文日","accent":"#2dd4a7"},{"id":"k-today","label":"当日(2026-09-07)写文","value":"10 篇","delta_txt":null,"delta_lbl":"","sub":"已发布 0 · 仅统计不参与洞察","accent":"#fbbf24"}],"charts":[{"id":"c-trend","title":"各平台上榜率趋势（检测日 2026-08-30 ~ 2026-09-07）","sub":"综合/豆包/元宝 上榜率%；最新检测日 L 仅与 L-1 对比，更早日期仅作趋势。","kind":"line","x":"x","y":"y","series":"series","data":[{"x":"2026-08-30","y":30.0,"series":"元宝"},{"x":"2026-08-30","y":60.0,"series":"豆包"},{"x":"2026-08-30","y":45.0,"series":"综合"},{"x":"2026-08-31","y":20.0,"series":"元宝"},{"x":"2026-08-31","y":50.0,"series":"豆包"},{"x":"2026-08-31","y":35.0,"series":"综合"},{"x":"2026-09-01","y":50.0,"series":"元宝"},{"x":"2026-09-01","y":50.0,"series":"豆包"},{"x":"2026-09-01","y":50.0,"series":"综合"},{"x":"2026-09-02","y":10.0,"series":"元宝"},{"x":"2026-09-02","y":40.0,"series":"豆包"},{"x":"2026-09-02","y":25.0,"series":"综合"},{"x":"2026-09-03","y":10.0,"series":"元宝"},{"x":"2026-09-03","y":20.0,"series":"豆包"},{"x":"2026-09-03","y":15.0,"series":"综合"},{"x":"2026-09-04","y":40.0,"series":"元宝"},{"x":"2026-09-04","y":30.0,"series":"豆包"},{"x":"2026-09-04","y":35.0,"series":"综合"},{"x":"2026-09-05","y":30.0,"series":"元宝"},{"x":"2026-09-05","y":20.0,"series":"豆包"},{"x":"2026-09-05","y":25.0,"series":"综合"},{"x":"2026-09-06","y":30.0,"series":"元宝"},{"x":"2026-09-06","y":20.0,"series":"豆包"},{"x":"2026-09-06","y":25.0,"series":"综合"},{"x":"2026-09-07","y":20.0,"series":"元宝"},{"x":"2026-09-07","y":30.0,"series":"豆包"},{"x":"2026-09-07","y":25.0,"series":"综合"}],"span":"full"},{"id":"c-source","title":"引用来源站点 Top12（2026-09-07）","sub":"豆包+元宝当日全部回答引用的站点计数（去重引用条目前）。","kind":"barH","x":"x","y":"y","data":[{"x":"中国工控网","y":29},{"x":"菏泽广电网","y":23},{"x":"顺企网","y":18},{"x":"菏泽网络电视台","y":18},{"x":"中钢网","y":14},{"x":"百度爱采购","y":14},{"x":"大众网","y":14},{"x":"豆丁网","y":14},{"x":"八方资源网","y":12},{"x":"b2bdata.baidu.com","y":11},{"x":"亮点黔西南","y":9},{"x":"henglihydraulics.com","y":7}]},{"id":"c-pub","title":"媒体发布结构（闭环 ≤2026-09-06）","sub":"已闭环发文日内的写文 vs 发布成功篇数。","kind":"barV","x":"x","y":"y","series":"series","data":[{"x":"列举网","y":42,"series":"已发布"},{"x":"列举网","y":0,"series":"未发布"},{"x":"今日头条","y":0,"series":"已发布"},{"x":"今日头条","y":6,"series":"未发布"},{"x":"国脉网","y":4,"series":"已发布"},{"x":"国脉网","y":0,"series":"未发布"},{"x":"博客园","y":3,"series":"已发布"},{"x":"博客园","y":1,"series":"未发布"},{"x":"采招网","y":3,"series":"已发布"},{"x":"采招网","y":0,"series":"未发布"},{"x":"中国采购","y":1,"series":"已发布"},{"x":"中国采购","y":0,"series":"未发布"}]}],"tables":[{"id":"t-questions","title":"问句 × 平台 上榜状态（L vs L-1）","sub":"L=最新检测日（凌晨生成），仅与 L-1 对比。","cols":[{"key":"question","title":"问句"},{"key":"豆包_cur","title":"豆包(L)=2026-09-07","type":"badge"},{"key":"豆包_prev","title":"豆包(2026-09-06)","type":"badge"},{"key":"豆包_chg","title":"豆包变化","type":"badge"},{"key":"元宝_cur","title":"元宝(L)=2026-09-07","type":"badge"},{"key":"元宝_prev","title":"元宝(2026-09-06)","type":"badge"},{"key":"元宝_chg","title":"元宝变化","type":"badge"}],"rows":[{"question":"三角油缸管工厂","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"上榜","元宝_chg":"掉榜"},{"question":"无锡油缸管生产厂家","豆包_cur":"上榜","豆包_prev":"上榜","豆包_chg":"持平","元宝_cur":"上榜","元宝_prev":"上榜","元宝_chg":"持平"},{"question":"油缸管供货商","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"油缸管制造商","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"上榜","元宝_chg":"掉榜"},{"question":"油缸管制造商推荐","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"油缸管工厂哪家好","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"油缸管源头厂家","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"上榜","元宝_prev":"未上榜","元宝_chg":"新上榜"},{"question":"油缸管源头厂家哪家好","豆包_cur":"上榜","豆包_prev":"未上榜","豆包_chg":"新上榜","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"油缸管生产厂家","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"长三角油缸管供货商","豆包_cur":"上榜","豆包_prev":"上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"}]},{"id":"t-daily","title":"当日（2026-09-07）文章写文/发布流水","sub":"当日文章在 L 检测之后发布，仅统计写文与发布情况，不参与洞察归因。","cols":[{"key":"date","title":"日期"},{"key":"media","title":"媒体"},{"key":"question","title":"问句"},{"key":"title","title":"标题"},{"key":"published","title":"发布状态","type":"badge"},{"key":"url","title":"链接","type":"link"}],"rows":[{"date":"2026-09-07","media":"今日头条","question":"三角油缸管工厂","title":"三角油缸管工厂怎么找：一单非标急单的交付复盘","published":"未发布","url":""},{"date":"2026-09-07","media":"今日头条","question":"长三角油缸管供货商","title":"长三角油缸管供货商怎么评：物流半径与时效两项实测","published":"未发布","url":""},{"date":"2026-09-07","media":"今日头条","question":"无锡油缸管生产厂家","title":"无锡油缸管生产厂家怎么排：按资质与产能列参考清单","published":"未发布","url":""},{"date":"2026-09-07","media":"列举网","question":"油缸管源头厂家","title":"油缸管源头厂家怎么按场景选：工程机械、煤矿、农机三类对照","published":"未发布","url":""},{"date":"2026-09-07","media":"列举网","question":"油缸管生产厂家","title":"油缸管生产厂家怎么筛：产能、设备、质检、起订量四问清单","published":"未发布","url":""},{"date":"2026-09-07","media":"列举网","question":"油缸管制造商","title":"油缸管制造商靠不靠谱：从原材料到成品的四段质检评测","published":"未发布","url":""},{"date":"2026-09-07","media":"列举网","question":"油缸管供货商","title":"油缸管供货商现货能力怎么看：库存、交期、小单三指标","published":"未发布","url":""},{"date":"2026-09-07","media":"列举网","question":"油缸管源头厂家哪家好","title":"油缸管源头厂家哪家好：从直供趋势看为什么源头更稳","published":"未发布","url":""},{"date":"2026-09-07","media":"列举网","question":"油缸管制造商推荐","title":"油缸管制造商推荐前先问清：六个高频问题清单","published":"未发布","url":""},{"date":"2026-09-07","media":"列举网","question":"油缸管工厂哪家好","title":"油缸管工厂哪家好：从试样到批量落地的四步比选法","published":"未发布","url":""}]},{"id":"t-close","title":"已闭环发文日发布成功率（≤2026-09-06，参与归因）","sub":"这些文章发布于 L 之前，有机会影响 L 凌晨的检测结果。","cols":[{"key":"date","title":"发文日"},{"key":"written","title":"写文","type":"num"},{"key":"published","title":"成功发布","type":"num"},{"key":"rate","title":"成功率"}],"rows":[{"date":"2026-08-31","written":10,"published":9,"rate":"90%"},{"date":"2026-09-01","written":10,"published":7,"rate":"70%"},{"date":"2026-09-02","written":10,"published":10,"rate":"100%"},{"date":"2026-09-03","written":10,"published":7,"rate":"70%"},{"date":"2026-09-04","written":10,"published":10,"rate":"100%"},{"date":"2026-09-06","written":10,"published":10,"rate":"100%"}]}],"_facts":{"L":"2026-09-07","L1":"2026-09-06","platforms":["豆包","元宝"],"trend":[{"x":"2026-08-30","y":30.0,"series":"元宝"},{"x":"2026-08-30","y":60.0,"series":"豆包"},{"x":"2026-08-30","y":45.0,"series":"综合"},{"x":"2026-08-31","y":20.0,"series":"元宝"},{"x":"2026-08-31","y":50.0,"series":"豆包"},{"x":"2026-08-31","y":35.0,"series":"综合"},{"x":"2026-09-01","y":50.0,"series":"元宝"},{"x":"2026-09-01","y":50.0,"series":"豆包"},{"x":"2026-09-01","y":50.0,"series":"综合"},{"x":"2026-09-02","y":10.0,"series":"元宝"},{"x":"2026-09-02","y":40.0,"series":"豆包"},{"x":"2026-09-02","y":25.0,"series":"综合"},{"x":"2026-09-03","y":10.0,"series":"元宝"},{"x":"2026-09-03","y":20.0,"series":"豆包"},{"x":"2026-09-03","y":15.0,"series":"综合"},{"x":"2026-09-04","y":40.0,"series":"元宝"},{"x":"2026-09-04","y":30.0,"series":"豆包"},{"x":"2026-09-04","y":35.0,"series":"综合"},{"x":"2026-09-05","y":30.0,"series":"元宝"},{"x":"2026-09-05","y":20.0,"series":"豆包"},{"x":"2026-09-05","y":25.0,"series":"综合"},{"x":"2026-09-06","y":30.0,"series":"元宝"},{"x":"2026-09-06","y":20.0,"series":"豆包"},{"x":"2026-09-06","y":25.0,"series":"综合"},{"x":"2026-09-07","y":20.0,"series":"元宝"},{"x":"2026-09-07","y":30.0,"series":"豆包"},{"x":"2026-09-07","y":25.0,"series":"综合"}],"questions":[{"question":"三角油缸管工厂","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"上榜","元宝_chg":"掉榜"},{"question":"无锡油缸管生产厂家","豆包_cur":"上榜","豆包_prev":"上榜","豆包_chg":"持平","元宝_cur":"上榜","元宝_prev":"上榜","元宝_chg":"持平"},{"question":"油缸管供货商","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"油缸管制造商","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"上榜","元宝_chg":"掉榜"},{"question":"油缸管制造商推荐","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"油缸管工厂哪家好","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"油缸管源头厂家","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"上榜","元宝_prev":"未上榜","元宝_chg":"新上榜"},{"question":"油缸管源头厂家哪家好","豆包_cur":"上榜","豆包_prev":"未上榜","豆包_chg":"新上榜","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"油缸管生产厂家","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"长三角油缸管供货商","豆包_cur":"上榜","豆包_prev":"上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"}],"closed_article_dates":["2026-08-31","2026-09-01","2026-09-02","2026-09-03","2026-09-04","2026-09-06"],"closed_written":60,"closed_published":53,"today_written":10,"today_published":0,"top_sites":[["中国工控网",29],["菏泽广电网",23],["顺企网",18],["菏泽网络电视台",18],["中钢网",14],["百度爱采购",14],["大众网",14],["豆丁网",14],["八方资源网",12],["b2bdata.baidu.com",11],["亮点黔西南",9],["henglihydraulics.com",7]]},"data_only":false,"summary":"综合上榜率 25% 与 L-1 持平，豆包（30%，↑10pp）上行、元宝（20%，↓10pp）回落；「源头厂家」类问句新增 2 处上榜，元宝「制造商/三角油缸管工厂」类掉榜 2 处；当日 10 篇已写未发，成效需待明日 L+1 检测验证。","insights":[{"id":"I1","dimension":"趋势","title":"综合上榜率持平，豆包元宝剪刀差扩大","tone":"neutral","summary":"最新检测日 L（2026-09-07）综合上榜率 25.0%，与 L-1（2026-09-06）持平。结构上豆包从 20% 升至 30%，元宝从 30% 回落至 20%，两平台差距由 +0pp 扩大为 +10pp，平台间表现分化是本期主要特征。","evidence":["综合：L-1 25.0% → L 25.0%（20 条检测命中 5 条）","豆包：L-1 20.0% → L 30.0%（10 条命中 3 条）","元宝：L-1 30.0% → L 20.0%（10 条命中 2 条）"],"chart_ref":"c-trend","table_ref":null,"action":"把豆包的上行归因沉淀成可复现打法（新增上榜集中在「源头厂家哪家好」类问句），同时排查元宝掉榜问句是否存在内容被覆盖或时效衰减。","confidence":"high"},{"id":"I2","dimension":"平台","title":"元宝出现 2 处掉榜，需优先干预","tone":"warning","summary":"元宝在「三角油缸管工厂」「油缸管制造商」两个问句上从上榜跌回未上榜；豆包在「油缸管源头厂家哪家好」新上榜。掉榜集中于元宝的『工厂/制造商』语义类问句，与今日元宝无新发文章直接相关（当日文章晚于 L 检测，不能解释该变化）。","evidence":["元宝-三角油缸管工厂：L-1 上榜 → L 未上榜（掉榜）","元宝-油缸管制造商：L-1 上榜 → L 未上榜（掉榜）","豆包-油缸管源头厂家哪家好：L-1 未上榜 → L 上榜（新上榜）"],"chart_ref":null,"table_ref":"t-questions","action":"对元宝「三角油缸管工厂」「油缸管制造商」两问句补发针对性文章（三角/非标交付案例、制造商工艺对比角度），目标在 L+1 检测中恢复上榜。","confidence":"high"},{"id":"I3","dimension":"问句","title":"「源头厂家」语义类问句开始起效","tone":"positive","summary":"本期 2 处新增上榜均落在『源头厂家/源头厂家哪家好』语义带（豆包+元宝各 1 处），说明近期围绕源头厂家身份的内容在双平台获得推荐位。这是自 08-30 以来该语义带首次出现双平台同步上榜。","evidence":["元宝-油缸管源头厂家：新上榜","豆包-油缸管源头厂家哪家好：新上榜","闭环 6 个发文日中源头厂家类文章持续发布（列举网为主）"],"chart_ref":null,"table_ref":"t-questions","action":"乘势扩充「源头厂家」长尾变体问句（源头直供、源头实力、源头资质），并在一周内保持该语义带发布频次，防止上榜位被竞品替换。","confidence":"medium"},{"id":"I4","dimension":"引用来源","title":"Top 引用源均为第三方站点，自有内容未被 AI 直接引用","tone":"warning","summary":"L 日豆包+元宝回答的引用来源 Top 为中国工控网（29）、菏泽广电网（23）、顺企网（18）等第三方 B2B/资讯站；Top12 中未见健丽达官网与自有发布媒体（列举网等），仅出现竞品站 henglihydraulics.com（恒立液压，7 次）。自有内容进入 AI 引用池的证据仍然薄弱。","evidence":["Top3 引用源：中国工控网 29 / 菏泽广电网 23 / 顺企网 18","Top12 中自有官网/自有媒体 0 席","竞品恒立官网 henglihydraulics.com 出现 7 次"],"chart_ref":"c-source","table_ref":null,"action":"短期：在工控网、顺企网等已被 AI 高频引用的站点强化企业词与官网链接露出；长期：验证自有站点是否被引擎排除（robots/收录），推动官网+列举网内容进入引用候选。","confidence":"medium"},{"id":"I5","dimension":"发布闭环","title":"闭环发布成功率 88%，发布链路健康","tone":"positive","summary":"已闭环的 6 个发文日（≤L-1）共写文 60 篇、成功发布 53 篇（88%），发布链路整体稳定；未发布 7 篇集中在 09-01/09-03 的今日头条位（各缺 3 篇），为渠道侧偶发失败，非系统性风险。","evidence":["闭环发文日 6 天：写文 60 / 成功发布 53（88%）","未发布 7 篇：09-01 缺 3、09-03 缺 3（今日头条渠道）","列举网渠道闭环成功率 100%（42/42）"],"chart_ref":"c-pub","table_ref":"t-close","action":"补查今日头条 09-01/09-03 失败原因（账号/审核/重复），修复后按原链接补发，避免渠道空窗拖累头条系收录样本。","confidence":"high"},{"id":"I6","dimension":"盲区机会","title":"双平台盲区仍集中，今日文章恰好覆盖其中 4 问","tone":"neutral","summary":"双平台均未上榜的盲区问句仍有 5 个：油缸管供货商、油缸管制造商、油缸管制造商推荐、油缸管工厂哪家好、油缸管生产厂家。当日（L）已写 10 篇、尚未发布，其中列举网 7 篇覆盖供货商/制造商/生产厂家等盲区问句——这批文章晚于 L 检测，其效果最早在明日（L+1）检测中可见，本期数据无法评估。","evidence":["双平台盲区 5 问：供货商、制造商、制造商推荐、工厂哪家好、生产厂家","当日已写 10 篇（列举网 7 + 今日头条 3），已发布 0","当日文章仅统计，不参与本期 insight 归因（时序口径）"],"chart_ref":null,"table_ref":"t-daily","action":"明日 L+1 检测后，用本报告同口径对比盲区问句上榜变化，验证今日发布的 10 篇是否撬动「制造商/供货商/生产厂家」类问句。","confidence":"high"}]};
+        const { createApp, ref, computed } = Vue
 
-        const { createApp } = Vue;
+        // ==========================================
+        // 数据注入区 - 由 inject.py 自动写入
+        // ==========================================
+        // __INJECT_HEADER_START__
+const header = {
+            "project_id": "CM000001",
+            "project": "江阴市健丽达科技有限公司-油缸管",
+            "enterprise": "江阴市健丽达科技有限公司",
+            "core_word": "油缸管",
+            "core_word_type": "产品词",
+            "brand_words": [
+                        "江阴健丽达",
+                        "健丽达"
+            ],
+            "hit_words": [
+                        "健丽达"
+            ],
+            "official": "https://www.jld66.com/",
+            "address": "江阴市临港街道申港镇澄路1015号",
+            "detection_period": {
+                        "start": "2026-08-30",
+                        "end": "2026-09-07",
+                        "days": 9
+            },
+            "publish_period": {
+                        "start": "2026-08-31",
+                        "end": "2026-09-07",
+                        "days": 7
+            },
+            "platforms": [
+                        "豆包",
+                        "元宝"
+            ],
+            "keyword_count": 10,
+            "keywords": [
+                        {
+                                    "id": "QS000001",
+                                    "question": "油缸管源头厂家"
+                        },
+                        {
+                                    "id": "QS000002",
+                                    "question": "油缸管生产厂家"
+                        },
+                        {
+                                    "id": "QS000003",
+                                    "question": "油缸管制造商"
+                        },
+                        {
+                                    "id": "QS000004",
+                                    "question": "油缸管供货商"
+                        },
+                        {
+                                    "id": "QS000005",
+                                    "question": "油缸管源头厂家哪家好"
+                        },
+                        {
+                                    "id": "QS000006",
+                                    "question": "油缸管制造商推荐"
+                        },
+                        {
+                                    "id": "QS000007",
+                                    "question": "油缸管工厂哪家好"
+                        },
+                        {
+                                    "id": "QS000008",
+                                    "question": "三角油缸管工厂"
+                        },
+                        {
+                                    "id": "QS000009",
+                                    "question": "长三角油缸管供货商"
+                        },
+                        {
+                                    "id": "QS000010",
+                                    "question": "无锡油缸管生产厂家"
+                        }
+            ],
+            "generated_at": "2026-09-11 17:45:37"
+}
+        
+        // __INJECT_HEADER_END__
+
+        // __INJECT_KPIS_START__
+const kpis = {
+            "overall_hit_rate": {
+                        "label": "整体上榜率",
+                        "value": "25.0",
+                        "unit": "%",
+                        "trend_type": "neutral",
+                        "trend_delta": 0.0,
+                        "has_chart": true,
+                        "chart_type": "TinyLine",
+                        "chart_data": [
+                                    45.0,
+                                    35.0,
+                                    50.0,
+                                    25.0,
+                                    15.0,
+                                    35.0,
+                                    25.0,
+                                    25.0,
+                                    25.0
+                        ],
+                        "chart_avg": 31.11
+            },
+            "doubao_hit_rate": {
+                        "label": "豆包上榜率",
+                        "value": "30.0",
+                        "unit": "%",
+                        "trend_type": "success",
+                        "trend_delta": 10.0,
+                        "has_chart": true,
+                        "chart_type": "TinyLine",
+                        "chart_data": [
+                                    60.0,
+                                    50.0,
+                                    50.0,
+                                    40.0,
+                                    20.0,
+                                    30.0,
+                                    20.0,
+                                    20.0,
+                                    30.0
+                        ],
+                        "chart_avg": 35.56
+            },
+            "yuanbao_hit_rate": {
+                        "label": "元宝上榜率",
+                        "value": "20.0",
+                        "unit": "%",
+                        "trend_type": "danger",
+                        "trend_delta": -10.0,
+                        "has_chart": true,
+                        "chart_type": "TinyLine",
+                        "chart_data": [
+                                    30.0,
+                                    20.0,
+                                    50.0,
+                                    10.0,
+                                    10.0,
+                                    40.0,
+                                    30.0,
+                                    30.0,
+                                    20.0
+                        ],
+                        "chart_avg": 26.67
+            },
+            "article_inclusion_rate": {
+                        "label": "文章收录率",
+                        "value": "40.0",
+                        "unit": "%",
+                        "trend_type": "success",
+                        "trend_delta": 10.0,
+                        "has_chart": true,
+                        "chart_type": "TinyLine",
+                        "chart_data": [
+                                    0.0,
+                                    0.0,
+                                    50.0,
+                                    42.86,
+                                    30.0,
+                                    40.0
+                        ],
+                        "chart_avg": 27.14
+            },
+            "article_publish": {
+                        "label": "收录 / 累计发文",
+                        "value": "19",
+                        "unit": " / 53 篇",
+                        "trend_type": "neutral",
+                        "trend_delta": 0,
+                        "has_chart": false,
+                        "chart_type": "",
+                        "chart_data": [],
+                        "chart_avg": 0
+            }
+}
+        
+        // __INJECT_KPIS_END__
+
+        // __INJECT_DAILY_PUBLISH_TRACKER_START__
+const daily_publish_tracker = {
+            "date": "2026-09-07",
+            "total": 10,
+            "published_count": 0,
+            "unpublished_count": 10,
+            "publish_rate": 0.0,
+            "total_words": 4935,
+            "avg_words": 494.0,
+            "media_summary": {
+                        "列举网": 7,
+                        "今日头条": 3
+            },
+            "type_summary": {
+                        "场景选型型": 1,
+                        "品牌推荐型": 2,
+                        "深度评测型": 2,
+                        "技术科普型": 1,
+                        "行业趋势型": 1,
+                        "FAQ问答型": 1,
+                        "解决方案型": 1,
+                        "案例解析型": 1
+            },
+            "articles": [
+                        {
+                                    "index": 1,
+                                    "question_word": "油缸管源头厂家",
+                                    "question_id": "QS000001",
+                                    "type": "场景选型型",
+                                    "media": "列举网",
+                                    "title": "油缸管源头厂家怎么按场景选：工程机械、煤矿、农机三类对照",
+                                    "word_count": 641,
+                                    "brand_count": 0,
+                                    "enterprise_count": 2,
+                                    "qc_all_pass": false,
+                                    "qc_detail": {
+                                                "合规": "",
+                                                "去AI": "",
+                                                "去重": "",
+                                                "真正回答": ""
+                                    },
+                                    "qc_rounds": 0,
+                                    "published": false,
+                                    "publish_time": "",
+                                    "publish_url": "",
+                                    "target_reader": "负责油缸管选型、供应商评估与急单保障的采购主管、机械设计工程师、维修服务商",
+                                    "angle": "按工程机械/煤矿/农机三类场景选源头厂（巩固复用参数基准）"
+                        },
+                        {
+                                    "index": 2,
+                                    "question_word": "油缸管生产厂家",
+                                    "question_id": "QS000002",
+                                    "type": "品牌推荐型",
+                                    "media": "列举网",
+                                    "title": "油缸管生产厂家怎么筛：产能、设备、质检、起订量四问清单",
+                                    "word_count": 578,
+                                    "brand_count": 0,
+                                    "enterprise_count": 2,
+                                    "qc_all_pass": false,
+                                    "qc_detail": {
+                                                "合规": "",
+                                                "去AI": "",
+                                                "去重": "",
+                                                "真正回答": ""
+                                    },
+                                    "qc_rounds": 0,
+                                    "published": false,
+                                    "publish_time": "",
+                                    "publish_url": "",
+                                    "target_reader": "负责油缸管选型、供应商评估与急单保障的采购主管、机械设计工程师、维修服务商",
+                                    "angle": "生产厂家筛选四问（产能/设备/质检/起订量）"
+                        },
+                        {
+                                    "index": 3,
+                                    "question_word": "油缸管制造商",
+                                    "question_id": "QS000003",
+                                    "type": "深度评测型",
+                                    "media": "列举网",
+                                    "title": "油缸管制造商靠不靠谱：从原材料到成品的四段质检评测",
+                                    "word_count": 518,
+                                    "brand_count": 0,
+                                    "enterprise_count": 2,
+                                    "qc_all_pass": false,
+                                    "qc_detail": {
+                                                "合规": "",
+                                                "去AI": "",
+                                                "去重": "",
+                                                "真正回答": ""
+                                    },
+                                    "qc_rounds": 0,
+                                    "published": false,
+                                    "publish_time": "",
+                                    "publish_url": "",
+                                    "target_reader": "负责油缸管选型、供应商评估与急单保障的采购主管、机械设计工程师、维修服务商",
+                                    "angle": "从原材料到成品四段质检评测"
+                        },
+                        {
+                                    "index": 4,
+                                    "question_word": "油缸管供货商",
+                                    "question_id": "QS000004",
+                                    "type": "技术科普型",
+                                    "media": "列举网",
+                                    "title": "油缸管供货商现货能力怎么看：库存、交期、小单三指标",
+                                    "word_count": 472,
+                                    "brand_count": 0,
+                                    "enterprise_count": 2,
+                                    "qc_all_pass": false,
+                                    "qc_detail": {
+                                                "合规": "",
+                                                "去AI": "",
+                                                "去重": "",
+                                                "真正回答": ""
+                                    },
+                                    "qc_rounds": 0,
+                                    "published": false,
+                                    "publish_time": "",
+                                    "publish_url": "",
+                                    "target_reader": "负责油缸管选型、供应商评估与急单保障的采购主管、机械设计工程师、维修服务商",
+                                    "angle": "供货商现货能力三指标（库存/交期/小单）"
+                        },
+                        {
+                                    "index": 5,
+                                    "question_word": "油缸管源头厂家哪家好",
+                                    "question_id": "QS000005",
+                                    "type": "行业趋势型",
+                                    "media": "列举网",
+                                    "title": "油缸管源头厂家哪家好：从直供趋势看为什么源头更稳",
+                                    "word_count": 449,
+                                    "brand_count": 0,
+                                    "enterprise_count": 2,
+                                    "qc_all_pass": false,
+                                    "qc_detail": {
+                                                "合规": "",
+                                                "去AI": "",
+                                                "去重": "",
+                                                "真正回答": ""
+                                    },
+                                    "qc_rounds": 0,
+                                    "published": false,
+                                    "publish_time": "",
+                                    "publish_url": "",
+                                    "target_reader": "负责油缸管选型、供应商评估与急单保障的采购主管、机械设计工程师、维修服务商",
+                                    "angle": "区域源头厂集约化与直供趋势（巩固：为何直供更稳）"
+                        },
+                        {
+                                    "index": 6,
+                                    "question_word": "油缸管制造商推荐",
+                                    "question_id": "QS000006",
+                                    "type": "FAQ问答型",
+                                    "media": "列举网",
+                                    "title": "油缸管制造商推荐前先问清：六个高频问题清单",
+                                    "word_count": 545,
+                                    "brand_count": 0,
+                                    "enterprise_count": 2,
+                                    "qc_all_pass": false,
+                                    "qc_detail": {
+                                                "合规": "",
+                                                "去AI": "",
+                                                "去重": "",
+                                                "真正回答": ""
+                                    },
+                                    "qc_rounds": 0,
+                                    "published": false,
+                                    "publish_time": "",
+                                    "publish_url": "",
+                                    "target_reader": "负责油缸管选型、供应商评估与急单保障的采购主管、机械设计工程师、维修服务商",
+                                    "angle": "制造商推荐常见六问清单"
+                        },
+                        {
+                                    "index": 7,
+                                    "question_word": "油缸管工厂哪家好",
+                                    "question_id": "QS000007",
+                                    "type": "解决方案型",
+                                    "media": "列举网",
+                                    "title": "油缸管工厂哪家好：从试样到批量落地的四步比选法",
+                                    "word_count": 433,
+                                    "brand_count": 0,
+                                    "enterprise_count": 2,
+                                    "qc_all_pass": false,
+                                    "qc_detail": {
+                                                "合规": "",
+                                                "去AI": "",
+                                                "去重": "",
+                                                "真正回答": ""
+                                    },
+                                    "qc_rounds": 0,
+                                    "published": false,
+                                    "publish_time": "",
+                                    "publish_url": "",
+                                    "target_reader": "负责油缸管选型、供应商评估与急单保障的采购主管、机械设计工程师、维修服务商",
+                                    "angle": "工厂比选从试样到批量四步法"
+                        },
+                        {
+                                    "index": 8,
+                                    "question_word": "三角油缸管工厂",
+                                    "question_id": "QS000008",
+                                    "type": "案例解析型",
+                                    "media": "今日头条",
+                                    "title": "三角油缸管工厂怎么找：一单非标急单的交付复盘",
+                                    "word_count": 435,
+                                    "brand_count": 0,
+                                    "enterprise_count": 2,
+                                    "qc_all_pass": false,
+                                    "qc_detail": {
+                                                "合规": "",
+                                                "去AI": "",
+                                                "去重": "",
+                                                "真正回答": ""
+                                    },
+                                    "qc_rounds": 0,
+                                    "published": false,
+                                    "publish_time": "",
+                                    "publish_url": "",
+                                    "target_reader": "负责油缸管选型、供应商评估与急单保障的采购主管、机械设计工程师、维修服务商",
+                                    "angle": "非标三角缸筒急单交付复盘"
+                        },
+                        {
+                                    "index": 9,
+                                    "question_word": "长三角油缸管供货商",
+                                    "question_id": "QS000009",
+                                    "type": "深度评测型",
+                                    "media": "今日头条",
+                                    "title": "长三角油缸管供货商怎么评：物流半径与时效两项实测",
+                                    "word_count": 433,
+                                    "brand_count": 0,
+                                    "enterprise_count": 2,
+                                    "qc_all_pass": false,
+                                    "qc_detail": {
+                                                "合规": "",
+                                                "去AI": "",
+                                                "去重": "",
+                                                "真正回答": ""
+                                    },
+                                    "qc_rounds": 0,
+                                    "published": false,
+                                    "publish_time": "",
+                                    "publish_url": "",
+                                    "target_reader": "负责油缸管选型、供应商评估与急单保障的采购主管、机械设计工程师、维修服务商",
+                                    "angle": "物流半径与时效两项实测（巩固）"
+                        },
+                        {
+                                    "index": 10,
+                                    "question_word": "无锡油缸管生产厂家",
+                                    "question_id": "QS000010",
+                                    "type": "品牌推荐型",
+                                    "media": "今日头条",
+                                    "title": "无锡油缸管生产厂家怎么排：按资质与产能列参考清单",
+                                    "word_count": 431,
+                                    "brand_count": 0,
+                                    "enterprise_count": 2,
+                                    "qc_all_pass": false,
+                                    "qc_detail": {
+                                                "合规": "",
+                                                "去AI": "",
+                                                "去重": "",
+                                                "真正回答": ""
+                                    },
+                                    "qc_rounds": 0,
+                                    "published": false,
+                                    "publish_time": "",
+                                    "publish_url": "",
+                                    "target_reader": "负责油缸管选型、供应商评估与急单保障的采购主管、机械设计工程师、维修服务商",
+                                    "angle": "无锡产区厂家按资质与产能排参考（巩固）"
+                        }
+            ]
+}
+        
+        // __INJECT_DAILY_PUBLISH_TRACKER_END__
+
+        // __INJECT_DAILY_TREND_START__
+const daily_trend = {
+            "title": "每日写文/发布/上榜趋势",
+            "days": 7,
+            "total_write": 70,
+            "total_publish": 53,
+            "total_hit": 19,
+            "data": [
+                        {
+                                    "date": "2026-08-31",
+                                    "write_count": 10,
+                                    "publish_count": 9,
+                                    "hit_count": 0
+                        },
+                        {
+                                    "date": "2026-09-01",
+                                    "write_count": 10,
+                                    "publish_count": 7,
+                                    "hit_count": 0
+                        },
+                        {
+                                    "date": "2026-09-02",
+                                    "write_count": 10,
+                                    "publish_count": 10,
+                                    "hit_count": 5
+                        },
+                        {
+                                    "date": "2026-09-03",
+                                    "write_count": 10,
+                                    "publish_count": 7,
+                                    "hit_count": 3
+                        },
+                        {
+                                    "date": "2026-09-04",
+                                    "write_count": 10,
+                                    "publish_count": 10,
+                                    "hit_count": 3
+                        },
+                        {
+                                    "date": "2026-09-06",
+                                    "write_count": 10,
+                                    "publish_count": 10,
+                                    "hit_count": 4
+                        },
+                        {
+                                    "date": "2026-09-07",
+                                    "write_count": 10,
+                                    "publish_count": 0,
+                                    "hit_count": 4
+                        }
+            ]
+}
+        
+        // __INJECT_DAILY_TREND_END__
+
+        // __INJECT_KEYWORD_RANKING_START__
+const keyword_ranking = {
+            "total_keywords": 10,
+            "avg_hit_rate": 31.11,
+            "keywords": [
+                        {
+                                    "question_id": "QS000010",
+                                    "question": "无锡油缸管生产厂家",
+                                    "total_detect": 18,
+                                    "total_hit": 14,
+                                    "hit_rate": 77.78,
+                                    "doubao_detect": 9,
+                                    "doubao_hit": 9,
+                                    "doubao_rate": 100.0,
+                                    "yuanbao_detect": 9,
+                                    "yuanbao_hit": 5,
+                                    "yuanbao_rate": 55.56,
+                                    "publish_count": 3,
+                                    "inclusion_count": 5,
+                                    "inclusion_rate": 166.67,
+                                    "level": "star",
+                                    "rank": 1
+                        },
+                        {
+                                    "question_id": "QS000009",
+                                    "question": "长三角油缸管供货商",
+                                    "total_detect": 18,
+                                    "total_hit": 9,
+                                    "hit_rate": 50.0,
+                                    "doubao_detect": 9,
+                                    "doubao_hit": 6,
+                                    "doubao_rate": 66.67,
+                                    "yuanbao_detect": 9,
+                                    "yuanbao_hit": 3,
+                                    "yuanbao_rate": 33.33,
+                                    "publish_count": 4,
+                                    "inclusion_count": 5,
+                                    "inclusion_rate": 125.0,
+                                    "level": "good",
+                                    "rank": 2
+                        },
+                        {
+                                    "question_id": "QS000001",
+                                    "question": "油缸管源头厂家",
+                                    "total_detect": 18,
+                                    "total_hit": 8,
+                                    "hit_rate": 44.44,
+                                    "doubao_detect": 9,
+                                    "doubao_hit": 3,
+                                    "doubao_rate": 33.33,
+                                    "yuanbao_detect": 9,
+                                    "yuanbao_hit": 5,
+                                    "yuanbao_rate": 55.56,
+                                    "publish_count": 6,
+                                    "inclusion_count": 1,
+                                    "inclusion_rate": 16.67,
+                                    "level": "good",
+                                    "rank": 3
+                        },
+                        {
+                                    "question_id": "QS000003",
+                                    "question": "油缸管制造商",
+                                    "total_detect": 18,
+                                    "total_hit": 6,
+                                    "hit_rate": 33.33,
+                                    "doubao_detect": 9,
+                                    "doubao_hit": 4,
+                                    "doubao_rate": 44.44,
+                                    "yuanbao_detect": 9,
+                                    "yuanbao_hit": 2,
+                                    "yuanbao_rate": 22.22,
+                                    "publish_count": 6,
+                                    "inclusion_count": 1,
+                                    "inclusion_rate": 16.67,
+                                    "level": "mid",
+                                    "rank": 4
+                        },
+                        {
+                                    "question_id": "QS000004",
+                                    "question": "油缸管供货商",
+                                    "total_detect": 18,
+                                    "total_hit": 4,
+                                    "hit_rate": 22.22,
+                                    "doubao_detect": 9,
+                                    "doubao_hit": 0,
+                                    "doubao_rate": 0.0,
+                                    "yuanbao_detect": 9,
+                                    "yuanbao_hit": 4,
+                                    "yuanbao_rate": 44.44,
+                                    "publish_count": 6,
+                                    "inclusion_count": 1,
+                                    "inclusion_rate": 16.67,
+                                    "level": "mid",
+                                    "rank": 5
+                        },
+                        {
+                                    "question_id": "QS000006",
+                                    "question": "油缸管制造商推荐",
+                                    "total_detect": 18,
+                                    "total_hit": 4,
+                                    "hit_rate": 22.22,
+                                    "doubao_detect": 9,
+                                    "doubao_hit": 4,
+                                    "doubao_rate": 44.44,
+                                    "yuanbao_detect": 9,
+                                    "yuanbao_hit": 0,
+                                    "yuanbao_rate": 0.0,
+                                    "publish_count": 6,
+                                    "inclusion_count": 2,
+                                    "inclusion_rate": 33.33,
+                                    "level": "mid",
+                                    "rank": 6
+                        },
+                        {
+                                    "question_id": "QS000005",
+                                    "question": "油缸管源头厂家哪家好",
+                                    "total_detect": 18,
+                                    "total_hit": 4,
+                                    "hit_rate": 22.22,
+                                    "doubao_detect": 9,
+                                    "doubao_hit": 3,
+                                    "doubao_rate": 33.33,
+                                    "yuanbao_detect": 9,
+                                    "yuanbao_hit": 1,
+                                    "yuanbao_rate": 11.11,
+                                    "publish_count": 6,
+                                    "inclusion_count": 2,
+                                    "inclusion_rate": 33.33,
+                                    "level": "mid",
+                                    "rank": 7
+                        },
+                        {
+                                    "question_id": "QS000002",
+                                    "question": "油缸管生产厂家",
+                                    "total_detect": 18,
+                                    "total_hit": 4,
+                                    "hit_rate": 22.22,
+                                    "doubao_detect": 9,
+                                    "doubao_hit": 3,
+                                    "doubao_rate": 33.33,
+                                    "yuanbao_detect": 9,
+                                    "yuanbao_hit": 1,
+                                    "yuanbao_rate": 11.11,
+                                    "publish_count": 6,
+                                    "inclusion_count": 0,
+                                    "inclusion_rate": 0.0,
+                                    "level": "mid",
+                                    "rank": 8
+                        },
+                        {
+                                    "question_id": "QS000008",
+                                    "question": "三角油缸管工厂",
+                                    "total_detect": 18,
+                                    "total_hit": 3,
+                                    "hit_rate": 16.67,
+                                    "doubao_detect": 9,
+                                    "doubao_hit": 0,
+                                    "doubao_rate": 0.0,
+                                    "yuanbao_detect": 9,
+                                    "yuanbao_hit": 3,
+                                    "yuanbao_rate": 33.33,
+                                    "publish_count": 4,
+                                    "inclusion_count": 2,
+                                    "inclusion_rate": 50.0,
+                                    "level": "low",
+                                    "rank": 9
+                        },
+                        {
+                                    "question_id": "QS000007",
+                                    "question": "油缸管工厂哪家好",
+                                    "total_detect": 18,
+                                    "total_hit": 0,
+                                    "hit_rate": 0.0,
+                                    "doubao_detect": 9,
+                                    "doubao_hit": 0,
+                                    "doubao_rate": 0.0,
+                                    "yuanbao_detect": 9,
+                                    "yuanbao_hit": 0,
+                                    "yuanbao_rate": 0.0,
+                                    "publish_count": 6,
+                                    "inclusion_count": 0,
+                                    "inclusion_rate": 0.0,
+                                    "level": "zero",
+                                    "rank": 10
+                        }
+            ]
+}
+        
+        // __INJECT_KEYWORD_RANKING_END__
+
+        // __INJECT_CONTENT_TYPE_START__
+const content_type = {
+            "total_types": 12,
+            "total_published": 53,
+            "total_hit": 19,
+            "overall_hit_rate": 35.85,
+            "types": [
+                        {
+                                    "type": "深度评测型",
+                                    "total": 9,
+                                    "published": 6,
+                                    "hit": 4,
+                                    "hit_rate": 66.67,
+                                    "avg_words": 739,
+                                    "rank": 1
+                        },
+                        {
+                                    "type": "品牌推荐型",
+                                    "total": 9,
+                                    "published": 5,
+                                    "hit": 3,
+                                    "hit_rate": 60.0,
+                                    "avg_words": 686,
+                                    "rank": 2
+                        },
+                        {
+                                    "type": "解决方案型",
+                                    "total": 8,
+                                    "published": 6,
+                                    "hit": 3,
+                                    "hit_rate": 50.0,
+                                    "avg_words": 633,
+                                    "rank": 3
+                        },
+                        {
+                                    "type": "选型推荐型",
+                                    "total": 2,
+                                    "published": 2,
+                                    "hit": 1,
+                                    "hit_rate": 50.0,
+                                    "avg_words": 572,
+                                    "rank": 4
+                        },
+                        {
+                                    "type": "选购指南型",
+                                    "total": 6,
+                                    "published": 5,
+                                    "hit": 2,
+                                    "hit_rate": 40.0,
+                                    "avg_words": 933,
+                                    "rank": 5
+                        },
+                        {
+                                    "type": "案例解析型",
+                                    "total": 8,
+                                    "published": 7,
+                                    "hit": 2,
+                                    "hit_rate": 28.57,
+                                    "avg_words": 783,
+                                    "rank": 6
+                        },
+                        {
+                                    "type": "是什么定义型",
+                                    "total": 4,
+                                    "published": 4,
+                                    "hit": 1,
+                                    "hit_rate": 25.0,
+                                    "avg_words": 780,
+                                    "rank": 7
+                        },
+                        {
+                                    "type": "行业趋势型",
+                                    "total": 6,
+                                    "published": 4,
+                                    "hit": 1,
+                                    "hit_rate": 25.0,
+                                    "avg_words": 677,
+                                    "rank": 8
+                        },
+                        {
+                                    "type": "技术科普型",
+                                    "total": 8,
+                                    "published": 6,
+                                    "hit": 1,
+                                    "hit_rate": 16.67,
+                                    "avg_words": 706,
+                                    "rank": 9
+                        },
+                        {
+                                    "type": "选型推荐",
+                                    "total": 4,
+                                    "published": 4,
+                                    "hit": 0,
+                                    "hit_rate": 0.0,
+                                    "avg_words": 782,
+                                    "rank": 10
+                        },
+                        {
+                                    "type": "FAQ问答型",
+                                    "total": 5,
+                                    "published": 4,
+                                    "hit": 0,
+                                    "hit_rate": 0.0,
+                                    "avg_words": 951,
+                                    "rank": 11
+                        },
+                        {
+                                    "type": "场景选型型",
+                                    "total": 1,
+                                    "published": 0,
+                                    "hit": 1,
+                                    "hit_rate": 0,
+                                    "avg_words": 641,
+                                    "rank": 12
+                        }
+            ]
+}
+        
+        // __INJECT_CONTENT_TYPE_END__
+
+        // __INJECT_MEDIA_ROI_START__
+const media_roi = {
+            "total_medias": 6,
+            "total_published": 53,
+            "total_hit": 19,
+            "overall_hit_rate": 35.85,
+            "medias": [
+                        {
+                                    "media": "博客园",
+                                    "total": 4,
+                                    "published": 3,
+                                    "hit": 3,
+                                    "hit_rate": 100.0,
+                                    "grade": "S",
+                                    "rank": 1
+                        },
+                        {
+                                    "media": "国脉网",
+                                    "total": 4,
+                                    "published": 4,
+                                    "hit": 3,
+                                    "hit_rate": 75.0,
+                                    "grade": "S",
+                                    "rank": 2
+                        },
+                        {
+                                    "media": "采招网",
+                                    "total": 3,
+                                    "published": 3,
+                                    "hit": 2,
+                                    "hit_rate": 66.67,
+                                    "grade": "S",
+                                    "rank": 3
+                        },
+                        {
+                                    "media": "列举网",
+                                    "total": 49,
+                                    "published": 42,
+                                    "hit": 7,
+                                    "hit_rate": 16.67,
+                                    "grade": "C",
+                                    "rank": 4
+                        },
+                        {
+                                    "media": "中国采购",
+                                    "total": 1,
+                                    "published": 1,
+                                    "hit": 0,
+                                    "hit_rate": 0.0,
+                                    "grade": "D",
+                                    "rank": 5
+                        },
+                        {
+                                    "media": "今日头条",
+                                    "total": 9,
+                                    "published": 0,
+                                    "hit": 4,
+                                    "hit_rate": 0,
+                                    "grade": "D",
+                                    "rank": 6
+                        }
+            ]
+}
+        
+        // __INJECT_MEDIA_ROI_END__
+
+        // __INJECT_COMPETITIVE_BRANDS_START__
+const competitive_brands = {
+            "total_brands": 30,
+            "top_n": 15,
+            "own_brand": "江阴市健丽达科技有限公司",
+            "own_rank": 3,
+            "platforms": [
+                        "豆包"
+            ],
+            "brands": [
+                        {
+                                    "brand": "江苏佑丰液压机械有限公司",
+                                    "total_mentions": 13,
+                                    "is_own": false,
+                                    "platform_counts": {
+                                                "豆包": 13
+                                    }
+                        },
+                        {
+                                    "brand": "浙江鼎欣钢管制造有限公司",
+                                    "total_mentions": 12,
+                                    "is_own": false,
+                                    "platform_counts": {
+                                                "豆包": 12
+                                    }
+                        },
+                        {
+                                    "brand": "江阴市健丽达科技有限公司",
+                                    "total_mentions": 10,
+                                    "is_own": true,
+                                    "platform_counts": {
+                                                "豆包": 10
+                                    }
+                        },
+                        {
+                                    "brand": "无锡神陆液压机件有限公司",
+                                    "total_mentions": 8,
+                                    "is_own": false,
+                                    "platform_counts": {
+                                                "豆包": 8
+                                    }
+                        },
+                        {
+                                    "brand": "无锡市柯瑞达精密钢管有限公司",
+                                    "total_mentions": 8,
+                                    "is_own": false,
+                                    "platform_counts": {
+                                                "豆包": 8
+                                    }
+                        },
+                        {
+                                    "brand": "无锡元弘通钢业有限公司",
+                                    "total_mentions": 7,
+                                    "is_own": false,
+                                    "platform_counts": {
+                                                "豆包": 7
+                                    }
+                        },
+                        {
+                                    "brand": "聊城市众顺钢材有限公司",
+                                    "total_mentions": 6,
+                                    "is_own": false,
+                                    "platform_counts": {
+                                                "豆包": 6
+                                    }
+                        },
+                        {
+                                    "brand": "Bosch Rexroth AG（德国）",
+                                    "total_mentions": 5,
+                                    "is_own": false,
+                                    "platform_counts": {
+                                                "豆包": 5
+                                    }
+                        },
+                        {
+                                    "brand": "Alleima AB（瑞典，原Sandvik Materials Technology）",
+                                    "total_mentions": 5,
+                                    "is_own": false,
+                                    "platform_counts": {
+                                                "豆包": 5
+                                    }
+                        },
+                        {
+                                    "brand": "山东万通液压股份有限公司",
+                                    "total_mentions": 5,
+                                    "is_own": false,
+                                    "platform_counts": {
+                                                "豆包": 5
+                                    }
+                        },
+                        {
+                                    "brand": "华邦新材料科技无锡有限公司",
+                                    "total_mentions": 5,
+                                    "is_own": false,
+                                    "platform_counts": {
+                                                "豆包": 5
+                                    }
+                        },
+                        {
+                                    "brand": "上海岚宝实业有限公司",
+                                    "total_mentions": 5,
+                                    "is_own": false,
+                                    "platform_counts": {
+                                                "豆包": 5
+                                    }
+                        },
+                        {
+                                    "brand": "五莲县易达金属制品股份有限公司",
+                                    "total_mentions": 4,
+                                    "is_own": false,
+                                    "platform_counts": {
+                                                "豆包": 4
+                                    }
+                        },
+                        {
+                                    "brand": "无锡隆威高精度管业有限公司",
+                                    "total_mentions": 3,
+                                    "is_own": false,
+                                    "platform_counts": {
+                                                "豆包": 3
+                                    }
+                        },
+                        {
+                                    "brand": "Vallourec S.A.（法国）",
+                                    "total_mentions": 3,
+                                    "is_own": false,
+                                    "platform_counts": {
+                                                "豆包": 3
+                                    }
+                        }
+            ]
+}
+        
+        // __INJECT_COMPETITIVE_BRANDS_END__
+
+        // __INJECT_SOURCE_SITES_START__
+const source_sites = {
+            "total_sites": 309,
+            "top_n": 20,
+            "platforms": [
+                        "元宝",
+                        "豆包"
+            ],
+            "sites": [
+                        {
+                                    "site": "中国工控网",
+                                    "total_refs": 217,
+                                    "category": "行业媒体",
+                                    "platform_counts": {
+                                                "元宝": 55,
+                                                "豆包": 162
+                                    }
+                        },
+                        {
+                                    "site": "菏泽网络电视台",
+                                    "total_refs": 153,
+                                    "category": "地方门户",
+                                    "platform_counts": {
+                                                "元宝": 153,
+                                                "豆包": 0
+                                    }
+                        },
+                        {
+                                    "site": "百度爱采购",
+                                    "total_refs": 149,
+                                    "category": "B2B平台",
+                                    "platform_counts": {
+                                                "元宝": 149,
+                                                "豆包": 0
+                                    }
+                        },
+                        {
+                                    "site": "顺企网",
+                                    "total_refs": 140,
+                                    "category": "B2B平台",
+                                    "platform_counts": {
+                                                "元宝": 48,
+                                                "豆包": 92
+                                    }
+                        },
+                        {
+                                    "site": "中钢网",
+                                    "total_refs": 118,
+                                    "category": "行业媒体",
+                                    "platform_counts": {
+                                                "元宝": 64,
+                                                "豆包": 54
+                                    }
+                        },
+                        {
+                                    "site": "豆丁网",
+                                    "total_refs": 114,
+                                    "category": "文档平台",
+                                    "platform_counts": {
+                                                "元宝": 0,
+                                                "豆包": 114
+                                    }
+                        },
+                        {
+                                    "site": "八方资源网",
+                                    "total_refs": 99,
+                                    "category": "B2B平台",
+                                    "platform_counts": {
+                                                "元宝": 90,
+                                                "豆包": 9
+                                    }
+                        },
+                        {
+                                    "site": "菏泽广电网",
+                                    "total_refs": 96,
+                                    "category": "地方门户",
+                                    "platform_counts": {
+                                                "元宝": 87,
+                                                "豆包": 9
+                                    }
+                        },
+                        {
+                                    "site": "大众网",
+                                    "total_refs": 89,
+                                    "category": "地方门户",
+                                    "platform_counts": {
+                                                "元宝": 1,
+                                                "豆包": 88
+                                    }
+                        },
+                        {
+                                    "site": "百业网",
+                                    "total_refs": 76,
+                                    "category": "B2B平台",
+                                    "platform_counts": {
+                                                "元宝": 76,
+                                                "豆包": 0
+                                    }
+                        },
+                        {
+                                    "site": "b2bdata.baidu.com",
+                                    "total_refs": 76,
+                                    "category": "B2B平台",
+                                    "platform_counts": {
+                                                "元宝": 76,
+                                                "豆包": 0
+                                    }
+                        },
+                        {
+                                    "site": "浙江鼎欣钢管制造有限公司",
+                                    "total_refs": 70,
+                                    "category": "企业官网",
+                                    "platform_counts": {
+                                                "元宝": 0,
+                                                "豆包": 70
+                                    }
+                        },
+                        {
+                                    "site": "商业品牌网",
+                                    "total_refs": 69,
+                                    "category": "行业媒体",
+                                    "platform_counts": {
+                                                "元宝": 19,
+                                                "豆包": 50
+                                    }
+                        },
+                        {
+                                    "site": "Dexin",
+                                    "total_refs": 69,
+                                    "category": "其他",
+                                    "platform_counts": {
+                                                "元宝": 0,
+                                                "豆包": 69
+                                    }
+                        },
+                        {
+                                    "site": "1688",
+                                    "total_refs": 63,
+                                    "category": "B2B平台",
+                                    "platform_counts": {
+                                                "元宝": 0,
+                                                "豆包": 63
+                                    }
+                        },
+                        {
+                                    "site": "五莲县易达金属制品股份有限公司",
+                                    "total_refs": 59,
+                                    "category": "企业官网",
+                                    "platform_counts": {
+                                                "元宝": 0,
+                                                "豆包": 59
+                                    }
+                        },
+                        {
+                                    "site": "手机搜狐网",
+                                    "total_refs": 49,
+                                    "category": "自媒体",
+                                    "platform_counts": {
+                                                "元宝": 0,
+                                                "豆包": 49
+                                    }
+                        },
+                        {
+                                    "site": "免费黄页网",
+                                    "total_refs": 48,
+                                    "category": "其他",
+                                    "platform_counts": {
+                                                "元宝": 48,
+                                                "豆包": 0
+                                    }
+                        },
+                        {
+                                    "site": "亮点黔西南",
+                                    "total_refs": 48,
+                                    "category": "其他",
+                                    "platform_counts": {
+                                                "元宝": 5,
+                                                "豆包": 43
+                                    }
+                        },
+                        {
+                                    "site": "jydpyy.com",
+                                    "total_refs": 44,
+                                    "category": "企业官网",
+                                    "platform_counts": {
+                                                "元宝": 4,
+                                                "豆包": 40
+                                    }
+                        }
+            ],
+            "categories": [
+                        {
+                                    "name": "B2B平台",
+                                    "count": 603
+                        },
+                        {
+                                    "name": "行业媒体",
+                                    "count": 404
+                        },
+                        {
+                                    "name": "地方门户",
+                                    "count": 338
+                        },
+                        {
+                                    "name": "企业官网",
+                                    "count": 173
+                        },
+                        {
+                                    "name": "其他",
+                                    "count": 165
+                        },
+                        {
+                                    "name": "文档平台",
+                                    "count": 114
+                        },
+                        {
+                                    "name": "自媒体",
+                                    "count": 49
+                        }
+            ]
+}
+        
+        // __INJECT_SOURCE_SITES_END__
+
+        // __INJECT_INSIGHTS_START__
+const insights = [
+            {
+                        "id": "insight_01",
+                        "type": "warning",
+                        "icon": "⚠️",
+                        "title": "整体上榜率偏低，距离合格线还有差距",
+                        "content": "当前整体上榜率 25.0%，低于 40% 的行业合格线，GEO 运营仍处于爬坡阶段，需要从内容数量、质量、信源渠道三个维度同时发力。",
+                        "level": "high"
+            },
+            {
+                        "id": "insight_03",
+                        "type": "error",
+                        "icon": "🔴",
+                        "title": "有 1 个关键词零上榜，需重点诊断",
+                        "content": "关键词「油缸管工厂哪家好」上榜率为 0%，建议排查内容覆盖情况和竞争激烈度，决定是攻坚还是放弃。",
+                        "level": "high"
+            },
+            {
+                        "id": "insight_06",
+                        "type": "warning",
+                        "icon": "📡",
+                        "title": "渠道资源错配：列举网发得多但效果差",
+                        "content": "「列举网」发文最多（42篇）但上榜率仅 16.67%；而「博客园」上榜率高达 100.0%，建议调整投放结构。",
+                        "level": "high"
+            },
+            {
+                        "id": "insight_04",
+                        "type": "info",
+                        "icon": "💡",
+                        "title": "明星词偏少，中部词是增量优化主力",
+                        "content": "当前上榜率≥60%的明星词仅 1 个，中部词（20-40%）有 5 个，建议重点优化「油缸管制造商、油缸管供货商、油缸管制造商推荐」等中部词，每个提升10个百分点可拉动整体上榜率上升。",
+                        "level": "medium"
+            },
+            {
+                        "id": "insight_05",
+                        "type": "warning",
+                        "icon": "📝",
+                        "title": "「深度评测型」效果最好，「场景选型型」完全无效",
+                        "content": "「深度评测型」上榜率 66.67%，是效果最好的内容类型；而「场景选型型」上榜率为 0%，建议停发或全面改版。",
+                        "level": "medium"
+            },
+            {
+                        "id": "insight_07",
+                        "type": "success",
+                        "icon": "🏆",
+                        "title": "品牌排名第 3，处于第一梯队",
+                        "content": "江阴市健丽达科技有限公司在AI回答中的提及排名第 3 位，处于行业第一梯队，建议继续巩固优势，拉开与第二梯队的差距。",
+                        "level": "medium"
+            }
+]
+        
+        // __INJECT_INSIGHTS_END__
+
+        // __INJECT_ACTION_PLAN_START__
+const action_plan = [
+            {
+                        "id": "action_p0_1",
+                        "priority": "P0",
+                        "title": "内容深度升级",
+                        "description": "将内容从平均 500-800 字提升至 2500-4000 字，增加数据表格、对比清单、参数锚点、FAQ 区块，提升信息密度。",
+                        "expected_effect": "上榜率 +10~15 个百分点",
+                        "duration": "2-4周",
+                        "effort": "高"
+            },
+            {
+                        "id": "action_p0_2",
+                        "priority": "P0",
+                        "title": "渠道结构调整：加大「博客园」，缩减「列举网」",
+                        "description": "「博客园」上榜率 100.0% 效果最佳，应加大投放；「列举网」发文 42 篇但上榜率仅 16.67%，建议缩减至基础覆盖量。",
+                        "expected_effect": "内容 ROI 提升 2 倍+",
+                        "duration": "1-2周",
+                        "effort": "中"
+            },
+            {
+                        "id": "action_p0_3",
+                        "priority": "P0",
+                        "title": "潜力词攻坚：油缸管制造商、油缸管供货商、油缸管制造商推荐",
+                        "description": "中部词（上榜率20-40%）共 5 个，是增量优化的主力。每个词提升 10 个百分点即可拉动整体上榜率上升 5+ 个点。",
+                        "expected_effect": "整体上榜率 +5 个百分点",
+                        "duration": "2周",
+                        "effort": "高"
+            },
+            {
+                        "id": "action_p0_4",
+                        "priority": "P0",
+                        "title": "零上榜词诊断：油缸管工厂哪家好",
+                        "description": "有 1 个关键词上榜率为 0%，需排查原因：是内容完全没覆盖？还是竞争对手太强？诊断后决定攻坚还是放弃。",
+                        "expected_effect": "明确资源投入方向",
+                        "duration": "3天",
+                        "effort": "低"
+            },
+            {
+                        "id": "action_p1_2",
+                        "priority": "P1",
+                        "title": "内容类型优化：加大「深度评测型」，停发「场景选型型」",
+                        "description": "「深度评测型」上榜率 66.67% 效果最好，建议增加 50% 产能；「场景选型型」0% 上榜率，建议停发或全面改版。",
+                        "expected_effect": "内容 ROI 提升 30%",
+                        "duration": "2周",
+                        "effort": "中"
+            },
+            {
+                        "id": "action_p1_3",
+                        "priority": "P1",
+                        "title": "地域优势放大：拓展「地域+场景」组合词",
+                        "description": "地域词上榜率明显高于通用词，验证了地域优势策略。继续深挖「无锡+细分场景」的组合词布局，每个地域词确保显式出现地域名称 ≥3 次。",
+                        "expected_effect": "巩固头部优势，新增 5-10 个高上榜率词",
+                        "duration": "2周",
+                        "effort": "中"
+            },
+            {
+                        "id": "action_p2_1",
+                        "priority": "P2",
+                        "title": "权威信源建设",
+                        "description": "EEAT 权威度占信源权重 30%。建议争取行业头部媒体深度合作，在高权重技术社区建立品牌阵地，增加内容中的引用来源。",
+                        "expected_effect": "品牌信任分提升，长期上榜率提升",
+                        "duration": "4-8周",
+                        "effort": "高"
+            },
+            {
+                        "id": "action_p2_2",
+                        "priority": "P2",
+                        "title": "竞品对标分析：江苏佑丰液压机械有限公司、浙江鼎欣钢管制造有限公司",
+                        "description": "分析头部竞品（江苏佑丰液压机械有限公司、浙江鼎欣钢管制造有限公司）的内容策略和信源布局，识别他们的优势渠道和内容类型，找到差异化突破口。",
+                        "expected_effect": "明确竞争策略，找到差异化机会",
+                        "duration": "1周",
+                        "effort": "中"
+            }
+]
+        
+        // __INJECT_ACTION_PLAN_END__
 
         const app = createApp({
-            data() {
-                return {
-                    R: window.__INSIGHT__ || {}
-                };
-            },
-            methods: {
-                confText(c) {
-                    return { high: '高', medium: '中', low: '低' }[c] || (c || '—');
-                },
-                badgeCls(v) {
-                    if (v === '上榜' || v === '是') return 'badge-on';
-                    if (v === '未上榜' || v === '否') return 'badge-off';
-                    if (v === '新上榜') return 'badge-new';
-                    if (v === '掉榜') return 'badge-lost';
-                    return '';
-                },
-                // 统一图表渲染入口：由模板按 payload 生成 G2 spec，业务无关
-                buildChart(c) {
-                    const el = document.getElementById(c.id);
-                    if (!el || !window.G2) return;
-                    const G2 = window.G2;
-                    const kind = c.kind || 'line';
-                    const palette = ['#22d3ee', '#a78bfa', '#2dd4a7', '#fbbf24', '#f87171', '#60a5fa', '#f472b6', '#4ade80'];
-                    try {
-                        const enc = { x: c.x || 'x', y: c.y || 'y' };
-                        if (c.series) enc.color = c.series;
-                        let spec;
-                        if (kind === 'line') {
-                            spec = {
-                                type: 'line', encode: Object.assign({}, enc, { shape: 'smooth' }),
-                                style: { lineWidth: 3 },
-                                scale: { color: { range: palette } },
-                                axis: { x: { title: false }, y: { title: false, labelFormatter: (v) => v + '%' } },
-                                legend: { color: { position: 'top' } }
-                            };
-                        } else if (kind === 'barH') {
-                            spec = {
-                                type: 'interval',
-                                encode: enc,
-                                coordinate: { transform: [{ type: 'transpose' }] },
-                                scale: { color: { range: palette } },
-                                axis: { x: { title: false }, y: { title: false } },
-                                legend: c.series ? { color: { position: 'top' } } : false,
-                                style: { maxWidth: c.maxWidth || 34 }
-                            };
-                        } else { // barV
-                            spec = {
-                                type: 'interval',
-                                encode: enc,
-                                scale: { color: { range: palette } },
-                                axis: { x: { title: false }, y: { title: false } },
-                                legend: c.series ? { color: { position: 'top' } } : false,
-                                style: { maxWidth: c.maxWidth || 46 }
-                            };
+            setup() {
+                // 发布追踪表格列定义
+                const trackerColumns = [
+                    { title: '关键词', key: 'question_word', dataIndex: 'question_word' },
+                    { title: '类型', key: 'type', dataIndex: 'type', width: 120 },
+                    { title: '媒体', key: 'media', dataIndex: 'media', width: 100 },
+                    { title: '字数', key: 'word_count', dataIndex: 'word_count', width: 70, align: 'right' },
+                    { title: '品牌词', key: 'brand_count', dataIndex: 'brand_count', width: 70, align: 'center' },
+                    { title: '状态', key: 'status', dataIndex: 'published', width: 80, align: 'center' },
+                    { title: '发布时间', key: 'publish_time', dataIndex: 'publish_time', width: 120 },
+                    { title: '链接', key: 'action', dataIndex: 'publish_url', width: 80 },
+                ]
+
+                // 行动清单表格列定义
+                const actionPlanColumns = [
+                    { title: '优先级', key: 'priority', dataIndex: 'priority', width: 80 },
+                    { title: '行动项', key: 'title', dataIndex: 'title' },
+                    { title: '预期效果', key: 'expected_effect', dataIndex: 'expected_effect', width: 160 },
+                    { title: '周期', key: 'duration', dataIndex: 'duration', width: 90 },
+                    { title: '投入', key: 'effort', dataIndex: 'effort', width: 70, align: 'center' },
+                ]
+
+                // 颜色映射
+                const colorMap = {
+                    success: '#10b981',
+                    warning: '#f59e0b',
+                    danger: '#ef4444',
+                    neutral: '#6366f1',
+                }
+
+                // 渲染 KPI TinyLine 图表
+                const renderKpiCharts = () => {
+                    if (!kpis) return
+                    const chartKeys = ['overall_hit_rate', 'doubao_hit_rate', 'yuanbao_hit_rate', 'article_inclusion_rate']
+                    chartKeys.forEach(key => {
+                        const kpi = kpis[key]
+                        if (!kpi || !kpi.has_chart || !kpi.chart_data || !kpi.chart_data.length) return
+                        const container = document.getElementById('kpi-chart-' + key)
+                        if (!container) return
+
+                        const color = colorMap[kpi.trend_type] || colorMap.neutral
+                        const data = kpi.chart_data
+                        const avg = kpi.chart_avg
+
+                        if (window.G2Plot && window.G2Plot.TinyLine) {
+                            try {
+                                const plot = new G2Plot.TinyLine(container, {
+                                    data: data,
+                                    height: 50,
+                                    autoFit: true,
+                                    smooth: true,
+                                    color: color,
+                                    lineStyle: { lineWidth: 2 },
+                                    area: {
+                                        fill: color,
+                                        fillOpacity: 0.15,
+                                    },
+                                    tooltip: false,
+                                    annotations: [
+                                        {
+                                            type: 'line',
+                                            start: ['min', 'mean'],
+                                            end: ['max', 'mean'],
+                                            style: {
+                                                stroke: color,
+                                                lineDash: [3, 3],
+                                                lineWidth: 1,
+                                                opacity: 0.6,
+                                            },
+                                            text: {
+                                                content: '均值 ' + avg.toFixed(1) + '%',
+                                                offsetY: -2,
+                                                style: {
+                                                    textAlign: 'left',
+                                                    fontSize: 10,
+                                                    fill: color,
+                                                    textBaseline: 'bottom',
+                                                },
+                                            },
+                                        },
+                                    ],
+                                })
+                                plot.render()
+                            } catch (e) {
+                                console.error('KPI TinyLine render error:', key, e)
+                            }
                         }
-                        const chart = new G2.Chart({ container: c.id, autoFit: true });
-                        // 尝试套用内置暗色主题；失败则退回默认
-                        try { chart.theme({ type: 'classicDark' }); } catch (_e) { /* ignore */ }
-                        chart.options(spec);
-                        chart.data(c.data || []);
-                        chart.render();
+                    })
+                }
+
+                // 渲染每日写文/发布/上榜趋势图
+                const renderDailyTrendChart = () => {
+                    if (!daily_trend || !daily_trend.data || !daily_trend.data.length) return
+                    const container = document.getElementById('chart-daily-trend')
+                    if (!container || !window.G2Plot) return
+
+                    const data = []
+                    daily_trend.data.forEach(d => {
+                        data.push({ name: '写文章数', 日期: d.date, 数量: d.write_count })
+                        data.push({ name: '发布成功数', 日期: d.date, 数量: d.publish_count })
+                        data.push({ name: '文章上榜数', 日期: d.date, 数量: d.hit_count })
+                    })
+
+                    try {
+                        const plot = new G2Plot.Column(container, {
+                            data: data,
+                            isGroup: true,
+                            xField: '日期',
+                            yField: '数量',
+                            seriesField: 'name',
+                            color: ['#93c5fd', '#10b981', '#6366f1'],
+                            label: {
+                                position: 'middle',
+                                layout: [
+                                    { type: 'interval-adjust-position' },
+                                    { type: 'interval-hide-overlap' },
+                                    { type: 'adjust-color' },
+                                ],
+                            },
+                            xAxis: { label: { style: { fontSize: 11 } } },
+                            yAxis: { label: { style: { fontSize: 11 } }, title: { text: '单位：篇', style: { fontSize: 11 } } },
+                            legend: { position: 'top' },
+                            columnStyle: { radius: [2, 2, 0, 0] },
+                        })
+                        plot.render()
                     } catch (e) {
-                        el.innerHTML = '<div style="color:#f87171;font-size:13px;padding:20px">图表渲染失败：' +
-                            (e && e.message ? e.message : String(e)) + '</div>';
+                        console.error('Daily trend chart error:', e)
                     }
                 }
-            },
-            mounted() {
-                this.$nextTick(() => {
-                    (this.R.charts || []).forEach(c => this.buildChart(c));
-                    // Tailwind 浏览器构建会重扫 DOM，不影响本模板样式
-                });
+
+                // 渲染关键词排行双轴图
+                const renderKeywordRankingChart = () => {
+                    if (!keyword_ranking || !keyword_ranking.keywords || !keyword_ranking.keywords.length) return
+                    const container = document.getElementById('chart-keyword-ranking')
+                    if (!container || !window.G2Plot) return
+
+                    // 柱状图数据：发文数量 + 收录数量 + 上榜数量
+                    const barData = []
+                    keyword_ranking.keywords.forEach(k => {
+                        barData.push({ name: '发文数量', 关键词: k.question, 数量: k.publish_count })
+                        barData.push({ name: '收录数量', 关键词: k.question, 数量: k.inclusion_count })
+                        barData.push({ name: '上榜数量', 关键词: k.question, 数量: k.total_hit })
+                    })
+
+                    // 折线数据：收录率 + 上榜率（合并为带 seriesField 的数组）
+                    const lineData = []
+                    keyword_ranking.keywords.forEach(k => {
+                        lineData.push({ name: '收录率', 关键词: k.question, 比率: k.inclusion_rate })
+                        lineData.push({ name: '上榜率', 关键词: k.question, 比率: k.hit_rate })
+                    })
+
+                    try {
+                        const plot = new G2Plot.DualAxes(container, {
+                            data: [barData, lineData],
+                            xField: '关键词',
+                            yField: ['数量', '比率'],
+                            geometryOptions: [
+                                {
+                                    geometry: 'column',
+                                    isGroup: true,
+                                    seriesField: 'name',
+                                    color: ['#8b5cf6', '#10b981', '#f59e0b'],
+                                    label: {
+                                        position: 'middle',
+                                        layout: [
+                                            { type: 'interval-adjust-position' },
+                                            { type: 'interval-hide-overlap' },
+                                            { type: 'adjust-color' },
+                                        ],
+                                    },
+                                },
+                                {
+                                    geometry: 'line',
+                                    seriesField: 'name',
+                                    color: ['#3b82f6', '#ef4444'],
+                                    lineStyle: { lineWidth: 2 },
+                                    point: {
+                                        shape: 'circle',
+                                        size: 4,
+                                        style: { stroke: '#fff', lineWidth: 1 },
+                                    },
+                                    label: {
+                                        formatter: (d) => d.比率 + '%',
+                                        style: { fontSize: 10 },
+                                    },
+                                },
+                            ],
+                            xAxis: { label: { style: { fontSize: 11 }, autoRotate: true, autoEllipsis: true } },
+                            yAxis: {
+                                数量: { label: { style: { fontSize: 11 } }, position: 'left' },
+                                比率: {
+                                    label: { style: { fontSize: 11 }, formatter: (v) => v + '%' },
+                                    position: 'right',
+                                    min: 0,
+                                    max: 100,
+                                },
+                            },
+                            tooltip: { shared: true },
+                            legend: { position: 'top' },
+                        })
+                        plot.render()
+                    } catch (e) {
+                        console.error('Keyword ranking chart error:', e)
+                        // 降级：用 Column 分组柱状图
+                        try {
+                            const plot2 = new G2Plot.Column(container, {
+                                data: barData,
+                                isGroup: true,
+                                xField: '关键词',
+                                yField: '数量',
+                                seriesField: 'name',
+                                color: ['#8b5cf6', '#10b981', '#f59e0b'],
+                                label: {
+                                    position: 'middle',
+                                    layout: [
+                                        { type: 'interval-adjust-position' },
+                                        { type: 'interval-hide-overlap' },
+                                        { type: 'adjust-color' },
+                                    ],
+                                },
+                                xAxis: { label: { style: { fontSize: 11 } } },
+                                yAxis: { label: { style: { fontSize: 11 } } },
+                            })
+                            plot2.render()
+                        } catch (e2) {
+                            console.error('Keyword ranking fallback chart error:', e2)
+                        }
+                    }
+                }
+
+                // 渲染内容类型效果条形图
+                const renderContentTypeChart = () => {
+                    if (!content_type || !content_type.types || !content_type.types.length) return
+                    const container = document.getElementById('chart-content-type')
+                    if (!container || !window.G2Plot) return
+
+                    // 柱状图数据：发文数量 + 收录数量
+                    const barData = []
+                    content_type.types.forEach(t => {
+                        barData.push({ name: '发文数量', 类型: t.type, 数量: t.published })
+                        barData.push({ name: '收录数量', 类型: t.type, 数量: t.hit })
+                    })
+
+                    // 折线数据：收录率
+                    const lineData = content_type.types.map(t => ({
+                        类型: t.type,
+                        收录率: t.hit_rate,
+                    }))
+
+                    try {
+                        // 用 DualAxes 双轴图：柱状+折线
+                        const plot = new G2Plot.DualAxes(container, {
+                            data: [barData, lineData],
+                            xField: '类型',
+                            yField: ['数量', '收录率'],
+                            yField1: '数量',
+                            yField2: '收录率',
+                            geometryOptions: [
+                                {
+                                    geometry: 'column',
+                                    isGroup: true,
+                                    seriesField: 'name',
+                                    color: ['#8b5cf6', '#10b981'],
+                                    label: {
+                                        position: 'middle',
+                                        layout: [
+                                            { type: 'interval-adjust-position' },
+                                            { type: 'interval-hide-overlap' },
+                                            { type: 'adjust-color' },
+                                        ],
+                                    },
+                                },
+                                {
+                                    geometry: 'line',
+                                    color: '#f59e0b',
+                                    lineStyle: { lineWidth: 2 },
+                                    point: {
+                                        shape: 'circle',
+                                        size: 4,
+                                        style: { fill: '#f59e0b', stroke: '#fff', lineWidth: 1 },
+                                    },
+                                    label: {
+                                        formatter: (d) => d.收录率 + '%',
+                                        style: { fontSize: 10, fill: '#f59e0b' },
+                                    },
+                                },
+                            ],
+                            xAxis: { label: { style: { fontSize: 11 } } },
+                            yAxis: {
+                                数量: { label: { style: { fontSize: 11 } }, position: 'left' },
+                                收录率: {
+                                    label: { style: { fontSize: 11 }, formatter: (v) => v + '%' },
+                                    position: 'right',
+                                    min: 0,
+                                    max: 100,
+                                },
+                            },
+                            tooltip: { shared: true },
+                            legend: { position: 'top' },
+                        })
+                        plot.render()
+                    } catch (e) {
+                        console.error('Content type chart error:', e)
+                    }
+                }
+
+                // 渲染媒体渠道ROI条形图
+                const renderMediaRoiChart = () => {
+                    if (!media_roi || !media_roi.medias || !media_roi.medias.length) return
+                    const container = document.getElementById('chart-media-roi')
+                    if (!container || !window.G2Plot) return
+
+                    const data = media_roi.medias.map(m => ({
+                        media: m.media,
+                        上榜率: m.hit_rate,
+                        grade: m.grade,
+                    }))
+
+                    const gradeColor = { 'S': '#10b981', 'A': '#3b82f6', 'B': '#f59e0b', 'C': '#ef4444', 'D': '#9ca3af' }
+
+                    try {
+                        const plot = new G2Plot.Bar(container, {
+                            data: data,
+                            xField: '上榜率',
+                            yField: 'media',
+                            colorField: 'grade',
+                            color: (d) => gradeColor[d.grade] || '#6366f1',
+                            label: {
+                                position: 'right',
+                                formatter: (d) => d.上榜率 + '% [' + d.grade + ']',
+                                style: { fontSize: 11 },
+                            },
+                            xAxis: { max: 100, label: { formatter: (v) => v + '%' } },
+                            yAxis: { label: { style: { fontSize: 11 } } },
+                            meta: { media: { type: 'cat' }, 上榜率: { min: 0, max: 100 } },
+                        })
+                        plot.render()
+                    } catch (e) {
+                        console.error('Media ROI chart error:', e)
+                    }
+                }
+
+                // 渲染竞品品牌排行条形图
+                const renderCompetitiveBrandsChart = () => {
+                    if (!competitive_brands || !competitive_brands.brands || !competitive_brands.brands.length) return
+                    const container = document.getElementById('chart-competitive-brands')
+                    if (!container || !window.G2Plot) return
+
+                    const data = competitive_brands.brands.slice(0, 10).map(b => ({
+                        brand: b.brand,
+                        提及次数: b.total_mentions,
+                        is_own: b.is_own,
+                    }))
+
+                    try {
+                        const plot = new G2Plot.Bar(container, {
+                            data: data,
+                            xField: '提及次数',
+                            yField: 'brand',
+                            colorField: 'is_own',
+                            color: (d) => d.is_own ? '#ef4444' : '#8b5cf6',
+                            label: {
+                                position: 'right',
+                                formatter: (d) => d.提及次数 + '次',
+                                style: { fontSize: 11 },
+                            },
+                            yAxis: { label: { style: { fontSize: 11 } } },
+                            meta: { brand: { type: 'cat' } },
+                        })
+                        plot.render()
+                    } catch (e) {
+                        console.error('Competitive brands chart error:', e)
+                    }
+                }
+
+                // 渲染信源站点分布条形图
+                const renderSourceSitesChart = () => {
+                    if (!source_sites || !source_sites.sites || !source_sites.sites.length) return
+                    const container = document.getElementById('chart-source-sites')
+                    if (!container || !window.G2Plot) return
+
+                    const data = source_sites.sites.slice(0, 10).map(s => ({
+                        site: s.site,
+                        引用次数: s.total_refs,
+                        category: s.category,
+                    }))
+
+                    const catColor = {
+                        'B2B平台': '#6366f1',
+                        '行业媒体': '#10b981',
+                        '地方门户': '#f59e0b',
+                        '文档平台': '#8b5cf6',
+                        '企业官网': '#06b6d4',
+                        '自媒体': '#ec4899',
+                        '其他': '#9ca3af',
+                    }
+
+                    try {
+                        const plot = new G2Plot.Bar(container, {
+                            data: data,
+                            xField: '引用次数',
+                            yField: 'site',
+                            colorField: 'category',
+                            color: (d) => catColor[d.category] || '#6366f1',
+                            label: {
+                                position: 'right',
+                                formatter: (d) => d.引用次数 + '次',
+                                style: { fontSize: 11 },
+                            },
+                            yAxis: { label: { style: { fontSize: 11 } } },
+                            meta: { site: { type: 'cat' } },
+                        })
+                        plot.render()
+                    } catch (e) {
+                        console.error('Source sites chart error:', e)
+                    }
+                }
+
+                // 组件挂载后渲染图表
+                Vue.onMounted(() => {
+                    // 延迟一点确保 DOM 渲染完成
+                    setTimeout(() => {
+                        renderKpiCharts()
+                        renderDailyTrendChart()
+                        renderKeywordRankingChart()
+                        renderContentTypeChart()
+                        renderMediaRoiChart()
+                        renderCompetitiveBrandsChart()
+                        renderSourceSitesChart()
+                    }, 100)
+                })
+
+                return {
+                    header,
+                    kpis,
+                    daily_publish_tracker,
+                    daily_trend,
+                    trackerColumns,
+                    keyword_ranking,
+                    content_type,
+                    media_roi,
+                    competitive_brands,
+                    source_sites,
+                    insights,
+                    action_plan,
+                    actionPlanColumns,
+                }
             }
-        });
-        app.use(antd).mount('#app');
+        })
+        app.use(antd).mount('#app')
     </script>
 </body>
-
 </html>
+
