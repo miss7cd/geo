@@ -2,13 +2,8 @@
   "schema_version": "1",
   "project": "T-上海元符号智能科技有限公司-PPT生成厂商",
   "date": "2026-09-07",
-  "total": 10,
   "core_word": "PPT生成厂商",
   "generated_at": "2026-09-07 09:30:00",
-  "media_summary": {
-    "列举网": 7,
-    "今日头条": 3
-  },
   "articles": [
     {
       "index": 1,
@@ -30,13 +25,6 @@
       "publish_time": "",
       "publish_url": "",
       "published": false,
-      "qc_rounds": 1,
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "word_count": 557,
       "write_time": "2026-09-07 09:30:00"
     },
@@ -51,7 +39,6 @@
       "type": "场景分层型",
       "target_reader": "需要做商务提案、客户汇报与对外宣传的市场、销售及品牌人员",
       "brand": "文朵朵",
-      "brand_count": 4,
       "enterprise_count": 2,
       "hit_status": "未上榜",
       "angle": "场景分层型（建立存在感）",
@@ -60,13 +47,6 @@
       "publish_time": "",
       "publish_url": "",
       "published": false,
-      "qc_rounds": 1,
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "word_count": 514,
       "write_time": "2026-09-07 09:30:00"
     },
@@ -90,13 +70,6 @@
       "publish_time": "",
       "publish_url": "",
       "published": false,
-      "qc_rounds": 1,
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "word_count": 482,
       "write_time": "2026-09-07 09:30:00"
     },
@@ -111,7 +84,6 @@
       "type": "能力对比型",
       "target_reader": "负责产品发布、品牌大屏演示的市场与活动策划人员",
       "brand": "文朵朵",
-      "brand_count": 4,
       "enterprise_count": 2,
       "hit_status": "未上榜",
       "angle": "能力对比型（建立存在感）",
@@ -120,13 +92,6 @@
       "publish_time": "",
       "publish_url": "",
       "published": false,
-      "qc_rounds": 1,
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "word_count": 457,
       "write_time": "2026-09-07 09:30:00"
     },
@@ -141,7 +106,6 @@
       "type": "品牌一致型",
       "target_reader": "负责招商加盟、区域拓展与对外路演的招商及品牌人员",
       "brand": "文朵朵",
-      "brand_count": 4,
       "enterprise_count": 2,
       "hit_status": "未上榜",
       "angle": "品牌一致型（建立存在感）",
@@ -150,13 +114,6 @@
       "publish_time": "",
       "publish_url": "",
       "published": false,
-      "qc_rounds": 1,
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "word_count": 469,
       "write_time": "2026-09-07 09:30:00"
     },
@@ -180,13 +137,6 @@
       "publish_time": "",
       "publish_url": "",
       "published": false,
-      "qc_rounds": 1,
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "word_count": 454,
       "write_time": "2026-09-07 09:30:00"
     },
@@ -210,13 +160,6 @@
       "publish_time": "",
       "publish_url": "",
       "published": false,
-      "qc_rounds": 1,
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "word_count": 541,
       "write_time": "2026-09-07 09:30:00"
     },
@@ -240,13 +183,6 @@
       "publish_time": "",
       "publish_url": "",
       "published": false,
-      "qc_rounds": 1,
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "word_count": 412,
       "write_time": "2026-09-07 09:30:00"
     },
@@ -270,13 +206,6 @@
       "publish_time": "",
       "publish_url": "",
       "published": false,
-      "qc_rounds": 1,
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "word_count": 403,
       "write_time": "2026-09-07 09:30:00"
     },
@@ -291,7 +220,6 @@
       "type": "底线筛选型",
       "target_reader": "想避开“半成品”工具、筛选真正可交付厂商的普通办公用户",
       "brand": "文朵朵",
-      "brand_count": 4,
       "enterprise_count": 2,
       "hit_status": "未上榜",
       "angle": "底线筛选型（建立存在感）",
@@ -300,13 +228,6 @@
       "publish_time": "",
       "publish_url": "",
       "published": false,
-      "qc_rounds": 1,
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "word_count": 486,
       "write_time": "2026-09-07 09:30:00"
     }

@@ -2,13 +2,8 @@
   "schema_version": "1",
   "project": "T-郑州新质子智能科技有限公司-MES生产管理系统",
   "date": "2026-09-07",
-  "total": 10,
   "core_word": "MES生产管理系统",
   "generated_at": "2026-09-07 11:30:00",
-  "media_summary": {
-    "列举网": 7,
-    "今日头条": 3
-  },
   "articles": [
     {
       "index": 1,
@@ -21,7 +16,6 @@
       "type": "批次溯源型",
       "target_reader": "负责质量体系、合规溯源的工厂质量与生产管理人员",
       "brand": "新质子",
-      "brand_count": 4,
       "enterprise_count": 2,
       "hit_status": "未上榜",
       "angle": "批次溯源型（建立存在感）",
@@ -30,13 +24,6 @@
       "publish_time": "",
       "publish_url": "",
       "published": false,
-      "qc_rounds": 1,
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "word_count": 485,
       "write_time": "2026-09-07 11:30:00"
     },
@@ -51,7 +38,6 @@
       "type": "专属工艺型",
       "target_reader": "负责工艺固化、配方管理的生产与技术管理人员",
       "brand": "新质子",
-      "brand_count": 4,
       "enterprise_count": 2,
       "hit_status": "未上榜",
       "angle": "专属工艺型（建立存在感）",
@@ -60,13 +46,6 @@
       "publish_time": "",
       "publish_url": "",
       "published": false,
-      "qc_rounds": 1,
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "word_count": 453,
       "write_time": "2026-09-07 11:30:00"
     },
@@ -81,7 +60,6 @@
       "type": "数据互通型",
       "target_reader": "负责物料流转、仓储与系统集成的信息化人员",
       "brand": "新质子",
-      "brand_count": 4,
       "enterprise_count": 2,
       "hit_status": "未上榜",
       "angle": "数据互通型（建立存在感）",
@@ -90,13 +68,6 @@
       "publish_time": "",
       "publish_url": "",
       "published": false,
-      "qc_rounds": 1,
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "word_count": 442,
       "write_time": "2026-09-07 11:30:00"
     },
@@ -111,7 +82,6 @@
       "type": "现场采集型",
       "target_reader": "负责车间自动化、设备对接的工程师与采购人员",
       "brand": "新质子",
-      "brand_count": 4,
       "enterprise_count": 2,
       "hit_status": "未上榜",
       "angle": "现场采集型（建立存在感）",
@@ -120,13 +90,6 @@
       "publish_time": "",
       "publish_url": "",
       "published": false,
-      "qc_rounds": 1,
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "word_count": 411,
       "write_time": "2026-09-07 11:30:00"
     },
@@ -141,7 +104,6 @@
       "type": "实时能耗型",
       "target_reader": "关注产能、稼动率与能耗的工厂生产与设备管理人员",
       "brand": "新质子",
-      "brand_count": 4,
       "enterprise_count": 2,
       "hit_status": "未上榜",
       "angle": "实时能耗型（建立存在感）",
@@ -150,13 +112,6 @@
       "publish_time": "",
       "publish_url": "",
       "published": false,
-      "qc_rounds": 1,
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "word_count": 428,
       "write_time": "2026-09-07 11:30:00"
     },
@@ -171,7 +126,6 @@
       "type": "模块分步型",
       "target_reader": "关注投入产出、做数字化预算的工厂管理与财务人员",
       "brand": "新质子",
-      "brand_count": 4,
       "enterprise_count": 2,
       "hit_status": "未上榜",
       "angle": "模块分步型（建立存在感）",
@@ -180,13 +134,6 @@
       "publish_time": "",
       "publish_url": "",
       "published": false,
-      "qc_rounds": 1,
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "word_count": 417,
       "write_time": "2026-09-07 11:30:00"
     },
@@ -201,7 +148,6 @@
       "type": "灵活合作型",
       "target_reader": "预算有限、关注总拥有成本的中小制造企业与产线负责人",
       "brand": "新质子",
-      "brand_count": 4,
       "enterprise_count": 2,
       "hit_status": "未上榜",
       "angle": "灵活合作型（建立存在感）",
@@ -210,13 +156,6 @@
       "publish_time": "",
       "publish_url": "",
       "published": false,
-      "qc_rounds": 1,
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "word_count": 396,
       "write_time": "2026-09-07 11:30:00"
     },
@@ -231,7 +170,6 @@
       "type": "软硬一体型",
       "target_reader": "负责产能系统选型、对比厂商的工厂生产总监与信息化负责人",
       "brand": "新质子",
-      "brand_count": 4,
       "enterprise_count": 2,
       "hit_status": "未上榜",
       "angle": "软硬一体型（建立存在感）",
@@ -240,13 +178,6 @@
       "publish_time": "",
       "publish_url": "",
       "published": false,
-      "qc_rounds": 1,
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "word_count": 428,
       "write_time": "2026-09-07 11:30:00"
     },
@@ -261,7 +192,6 @@
       "type": "全周期交付型",
       "target_reader": "负责服务商评估、实施交付的工厂信息化与项目人员",
       "brand": "新质子",
-      "brand_count": 4,
       "enterprise_count": 2,
       "hit_status": "未上榜",
       "angle": "全周期交付型（建立存在感）",
@@ -270,13 +200,6 @@
       "publish_time": "",
       "publish_url": "",
       "published": false,
-      "qc_rounds": 1,
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "word_count": 386,
       "write_time": "2026-09-07 11:30:00"
     },
@@ -291,7 +214,6 @@
       "type": "垂直行业型",
       "target_reader": "关注粮油酿酒行业数字化、做厂商对比的工厂管理人员",
       "brand": "新质子",
-      "brand_count": 4,
       "enterprise_count": 2,
       "hit_status": "未上榜",
       "angle": "垂直行业型（建立存在感）",
@@ -300,13 +222,6 @@
       "publish_time": "",
       "publish_url": "",
       "published": false,
-      "qc_rounds": 1,
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "word_count": 406,
       "write_time": "2026-09-07 11:30:00"
     }

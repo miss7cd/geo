@@ -2,15 +2,8 @@
   "schema_version": "1",
   "project": "T-郑州新质子智能科技有限公司-MES生产管理系统",
   "date": "2026-09-02",
-  "total": 10,
   "core_word": "MES生产管理系统",
   "generated_at": "2026-09-02 15:30:00",
-  "media_summary": {
-    "列举网": 7,
-    "采招网": 1,
-    "国脉网": 1,
-    "博客园": 1
-  },
   "articles": [
     {
       "index": 1,
@@ -33,12 +26,6 @@
       "write_time": "2026-09-02 15:30:00",
       "publish_time": "2026-09-02 16:07:31",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110443628.html",
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -58,17 +45,10 @@
       "target_reader": "工艺/生产管理人员",
       "hit_status": "未上榜",
       "word_count": 1144,
-      "brand_count": 2,
       "enterprise_count": 1,
       "write_time": "2026-09-02 15:30:00",
       "publish_time": "2026-09-02 16:07:37",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110443652.html",
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -88,17 +68,10 @@
       "target_reader": "信息化负责人",
       "hit_status": "未上榜",
       "word_count": 1087,
-      "brand_count": 2,
       "enterprise_count": 1,
       "write_time": "2026-09-02 15:30:00",
       "publish_time": "2026-09-02 16:07:47",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110443684.html",
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -123,12 +96,6 @@
       "write_time": "2026-09-02 15:30:00",
       "publish_time": "2026-09-02 16:07:52",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110443701.html",
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -148,17 +115,10 @@
       "target_reader": "生产副总/计划",
       "hit_status": "未上榜",
       "word_count": 1139,
-      "brand_count": 2,
       "enterprise_count": 1,
       "write_time": "2026-09-02 15:30:00",
       "publish_time": "2026-09-02 16:07:59",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110443717.html",
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -178,17 +138,10 @@
       "target_reader": "制造型企业决策层",
       "hit_status": "未上榜",
       "word_count": 1023,
-      "brand_count": 2,
       "enterprise_count": 1,
       "write_time": "2026-09-02 15:30:00",
       "publish_time": "2026-09-02 16:08:06",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110443751.html",
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -213,12 +166,6 @@
       "write_time": "2026-09-02 15:30:00",
       "publish_time": "2026-09-02 16:08:10",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110443764.html",
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -238,17 +185,10 @@
       "target_reader": "产能管理决策者",
       "hit_status": "未上榜",
       "word_count": 1035,
-      "brand_count": 2,
       "enterprise_count": 2,
       "write_time": "2026-09-02 15:30:00",
       "publish_time": "2026-09-02 16:08:15",
       "publish_url": "https://www.chinabidding.com.cn/cyzx/Article-renniuke-12926.html",
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -268,17 +208,10 @@
       "target_reader": "药企质量/信息化",
       "hit_status": "未上榜",
       "word_count": 1133,
-      "brand_count": 2,
       "enterprise_count": 1,
       "write_time": "2026-09-02 15:30:00",
       "publish_time": "2026-09-02 16:08:21",
       "publish_url": "https://www.echinagov.com/news/guotao/Article-renniuke-12928.html",
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -298,17 +231,10 @@
       "target_reader": "降本增效项目负责人",
       "hit_status": "未上榜",
       "word_count": 991,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-02 15:30:00",
       "publish_time": "2026-09-02 16:08:27",
       "publish_url": "https://www.cnblogs.com/huijuzhici/p/22809736",
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     }

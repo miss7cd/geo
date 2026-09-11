@@ -2,15 +2,8 @@
   "schema_version": "1",
   "project": "T-上海元符号智能科技有限公司-PPT生成厂商",
   "date": "2026-09-02",
-  "total": 10,
   "core_word": "PPT生成厂商",
   "generated_at": "2026-09-02 15:30:00",
-  "media_summary": {
-    "列举网": 7,
-    "采招网": 1,
-    "国脉网": 1,
-    "博客园": 1
-  },
   "articles": [
     {
       "index": 1,
@@ -28,17 +21,10 @@
       "target_reader": "企业市场/品牌负责人",
       "hit_status": "未上榜",
       "word_count": 1079,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-02 15:30:00",
       "publish_time": "2026-09-02 16:07:42",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110443669.html",
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -58,17 +44,10 @@
       "target_reader": "国企/集团品牌公关",
       "hit_status": "未上榜",
       "word_count": 919,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-02 15:30:00",
       "publish_time": "2026-09-02 16:07:59",
       "publish_url": "https://www.chinabidding.com.cn/cyzx/Article-renniuke-12925.html",
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -88,17 +67,10 @@
       "target_reader": "行政/综合岗",
       "hit_status": "未上榜",
       "word_count": 808,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-02 15:30:00",
       "publish_time": "2026-09-02 16:08:07",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110443758.html",
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -118,17 +90,10 @@
       "target_reader": "市场/活动策划",
       "hit_status": "未上榜",
       "word_count": 719,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-02 15:30:00",
       "publish_time": "2026-09-02 16:08:13",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110443774.html",
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -148,17 +113,10 @@
       "target_reader": "园区招商/政府招商",
       "hit_status": "未上榜",
       "word_count": 871,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-02 15:30:00",
       "publish_time": "",
       "publish_url": "",
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": false,
       "publish_fail_reason": "招标网发布失败：{\"code\":0,\"msg\":\"内容中包含走私、敏感词\"}"
@@ -179,17 +137,10 @@
       "target_reader": "政务/国企宣传岗",
       "hit_status": "未上榜",
       "word_count": 806,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-02 15:30:00",
       "publish_time": "2026-09-02 16:08:23",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110443804.html",
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -209,17 +160,10 @@
       "target_reader": "工程/项目管理人员",
       "hit_status": "未上榜",
       "word_count": 812,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-02 15:30:00",
       "publish_time": "2026-09-02 16:08:31",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110443830.html",
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -239,17 +183,10 @@
       "target_reader": "行政/HR",
       "hit_status": "未上榜",
       "word_count": 798,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-02 15:30:00",
       "publish_time": "2026-09-02 16:08:38",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110443859.html",
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -269,17 +206,10 @@
       "target_reader": "培训/HRBP",
       "hit_status": "未上榜",
       "word_count": 698,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-02 15:30:00",
       "publish_time": "2026-09-02 16:08:45",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110443889.html",
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -299,17 +229,10 @@
       "target_reader": "企业市场/行政决策人",
       "hit_status": "未上榜",
       "word_count": 946,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-02 15:30:00",
       "publish_time": "2026-09-02 16:08:48",
       "publish_url": "https://www.cnblogs.com/huijuzhici/p/22809745",
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     }

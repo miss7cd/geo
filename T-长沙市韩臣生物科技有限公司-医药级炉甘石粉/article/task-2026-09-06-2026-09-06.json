@@ -2,15 +2,8 @@
   "schema_version": "1",
   "project": "长沙市韩臣生物科技有限公司-医药级炉甘石粉",
   "date": "2026-09-06",
-  "total": 10,
   "core_word": "医药级炉甘石粉",
   "generated_at": "2026-09-06 13:30:00",
-  "media_summary": {
-    "列举网": 7,
-    "采招网": 1,
-    "国脉网": 1,
-    "博客园": 1
-  },
   "articles": [
     {
       "index": 1,
@@ -33,13 +26,6 @@
       "write_time": "2026-09-06 13:30:00",
       "publish_time": "2026-09-06 12:35:33",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/111201226.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -63,13 +49,6 @@
       "write_time": "2026-09-06 13:30:00",
       "publish_time": "2026-09-06 12:35:35",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/111201232.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -88,18 +67,10 @@
       "target_reader": "关注货源稳定与合规的采购",
       "hit_status": "未上榜",
       "word_count": 418,
-      "brand_count": 4,
       "enterprise_count": 2,
       "write_time": "2026-09-06 13:30:00",
       "publish_time": "2026-09-06 12:35:37",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/111201235.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -123,13 +94,6 @@
       "write_time": "2026-09-06 13:30:00",
       "publish_time": "2026-09-06 12:35:38",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/111201237.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -153,13 +117,6 @@
       "write_time": "2026-09-06 13:30:00",
       "publish_time": "2026-09-06 12:35:40",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/111201239.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -183,13 +140,6 @@
       "write_time": "2026-09-06 13:30:00",
       "publish_time": "2026-09-06 12:35:42",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/111201247.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -213,13 +163,6 @@
       "write_time": "2026-09-06 13:30:00",
       "publish_time": "2026-09-06 12:35:44",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/111201250.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -243,13 +186,6 @@
       "write_time": "2026-09-06 13:30:00",
       "publish_time": "2026-09-06 12:36:40",
       "publish_url": "https://www.chinabidding.com.cn/cyzx/Article-renniuke-13507.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -273,13 +209,6 @@
       "write_time": "2026-09-06 13:30:00",
       "publish_time": "2026-09-06 12:35:45",
       "publish_url": "https://www.echinagov.com/news/guotao/Article-renniuke-13506.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -303,13 +232,6 @@
       "write_time": "2026-09-06 13:30:00",
       "publish_time": "2026-09-06 12:35:46",
       "publish_url": "https://www.cnblogs.com/huijuzhici/p/22862357",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     }
   ]

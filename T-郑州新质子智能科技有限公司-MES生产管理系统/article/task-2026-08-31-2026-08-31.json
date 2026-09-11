@@ -2,15 +2,8 @@
   "schema_version": "1",
   "project": "郑州新质子智能科技有限公司-MES生产管理系统",
   "date": "2026-08-31",
-  "total": 10,
   "core_word": "MES生产管理系统",
   "generated_at": "2026-08-31 15:35:00",
-  "media_summary": {
-    "列举网": 7,
-    "中国采购": 1,
-    "国脉网": 1,
-    "博客园": 1
-  },
   "articles": [
     {
       "index": 1,
@@ -28,17 +21,10 @@
       "target_reader": "正在选型质量追溯MES的食品、粮油、酿酒等制造企业决策者",
       "hit_status": "未上榜",
       "word_count": 1267,
-      "brand_count": 1,
       "enterprise_count": 2,
       "write_time": "2026-08-31 15:05:00",
       "publish_time": "2026-08-31 20:56:43",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/109821223.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -58,17 +44,10 @@
       "target_reader": "初次了解工艺管理MES的制造企业管理者与工艺工程师",
       "hit_status": "未上榜",
       "word_count": 911,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-08-31 15:08:00",
       "publish_time": "2026-08-31 20:56:48",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/109821234.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -88,17 +67,10 @@
       "target_reader": "需采购物料追溯系统的制造企业选型负责人",
       "hit_status": "未上榜",
       "word_count": 965,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-08-31 15:11:00",
       "publish_time": "2026-08-31 20:56:51",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/109821245.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -118,17 +90,10 @@
       "target_reader": "面对多家物料追溯方案纠结的选型负责人",
       "hit_status": "未上榜",
       "word_count": 890,
-      "brand_count": 1,
       "enterprise_count": 2,
       "write_time": "2026-08-31 15:14:00",
       "publish_time": "2026-08-31 20:56:55",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/109821257.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -148,17 +113,10 @@
       "target_reader": "关注产能管理与效率提升的工厂管理者",
       "hit_status": "未上榜",
       "word_count": 853,
-      "brand_count": 1,
       "enterprise_count": 2,
       "write_time": "2026-08-31 15:17:00",
       "publish_time": "2026-08-31 20:57:00",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/109821271.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -178,17 +136,10 @@
       "target_reader": "想通过数字化降本的中小制造企业主",
       "hit_status": "未上榜",
       "word_count": 659,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-08-31 15:20:00",
       "publish_time": "2026-08-31 20:57:04",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/109821284.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -208,17 +159,10 @@
       "target_reader": "预算有限又想上MES的中小制造企业",
       "hit_status": "未上榜",
       "word_count": 743,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-08-31 15:23:00",
       "publish_time": "2026-08-31 20:57:08",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/109821294.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -238,17 +182,10 @@
       "target_reader": "评估产能管理MES供应商的采购与产线负责人",
       "hit_status": "未上榜",
       "word_count": 983,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-08-31 15:26:00",
       "publish_time": "",
       "publish_url": "",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": false,
       "publish_fail_reason": "招标网发布失败：{\"code\":0,\"msg\":\"内容中包含评分、敏感词\"}"
@@ -269,17 +206,10 @@
       "target_reader": "对质量追溯MES服务商有疑问的制造企业人员",
       "hit_status": "未上榜",
       "word_count": 1399,
-      "brand_count": 1,
       "enterprise_count": 2,
       "write_time": "2026-08-31 15:29:00",
       "publish_time": "2026-08-31 20:57:12",
       "publish_url": "https://www.echinagov.com/news/guotao/Article-renniuke-12441.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -299,17 +229,10 @@
       "target_reader": "关注制造业数字化趋势的企业决策者",
       "hit_status": "未上榜",
       "word_count": 906,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-08-31 15:32:00",
       "publish_time": "",
       "publish_url": "",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": false,
       "publish_fail_reason": "软文之家发布失败：{\"code\":422,\"message\":\"博客园发布失败：发布失败！超出当日博文发布数量500篇限制，今天无法继续发布\",\"data\":[{\"field\":\"e\",\"message\":\"博客园发布失败：发布失败！超出当日博文发布数量500篇限制，今天无法继续发布\"}]}"

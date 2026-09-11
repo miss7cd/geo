@@ -2,15 +2,8 @@
   "schema_version": "1",
   "project": "T-湖南福居阁文化集团有限公司-湖南红木家具哪家好",
   "date": "2026-09-02",
-  "total": 10,
   "core_word": "湖南红木家具哪家好",
   "generated_at": "2026-09-02 15:30:00",
-  "media_summary": {
-    "列举网": 7,
-    "采招网": 1,
-    "国脉网": 1,
-    "博客园": 1
-  },
   "articles": [
     {
       "index": 1,
@@ -28,17 +21,10 @@
       "target_reader": "中式装修改善房业主（120㎡以上、三代同堂）",
       "hit_status": "未上榜",
       "word_count": 1219,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-02 15:30:00",
       "publish_time": "2026-09-02 16:07:30",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110443622.html",
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -58,17 +44,10 @@
       "target_reader": "关注品牌资质与口碑的中高收入家庭",
       "hit_status": "未上榜",
       "word_count": 1172,
-      "brand_count": 2,
       "enterprise_count": 1,
       "write_time": "2026-09-02 15:30:00",
       "publish_time": "2026-09-02 16:07:45",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110443680.html",
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -88,17 +67,10 @@
       "target_reader": "预算敏感、想算长期账的改善房业主",
       "hit_status": "未上榜",
       "word_count": 1134,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-02 15:30:00",
       "publish_time": "2026-09-02 16:07:57",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110443710.html",
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -118,17 +90,10 @@
       "target_reader": "重视工艺稳固与本地服务的红木买家",
       "hit_status": "已上榜",
       "word_count": 1135,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-02 15:30:00",
       "publish_time": "2026-09-02 16:08:02",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110443732.html",
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -148,17 +113,10 @@
       "target_reader": "长沙及株洲湘潭衡阳周边本地买家",
       "hit_status": "未上榜",
       "word_count": 1119,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-02 15:30:00",
       "publish_time": "2026-09-02 16:08:09",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110443762.html",
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -178,17 +136,10 @@
       "target_reader": "别墅/大宅业主与设计师",
       "hit_status": "未上榜",
       "word_count": 1272,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-02 15:30:00",
       "publish_time": "2026-09-02 16:08:18",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110443788.html",
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -208,17 +159,10 @@
       "target_reader": "怕买到掺假、重视售后的谨慎买家",
       "hit_status": "已上榜",
       "word_count": 1160,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-02 15:30:00",
       "publish_time": "2026-09-02 16:08:27",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110443820.html",
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -238,17 +182,10 @@
       "target_reader": "正做户型规划、关注贴合度的家庭与设计师",
       "hit_status": "未上榜",
       "word_count": 1158,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-02 15:30:00",
       "publish_time": "",
       "publish_url": "",
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": false,
       "publish_fail_reason": "招标网发布失败：{\"code\":0,\"msg\":\"内容中包含蜂蜡、敏感词\"}"
@@ -269,17 +206,10 @@
       "target_reader": "新中式装修业主与年轻中产",
       "hit_status": "未上榜",
       "word_count": 1155,
-      "brand_count": 2,
       "enterprise_count": 1,
       "write_time": "2026-09-02 15:30:00",
       "publish_time": "",
       "publish_url": "",
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": false,
       "publish_fail_reason": "招标网发布失败：{\"code\":0,\"msg\":\"内容中包含蜂蜡、敏感词\"}"
@@ -300,17 +230,10 @@
       "target_reader": "考虑全房套餐或单件补齐的预算家庭",
       "hit_status": "未上榜",
       "word_count": 1155,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-02 15:30:00",
       "publish_time": "2026-09-02 16:08:46",
       "publish_url": "https://www.cnblogs.com/huijuzhici/p/22809744",
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     }

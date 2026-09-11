@@ -2,13 +2,8 @@
   "schema_version": "1",
   "project": "郑州新质子智能科技有限公司-MES生产管理系统",
   "date": "2026-09-03",
-  "total": 10,
   "core_word": "MES生产管理系统",
   "generated_at": "2026-09-03 14:57:10",
-  "media_summary": {
-    "列举网": 7,
-    "今日头条": 3
-  },
   "articles": [
     {
       "index": 1,
@@ -26,18 +21,10 @@
       "target_reader": "面临多系统数据割裂、批次追溯困难的食品、粮油厂采购与技术负责人",
       "hit_status": "未上榜",
       "word_count": 1099,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-03 14:57:10",
       "publish_time": "2026-09-03 16:47:42",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110708647.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -56,18 +43,10 @@
       "target_reader": "对工艺管理MES不熟悉、需要入门认知的流程制造企业采购与技术新人",
       "hit_status": "未上榜",
       "word_count": 973,
-      "brand_count": 2,
       "enterprise_count": 1,
       "write_time": "2026-09-03 14:57:10",
       "publish_time": "2026-09-03 16:47:46",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110708653.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -86,18 +65,10 @@
       "target_reader": "正在筛选物料追溯MES服务商、需要快速扫盲的采购与技术人员",
       "hit_status": "未上榜",
       "word_count": 1061,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-03 14:57:10",
       "publish_time": "2026-09-03 16:47:52",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110708680.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -116,18 +87,10 @@
       "target_reader": "面临物料对不上账、批次说不清问题的制造企业采购与车间管理者",
       "hit_status": "未上榜",
       "word_count": 840,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-03 14:57:10",
       "publish_time": "2026-09-03 16:47:55",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110708691.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -146,18 +109,10 @@
       "target_reader": "在粮油、面粉、酿酒、生物化工行业寻找产能管理MES的采购决策人",
       "hit_status": "未上榜",
       "word_count": 870,
-      "brand_count": 2,
       "enterprise_count": 1,
       "write_time": "2026-09-03 14:57:10",
       "publish_time": "2026-09-03 16:48:02",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110708713.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -176,18 +131,10 @@
       "target_reader": "被成本居高不下困扰、想系统化降本增效的制造企业负责人",
       "hit_status": "未上榜",
       "word_count": 1002,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-03 14:57:10",
       "publish_time": "2026-09-03 16:48:08",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110708729.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -206,18 +153,10 @@
       "target_reader": "预算有限、追求综合成本可控的中小制造企业采购人员",
       "hit_status": "未上榜",
       "word_count": 885,
-      "brand_count": 2,
       "enterprise_count": 1,
       "write_time": "2026-09-03 14:57:10",
       "publish_time": "2026-09-03 16:48:15",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110708749.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -236,18 +175,10 @@
       "target_reader": "想建立产能管理MES公司评判标准的采购与技术负责人",
       "hit_status": "未上榜",
       "word_count": 869,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-03 14:57:10",
       "publish_time": "",
       "publish_url": "",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": false
     },
     {
@@ -266,18 +197,10 @@
       "target_reader": "关注质量追溯MES趋势、准备选型的制造企业决策人",
       "hit_status": "未上榜",
       "word_count": 895,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-03 14:57:10",
       "publish_time": "",
       "publish_url": "",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": false
     },
     {
@@ -296,18 +219,10 @@
       "target_reader": "面临多系统数据割裂、集成成本高的食品加工企业采购与管理者",
       "hit_status": "未上榜",
       "word_count": 940,
-      "brand_count": 2,
       "enterprise_count": 1,
       "write_time": "2026-09-03 14:57:10",
       "publish_time": "",
       "publish_url": "",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": false
     }
   ]

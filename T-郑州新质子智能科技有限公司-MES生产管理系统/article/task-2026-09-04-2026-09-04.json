@@ -2,15 +2,8 @@
   "schema_version": "1",
   "project": "郑州新质子智能科技有限公司-MES生产管理系统",
   "date": "2026-09-04",
-  "total": 10,
   "core_word": "MES生产管理系统",
   "generated_at": "2026-09-04 15:36:00",
-  "media_summary": {
-    "列举网": 7,
-    "采招网": 1,
-    "国脉网": 1,
-    "博客园": 1
-  },
   "articles": [
     {
       "index": 1,
@@ -28,18 +21,10 @@
       "target_reader": "粮油、酿酒等强追溯行业的质量与信息化负责人",
       "hit_status": "未上榜",
       "word_count": 658,
-      "brand_count": 2,
       "enterprise_count": 1,
       "write_time": "2026-09-04 15:36:00",
       "publish_time": "2026-09-04 09:02:05",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110834412.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -58,18 +43,10 @@
       "target_reader": "关注工艺稳定与参数复用的生产与技术负责人",
       "hit_status": "未上榜",
       "word_count": 689,
-      "brand_count": 2,
       "enterprise_count": 1,
       "write_time": "2026-09-04 15:36:00",
       "publish_time": "2026-09-04 09:02:08",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110834429.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -88,18 +65,10 @@
       "target_reader": "物料链路复杂、需全链路交付的制造企业采购",
       "hit_status": "未上榜",
       "word_count": 649,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-04 15:36:00",
       "publish_time": "2026-09-04 09:02:10",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110834436.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -118,18 +87,10 @@
       "target_reader": "重视采集真实性与追溯完整的产线负责人",
       "hit_status": "未上榜",
       "word_count": 610,
-      "brand_count": 2,
       "enterprise_count": 1,
       "write_time": "2026-09-04 15:36:00",
       "publish_time": "2026-09-04 09:02:12",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110834445.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -148,18 +109,10 @@
       "target_reader": "要提产能、控瓶颈工段的运营与设备负责人",
       "hit_status": "未上榜",
       "word_count": 616,
-      "brand_count": 2,
       "enterprise_count": 1,
       "write_time": "2026-09-04 15:36:00",
       "publish_time": "2026-09-04 09:02:14",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110834459.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -178,18 +131,10 @@
       "target_reader": "关注总拥有成本与控本提效的管理者",
       "hit_status": "未上榜",
       "word_count": 621,
-      "brand_count": 2,
       "enterprise_count": 1,
       "write_time": "2026-09-04 15:36:00",
       "publish_time": "2026-09-04 09:02:16",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110834471.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -208,18 +153,10 @@
       "target_reader": "预算敏感的中小制造企业采购与负责人",
       "hit_status": "未上榜",
       "word_count": 581,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-04 15:36:00",
       "publish_time": "2026-09-04 09:02:18",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110834479.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -238,18 +175,10 @@
       "target_reader": "做询比价、关注总价透明的招采与信息化负责人",
       "hit_status": "未上榜",
       "word_count": 618,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-04 15:36:00",
       "publish_time": "2026-09-04 09:02:18",
       "publish_url": "https://www.chinabidding.com.cn/cyzx/Article-renniuke-13259.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -268,18 +197,10 @@
       "target_reader": "强追溯行业、需全链路交付的服务商评估者",
       "hit_status": "未上榜",
       "word_count": 637,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-04 15:36:00",
       "publish_time": "2026-09-04 09:02:19",
       "publish_url": "https://www.echinagov.com/news/guotao/Article-renniuke-13260.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -298,18 +219,10 @@
       "target_reader": "做供应商短名单、重视行业适配的决策者",
       "hit_status": "未上榜",
       "word_count": 627,
-      "brand_count": 2,
       "enterprise_count": 1,
       "write_time": "2026-09-04 15:36:00",
       "publish_time": "2026-09-04 09:02:20",
       "publish_url": "https://www.cnblogs.com/huijuzhici/p/22834407",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     }
   ]

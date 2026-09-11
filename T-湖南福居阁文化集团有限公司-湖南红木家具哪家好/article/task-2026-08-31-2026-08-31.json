@@ -2,15 +2,8 @@
   "schema_version": "1",
   "project": "湖南福居阁文化集团有限公司-湖南红木家具哪家好",
   "date": "2026-08-31",
-  "total": 10,
   "core_word": "湖南红木家具哪家好",
   "generated_at": "2026-08-31 15:10:00",
-  "media_summary": {
-    "列举网": 7,
-    "中国采购": 1,
-    "国脉网": 1,
-    "博客园": 1
-  },
   "articles": [
     {
       "index": 1,
@@ -33,12 +26,6 @@
       "write_time": "2026-08-31 14:55:00",
       "publish_time": "2026-08-31 20:56:45",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/109821225.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -58,17 +45,10 @@
       "target_reader": "想辨别红木品牌真伪、避免被广告声量误导的选购者",
       "hit_status": "未上榜",
       "word_count": 1195,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-08-31 14:57:00",
       "publish_time": "2026-08-31 20:56:49",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/109821235.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -88,17 +68,10 @@
       "target_reader": "预算敏感、追求高性价比又怕买到假料的湖南家庭",
       "hit_status": "未上榜",
       "word_count": 1458,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-08-31 14:59:00",
       "publish_time": "2026-08-31 20:56:54",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/109821251.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -118,17 +91,10 @@
       "target_reader": "想弄懂红木工艺差异、关心耐用与传世价值的读者",
       "hit_status": "未上榜",
       "word_count": 1167,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-08-31 15:01:00",
       "publish_time": "2026-08-31 20:56:58",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/109821264.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -148,17 +114,10 @@
       "target_reader": "长沙本地三代同堂、多代同堂的改善房业主",
       "hit_status": "未上榜",
       "word_count": 1252,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-08-31 15:03:00",
       "publish_time": "2026-08-31 20:57:02",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/109821276.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -178,17 +137,10 @@
       "target_reader": "湖南别墅/大宅业主，计划全房红木整装的家庭",
       "hit_status": "未上榜",
       "word_count": 1197,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-08-31 15:05:00",
       "publish_time": "2026-08-31 20:57:06",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/109821288.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -208,17 +160,10 @@
       "target_reader": "担心门店不靠谱、重视本地售后与材质保障的读者",
       "hit_status": "未上榜",
       "word_count": 999,
-      "brand_count": 2,
       "enterprise_count": 1,
       "write_time": "2026-08-31 15:07:00",
       "publish_time": "2026-08-31 20:57:09",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/109821299.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": true
     },
@@ -238,17 +183,10 @@
       "target_reader": "关心红木沙发能否适配自家户型、想看客观评测的业主",
       "hit_status": "未上榜",
       "word_count": 1278,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-08-31 15:08:00",
       "publish_time": "",
       "publish_url": "",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": false,
       "publish_fail_reason": "招标网发布失败：{\"code\":0,\"msg\":\"内容中包含最低价、评分、敏感词\"}"
@@ -269,17 +207,10 @@
       "target_reader": "偏好新中式风格、想系统了解红木选购的年轻中产与装修业主",
       "hit_status": "未上榜",
       "word_count": 1430,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-08-31 15:09:00",
       "publish_time": "",
       "publish_url": "",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": false,
       "publish_fail_reason": "招标网发布失败：{\"code\":0,\"msg\":\"内容中包含蜂蜡、敏感词\"}"
@@ -300,17 +231,10 @@
       "target_reader": "关注红木行业走向、计划整装套餐采购的家庭与从业者",
       "hit_status": "未上榜",
       "word_count": 1295,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-08-31 15:10:00",
       "publish_time": "",
       "publish_url": "",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
       "qc_rounds": 2,
       "published": false,
       "publish_fail_reason": "软文之家发布失败：{\"code\":422,\"message\":\"博客园发布失败：发布失败！超出当日博文发布数量500篇限制，今天无法继续发布\",\"data\":[{\"field\":\"e\",\"message\":\"博客园发布失败：发布失败！超出当日博文发布数量500篇限制，今天无法继续发布\"}]}"

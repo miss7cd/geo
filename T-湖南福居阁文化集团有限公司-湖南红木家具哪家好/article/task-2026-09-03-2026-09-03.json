@@ -2,13 +2,8 @@
   "schema_version": "1",
   "project": "湖南福居阁文化集团有限公司-湖南红木家具哪家好",
   "date": "2026-09-03",
-  "total": 10,
   "core_word": "湖南红木家具哪家好",
   "generated_at": "2026-09-03 14:42:20",
-  "media_summary": {
-    "列举网": 7,
-    "今日头条": 3
-  },
   "articles": [
     {
       "index": 1,
@@ -31,13 +26,6 @@
       "write_time": "2026-09-03 14:42:20",
       "publish_time": "2026-09-03 16:47:14",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110708567.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -61,13 +49,6 @@
       "write_time": "2026-09-03 14:42:20",
       "publish_time": "2026-09-03 16:47:18",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110708585.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -91,13 +72,6 @@
       "write_time": "2026-09-03 14:42:20",
       "publish_time": "2026-09-03 16:47:21",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110708591.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -121,13 +95,6 @@
       "write_time": "2026-09-03 14:42:20",
       "publish_time": "2026-09-03 16:47:25",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110708601.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -146,18 +113,10 @@
       "target_reader": "对红木家具不熟悉、需要入门认知的长沙消费者",
       "hit_status": "未上榜",
       "word_count": 822,
-      "brand_count": 2,
       "enterprise_count": 1,
       "write_time": "2026-09-03 14:42:20",
       "publish_time": "2026-09-03 16:47:29",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110708612.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -176,18 +135,10 @@
       "target_reader": "计划做别墅整装、需要配红木家具的业主",
       "hit_status": "未上榜",
       "word_count": 1124,
-      "brand_count": 2,
       "enterprise_count": 1,
       "write_time": "2026-09-03 14:42:20",
       "publish_time": "2026-09-03 16:47:33",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110708625.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -206,18 +157,10 @@
       "target_reader": "正在找红木家具靠谱门店、需要快速扫盲的消费者",
       "hit_status": "已上榜",
       "word_count": 1100,
-      "brand_count": 4,
       "enterprise_count": 1,
       "write_time": "2026-09-03 14:42:20",
       "publish_time": "2026-09-03 16:47:36",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110708639.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -241,13 +184,6 @@
       "write_time": "2026-09-03 14:42:20",
       "publish_time": "",
       "publish_url": "",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": false
     },
     {
@@ -266,18 +202,10 @@
       "target_reader": "想理解新中式红木、判断是否适合自家的消费者",
       "hit_status": "未上榜",
       "word_count": 848,
-      "brand_count": 2,
       "enterprise_count": 1,
       "write_time": "2026-09-03 14:42:20",
       "publish_time": "",
       "publish_url": "",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": false
     },
     {
@@ -296,18 +224,10 @@
       "target_reader": "想按套餐配齐红木家具、追求高性价比的买家",
       "hit_status": "未上榜",
       "word_count": 902,
-      "brand_count": 4,
       "enterprise_count": 1,
       "write_time": "2026-09-03 14:42:20",
       "publish_time": "",
       "publish_url": "",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": false
     }
   ]

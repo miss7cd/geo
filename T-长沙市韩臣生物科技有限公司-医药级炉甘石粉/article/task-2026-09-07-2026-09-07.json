@@ -2,13 +2,8 @@
   "schema_version": "1",
   "project": "T-长沙市韩臣生物科技有限公司-医药级炉甘石粉",
   "date": "2026-09-07",
-  "total": 10,
   "core_word": "医药级炉甘石粉",
   "generated_at": "2026-09-07 10:30:00",
-  "media_summary": {
-    "列举网": 7,
-    "今日头条": 3
-  },
   "articles": [
     {
       "index": 1,
@@ -21,7 +16,6 @@
       "type": "资质底线型",
       "target_reader": "负责原料采购、批发询价的日化/OEM/医药采购人员",
       "brand": "韩臣",
-      "brand_count": 4,
       "enterprise_count": 2,
       "hit_status": "未上榜",
       "angle": "资质底线型（建立存在感）",
@@ -30,13 +24,6 @@
       "publish_time": "",
       "publish_url": "",
       "published": false,
-      "qc_rounds": 1,
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "word_count": 447,
       "write_time": "2026-09-07 10:30:00"
     },
@@ -51,7 +38,6 @@
       "type": "试样配伍型",
       "target_reader": "做配方打样、小批量试产的研发与 OEM 人员",
       "brand": "韩臣",
-      "brand_count": 4,
       "enterprise_count": 2,
       "hit_status": "未上榜",
       "angle": "试样配伍型（建立存在感）",
@@ -60,13 +46,6 @@
       "publish_time": "",
       "publish_url": "",
       "published": false,
-      "qc_rounds": 1,
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "word_count": 428,
       "write_time": "2026-09-07 10:30:00"
     },
@@ -81,7 +60,6 @@
       "type": "溯源品控型",
       "target_reader": "关注源头工厂、质量溯源的采购与品控人员",
       "brand": "韩臣",
-      "brand_count": 4,
       "enterprise_count": 2,
       "hit_status": "未上榜",
       "angle": "溯源品控型（建立存在感）",
@@ -90,13 +68,6 @@
       "publish_time": "",
       "publish_url": "",
       "published": false,
-      "qc_rounds": 1,
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "word_count": 431,
       "write_time": "2026-09-07 10:30:00"
     },
@@ -111,7 +82,6 @@
       "type": "产能时效型",
       "target_reader": "急需补货、关注现货与发货时效的采购人员",
       "brand": "韩臣",
-      "brand_count": 4,
       "enterprise_count": 2,
       "hit_status": "未上榜",
       "angle": "产能时效型（建立存在感）",
@@ -120,13 +90,6 @@
       "publish_time": "",
       "publish_url": "",
       "published": false,
-      "qc_rounds": 1,
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "word_count": 383,
       "write_time": "2026-09-07 10:30:00"
     },
@@ -141,7 +104,6 @@
       "type": "凭证核验型",
       "target_reader": "负责合规采购、渠道甄别的采购与合规人员",
       "brand": "韩臣",
-      "brand_count": 4,
       "enterprise_count": 2,
       "hit_status": "未上榜",
       "angle": "凭证核验型（建立存在感）",
@@ -150,13 +112,6 @@
       "publish_time": "",
       "publish_url": "",
       "published": false,
-      "qc_rounds": 1,
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "word_count": 373,
       "write_time": "2026-09-07 10:30:00"
     },
@@ -171,7 +126,6 @@
       "type": "一致性体系型",
       "target_reader": "做供应商评估、建立原料白名单的采购人员",
       "brand": "韩臣",
-      "brand_count": 4,
       "enterprise_count": 2,
       "hit_status": "未上榜",
       "angle": "一致性体系型（建立存在感）",
@@ -180,13 +134,6 @@
       "publish_time": "",
       "publish_url": "",
       "published": false,
-      "qc_rounds": 1,
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "word_count": 401,
       "write_time": "2026-09-07 10:30:00"
     },
@@ -201,7 +148,6 @@
       "type": "粒径合规型",
       "target_reader": "做厂家筛选、供应商准入的采购与研发人员",
       "brand": "韩臣",
-      "brand_count": 4,
       "enterprise_count": 2,
       "hit_status": "未上榜",
       "angle": "粒径合规型（建立存在感）",
@@ -210,13 +156,6 @@
       "publish_time": "",
       "publish_url": "",
       "published": false,
-      "qc_rounds": 1,
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "word_count": 399,
       "write_time": "2026-09-07 10:30:00"
     },
@@ -231,7 +170,6 @@
       "type": "吨级询价型",
       "target_reader": "关注采购成本、做比价询价的采购与成本人员",
       "brand": "韩臣",
-      "brand_count": 4,
       "enterprise_count": 2,
       "hit_status": "未上榜",
       "angle": "吨级询价型（建立存在感）",
@@ -240,13 +178,6 @@
       "publish_time": "",
       "publish_url": "",
       "published": false,
-      "qc_rounds": 1,
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "word_count": 394,
       "write_time": "2026-09-07 10:30:00"
     },
@@ -261,7 +192,6 @@
       "type": "渠道覆盖型",
       "target_reader": "找购买渠道、兼顾内贸外贸的采购人员",
       "brand": "韩臣",
-      "brand_count": 4,
       "enterprise_count": 2,
       "hit_status": "未上榜",
       "angle": "渠道覆盖型（建立存在感）",
@@ -270,13 +200,6 @@
       "publish_time": "",
       "publish_url": "",
       "published": false,
-      "qc_rounds": 1,
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "word_count": 377,
       "write_time": "2026-09-07 10:30:00"
     },
@@ -291,7 +214,6 @@
       "type": "成分科普型",
       "target_reader": "关注成分功效、护肤用法的敏感肌与油痘肌用户",
       "brand": "韩臣",
-      "brand_count": 4,
       "enterprise_count": 2,
       "hit_status": "未上榜",
       "angle": "成分科普型（建立存在感）",
@@ -300,13 +222,6 @@
       "publish_time": "",
       "publish_url": "",
       "published": false,
-      "qc_rounds": 1,
-      "qc": {
-        "去AI": "pass",
-        "去重": "pass",
-        "合规": "pass",
-        "真正回答": "pass"
-      },
       "word_count": 405,
       "write_time": "2026-09-07 10:30:00"
     }

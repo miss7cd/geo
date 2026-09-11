@@ -2,13 +2,8 @@
   "schema_version": "1",
   "project": "长沙市韩臣生物科技有限公司-医药级炉甘石粉",
   "date": "2026-09-01",
-  "total": 10,
   "core_word": "医药级炉甘石粉",
   "generated_at": "2026-09-01 21:30:00",
-  "media_summary": {
-    "列举网": 7,
-    "今日头条": 3
-  },
   "articles": [
     {
       "index": 1,
@@ -31,13 +26,6 @@
       "write_time": "2026-09-01 21:30:00",
       "publish_time": "2026-09-01 10:23:30",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/109987070.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -56,18 +44,10 @@
       "target_reader": "做小批量打样与配方研发的工程师",
       "hit_status": "未上榜",
       "word_count": 640,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-01 21:30:00",
       "publish_time": "2026-09-01 10:23:32",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/109987088.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -86,18 +66,10 @@
       "target_reader": "关注直供可靠性与品控的采购负责人",
       "hit_status": "未上榜",
       "word_count": 616,
-      "brand_count": 2,
       "enterprise_count": 1,
       "write_time": "2026-09-01 21:30:00",
       "publish_time": "2026-09-01 10:23:35",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/109987107.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -116,18 +88,10 @@
       "target_reader": "急需拿现货又怕踩坑的采购人员",
       "hit_status": "未上榜",
       "word_count": 536,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-01 21:30:00",
       "publish_time": "2026-09-01 10:23:38",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/109987136.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -146,18 +110,10 @@
       "target_reader": "在多渠道间犹豫的合规采购方",
       "hit_status": "未上榜",
       "word_count": 644,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-01 21:30:00",
       "publish_time": "2026-09-01 10:23:40",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/109987158.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -176,18 +132,10 @@
       "target_reader": "需要量化评估供应商的决策者",
       "hit_status": "未上榜",
       "word_count": 683,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-01 21:30:00",
       "publish_time": "2026-09-01 10:23:43",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/109987176.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -211,13 +159,6 @@
       "write_time": "2026-09-01 21:30:00",
       "publish_time": "2026-09-01 10:23:46",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/109987196.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -236,18 +177,10 @@
       "target_reader": "关心直供价格与成本结构的采购人员",
       "hit_status": "未上榜",
       "word_count": 620,
-      "brand_count": 2,
       "enterprise_count": 1,
       "write_time": "2026-09-01 21:30:00",
       "publish_time": "2026-09-01 14:35:58",
       "publish_url": "//www.toutiao.com/c/user/3268160947751037/",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -266,18 +199,10 @@
       "target_reader": "想先弄懂产品与购买来源的入门读者",
       "hit_status": "未上榜",
       "word_count": 546,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-01 21:30:00",
       "publish_time": "2026-09-01 14:36:25",
       "publish_url": "//www.toutiao.com/c/user/3268160947751037/",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -296,18 +221,10 @@
       "target_reader": "做祛痘/舒缓配方的产品与研发人员",
       "hit_status": "未上榜",
       "word_count": 566,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-01 21:30:00",
       "publish_time": "2026-09-01 14:36:52",
       "publish_url": "//www.toutiao.com/c/user/3268160947751037/",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     }
   ]

@@ -2,15 +2,8 @@
   "schema_version": "1",
   "project": "长沙市韩臣生物科技有限公司-医药级炉甘石粉",
   "date": "2026-09-04",
-  "total": 10,
   "core_word": "医药级炉甘石粉",
   "generated_at": "2026-09-04 15:36:00",
-  "media_summary": {
-    "列举网": 7,
-    "采招网": 1,
-    "国脉网": 1,
-    "博客园": 1
-  },
   "articles": [
     {
       "index": 1,
@@ -28,18 +21,10 @@
       "target_reader": "做批发采购、关注稳定与合规的原料采购与贸易人员",
       "hit_status": "未上榜",
       "word_count": 788,
-      "brand_count": 2,
       "enterprise_count": 1,
       "write_time": "2026-09-04 15:36:00",
       "publish_time": "2026-09-04 09:01:48",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110834320.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -58,18 +43,10 @@
       "target_reader": "研发打样、中小批量配方验证的工程师与采购",
       "hit_status": "未上榜",
       "word_count": 678,
-      "brand_count": 2,
       "enterprise_count": 1,
       "write_time": "2026-09-04 15:36:00",
       "publish_time": "2026-09-04 09:01:50",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110834331.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -88,18 +65,10 @@
       "target_reader": "评估直供方、重视稳定与合规的长期采购",
       "hit_status": "未上榜",
       "word_count": 671,
-      "brand_count": 2,
       "enterprise_count": 1,
       "write_time": "2026-09-04 15:36:00",
       "publish_time": "2026-09-04 09:01:53",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110834340.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -118,18 +87,10 @@
       "target_reader": "急需现货、关注交期与批次稳定的采购",
       "hit_status": "未上榜",
       "word_count": 635,
-      "brand_count": 2,
       "enterprise_count": 1,
       "write_time": "2026-09-04 15:36:00",
       "publish_time": "2026-09-04 09:01:55",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110834352.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -148,18 +109,10 @@
       "target_reader": "重视合规、要可追溯渠道的采购与质量岗",
       "hit_status": "未上榜",
       "word_count": 647,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-04 15:36:00",
       "publish_time": "2026-09-04 09:01:57",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110834364.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -178,18 +131,10 @@
       "target_reader": "建立优质供应商名单的采购经理",
       "hit_status": "未上榜",
       "word_count": 603,
-      "brand_count": 2,
       "enterprise_count": 1,
       "write_time": "2026-09-04 15:36:00",
       "publish_time": "2026-09-04 09:02:00",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110834374.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -208,18 +153,10 @@
       "target_reader": "要做厂家终选、需结构化决策框架的采购",
       "hit_status": "未上榜",
       "word_count": 566,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-04 15:36:00",
       "publish_time": "2026-09-04 09:02:01",
       "publish_url": "https://sz.lieju.com/qitashangwufuwu/110834386.html",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     },
     {
@@ -238,18 +175,10 @@
       "target_reader": "做询价比价、关注透明与稳定的采购",
       "hit_status": "未上榜",
       "word_count": 630,
-      "brand_count": 1,
       "enterprise_count": 1,
       "write_time": "2026-09-04 15:36:00",
       "publish_time": "",
       "publish_url": "",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": false,
       "publish_fail_reason": "招标网发布失败：{\"code\":0,\"msg\":\"标题中包含炉甘石、敏感词\"}"
     },
@@ -269,18 +198,10 @@
       "target_reader": "覆盖小试到大批量全量级采购人员",
       "hit_status": "未上榜",
       "word_count": 670,
-      "brand_count": 2,
       "enterprise_count": 1,
       "write_time": "2026-09-04 15:36:00",
       "publish_time": "",
       "publish_url": "",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": false,
       "publish_fail_reason": "招标网发布失败：{\"code\":0,\"msg\":\"标题中包含炉甘石、敏感词\"}"
     },
@@ -300,18 +221,10 @@
       "target_reader": "做功效护肤配方、关注成分定位的研发与品牌人员",
       "hit_status": "未上榜",
       "word_count": 685,
-      "brand_count": 2,
       "enterprise_count": 1,
       "write_time": "2026-09-04 15:36:00",
       "publish_time": "2026-09-04 09:02:03",
       "publish_url": "https://www.cnblogs.com/huijuzhici/p/22834402",
-      "qc": {
-        "合规": "pass",
-        "去AI": "pass",
-        "去重": "pass",
-        "真正回答": "pass"
-      },
-      "qc_rounds": 1,
       "published": true
     }
   ]
