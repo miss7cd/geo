@@ -1,0 +1,228 @@
+{
+  "检测编号": "970a6a9f13f64e1989acf7c853520440",
+  "问题词编号": "QS000044",
+  "问题词": "商务PPT生成厂商推荐",
+  "平台": "元宝",
+  "内容": "已处理\n你应该是想找商务PPT生成工具/厂商的选型建议。我按「个人日常、企业团队、对外高规格」三档场景给你一份可直接决策的清单。\n一句话结论\n•\n中文日常办公​ → WPS AI（生态无缝）或讯飞智文（中文理解最稳、免费额度友好）\n•\n追求设计质感​ → Gamma（出稿最快）、iSlide（排版最规整，已过国家算法备案，党政国企可用）\n•\n企业团队采购​ → 优先考虑品牌模板锁定 + SSO/审计 + 数据合规，海外看 Prezi / Microsoft 365 Copilot / Canva Enterprise，国内看 iSlide 企业版 / WPS 365\n主力工具横向对比\n工具\n\t\n核心优势\n\t\n明显短板\n\t\n参考价格\n\n\nGamma​\n\t\n一句话出整份deck，约30–60秒；设计现代、可分享链接做阅读分析\n\t\n中文排版偶有间距问题；导出PPTX会掉部分样式；免费额度有限且有水印\n\t\nPlus 约$10/月，Pro 约$20/月\n\n\nWPS AI​\n\t\n与WPS文档/表格打通，直接引用已有材料；中文零障碍，导出零损耗\n\t\n设计一致性偏弱，偶有风格跳变；需会员\n\t\n含在WPS会员体系\n\n\n讯飞智文​\n\t\n星火驱动，中文公文感自然；支持语音/录音转PPT；会标出需人工确认处\n\t\n模板偏保守、数量少；生成较慢\n\t\n有免费额度\n\n\niSlide AI​\n\t\n500万+正版模板，字体配色高度统一；一键换肤；支持企业自有模板上传、团队素材资产管理、成员权限与离职交接​\n\t\n大纲逻辑弱于WPS/AiPPT\n\t\n个人/企业版分档\n\n\nAiPPT.cn​\n\t\n生成前先确认大纲，方向可控；大纲质量在同类中最好\n\t\n默认字号偏小不利于投屏；免费额度紧（约每日2份）\n\t\n免费+付费\n\n\nMindShow​\n\t\nMarkdown/导图转PPT，10秒出稿，内容100%可控\n\t\n不帮你写内容，前提是你已有大纲；不支持图表\n\t\n免费3次/天\n\n\nBeautiful.ai​\n\t\n智能排版不会跑版，品牌一致性最好，适合对外的客户提案\n\t\n无永久免费版；需要自己写内容；英文优先\n\t\nPro $12/月，Team $40/月\n\n\nMicrosoft 365 Copilot​\n\t\n数据留在企业租户内，合规最省心；直接套用公司品牌模板\n\t\n输出仍需人工排版，没有设计智能；单价最高\n\t\n约$30/用户/月\n企业采购必须问清的四件事\n如果这是给公司选型，比\"生成好不好看\"更要紧的是治理能力，采购前逐条让厂商给书面答案：\n1.\n身份与权限：SSO（SAML/OIDC）+ SCIM 自动开通注销、细粒度 RBAC、审计日志\n2.\n合规认证：SOC 2 Type II、ISO 27001、可签署的 DPA（不要接受\"隐私政策链接\"代替）\n3.\n数据：是否承诺公司文档不用于训练模型；是否有境内/指定区域数据驻留选项\n4.\n品牌管控：管理员能否锁定Logo、配色、字体、免责声明，只让业务改内容\n一个容易忽略的点：Gamma 的 DPA 需要单独索取而非标准提供，欧盟或有严格合规要求的买家会在这里卡流程。\n三个避坑提醒\n•\nAI 出的是初稿不是成品。所有工具都一样：结构有了，但数据要你填、措辞要你改、图表要你调。合理预期是省50%时间，不是100%自动化。\n•\n含敏感数字的方案/标书要选\"保真模式\"。多数工具会改写甚至丢失关键数据，投标、合同、财报类内容必须逐条核对。\n•\n对外路演/融资 Pitch：先把核心论点自己写定，再让 AI 负责美化，别把叙事结构交给模型。\n如果你其实想要的是一份成品商务PPT而不是工具清单，直接把主题、页数要求、受众（老板/客户/投资人）和品牌主色告诉我，我可以帮你生成一份可直接用的 .pptx 文件——省掉你自己挑工具这一步。\n源",
+  "是否上榜": "否",
+  "检测是否上榜词": "光向量智能科技,文朵朵",
+  "检测数据引用": [
+    {
+      "引用编号": "33cafaaca1b642b7849b22cf17b30076",
+      "检测编号": "970a6a9f13f64e1989acf7c853520440",
+      "站点名称": "腾讯网",
+      "序号": 1,
+      "标题": "@AI PPT:AI做PPT实测:5...",
+      "发布时间": "",
+      "url": "https://ima.qq.com/wiki/?shareId=0e42d15732d49a9c9875a07b3b4a0e8b0f1e21a9d228b96f20d0055b272282b9&mediaId=wechatarticle_5f1edcb4f787a4bb7c23e8d872a55179_7c5ee7d9ff32500660ef65fe16d4c23f7458073614497352&action=openDetailDrawer&webFrom=10000171"
+    },
+    {
+      "引用编号": "413ac5ef39134812a6629a28bf4d688c",
+      "检测编号": "970a6a9f13f64e1989acf7c853520440",
+      "站点名称": "夜雨聆风",
+      "序号": 2,
+      "标题": "AI一键生成PPT,我测试了5款工具,这款最好用",
+      "发布时间": "",
+      "url": "https://www.yeyulingfeng.com/540501.html"
+    },
+    {
+      "引用编号": "90ae43ddf628407bb982f0869b071924",
+      "检测编号": "970a6a9f13f64e1989acf7c853520440",
+      "站点名称": "islide.cc",
+      "序号": 3,
+      "标题": "AI一键生成PPT_PPT模板下载_PPT插件工具 iSlide",
+      "发布时间": "",
+      "url": "https://www.islide.cc/"
+    },
+    {
+      "引用编号": "9c495ec2af194590876ff961e276ebb2",
+      "检测编号": "970a6a9f13f64e1989acf7c853520440",
+      "站点名称": "腾讯网",
+      "序号": 4,
+      "标题": "@AI+未来智识:AI PPT生成工具...",
+      "发布时间": "",
+      "url": "https://ima.qq.com/wiki/?shareId=08fd7a6c6b966c903e91abd412a5feb08e49895173a189b887bc1474a30e42f0&mediaId=wechatarticle_a687d70bf340d2a8374263e2bef50e5d_180da5ecbb32e564ae6b9333c2301d027314581282104877&action=openDetailDrawer&webFrom=10000171"
+    },
+    {
+      "引用编号": "418f9e99b64946db834fb506efb27042",
+      "检测编号": "970a6a9f13f64e1989acf7c853520440",
+      "站点名称": "腾讯网",
+      "序号": 5,
+      "标题": "@AI PPT:实测:3款AI做PP...",
+      "发布时间": "",
+      "url": "https://ima.qq.com/wiki/?shareId=0e42d15732d49a9c9875a07b3b4a0e8b0f1e21a9d228b96f20d0055b272282b9&mediaId=wechatarticle_5f1edcb4f787a4bb7c23e8d872a55179_0ef18d362f492073bd49f7c7d2d024aa7458073614497352&action=openDetailDrawer&webFrom=10000171"
+    },
+    {
+      "引用编号": "9930008819a14abea84dee9c70c0b8ba",
+      "检测编号": "970a6a9f13f64e1989acf7c853520440",
+      "站点名称": "重生之我用AI改变职场规则",
+      "序号": 6,
+      "标题": "AI做PPT工具哪个好?5款AI生成PPT工具对比评测",
+      "发布时间": "",
+      "url": "http://mp.weixin.qq.com/s?__biz=MjM5MzQzMTgyMA==&mid=2647742525&idx=4&sn=2bb444307dd0c0c82ac16d71b39bb5d0&chksm=bfc5c46c179d57db28979b9276436988ce40521218413dbdd5a1eae07de0988c767fe2d2255f#rd"
+    },
+    {
+      "引用编号": "c5719e525cd24d2a9714ab0f5ebe9e7b",
+      "检测编号": "970a6a9f13f64e1989acf7c853520440",
+      "站点名称": "腾讯网",
+      "序号": 7,
+      "标题": "@Workbuddy&IMA学习档案:2026 AI PP...",
+      "发布时间": "",
+      "url": "https://ima.qq.com/wiki/?shareId=a0173787d79c9d14fe28bce622f903f60832cb2f2e81b0a66f2fcd553aa3bbac&mediaId=weburl_4c83754f1d2fa19c158dfcb8cc74767c_438128be3fe92b88ae0bcd866a8b5dd17477296822759897&action=openDetailDrawer&webFrom=10000171"
+    },
+    {
+      "引用编号": "ac946b7344f244f888579a2710013d09",
+      "检测编号": "970a6a9f13f64e1989acf7c853520440",
+      "站点名称": "thetoolsverse.com",
+      "序号": 8,
+      "标题": "Gamma vs Beautiful.ai: Honest 2026 Comparison",
+      "发布时间": "",
+      "url": "https://thetoolsverse.com/blog/gamma-vs-beautiful-ai"
+    },
+    {
+      "引用编号": "75c4248b7fc448279bfa14d0192e021b",
+      "检测编号": "970a6a9f13f64e1989acf7c853520440",
+      "站点名称": "blog.wongyichen.com",
+      "序号": 9,
+      "标题": "AI PPT 生成工具全景研究 Ryan's Blog",
+      "发布时间": "",
+      "url": "https://blog.wongyichen.com/blog/others/ai-ppt-generation-landscape"
+    },
+    {
+      "引用编号": "0eb0a5b69dd54f4fac0b32acad8b45b6",
+      "检测编号": "970a6a9f13f64e1989acf7c853520440",
+      "站点名称": "savvycomsoftware.com",
+      "序号": 10,
+      "标题": "Top 4 Enterprise Presentation Tools Compared for 2026: From AI to Analytics",
+      "发布时间": "",
+      "url": "https://savvycomsoftware.com/blog/insights/top-4-enterprise-presentation-tools"
+    },
+    {
+      "引用编号": "47b4f1ae05b7453aa5554455fc669203",
+      "检测编号": "970a6a9f13f64e1989acf7c853520440",
+      "站点名称": "freeaitool.com",
+      "序号": 11,
+      "标题": "2026 年 AI 生成 PPT 工具横评:同一份中文内容,10 款工具实测对比",
+      "发布时间": "",
+      "url": "https://freeaitool.com/ai-assistants/ai-ppt-tools-comparison-2026"
+    },
+    {
+      "引用编号": "37182c83b8c344ccb08870e63cbea2e1",
+      "检测编号": "970a6a9f13f64e1989acf7c853520440",
+      "站点名称": "aitoolpick.org",
+      "序号": 12,
+      "标题": "Gamma vs Beautiful.ai 2026: Which AI Presentation Tool Is Better?",
+      "发布时间": "",
+      "url": "https://aitoolpick.org/blog/gamma-ai-vs-beautiful-ai-2026"
+    },
+    {
+      "引用编号": "73ee617690ba40ed844d6c6ee407975b",
+      "检测编号": "970a6a9f13f64e1989acf7c853520440",
+      "站点名称": "AI百宝箱Pro",
+      "序号": 13,
+      "标题": "AI生成PPT 5个免费工具",
+      "发布时间": "",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1788117075&ver=6936&signature=qcVUASNQb6hFdEv5R7JdgBEg4wbrh*1V6qwy1biBBdoo*PbFv0pRQ6Jsts1gNSSsZseEbZtcVsUJ-rvY6yZXDeR73DsMWxeNBkKTMfE-2OO0NkglitRxa9*hYrvXDqDk&new=1"
+    },
+    {
+      "引用编号": "c6e22b26ee2a4343b4963ac227b76148",
+      "检测编号": "970a6a9f13f64e1989acf7c853520440",
+      "站点名称": "bctimes.ca",
+      "序号": 14,
+      "标题": "What Is the Best Enterprise AI Presentation Platform in 2026?",
+      "发布时间": "",
+      "url": "https://bctimes.ca/articles/best-enterprise-ai-presentation-platform-2026"
+    },
+    {
+      "引用编号": "98a1ea2d7ebe40e19cbca3f2e7324dc6",
+      "检测编号": "970a6a9f13f64e1989acf7c853520440",
+      "站点名称": "aitoolsrecap.com",
+      "序号": 15,
+      "标题": "Best AI Tools for PowerPoint & Presentations (2026) — 6 Tested, Ranked & Compared",
+      "发布时间": "",
+      "url": "https://aitoolsrecap.com/Blog/best-ai-tools-powerpoint-presentations-2026"
+    },
+    {
+      "引用编号": "748d57c45585499682598dc33e5aac56",
+      "检测编号": "970a6a9f13f64e1989acf7c853520440",
+      "站点名称": "WPS海外版官网",
+      "序号": 16,
+      "标题": "Beautiful AI vs Gamma: Which AI Presentation Tool Is Worth Using?",
+      "发布时间": "",
+      "url": "https://www.wps.com/blog/beautiful-ai-vs-gamma-which-ai-presentation-tool-is-worth-using"
+    },
+    {
+      "引用编号": "04ba371c8bb64ef88e0237dda9782aaf",
+      "检测编号": "970a6a9f13f64e1989acf7c853520440",
+      "站点名称": "WPS社区",
+      "序号": 17,
+      "标题": "掰开揉碎聊AI做PPT!多款主流工具真实能力大盘点",
+      "发布时间": "",
+      "url": "https://bbs.wps.cn/topic/92409"
+    },
+    {
+      "引用编号": "7826a6248cb945b1b2ffd04bcf333e4b",
+      "检测编号": "970a6a9f13f64e1989acf7c853520440",
+      "站点名称": "gammadocumentation.com",
+      "序号": 18,
+      "标题": "4 Best AI Presentation Platforms for Team-Wide Brand Consistency",
+      "发布时间": "",
+      "url": "https://gammadocumentation.com/task/blog/ai-presentation-platform-consistent-quality-team-1"
+    },
+    {
+      "引用编号": "ac58378596694e8eb14cd9b456537532",
+      "检测编号": "970a6a9f13f64e1989acf7c853520440",
+      "站点名称": "新浪网",
+      "序号": 19,
+      "标题": "2026实测6款主流AI PPT生成工具排名,附优缺点适用场景(职场/学术必看)_生成ppt的人工智能-CSDN博客",
+      "发布时间": "",
+      "url": "https://cj.sina.cn/articles/view/7879848900/1d5acf3c401902rp5m?froms=ggmp"
+    },
+    {
+      "引用编号": "20ac3d7766e740f49a4cbe3854d9672b",
+      "检测编号": "970a6a9f13f64e1989acf7c853520440",
+      "站点名称": "aisotools.com",
+      "序号": 20,
+      "标题": "Gamma vs Beautiful.ai (2026): Which AI Presentation Tool Should You Use?",
+      "发布时间": "",
+      "url": "https://aisotools.com/blog/gamma-vs-beautiful-ai-2026"
+    },
+    {
+      "引用编号": "e33f81b60e684331b382ceab8fcd0451",
+      "检测编号": "970a6a9f13f64e1989acf7c853520440",
+      "站点名称": "AiPPT.cn",
+      "序号": 20,
+      "标题": "AiPPT.cn",
+      "发布时间": "",
+      "url": "https://AiPPT.cn"
+    },
+    {
+      "引用编号": "499460e0abdb4abd97822ce203120011",
+      "检测编号": "970a6a9f13f64e1989acf7c853520440",
+      "站点名称": "Beautiful.ai",
+      "序号": 21,
+      "标题": "Beautiful.ai",
+      "发布时间": "",
+      "url": "https://Beautiful.ai"
+    }
+  ],
+  "_obtained": true,
+  "_ai_extracted": false,
+  "_核心词": "PPT生成厂商",
+  "_企业名称": "上海元符号智能科技有限公司",
+  "_project": "T-上海元符号智能科技有限公司-PPT生成厂商",
+  "_enterprise": "上海元符号智能科技有限公司",
+  "_core_word": "PPT生成厂商",
+  "_detect_date": "2026-08-31",
+  "内容提及品牌": [
+    "WPS AI",
+    "Gamma",
+    "讯飞智文",
+    "AiPPT.cn",
+    "Beautiful.ai",
+    "Canva",
+    "Microsoft Copilot",
+    "iSlide",
+    "MindShow"
+  ]
+}

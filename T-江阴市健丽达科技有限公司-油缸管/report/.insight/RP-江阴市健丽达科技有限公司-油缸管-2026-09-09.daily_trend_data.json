@@ -1,0 +1,53 @@
+{
+  "daily_trend": {
+    "title": "每日写文/发布/上榜趋势",
+    "days": 7,
+    "total_write": 70,
+    "total_publish": 53,
+    "total_hit": 19,
+    "data": [
+      {
+        "date": "2026-08-31",
+        "write_count": 10,
+        "publish_count": 9,
+        "hit_count": 0
+      },
+      {
+        "date": "2026-09-01",
+        "write_count": 10,
+        "publish_count": 7,
+        "hit_count": 0
+      },
+      {
+        "date": "2026-09-02",
+        "write_count": 10,
+        "publish_count": 10,
+        "hit_count": 5
+      },
+      {
+        "date": "2026-09-03",
+        "write_count": 10,
+        "publish_count": 7,
+        "hit_count": 3
+      },
+      {
+        "date": "2026-09-04",
+        "write_count": 10,
+        "publish_count": 10,
+        "hit_count": 3
+      },
+      {
+        "date": "2026-09-06",
+        "write_count": 10,
+        "publish_count": 10,
+        "hit_count": 4
+      },
+      {
+        "date": "2026-09-07",
+        "write_count": 10,
+        "publish_count": 0,
+        "hit_count": 4
+      }
+    ]
+  }
+}

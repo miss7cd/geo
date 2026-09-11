@@ -1,0 +1,84 @@
+{
+  "id": "CM000002",
+  "enterprise": "上海元符号智能科技有限公司",
+  "core_word": "PPT生成厂商",
+  "core_word_type": "产品词",
+  "brand_words": [
+    "文朵朵"
+  ],
+  "platform": [
+    "豆包",
+    "元宝"
+  ],
+  "questions": [
+    {
+      "id": "QS000043",
+      "question": "PPT生成厂商哪家好",
+      "last_doubao_detect_time": "2026-09-11 03:03:23",
+      "last_yuanbao_detect_time": "2026-09-11 03:03:20"
+    },
+    {
+      "id": "QS000044",
+      "question": "商务PPT生成厂商推荐",
+      "last_doubao_detect_time": "2026-09-11 03:03:49",
+      "last_yuanbao_detect_time": "2026-09-11 03:03:39"
+    },
+    {
+      "id": "QS000045",
+      "question": "月度总结PPT生成厂商哪家靠谱",
+      "last_doubao_detect_time": "2026-09-11 03:04:14",
+      "last_yuanbao_detect_time": "2026-09-11 03:04:01"
+    },
+    {
+      "id": "QS000046",
+      "question": "发布会PPT生成厂商哪家好",
+      "last_doubao_detect_time": "2026-09-11 03:04:42",
+      "last_yuanbao_detect_time": "2026-09-11 03:04:21"
+    },
+    {
+      "id": "QS000047",
+      "question": "招商PPT生成厂商推荐",
+      "last_doubao_detect_time": "2026-09-11 03:05:07",
+      "last_yuanbao_detect_time": "2026-09-11 03:04:40"
+    },
+    {
+      "id": "QS000048",
+      "question": "企业宣传PPT生成厂商有哪些",
+      "last_doubao_detect_time": "2026-09-11 03:05:32",
+      "last_yuanbao_detect_time": "2026-09-11 03:05:01"
+    },
+    {
+      "id": "QS000049",
+      "question": "项目汇报PPT生成厂商哪里找",
+      "last_doubao_detect_time": "2026-09-11 03:06:02",
+      "last_yuanbao_detect_time": "2026-09-11 03:05:20"
+    },
+    {
+      "id": "QS000050",
+      "question": "年会PPT生成厂商推荐",
+      "last_doubao_detect_time": "2026-09-11 03:06:32",
+      "last_yuanbao_detect_time": "2026-09-11 03:05:40"
+    },
+    {
+      "id": "QS000051",
+      "question": "培训课件PPT生成厂商有哪些",
+      "last_doubao_detect_time": "2026-09-11 03:06:58",
+      "last_yuanbao_detect_time": "2026-09-11 03:06:01"
+    },
+    {
+      "id": "QS000052",
+      "question": "靠谱PPT生成厂商推荐",
+      "last_doubao_detect_time": "2026-09-11 03:07:26",
+      "last_yuanbao_detect_time": "2026-09-11 03:06:21"
+    }
+  ],
+  "hit_words": [
+    "光向量智能科技",
+    "文朵朵"
+  ],
+  "official": "https://wenduoduo.com/",
+  "contact_name": "",
+  "phone": "4006545199",
+  "address": "上海市闵行区恒南路399号茸锦浦江科技园-A座703室",
+  "create_date": "2026-08-27"
+}

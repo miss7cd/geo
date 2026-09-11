@@ -1,0 +1,194 @@
+{
+  "检测编号": "dcd5c96dc3e04bc38889d195255e4c54",
+  "问题词编号": "QS000045",
+  "问题词": "月度总结PPT生成厂商哪家靠谱",
+  "平台": "元宝",
+  "内容": "“月度总结PPT生成”这块现在没有一家通吃，靠谱与否主要看你是个人交差用还是企业批量/涉密出报告。按场景拆开说更准：\n个人/小团队日常月报（最快出稿、零学习成本）\n•\nWPS AI（集成在 WPS 演示里）：日常用 WPS 的选它最省事，上传 Word/Excel 月报数据 → 10–15 秒出初稿，直接在 WPS 里改，导出兼容性好，基础功能免费。\n•\nChatPPT / AiPPT.cn：中文月报场景适配好，内置月报/季度报大纲模板，支持 Word/PDF/XMind 导入，每天有免费次数，排版比早期 Gamma 中文版稳。\n•\nKimi PPT 助手：如果你月报是从一份 1-2 万字复盘文档提炼出来的，Kimi 长文本摘要转 PPT 很顺，每月免费 3 次够用。\n对外汇报/看脸场合（设计感优先）\n•\nGamma：卡片式现代排版、动效强，适合给老板/客户做“月度经营回顾”这种要颜值的场合；缺点是中文长文偶尔拆页翻车，导出 PPTX 可能有轻微错位。\n•\n美图 AI PPT：中文商务审美比 Gamma 本土化更好，行政人事类月报直接能交，每日免费 3 份。\n企业级/数据敏感/要管模板和审计（重点看合规）\n•\nChatSlide Enterprise：带 SSO/SCIM、SOC 2、审计日志、合同级“不用客户数据训练”承诺，管理员锁企业母版，能从 Excel 真数据出 Chart.js/D3 图，不是 AI 编数；适合金融/政企月报工厂化产出。\n•\nMicrosoft 365 Copilot（PowerPoint）：全微软栈的公司直接上，Excel 真实数据拉图表、Entra 身份合规，但按席位加钱（约 $30/人/月），偏辅助编辑不是“文档转deck”。\n•\n百度文库 AI PPT：依托 18 亿文档库，政企公文风月度述职适配度高，国内合规认证较全；内容偏“标准答案”，自定义空间略小。\n•\n讯飞智文：公文/体制内审美重，语音转 PPT 是特色，但互联网公司月度复盘用会显得模板老气。\n选型一句话建议\n•\n个人月度打卡汇报 → WPS AI（已在 WPS 生态）或 ChatPPT（要模板多）\n•\n长文档月报提炼 → Kimi PPT 助手\n•\n给高管/客户看的月度复盘 → Gamma（重设计）或 美图 AI PPT（重中文商务）\n•\n公司月报要统一 VI、防数据泄露、IT 要审计 → ChatSlide Enterprise​ / M365 Copilot​ / 百度文库 AI（国内政企）\n⚠️ 共性问题：所有 AI PPT 工具对具体数字（如“96.8%”变“约 97%”、AI 自造柱状图数据）都要人工复核一遍再交；涉密月报别传公网 SaaS，优先选带私有化部署的（ChatPPT 等保三级+私有化、ChatSlide 合同级不训练）。\n如果你愿意告诉我“月报数据在 Excel 还是 Word 里、给内部还是外部、公司用 WPS 还是 Office、是否涉敏”，我可以直接帮你定到一款最贴合的。\n源\n哪些厂商提供API接口生成月报PPT？\n这些AI PPT工具中哪个最适合创意设计？\n这些AI PPT工具生成的内容版权归属如何界定？\n下载元宝电脑版，体验高效 AI 助手",
+  "内容提及品牌": [
+    "WPS AI",
+    "Gamma",
+    "百度文库",
+    "讯飞智文",
+    "AiPPT.cn",
+    "ChatPPT",
+    "Microsoft Copilot",
+    "Kimi PPT",
+    "美图AI PPT",
+    "微软"
+  ],
+  "是否上榜": "否",
+  "检测是否上榜词": "光向量智能科技,文朵朵",
+  "检测数据引用": [
+    {
+      "引用编号": "affb3d8e32b843e9841dd2b67d413fa5",
+      "检测编号": "dcd5c96dc3e04bc38889d195255e4c54",
+      "站点名称": "chatppt.cn",
+      "序号": 1,
+      "标题": "ChatPPT共创群",
+      "发布时间": "",
+      "url": "https://www.chatppt.cn/"
+    },
+    {
+      "引用编号": "56cc26aa905648c3ac33d0744634b3fe",
+      "检测编号": "dcd5c96dc3e04bc38889d195255e4c54",
+      "站点名称": "AI效率教学手册",
+      "序号": 2,
+      "标题": "我把月报PPT丢给4个免费AI各做一版,最后只交了它那份",
+      "发布时间": "",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1788548695&ver=6946&signature=D73NsY8Cu1AymZdVlwDGZPBGi6EkjXH17RiG9f8sLdV36fGTlVsj*ADy0jDRIolJKYmZ6FzHOEa-3c04mNt7*r*iGNVXB1uFCJD75S5Xwq8jpGKGiPGBPtlty1X9VM-g&new=1"
+    },
+    {
+      "引用编号": "1c31efeac12543059d0dadd56f4030fe",
+      "检测编号": "dcd5c96dc3e04bc38889d195255e4c54",
+      "站点名称": "bestin2026.com",
+      "序号": 3,
+      "标题": "The Best Enterprise AI Presentation Software in 2026",
+      "发布时间": "",
+      "url": "https://www.bestin2026.com/articles/best-enterprise-ai-presentation-software-2026"
+    },
+    {
+      "引用编号": "09bdb88162e943cb8374752f09717b5c",
+      "检测编号": "dcd5c96dc3e04bc38889d195255e4c54",
+      "站点名称": "搜狐网",
+      "序号": 4,
+      "标题": "工作总结不用愁!ChatPPT帮你3分钟搞定完美汇报!",
+      "发布时间": "",
+      "url": "https://cul.sohu.com/a/961529795_121886064"
+    },
+    {
+      "引用编号": "bd83927f69a040e28f7f64beef789b35",
+      "检测编号": "dcd5c96dc3e04bc38889d195255e4c54",
+      "站点名称": "综管那些事儿",
+      "序号": 5,
+      "标题": "行政人事必看:零基础用AI 5分钟生成专业汇报PPT,再也不用加班排版",
+      "发布时间": "",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1788548695&ver=6946&signature=u7a5bDAS99LYOz2CJuBSvWrFCXXhH1HggHtSl8aHGTxFW8S64hfTic0E8KsY7QIaJEq3-F8qUaku8Olx66NE0DB2KTChSeJ4juqsUYXvrv7UvjgmZwEVS8KyJn6*Bicr&new=1"
+    },
+    {
+      "引用编号": "c2095bd3b19342748f9520cc363f185d",
+      "检测编号": "dcd5c96dc3e04bc38889d195255e4c54",
+      "站点名称": "gxmuzi.com",
+      "序号": 6,
+      "标题": "2026中小企业AI PPT工具选型实操指南:7款主流产品横评与3步场景匹配法",
+      "发布时间": "",
+      "url": "https://www.gxmuzi.com/jishufuwu/990.html"
+    },
+    {
+      "引用编号": "adde2ddd96b54aa2b44651b7bcacd67d",
+      "检测编号": "dcd5c96dc3e04bc38889d195255e4c54",
+      "站点名称": "未来岛屿Ai",
+      "序号": 7,
+      "标题": "4款AI PPT工具横评:按场景选能省4小时",
+      "发布时间": "",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1788548693&ver=6946&signature=2kGEu5HsGfnLQ-GBW1YRNhNd8SKwyAPlh-M8dJS*N5mHkP4X5SNnTeUzbQxKFtTSF0HD2m3GqI9m2cNTwc5Q-2HdLju5L96mA*l0Re2QjX4r*ij0NYfcbl3R*3vtefqm&new=1"
+    },
+    {
+      "引用编号": "d97ac840e13345d18647f69f78fa7d66",
+      "检测编号": "dcd5c96dc3e04bc38889d195255e4c54",
+      "站点名称": "今日头条",
+      "序号": 8,
+      "标题": "实测6款AI做PPT的工具,开会汇报别再手动熬夜了",
+      "发布时间": "",
+      "url": "https://m.toutiao.com/article/7655561417466069513"
+    },
+    {
+      "引用编号": "c877fbdb87e34653944deae5277674e5",
+      "检测编号": "dcd5c96dc3e04bc38889d195255e4c54",
+      "站点名称": "JoJo留学考博手记",
+      "序号": 9,
+      "标题": "2026 年国内外 AI 部门汇报 PPT 工具全盘点,职场选型一目了然",
+      "发布时间": "",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1788548692&ver=6946&signature=wTf*UlXO6XaWX*8waXsasScRRklLeRifdfnxjqQepPj0OL6M8aGMhBt3*Bdyyt8acCfL9KCBRKn2-uY2rJ5k7p5l*3s45-S4cIp1Cf1BFHZUxOjXd4n9UFicHxra-M*s&new=1"
+    },
+    {
+      "引用编号": "147f1bc377dd445cbc744255f5ceefdc",
+      "检测编号": "dcd5c96dc3e04bc38889d195255e4c54",
+      "站点名称": "tinrec.com",
+      "序号": 10,
+      "标题": "傳統回憶VS智能紀錄:2026 AI寫工作總結的10款PPT工具與Tinrec實測,三大場景對比讓效率翻倍",
+      "发布时间": "",
+      "url": "https://tinrec.com/blog/1781"
+    },
+    {
+      "引用编号": "607102448d20422799fd128d65d49ed2",
+      "检测编号": "dcd5c96dc3e04bc38889d195255e4c54",
+      "站点名称": "搜狐网",
+      "序号": 11,
+      "标题": "AI生成PPT工具到底怎么选?2026年职场汇报、工作总结实测对比",
+      "发布时间": "",
+      "url": "https://www.sohu.com/a/1056116571_122625083"
+    },
+    {
+      "引用编号": "cf60400757214c37989ef4c5d9b251d4",
+      "检测编号": "dcd5c96dc3e04bc38889d195255e4c54",
+      "站点名称": "toolshero.com",
+      "序号": 12,
+      "标题": "What Tool Creates the Best Business Presentations?",
+      "发布时间": "",
+      "url": "https://www.toolshero.com/featured-posts/tools-business-presentations"
+    },
+    {
+      "引用编号": "e0503b3292e846dabb910f11a8066879",
+      "检测编号": "dcd5c96dc3e04bc38889d195255e4c54",
+      "站点名称": "财经头条",
+      "序号": 13,
+      "标题": "2026实测6款主流AI PPT生成工具排名,附优缺点适用场景(职场/学术必看)_生成ppt的人工智能-CSDN博客",
+      "发布时间": "",
+      "url": "https://cj.sina.cn/articles/view/7879848900/1d5acf3c401902rp5m?froms=ggmp"
+    },
+    {
+      "引用编号": "466899bbcc2c4dcdb776f21deaa96fea",
+      "检测编号": "dcd5c96dc3e04bc38889d195255e4c54",
+      "站点名称": "savvycomsoftware.com",
+      "序号": 14,
+      "标题": "Top 4 Enterprise Presentation Tools Compared for 2026: From AI to Analytics",
+      "发布时间": "",
+      "url": "https://savvycomsoftware.com/blog/insights/top-4-enterprise-presentation-tools"
+    },
+    {
+      "引用编号": "41f500725d32489b9fed3c6b6b54525a",
+      "检测编号": "dcd5c96dc3e04bc38889d195255e4c54",
+      "站点名称": "islide.cc",
+      "序号": 15,
+      "标题": "AI 生成 PPT工具哪款好用?2026年主流产品横向测评与选型建议",
+      "发布时间": "",
+      "url": "https://www.islide.cc/blog/725"
+    },
+    {
+      "引用编号": "c46d04db6bc746a7bf59189a5cbc886a",
+      "检测编号": "dcd5c96dc3e04bc38889d195255e4c54",
+      "站点名称": "乐用AI",
+      "序号": 16,
+      "标题": "汇报 PPT 熬到半夜,改了八版还不顺?不是你不会做,是没找对帮手。 1、WPS AIPPT创作助手:一句话或一份文档,完整 PPT 直接出来 2、传令令:内容没想清?汇报、周报、项目更新都有现成模板 3、逐页讲解,一键成片:PPT/PDF 逐页配音加字幕,原版式不用重做 3个都在 WorkBuddy 专家中心,搜名字就能开聊,不用装、不用配 Key。(0901-3) 扣1,我把完整清单私信发你。 #PPT #工作汇报 #AI工具 #职场效率 #AI专家 #效率神器 #打工人 #职场技能 #WorkBuddy #汇报",
+      "发布时间": "",
+      "url": "https://wv.video.qq.com/export/UzFfBgAAxMeudGtBeX7yk8zT4DBZDQzl1N5jCCNOGeZ98yR9ECY"
+    },
+    {
+      "引用编号": "d4359e9471374e8c8d6253225f547de6",
+      "检测编号": "dcd5c96dc3e04bc38889d195255e4c54",
+      "站点名称": "AiPPT.cn",
+      "序号": 16,
+      "标题": "AiPPT.cn",
+      "发布时间": "",
+      "url": "https://AiPPT.cn"
+    },
+    {
+      "引用编号": "61ec84aef6d9457fa495929d61a86fa0",
+      "检测编号": "dcd5c96dc3e04bc38889d195255e4c54",
+      "站点名称": "Chart.js",
+      "序号": 17,
+      "标题": "Chart.js",
+      "发布时间": "",
+      "url": "https://Chart.js/D3"
+    }
+  ],
+  "_obtained": true,
+  "_ai_extracted": false,
+  "_核心词": "PPT生成厂商",
+  "_企业名称": "上海元符号智能科技有限公司",
+  "_project": "T-上海元符号智能科技有限公司-PPT生成厂商",
+  "_enterprise": "上海元符号智能科技有限公司",
+  "_core_word": "PPT生成厂商",
+  "_detect_date": "2026-09-05",
+  "_detect_date_time": "2026-09-05 03:05:27"
+}

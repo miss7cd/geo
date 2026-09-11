@@ -1,0 +1,64 @@
+{
+  "media_roi": {
+    "total_medias": 6,
+    "total_published": 53,
+    "total_hit": 19,
+    "overall_hit_rate": 35.85,
+    "medias": [
+      {
+        "media": "博客园",
+        "total": 4,
+        "published": 3,
+        "hit": 3,
+        "hit_rate": 100.0,
+        "grade": "S",
+        "rank": 1
+      },
+      {
+        "media": "国脉网",
+        "total": 4,
+        "published": 4,
+        "hit": 3,
+        "hit_rate": 75.0,
+        "grade": "S",
+        "rank": 2
+      },
+      {
+        "media": "采招网",
+        "total": 3,
+        "published": 3,
+        "hit": 2,
+        "hit_rate": 66.67,
+        "grade": "S",
+        "rank": 3
+      },
+      {
+        "media": "列举网",
+        "total": 49,
+        "published": 42,
+        "hit": 7,
+        "hit_rate": 16.67,
+        "grade": "C",
+        "rank": 4
+      },
+      {
+        "media": "中国采购",
+        "total": 1,
+        "published": 1,
+        "hit": 0,
+        "hit_rate": 0.0,
+        "grade": "D",
+        "rank": 5
+      },
+      {
+        "media": "今日头条",
+        "total": 9,
+        "published": 0,
+        "hit": 4,
+        "hit_rate": 0,
+        "grade": "D",
+        "rank": 6
+      }
+    ]
+  }
+}

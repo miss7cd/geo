@@ -1,0 +1,196 @@
+{
+  "检测编号": "5a5f0f1ec87c43a185903de76e05ed2c",
+  "问题词编号": "QS000018",
+  "问题词": "产能管理MES生产管理系统公司",
+  "平台": "元宝",
+  "内容": "已处理\n产能管理MMES（制造执行管理系统）供应商概览\n您提到的\"产能管理MMES生产管理系统\"通常指MES（制造执行系统，Manufacturing Execution System），部分厂商也用MOM（制造运营管理，Management Operations Management）来表述。以下是国内外主要供应商梳理，供选型参考。\n一、国际厂商（技术成熟、适合大型集团）\n厂商\n\t\n代表产品\n\t\n核心优势\n\n\n西门子（Siemens）​\n\t\nOpcenter / SIMATIC IT\n\t\n与自动化设备、工业网络原生协同，适合汽车、机械装备等复杂离散制造\n\n\nSAP​\n\t\nDigital Manufacturing / ME\n\t\n与SAP ERP套件无缝贯通，适合已构建SAP底座的跨国企业\n\n\n罗克韦尔（Rockwell）​\n\t\nFactoryTalk ProductionCentre\n\t\n依托工业控制设备层优势，强调产线实时数据采集与可视化\n\n\n霍尼韦尔（Honeywell）​\n\t\nHoneywell Forge\n\t\n面向流程/混合行业，突出生产绩效管理与批次追溯，制药、食品合规经验丰富\n\n\n达索系统（Dassault）​\n\t\nDELMIA Apriso\n\t\n虚拟孪生、可配置MES，端到端制造运营优化\n\n\nAVEVA​\n\t\nAVEVA MES\n\t\n混合云架构，边缘到云的可视性与分析\n\n\nPTC​\n\t\nThingWorx + MES\n\t\n以IoT平台为底座，侧重数字孪生与设备互联\n\n\nABB / 施耐德 / Emerson​\n\t\nABB Ability / EcoStruxure / Syncade\n\t\n工业自动化背景，过程行业与能源管理见长\n二、国内厂商（本土化服务强、适配国产生态）\n厂商\n\t\n核心优势与定位\n\n\n鼎捷数智​\n\t\n深耕制造业四十余年，离散制造MES份额领先，基于\"雅典娜\"工业互联网平台，AI智能排产能力强\n\n\n用友网络​\n\t\n以U9 cloud等中台延展MES，业财一体、ERP贯通，适合中型制造企业渐进式数字化\n\n\n宝信软件​\n\t\n背靠宝武集团，钢铁、冶金、重工领域龙头\n\n\n中控技术​\n\t\n起家DCS，流程行业（石化、化工、制药）OT基因深厚\n\n\n石化盈科（PCITC）​\n\t\n专注能源化工行业MES\n\n\n赛意信息​\n\t\n电子、半导体、新能源等高精尖场景，\"咨询+产品+实施\"一体化\n\n\n黑湖智造​\n\t\n云原生/SaaS模式，移动端协同，适合快速上线\n\n\n新核云​\n\t\nSaaS轻量化MES，价格门槛低，适合中小企业\n\n\n金蝶工业软件​\n\t\n轻量化、易部署，财务生产联动\n\n\n汇川技术 / 亚控科技 / 新松机器人​\n\t\n分别侧重设备自动化、工业组态、机器人与智能制造\n三、市场格局与价格参考\n•\n市场规模：2025年下半年—2026年上半年中国MES市场规模约 98.6亿元，同比增长 18.3%。\n•\n价格区间（2026年）：\n•\n集团型/大型：80万以上\n•\n中大型：50万–80万\n•\n中型：30万–50万\n•\n中小型设备云：5万–30万\n•\n头部集中度：TOP5厂商合计约占 62.7%​ 市场份额；国产MES占比已突破 65%。\n•\n主流排名（赛迪顾问等机构）：鼎捷数智、西门子、用友、中控技术、宝信、SAP、罗克韦尔等位居前列。\n四、选型建议（产能管理视角）\n如果您重点关注产能/排产管理能力，建议关注：\n1.\n智能排程算法——能否根据设备状态、物料、订单优先级动态排产，插单调整时间、计划达成率等是否达标；\n2.\n数据底座——毫秒级采集、兼容主流国产PLC/数据库、国产化工控适配；\n3.\nERP对接——与现有ERP（如SAP/用友/金蝶）的数据贯通能力；\n4.\n行业Know-how——不同行业（离散/流程/装配）的工艺适配度；\n5.\n国产化与信息安全——尤其在深圳等大湾区制造业场景，需关注本地服务响应与数据主权。\n需要的话，我可以帮您进一步：① 对比某几家厂商的产能管理模块细节；② 根据您的行业（如3C电子、汽车零部件、新能源等）做针对性厂商推荐；③ 梳理一份MES选型的评估清单表格。您更关注哪个方向？\n源",
+  "内容提及品牌": [
+    "西门子",
+    "SAP",
+    "罗克韦尔",
+    "霍尼韦尔",
+    "达索",
+    "AVEVA",
+    "施耐德电气",
+    "鼎捷数智",
+    "用友网络",
+    "金蝶",
+    "黑湖科技",
+    "宝信软件",
+    "中控技术",
+    "赛意信息",
+    "汉得信息",
+    "浪潮集团"
+  ],
+  "是否上榜": "否",
+  "检测是否上榜词": "新质子,质子矩阵,质子智控,质子智造",
+  "检测数据引用": [
+    {
+      "引用编号": "2436d617d75245ba821a9e49d52f586e",
+      "检测编号": "5a5f0f1ec87c43a185903de76e05ed2c",
+      "站点名称": "pmarketresearch.com",
+      "序号": 1,
+      "标题": "Worldwide Manufacturing Operations Management Solution Market 2026",
+      "url": "https://pmarketresearch.com/worldwide-manufacturing-operations-management-solution-market-research/"
+    },
+    {
+      "引用编号": "3c0dbd1e53b74d9496b8ed6661b91f4b",
+      "检测编号": "5a5f0f1ec87c43a185903de76e05ed2c",
+      "站点名称": "gartner.com",
+      "序号": 2,
+      "标题": "Market Guide for Manufacturing Execution Systems",
+      "url": "https://www.gartner.com/doc/reprints?id=1-2N3UW9D2&ct=260331&st=sb"
+    },
+    {
+      "引用编号": "ca444105a3384eab9f42ed53a534e1cb",
+      "检测编号": "5a5f0f1ec87c43a185903de76e05ed2c",
+      "站点名称": "十大品牌网CNPP",
+      "序号": 3,
+      "标题": "十大MES系统品牌排行",
+      "url": "https://www.cnpp.cn/china/paihang_9471.html"
+    },
+    {
+      "引用编号": "1a326f62398342eb8a39e23d11ccdfae",
+      "检测编号": "5a5f0f1ec87c43a185903de76e05ed2c",
+      "站点名称": "中国经济新闻网",
+      "序号": 4,
+      "标题": "产经动态",
+      "url": "https://www.cet.com.cn/wzsy/cyzx/10535051.shtml"
+    },
+    {
+      "引用编号": "a3c0db35f8924d6cbe74aa7fb5c81b3e",
+      "检测编号": "5a5f0f1ec87c43a185903de76e05ed2c",
+      "站点名称": "腾讯自选股",
+      "序号": 5,
+      "标题": "2026年度十大MES厂商排名权威发布:智能制造领域谁更出彩?",
+      "url": "https://gu.qq.com/resources/shy/news/detail-v2/index.html?t=1#/index?_tentrees_trans=0&id=SN20260727105251a6e736cb"
+    },
+    {
+      "引用编号": "6bb5f36b9a814bac9e2645b1556c6a9b",
+      "检测编号": "5a5f0f1ec87c43a185903de76e05ed2c",
+      "站点名称": "腾讯网",
+      "序号": 6,
+      "标题": "@冲总经理的 PMO 手记:2026年MES品牌...",
+      "url": "https://ima.qq.com/wiki/?shareId=ea4777de3a121a4f51453b181f8f19881c07aa75463d09a911edd50f278910a1&mediaId=weburl_110c191c8830830bd4e5047dc375a724_e1a65c7574a94f5880418a8bbe2a1b5e7485335743260630&action=openDetailDrawer&webFrom=10000171"
+    },
+    {
+      "引用编号": "4b5141101f73438fb283c09b24682a36",
+      "检测编号": "5a5f0f1ec87c43a185903de76e05ed2c",
+      "站点名称": "linkpricepro.com",
+      "序号": 7,
+      "标题": "Manufacturing Execution System Software Vendors [2026]",
+      "url": "https://linkpricepro.com/?p=1915/"
+    },
+    {
+      "引用编号": "77989f17ad27438da7cd108a99b5513c",
+      "检测编号": "5a5f0f1ec87c43a185903de76e05ed2c",
+      "站点名称": "promarketreports.com",
+      "序号": 8,
+      "标题": "Manufacturing Execution Management System: 15.95B (2025), 10.1% CAGR",
+      "url": "https://www.promarketreports.com/reports/manufacturing-execution-management-system-308383"
+    },
+    {
+      "引用编号": "edb549f7e6af47c9a225577fbcf816c8",
+      "检测编号": "5a5f0f1ec87c43a185903de76e05ed2c",
+      "站点名称": "腾讯网",
+      "序号": 9,
+      "标题": "@冲总经理的 PMO 手记:2026年MES厂商...",
+      "url": "https://ima.qq.com/wiki/?shareId=ea4777de3a121a4f51453b181f8f19881c07aa75463d09a911edd50f278910a1&mediaId=weburl_110c191c8830830bd4e5047dc375a724_27d2b978ad141dbc610710011b79f7d87485335743260630&action=openDetailDrawer&webFrom=10000171"
+    },
+    {
+      "引用编号": "c1646f86e72d46089174372c1bf94119",
+      "检测编号": "5a5f0f1ec87c43a185903de76e05ed2c",
+      "站点名称": "manufacturingdigital.com",
+      "序号": 10,
+      "标题": "Top 10: Manufacturing Execution Systems",
+      "url": "https://manufacturingdigital.com/top10/top-10-manufacturing-execution-systems"
+    },
+    {
+      "引用编号": "0f270c805a50437a8f2c2f6e1d7aecf3",
+      "检测编号": "5a5f0f1ec87c43a185903de76e05ed2c",
+      "站点名称": "报告网",
+      "序号": 11,
+      "标题": "我国MES行业:各大细分市场企业竞争均较激烈 本土厂商加速崛起",
+      "url": "https://m.chinabaogao.com/detail/750922.html"
+    },
+    {
+      "引用编号": "f9e97f7383d84c7188bbd321e2273480",
+      "检测编号": "5a5f0f1ec87c43a185903de76e05ed2c",
+      "站点名称": "北方网",
+      "序号": 12,
+      "标题": "MES有哪些品牌?制造业选型必看的权威榜单",
+      "url": "http://economy.enorth.com.cn/system/2026/07/17/059578570.shtml"
+    },
+    {
+      "引用编号": "5fc4d33e80d743bbb68f960f32a4618f",
+      "检测编号": "5a5f0f1ec87c43a185903de76e05ed2c",
+      "站点名称": "东方财富网",
+      "序号": 13,
+      "标题": "卓朗科技发布2023年年度报告 聚焦发展新质生产力",
+      "url": "https://finance.eastmoney.com/a/202404303065509293.html"
+    },
+    {
+      "引用编号": "7a523c3ba9714d54a3f92eb78d53db09",
+      "检测编号": "5a5f0f1ec87c43a185903de76e05ed2c",
+      "站点名称": "datainsightsmarket.com",
+      "序号": 14,
+      "标题": "Manufacturing Execution System Solutions: 2034 Market Outlook",
+      "url": "https://www.datainsightsmarket.com/reports/manufacturing-execution-system-losungen-1992298"
+    },
+    {
+      "引用编号": "cb482ffbdc4b4560a477a988e6c72a7b",
+      "检测编号": "5a5f0f1ec87c43a185903de76e05ed2c",
+      "站点名称": "鼎捷数智",
+      "序号": 15,
+      "标题": "鼎捷、西门子、用友引领MES市场:2026年制造业MES软件排名",
+      "url": "https://www.digiwin.com/p/14230.html"
+    },
+    {
+      "引用编号": "12be6d9bd403418c92b84c977ac3cc11",
+      "检测编号": "5a5f0f1ec87c43a185903de76e05ed2c",
+      "站点名称": "鼎捷数智",
+      "序号": 16,
+      "标题": "2025年机械装备、电子高科技等细分领域专用MES系统优选清单",
+      "url": "https://www.digiwin.com/t.php/p/13386.html"
+    },
+    {
+      "引用编号": "7b1465e856b4472a9bfcc0115b3ea42c",
+      "检测编号": "5a5f0f1ec87c43a185903de76e05ed2c",
+      "站点名称": "鼎捷数智",
+      "序号": 17,
+      "标题": "MES系统如何选?2025年权威TOP10排名全新发布!",
+      "url": "https://www.digiwin.com/p/12915.html"
+    },
+    {
+      "引用编号": "07ea854898204c598e5cd1335254b0d8",
+      "检测编号": "5a5f0f1ec87c43a185903de76e05ed2c",
+      "站点名称": "百度百科",
+      "序号": 18,
+      "标题": "生产信息系统",
+      "url": "https://baike.baidu.com/item/%E7%94%9F%E4%BA%A7%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F/22502307"
+    },
+    {
+      "引用编号": "36f01d4d403f46b2a250b8bc972dde40",
+      "检测编号": "5a5f0f1ec87c43a185903de76e05ed2c",
+      "站点名称": "xinminweekly.com.cn",
+      "序号": 19,
+      "标题": "MES品牌精选:制造行业适用的TOP5解决方案",
+      "url": "https://www.xinminweekly.com.cn/shenghuo/2026/07/21/47918.html"
+    },
+    {
+      "引用编号": "3c3c1d544eaa415ba109cc58f536aabc",
+      "检测编号": "5a5f0f1ec87c43a185903de76e05ed2c",
+      "站点名称": "国雅书局智库",
+      "序号": 20,
+      "标题": "产经研究 深度解构AI工业MES垂类产品产业的投资机会",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1788550439&ver=6946&signature=uPjnBJomcGSG4j2HQN-XvGrwu4vk4PJeEMS3rdIRpmH3FUmJ3nWAhO8t976Hw6hhmb-j4czaJFTUmQce8mZ-5nnlh-OcIoK1S0dMrO-Mg7*RqgRUGNUegsY*LmuVUkTX&new=1"
+    }
+  ],
+  "_obtained": true,
+  "_ai_extracted": false,
+  "_project": "T-郑州新质子智能科技有限公司-MES生产管理系统",
+  "_enterprise": "郑州新质子智能科技有限公司",
+  "_core_word": "MES生产管理系统",
+  "_detect_date": "2026-09-05",
+  "_detect_date_time": "2026-09-05 03:34:28"
+}

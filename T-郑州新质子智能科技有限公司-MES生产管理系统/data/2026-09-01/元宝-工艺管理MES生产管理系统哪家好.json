@@ -1,0 +1,445 @@
+{
+  "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+  "问题词编号": "QS000012",
+  "问题词": "工艺管理MES生产管理系统哪家好",
+  "平台": "元宝",
+  "内容": "已处理\n先说结论：MES 没有\"最好\"，只有\"最匹配工艺形态\"\n你特意强调工艺管理，说明痛点大概率不是\"报工统计\"，而是工艺文件版本混乱、参数靠人记、换线换型用错版本、出了问题追溯不到是哪版工艺出的货。这类痛点决定了选型的第一分水岭不是品牌，而是离散 vs 流程——两者的工艺管理内核完全不同：\n•\n离散制造：工艺管理 = 工艺路线 + 工序/工步 + 工序级工艺包（SOP、设备、工装、KPC/KQC）+ 版本管控 + 防错防跳步\n•\n流程制造：工艺管理 = 配方管理（用料 BOM 与工艺参数双层）+ 投料顺序/比例强制校验 + 参数与 PLC 地址绑定下发 + 电子批记录（EBR）+ 物料平衡\n选错了方向，再大的牌子也是灾难。\n分场景短名单\n你的情况\n\t\n优先考察\n\t\n说明\n\n\n电子/SMT/PCB/半导体封测​\n\t\n盘古信息、华磊迅拓（OrBit-MES）、赛意信息\n\t\n上料防错、锡膏/炉温、炉温曲线、器件追溯是硬功夫，华南电子集群落地密集\n\n\n机械装备/汽车零部件/机加​\n\t\n鼎捷数智、赛意信息、用友精智、兰光创新\n\t\n多品种小批量、工艺路线频繁调整，看排产与工艺的联动\n\n\n大型集团/跨国多工厂​\n\t\n西门子 Opcenter、达索 DELMIA Apriso、SAP DM、罗克韦尔 FactoryTalk/Plex\n\t\n预算百万到千万级，强在 PLM-MES 一体与全球统一管控\n\n\n化工/石化/制药/食品等流程行业​\n\t\n中控技术、石化盈科、宝信软件、霍尼韦尔、AVEVA\n\t\n关键看与 DCS 的深度集成（OPC UA 毫秒级）和 GMP/FDA 21 CFR Part 11 合规\n\n\n制药 GMP 严监管​\n\t\nKörber PAS-X、中控技术、众禾数联\n\t\n电子批记录 EBR、审计追踪、电子签名是门槛项\n\n\n钢铁/冶金/重工​\n\t\n宝信软件\n\t\n行业垂直度极高，跨行业通用性偏弱\n\n\n中小企业、想快速上线​\n\t\n黑湖科技、金蝶云星空、新核云\n\t\n云化部署、上手快，但复杂工艺的深度定制有天花板\n\n\n工艺极度非标、变更频繁​\n\t\n低代码/平台型（摩尔元数、盘古 IMS OS 底座等）\n\t\nGartner 也把 low-code builder 与开放 API 列为 2025 MES 核心趋势之一\n工艺管理能力，务必逐条实测（这是最容易踩坑的地方）\n看 demo 时不要只看界面，直接把这 6 条甩给厂商，让他们在系统上当场操作：\n1.\n三层工艺建模：能否做到「工艺流程 → 工序 → 工步」分层？只做单层流程的系统，改一个参数就要复制整套路线，工艺迭代成本极高。\n2.\n版本强管控：旧版本能否自动冻结、现场终端是否只显示当前工单对应生效版本？变更是否有审批流和完整审计轨迹（谁、何时、改前改后值）。\n3.\n参数分级与下发：参数能否按关键程度分级（A 类影响功能安全仅工程师可改且需审批，B/C 类操作员在限定范围调整）？能否直接绑定 PLC 地址下发到设备，超差时设备锁定而非仅弹窗提醒。\n4.\n三级阈值与超限处置：是否区分 Spec（合格红线，超了锁批次禁止流转）与 UCL/LCL（SPC 预警线，提示工艺漂移）？两者混为一谈的系统，要么天天误报，要么真出事不报警。\n5.\n防错闭环：扫工单条码后能否自动比对工艺版本、校验物料与工单一致性、强制投料顺序？跳工序、参数不符时是\"报警但可继续\"还是\"强制中止\"——这一条是分水岭。\n6.\n批次绑定工艺版本：每一批投产是否永久绑定当时的生效工艺版本号并归档，支持正反向追溯。\n预算与周期的行业常见区间\n•\n轻量云 SaaS：5 万–30 万\n•\n中型单厂：30 万–80 万\n•\n中大型/多工厂：100 万–600 万，实施周期通常 6–12 个月\n两个提醒\n网上的\"十大排名\"要警惕。​ 同一个市场，口径差异极大——IDC 数据显示 2024 年中国 MES 软件市场前三为宝信软件、黑湖科技、西门子（西门子份额从 7.5% 降至 6.3%）；而你在搜索引擎里看到的多数\"TOP1 榜单\"，是厂商自己发布的内容。建议以第三方机构报告 + 同行业真实客户走访为准。\nGartner 的 MES 魔力象限已于 2025 年停发，改为 Market Guide，考察重点转向云原生、低代码与开放 API、生成式 AI。选型时把\"平台是否支持低代码自主配置\"作为加分项，能显著降低后期每次工艺调整都要找厂商报价的隐性成本。\n如果你愿意补充三件事——具体细分行业、工厂数量与人数、预算区间——我可以直接收敛到 3 家以内的短名单，并给出每家的横向对比维度和谈价要点。\n源",
+  "是否上榜": "否",
+  "检测是否上榜词": "新质子,质子矩阵,质子智控,质子智造",
+  "检测数据引用": [
+    {
+      "引用编号": "61d2b627469548e28e49f047c79af2ae",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "简道云",
+      "序号": 1,
+      "标题": "工艺变更管理乱?MES系统的版本控制功能",
+      "url": "https://www.jiandaoyun.com/news/article/68a84e65229b892d52cfb03f"
+    },
+    {
+      "引用编号": "374b2e4658834247981b5f4890cd7f54",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "经济晚报网",
+      "序号": 2,
+      "标题": "2026年度MES系统排名发布:盘点十大主流MES厂商",
+      "url": "https://www.cnjjwb.com/news-show-183758.html"
+    },
+    {
+      "引用编号": "83e7bede3b2b45b8939c6da04e5717bd",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "info.iyunbiao.com",
+      "序号": 3,
+      "标题": "工序管理软件有哪些 2026主推10款MES系统工序管理软件盘点",
+      "url": "https://info.iyunbiao.com/info/20166.html"
+    },
+    {
+      "引用编号": "194d48f799e54e4a817f2dc1897313ce",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "简道云",
+      "序号": 4,
+      "标题": "MES系统的版本控制功能:如何管理工艺变更?",
+      "url": "https://www.jiandaoyun.com/news/article/68a83e71229b892d52cdca60"
+    },
+    {
+      "引用编号": "5483798ae8a546d4918b48f56c3ab607",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "电子工程网",
+      "序号": 5,
+      "标题": "2026 年制造企业 MES 系统服务商综合实力排行 优德普跻身头部梯队",
+      "url": "https://www.eechina.com/thread-903232-1-29.html"
+    },
+    {
+      "引用编号": "e16d33977e5d49f096ed09663d87f264",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "info.iyunbiao.com",
+      "序号": 6,
+      "标题": "生产工序管理软件有哪些?这10款具备核心竞争力的软件推荐",
+      "url": "https://info.iyunbiao.com/20251.html"
+    },
+    {
+      "引用编号": "df93f432c40847b1aebc4f4607840992",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "pangus-ims.com",
+      "序号": 7,
+      "标题": "2025年MES系统五大厂商排名:智造领军企业深度解析",
+      "url": "https://www.pangus-ims.com/newInf/h96LFeof/zh.html"
+    },
+    {
+      "引用编号": "9cfab5801dcb4411a7d4b1ceef2e3877",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "国雅书局智库",
+      "序号": 8,
+      "标题": "产经研究 深度解构AI工业MES垂类产品产业的投资机会",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1788215035&ver=6939&signature=OP9vhRgNiAzzvJBOhg-TQWF*OAUvGxjTlWix*EgYPlhoj1dBdCjHAS9yqWmAgUSyZET8kkUA1lvE8CgK-aSSKR330VCk3Ed12lcbpgkDoPvy67WO1o6ceDdxydAGYmBo&new=1"
+    },
+    {
+      "引用编号": "3957409623d14c76ae2910642e6b0a4e",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "简道云",
+      "序号": 9,
+      "标题": "金属加工行业MES选型:设备联网与工艺管理功能适配",
+      "url": "https://www.jiandaoyun.com/news/article/68a85127229b892d52cffe77"
+    },
+    {
+      "引用编号": "ea4c0446138347aa908795787d2e8bbe",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "腾讯网",
+      "序号": 10,
+      "标题": "@冲总经理的 PMO 手记:2026年MES品牌...",
+      "url": "https://ima.qq.com/wiki/?shareId=ea4777de3a121a4f51453b181f8f19881c07aa75463d09a911edd50f278910a1&mediaId=weburl_110c191c8830830bd4e5047dc375a724_e1a65c7574a94f5880418a8bbe2a1b5e7485335743260630&action=openDetailDrawer&webFrom=10000171"
+    },
+    {
+      "引用编号": "01a68c13685a46cc81ad2f7cdcb09ce3",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "zdsztech.com",
+      "序号": 11,
+      "标题": "2025年必看!主流生产管理系统大全,选对不迷茫!",
+      "url": "https://www.zdsztech.com/blog/mainstream-production-management-systems-guide/"
+    },
+    {
+      "引用编号": "361a0be87ae24b0b818700ccb673ba47",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "腾讯自选股",
+      "序号": 12,
+      "标题": "2026年度十大MES厂商排名权威发布:智能制造领域谁更出彩?",
+      "url": "https://gu.qq.com/resources/shy/news/detail-v2/index.html?t=1#/index?_tentrees_trans=0&id=SN20260727105251a6e736cb"
+    },
+    {
+      "引用编号": "5ed2226407424327b685c7d03a78deb3",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "鼎捷数智",
+      "序号": 13,
+      "标题": "好用的MES品牌有哪几家?2025年MES软件TOP10:赋能企业数字化的品牌榜",
+      "url": "https://www.digiwin.com/index.php/p/12892.html"
+    },
+    {
+      "引用编号": "84feb2769e9f480cb4462d83a6b96d34",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "鼎捷数智",
+      "序号": 14,
+      "标题": "中国十大MES公司排名发布:谁在引领离散制造数字化转型?",
+      "url": "https://www.digiwin.com/p/14891.html"
+    },
+    {
+      "引用编号": "7f97b3f9130746ad8921e5554158c13d",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "鼎捷数智",
+      "序号": 15,
+      "标题": "2025年MES系统选型策略:排行榜TOP5厂商的核心优势与场景适配性",
+      "url": "https://www.digiwin.com/t.php/p/13236.html"
+    },
+    {
+      "引用编号": "b2be4f01bf1e44978c0d878adb92179e",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "工厂ERP软件刘工-MES-PLM",
+      "序号": 16,
+      "标题": "国外MES适合国内制造企业吗?#西门子#SAP#达索#金蝶#用友",
+      "url": "https://wv.video.qq.com/export/UzFfBgAAxPyJZDQ9ZT_wk8zT4DBZDcxTi7lc2J7YHplocNQV-4s"
+    },
+    {
+      "引用编号": "e1ad81f4b54844d0b02bb48d5e31d23f",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "企百科",
+      "序号": 17,
+      "标题": "深圳市华磊迅拓科技有限公司 业务与产品信息",
+      "url": "https://企百科"
+    },
+    {
+      "引用编号": "d096c97bd46847748cc3da864a63d2e2",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "allstar-sz.com",
+      "序号": 18,
+      "标题": "2026流程型MES软件系统选型指南:配方管理批次追溯DCS集成方案深度解析",
+      "url": "https://www.allstar-sz.com/news/info.aspx?itemid=619"
+    },
+    {
+      "引用编号": "5f7a760aa02f4df4b09eeb9171764373",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "pangus-ims.com",
+      "序号": 19,
+      "标题": "盘古信息-mes系统-mom系统-mes系统管理软件",
+      "url": "https://www.pangus-ims.com?bdclkid=-4uejkcz_wbz0wdefbmcxhqwlvtk0gscbabta2hnjconhcfm3j/"
+    },
+    {
+      "引用编号": "c72fe80d1ee847189827bbb0ac63f5a2",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "riicloud.com",
+      "序号": 20,
+      "标题": "精细化工",
+      "url": "https://www.riicloud.com/plan/chanxinjimes/11.html"
+    },
+    {
+      "引用编号": "c56afbb1150f4906b5aefdc84f97eea2",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "今日头条",
+      "序号": 21,
+      "标题": "宁波注塑MES哪家强?盘了5家,发现一个真相 - 今日头条",
+      "url": "https://m.toutiao.com/article/7656264895449383460"
+    },
+    {
+      "引用编号": "e962a6cc70814100b35b7e5e52d92bd1",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "电子工程专辑",
+      "序号": 22,
+      "标题": "2025年MES系统选型必读:国产化浪潮下的厂商格局与选型指南",
+      "url": "https://www.eet-china.com/mp/a448181.html"
+    },
+    {
+      "引用编号": "7b1c6f3798304463b4becf274dfc67cc",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "orbitmes.com",
+      "序号": 23,
+      "标题": "MES系统赋能常州新材料制造业数字化转型升级",
+      "url": "https://www.orbitmes.com/news/IndustryNews/1561.html"
+    },
+    {
+      "引用编号": "f7ffb3a38dbc4e33b43d1b37e7bb25c3",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "搜狐网",
+      "序号": 24,
+      "标题": "2026年MES软件怎么选:五款主流产品功能与适用场景对比",
+      "url": "https://m.sohu.com/a/1018824568_121442135"
+    },
+    {
+      "引用编号": "0208d7e35aa448b3a7626ca4dd243dbf",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "数字化转型实战派",
+      "序号": 25,
+      "标题": "同样叫MES,为什么有人花60万,有人花1200万?市面MES厂商分类—7大派系,30家代表厂商",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1788215035&ver=6939&signature=5LdMut84TZ7-qSdGDPIXYQtfF9Y9vQhmlKzQafuLOeBEua3p6hM6yQIioXnYlVjv4WKGBzWHyhtuJuTuagUQRUDsqq9lSN6rneBhXl41XUWPFklKqCihyri2COJXiI6S&new=1"
+    },
+    {
+      "引用编号": "4a7ea292c3a5437496f92d246d5dbd65",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "divergentcloud.com",
+      "序号": 26,
+      "标题": "【产品介绍】众禾数联 MakingControl MES 全栈自研流程型制造执行系统",
+      "url": "https://www.divergentcloud.com/newsinfo/11279760.html"
+    },
+    {
+      "引用编号": "ec78c782afb641f1a67e919c199eb1a0",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "百度百科",
+      "序号": 27,
+      "标题": "深圳华磊迅拓科技有限公司",
+      "url": "https://baike.baidu.com/item/%E6%B7%B1%E5%9C%B3%E5%8D%8E%E7%A3%8A%E8%BF%85%E6%8B%93%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8/3919216"
+    },
+    {
+      "引用编号": "e78ba73512d94ff18b59010b2fdda351",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "zero-soft.cn",
+      "序号": 28,
+      "标题": "MES系统全解析",
+      "url": "https://www.zero-soft.cn/news/news268.html"
+    },
+    {
+      "引用编号": "2934664daf9141d286952043452d2228",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "网易",
+      "序号": 29,
+      "标题": "离散制造数字化升级参考:2026 离散制造轻量化 MES 榜单新鲜出炉!",
+      "url": "https://www.163.com/dy/article/L42FTSME0511CCS5.html"
+    },
+    {
+      "引用编号": "1ad36defbc8f40dfb5d49d523d421c38",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "emerson.com",
+      "序号": 30,
+      "标题": "Manufacturing Execution Systems (MES) - Process and Batch Manufacturing, 2024",
+      "url": "https://www.emerson.com/documents/automation/report-spark-matrix-mes-process-batch-manufacturing-2024-deltav-mes-en-11544404.pdf"
+    },
+    {
+      "引用编号": "acfc0fc897064907a291dc14a72edfce",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "远山载月",
+      "序号": 31,
+      "标题": "【数字化工具】国内外代表性MES厂商",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1788215035&ver=6939&signature=xx3nV6wdOt-3TjzuImkZgCxbAutLsskGkIgNwtw0sE1JoZNKgDepYWD1LMqMLNMpM7qQaSd1GnlCtxBG*PNmAQ7urQmRhiyrrsCkidURgDnCDbw2W7eR1feuxe9qBWd5&new=1"
+    },
+    {
+      "引用编号": "24917f437d87419db188ec112b03ce91",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "电子工程专辑",
+      "序号": 32,
+      "标题": "2025中国工业软件厂商推荐,优质国产MES厂商有哪些特性?",
+      "url": "https://www.eet-china.com/mp/a452959.html"
+    },
+    {
+      "引用编号": "dd57da6692b44466b40e5d0987818389",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "电子工程专辑",
+      "序号": 33,
+      "标题": "MES系统选型指南:国产厂商如何以平台化方案赋能数字化制造",
+      "url": "https://www.eet-china.com/mp/a453710.html"
+    },
+    {
+      "引用编号": "f42ffbf99ce74f5a85e202ad194f793e",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "criticalmanufacturing.com",
+      "序号": 34,
+      "标题": "Critial Manufacturing 入選2025年《Gartner MES市場指南》代表性供應商",
+      "url": "https://www.criticalmanufacturing.com/zh/press-releases/critial-manufacturing-%E5%85%A5%E9%81%B82025%E5%B9%B4%E3%80%8Agartner-mes%E5%B8%82%E5%A0%B4%E6%8C%87%E5%8D%97%E3%80%8B%E4%BB%A3%E8%A1%A8%E6%80%A7%E4%BE%9B%E6%87%89%E5%95%86/"
+    },
+    {
+      "引用编号": "9e1f19d8fcb643cbb71807eccd367b86",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "idc.com",
+      "序号": 35,
+      "标题": "从“执行”到“智能”,AI重塑MES市场格局,2024年IDC中国MES市场厂商份额发布",
+      "url": "https://www.idc.com/?p=106494"
+    },
+    {
+      "引用编号": "2d0ce0702ab5443a82a58d62609cfad8",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "慧都智能制造",
+      "序号": 36,
+      "标题": "MES系统工艺管理功能详解",
+      "url": "http://mp.weixin.qq.com/s?__biz=MzU1OTg5NzU1MA==&mid=2247486793&idx=1&sn=ba99ce8fdebf5e19b2c998d902e303b3&chksm=fdda52c33f0c7231d559f5e50a50c4cff7ad8d60b6c519822282d0e4e373ee16c740d6d174ae#rd"
+    },
+    {
+      "引用编号": "e1a07a9d53964354b233a759af6b7072",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "automation.com",
+      "序号": 37,
+      "标题": "Critical Manufacturing Named as a Representative Vendor in 2025 Gartner Market Guide for MES",
+      "url": "https://www.automation.com/article/critical-manufacturing-representative-vendor-2025"
+    },
+    {
+      "引用编号": "367586d48fd34d7bb9ae5d5311f538bf",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "人人文库",
+      "序号": 38,
+      "标题": "2026年及未来5年中国制造执行系统行业市场全景监测及投资前景展望报告",
+      "url": "https://www.renrendoc.com/paper/505653963.html"
+    },
+    {
+      "引用编号": "34249a87fffc4a15b6b9df2cab748100",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "orbitmes.com",
+      "序号": 39,
+      "标题": "汽车电子行业MES系统如何进行工艺管控?",
+      "url": "https://www.orbitmes.com/news/IndustryNews/1375.html"
+    },
+    {
+      "引用编号": "0d172297e62e46598f4284085d2d0f45",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "novotek.com",
+      "序号": 40,
+      "标题": "GE Vernova is erkend in de Gartner 2025 Market Guide voor MES",
+      "url": "https://www.novotek.com/be/nieuws/ge-vernova-is-erkend-in-de-gartner-2025-market-guide-voor-mes-2/"
+    },
+    {
+      "引用编号": "145d982eb94a4966a984f235490ee3b3",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "鼎捷数智",
+      "序号": 41,
+      "标题": "2025年MES系统选型必看:五大主流厂商横向对比",
+      "url": "https://www.digiwin.com/t.php/p/13237.html"
+    },
+    {
+      "引用编号": "cc4dd2ed222243f48a26a966e959dfac",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "MES工厂",
+      "序号": 42,
+      "标题": "制简云 MES 数字化工艺管理:终结变压器 \"工艺错用\" 批量事故",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1788215045&ver=6939&signature=WVhIuaESsegtuRv9-Cix7uCSw7oZPzv8ToUQjhDMiW42gociYGVDQqLiKnP0uaJ8q53fv3AJMUiAEf9UjoGle8ChB*6Tcya6ZeeGn1BygM2YJxx-NCQy-bWvXyTz*Nw5&new=1"
+    },
+    {
+      "引用编号": "8a7e900b594f4f6599c5e03c505cff53",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "plex.rockwellautomation.com",
+      "序号": 43,
+      "标题": "2025 Gartner Market Guide for Manufacturing Execution Systems",
+      "url": "https://plex.rockwellautomation.com/en-us/resources/2025-gartner-market-guide-manufacturing-execution-systems.html"
+    },
+    {
+      "引用编号": "8aadb347875a45e0bc399527187cad67",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "鼎捷数智",
+      "序号": 44,
+      "标题": "哪款MES系统最适配企业需求?2025MES系统排名揭晓!",
+      "url": "https://digiwin.com/t.php/p/12897.html"
+    },
+    {
+      "引用编号": "0c14e8846d8f4ea5b9b80394bfaed939",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "MES随谈",
+      "序号": 45,
+      "标题": "第5篇:工艺流程管理——MES的\"导航地图\",LOT按它一步一步走",
+      "url": "http://mp.weixin.qq.com/s?__biz=MzI2NDc4ODk5OQ==&mid=2247484358&idx=1&sn=b0b70efe7f312a2e763ed1bea4c79fca&chksm=eba024e6b752ce6eeb227be831364d2a461fccbbc0da75a5a2c3c907eb29d268b813cf63ab18#rd"
+    },
+    {
+      "引用编号": "4d7b69608c7a47eb817f3dadc454307c",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "criticalmanufacturing.com",
+      "序号": 46,
+      "标题": "Gartner Market Guide for MES 2025 - Critical Manufacturing",
+      "url": "https://www.criticalmanufacturing.com/campaign/gartner-market-guide-for-mes-2025/"
+    },
+    {
+      "引用编号": "8897b163d3e0439bb79537d5ebda482c",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "搜狐网",
+      "序号": 47,
+      "标题": "从千万家企业调研看2025年MES五强:黑湖科技凭什么排第二?",
+      "url": "https://www.sohu.com/a/939628809_120817746"
+    },
+    {
+      "引用编号": "21070783d6b24df283ef64ae654ef64e",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "埃森哲",
+      "序号": 48,
+      "标题": "Finance Analyst Recognition",
+      "url": "https://www.accenture.com/ph-en/insights/finance-risk/analyst-recognitions"
+    },
+    {
+      "引用编号": "8decd29b7dde4166bf107d888b7d5c8c",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "鼎捷数智",
+      "序号": 49,
+      "标题": "MES系统到底能干什么,企业选型时应该从哪些方面评估?国产MES厂商有哪些品牌推荐",
+      "url": "https://www.digiwin.com/p/13050.html"
+    },
+    {
+      "引用编号": "c8e6a6b6078c4d44a7aeb1520021d150",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "慧都网",
+      "序号": 50,
+      "标题": "掌握MES系统九大核心功能,助力企业数字化转型",
+      "url": "https://bigdata.evget.com/post/29142.html"
+    },
+    {
+      "引用编号": "1f8ad7d944ff4745a7668a1835aea400",
+      "检测编号": "f88b87e7f7504e758b42c3a536a4e568",
+      "站点名称": "凤凰网",
+      "序号": 51,
+      "标题": "2026年国内专业的MES厂商综合实力排行榜",
+      "url": "https://baby.ifeng.com/c/8skcORK3KpA"
+    }
+  ],
+  "_obtained": true,
+  "_ai_extracted": false,
+  "_project": "T-郑州新质子智能科技有限公司-MES生产管理系统",
+  "_enterprise": "郑州新质子智能科技有限公司",
+  "_core_word": "MES生产管理系统",
+  "_detect_date": "2026-09-01",
+  "内容提及品牌": [
+    "盘古信息",
+    "华磊迅拓",
+    "赛意信息",
+    "鼎捷数智",
+    "用友精智",
+    "金蝶",
+    "兰光创新",
+    "西门子",
+    "达索",
+    "SAP",
+    "罗克韦尔",
+    "中控技术",
+    "宝信软件",
+    "英克科技",
+    "明思科技",
+    "黑湖智造",
+    "简道云",
+    "天工智造"
+  ]
+}

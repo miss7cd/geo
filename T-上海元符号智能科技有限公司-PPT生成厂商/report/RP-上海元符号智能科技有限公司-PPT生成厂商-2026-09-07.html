@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEO 数据洞察报告</title>
+    <link rel="stylesheet" href="https://unpkg.com/ant-design-vue/dist/reset.css">
+    <style>
+        :root {
+            --bg: #0b1220;
+            --panel: #131c2e;
+            --panel-2: #182338;
+            --line: #243249;
+            --ink: #dfe7f3;
+            --ink-2: #93a4bd;
+            --ink-3: #64748f;
+            --cyan: #22d3ee;
+            --green: #2dd4a7;
+            --amber: #fbbf24;
+            --red: #f87171;
+            --violet: #a78bfa;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--ink);
+            font-family: -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .wrap {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 24px 20px 64px;
+        }
+
+        .head {
+            background: linear-gradient(120deg, #16233b 0%, #101a2c 60%, #0d1626 100%);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 22px 24px;
+            margin-bottom: 18px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .head::after {
+            content: "";
+            position: absolute;
+            right: -60px;
+            top: -60px;
+            width: 220px;
+            height: 220px;
+            background: radial-gradient(circle, rgba(34, 211, 238, .14), transparent 70%);
+        }
+
+        .head .tag {
+            display: inline-block;
+            font-size: 12px;
+            letter-spacing: 1px;
+            color: var(--cyan);
+            border: 1px solid rgba(34, 211, 238, .35);
+            padding: 2px 10px;
+            border-radius: 999px;
+            margin-bottom: 8px;
+        }
+
+        .head h1 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .head .sub {
+            color: var(--ink-2);
+            margin-top: 6px;
+            font-size: 13px;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        .meta-cell {
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            padding: 8px 12px;
+        }
+
+        .meta-cell .k {
+            font-size: 12px;
+            color: var(--ink-3);
+        }
+
+        .meta-cell .v {
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 2px;
+        }
+
+        .notice {
+            margin-top: 14px;
+            font-size: 12px;
+            color: var(--ink-2);
+            border-left: 3px solid var(--amber);
+            background: rgba(251, 191, 36, .07);
+            border-radius: 6px;
+            padding: 8px 12px;
+        }
+
+        .panel {
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 16px 18px;
+            margin-bottom: 16px;
+        }
+
+        .panel .p-title {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .panel .p-sub {
+            font-size: 12px;
+            color: var(--ink-3);
+            margin-bottom: 12px;
+        }
+
+        .kpi-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .kpi-card {
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 14px 16px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .kpi-card .k {
+            font-size: 12px;
+            color: var(--ink-2);
+        }
+
+        .kpi-card .v {
+            font-size: 26px;
+            font-weight: 800;
+            margin: 4px 0 2px;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .kpi-card .d-up {
+            color: var(--green);
+        }
+
+        .kpi-card .d-down {
+            color: var(--red);
+        }
+
+        .kpi-card .d-flat {
+            color: var(--ink-3);
+        }
+
+        .kpi-card .d {
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .kpi-card .d .lbl {
+            color: var(--ink-3);
+            font-weight: 400;
+        }
+
+        .kpi-card .bar {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--cyan);
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        @media (max-width: 900px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .chart-box {
+            width: 100%;
+            min-height: 260px;
+        }
+
+        table.tbl {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        table.tbl th {
+            text-align: left;
+            color: var(--ink-2);
+            font-weight: 600;
+            padding: 7px 10px;
+            border-bottom: 1px solid var(--line);
+            white-space: nowrap;
+            background: rgba(255, 255, 255, .03);
+        }
+
+        table.tbl td {
+            padding: 6px 10px;
+            border-bottom: 1px solid rgba(36, 50, 73, .5);
+            vertical-align: top;
+        }
+
+        table.tbl tr:hover td {
+            background: rgba(34, 211, 238, .04);
+        }
+
+        .badge-on {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 1px 8px;
+            border-radius: 999px;
+            background: rgba(45, 212, 167, .15);
+            color: var(--green);
+            border: 1px solid rgba(45, 212, 167, .35);
+        }
+
+        .badge-off {
+            display: inline-block;
+            font-size: 12px;
+            padding: 1px 8px;
+            border-radius: 999px;
+            background: rgba(148, 163, 184, .12);
+            color: var(--ink-2);
+            border: 1px solid rgba(148, 163, 184, .3);
+        }
+
+        .badge-new {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 1px 8px;
+            border-radius: 999px;
+            background: rgba(34, 211, 238, .14);
+            color: var(--cyan);
+            border: 1px solid rgba(34, 211, 238, .35);
+        }
+
+        .badge-lost {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 1px 8px;
+            border-radius: 999px;
+            background: rgba(248, 113, 113, .13);
+            color: var(--red);
+            border: 1px solid rgba(248, 113, 113, .35);
+        }
+
+        .summary-box {
+            background: linear-gradient(120deg, rgba(34, 211, 238, .08), rgba(167, 139, 250, .06));
+            border: 1px solid rgba(34, 211, 238, .25);
+            border-radius: 12px;
+            padding: 14px 18px;
+            margin-bottom: 16px;
+            font-size: 15px;
+        }
+
+        .summary-box .sl {
+            color: var(--cyan);
+            font-weight: 700;
+            margin-right: 6px;
+        }
+
+        .insight-card {
+            background: var(--panel-2);
+            border: 1px solid var(--line);
+            border-left: 4px solid var(--ink-3);
+            border-radius: 10px;
+            padding: 14px 16px;
+            margin-bottom: 12px;
+        }
+
+        .insight-card.tone-positive {
+            border-left-color: var(--green);
+        }
+
+        .insight-card.tone-negative {
+            border-left-color: var(--red);
+        }
+
+        .insight-card.tone-warning {
+            border-left-color: var(--amber);
+        }
+
+        .insight-card.tone-neutral {
+            border-left-color: var(--ink-3);
+        }
+
+        .insight-card .i-head {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 4px;
+        }
+
+        .insight-card .i-dim {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--violet);
+            background: rgba(167, 139, 250, .12);
+            border: 1px solid rgba(167, 139, 250, .3);
+            padding: 0 8px;
+            border-radius: 6px;
+        }
+
+        .insight-card .i-title {
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .insight-card .i-conf {
+            font-size: 11px;
+            color: var(--ink-3);
+            border: 1px solid var(--line);
+            padding: 0 6px;
+            border-radius: 4px;
+            margin-left: auto;
+        }
+
+        .insight-card .i-summary {
+            color: var(--ink);
+            margin-top: 4px;
+        }
+
+        .insight-card .i-evidence {
+            margin-top: 8px;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .insight-card .i-evidence li {
+            font-size: 13px;
+            color: var(--ink-2);
+            position: relative;
+            padding-left: 16px;
+            margin-bottom: 3px;
+        }
+
+        .insight-card .i-evidence li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--cyan);
+        }
+
+        .insight-card .i-action {
+            margin-top: 10px;
+            font-size: 13px;
+            background: rgba(34, 211, 238, .08);
+            border: 1px dashed rgba(34, 211, 238, .35);
+            border-radius: 8px;
+            padding: 8px 12px;
+        }
+
+        .insight-card .i-action .al {
+            color: var(--cyan);
+            font-weight: 700;
+            margin-right: 6px;
+        }
+
+        .empty-insight {
+            text-align: center;
+            color: var(--ink-3);
+            border: 1px dashed var(--line);
+            border-radius: 10px;
+            padding: 28px;
+        }
+
+        .foot {
+            text-align: center;
+            color: var(--ink-3);
+            font-size: 12px;
+            margin-top: 24px;
+            border-top: 1px solid var(--line);
+            padding-top: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 注入点：脚本将 window.__INSIGHT__ 的 JSON 序列化后替换占位符 null -->
+    <div id="app">
+        <div class="wrap" v-if="R.meta">
+            <!-- 头部 -->
+            <div class="head">
+                <span class="tag">{{ R.meta.tag || 'GEO DATA INSIGHT' }}</span>
+                <h1>{{ R.meta.title }}</h1>
+                <div class="sub" v-if="R.meta.subtitle">{{ R.meta.subtitle }}</div>
+                <div class="meta-grid">
+                    <div class="meta-cell" v-for="(m, i) in R.meta.cells" :key="i">
+                        <div class="k">{{ m.k }}</div>
+                        <div class="v">{{ m.v }}</div>
+                    </div>
+                </div>
+                <div class="notice" v-if="R.meta.notice">
+                    <b>时序口径：</b>{{ R.meta.notice }}
+                </div>
+            </div>
+
+            <!-- 数据版提示 -->
+            <div class="panel" v-if="R.data_only" style="border-color: rgba(251,191,36,.4);">
+                <div class="p-title" style="color:var(--amber)">⚠ 数据版（尚未注入 AI 洞察）</div>
+                <div class="p-sub">以下为脚本梳理的例行数据底座。如需完整报告，请先由 AI 依据数据 JSON 生成
+                    <code>.insight.json</code>，再执行 render 重新注入。
+                </div>
+            </div>
+
+            <!-- AI 总述 -->
+            <div class="summary-box" v-if="R.summary">
+                <span class="sl">报告总述</span>{{ R.summary }}
+            </div>
+
+            <!-- KPI -->
+            <div class="kpi-row" v-if="R.kpis && R.kpis.length">
+                <div class="kpi-card" v-for="k in R.kpis" :key="k.id">
+                    <div class="bar" :style="{background: k.accent || 'var(--cyan)'}"></div>
+                    <div class="k">{{ k.label }}</div>
+                    <div class="v">{{ k.value }}</div>
+                    <div class="d" v-if="k.delta_txt">
+                        <span :class="k.delta_cls || 'd-flat'">{{ k.delta_txt }}</span>
+                        <span class="lbl" v-if="k.delta_lbl"> {{ k.delta_lbl }}</span>
+                    </div>
+                    <div class="d" v-else-if="k.sub"><span class="lbl">{{ k.sub }}</span></div>
+                </div>
+            </div>
+
+            <!-- 图表区 -->
+            <div class="grid-2" v-if="R.charts && R.charts.length">
+                <div class="panel" v-for="c in R.charts" :key="c.id" :style="c.span==='full' ? 'grid-column:1/-1' : ''">
+                    <div class="p-title">{{ c.title }}</div>
+                    <div class="p-sub" v-if="c.sub">{{ c.sub }}</div>
+                    <div class="chart-box" :id="c.id"></div>
+                </div>
+            </div>
+
+            <!-- 表格区 -->
+            <div class="panel" v-for="t in R.tables" :key="t.id">
+                <div class="p-title">{{ t.title }}</div>
+                <div class="p-sub" v-if="t.sub">{{ t.sub }}</div>
+                <div style="overflow-x:auto">
+                    <table class="tbl">
+                        <thead>
+                            <tr>
+                                <th v-for="col in t.cols" :key="col.key">{{ col.title }}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="(r, ri) in t.rows" :key="ri">
+                                <td v-for="col in t.cols" :key="col.key">
+                                    <a v-if="col.type==='link' && r[col.key]" :href="r[col.key]" target="_blank" rel="noopener" style="color:var(--cyan)">链接</a>
+                                    <span v-else-if="col.type==='badge'" :class="badgeCls(r[col.key])">{{ r[col.key] || '—' }}</span>
+                                    <span v-else-if="col.type==='num'" style="font-variant-numeric:tabular-nums">{{ r[col.key] }}</span>
+                                    <template v-else>{{ r[col.key] === '' || r[col.key] == null ? '—' : r[col.key] }}</template>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- AI 洞察卡 -->
+            <div v-if="R.insights && R.insights.length">
+                <div class="panel" style="margin-top:4px">
+                    <div class="p-title">🧭 AI 分维度洞察</div>
+                    <div class="p-sub">由会话内 AI 依据数据 JSON 生成；每条含证据与可执行建议。</div>
+                    <div class="insight-card" v-for="ins in R.insights" :key="ins.id" :class="'tone-' + (ins.tone || 'neutral')">
+                        <div class="i-head">
+                            <span class="i-dim">{{ ins.dimension }}</span>
+                            <span class="i-title">{{ ins.title }}</span>
+                            <span class="i-conf">置信 {{ confText(ins.confidence) }}</span>
+                        </div>
+                        <div class="i-summary">{{ ins.summary }}</div>
+                        <ul class="i-evidence" v-if="ins.evidence && ins.evidence.length">
+                            <li v-for="(e, ei) in ins.evidence" :key="ei">{{ e }}</li>
+                        </ul>
+                        <div class="i-action" v-if="ins.action">
+                            <span class="al">建议行动</span>{{ ins.action }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div v-else-if="!R.data_only">
+                <div class="empty-insight">暂无 AI 洞察内容</div>
+            </div>
+
+            <div class="foot">
+                {{ R.meta.foot || 'GEO-洞察与报告专家 · geo-insight · 数据由脚本梳理，洞察由 AI 生成' }}
+            </div>
+        </div>
+        <div class="wrap" v-else style="color:var(--ink-2)">报告数据为空。</div>
+    </div>
+
+    <!-- 库 -->
+    <script src="https://unpkg.com/@antv/g2/dist/g2.min.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.13/dayjs.min.js"></script>
+    <script src="https://unpkg.com/ant-design-vue/dist/antd.min.js"></script>
+
+    <script>
+        // ===== 注入的数据 =====
+        window.__INSIGHT__ = {"scope":"project","meta":{"tag":"GEO ROUTINE + INSIGHT","title":"上海元符号智能科技有限公司 · PPT生成厂商 · GEO 数据洞察报告","subtitle":"最新检测 2026-09-07（凌晨） vs 2026-09-06（前一日）；当日(2026-09-07)文章仅统计。","cells":[{"k":"企业","v":"上海元符号智能科技有限公司"},{"k":"核心词","v":"PPT生成厂商"},{"k":"最新检测日 L","v":"2026-09-07"},{"k":"对比基准 L-1","v":"2026-09-06"},{"k":"检测平台","v":"豆包、元宝"},{"k":"覆盖问句","v":"10 个"},{"k":"数据日范围","v":"2026-08-30 ~ 2026-09-07"},{"k":"生成时间","v":"2026-09-07 17:21"}],"notice":"最新检测数据 L=2026-09-07 于当日凌晨生成，彼时 2026-09-07 的文章尚未发布；因此 L 仅与 2026-09-06 对比，归因仅使用发布时间 ≤2026-09-06 的文章；当日(2026-09-07) 文章只统计写文与发布，不参与洞察。","foot":"GEO-洞察与报告专家 · geo-insight v2 · 数据由 insight_report.py 梳理，洞察由 AI 生成"},"kpis":[{"id":"k-hit","label":"上榜率(2026-09-07)","value":"0.0%","delta_txt":"较 L-1 →","delta_cls":"d-flat","delta_lbl":"vs 2026-09-06","sub":"0/20 条检测命中","accent":"#22d3ee"},{"id":"k-豆包","label":"豆包上榜率(2026-09-07)","value":"0.0%","delta_txt":"较 L-1 →","delta_cls":"d-flat","delta_lbl":"vs 2026-09-06","sub":"0/10 命中","accent":"#a78bfa"},{"id":"k-元宝","label":"元宝上榜率(2026-09-07)","value":"0.0%","delta_txt":"较 L-1 →","delta_cls":"d-flat","delta_lbl":"vs 2026-09-06","sub":"0/10 命中","accent":"#a78bfa"},{"id":"k-close-pub","label":"闭环发布(≤2026-09-06)","value":"55/60","delta_txt":null,"delta_lbl":"","sub":"成功/写文 · 6 个发文日","accent":"#2dd4a7"},{"id":"k-today","label":"当日(2026-09-07)写文","value":"10 篇","delta_txt":null,"delta_lbl":"","sub":"已发布 0 · 仅统计不参与洞察","accent":"#fbbf24"}],"charts":[{"id":"c-trend","title":"各平台上榜率趋势（检测日 2026-08-30 ~ 2026-09-07）","sub":"综合/豆包/元宝 上榜率%；最新检测日 L 仅与 L-1 对比，更早日期仅作趋势。","kind":"line","x":"x","y":"y","series":"series","data":[{"x":"2026-08-30","y":0.0,"series":"元宝"},{"x":"2026-08-30","y":0.0,"series":"豆包"},{"x":"2026-08-30","y":0.0,"series":"综合"},{"x":"2026-08-31","y":0.0,"series":"元宝"},{"x":"2026-08-31","y":0.0,"series":"豆包"},{"x":"2026-08-31","y":0.0,"series":"综合"},{"x":"2026-09-01","y":0.0,"series":"元宝"},{"x":"2026-09-01","y":0.0,"series":"豆包"},{"x":"2026-09-01","y":0.0,"series":"综合"},{"x":"2026-09-02","y":0.0,"series":"元宝"},{"x":"2026-09-02","y":0.0,"series":"豆包"},{"x":"2026-09-02","y":0.0,"series":"综合"},{"x":"2026-09-03","y":0.0,"series":"元宝"},{"x":"2026-09-03","y":0.0,"series":"豆包"},{"x":"2026-09-03","y":0.0,"series":"综合"},{"x":"2026-09-04","y":0.0,"series":"元宝"},{"x":"2026-09-04","y":0.0,"series":"豆包"},{"x":"2026-09-04","y":0.0,"series":"综合"},{"x":"2026-09-05","y":0.0,"series":"元宝"},{"x":"2026-09-05","y":0.0,"series":"豆包"},{"x":"2026-09-05","y":0.0,"series":"综合"},{"x":"2026-09-06","y":0.0,"series":"元宝"},{"x":"2026-09-06","y":0.0,"series":"豆包"},{"x":"2026-09-06","y":0.0,"series":"综合"},{"x":"2026-09-07","y":0.0,"series":"元宝"},{"x":"2026-09-07","y":0.0,"series":"豆包"},{"x":"2026-09-07","y":0.0,"series":"综合"}],"span":"full"},{"id":"c-source","title":"引用来源站点 Top12（2026-09-07）","sub":"豆包+元宝当日全部回答引用的站点计数（去重引用条目前）。","kind":"barH","x":"x","y":"y","data":[{"x":"WPS","y":29},{"x":"islide.cc","y":13},{"x":"今日头条","y":13},{"x":"金山办公","y":13},{"x":"Pi","y":13},{"x":"稀土掘金","y":9},{"x":"Beautiful.ai","y":7},{"x":"CSDN博客","y":7},{"x":"WPS Office","y":7},{"x":"八方资源网","y":6},{"x":"搜狐网","y":6},{"x":"搜狐","y":6}]},{"id":"c-pub","title":"媒体发布结构（闭环 ≤2026-09-06）","sub":"已闭环发文日内的写文 vs 发布成功篇数。","kind":"barV","x":"x","y":"y","series":"series","data":[{"x":"列举网","y":42,"series":"已发布"},{"x":"列举网","y":0,"series":"未发布"},{"x":"今日头条","y":3,"series":"已发布"},{"x":"今日头条","y":3,"series":"未发布"},{"x":"采招网","y":3,"series":"已发布"},{"x":"采招网","y":1,"series":"未发布"},{"x":"国脉网","y":3,"series":"已发布"},{"x":"国脉网","y":1,"series":"未发布"},{"x":"博客园","y":3,"series":"已发布"},{"x":"博客园","y":0,"series":"未发布"},{"x":"中国采购","y":1,"series":"已发布"},{"x":"中国采购","y":0,"series":"未发布"}]}],"tables":[{"id":"t-questions","title":"问句 × 平台 上榜状态（L vs L-1）","sub":"L=最新检测日（凌晨生成），仅与 L-1 对比。","cols":[{"key":"question","title":"问句"},{"key":"豆包_cur","title":"豆包(L)=2026-09-07","type":"badge"},{"key":"豆包_prev","title":"豆包(2026-09-06)","type":"badge"},{"key":"豆包_chg","title":"豆包变化","type":"badge"},{"key":"元宝_cur","title":"元宝(L)=2026-09-07","type":"badge"},{"key":"元宝_prev","title":"元宝(2026-09-06)","type":"badge"},{"key":"元宝_chg","title":"元宝变化","type":"badge"}],"rows":[{"question":"PPT生成厂商哪家好","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"企业宣传PPT生成厂商有哪些","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"发布会PPT生成厂商哪家好","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"商务PPT生成厂商推荐","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"培训课件PPT生成厂商有哪些","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"年会PPT生成厂商推荐","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"招商PPT生成厂商推荐","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"月度总结PPT生成厂商哪家靠谱","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"靠谱PPT生成厂商推荐","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"项目汇报PPT生成厂商哪里找","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"}]},{"id":"t-daily","title":"当日（2026-09-07）文章写文/发布流水","sub":"当日文章在 L 检测之后发布，仅统计写文与发布情况，不参与洞察归因。","cols":[{"key":"date","title":"日期"},{"key":"media","title":"媒体"},{"key":"question","title":"问句"},{"key":"title","title":"标题"},{"key":"published","title":"发布状态","type":"badge"},{"key":"url","title":"链接","type":"link"}],"rows":[{"date":"2026-09-07","media":"今日头条","question":"年会PPT生成厂商推荐","title":"年会PPT生成厂商推荐：看并发批量与统一视觉","published":"未发布","url":""},{"date":"2026-09-07","media":"今日头条","question":"培训课件PPT生成厂商有哪些","title":"培训课件PPT生成厂商有哪些：看批量课件与版式统一","published":"未发布","url":""},{"date":"2026-09-07","media":"今日头条","question":"靠谱PPT生成厂商推荐","title":"靠谱PPT生成厂商推荐：先问生成后能不能导出可编辑源文件","published":"未发布","url":""},{"date":"2026-09-07","media":"列举网","question":"PPT生成厂商哪家好","title":"PPT生成厂商怎么挑：先看生成后能不能改、能不能交付","published":"未发布","url":""},{"date":"2026-09-07","media":"列举网","question":"商务PPT生成厂商推荐","title":"商务PPT生成厂商推荐：按数据敏感等级分层挑","published":"未发布","url":""},{"date":"2026-09-07","media":"列举网","question":"月度总结PPT生成厂商哪家靠谱","title":"月度总结PPT生成厂商哪家靠谱：看生成成功率与改稿成本","published":"未发布","url":""},{"date":"2026-09-07","media":"列举网","question":"发布会PPT生成厂商哪家好","title":"发布会PPT生成厂商哪家好：看全要素渲染与大屏适配","published":"未发布","url":""},{"date":"2026-09-07","media":"列举网","question":"招商PPT生成厂商推荐","title":"招商PPT生成厂商推荐：看品牌统一与多版迭代","published":"未发布","url":""},{"date":"2026-09-07","media":"列举网","question":"企业宣传PPT生成厂商有哪些","title":"企业宣传PPT生成厂商有哪些：分个人工具与企业级方案","published":"未发布","url":""},{"date":"2026-09-07","media":"列举网","question":"项目汇报PPT生成厂商哪里找","title":"项目汇报PPT生成厂商哪里找：先看能不能复用现有文档","published":"未发布","url":""}]},{"id":"t-close","title":"已闭环发文日发布成功率（≤2026-09-06，参与归因）","sub":"这些文章发布于 L 之前，有机会影响 L 凌晨的检测结果。","cols":[{"key":"date","title":"发文日"},{"key":"written","title":"写文","type":"num"},{"key":"published","title":"成功发布","type":"num"},{"key":"rate","title":"成功率"}],"rows":[{"date":"2026-08-31","written":10,"published":9,"rate":"90%"},{"date":"2026-09-01","written":10,"published":10,"rate":"100%"},{"date":"2026-09-02","written":10,"published":9,"rate":"90%"},{"date":"2026-09-03","written":10,"published":7,"rate":"70%"},{"date":"2026-09-04","written":10,"published":10,"rate":"100%"},{"date":"2026-09-06","written":10,"published":10,"rate":"100%"}]}],"_facts":{"L":"2026-09-07","L1":"2026-09-06","platforms":["豆包","元宝"],"trend":[{"x":"2026-08-30","y":0.0,"series":"元宝"},{"x":"2026-08-30","y":0.0,"series":"豆包"},{"x":"2026-08-30","y":0.0,"series":"综合"},{"x":"2026-08-31","y":0.0,"series":"元宝"},{"x":"2026-08-31","y":0.0,"series":"豆包"},{"x":"2026-08-31","y":0.0,"series":"综合"},{"x":"2026-09-01","y":0.0,"series":"元宝"},{"x":"2026-09-01","y":0.0,"series":"豆包"},{"x":"2026-09-01","y":0.0,"series":"综合"},{"x":"2026-09-02","y":0.0,"series":"元宝"},{"x":"2026-09-02","y":0.0,"series":"豆包"},{"x":"2026-09-02","y":0.0,"series":"综合"},{"x":"2026-09-03","y":0.0,"series":"元宝"},{"x":"2026-09-03","y":0.0,"series":"豆包"},{"x":"2026-09-03","y":0.0,"series":"综合"},{"x":"2026-09-04","y":0.0,"series":"元宝"},{"x":"2026-09-04","y":0.0,"series":"豆包"},{"x":"2026-09-04","y":0.0,"series":"综合"},{"x":"2026-09-05","y":0.0,"series":"元宝"},{"x":"2026-09-05","y":0.0,"series":"豆包"},{"x":"2026-09-05","y":0.0,"series":"综合"},{"x":"2026-09-06","y":0.0,"series":"元宝"},{"x":"2026-09-06","y":0.0,"series":"豆包"},{"x":"2026-09-06","y":0.0,"series":"综合"},{"x":"2026-09-07","y":0.0,"series":"元宝"},{"x":"2026-09-07","y":0.0,"series":"豆包"},{"x":"2026-09-07","y":0.0,"series":"综合"}],"questions":[{"question":"PPT生成厂商哪家好","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"企业宣传PPT生成厂商有哪些","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"发布会PPT生成厂商哪家好","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"商务PPT生成厂商推荐","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"培训课件PPT生成厂商有哪些","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"年会PPT生成厂商推荐","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"招商PPT生成厂商推荐","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"月度总结PPT生成厂商哪家靠谱","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"靠谱PPT生成厂商推荐","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"项目汇报PPT生成厂商哪里找","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"}],"closed_article_dates":["2026-08-31","2026-09-01","2026-09-02","2026-09-03","2026-09-04","2026-09-06"],"closed_written":60,"closed_published":55,"today_written":10,"today_published":0,"top_sites":[["WPS",29],["islide.cc",13],["今日头条",13],["金山办公",13],["Pi",13],["稀土掘金",9],["Beautiful.ai",7],["CSDN博客",7],["WPS Office",7],["八方资源网",6],["搜狐网",6],["搜狐",6]]},"data_only":false,"summary":"最新检测日综合上榜率 0.0%（0/20），豆包、元宝均无命中，且连续 3 个检测日归零；闭环发布 55/60 篇虽健康，但内容未被双平台推荐——问题指向引用竞争与内容辨识度，而非发布链路。","insights":[{"id":"I1","dimension":"趋势","title":"连续 3 个检测日双平台归零，存在系统性冷启动问题","tone":"negative","summary":"L（2026-09-07）综合上榜率 0.0%，且 09-05、09-06、09-07 连续三日豆包/元宝均为 0.0%。在闭环发布 55/60 篇、日均 10 篇的投放强度下仍无任何命中，说明不是偶发波动，而是内容尚未进入双平台的候选推荐池。","evidence":["综合：09-05/09-06/09-07 三日均为 0.0%（20 条检测 0 命中）","豆包 0/10、元宝 0/10","闭环发布 55/60 篇（6 个发文日）"],"chart_ref":"c-trend","table_ref":"t-questions","action":"停止单纯加量，先做冷启动诊断：核对核心词『PPT生成厂商』下自有内容是否被引擎收录、引用 Top 站（WPS/islide/金山办公）有无露出机会，再调整内容结构。","confidence":"high"},{"id":"I2","dimension":"引用来源","title":"AI 引用源被办公软件官方站垄断，厂商类第三方内容缺位","tone":"warning","summary":"L 日豆包/元宝回答引用来源 Top 为 WPS、islide.cc、金山办公、Pi、稀土掘金等产品官方/工具站，属于『工具测评』语境而非『厂商推荐』语境。这解释了为何投放的厂商软文难以命中——引擎在该问句下优先引用的是一级工具站而非厂商内容。","evidence":["Top 引用源：WPS / islide.cc / 金山办公 / Pi / 稀土掘金","闭环发布 55 篇未见任一进入引用池"],"chart_ref":"c-source","table_ref":null,"action":"换打法：不做厂商位竞争，改做『PPT 生成工具对比』类内容并在其中自然带出元符号方案，与 WPS/islide 同语境竞争引用位。","confidence":"medium"},{"id":"I3","dimension":"盲区机会","title":"10 问句双平台全盲，需优先识别高意图问句集中突破","tone":"neutral","summary":"全部 10 个问句在豆包、元宝均未上榜，其中既有产品词（PPT生成厂商/软件厂商）也有场景词。在资源有限时不应全面铺开，应挑 1-2 个购买意图最强问句做饱和内容后再验证。","evidence":["10 问句 × 2 平台 = 20 条检测全部未上榜","当日 10 篇已写未发（列举网 7 + 今日头条 3）"],"chart_ref":null,"table_ref":"t-daily","action":"从当日 10 篇中选「PPT生成厂商怎么选/推荐」等强意图问句，次日 L+1 检测验证是否有首上榜；若无则按 I2 换语境。","confidence":"high"}]};
+
+        const { createApp } = Vue;
+
+        const app = createApp({
+            data() {
+                return {
+                    R: window.__INSIGHT__ || {}
+                };
+            },
+            methods: {
+                confText(c) {
+                    return { high: '高', medium: '中', low: '低' }[c] || (c || '—');
+                },
+                badgeCls(v) {
+                    if (v === '上榜' || v === '是') return 'badge-on';
+                    if (v === '未上榜' || v === '否') return 'badge-off';
+                    if (v === '新上榜') return 'badge-new';
+                    if (v === '掉榜') return 'badge-lost';
+                    return '';
+                },
+                // 统一图表渲染入口：由模板按 payload 生成 G2 spec，业务无关
+                buildChart(c) {
+                    const el = document.getElementById(c.id);
+                    if (!el || !window.G2) return;
+                    const G2 = window.G2;
+                    const kind = c.kind || 'line';
+                    const palette = ['#22d3ee', '#a78bfa', '#2dd4a7', '#fbbf24', '#f87171', '#60a5fa', '#f472b6', '#4ade80'];
+                    try {
+                        const enc = { x: c.x || 'x', y: c.y || 'y' };
+                        if (c.series) enc.color = c.series;
+                        let spec;
+                        if (kind === 'line') {
+                            spec = {
+                                type: 'line', encode: Object.assign({}, enc, { shape: 'smooth' }),
+                                style: { lineWidth: 3 },
+                                scale: { color: { range: palette } },
+                                axis: { x: { title: false }, y: { title: false, labelFormatter: (v) => v + '%' } },
+                                legend: { color: { position: 'top' } }
+                            };
+                        } else if (kind === 'barH') {
+                            spec = {
+                                type: 'interval',
+                                encode: enc,
+                                coordinate: { transform: [{ type: 'transpose' }] },
+                                scale: { color: { range: palette } },
+                                axis: { x: { title: false }, y: { title: false } },
+                                legend: c.series ? { color: { position: 'top' } } : false,
+                                style: { maxWidth: c.maxWidth || 34 }
+                            };
+                        } else { // barV
+                            spec = {
+                                type: 'interval',
+                                encode: enc,
+                                scale: { color: { range: palette } },
+                                axis: { x: { title: false }, y: { title: false } },
+                                legend: c.series ? { color: { position: 'top' } } : false,
+                                style: { maxWidth: c.maxWidth || 46 }
+                            };
+                        }
+                        const chart = new G2.Chart({ container: c.id, autoFit: true });
+                        // 尝试套用内置暗色主题；失败则退回默认
+                        try { chart.theme({ type: 'classicDark' }); } catch (_e) { /* ignore */ }
+                        chart.options(spec);
+                        chart.data(c.data || []);
+                        chart.render();
+                    } catch (e) {
+                        el.innerHTML = '<div style="color:#f87171;font-size:13px;padding:20px">图表渲染失败：' +
+                            (e && e.message ? e.message : String(e)) + '</div>';
+                    }
+                }
+            },
+            mounted() {
+                this.$nextTick(() => {
+                    (this.R.charts || []).forEach(c => this.buildChart(c));
+                    // Tailwind 浏览器构建会重扫 DOM，不影响本模板样式
+                });
+            }
+        });
+        app.use(antd).mount('#app');
+    </script>
+</body>
+
+</html>

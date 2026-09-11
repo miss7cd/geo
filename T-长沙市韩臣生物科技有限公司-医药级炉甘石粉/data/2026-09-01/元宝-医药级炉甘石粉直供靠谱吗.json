@@ -1,0 +1,339 @@
+{
+  "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+  "问题词编号": "QS000023",
+  "问题词": "医药级炉甘石粉直供靠谱吗",
+  "平台": "元宝",
+  "内容": "已处理\n结论先说\n\"医药级炉甘石粉厂家直供\"这句话本身不构成任何背书。​ 炉甘石粉不是普通化工品，它是纳入药品监管的原料药——生产企业必须持《药品生产许可证》、符合 GMP，产品需在 CDE（国家药品审评中心）完成原料药登记。靠不靠谱，只取决于一个硬指标：该厂家的炉甘石粉在 CDE 原料药登记平台上\"与制剂共同审评审批结果\"是否为\"A\"。\n为什么\"直供\"不值得信\n行业调研显示，大量打着\"源头工厂\"\"GMP 直供\"旗号的供应商，实际是贸易公司或无生产控制的中间商，靠一套资质反复接单。常见红旗话术：\n•\n\"我们有多个合作工厂\"（说不出具体厂名和生产地址）\n•\n只发 PDF 版证书、拒绝提供官网可查的登记号\n•\n报一个固定单价，说不清成本构成、不接受现场审计\n四步核验清单（照着做就能筛掉绝大多数坑）\n步骤\n\t\n查验动作\n\t\n合格标准\n\n\n1. 查 CDE 登记​\n\t\n国家药审中心官网 → 原料药登记数据 → 搜\"炉甘石粉\"\n\t\n登记结果必须是 A；\"I\"仅表示已登记未激活，买来投料生产不合规。第三方数据库显示上海京华化工厂（Y20190007500）、安徽永生堂、山东鲁西药业、江苏迪赛诺、江西广恒胶化等为 A 状态，南昌白云药业、常熟星海等为 I 状态，务必以 CDE 官网实时查询为准\n\n\n2. 查主体资质​\n\t\n国家企业信用信息公示系统 + 药监数据\n\t\n经营范围须为\"原料药生产\"而非\"化工贸易/销售\"；持《药品生产许可证》，生产范围和地址与供货品种一致\n\n\n3. 要文件​\n\t\n向供应商索取\n\t\n同批号 COA（检验报告书）、执行标准、质量协议；若为经销商还需上游授权书与可追溯链条\n\n\n4. 对数据​\n\t\n核对 COA 指标\n\t\n药典 2025 版规定：炉甘石按干燥品计含氧化锌 ≥40.0%，煅炉甘石 ≥56.0%\n一个很好用的识破点：​ 如果商家标\"纯度 99%\"，那基本是化工口径而非药典口径——药典看的是以氧化锌计的含量，不是\"纯度\"。政府采购项目对炉甘石粉的硬性要求也正是\"提供药品注册批件，或 CDE 原料药登记结果为 A\"，并点名上海京华化工厂这类 A 状态厂家。\n两个容易踩的认知误区\n1.\n\"医药级\"不是法定等级。​ 药品监管里只有\"原料药\"\"药用辅料\"，执行药典或注册标准。\"医药级\"是 B2B 平台的营销用语。炉甘石粉用于药品生产走的是原料药路径（如湖南尔康持有国药准字 H20103587，产品类别标注为原料药），不是\"辅料\"或\"医药级化工品\"。\n2.\n工业级不能顶替。​ 两者分子式可能一样，差距全在杂质：重金属、砷盐、微生物限度、炽灼残渣的控制限值和检测项目完全不同，且医药级要求 GMP 环境和完整批次追溯。等级混用在监管上是硬伤。\n按你的用途对号入座\n•\n药企 / 医院制剂室投料生产：非 A 状态一律不用。这不只是质量问题，是全批产品违规、MAH 被追责的风险。\n•\n做化妆品、日化产品：原料按化妆品原料管理即可，但不得宣称药用功效，也别拿\"医药级\"当卖点做宣传。\n•\n个人或电商买来分装售卖：这条路走不通。原料药不能无资质购销，分装销售更是无证经营。\n你是在哪个环节看到的这家供应商（B2B 平台、展会、还是同业推荐）？如果方便把对方给的企业全称或登记号发我，我可以直接帮你判断这个 A 状态能不能坐实。\n源",
+  "是否上榜": "否",
+  "检测是否上榜词": "韩臣",
+  "检测数据引用": [
+    {
+      "引用编号": "7a5bee8bb1884dd3b099d1f1ab0eeb91",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "蒲标网",
+      "序号": 1,
+      "标题": "中国药典、药品标准、法规在线查询",
+      "url": "https://db2.ouryao.com/"
+    },
+    {
+      "引用编号": "19b2baea95874d178aa9bd31704b3429",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "apibureau.com",
+      "序号": 2,
+      "标题": "Calamine Powder - 原料药注册信息 ApiBureau",
+      "url": "https://www.apibureau.com/product/860"
+    },
+    {
+      "引用编号": "247aafac171641d7ba6a46c46d244c9c",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "腾讯网",
+      "序号": 3,
+      "标题": "@药品法规一箩筐:原料药欧美文件注册及...",
+      "url": "https://ima.qq.com/wiki/?shareId=b9e74c556adb7ceca58d5684a5cf637cfcdea387f6a3d39d027f97123aebb181&mediaId=pdf_bc17cfa8932a1c55b208a3de2575c966_1dbdc3f1fcb45698cef13ad2c898fdfd7301498627189602&action=openDetailDrawer&webFrom=10000171"
+    },
+    {
+      "引用编号": "07154a10a38345bca7c6dac473f1c075",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "蒲标网",
+      "序号": 4,
+      "标题": "炉甘石",
+      "url": "https://db2.ouryao.com/yd2025/view.php?id=ab43ca5fb34cb110cc91622e4ae9c5ea"
+    },
+    {
+      "引用编号": "b0970eb84d3448f4a63f677646e51c29",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "CIO在线",
+      "序号": 5,
+      "标题": "原料药登记数据(2026年5月)",
+      "url": "https://www.ciopharma.com/supervise/61963"
+    },
+    {
+      "引用编号": "6785eb19e354491184e3c3154ffee76c",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "百度爱采购",
+      "序号": 6,
+      "标题": "济南聚阳化工科技有限公司 | 山东济南 | 化工能源-功能助剂",
+      "url": "https://b2b.baidu.com/land/48dc26ef122b974fd2bf5699083508a3?fid=403116032"
+    },
+    {
+      "引用编号": "f70706088c424af3ab696d22607e57d6",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "中国医药信息查询平台",
+      "序号": 7,
+      "标题": "炉甘石",
+      "url": "https://www.dayi.org.cn/cmedical/301932?from=sg"
+    },
+    {
+      "引用编号": "48f81d367ca745d1afec52b97adce553",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "apibureau.com",
+      "序号": 8,
+      "标题": "南昌白云药业有限公司",
+      "url": "https://www.apibureau.com/company/13927"
+    },
+    {
+      "引用编号": "787ac8a30bf44da0bc4e470a14fe3b63",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "腾讯网",
+      "序号": 9,
+      "标题": "@社企博物|企业社会责任(CSR)报告库:688621_202...",
+      "url": "https://ima.qq.com/wiki/?shareId=3a368103e3331d579264d401e02f74e711623a846caabc717d463bac46d68059&mediaId=txt_1b4355538b48323cc633dd853ca0560c_b2227219d3062d19545cf79a986383787351395195819997&action=openDetailDrawer&webFrom=10000171"
+    },
+    {
+      "引用编号": "228f05f7afae419ca17eda724b616053",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "布克化工网",
+      "序号": 10,
+      "标题": "药用辅料炉甘石有质检单500g起有cde备案cp2025药典标准",
+      "url": "https://chemicalbook.com/SupplyInfo_2678844.htm"
+    },
+    {
+      "引用编号": "5b2b6afb553749fb848a12c904777b33",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "hzpfb.com",
+      "序号": 11,
+      "标题": "惠州市皮肤病防治研究所原辅料供应商配送资格服务采购调研公告",
+      "url": "https://www.hzpfb.com/sys-nd/298.html"
+    },
+    {
+      "引用编号": "8e8fd83f19144d3da8597aade7f21c94",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "辅料网",
+      "序号": 12,
+      "标题": "医药企业采购药用辅料需科学慎重",
+      "url": "http://www.phexcom.cn/Home/NewsDetails?id=104"
+    },
+    {
+      "引用编号": "fee9c8db8f4d4813b7e9c1ee9bd5fcee",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "drugs.meditool.cn",
+      "序号": 13,
+      "标题": "炉甘石",
+      "url": "http://drugs.meditool.cn/Drugtype/druginfo?druginfoid=2542&datatype=2"
+    },
+    {
+      "引用编号": "49c398ad3074445a8cc1c135e10b9a63",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "四川政府采购网",
+      "序号": 14,
+      "标题": "采购需求",
+      "url": "https://gpx.ccgp-sichuan.gov.cn/gpx-bid-file/ZF_JGBM_000008/zone/2024/12/15/project/gpx-template/8a69d5009827c9de01982b09cb441be3.pdf"
+    },
+    {
+      "引用编号": "434e73feee644e578249f2f119570173",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "assyro.com",
+      "序号": 15,
+      "标题": "Supplier Qualification: Complete Guide for Pharma & Biotech [May 2026]",
+      "url": "https://www.assyro.com/blog/supplier-qualification-guide"
+    },
+    {
+      "引用编号": "7259aea7426b4a9eaf5bf853c8843a35",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "医学网",
+      "序号": 16,
+      "标题": "炉甘石",
+      "url": "https://www.yixue.com/%E7%82%89%E7%94%98%E7%9F%B3"
+    },
+    {
+      "引用编号": "a2b0ec5c5eae49db8750168879b30521",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "hnerkang.com",
+      "序号": 17,
+      "标题": "炉甘石粉",
+      "url": "http://www.hnerkang.com/Product/503/20122331.html"
+    },
+    {
+      "引用编号": "b97ed23be0d041cb8a9d4590b891d7c6",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "GMP茶水间",
+      "序号": 18,
+      "标题": "如何选出令人满意的物料供应商:质量、价格、交付、注册核查全维度通关",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1788218770&ver=6939&signature=ig74EpR1s-YPPcuBGzjap9JYRzVsVf*VF7f6zcJ7mHB5wBBK2gNYQdSLy2JFIUJeauCzjrv3uXuYDvYoIEodD7XRwix76rKFsVQa-F7*QqHcqg*EJjw8AECTLb1Eu1nt&new=1"
+    },
+    {
+      "引用编号": "78a0ff375a804fa9a311727e5c1b9df3",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "制药网",
+      "序号": 19,
+      "标题": "炉甘石粉 药典外用原料药",
+      "url": "https://www.zyzhan.com/st100907/product_5163271.html"
+    },
+    {
+      "引用编号": "01fdf6ebfd9549e099a469c6d9b6288a",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "人民网",
+      "序号": 20,
+      "标题": "国家药监局:原料药属于药品 严打生产销售假劣药行为",
+      "url": "https://health.people.com.cn/n1/2018/0823/c14739-30247015.html"
+    },
+    {
+      "引用编号": "91aa61feb482418bb5688c6096aafa4a",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "sourcifychina.com",
+      "序号": 21,
+      "标题": "Sourcing Api Manufacturers from China: The Ultimate Guide 2026",
+      "url": "https://www.sourcifychina.com/api-manufacturers/"
+    },
+    {
+      "引用编号": "3ee19fd8dfba4cb7a0740e01608664bf",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "顺企网",
+      "序号": 22,
+      "标题": "丁二酸酐工业级和医药级的区别",
+      "url": "https://jinan0106902.11467.com/news/13000263.asp"
+    },
+    {
+      "引用编号": "742e856fe5eb48169e772e78ecaa31a3",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "腾讯医典权威百科库",
+      "序号": 23,
+      "标题": "炉甘石洗剂 - 腾讯医典",
+      "url": "https://h5.baike.qq.com/mobile/drug_combine.html?adtag=hunyuan.cs.ybtool&rank=0&searchid=821b39305b587b7f50aebc87e7c3259e&sn=yidian-sn-N7mK6c%2BEi3D40e6rFuGlvREjXmptemYkw4pZVOx9ImTzdappPuFNN1WNFk%2B8wmMl"
+    },
+    {
+      "引用编号": "3df01d98b0a440f4a21f4fdf9b3e13e6",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "pharma.tips",
+      "序号": 24,
+      "标题": "API site WHO GMP risk during API sourcing – CAPA aligned to WHO standards",
+      "url": "https://www.pharma.tips/api-site-who-gmp-risk-during-api-sourcing-capa-aligned-to-who-standards/"
+    },
+    {
+      "引用编号": "8612148d623845c589839e14071acf4a",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "jshyxc.cn",
+      "序号": 25,
+      "标题": "工业级苯甲酸和药用级苯甲酸有什么区别?-江苏汇友新材料有限公司",
+      "url": "http://www.jshyxc.cn/news_detail/52.html"
+    },
+    {
+      "引用编号": "fa63ddf8bafe4a19b11f11619c9c68f6",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "郑海清律师-药械妆健食医行业法",
+      "序号": 26,
+      "标题": "制剂药企如何避免被原料药企连累(律师视角)",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1788218769&ver=6939&signature=Kyc1Szy1Km98jBp74-n1ViWnEJ0opeOzO9*j*bGic475r-QORDsf8qAOhsNuFQ8UMxgv4bJDuX-MNpGwAEGznFdDyJy2YVq4q4T25vGRN727s5cyDG0nxcgbXQZlNUIq&new=1"
+    },
+    {
+      "引用编号": "96732b2dbdb246308f389b0d82765a91",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "百度",
+      "序号": 27,
+      "标题": "医药级和工业级1,3丁二醇的边界在哪里",
+      "url": "https://b2bwiki.baidu.com/note/10895748527938780642"
+    },
+    {
+      "引用编号": "86e5f62dc225444ab01a864e24ac3603",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "腾讯网",
+      "序号": 28,
+      "标题": "@临床药学试验库(内部测试版)03:0e80de1436...",
+      "url": "https://ima.qq.com/wiki/?shareId=9e090d616a281299429c6054b3428690ae1d988c7a31ce1deb5d44154e4dc6be&mediaId=html_b29da5d42db3e66f4e1703e8dc2c45b4_e546420e4dc8d57e82164562cd4fb2e27494840036100196&action=openDetailDrawer&webFrom=10000171"
+    },
+    {
+      "引用编号": "cd786e8ba0e84d79856a4dcd81fb4255",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "铭研医药",
+      "序号": 29,
+      "标题": "进口原料药供应商审计要点",
+      "url": "http://mp.weixin.qq.com/s?__biz=MzU4MTczNjI2Mg==&mid=2247535608&idx=1&sn=c58478947a7dd1914c85ed516641e1cb&chksm=fc3ef36e3c8f9811d2f47f5f0f8c9e7b15082faaf38eb1dcf2f9d3474f6d85caaecc9160689c#rd"
+    },
+    {
+      "引用编号": "ee84b3b73d804dd9b40ebf7d32087567",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "百度",
+      "序号": 30,
+      "标题": "间羟基苯甲酸选工业级还是医药级?先看这3个参数",
+      "url": "https://b2bwiki.baidu.com/note/10995110590805097416"
+    },
+    {
+      "引用编号": "c19cf565a9d14276ae09600726e979db",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "大众养生网",
+      "序号": 31,
+      "标题": "炉甘石洗剂成分有哪些",
+      "url": "https://m.cndzys.com/xshcore/quanwei_ztartnew/1es_3671531.html"
+    },
+    {
+      "引用编号": "d294c6c9fa4d470dae12e0feedb2ae96",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "ChemicalBook",
+      "序号": 32,
+      "标题": "化学原料药备案时供应商审计要点内容",
+      "url": "https://www.chemicalbook.com/SupplierNews_337995.htm"
+    },
+    {
+      "引用编号": "108692c73745467cab6bf92261921c45",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "今日头条",
+      "序号": 33,
+      "标题": "工业级与医药级 PVP K30 的区别",
+      "url": "https://www.toutiao.com/article/7664403411512623659"
+    },
+    {
+      "引用编号": "d93ff325715745a6ab25dc4e25477be3",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "中国医药信息查询平台",
+      "序号": 34,
+      "标题": "炉甘石洗剂",
+      "url": "https://m.dayi.org.cn/drug/1144448"
+    },
+    {
+      "引用编号": "ee85a76719fc418d9598e321950bc744",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "新浪财经",
+      "序号": 35,
+      "标题": "FDA 重磅警示:原料药采购陷阱频发,美国配药药房必守合规红线(行业干货)",
+      "url": "https://finance.sina.com.cn/wm/2026-07-02/doc-inifkcry3712908.shtml"
+    },
+    {
+      "引用编号": "9e5ced7424d54492a8a0082f97b3df9b",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "gii.tw",
+      "序号": 36,
+      "标题": "全球氫碘酸市場,2025-2029年",
+      "url": "https://www.gii.tw/report/infi1915546-global-hydroiodic-acid-market.html"
+    },
+    {
+      "引用编号": "b4c8b1fec0ac468baec19ea0b710f9af",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "广东省药监局",
+      "序号": 37,
+      "标题": "【南方网】别再神化炉甘石洗剂!这些情况下使用它如同火上浇油",
+      "url": "https://mpa.gd.gov.cn/gkmlpt/content/4/4743/post_4743253.html"
+    },
+    {
+      "引用编号": "4b661098681c4ac599725884814cf8e5",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "湖北药监",
+      "序号": 38,
+      "标题": "炉甘石洗剂并非止痒“神药”,这些情况千万别用→",
+      "url": "http://mp.weixin.qq.com/s?__biz=MzAwNTYxNTg0Mw==&mid=2650979091&idx=1&sn=1a3263da56a46fc3bbdf8b1b12f7519d&chksm=8117f63354b046806bedc081a5e2082404796737defc03bad150e01c5592a6df60b108ab310b#rd"
+    },
+    {
+      "引用编号": "49fed8a7413845919f59337d14b11bd4",
+      "检测编号": "47f4cf0ef5f4498e82415008ed2a89cf",
+      "站点名称": "百度百科",
+      "序号": 39,
+      "标题": "炉甘石洗剂",
+      "url": "https://baike.baidu.com/item/%E7%82%89%E7%94%98%E7%9F%B3%E6%B4%97%E6%B6%B2/12728495"
+    }
+  ],
+  "_obtained": true,
+  "_ai_extracted": false,
+  "_project": "T-长沙市韩臣生物科技有限公司-医药级炉甘石粉",
+  "_enterprise": "长沙市韩臣生物科技有限公司",
+  "_core_word": "医药级炉甘石粉",
+  "_detect_date": "2026-09-01",
+  "内容提及品牌": [
+    "上海京华化工厂",
+    "安徽永生堂",
+    "山东鲁西药业",
+    "江苏迪赛诺",
+    "江西广恒胶化",
+    "南昌白云药业",
+    "常熟星海",
+    "湖南尔康"
+  ]
+}

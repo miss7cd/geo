@@ -1,0 +1,102 @@
+{
+  "kpis": {
+    "overall_hit_rate": {
+      "label": "整体上榜率",
+      "value": "40.0",
+      "unit": "%",
+      "trend_type": "success",
+      "trend_delta": 15.0,
+      "has_chart": true,
+      "chart_type": "TinyLine",
+      "chart_data": [
+        45.0,
+        35.0,
+        50.0,
+        25.0,
+        15.0,
+        35.0,
+        25.0,
+        25.0,
+        25.0,
+        25.0,
+        40.0
+      ],
+      "chart_avg": 31.36
+    },
+    "doubao_hit_rate": {
+      "label": "豆包上榜率",
+      "value": "10.0",
+      "unit": "%",
+      "trend_type": "neutral",
+      "trend_delta": 0.0,
+      "has_chart": true,
+      "chart_type": "TinyLine",
+      "chart_data": [
+        60.0,
+        50.0,
+        50.0,
+        40.0,
+        20.0,
+        30.0,
+        20.0,
+        20.0,
+        30.0,
+        10.0,
+        10.0
+      ],
+      "chart_avg": 30.91
+    },
+    "yuanbao_hit_rate": {
+      "label": "元宝上榜率",
+      "value": "70.0",
+      "unit": "%",
+      "trend_type": "success",
+      "trend_delta": 30.0,
+      "has_chart": true,
+      "chart_type": "TinyLine",
+      "chart_data": [
+        30.0,
+        20.0,
+        50.0,
+        10.0,
+        10.0,
+        40.0,
+        30.0,
+        30.0,
+        20.0,
+        40.0,
+        70.0
+      ],
+      "chart_avg": 31.82
+    },
+    "article_inclusion_rate": {
+      "label": "文章收录率",
+      "value": "40.0",
+      "unit": "%",
+      "trend_type": "success",
+      "trend_delta": 10.0,
+      "has_chart": true,
+      "chart_type": "TinyLine",
+      "chart_data": [
+        0.0,
+        0.0,
+        50.0,
+        42.86,
+        30.0,
+        40.0
+      ],
+      "chart_avg": 27.14
+    },
+    "article_publish": {
+      "label": "收录 / 累计发文",
+      "value": "19",
+      "unit": " / 53 篇",
+      "trend_type": "neutral",
+      "trend_delta": 0,
+      "has_chart": false,
+      "chart_type": "",
+      "chart_data": [],
+      "chart_avg": 0
+    }
+  }
+}

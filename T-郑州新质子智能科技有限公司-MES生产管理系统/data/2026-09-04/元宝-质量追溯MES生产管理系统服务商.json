@@ -1,0 +1,205 @@
+{
+  "检测编号": "f9f5d8c5dde24ee99bede4b1f774609e",
+  "问题词编号": "QS000019",
+  "问题词": "质量追溯MES生产管理系统服务商",
+  "平台": "元宝",
+  "内容": "做\"质量追溯型 MES\"的服务商很多，但不同行业对追溯的合规要求差异很大（汽车要 IATF 16949 组件级、医药要 FDA 21 CFR Part 11 / GMP 电子批记录、电子半导体要 Lot/Wafer/Bin 级、食品要批次+过敏原正向反向追溯）。下面按行业赛道给你梳理国内主流且真正落地过追溯项目的服务商，方便对照选型。\n一、汽车 / 汽车零部件（IATF 16949、组件级正反向追溯）\n•\n中之杰智能（德沃克 OBF）：拓普集团新能源刹车/空悬/热管理数字化工厂，单箱流追溯，原材料-半成品-成品全链路正反向追溯。\n•\n华磊迅拓：聚焦汽车零部件供应链协同与生产追溯，客户多为二级零部件供应商。\n•\n赛意信息（S-MOM）：电子电器/汽配批量生产，SMT 深度管控，多工厂协同与批次追溯成熟，美的/海尔/立白案例。\n•\n用友精智 MES / 鼎捷：集团级汽配多工厂，与 ERP 业财一体，工单级追溯。\n•\n国际对标：Siemens Opcenter（GM 案例）、MPDV Hydra X（精密汽配）。\n二、电子 / SMT / 半导体（晶圆 Lot、PCB 料卷、AEC-Q100）\n•\n哥瑞利 Glorysoft：12 寸晶圆厂高精度物料追踪，华虹、士兰微案例，半导体前道后道+光伏。\n•\n赛意信息：SMT 贴片、晶圆封装、无尘室管理，设备协议统一接入能力强。\n•\n盘古信息 IMS MES：3C 电子、PCB、新能源零部件，SMT 防错+全链路物料追溯。\n•\n深圳华磊科技：SMT 产线追溯、电子物料防错，富士康/华为供应链客户。\n•\n用友 BIP 半导体插件：长晶、立昂微、黑芝麻智能 Fabless 委外 Bin 级追溯。\n•\n国际：SAP ME、Siemens Opcenter Electronics、Schneider EcoStruxure（Intel 案例）。\n三、医药 / 医疗器械（GMP、FDA 21 CFR Part 11、电子批记录 EBR）\n•\n中控技术 MES：与 DCS 深度打通，精细化工/原料药/制剂的配方管理+EBR+审计追踪，万华/浙江石化等。\n•\n汉得信息：医疗器械/汽配高合规行业，审计追溯与批次管理完整，\"咨询+落地\"模式。\n•\n鼎捷数智 sMES+QMS：电子批记录、质量追溯、设备互联闭环，中大型医疗器械厂。\n•\n恒信智造 / 医盾（细分）：专注无菌/植入器械，GMP+FDA 合规、区块链存证防篡改。\n•\n国际：Rockwell FactoryTalk PharmaMES（Eli Lilly）、Siemens Opcenter Pharma。\n四、食品 / 饮料 / 快消（批次追溯、保质期、过敏原、CIP）\n•\n黑湖科技（黑湖智造）：云端 SaaS，食品饮料/快消扫码报工，按月订阅，中小厂启动成本低。\n•\n亚控科技 WellinOS：食品饮料配方执行+清洗流程+CIP，组态老牌，低代码定制。\n•\n朗速科技 / 鲜品智造：食品饮料批次+保质期专项，预制菜/乳品新鲜度管控。\n•\n致达信息\"智溯\"：食品/医药单品级+批次级追溯，FDA Part 11 存证，300+食药案例。\n•\n国际：Honeywell MES（Nestlé 案例）、AVEVA。\n五、流程重工业（钢铁/化工/冶金 炉次批追溯）\n•\n宝信软件：钢铁冶金全流程质量判定、炉次/轧次追溯，背靠宝武。\n•\n中控技术：石化/化工连续生产安全溯源。\n•\n石化盈科：石化 MES 自主知识产权。\n六、中小制造轻量化（五金/机械/注塑，工单批次追溯）\n•\n新核云：云原生 ERP+MES 一体，汽配/装备中小厂，工单批次链。\n•\n金蝶云星空 MES：轻量、与财务供应链打通，电子组装/五金塑胶。\n•\n慧都科技 / 匠心智造：中小机械加工、低价快上线。\n•\n微缔 MES：模具/精密机加工，内外协工单统一追溯+SPC。\n选型时盯紧这 5 个追溯硬指标\n1.\n追溯粒度：批次级 / 单品 SN 级 / 晶圆 Lot-Bin 级 / 载具箱级，是否支持正反向双向查询。\n2.\n合规认证：汽车看 IATF 16949+VDA 追溯，医药看 GMP+21 CFR Part 11+ISO 13485，电子看 AEC-Q100。\n3.\n数据采集层：能否直连 PLC/CNC/SMT 贴片机/AOI，还是只靠人工扫码（决定追溯数据可信度）。\n4.\nERP 集成：与 SAP/用友/金蝶/鼎捷的工单、库存、质量模块是否原生接口，避免\"MES 一套账、ERP 一套账\"。\n5.\n审计留痕：操作人+时间戳+参数版本+电子签名不可篡改，召回时能在分钟级导出受影响范围。\n如果你愿意告诉我具体行业、产值规模、现在用哪家 ERP、要不要接 SMT/PLC 设备，我可以把上面名单缩到 3 家最匹配的服务商，并给你一份 RFP 询价时必问的追溯功能清单。\n源\n请提供机械制造MES追溯功能清单\n质量追溯MES系统服务商的收费标准是什么？\n能否分享一些质量追溯项目实施过程中常见的坑和解决方案？\n下载元宝电脑版，体验高效 AI 助手",
+  "是否上榜": "否",
+  "检测是否上榜词": "新质子,质子矩阵,质子智控,质子智造",
+  "检测数据引用": [
+    {
+      "引用编号": "4b65481cd5764b0bbb5e5ba71ae40432",
+      "检测编号": "f9f5d8c5dde24ee99bede4b1f774609e",
+      "站点名称": "淄博新闻网",
+      "序号": 1,
+      "标题": "2026年干货指南:能实现生产全流程可追溯的系统推荐品牌",
+      "url": "https://www.zbnews.net/brand/1976096.html"
+    },
+    {
+      "引用编号": "11577342d1c842968f2a5909b9d84580",
+      "检测编号": "f9f5d8c5dde24ee99bede4b1f774609e",
+      "站点名称": "云盟在线网",
+      "序号": 2,
+      "标题": "2026年生产质量追溯系统厂家选购参考汇总",
+      "url": "https://www.51g3.com.cn/brand/3819041.html"
+    },
+    {
+      "引用编号": "f68b8050c4be42bcb7811cd8944173c6",
+      "检测编号": "f9f5d8c5dde24ee99bede4b1f774609e",
+      "站点名称": "企业家日报网",
+      "序号": 3,
+      "标题": "MES系统十大领军品牌推荐,引领制造业数字化转型深水区突破",
+      "url": "https://www.zgceo.cn/index.php?m=home&c=View&a=index&aid=64756"
+    },
+    {
+      "引用编号": "fd693b5bb2134c28a79d9d7a722f170a",
+      "检测编号": "f9f5d8c5dde24ee99bede4b1f774609e",
+      "站点名称": "品牌排行网",
+      "序号": 4,
+      "标题": "2026年省心的MES系统推荐企业:自动化产线源头生产厂家选择指南",
+      "url": "https://m.cnpinpai.cn/news_hot/3217967.html"
+    },
+    {
+      "引用编号": "6d380f3e05d44c30b2630719cda53b2f",
+      "检测编号": "f9f5d8c5dde24ee99bede4b1f774609e",
+      "站点名称": "中国采购与招标网",
+      "序号": 5,
+      "标题": "2026年优质的MES管理软件、流程型MES系统经销商深度解析:五家专业服务商对比与选型建议",
+      "url": "https://www.chinabidding.com.cn/shangxun/Article-YxbsjuLtR-1374.html"
+    },
+    {
+      "引用编号": "0af88af180494abea88bcdf39f2239b2",
+      "检测编号": "f9f5d8c5dde24ee99bede4b1f774609e",
+      "站点名称": "鼎捷数智",
+      "序号": 6,
+      "标题": "什么行业的企业适合用MES系统?不同行业应该选择哪款MES系统",
+      "url": "https://digiwin.com/p/13063.html"
+    },
+    {
+      "引用编号": "8b6598142fc1412db322ec37f9243015",
+      "检测编号": "f9f5d8c5dde24ee99bede4b1f774609e",
+      "站点名称": "中国经济新闻网",
+      "序号": 7,
+      "标题": "2026年MES选型避坑指南:有哪些好用的MES系统推荐?",
+      "url": "https://www.cet.com.cn/wzsy/kjzx/10459433.shtml"
+    },
+    {
+      "引用编号": "2c5d50870ebe442e90ebab52ccf54fe9",
+      "检测编号": "f9f5d8c5dde24ee99bede4b1f774609e",
+      "站点名称": "中国经济新闻网",
+      "序号": 8,
+      "标题": "中国制造业核心力量:揭秘2026国产MES品牌",
+      "url": "https://www.cet.com.cn/wzsy/cyzx/10493962.shtml"
+    },
+    {
+      "引用编号": "36f0e353c82a477a8ae5f0eae315c888",
+      "检测编号": "f9f5d8c5dde24ee99bede4b1f774609e",
+      "站点名称": "中原经济网",
+      "序号": 9,
+      "标题": "国内MES系统服务商格局观察:深耕离散制造的隐形冠军与平台巨头",
+      "url": "https://zyrm.zyjjw.cn/hangye/202607/157666.html"
+    },
+    {
+      "引用编号": "b68b8db43e504da0910e396bf43f055a",
+      "检测编号": "f9f5d8c5dde24ee99bede4b1f774609e",
+      "站点名称": "云表官网",
+      "序号": 10,
+      "标题": "生产追溯软件有哪些 汇总制造业必备的10款MES生产追溯管理软件",
+      "url": "https://www.iyunbiao.com/info/19902.html"
+    },
+    {
+      "引用编号": "37a90cd5b15b4d759f56cf98c42ca7a9",
+      "检测编号": "f9f5d8c5dde24ee99bede4b1f774609e",
+      "站点名称": "品牌排行网",
+      "序号": 11,
+      "标题": "2026年靠谱的找做生产质量管控MES系统的供应商用户力荐",
+      "url": "https://m.cnpinpai.cn/news_hot/3769573.html"
+    },
+    {
+      "引用编号": "e0a81d8255b54192995074d232ba03ba",
+      "检测编号": "f9f5d8c5dde24ee99bede4b1f774609e",
+      "站点名称": "mfgtechhub.com",
+      "序号": 12,
+      "标题": "MES Case Studies: Real-World Success Stories In Automotive, Pharma, Food, Electronics & Textile Industries",
+      "url": "https://mfgtechhub.com?p=3737/"
+    },
+    {
+      "引用编号": "717c78dff5a24f2f966271ae06e1c449",
+      "检测编号": "f9f5d8c5dde24ee99bede4b1f774609e",
+      "站点名称": "中钢网",
+      "序号": 13,
+      "标题": "2026年8月性价比之选:市面上诚信的MES/mes生产管理系统公司哪家好",
+      "url": "http://www.steelcn.cn/shangxun/645fbbf6f71618599.html"
+    },
+    {
+      "引用编号": "fdfc2a2e9c5743ab8cd4faa9c1852988",
+      "检测编号": "f9f5d8c5dde24ee99bede4b1f774609e",
+      "站点名称": "info.iyunbiao.com",
+      "序号": 14,
+      "标题": "制造业mes系统供应商有哪些 热门的十大制造业mes系统供应商大盘点",
+      "url": "https://info.iyunbiao.com/5073.html"
+    },
+    {
+      "引用编号": "0c8d8f34de56453f96bebd2bfaad2ded",
+      "检测编号": "f9f5d8c5dde24ee99bede4b1f774609e",
+      "站点名称": "teeptrak.com",
+      "序号": 15,
+      "标题": "MES System Software Examples: Real Deployments Across 5 Industries in 2026",
+      "url": "https://teeptrak.com/en/mes-system-software-examples-industries-2026/"
+    },
+    {
+      "引用编号": "639e8f034da343688864d1b03048b0e7",
+      "检测编号": "f9f5d8c5dde24ee99bede4b1f774609e",
+      "站点名称": "xinminweekly.com.cn",
+      "序号": 16,
+      "标题": "MES品牌精选:制造行业适用的TOP5解决方案",
+      "url": "https://www.xinminweekly.com.cn/shenghuo/2026/07/21/47918.html"
+    },
+    {
+      "引用编号": "d8a230be340d4520963811755f542deb",
+      "检测编号": "f9f5d8c5dde24ee99bede4b1f774609e",
+      "站点名称": "中国采购与招标网",
+      "序号": 17,
+      "标题": "2026年专业MES软件与工厂MES系统公司推荐指南:聚焦数字化车间核心引擎,解析五家企业的差异化优势",
+      "url": "https://www.chinabidding.com.cn/shangxun/Article-YxbsjuLtR-1062.html"
+    },
+    {
+      "引用编号": "85fb9b2594564e41bbbcd600bf01b80f",
+      "检测编号": "f9f5d8c5dde24ee99bede4b1f774609e",
+      "站点名称": "nttdata-taiwan-mes.com",
+      "序号": 18,
+      "标题": "半導體 MES 成功案例設備聯網、倉儲與自動化整合",
+      "url": "https://nttdata-taiwan-mes.com/%E7%94%A2%E6%A5%AD%E6%87%89%E7%94%A8/%E5%8D%8A%E5%B0%8E%E9%AB%94%E6%88%90%E5%8A%9F%E6%A1%88%E4%BE%8B%EF%BD%9Cntt-data-exc-mes-x-%E8%A8%AD%E5%82%99%E9%80%A3%E7%B7%9A-%E8%89%AF%E7%8E%87-x-%E8%87%AA%E5%8B%95%E5%8C%96/"
+    },
+    {
+      "引用编号": "b150f64e72244ace9acff21c27a7c0d7",
+      "检测编号": "f9f5d8c5dde24ee99bede4b1f774609e",
+      "站点名称": "乐图云表会",
+      "序号": 19,
+      "标题": "主流MES软件市场格局:谁在领跑?2026年中国MES市场专业评估报告",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1788464110&ver=6944&signature=14rGU1FopRa9gajylXWwMTtVB*fmjyDCWkYEffoNKmwE5RSj9uU3PkRO0QSSdrLEdrnTY6Tqgo9EPgGkcInvQL9m8xGEwQkIWBuqwkbD9RtelmCSE1sLr*0f3YrBZqm6&new=1"
+    },
+    {
+      "引用编号": "11c462a54f2045d0a9bcf56b2da27779",
+      "检测编号": "f9f5d8c5dde24ee99bede4b1f774609e",
+      "站点名称": "科技信息报网",
+      "序号": 20,
+      "标题": "医疗器械MES系统有哪些合规要点?2026选型避坑指南发布",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1788464110&ver=6944&signature=WILlb2RTzcm8AlnpNbK8rTgjit7Sj*vYbVri*yPhfmNIctEF82rt0ZvLd5x2wnDoH-Y7f54H62yTnf0SqRbOBey8-OFsdbNY850-5qi5NKXGHXPJ5LlN6lu0OoJCo0TD&new=1"
+    },
+    {
+      "引用编号": "1adcda12044640c2b1f8a2d6a92c2f89",
+      "检测编号": "f9f5d8c5dde24ee99bede4b1f774609e",
+      "站点名称": "wjpps.com",
+      "序号": 21,
+      "标题": "最后更新:2026 年 7 月 21 日本文基于 2026 年 7 月最新行业数据数据参考:《 年中国 MES 市场研究年度报告》、工信部《2026 年制造业数字化转型中期报告》一、为什么“生产追溯”成了制造企业的必答题?2026 年,国内 MES 市场规模已突破 328.7 亿元,同比增长 2",
+      "url": "https://www.wjpps.com/Wjpps_controller/abstract_id/12010?live-blog-18087755-2026-07-21-zui-hou-geng-xin-2026-nian-7-yue-21-ri-ben-wen-ji-yu-2026-nian-7-yue-zui-xin-xin"
+    },
+    {
+      "引用编号": "2cc6d59215544ae29bdcd457b34882df",
+      "检测编号": "f9f5d8c5dde24ee99bede4b1f774609e",
+      "站点名称": "苏州智合诚",
+      "序号": 22,
+      "标题": "案例合集 | 这些电子高科技企业都选择用友BIP",
+      "url": "http://mp.weixin.qq.com/s?__biz=MzA5Njc0Mzc5NA==&mid=2649970125&idx=3&sn=bdc88c80d1eec96856e4ec37d74a5803&chksm=893592a2e1a3c6d168f1ca3c44fa2820d0c839ed38f082846b8a0b5ad23d135264f62bf13fbe#rd"
+    }
+  ],
+  "_obtained": true,
+  "_ai_extracted": false,
+  "_project": "T-郑州新质子智能科技有限公司-MES生产管理系统",
+  "_enterprise": "郑州新质子智能科技有限公司",
+  "_core_word": "MES生产管理系统",
+  "_detect_date": "2026-09-04",
+  "_detect_date_time": "2026-09-04 03:35:43",
+  "内容提及品牌": [
+    "中之杰智能",
+    "华磊迅拓",
+    "赛意信息",
+    "用友精智",
+    "鼎捷数智",
+    "西门子",
+    "MPDV",
+    "哥瑞利",
+    "盘古信息"
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "检测编号": "a4f012d1169045cc8f2327e8db89a309",
+  "问题词编号": "QS000030",
+  "问题词": "医药级炉甘石粉能去痘印吗",
+  "平台": "元宝",
+  "内容": "已处理\n直接结论：不能去痘印，而且不建议往脸上用\n无论\"医药级\"还是普通炉甘石，核心成分都是炉甘石（主要含碳酸锌）+ 氧化锌，药理作用写在说明书里就四个字：收敛、保护，外加较弱的防腐和止痒。国家药监局的标准说明书标明适应症是\"急性瘙痒性皮肤病，如荨麻疹和痱子\"。\n而痘印是两码事：\n•\n红色痘印​ = 痘痘消退后毛细血管持续扩张没缩回去\n•\n褐色/黑色痘印​ = 炎症刺激黑色素细胞过度活跃，色素沉着\n炉甘石既不能收缩已扩张的血管、也不能抑制酪氨酸酶或代谢黑色素，两个靶点都够不着。 dermatologist 的观点很明确：炉甘石里没有任何成分能淡化疤痕组织或色素沉着。中医记载的炉甘石功效是\"解毒明目退翳，收湿止痒敛疮\"，同样与褪色素无关。\n更糟的是，它可能帮倒忙\n广东省药监局在科普中点名：痤疮患者慎用炉甘石洗剂——痤疮炎症在毛囊内部，炉甘石只能停在皮肤表面，而其中的矿物颗粒容易堵塞毛囊，反而可能加重痤疮。上海市卫健委也提示，除疱疹性疾病外一般不建议用于面部，因矿物颗粒可能阻塞毛囊开口、诱发毛囊炎。北大一院皮肤科主任医师陈喜雪的说法更直接：炉甘石洗剂不能治疗痘痘，不溶于水的粉质反而容易堵塞毛孔、加重病情。\n再加一层：它收敛吸湿，长期或大面积用会让皮肤过度干燥、破坏屏障，而屏障受损本身就是\"更容易发炎→留新痘印\"的链条。如果你手里是原料级的炉甘石粉（中药材粉剂），自行调糊上脸的风险更高——浓度、粒度、无菌条件全部不可控，且中医明确\"忌内服，孕妇、儿童慎用\"。\n想真正淡化痘印，按颜色分路走\n类型\n\t\n核心思路\n\t\n可选手段\n\n\n红色痘印\n\t\n抗炎 + 修复血管 + 防晒\n\t\n含积雪草、维生素B5的护肤品；医美首选强脉冲光（光子嫩肤）、脉冲染料激光\n\n\n褐色痘印\n\t\n抑制黑色素 + 加速代谢 + 防晒\n\t\n维C、烟酰胺、壬二酸；氢醌乳膏、维A酸乳膏（遵医嘱）；果酸/水杨酸焕肤、皮秒激光\n\n\n痘坑（凹陷）\n\t\n护肤品无效\n\t\n点阵激光、微针等，需医美介入\n防晒是所有方案的前提——紫外线会让红痘印更红、黑痘印更深。另外如果脸上还有活跃痘痘，先把痘控制住（阿达帕林、过氧苯甲酰等）比急着淡印更重要，否则一边祛印一边长新痘，永远在补旧账。痘印持续6个月以上无明显改善，建议去皮肤科面诊评估。\n源",
+  "是否上榜": "否",
+  "检测是否上榜词": "韩臣",
+  "检测数据引用": [
+    {
+      "引用编号": "80c0d096d24b47c2848bdc44dd542e6d",
+      "检测编号": "a4f012d1169045cc8f2327e8db89a309",
+      "站点名称": "疾病用药百科",
+      "序号": 1,
+      "标题": "过敏性皮炎用什么药物?",
+      "url": "https://m.dayi.org.cn/qa/19138?from=sg"
+    },
+    {
+      "引用编号": "841181226ddb4334bfb1cc117fca01c5",
+      "检测编号": "a4f012d1169045cc8f2327e8db89a309",
+      "站点名称": "dermcollective.com",
+      "序号": 2,
+      "标题": "Calamine Lotion for Acne: Does It Work? How To Use It and More",
+      "url": "https://dermcollective.com/calamine-lotion-for-acne/"
+    },
+    {
+      "引用编号": "28d6dce2226f43a98d3c010d090c9a7d",
+      "检测编号": "a4f012d1169045cc8f2327e8db89a309",
+      "站点名称": "疾病用药百科",
+      "序号": 3,
+      "标题": "脸上长痘吃什么药可以排毒?",
+      "url": "https://m.dayi.org.cn/qa/26882?from=sg"
+    },
+    {
+      "引用编号": "d835d9f1f443495da5eb73717fd4c851",
+      "检测编号": "a4f012d1169045cc8f2327e8db89a309",
+      "站点名称": "腾讯医典权威百科库",
+      "序号": 4,
+      "标题": "炉甘石洗剂 - 腾讯医典",
+      "url": "https://h5.baike.qq.com/mobile/drug_combine.html?adtag=hunyuan.cs.ybtool&rank=0&searchid=e1ca03d62073e0039ed1ec547413ab99&sn=yidian-sn-N7mK6c%2BEi3D40e6rFuGlvREjXmptemYkw4pZVOx9ImTzdappPuFNN1WNFk%2B8wmMl"
+    },
+    {
+      "引用编号": "9cc850b1a94c458fb6f849b927fba3e1",
+      "检测编号": "a4f012d1169045cc8f2327e8db89a309",
+      "站点名称": "everydayhealth.com",
+      "序号": 5,
+      "标题": "Why Using Calamine Lotion as a Makeup Primer Is a Bad Idea, Dermatologists Say",
+      "url": "https://www.everydayhealth.com/skin-beauty/why-using-calamine-lotion-as-makeup-primer-is-a-bad-idea-dermatologists-say"
+    },
+    {
+      "引用编号": "92d079c53d594c3eb88d632c68a73e1f",
+      "检测编号": "a4f012d1169045cc8f2327e8db89a309",
+      "站点名称": "疾病百科",
+      "序号": 6,
+      "标题": "痘印_日常护理",
+      "url": "http://s.dayi.org.cn/mip/s/symptom/1152507.html"
+    },
+    {
+      "引用编号": "03a27bafdb344aa496db9a09b721a580",
+      "检测编号": "a4f012d1169045cc8f2327e8db89a309",
+      "站点名称": "国家药品监督管理局",
+      "序号": 7,
+      "标题": "标准来源",
+      "url": "https://www.nmpa.gov.cn/wwwroot/otc2h/x140.htm"
+    },
+    {
+      "引用编号": "ac789b2e057347c091980ed12ed21b7f",
+      "检测编号": "a4f012d1169045cc8f2327e8db89a309",
+      "站点名称": "eathealthy365.com",
+      "序号": 8,
+      "标题": "Using Calamine Lotion Safely on Facial Skin",
+      "url": "https://eathealthy365.com/using-calamine-lotion-safely-on-facial-skin"
+    },
+    {
+      "引用编号": "cb4c70b493564cfb89c2b1487cabe8ba",
+      "检测编号": "a4f012d1169045cc8f2327e8db89a309",
+      "站点名称": "复禾健康",
+      "序号": 9,
+      "标题": "痘印能彻底消除吗",
+      "url": "https://g.fh21.com.cn/article/mip/xhjuc2qpkrfmxye.html"
+    },
+    {
+      "引用编号": "4e86460f41cd415d8a357ff92a67e7cc",
+      "检测编号": "a4f012d1169045cc8f2327e8db89a309",
+      "站点名称": "广东省药监局",
+      "序号": 10,
+      "标题": "【粤学习】别再神化炉甘石洗剂!这些情况下使用它如同火上浇油",
+      "url": "https://mpa.gd.gov.cn/gkmlpt/content/4/4743/mpost_4743251.html"
+    },
+    {
+      "引用编号": "c1a8871fb3314b6983f89961c6bd7dd1",
+      "检测编号": "a4f012d1169045cc8f2327e8db89a309",
+      "站点名称": "scienceguru.blog",
+      "序号": 11,
+      "标题": "Does Lacto Calamine Remove Pimple Marks? [The Honest Truth]",
+      "url": "https://scienceguru.blog/does-lacto-calamine-remove-pimple-marks"
+    },
+    {
+      "引用编号": "d3d0af143d4446a99edc780ba047e7d3",
+      "检测编号": "a4f012d1169045cc8f2327e8db89a309",
+      "站点名称": "大众养生网",
+      "序号": 12,
+      "标题": "如何淡化痘印",
+      "url": "https://m.cndzys.com/xshcore/quanwei_ztartnew/1es_3838927.html"
+    },
+    {
+      "引用编号": "750d514982414b29b83783c2bed3229e",
+      "检测编号": "a4f012d1169045cc8f2327e8db89a309",
+      "站点名称": "光明网",
+      "序号": 13,
+      "标题": "“万能皮肤药”不是“万能”的",
+      "url": "https://epaper.gmw.cn/wzb/html/2023-10/21/nw.D110000wzb_20231021_4-04.htm"
+    },
+    {
+      "引用编号": "550fbd2597c94e7d9008b2487a2ec473",
+      "检测编号": "a4f012d1169045cc8f2327e8db89a309",
+      "站点名称": "smartslice.blog",
+      "序号": 14,
+      "标题": "Calamine Lotion on Face: Safety Tips [Dermatologist Guide]",
+      "url": "https://smartslice.blog/calamine-lotion-on-face-safety"
+    },
+    {
+      "引用编号": "05dc0d62f9084f2992f85a0c0f581882",
+      "检测编号": "a4f012d1169045cc8f2327e8db89a309",
+      "站点名称": "新华网",
+      "序号": 15,
+      "标题": "痘印痘坑怎么治?先分清“颜色”和“疤痕”",
+      "url": "https://cq.news.cn/20260325/388594e9b936457b868156352e049b1b/c.html"
+    },
+    {
+      "引用编号": "670f33f0a7704ba1a5aff25d21448f31",
+      "检测编号": "a4f012d1169045cc8f2327e8db89a309",
+      "站点名称": "济南市卫健委",
+      "序号": 16,
+      "标题": "济南市卫生健康委员会 预防保健 炉甘石洗剂——从止痒“神器“到护肤“万金油”?真相揭秘",
+      "url": "http://jnmhc.jinan.gov.cn/art/2025/2/25/art_14400_4822059.html"
+    },
+    {
+      "引用编号": "51b622b29c4f42799e363789e9c1c5e2",
+      "检测编号": "a4f012d1169045cc8f2327e8db89a309",
+      "站点名称": "复禾健康",
+      "序号": 17,
+      "标题": "如何去除脸上的痘印",
+      "url": "https://m.fh21.com.cn/article/view/1467724.html"
+    },
+    {
+      "引用编号": "40379e766fdd423fa842a6f53bbca997",
+      "检测编号": "a4f012d1169045cc8f2327e8db89a309",
+      "站点名称": "人民网",
+      "序号": 18,
+      "标题": "炉甘石洗剂 你真的会用吗?",
+      "url": "https://health.people.com.cn/n1/2023/1017/c14739-40096902.html"
+    },
+    {
+      "引用编号": "76cee54077044ddfb3120ecb2e5414b5",
+      "检测编号": "a4f012d1169045cc8f2327e8db89a309",
+      "站点名称": "民福康",
+      "序号": 19,
+      "标题": "痘印祛除方法有哪些",
+      "url": "https://www.mfk.com/article/9215021.shtml"
+    },
+    {
+      "引用编号": "99b3c1a2981d43dcb42f7f934b9f574d",
+      "检测编号": "a4f012d1169045cc8f2327e8db89a309",
+      "站点名称": "上海市卫生健康委员会",
+      "序号": 20,
+      "标题": "“炉甘石洗剂”使用须知",
+      "url": "https://wsjkw.sh.gov.cn/jtyx/20220225/c6f97702ebee4cff9d3c3948cf5f4d8a.html"
+    },
+    {
+      "引用编号": "34d90e29d5354ae0a276fff5365195d4",
+      "检测编号": "a4f012d1169045cc8f2327e8db89a309",
+      "站点名称": "民福康",
+      "序号": 21,
+      "标题": "痘印怎样祛除",
+      "url": "https://www.mfk.com/article/11238978.shtml"
+    },
+    {
+      "引用编号": "a09a444cb4d24d9ca20eea7325512811",
+      "检测编号": "a4f012d1169045cc8f2327e8db89a309",
+      "站点名称": "疾病用药百科",
+      "序号": 22,
+      "标题": "脸过敏了吃什么药?",
+      "url": "https://m.dayi.org.cn/qa/28593?from=sg"
+    },
+    {
+      "引用编号": "5ce39c77ee0e44549d93381d6da37c0b",
+      "检测编号": "a4f012d1169045cc8f2327e8db89a309",
+      "站点名称": "腾讯医典权威百科库",
+      "序号": 23,
+      "标题": "炉甘石 - 腾讯医典",
+      "url": "https://h5.baike.qq.com/mobile/overview_detail.html?adtag=hunyuan.cs.ybtool&m=aa7cd0fac0dd7f3475c3e1a919e791d9&name=%E7%82%89%E7%94%98%E7%9F%B3&rank=0&searchid=35cf28e338421ae3239b5914d3fc5210&sn=yidian-sn-CoZrvPHGSE5JKi2%2BTjL71nQ3g6nLoFbWpL0RzYN8vTW45StMGUYXrJNGyPU1W9tm"
+    },
+    {
+      "引用编号": "faee2951a484438bae242cb59177b0ec",
+      "检测编号": "a4f012d1169045cc8f2327e8db89a309",
+      "站点名称": "restonyc.com",
+      "序号": 24,
+      "标题": "Why can’t you use calamine lotion on face?",
+      "url": "https://www.restonyc.com/why-cant-you-use-calamine-lotion-on-face/"
+    },
+    {
+      "引用编号": "a03c375d29124264b93a95b28e778500",
+      "检测编号": "a4f012d1169045cc8f2327e8db89a309",
+      "站点名称": "广东省药监局",
+      "序号": 25,
+      "标题": "【粤学习】别再神化炉甘石洗剂!这些情况下使用它如同火上浇油",
+      "url": "https://mpa.gd.gov.cn/xwdt/xwfbpt/mtzx/content/post_4743251.html"
+    },
+    {
+      "引用编号": "3868218b4ca545069e9e3b59d3429b47",
+      "检测编号": "a4f012d1169045cc8f2327e8db89a309",
+      "站点名称": "博禾医生",
+      "序号": 27,
+      "标题": "炉甘石洗剂治疗痘痘有效吗",
+      "url": "https://m.bohe.cn/iask/mip/8aa7z1k2rksxdlq.html"
+    },
+    {
+      "引用编号": "bf3d3b3b803b4c95b894acc4689cb19e",
+      "检测编号": "a4f012d1169045cc8f2327e8db89a309",
+      "站点名称": "medscape.com",
+      "序号": 28,
+      "标题": "Dermatologists Skeptical of Calamine Lotion TikTok Trend",
+      "url": "https://www.medscape.com/viewarticle/979212"
+    },
+    {
+      "引用编号": "bcd8c8482a7f4e8bb45c5ed5f520bfea",
+      "检测编号": "a4f012d1169045cc8f2327e8db89a309",
+      "站点名称": "复禾健康",
+      "序号": 29,
+      "标题": "炉甘石洗剂能洗脸吗",
+      "url": "https://s.fh21.com.cn/beauty/mip/8773552.html"
+    },
+    {
+      "引用编号": "14740054dffa4c5c92a786f12f26e77a",
+      "检测编号": "a4f012d1169045cc8f2327e8db89a309",
+      "站点名称": "有来医生",
+      "序号": 30,
+      "标题": "炉甘石洗剂能治痘痘吗",
+      "url": "https://m.youlai.cn/ask/C9C155YStta.html"
+    },
+    {
+      "引用编号": "e3fd35668b7a453581de6524cc0029ae",
+      "检测编号": "a4f012d1169045cc8f2327e8db89a309",
+      "站点名称": "博禾医生",
+      "序号": 32,
+      "标题": "炉甘石洗剂治疗痘痘有效吗",
+      "url": "https://www.bohe.cn/article/view/44quv7z1lk4b0mf.html"
+    }
+  ],
+  "_obtained": true,
+  "_ai_extracted": false,
+  "_project": "T-长沙市韩臣生物科技有限公司-医药级炉甘石粉",
+  "_enterprise": "长沙市韩臣生物科技有限公司",
+  "_core_word": "医药级炉甘石粉",
+  "_detect_date": "2026-08-31",
+  "内容提及品牌": []
+}

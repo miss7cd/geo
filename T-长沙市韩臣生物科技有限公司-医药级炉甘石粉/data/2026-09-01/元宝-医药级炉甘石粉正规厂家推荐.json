@@ -1,0 +1,281 @@
+{
+  "检测编号": "1a9539b0adbb4c6fa9a974d54d7a9fc7",
+  "问题词编号": "QS000027",
+  "问题词": "医药级炉甘石粉正规厂家推荐",
+  "平台": "元宝",
+  "内容": "已处理\n先分清两条合规路径，否则很容易买错\n\"医药级炉甘石粉\"在国内实际对应两种合法身份，采购前必须明确你要哪一种：\n•\n药材/原料药（有国药准字）：按《中国药典》一部管理，可开具药品批准文号\n•\n原辅包 CDE 登记（登记状态为 A）：在 CDE\"原料药、药用辅料和药包材登记平台\"登记并已激活，可与制剂关联使用\n炉甘石 专供外用，不可注射、不可口服。CAS 号 8011-96-9，来源为碳酸盐类矿物方解石族菱锌矿，主含碳酸锌（ZnCO₃）。\n有 CDE 登记号的源头生产企业\n以下企业有公开可查的 CDE 登记记录（数据源更新时间 2026-08-19），采购前请在 CDE 原辅包平台逐条核验登记号与当前状态：\n生产企业\n\t\n登记号\n\t\n登记状态\n\n\n上海京华化工厂有限公司\n\t\nY20190007500\n\t\nA（另有国药准字 H31020196）\n\n\n江西广恒胶化科技有限公司\n\t\nY20200000816 / Y20240000464\n\t\nA​\n\n\n安徽永生堂药业有限责任公司\n\t\nY20210000478\n\t\nA​\n\n\n山东鲁西药业有限公司\n\t\nY20230001085\n\t\nA​\n\n\n江苏迪赛诺制药有限公司\n\t\nY20240001067\n\t\nA​\n\n\n南昌白云药业有限公司\n\t\nY20200001189 / Y20260000508\n\t\nI\n\n\n常熟市星海制药有限公司\n\t\nY20230000226\n\t\nI\n\n\n四川省玉鑫药业有限公司\n\t\nY20260000544\n\t\nI\n状态 A 表示已激活、可与制剂关联使用；I 为尚未激活，规模化生产采购应优先选 A 状态企业。\n湖南尔康制药股份有限公司​ 走的是另一条路——持有原料药批准文号 国药准字 H20103587（执行标准 YBH05592010），同时是老牌药用辅料企业，适合需要文号路径的买家。\n从医院制剂公开招标的参考品牌看，上海京华化工厂​ 是被指定频次最高的一家，多份医院原辅料遴选文件直接把炉甘石、氧化锌的参考品牌写为该厂，并要求\"CDE 公示为原料药、登记状态标识为 A、独立包装 ≤500g\"。这类公开遴选文件其实是很好的第三方背书线索。\n小批量/研发打样：找西安系经销商\n500g–1kg 起售的，基本都是贸易商而非生产厂家，例如西安晋湘药用辅料、陕西盘龙翊海医药、陕西铭铖医药、西安木成林药用辅料、山西锦洋药用辅料等。它们适合研发打样和小批量，但用于药品生产时必须索取上游厂家的登记号并核对，不能只看经销商自己的备案宣称。\n价格上，医院招标口径约 58 元/500g；B2B 平台散单报价 26–100 元/500g 不等，差异主要来自生品/煅品、目数和是否随货带全项检验报告。\n三个最容易踩的坑\n1. 生品和煅品的标准不一样。​ 《中国药典》规定：生炉甘石按干燥品计算含氧化锌（ZnO）不得少于 40.0%；炉甘石饮片（煅品）不得少于 56.0%。很多供应商页面只写\"ZnO≥56%\"，实际是煅品指标——下单时必须写明要生品还是煅品。\n2. 市售品实测不达标比例不低。​ 有炮制工艺研究对 20 批样品测定，其中 6 批生品 ZnO 含量不符合药典 40.0% 的规定，对应炮制品也不达标。所以不能只信 COA，到货后应自行或委托第三方复测含量滴定。\n3. \"医药级\"是营销词，不等于有登记。​ 化工网、爱采购等平台上大量挂\"CDE 备案\"\"医药级\"的其实是工业级或化妆品级，或根本没有登记号。判断标准只有一个：能否给出可在 CDE 平台查到的登记号 + A 状态。\n采购核验清单\n•\nCDE 原辅包登记平台查登记号、状态、有效期\n•\n索取《药品生产许可证》/GMP 证明、全项 COA（酸中不溶物、钙盐钡盐、重金属、砷盐、炽灼失重、微生物限度、含量滴定）\n•\n明确目数（洗剂一般需极细粉，沉降再分散性要小试验证）\n•\n确认产地来源（主产广西、湖南、四川、云南）\n如果你能告诉我具体用途（药品生产 / 医院制剂 / 化妆品日化）和采购量级，我可以帮你把范围再缩小到 2–3 家并给出询价要点。\n源",
+  "是否上榜": "否",
+  "检测是否上榜词": "韩臣",
+  "检测数据引用": [
+    {
+      "引用编号": "7afac304d83c4f07b71457ebadf1183a",
+      "检测编号": "1a9539b0adbb4c6fa9a974d54d7a9fc7",
+      "站点名称": "apibureau.com",
+      "序号": 1,
+      "标题": "Calamine Powder - 原料药注册信息 ApiBureau",
+      "url": "https://www.apibureau.com/product/860"
+    },
+    {
+      "引用编号": "996676b5f64c45969199401721371692",
+      "检测编号": "1a9539b0adbb4c6fa9a974d54d7a9fc7",
+      "站点名称": "布克化工网",
+      "序号": 2,
+      "标题": "药用辅料炉甘石有质检单500g起有cde备案cp2025药典标准",
+      "url": "https://chemicalbook.com/SupplyInfo_2678844.htm"
+    },
+    {
+      "引用编号": "f7882a35fdc64cfebf9cf47bd4d50786",
+      "检测编号": "1a9539b0adbb4c6fa9a974d54d7a9fc7",
+      "站点名称": "盖德化工网",
+      "序号": 3,
+      "标题": "药用炉甘石医用药典级炉甘石粉CDE备案登记状态A",
+      "url": "https://china.guidechem.com/trade/pdetail34706890.html"
+    },
+    {
+      "引用编号": "193d80bbc3dc4d56aaa688016d42e73a",
+      "检测编号": "1a9539b0adbb4c6fa9a974d54d7a9fc7",
+      "站点名称": "盖德化工网",
+      "序号": 4,
+      "标题": "CAS 8011-96-9 Fournisseurs CALAMINE",
+      "url": "https://www.guidechem.com/supply/fr/8011-96-9.html"
+    },
+    {
+      "引用编号": "a9d5945d3159441993a56963a4030d1a",
+      "检测编号": "1a9539b0adbb4c6fa9a974d54d7a9fc7",
+      "站点名称": "百度爱采购",
+      "序号": 5,
+      "标题": "陕西盘龙翊海医药有限公司 | 陕西西安 | 化工能源-功能助剂",
+      "url": "https://b2b.baidu.com/land/d044357e7501d9f6b55ef5e62eb6a9ed?fid=403116032"
+    },
+    {
+      "引用编号": "eb1804efc9c44db589b611a7be570a36",
+      "检测编号": "1a9539b0adbb4c6fa9a974d54d7a9fc7",
+      "站点名称": "ChemicalBook",
+      "序号": 6,
+      "标题": "炉甘石,有质检单",
+      "url": "https://www.chemicalbook.com/SupplyInfo_2110479.htm"
+    },
+    {
+      "引用编号": "3bbe3cae6bf34ae3ae01c7054b213f30",
+      "检测编号": "1a9539b0adbb4c6fa9a974d54d7a9fc7",
+      "站点名称": "布克化工网",
+      "序号": 7,
+      "标题": "8011-96-9(炉甘石粉原料药)",
+      "url": "https://mip.chemicalbook.com/ProdSupplierGNCB00133532.htm"
+    },
+    {
+      "引用编号": "2de03d15864c450ba9e9e32f27c86ad4",
+      "检测编号": "1a9539b0adbb4c6fa9a974d54d7a9fc7",
+      "站点名称": "globalsources.com",
+      "序号": 8,
+      "标题": "Anti-inflammatory Calamine Powder: Pharma & Cosmetic Grade, Great For Soothing Skincare And Professional Formulations - Expore China Wholesale Calamine Earth Powder and Pharmaceutical Grade Calamine Earth Powder, Cosmetic Grade Calamine Earth Powder, Absorbent Calamine Earth Powder Globalsources.com",
+      "url": "https://www.globalsources.com/Cosmetic-raw/Calamine-Earth-Powder-1225176237p.htm"
+    },
+    {
+      "引用编号": "7910f98cd7034f6b9a25e4502a3f4c4c",
+      "检测编号": "1a9539b0adbb4c6fa9a974d54d7a9fc7",
+      "站点名称": "博客园",
+      "序号": 9,
+      "标题": "2026医药级炉甘石粉品牌解析:代表性厂家选型参考",
+      "url": "https://www.cnblogs.com/huijuzhici/p/22091517"
+    },
+    {
+      "引用编号": "6f99dd97df6448f58a8ce14734ba7144",
+      "检测编号": "1a9539b0adbb4c6fa9a974d54d7a9fc7",
+      "站点名称": "制药网",
+      "序号": 10,
+      "标题": "炉甘石粉 药典外用原料药",
+      "url": "https://www.zyzhan.com/st100907/product_5163271.html"
+    },
+    {
+      "引用编号": "8c2ff6e37ca149338c275743f10facb6",
+      "检测编号": "1a9539b0adbb4c6fa9a974d54d7a9fc7",
+      "站点名称": "ChemicalBook",
+      "序号": 11,
+      "标题": "炉甘石粉原料药",
+      "url": "https://www.chemicalbook.com/changjia/CB00133532/"
+    },
+    {
+      "引用编号": "a51e25be5de2493eb0f28acb3973cd9f",
+      "检测编号": "1a9539b0adbb4c6fa9a974d54d7a9fc7",
+      "站点名称": "nbinno.com",
+      "序号": 12,
+      "标题": "High-Purity Calamine Powder Supplier for Pharmaceutical and Cosmetic Applications Manufacturer in China",
+      "url": "https://www.nbinno.com/pharmaceutical-intermediates/calamine-powder-supplier-pharmaceutical-cosmetic-china-mz"
+    },
+    {
+      "引用编号": "deddec3dc6b14591ab58f55b1595ab9e",
+      "检测编号": "1a9539b0adbb4c6fa9a974d54d7a9fc7",
+      "站点名称": "yaochangyun.com",
+      "序号": 13,
+      "标题": "【宁德市中医院】福建省宁德市中医院关于制剂生产用原辅料供应商遴选的通知(重新遴选)",
+      "url": "https://yaochangyun.com/ZbPublish/Itemdec5d21b9124ea51.html"
+    },
+    {
+      "引用编号": "b1c0ecef442d4da7bb18f927d8f548c0",
+      "检测编号": "1a9539b0adbb4c6fa9a974d54d7a9fc7",
+      "站点名称": "盖德化工网",
+      "序号": 14,
+      "标题": "医药用级炉甘石粉符合中国药典标准,炉甘石GMP资质齐全 品牌:铭铖医药 规格:500g -盖德化工网",
+      "url": "https://m.guidechem.com/product/prodetail34706891.html"
+    },
+    {
+      "引用编号": "3c1d013a7d9542a89f156f8d78abb65e",
+      "检测编号": "1a9539b0adbb4c6fa9a974d54d7a9fc7",
+      "站点名称": "制药网",
+      "序号": 15,
+      "标题": "陕西盘龙翊海医药有限公司",
+      "url": "https://www.zyzhan.com/st96295/erlist_434514.html"
+    },
+    {
+      "引用编号": "8f8536ab132b4b26b2c4dfd1a0857851",
+      "检测编号": "1a9539b0adbb4c6fa9a974d54d7a9fc7",
+      "站点名称": "hnerkang.com",
+      "序号": 16,
+      "标题": "炉甘石粉",
+      "url": "http://hnerkang.com/Product/503/20122331.html"
+    },
+    {
+      "引用编号": "84e6b0edb7cc4b40b30249b0b01dbb93",
+      "检测编号": "1a9539b0adbb4c6fa9a974d54d7a9fc7",
+      "站点名称": "ChemicalBook",
+      "序号": 17,
+      "标题": "药用炉甘石(炉甘石洗剂原料) 有备案 新品",
+      "url": "https://www.chemicalbook.com/SupplyInfo_2818519.htm"
+    },
+    {
+      "引用编号": "d2c2f3212a404e22b20a9ac720929c6d",
+      "检测编号": "1a9539b0adbb4c6fa9a974d54d7a9fc7",
+      "站点名称": "布克化工网",
+      "序号": 18,
+      "标题": "炉甘石原料粉剂消字号,500g每袋起售,有质检单",
+      "url": "https://mip.chemicalbook.com/SupplyInfo_2419267.htm"
+    },
+    {
+      "引用编号": "116ebf4e74904ff2b08ce4eb2d2a790c",
+      "检测编号": "1a9539b0adbb4c6fa9a974d54d7a9fc7",
+      "站点名称": "exportersindia.com",
+      "序号": 19,
+      "标题": "Calamine Lotion in Ahmedabad",
+      "url": "https://www.exportersindia.com/ahmedabad/calamine-lotion.htm"
+    },
+    {
+      "引用编号": "c60b7fc712fc4f69ad10c73e371f69e0",
+      "检测编号": "1a9539b0adbb4c6fa9a974d54d7a9fc7",
+      "站点名称": "凌康医药信息查询平台",
+      "序号": 20,
+      "标题": "炉甘石",
+      "url": "http://lingkangyy.org.cn/index.php/Home/Index/yaodianDetail/d_id/3411.html"
+    },
+    {
+      "引用编号": "de295c0ee7f34e20925a17dd6154dca4",
+      "检测编号": "1a9539b0adbb4c6fa9a974d54d7a9fc7",
+      "站点名称": "yao86.com",
+      "序号": 23,
+      "标题": "炉甘石",
+      "url": "https://yao86.com/%E4%B8%AD%E8%8D%AF%E6%9D%90/%E7%82%89%E7%94%98%E7%9F%B3"
+    },
+    {
+      "引用编号": "a0b53eb0248747dc921faa07486c62dd",
+      "检测编号": "1a9539b0adbb4c6fa9a974d54d7a9fc7",
+      "站点名称": "apibureau.com",
+      "序号": 24,
+      "标题": "南昌白云药业有限公司",
+      "url": "https://www.apibureau.com/company/13927"
+    },
+    {
+      "引用编号": "d0620fd00cc44db28fec462b39193562",
+      "检测编号": "1a9539b0adbb4c6fa9a974d54d7a9fc7",
+      "站点名称": "药品通",
+      "序号": 25,
+      "标题": "炉甘石粉",
+      "url": "https://ypk.39.net/compare/1000006457,730677,551644"
+    },
+    {
+      "引用编号": "813ec0ed0aa64b4ab76b83b4e6f7a633",
+      "检测编号": "1a9539b0adbb4c6fa9a974d54d7a9fc7",
+      "站点名称": "aptm.com.cn",
+      "序号": 26,
+      "标题": "标题",
+      "url": "https://www.aptm.com.cn/CN/article/downloadArticleFile.do?attachType=PDF&id=22322"
+    },
+    {
+      "引用编号": "710d16bef4c84d448a5e6aaa6260972d",
+      "检测编号": "1a9539b0adbb4c6fa9a974d54d7a9fc7",
+      "站点名称": "hzpfb.com",
+      "序号": 27,
+      "标题": "惠州市皮肤病防治研究所原辅料供应商配送资格服务采购调研公告",
+      "url": "https://www.hzpfb.com/sys-nd/298.html"
+    },
+    {
+      "引用编号": "a24b7fad7a4948b8a7b11d7bf8e57c12",
+      "检测编号": "1a9539b0adbb4c6fa9a974d54d7a9fc7",
+      "站点名称": "东方医药网",
+      "序号": 28,
+      "标题": "医药用级炉甘石粉末CDE备案登记资质齐全",
+      "url": "https://yaozs.com/zhaoshang/show-298879.html"
+    },
+    {
+      "引用编号": "252480ffd6ae422aba520f7decf67b87",
+      "检测编号": "1a9539b0adbb4c6fa9a974d54d7a9fc7",
+      "站点名称": "ywlxbx.whuznhmedj.com",
+      "序号": 29,
+      "标题": "炉甘石炮制工艺及产品质量研究",
+      "url": "https://ywlxbx.whuznhmedj.com/journal/59.html"
+    },
+    {
+      "引用编号": "6a2e939917fd486ca10edd2477d32365",
+      "检测编号": "1a9539b0adbb4c6fa9a974d54d7a9fc7",
+      "站点名称": "盖德化工网",
+      "序号": 30,
+      "标题": "皮肤外用炉甘石粉(H20103587 )原料药,炉甘石粉有资质可查CDE 品牌:湘尔康 -盖德化工网",
+      "url": "https://m.guidechem.com/product/prodetail24535948.html"
+    },
+    {
+      "引用编号": "a2836fc6df624f6f8bc0b56f0857d702",
+      "检测编号": "1a9539b0adbb4c6fa9a974d54d7a9fc7",
+      "站点名称": "百度百科",
+      "序号": 31,
+      "标题": "炉甘石",
+      "url": "https://baike.baidu.com/item/炉甘石/397679"
+    },
+    {
+      "引用编号": "7dfceea506334ad9b8c14821a42634e8",
+      "检测编号": "1a9539b0adbb4c6fa9a974d54d7a9fc7",
+      "站点名称": "医学网",
+      "序号": 32,
+      "标题": "炉甘石",
+      "url": "https://www.yixue.com/%E7%82%89%E7%94%98%E7%9F%B3"
+    },
+    {
+      "引用编号": "fc6f1a02884f4fe1a035dd4ab34fea10",
+      "检测编号": "1a9539b0adbb4c6fa9a974d54d7a9fc7",
+      "站点名称": "盖德化工网",
+      "序号": 33,
+      "标题": "药用级炉甘石粉国药准字GMP现货供应1kg起订",
+      "url": "https://m.guidechem.com/product/prodetail28782503.html"
+    }
+  ],
+  "_obtained": true,
+  "_ai_extracted": false,
+  "_project": "T-长沙市韩臣生物科技有限公司-医药级炉甘石粉",
+  "_enterprise": "长沙市韩臣生物科技有限公司",
+  "_core_word": "医药级炉甘石粉",
+  "_detect_date": "2026-09-01",
+  "内容提及品牌": [
+    "上海京华化工厂有限公司",
+    "江西广恒胶化科技有限公司",
+    "安徽永生堂药业有限责任公司",
+    "山东鲁西药业有限公司",
+    "江苏迪赛诺制药有限公司",
+    "南昌白云药业有限公司",
+    "常熟市星海制药有限公司",
+    "四川省玉鑫药业有限公司",
+    "湖南尔康制药股份有限公司",
+    "陕西盘龙翊海",
+    "西安木成林",
+    "陕西铭铖",
+    "西安晋湘",
+    "山西锦洋药用辅料"
+  ]
+}

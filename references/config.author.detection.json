@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "purpose": "GEO 检测数据提取维度与未上榜归因模型定义。collect.py 读取本配置，对原始检测数据做系统化维度提取，并输出信源缺失分析与未上榜归因，全部以 JSON 留存供规划阶段消费。",
+    "research_basis": "综合 GEO 审计方法论：Over The Top SEO / Indexly / MaxAEO 的六维框架（citation rate、AI share of voice、citation sources、competitor overlap、sentiment、prompt clusters）；aeolabs 五大缺位归因（爬虫阻断/答案未前置/第三方信源缺失/实体模糊/过新）；凤凰网四大核验维度（实体识别/场景推荐/信源溯源/量化复盘）。",
+    "applies_to": "T-* 项目 data/<date>/*.json 原始检测记录",
+    "version": "1.0"
+  },
+  "record_dimensions": [
+    {"key": "question_id", "name": "问题词编号", "source": "问题词编号"},
+    {"key": "question", "name": "问题词", "source": "问题词"},
+    {"key": "platform", "name": "检测平台", "source": "平台"},
+    {"key": "listed", "name": "是否上榜", "source": "是否上榜"},
+    {"key": "check_words", "name": "上榜核验词", "source": "检测是否上榜词"},
+    {"key": "citations", "name": "引用站点", "source": "检测数据引用[].站点名称/标题/url/序号"},
+    {"key": "citation_count", "name": "引用站点数", "source": "检测数据引用 长度"},
+    {"key": "site_types", "name": "信源类型", "source": "由站点名称按 site_type_rules 归类"},
+    {"key": "brands_mentioned", "name": "内容提及品牌", "source": "内容提及品牌"},
+    {"key": "detect_date", "name": "检测日期", "source": "_detect_date"}
+  ],
+  "question_dimensions": [
+    {"key": "total_detect", "name": "总检测次数"},
+    {"key": "listed_count", "name": "上榜次数"},
+    {"key": "miss_rate", "name": "缺口率"},
+    {"key": "platform_stats", "name": "分平台统计"},
+    {"key": "top_sites", "name": "高频引用站点"},
+    {"key": "site_type_coverage", "name": "信源类型覆盖率"},
+    {"key": "competitor_landscape", "name": "竞品引用格局"}
+  ],
+  "site_types": [
+    {"type": "品牌官网", "desc": "企业官方站点/产品站"},
+    {"type": "技术社区", "desc": "CSDN/掘金/博客园/开发者社区/论坛"},
+    {"type": "知识库笔记", "desc": "知乎/IMA/百科/知识库类"},
+    {"type": "评测聚合", "desc": "横评/对比/选型聚合站"},
+    {"type": "自媒体公众号", "desc": "微信公众号/自媒体号"},
+    {"type": "新闻媒体", "desc": "头条/新浪/凤凰/财经等"},
+    {"type": "博客", "desc": "个人博客/独立站"},
+    {"type": "其他", "desc": "未匹配上述类型"}
+  ],
+  "site_type_rules": [
+    {"type": "品牌官网", "patterns": ["官网"]},
+    {"type": "技术社区", "patterns": ["CSDN", "掘金", "博客园", "开源", "社区", "V2EX", "SegmentFault"]},
+    {"type": "知识库笔记", "patterns": ["知识号", "ima", "知乎", "百科", "笔记"]},
+    {"type": "评测聚合", "patterns": ["评测", "横评", "对比", "alloypress", "freeaitool", "测评"]},
+    {"type": "自媒体公众号", "patterns": ["微信", "公众号", "mp.weixin"]},
+    {"type": "新闻媒体", "patterns": ["头条", "新浪", "凤凰", "财经", "网易", "腾讯", "搜狐"]},
+    {"type": "博客", "patterns": ["blog", "博客", "夜雨"]}
+  ],
+  "platform_site_hints": {
+    "文心一言": ["新闻媒体", "自媒体公众号", "知识库笔记"],
+    "元宝": ["自媒体公众号", "知识库笔记"],
+    "豆包": ["新闻媒体", "自媒体公众号", "知识库笔记"],
+    "DeepSeek": ["技术社区", "知识库笔记", "博客"],
+    "Kimi": ["知识库笔记", "新闻媒体"],
+    "通义千问": ["技术社区", "新闻媒体", "自媒体公众号"]
+  },
+  "attribution_factors": [
+    {"code": "source_missing", "name": "信源缺失", "severity": "high", "fix": "在缺口平台偏好媒体发布带可验证数据的结构化内容，建立第三方信源"},
+    {"code": "platform_gap", "name": "平台缺口", "severity": "high", "fix": "针对该平台收录偏好定制内容结构与信源类型"},
+    {"code": "own_brand_absent", "name": "自身品牌未引用", "severity": "medium", "fix": "在第三方评测/榜单中争取明确点名，统一品牌实体命名"},
+    {"code": "competitor_suppression", "name": "竞品压制", "severity": "medium", "fix": "产出对比/选型类内容，以可验证数据突出自身差异化"},
+    {"code": "source_type_mismatch", "name": "信源类型偏差", "severity": "medium", "fix": "补充缺口平台偏好的信源类型（如百度系/微信系/知乎系）"},
+    {"code": "entity_inconsistency", "name": "实体不一致", "severity": "low", "fix": "统一企业名/产品名/品牌名跨平台表述"},
+    {"code": "insufficient_volume", "name": "信源体量不足", "severity": "low", "fix": "扩大合规信源覆盖与发布频次"}
+  ],
+  "thresholds": {
+    "low_volume_sites": 3
+  }
+}

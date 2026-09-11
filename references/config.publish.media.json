@@ -1,0 +1,108 @@
+[
+  [
+    {
+      "name": "列举网",
+      "mId": "26812",
+      "plat": "R",
+      "mode": "sync",
+      "content_format": "plain",
+      "constraint": {
+        "max_per_day": 7
+      },
+      "band_word_check": false,
+      "embed_phone": false,
+      "embed_website": false,
+      "support_image": true,
+      "extra_fields": {
+        "mobphone": "{phone}",
+        "linkman": "{contact_name}"
+      },
+      "publish_type": "skill"
+    },
+    {
+      "name": "搜狐网",
+      "mId": "124221",
+      "plat": "C",
+      "mode": "async",
+      "content_format": "html",
+      "constraint": {
+        "apart_days": 3,
+        "max_per_day": 1,
+        "total": 2
+      },
+      "band_word_check": false,
+      "embed_phone": false,
+      "embed_website": false,
+      "support_image": true,
+      "extra_fields": {},
+      "publish_type": "skill"
+    },
+    {
+      "name": "采招网",
+      "mId": "3731421",
+      "plat": "Z",
+      "mode": "sync",
+      "content_format": "html",
+      "constraint": {
+        "apart_days": 1,
+        "max_per_day": 1
+      },
+      "band_word_check": true,
+      "embed_phone": true,
+      "embed_website": false,
+      "support_image": true,
+      "extra_fields": {},
+      "publish_type": "skill"
+    },
+    {
+      "name": "国脉网",
+      "mId": "3731312",
+      "plat": "Z",
+      "mode": "sync",
+      "content_format": "html",
+      "constraint": {
+        "apart_days": 1,
+        "max_per_day": 1
+      },
+      "band_word_check": true,
+      "embed_phone": true,
+      "embed_website": false,
+      "support_image": true,
+      "extra_fields": {},
+      "publish_type": "skill"
+    },
+    {
+      "name": "博客园",
+      "mId": "26723",
+      "plat": "R",
+      "mode": "sync",
+      "content_format": "html",
+      "constraint": {
+        "apart_days": 1,
+        "max_per_day": 1
+      },
+      "band_word_check": false,
+      "embed_phone": true,
+      "embed_website": true,
+      "support_image": true,
+      "extra_fields": {},
+      "publish_type": "skill"
+    },
+    {
+      "name": "今日头条",
+      "mId": "",
+      "plat": "",
+      "mode": "browser",
+      "content_format": "plain",
+      "constraint": {
+        "max_per_day": 3
+      },
+      "band_word_check": false,
+      "embed_phone": false,
+      "embed_website": false,
+      "support_image": true,
+      "extra_fields": {},
+      "publish_type": "manual"
+    }
+  ]
+]

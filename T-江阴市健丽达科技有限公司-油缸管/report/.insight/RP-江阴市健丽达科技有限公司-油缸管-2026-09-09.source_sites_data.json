@@ -1,0 +1,222 @@
+{
+  "source_sites": {
+    "total_sites": 344,
+    "top_n": 20,
+    "platforms": [
+      "元宝",
+      "豆包"
+    ],
+    "sites": [
+      {
+        "site": "中国工控网",
+        "total_refs": 275,
+        "category": "行业媒体",
+        "platform_counts": {
+          "元宝": 70,
+          "豆包": 205
+        }
+      },
+      {
+        "site": "百度爱采购",
+        "total_refs": 186,
+        "category": "B2B平台",
+        "platform_counts": {
+          "元宝": 186,
+          "豆包": 0
+        }
+      },
+      {
+        "site": "菏泽网络电视台",
+        "total_refs": 186,
+        "category": "地方门户",
+        "platform_counts": {
+          "元宝": 186,
+          "豆包": 0
+        }
+      },
+      {
+        "site": "顺企网",
+        "total_refs": 181,
+        "category": "B2B平台",
+        "platform_counts": {
+          "元宝": 65,
+          "豆包": 116
+        }
+      },
+      {
+        "site": "中钢网",
+        "total_refs": 153,
+        "category": "行业媒体",
+        "platform_counts": {
+          "元宝": 80,
+          "豆包": 73
+        }
+      },
+      {
+        "site": "豆丁网",
+        "total_refs": 151,
+        "category": "文档平台",
+        "platform_counts": {
+          "元宝": 0,
+          "豆包": 151
+        }
+      },
+      {
+        "site": "八方资源网",
+        "total_refs": 125,
+        "category": "B2B平台",
+        "platform_counts": {
+          "元宝": 114,
+          "豆包": 11
+        }
+      },
+      {
+        "site": "大众网",
+        "total_refs": 122,
+        "category": "地方门户",
+        "platform_counts": {
+          "元宝": 14,
+          "豆包": 108
+        }
+      },
+      {
+        "site": "菏泽广电网",
+        "total_refs": 118,
+        "category": "地方门户",
+        "platform_counts": {
+          "元宝": 106,
+          "豆包": 12
+        }
+      },
+      {
+        "site": "浙江鼎欣钢管制造有限公司",
+        "total_refs": 84,
+        "category": "企业官网",
+        "platform_counts": {
+          "元宝": 0,
+          "豆包": 84
+        }
+      },
+      {
+        "site": "百业网",
+        "total_refs": 83,
+        "category": "B2B平台",
+        "platform_counts": {
+          "元宝": 83,
+          "豆包": 0
+        }
+      },
+      {
+        "site": "Dexin",
+        "total_refs": 83,
+        "category": "其他",
+        "platform_counts": {
+          "元宝": 0,
+          "豆包": 83
+        }
+      },
+      {
+        "site": "商业品牌网",
+        "total_refs": 82,
+        "category": "行业媒体",
+        "platform_counts": {
+          "元宝": 21,
+          "豆包": 61
+        }
+      },
+      {
+        "site": "b2bdata.baidu.com",
+        "total_refs": 81,
+        "category": "B2B平台",
+        "platform_counts": {
+          "元宝": 81,
+          "豆包": 0
+        }
+      },
+      {
+        "site": "1688",
+        "total_refs": 74,
+        "category": "B2B平台",
+        "platform_counts": {
+          "元宝": 0,
+          "豆包": 74
+        }
+      },
+      {
+        "site": "五莲县易达金属制品股份有限公司",
+        "total_refs": 73,
+        "category": "企业官网",
+        "platform_counts": {
+          "元宝": 0,
+          "豆包": 73
+        }
+      },
+      {
+        "site": "jydpyy.com",
+        "total_refs": 59,
+        "category": "企业官网",
+        "platform_counts": {
+          "元宝": 9,
+          "豆包": 50
+        }
+      },
+      {
+        "site": "亮点黔西南",
+        "total_refs": 57,
+        "category": "其他",
+        "platform_counts": {
+          "元宝": 6,
+          "豆包": 51
+        }
+      },
+      {
+        "site": "免费黄页网",
+        "total_refs": 55,
+        "category": "其他",
+        "platform_counts": {
+          "元宝": 55,
+          "豆包": 0
+        }
+      },
+      {
+        "site": "手机搜狐网",
+        "total_refs": 52,
+        "category": "自媒体",
+        "platform_counts": {
+          "元宝": 0,
+          "豆包": 52
+        }
+      }
+    ],
+    "categories": [
+      {
+        "name": "B2B平台",
+        "count": 730
+      },
+      {
+        "name": "行业媒体",
+        "count": 510
+      },
+      {
+        "name": "地方门户",
+        "count": 426
+      },
+      {
+        "name": "企业官网",
+        "count": 216
+      },
+      {
+        "name": "其他",
+        "count": 195
+      },
+      {
+        "name": "文档平台",
+        "count": 151
+      },
+      {
+        "name": "自媒体",
+        "count": 52
+      }
+    ]
+  }
+}

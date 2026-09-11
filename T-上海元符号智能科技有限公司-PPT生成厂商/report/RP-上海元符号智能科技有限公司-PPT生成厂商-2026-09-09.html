@@ -1,0 +1,2346 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/ant-design-vue/dist/reset.css">
+    <title>GEO 运营分析报告</title>
+    <style>
+        body {
+            margin: 0;
+            background: #f5f7fa;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        }
+        #app {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        /* ===== Header ===== */
+        .report-header {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: #fff;
+            padding: 32px 36px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .report-header::after {
+            content: '';
+            position: absolute;
+            right: -40px; top: -40px;
+            width: 200px; height: 200px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 50%;
+        }
+        .report-header::before {
+            content: '';
+            position: absolute;
+            right: 80px; bottom: -80px;
+            width: 180px; height: 180px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+        }
+        .report-header h1 {
+            font-size: 26px;
+            font-weight: 700;
+            margin: 0 0 8px 0;
+            color: #fff;
+            position: relative;
+            z-index: 1;
+        }
+        .report-header .subtitle {
+            font-size: 15px;
+            opacity: 0.9;
+            margin-bottom: 16px;
+            position: relative;
+            z-index: 1;
+        }
+        .report-header .meta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            font-size: 13px;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+        .report-header .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .report-header .meta-label { opacity: 0.75; }
+        .report-header .meta-value { font-weight: 500; }
+
+        /* ===== KPI Cards ===== */
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+        }
+        .kpi-card {
+            background: #fff;
+            border-radius: 10px;
+            padding: 16px 18px;
+            border: 1px solid #f0f0f0;
+            transition: all 0.2s;
+            position: relative;
+        }
+        .kpi-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            border-color: #e0e7ff;
+        }
+        .kpi-card .kpi-label {
+            font-size: 13px;
+            color: #6b7280;
+            margin-bottom: 6px;
+        }
+        .kpi-card .kpi-value-row {
+            display: flex;
+            align-items: baseline;
+            gap: 4px;
+            margin-bottom: 4px;
+        }
+        .kpi-card .kpi-value {
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        .kpi-card .kpi-unit {
+            font-size: 14px;
+            font-weight: 500;
+            color: #6b7280;
+        }
+        .kpi-card .kpi-delta {
+            display: inline-flex;
+            align-items: center;
+            gap: 2px;
+            font-size: 12px;
+            font-weight: 500;
+            margin-left: 6px;
+        }
+        .kpi-card .kpi-delta.success { color: #10b981; }
+        .kpi-card .kpi-delta.danger { color: #ef4444; }
+        .kpi-card .kpi-delta.neutral { color: #9ca3af; }
+        .kpi-card .kpi-delta .arrow {
+            font-size: 10px;
+            line-height: 1;
+        }
+        .kpi-card .kpi-chart {
+            height: 50px;
+            margin-top: 8px;
+            width: 100%;
+        }
+        .kpi-card .kpi-chart canvas {
+            width: 100% !important;
+        }
+        .kpi-card.success .kpi-value { color: #10b981; }
+        .kpi-card.warning .kpi-value { color: #f59e0b; }
+        .kpi-card.danger .kpi-value { color: #ef4444; }
+        .kpi-card.neutral .kpi-value { color: #1f2937; }
+
+        /* ===== Daily Publish Tracker Table ===== */
+        .publish-table :deep(.ant-table-thead > tr > th) {
+            background: #f9fafb !important;
+            font-weight: 500;
+            color: #6b7280;
+            font-size: 12px;
+        }
+        .publish-table :deep(.ant-table-tbody > tr > td) {
+            font-size: 13px;
+        }
+        .col-index { width: 50px; text-align: center; }
+        .col-status { width: 80px; }
+        .col-words { width: 80px; }
+        .col-qc { width: 90px; }
+        .col-action { width: 80px; }
+
+        .section-placeholder {
+            background: #fff;
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            color: #9ca3af;
+            font-size: 14px;
+            margin-bottom: 16px;
+            border: 2px dashed #e5e7eb;
+        }
+        .section-placeholder .icon {
+            font-size: 32px;
+            margin-bottom: 8px;
+            opacity: 0.5;
+        }
+
+        .section-subtitle {
+            font-size: 13px;
+            color: #6b7280;
+            margin-bottom: 16px;
+        }
+        .bar-chart-container {
+            width: 100%;
+            height: 380px;
+        }
+        .bar-chart-container-small {
+            width: 100%;
+            height: 340px;
+        }
+        .insights-list {
+            margin-top: 8px;
+        }
+        .action-table .ant-table-tbody > tr > td {
+            padding: 14px 16px;
+        }
+
+        .report-footer {
+            text-align: center;
+            color: #9ca3af;
+            font-size: 12px;
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        @media (max-width: 900px) {
+            .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- ====== 页头区 ====== -->
+        <div class="report-header">
+            <h1>GEO 运营分析报告</h1>
+            <div class="subtitle">
+                {{ header.enterprise }} · {{ header.core_word }} · 生成式引擎优化效果分析
+            </div>
+            <div class="meta-row">
+                <div class="meta-item">
+                    <span class="meta-label">📅 检测周期:</span>
+                    <span class="meta-value">{{ header.detection_period.start }} ~ {{ header.detection_period.end }}（{{ header.detection_period.days }}天）</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">📝 发布周期:</span>
+                    <span class="meta-value">{{ header.publish_period.start }} ~ {{ header.publish_period.end }}（{{ header.publish_period.days }}天）</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">🔍 监测平台:</span>
+                    <span class="meta-value">{{ header.platforms.join(' / ') }}</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">#️⃣ 关键词数:</span>
+                    <span class="meta-value">{{ header.keyword_count }} 个</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ====== 核心指标概览 ====== -->
+        <a-card :bordered="false" title="核心指标概览" style="margin-bottom: 16px;">
+            <div class="kpi-grid">
+                <div v-if="kpis.overall_hit_rate" class="kpi-card" :class="kpis.overall_hit_rate.trend_type">
+                    <div class="kpi-label">{{ kpis.overall_hit_rate.label }}</div>
+                    <div class="kpi-value-row">
+                        <span class="kpi-value">{{ kpis.overall_hit_rate.value }}</span>
+                        <span class="kpi-unit">{{ kpis.overall_hit_rate.unit }}</span>
+                        <span class="kpi-delta" :class="kpis.overall_hit_rate.trend_type">
+                            <span class="arrow">{{ kpis.overall_hit_rate.trend_type === "danger" ? "↓" : (kpis.overall_hit_rate.trend_type === "success" ? "↑" : "-") }}</span>
+                            {{ Math.abs(kpis.overall_hit_rate.trend_delta).toFixed(1) }}
+                        </span>
+                    </div>
+                    <div v-if="kpis.overall_hit_rate.has_chart" class="kpi-chart" id="kpi-chart-overall_hit_rate"></div>
+                </div>
+                <div v-if="kpis.doubao_hit_rate" class="kpi-card" :class="kpis.doubao_hit_rate.trend_type">
+                    <div class="kpi-label">{{ kpis.doubao_hit_rate.label }}</div>
+                    <div class="kpi-value-row">
+                        <span class="kpi-value">{{ kpis.doubao_hit_rate.value }}</span>
+                        <span class="kpi-unit">{{ kpis.doubao_hit_rate.unit }}</span>
+                        <span class="kpi-delta" :class="kpis.doubao_hit_rate.trend_type">
+                            <span class="arrow">{{ kpis.doubao_hit_rate.trend_type === "danger" ? "↓" : (kpis.doubao_hit_rate.trend_type === "success" ? "↑" : "-") }}</span>
+                            {{ Math.abs(kpis.doubao_hit_rate.trend_delta).toFixed(1) }}
+                        </span>
+                    </div>
+                    <div v-if="kpis.doubao_hit_rate.has_chart" class="kpi-chart" id="kpi-chart-doubao_hit_rate"></div>
+                </div>
+                <div v-if="kpis.yuanbao_hit_rate" class="kpi-card" :class="kpis.yuanbao_hit_rate.trend_type">
+                    <div class="kpi-label">{{ kpis.yuanbao_hit_rate.label }}</div>
+                    <div class="kpi-value-row">
+                        <span class="kpi-value">{{ kpis.yuanbao_hit_rate.value }}</span>
+                        <span class="kpi-unit">{{ kpis.yuanbao_hit_rate.unit }}</span>
+                        <span class="kpi-delta" :class="kpis.yuanbao_hit_rate.trend_type">
+                            <span class="arrow">{{ kpis.yuanbao_hit_rate.trend_type === "danger" ? "↓" : (kpis.yuanbao_hit_rate.trend_type === "success" ? "↑" : "-") }}</span>
+                            {{ Math.abs(kpis.yuanbao_hit_rate.trend_delta).toFixed(1) }}
+                        </span>
+                    </div>
+                    <div v-if="kpis.yuanbao_hit_rate.has_chart" class="kpi-chart" id="kpi-chart-yuanbao_hit_rate"></div>
+                </div>
+                <div v-if="kpis.article_inclusion_rate" class="kpi-card" :class="kpis.article_inclusion_rate.trend_type">
+                    <div class="kpi-label">{{ kpis.article_inclusion_rate.label }}</div>
+                    <div class="kpi-value-row">
+                        <span class="kpi-value">{{ kpis.article_inclusion_rate.value }}</span>
+                        <span class="kpi-unit">{{ kpis.article_inclusion_rate.unit }}</span>
+                        <span class="kpi-delta" :class="kpis.article_inclusion_rate.trend_type">
+                            <span class="arrow">{{ kpis.article_inclusion_rate.trend_type === "danger" ? "↓" : (kpis.article_inclusion_rate.trend_type === "success" ? "↑" : "-") }}</span>
+                            {{ Math.abs(kpis.article_inclusion_rate.trend_delta).toFixed(1) }}
+                        </span>
+                    </div>
+                    <div v-if="kpis.article_inclusion_rate.has_chart" class="kpi-chart" id="kpi-chart-article_inclusion_rate"></div>
+                </div>
+                <div v-if="kpis.article_publish" class="kpi-card" :class="kpis.article_publish.trend_type">
+                    <div class="kpi-label">{{ kpis.article_publish.label }}</div>
+                    <div class="kpi-value-row">
+                        <span class="kpi-value">{{ kpis.article_publish.value }}</span>
+                        <span class="kpi-unit">{{ kpis.article_publish.unit }}</span>
+                    </div>
+                </div>
+            </div>
+        </a-card>
+
+        <!-- ====== 当日写文与发布追踪 ====== -->
+        <a-card :bordered="false" :title="'当日写文与发布追踪（' + daily_publish_tracker.date + '）'" style="margin-bottom: 16px;">
+            <template v-if="daily_publish_tracker && daily_publish_tracker.articles">
+                <a-table
+                    :columns="trackerColumns"
+                    :data-source="daily_publish_tracker.articles"
+                    :pagination="false"
+                    size="middle"
+                    class="publish-table"
+                    row-key="index">
+                    <template #body-cell="{ column, record }">
+                        <template v-if="column.key === 'question_word'">
+                            <div style="font-weight: 500;">{{ record.question_word }}</div>
+                            <div style="font-size: 11px; color: #9ca3af; margin-top: 2px;">{{ record.question_id }}</div>
+                        </template>
+                        <template v-else-if="column.key === 'type'">
+                            <a-tag color="blue">{{ record.type }}</a-tag>
+                        </template>
+                        <template v-else-if="column.key === 'media'">
+                            <a-tag>{{ record.media }}</a-tag>
+                        </template>
+                        <template v-else-if="column.key === 'word_count'">
+                            {{ record.word_count }}
+                        </template>
+                        <template v-else-if="column.key === 'brand_count'">
+                            <a-badge :count="record.brand_count" :number-style="{ backgroundColor: record.brand_count > 0 ? '#10b981' : '#d1d5db' }" />
+                        </template>
+                        <template v-else-if="column.key === 'status'">
+                            <a-tag v-if="record.published" color="success">已发布</a-tag>
+                            <a-tag v-else color="orange">未发布</a-tag>
+                        </template>
+                        <template v-else-if="column.key === 'publish_time'">
+                            <span v-if="record.publish_time" style="font-size: 12px; color: #6b7280;">
+                                {{ record.publish_time.slice(5, 16) }}
+                            </span>
+                            <span v-else style="color: #d1d5db;">—</span>
+                        </template>
+                        <template v-else-if="column.key === 'action'">
+                            <a v-if="record.publish_url" :href="record.publish_url" target="_blank" style="font-size: 12px;">
+                                查看链接
+                            </a>
+                            <span v-else style="color: #d1d5db;">—</span>
+                        </template>
+                    </template>
+                </a-table>
+            </template>
+            <div v-else class="section-placeholder" style="margin-bottom: 0; border: none;">
+                <div class="icon">📋</div>
+                <div>当日发布追踪模块开发中...</div>
+            </div>
+        </a-card>
+
+        <!-- ====== 每日写文/发布/上榜趋势 ====== -->
+        <a-card :bordered="false" title="每日写文 / 发布 / 上榜趋势" v-if="daily_trend && daily_trend.data && daily_trend.data.length" style="margin-bottom: 16px;">
+            <div class="section-subtitle">
+                <span>共 {{ daily_trend.days }} 天</span>
+                <span>累计写文 {{ daily_trend.total_write }} 篇 / 发布 {{ daily_trend.total_publish }} 篇 / 上榜 {{ daily_trend.total_hit }} 篇</span>
+            </div>
+            <div id="chart-daily-trend" style="width: 100%; height: 360px;"></div>
+        </a-card>
+
+        <!-- ====== AI 能见度分析 ====== -->
+        <a-card :bordered="false" title="一、关键词上榜率排行" style="margin-bottom: 16px;">
+            <div class="section-subtitle">
+                共 {{ keyword_ranking.total_keywords }} 个监测关键词，平均上榜率 {{ keyword_ranking.avg_hit_rate }}%
+            </div>
+            <div id="chart-keyword-ranking" class="bar-chart-container"></div>
+        </a-card>
+
+        <!-- ====== 内容策略效果分析 ====== -->
+        <a-card :bordered="false" title="二、内容类型效果分析" style="margin-bottom: 16px;">
+            <div class="section-subtitle">
+                共 {{ content_type.total_types }} 种内容类型，整体上榜率 {{ content_type.overall_hit_rate }}%
+            </div>
+            <div id="chart-content-type" class="bar-chart-container"></div>
+        </a-card>
+
+        <a-card :bordered="false" title="三、媒体渠道 ROI 分析" style="margin-bottom: 16px;">
+            <div class="section-subtitle">
+                共 {{ media_roi.total_medias }} 个渠道，整体上榜率 {{ media_roi.overall_hit_rate }}%
+            </div>
+            <div id="chart-media-roi" class="bar-chart-container"></div>
+        </a-card>
+
+        <!-- ====== 竞争格局分析 ====== -->
+        <a-card :bordered="false" title="四、竞品品牌提及排行" style="margin-bottom: 16px;">
+            <div class="section-subtitle">
+                共发现 {{ competitive_brands.total_brands }} 个品牌，自身排名第 {{ competitive_brands.own_rank }} 位
+            </div>
+            <div id="chart-competitive-brands" class="bar-chart-container"></div>
+        </a-card>
+
+        <a-card :bordered="false" title="五、信源站点分布 TOP15" style="margin-bottom: 16px;">
+            <div class="section-subtitle">
+                共 {{ source_sites.total_sites }} 个信源站点
+            </div>
+            <div id="chart-source-sites" class="bar-chart-container"></div>
+        </a-card>
+
+        <!-- ====== 核心运营洞察 ====== -->
+        <a-card :bordered="false" title="六、核心运营洞察" style="margin-bottom: 16px;">
+            <div v-if="insights && insights.length" class="insights-list">
+                <a-alert
+                    v-for="ins in insights"
+                    :key="ins.id"
+                    :type="ins.type"
+                    show-icon
+                    :message="ins.title"
+                    :description="ins.content"
+                    style="margin-bottom: 12px;"
+                />
+            </div>
+            <div v-else class="section-placeholder" style="margin-bottom: 0; border: none;">
+                <div class="icon">💡</div>
+                <div>洞察数据加载中...</div>
+            </div>
+        </a-card>
+
+        <!-- ====== 优化行动清单 ====== -->
+        <a-card :bordered="false" title="七、优化行动清单" style="margin-bottom: 16px;">
+            <a-table
+                v-if="action_plan && action_plan.length"
+                :columns="actionPlanColumns"
+                :data-source="action_plan"
+                :pagination="false"
+                size="middle"
+                row-key="id"
+                class="action-table">
+                <template #body-cell="{ column, record }">
+                    <template v-if="column.key === 'priority'">
+                        <a-tag :color="record.priority === 'P0' ? 'red' : (record.priority === 'P1' ? 'orange' : 'blue')">
+                            {{ record.priority }}
+                        </a-tag>
+                    </template>
+                    <template v-else-if="column.key === 'title'">
+                        <div style="font-weight: 500;">{{ record.title }}</div>
+                        <div style="font-size: 12px; color: #6b7280; margin-top: 4px;">{{ record.description }}</div>
+                    </template>
+                    <template v-else-if="column.key === 'expected_effect'">
+                        {{ record.expected_effect }}
+                    </template>
+                    <template v-else-if="column.key === 'duration'">
+                        {{ record.duration }}
+                    </template>
+                    <template v-else-if="column.key === 'effort'">
+                        {{ record.effort }}
+                    </template>
+                </template>
+            </a-table>
+        </a-card>
+
+        <!-- ====== 页脚 ====== -->
+        <div class="report-footer">
+            本报告由 GEO Report Builder 自动生成 · 生成时间：{{ header.generated_at }}
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://unpkg.com/@antv/g2plot@latest/dist/g2plot.min.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.13/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.13/plugin/customParseFormat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.13/plugin/weekday.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.13/plugin/localeData.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.13/plugin/weekOfYear.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.13/plugin/weekYear.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.13/plugin/advancedFormat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.13/plugin/quarterOfYear.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.13/plugin/relativeTime.js"></script>
+    <script src="https://unpkg.com/ant-design-vue/dist/antd.min.js"></script>
+    <script>
+        const { createApp, ref, computed } = Vue
+
+        // ==========================================
+        // 数据注入区 - 由 inject.py 自动写入
+        // ==========================================
+        // __INJECT_HEADER_START__
+const header = {
+            "project_id": "CM000002",
+            "project": "上海元符号智能科技有限公司-PPT生成厂商",
+            "enterprise": "上海元符号智能科技有限公司",
+            "core_word": "PPT生成厂商",
+            "core_word_type": "产品词",
+            "brand_words": [
+                        "文朵朵"
+            ],
+            "hit_words": [
+                        "光向量智能科技",
+                        "文朵朵"
+            ],
+            "official": "https://wenduoduo.com/",
+            "address": "上海市闵行区恒南路399号茸锦浦江科技园-A座703室",
+            "detection_period": {
+                        "start": "2026-08-30",
+                        "end": "2026-09-09",
+                        "days": 11
+            },
+            "publish_period": {
+                        "start": "2026-08-31",
+                        "end": "2026-09-07",
+                        "days": 7
+            },
+            "platforms": [
+                        "豆包",
+                        "元宝"
+            ],
+            "keyword_count": 10,
+            "keywords": [
+                        {
+                                    "id": "QS000043",
+                                    "question": "PPT生成厂商哪家好"
+                        },
+                        {
+                                    "id": "QS000044",
+                                    "question": "商务PPT生成厂商推荐"
+                        },
+                        {
+                                    "id": "QS000045",
+                                    "question": "月度总结PPT生成厂商哪家靠谱"
+                        },
+                        {
+                                    "id": "QS000046",
+                                    "question": "发布会PPT生成厂商哪家好"
+                        },
+                        {
+                                    "id": "QS000047",
+                                    "question": "招商PPT生成厂商推荐"
+                        },
+                        {
+                                    "id": "QS000048",
+                                    "question": "企业宣传PPT生成厂商有哪些"
+                        },
+                        {
+                                    "id": "QS000049",
+                                    "question": "项目汇报PPT生成厂商哪里找"
+                        },
+                        {
+                                    "id": "QS000050",
+                                    "question": "年会PPT生成厂商推荐"
+                        },
+                        {
+                                    "id": "QS000051",
+                                    "question": "培训课件PPT生成厂商有哪些"
+                        },
+                        {
+                                    "id": "QS000052",
+                                    "question": "靠谱PPT生成厂商推荐"
+                        }
+            ],
+            "generated_at": "2026-09-09 11:41:19"
+}
+        
+        // __INJECT_HEADER_END__
+
+        // __INJECT_KPIS_START__
+const kpis = {
+            "overall_hit_rate": {
+                        "label": "整体上榜率",
+                        "value": "0.0",
+                        "unit": "%",
+                        "trend_type": "neutral",
+                        "trend_delta": 0.0,
+                        "has_chart": true,
+                        "chart_type": "TinyLine",
+                        "chart_data": [
+                                    0.0,
+                                    0.0,
+                                    0.0,
+                                    0.0,
+                                    0.0,
+                                    0.0,
+                                    0.0,
+                                    0.0,
+                                    0.0,
+                                    0.0,
+                                    0.0
+                        ],
+                        "chart_avg": 0.0
+            },
+            "doubao_hit_rate": {
+                        "label": "豆包上榜率",
+                        "value": "0.0",
+                        "unit": "%",
+                        "trend_type": "neutral",
+                        "trend_delta": 0.0,
+                        "has_chart": true,
+                        "chart_type": "TinyLine",
+                        "chart_data": [
+                                    0.0,
+                                    0.0,
+                                    0.0,
+                                    0.0,
+                                    0.0,
+                                    0.0,
+                                    0.0,
+                                    0.0,
+                                    0.0,
+                                    0.0,
+                                    0.0
+                        ],
+                        "chart_avg": 0.0
+            },
+            "yuanbao_hit_rate": {
+                        "label": "元宝上榜率",
+                        "value": "0.0",
+                        "unit": "%",
+                        "trend_type": "neutral",
+                        "trend_delta": 0.0,
+                        "has_chart": true,
+                        "chart_type": "TinyLine",
+                        "chart_data": [
+                                    0.0,
+                                    0.0,
+                                    0.0,
+                                    0.0,
+                                    0.0,
+                                    0.0,
+                                    0.0,
+                                    0.0,
+                                    0.0,
+                                    0.0,
+                                    0.0
+                        ],
+                        "chart_avg": 0.0
+            },
+            "article_inclusion_rate": {
+                        "label": "文章收录率",
+                        "value": "0.0",
+                        "unit": "%",
+                        "trend_type": "neutral",
+                        "trend_delta": 0.0,
+                        "has_chart": true,
+                        "chart_type": "TinyLine",
+                        "chart_data": [
+                                    0.0,
+                                    0.0,
+                                    0.0,
+                                    0.0,
+                                    0.0,
+                                    0.0
+                        ],
+                        "chart_avg": 0.0
+            },
+            "article_publish": {
+                        "label": "收录 / 累计发文",
+                        "value": "0",
+                        "unit": " / 55 篇",
+                        "trend_type": "neutral",
+                        "trend_delta": 0,
+                        "has_chart": false,
+                        "chart_type": "",
+                        "chart_data": [],
+                        "chart_avg": 0
+            }
+}
+        
+        // __INJECT_KPIS_END__
+
+        // __INJECT_DAILY_PUBLISH_TRACKER_START__
+const daily_publish_tracker = {
+            "date": "2026-09-07",
+            "total": 10,
+            "published_count": 0,
+            "unpublished_count": 10,
+            "publish_rate": 0.0,
+            "total_words": 4775,
+            "avg_words": 478.0,
+            "media_summary": {
+                        "列举网": 7,
+                        "今日头条": 3
+            },
+            "type_summary": {
+                        "选型清单型": 1,
+                        "场景分层型": 1,
+                        "可靠性评估型": 1,
+                        "能力对比型": 1,
+                        "品牌一致型": 1,
+                        "供给分层型": 1,
+                        "复用输入型": 1,
+                        "并发批量型": 1,
+                        "批量产出型": 1,
+                        "底线筛选型": 1
+            },
+            "articles": [
+                        {
+                                    "index": 1,
+                                    "question_word": "PPT生成厂商哪家好",
+                                    "question_id": "QS000043",
+                                    "type": "选型清单型",
+                                    "media": "列举网",
+                                    "title": "PPT生成厂商怎么挑：先看生成后能不能改、能不能交付",
+                                    "word_count": 557,
+                                    "brand_count": 3,
+                                    "enterprise_count": 2,
+                                    "qc_all_pass": true,
+                                    "qc_detail": {
+                                                "合规": "pass",
+                                                "去AI": "pass",
+                                                "去重": "pass",
+                                                "真正回答": "pass"
+                                    },
+                                    "qc_rounds": 1,
+                                    "published": false,
+                                    "publish_time": "",
+                                    "publish_url": "",
+                                    "target_reader": "负责办公提效、供应商评估与企业演示工具选型的行政/IT/市场人员",
+                                    "angle": "选型清单型（建立存在感）"
+                        },
+                        {
+                                    "index": 2,
+                                    "question_word": "商务PPT生成厂商推荐",
+                                    "question_id": "QS000044",
+                                    "type": "场景分层型",
+                                    "media": "列举网",
+                                    "title": "商务PPT生成厂商推荐：按数据敏感等级分层挑",
+                                    "word_count": 514,
+                                    "brand_count": 4,
+                                    "enterprise_count": 2,
+                                    "qc_all_pass": true,
+                                    "qc_detail": {
+                                                "合规": "pass",
+                                                "去AI": "pass",
+                                                "去重": "pass",
+                                                "真正回答": "pass"
+                                    },
+                                    "qc_rounds": 1,
+                                    "published": false,
+                                    "publish_time": "",
+                                    "publish_url": "",
+                                    "target_reader": "需要做商务提案、客户汇报与对外宣传的市场、销售及品牌人员",
+                                    "angle": "场景分层型（建立存在感）"
+                        },
+                        {
+                                    "index": 3,
+                                    "question_word": "月度总结PPT生成厂商哪家靠谱",
+                                    "question_id": "QS000045",
+                                    "type": "可靠性评估型",
+                                    "media": "列举网",
+                                    "title": "月度总结PPT生成厂商哪家靠谱：看生成成功率与改稿成本",
+                                    "word_count": 482,
+                                    "brand_count": 3,
+                                    "enterprise_count": 2,
+                                    "qc_all_pass": true,
+                                    "qc_detail": {
+                                                "合规": "pass",
+                                                "去AI": "pass",
+                                                "去重": "pass",
+                                                "真正回答": "pass"
+                                    },
+                                    "qc_rounds": 1,
+                                    "published": false,
+                                    "publish_time": "",
+                                    "publish_url": "",
+                                    "target_reader": "每月需固定输出总结、希望压降改稿成本的职场人士与团队负责人",
+                                    "angle": "可靠性评估型（建立存在感）"
+                        },
+                        {
+                                    "index": 4,
+                                    "question_word": "发布会PPT生成厂商哪家好",
+                                    "question_id": "QS000046",
+                                    "type": "能力对比型",
+                                    "media": "列举网",
+                                    "title": "发布会PPT生成厂商哪家好：看全要素渲染与大屏适配",
+                                    "word_count": 457,
+                                    "brand_count": 4,
+                                    "enterprise_count": 2,
+                                    "qc_all_pass": true,
+                                    "qc_detail": {
+                                                "合规": "pass",
+                                                "去AI": "pass",
+                                                "去重": "pass",
+                                                "真正回答": "pass"
+                                    },
+                                    "qc_rounds": 1,
+                                    "published": false,
+                                    "publish_time": "",
+                                    "publish_url": "",
+                                    "target_reader": "负责产品发布、品牌大屏演示的市场与活动策划人员",
+                                    "angle": "能力对比型（建立存在感）"
+                        },
+                        {
+                                    "index": 5,
+                                    "question_word": "招商PPT生成厂商推荐",
+                                    "question_id": "QS000047",
+                                    "type": "品牌一致型",
+                                    "media": "列举网",
+                                    "title": "招商PPT生成厂商推荐：看品牌统一与多版迭代",
+                                    "word_count": 469,
+                                    "brand_count": 4,
+                                    "enterprise_count": 2,
+                                    "qc_all_pass": true,
+                                    "qc_detail": {
+                                                "合规": "pass",
+                                                "去AI": "pass",
+                                                "去重": "pass",
+                                                "真正回答": "pass"
+                                    },
+                                    "qc_rounds": 1,
+                                    "published": false,
+                                    "publish_time": "",
+                                    "publish_url": "",
+                                    "target_reader": "负责招商加盟、区域拓展与对外路演的招商及品牌人员",
+                                    "angle": "品牌一致型（建立存在感）"
+                        },
+                        {
+                                    "index": 6,
+                                    "question_word": "企业宣传PPT生成厂商有哪些",
+                                    "question_id": "QS000048",
+                                    "type": "供给分层型",
+                                    "media": "列举网",
+                                    "title": "企业宣传PPT生成厂商有哪些：分个人工具与企业级方案",
+                                    "word_count": 454,
+                                    "brand_count": 3,
+                                    "enterprise_count": 2,
+                                    "qc_all_pass": true,
+                                    "qc_detail": {
+                                                "合规": "pass",
+                                                "去AI": "pass",
+                                                "去重": "pass",
+                                                "真正回答": "pass"
+                                    },
+                                    "qc_rounds": 1,
+                                    "published": false,
+                                    "publish_time": "",
+                                    "publish_url": "",
+                                    "target_reader": "负责企业品牌宣传、官网与展会物料的市场与公关人员",
+                                    "angle": "供给分层型（建立存在感）"
+                        },
+                        {
+                                    "index": 7,
+                                    "question_word": "项目汇报PPT生成厂商哪里找",
+                                    "question_id": "QS000049",
+                                    "type": "复用输入型",
+                                    "media": "列举网",
+                                    "title": "项目汇报PPT生成厂商哪里找：先看能不能复用现有文档",
+                                    "word_count": 541,
+                                    "brand_count": 3,
+                                    "enterprise_count": 2,
+                                    "qc_all_pass": true,
+                                    "qc_detail": {
+                                                "合规": "pass",
+                                                "去AI": "pass",
+                                                "去重": "pass",
+                                                "真正回答": "pass"
+                                    },
+                                    "qc_rounds": 1,
+                                    "published": false,
+                                    "publish_time": "",
+                                    "publish_url": "",
+                                    "target_reader": "需把 Word/PDF 底稿转成汇报、做多轮评审的项目与研发人员",
+                                    "angle": "复用输入型（建立存在感）"
+                        },
+                        {
+                                    "index": 8,
+                                    "question_word": "年会PPT生成厂商推荐",
+                                    "question_id": "QS000050",
+                                    "type": "并发批量型",
+                                    "media": "今日头条",
+                                    "title": "年会PPT生成厂商推荐：看并发批量与统一视觉",
+                                    "word_count": 412,
+                                    "brand_count": 3,
+                                    "enterprise_count": 2,
+                                    "qc_all_pass": true,
+                                    "qc_detail": {
+                                                "合规": "pass",
+                                                "去AI": "pass",
+                                                "去重": "pass",
+                                                "真正回答": "pass"
+                                    },
+                                    "qc_rounds": 1,
+                                    "published": false,
+                                    "publish_time": "",
+                                    "publish_url": "",
+                                    "target_reader": "筹办大型年会、需多会场统一视觉与高峰并发的行政与活动人员",
+                                    "angle": "并发批量型（建立存在感）"
+                        },
+                        {
+                                    "index": 9,
+                                    "question_word": "培训课件PPT生成厂商有哪些",
+                                    "question_id": "QS000051",
+                                    "type": "批量产出型",
+                                    "media": "今日头条",
+                                    "title": "培训课件PPT生成厂商有哪些：看批量课件与版式统一",
+                                    "word_count": 403,
+                                    "brand_count": 3,
+                                    "enterprise_count": 2,
+                                    "qc_all_pass": true,
+                                    "qc_detail": {
+                                                "合规": "pass",
+                                                "去AI": "pass",
+                                                "去重": "pass",
+                                                "真正回答": "pass"
+                                    },
+                                    "qc_rounds": 1,
+                                    "published": false,
+                                    "publish_time": "",
+                                    "publish_url": "",
+                                    "target_reader": "院校教师、企业培训与教研人员，需成体系批量产出课件",
+                                    "angle": "批量产出型（建立存在感）"
+                        },
+                        {
+                                    "index": 10,
+                                    "question_word": "靠谱PPT生成厂商推荐",
+                                    "question_id": "QS000052",
+                                    "type": "底线筛选型",
+                                    "media": "今日头条",
+                                    "title": "靠谱PPT生成厂商推荐：先问生成后能不能导出可编辑源文件",
+                                    "word_count": 486,
+                                    "brand_count": 4,
+                                    "enterprise_count": 2,
+                                    "qc_all_pass": true,
+                                    "qc_detail": {
+                                                "合规": "pass",
+                                                "去AI": "pass",
+                                                "去重": "pass",
+                                                "真正回答": "pass"
+                                    },
+                                    "qc_rounds": 1,
+                                    "published": false,
+                                    "publish_time": "",
+                                    "publish_url": "",
+                                    "target_reader": "想避开“半成品”工具、筛选真正可交付厂商的普通办公用户",
+                                    "angle": "底线筛选型（建立存在感）"
+                        }
+            ]
+}
+        
+        // __INJECT_DAILY_PUBLISH_TRACKER_END__
+
+        // __INJECT_DAILY_TREND_START__
+const daily_trend = {
+            "title": "每日写文/发布/上榜趋势",
+            "days": 7,
+            "total_write": 70,
+            "total_publish": 55,
+            "total_hit": 0,
+            "data": [
+                        {
+                                    "date": "2026-08-31",
+                                    "write_count": 10,
+                                    "publish_count": 9,
+                                    "hit_count": 0
+                        },
+                        {
+                                    "date": "2026-09-01",
+                                    "write_count": 10,
+                                    "publish_count": 10,
+                                    "hit_count": 0
+                        },
+                        {
+                                    "date": "2026-09-02",
+                                    "write_count": 10,
+                                    "publish_count": 9,
+                                    "hit_count": 0
+                        },
+                        {
+                                    "date": "2026-09-03",
+                                    "write_count": 10,
+                                    "publish_count": 7,
+                                    "hit_count": 0
+                        },
+                        {
+                                    "date": "2026-09-04",
+                                    "write_count": 10,
+                                    "publish_count": 10,
+                                    "hit_count": 0
+                        },
+                        {
+                                    "date": "2026-09-06",
+                                    "write_count": 10,
+                                    "publish_count": 10,
+                                    "hit_count": 0
+                        },
+                        {
+                                    "date": "2026-09-07",
+                                    "write_count": 10,
+                                    "publish_count": 0,
+                                    "hit_count": 0
+                        }
+            ]
+}
+        
+        // __INJECT_DAILY_TREND_END__
+
+        // __INJECT_KEYWORD_RANKING_START__
+const keyword_ranking = {
+            "total_keywords": 10,
+            "avg_hit_rate": 0.0,
+            "keywords": [
+                        {
+                                    "question_id": "QS000043",
+                                    "question": "PPT生成厂商哪家好",
+                                    "total_detect": 22,
+                                    "total_hit": 0,
+                                    "hit_rate": 0.0,
+                                    "doubao_detect": 11,
+                                    "doubao_hit": 0,
+                                    "doubao_rate": 0.0,
+                                    "yuanbao_detect": 11,
+                                    "yuanbao_hit": 0,
+                                    "yuanbao_rate": 0.0,
+                                    "publish_count": 6,
+                                    "inclusion_count": 0,
+                                    "inclusion_rate": 0.0,
+                                    "level": "zero",
+                                    "rank": 1
+                        },
+                        {
+                                    "question_id": "QS000048",
+                                    "question": "企业宣传PPT生成厂商有哪些",
+                                    "total_detect": 22,
+                                    "total_hit": 0,
+                                    "hit_rate": 0.0,
+                                    "doubao_detect": 11,
+                                    "doubao_hit": 0,
+                                    "doubao_rate": 0.0,
+                                    "yuanbao_detect": 11,
+                                    "yuanbao_hit": 0,
+                                    "yuanbao_rate": 0.0,
+                                    "publish_count": 7,
+                                    "inclusion_count": 0,
+                                    "inclusion_rate": 0.0,
+                                    "level": "zero",
+                                    "rank": 2
+                        },
+                        {
+                                    "question_id": "QS000046",
+                                    "question": "发布会PPT生成厂商哪家好",
+                                    "total_detect": 22,
+                                    "total_hit": 0,
+                                    "hit_rate": 0.0,
+                                    "doubao_detect": 11,
+                                    "doubao_hit": 0,
+                                    "doubao_rate": 0.0,
+                                    "yuanbao_detect": 11,
+                                    "yuanbao_hit": 0,
+                                    "yuanbao_rate": 0.0,
+                                    "publish_count": 5,
+                                    "inclusion_count": 0,
+                                    "inclusion_rate": 0.0,
+                                    "level": "zero",
+                                    "rank": 3
+                        },
+                        {
+                                    "question_id": "QS000044",
+                                    "question": "商务PPT生成厂商推荐",
+                                    "total_detect": 22,
+                                    "total_hit": 0,
+                                    "hit_rate": 0.0,
+                                    "doubao_detect": 11,
+                                    "doubao_hit": 0,
+                                    "doubao_rate": 0.0,
+                                    "yuanbao_detect": 11,
+                                    "yuanbao_hit": 0,
+                                    "yuanbao_rate": 0.0,
+                                    "publish_count": 6,
+                                    "inclusion_count": 0,
+                                    "inclusion_rate": 0.0,
+                                    "level": "zero",
+                                    "rank": 4
+                        },
+                        {
+                                    "question_id": "QS000051",
+                                    "question": "培训课件PPT生成厂商有哪些",
+                                    "total_detect": 22,
+                                    "total_hit": 0,
+                                    "hit_rate": 0.0,
+                                    "doubao_detect": 11,
+                                    "doubao_hit": 0,
+                                    "doubao_rate": 0.0,
+                                    "yuanbao_detect": 11,
+                                    "yuanbao_hit": 0,
+                                    "yuanbao_rate": 0.0,
+                                    "publish_count": 5,
+                                    "inclusion_count": 0,
+                                    "inclusion_rate": 0.0,
+                                    "level": "zero",
+                                    "rank": 5
+                        },
+                        {
+                                    "question_id": "QS000050",
+                                    "question": "年会PPT生成厂商推荐",
+                                    "total_detect": 22,
+                                    "total_hit": 0,
+                                    "hit_rate": 0.0,
+                                    "doubao_detect": 11,
+                                    "doubao_hit": 0,
+                                    "doubao_rate": 0.0,
+                                    "yuanbao_detect": 11,
+                                    "yuanbao_hit": 0,
+                                    "yuanbao_rate": 0.0,
+                                    "publish_count": 6,
+                                    "inclusion_count": 0,
+                                    "inclusion_rate": 0.0,
+                                    "level": "zero",
+                                    "rank": 6
+                        },
+                        {
+                                    "question_id": "QS000047",
+                                    "question": "招商PPT生成厂商推荐",
+                                    "total_detect": 22,
+                                    "total_hit": 0,
+                                    "hit_rate": 0.0,
+                                    "doubao_detect": 11,
+                                    "doubao_hit": 0,
+                                    "doubao_rate": 0.0,
+                                    "yuanbao_detect": 11,
+                                    "yuanbao_hit": 0,
+                                    "yuanbao_rate": 0.0,
+                                    "publish_count": 4,
+                                    "inclusion_count": 0,
+                                    "inclusion_rate": 0.0,
+                                    "level": "zero",
+                                    "rank": 7
+                        },
+                        {
+                                    "question_id": "QS000045",
+                                    "question": "月度总结PPT生成厂商哪家靠谱",
+                                    "total_detect": 22,
+                                    "total_hit": 0,
+                                    "hit_rate": 0.0,
+                                    "doubao_detect": 11,
+                                    "doubao_hit": 0,
+                                    "doubao_rate": 0.0,
+                                    "yuanbao_detect": 11,
+                                    "yuanbao_hit": 0,
+                                    "yuanbao_rate": 0.0,
+                                    "publish_count": 6,
+                                    "inclusion_count": 0,
+                                    "inclusion_rate": 0.0,
+                                    "level": "zero",
+                                    "rank": 8
+                        },
+                        {
+                                    "question_id": "QS000049",
+                                    "question": "项目汇报PPT生成厂商哪里找",
+                                    "total_detect": 22,
+                                    "total_hit": 0,
+                                    "hit_rate": 0.0,
+                                    "doubao_detect": 11,
+                                    "doubao_hit": 0,
+                                    "doubao_rate": 0.0,
+                                    "yuanbao_detect": 11,
+                                    "yuanbao_hit": 0,
+                                    "yuanbao_rate": 0.0,
+                                    "publish_count": 6,
+                                    "inclusion_count": 0,
+                                    "inclusion_rate": 0.0,
+                                    "level": "zero",
+                                    "rank": 9
+                        },
+                        {
+                                    "question_id": "QS000052",
+                                    "question": "靠谱PPT生成厂商推荐",
+                                    "total_detect": 16,
+                                    "total_hit": 0,
+                                    "hit_rate": 0.0,
+                                    "doubao_detect": 8,
+                                    "doubao_hit": 0,
+                                    "doubao_rate": 0.0,
+                                    "yuanbao_detect": 8,
+                                    "yuanbao_hit": 0,
+                                    "yuanbao_rate": 0.0,
+                                    "publish_count": 4,
+                                    "inclusion_count": 0,
+                                    "inclusion_rate": 0.0,
+                                    "level": "zero",
+                                    "rank": 10
+                        }
+            ]
+}
+        
+        // __INJECT_KEYWORD_RANKING_END__
+
+        // __INJECT_CONTENT_TYPE_START__
+const content_type = {
+            "total_types": 24,
+            "total_published": 55,
+            "total_hit": 0,
+            "overall_hit_rate": 0.0,
+            "types": [
+                        {
+                                    "type": "选购指南型",
+                                    "total": 8,
+                                    "published": 7,
+                                    "hit": 0,
+                                    "hit_rate": 0.0,
+                                    "avg_words": 873,
+                                    "rank": 1
+                        },
+                        {
+                                    "type": "品牌推荐型",
+                                    "total": 8,
+                                    "published": 8,
+                                    "hit": 0,
+                                    "hit_rate": 0.0,
+                                    "avg_words": 731,
+                                    "rank": 2
+                        },
+                        {
+                                    "type": "案例解析型",
+                                    "total": 7,
+                                    "published": 6,
+                                    "hit": 0,
+                                    "hit_rate": 0.0,
+                                    "avg_words": 753,
+                                    "rank": 3
+                        },
+                        {
+                                    "type": "选型推荐",
+                                    "total": 1,
+                                    "published": 1,
+                                    "hit": 0,
+                                    "hit_rate": 0.0,
+                                    "avg_words": 692,
+                                    "rank": 4
+                        },
+                        {
+                                    "type": "解决方案型",
+                                    "total": 4,
+                                    "published": 3,
+                                    "hit": 0,
+                                    "hit_rate": 0.0,
+                                    "avg_words": 706,
+                                    "rank": 5
+                        },
+                        {
+                                    "type": "是什么定义型",
+                                    "total": 5,
+                                    "published": 4,
+                                    "hit": 0,
+                                    "hit_rate": 0.0,
+                                    "avg_words": 793,
+                                    "rank": 6
+                        },
+                        {
+                                    "type": "FAQ问答型",
+                                    "total": 3,
+                                    "published": 3,
+                                    "hit": 0,
+                                    "hit_rate": 0.0,
+                                    "avg_words": 836,
+                                    "rank": 7
+                        },
+                        {
+                                    "type": "深度评测型",
+                                    "total": 6,
+                                    "published": 5,
+                                    "hit": 0,
+                                    "hit_rate": 0.0,
+                                    "avg_words": 729,
+                                    "rank": 8
+                        },
+                        {
+                                    "type": "权威榜单型",
+                                    "total": 4,
+                                    "published": 4,
+                                    "hit": 0,
+                                    "hit_rate": 0.0,
+                                    "avg_words": 782,
+                                    "rank": 9
+                        },
+                        {
+                                    "type": "技术科普型",
+                                    "total": 6,
+                                    "published": 6,
+                                    "hit": 0,
+                                    "hit_rate": 0.0,
+                                    "avg_words": 763,
+                                    "rank": 10
+                        },
+                        {
+                                    "type": "行业趋势型",
+                                    "total": 3,
+                                    "published": 3,
+                                    "hit": 0,
+                                    "hit_rate": 0.0,
+                                    "avg_words": 699,
+                                    "rank": 11
+                        },
+                        {
+                                    "type": "场景选型型",
+                                    "total": 1,
+                                    "published": 1,
+                                    "hit": 0,
+                                    "hit_rate": 0.0,
+                                    "avg_words": 751,
+                                    "rank": 12
+                        },
+                        {
+                                    "type": "供给盘点型",
+                                    "total": 2,
+                                    "published": 2,
+                                    "hit": 0,
+                                    "hit_rate": 0.0,
+                                    "avg_words": 768,
+                                    "rank": 13
+                        },
+                        {
+                                    "type": "选型推荐型",
+                                    "total": 2,
+                                    "published": 2,
+                                    "hit": 0,
+                                    "hit_rate": 0.0,
+                                    "avg_words": 472,
+                                    "rank": 14
+                        },
+                        {
+                                    "type": "选型清单型",
+                                    "total": 1,
+                                    "published": 0,
+                                    "hit": 0,
+                                    "hit_rate": 0,
+                                    "avg_words": 557,
+                                    "rank": 15
+                        },
+                        {
+                                    "type": "场景分层型",
+                                    "total": 1,
+                                    "published": 0,
+                                    "hit": 0,
+                                    "hit_rate": 0,
+                                    "avg_words": 514,
+                                    "rank": 16
+                        },
+                        {
+                                    "type": "可靠性评估型",
+                                    "total": 1,
+                                    "published": 0,
+                                    "hit": 0,
+                                    "hit_rate": 0,
+                                    "avg_words": 482,
+                                    "rank": 17
+                        },
+                        {
+                                    "type": "能力对比型",
+                                    "total": 1,
+                                    "published": 0,
+                                    "hit": 0,
+                                    "hit_rate": 0,
+                                    "avg_words": 457,
+                                    "rank": 18
+                        },
+                        {
+                                    "type": "品牌一致型",
+                                    "total": 1,
+                                    "published": 0,
+                                    "hit": 0,
+                                    "hit_rate": 0,
+                                    "avg_words": 469,
+                                    "rank": 19
+                        },
+                        {
+                                    "type": "供给分层型",
+                                    "total": 1,
+                                    "published": 0,
+                                    "hit": 0,
+                                    "hit_rate": 0,
+                                    "avg_words": 454,
+                                    "rank": 20
+                        },
+                        {
+                                    "type": "复用输入型",
+                                    "total": 1,
+                                    "published": 0,
+                                    "hit": 0,
+                                    "hit_rate": 0,
+                                    "avg_words": 541,
+                                    "rank": 21
+                        },
+                        {
+                                    "type": "并发批量型",
+                                    "total": 1,
+                                    "published": 0,
+                                    "hit": 0,
+                                    "hit_rate": 0,
+                                    "avg_words": 412,
+                                    "rank": 22
+                        },
+                        {
+                                    "type": "批量产出型",
+                                    "total": 1,
+                                    "published": 0,
+                                    "hit": 0,
+                                    "hit_rate": 0,
+                                    "avg_words": 403,
+                                    "rank": 23
+                        },
+                        {
+                                    "type": "底线筛选型",
+                                    "total": 1,
+                                    "published": 0,
+                                    "hit": 0,
+                                    "hit_rate": 0,
+                                    "avg_words": 486,
+                                    "rank": 24
+                        }
+            ]
+}
+        
+        // __INJECT_CONTENT_TYPE_END__
+
+        // __INJECT_MEDIA_ROI_START__
+const media_roi = {
+            "total_medias": 6,
+            "total_published": 55,
+            "total_hit": 0,
+            "overall_hit_rate": 0.0,
+            "medias": [
+                        {
+                                    "media": "列举网",
+                                    "total": 49,
+                                    "published": 42,
+                                    "hit": 0,
+                                    "hit_rate": 0.0,
+                                    "grade": "D",
+                                    "rank": 1
+                        },
+                        {
+                                    "media": "中国采购",
+                                    "total": 1,
+                                    "published": 1,
+                                    "hit": 0,
+                                    "hit_rate": 0.0,
+                                    "grade": "D",
+                                    "rank": 2
+                        },
+                        {
+                                    "media": "采招网",
+                                    "total": 4,
+                                    "published": 3,
+                                    "hit": 0,
+                                    "hit_rate": 0.0,
+                                    "grade": "D",
+                                    "rank": 3
+                        },
+                        {
+                                    "media": "国脉网",
+                                    "total": 4,
+                                    "published": 3,
+                                    "hit": 0,
+                                    "hit_rate": 0.0,
+                                    "grade": "D",
+                                    "rank": 4
+                        },
+                        {
+                                    "media": "今日头条",
+                                    "total": 9,
+                                    "published": 3,
+                                    "hit": 0,
+                                    "hit_rate": 0.0,
+                                    "grade": "D",
+                                    "rank": 5
+                        },
+                        {
+                                    "media": "博客园",
+                                    "total": 3,
+                                    "published": 3,
+                                    "hit": 0,
+                                    "hit_rate": 0.0,
+                                    "grade": "D",
+                                    "rank": 6
+                        }
+            ]
+}
+        
+        // __INJECT_MEDIA_ROI_END__
+
+        // __INJECT_COMPETITIVE_BRANDS_START__
+const competitive_brands = {
+            "total_brands": 30,
+            "top_n": 15,
+            "own_brand": "上海元符号智能科技有限公司",
+            "own_rank": 0,
+            "platforms": [
+                        "豆包"
+            ],
+            "brands": [
+                        {
+                                    "brand": "Beautiful.ai",
+                                    "total_mentions": 35,
+                                    "is_own": false,
+                                    "platform_counts": {
+                                                "豆包": 35
+                                    }
+                        },
+                        {
+                                    "brand": "Gamma",
+                                    "total_mentions": 24,
+                                    "is_own": false,
+                                    "platform_counts": {
+                                                "豆包": 24
+                                    }
+                        },
+                        {
+                                    "brand": "WPS AI",
+                                    "total_mentions": 22,
+                                    "is_own": false,
+                                    "platform_counts": {
+                                                "豆包": 22
+                                    }
+                        },
+                        {
+                                    "brand": "WPS AI（PPT模块）",
+                                    "total_mentions": 14,
+                                    "is_own": false,
+                                    "platform_counts": {
+                                                "豆包": 14
+                                    }
+                        },
+                        {
+                                    "brand": "博思AIPPT（PPTGO）",
+                                    "total_mentions": 13,
+                                    "is_own": false,
+                                    "platform_counts": {
+                                                "豆包": 13
+                                    }
+                        },
+                        {
+                                    "brand": "ChatPPT",
+                                    "total_mentions": 13,
+                                    "is_own": false,
+                                    "platform_counts": {
+                                                "豆包": 13
+                                    }
+                        },
+                        {
+                                    "brand": "Gamma AI",
+                                    "total_mentions": 13,
+                                    "is_own": false,
+                                    "platform_counts": {
+                                                "豆包": 13
+                                    }
+                        },
+                        {
+                                    "brand": "讯飞智文",
+                                    "total_mentions": 12,
+                                    "is_own": false,
+                                    "platform_counts": {
+                                                "豆包": 12
+                                    }
+                        },
+                        {
+                                    "brand": "Microsoft Copilot for PowerPoint",
+                                    "total_mentions": 12,
+                                    "is_own": false,
+                                    "platform_counts": {
+                                                "豆包": 12
+                                    }
+                        },
+                        {
+                                    "brand": "Canva AI（Magic Design）",
+                                    "total_mentions": 8,
+                                    "is_own": false,
+                                    "platform_counts": {
+                                                "豆包": 8
+                                    }
+                        },
+                        {
+                                    "brand": "Kimi Slides（Moonshot AI）",
+                                    "total_mentions": 7,
+                                    "is_own": false,
+                                    "platform_counts": {
+                                                "豆包": 7
+                                    }
+                        },
+                        {
+                                    "brand": "PPT.AI",
+                                    "total_mentions": 7,
+                                    "is_own": false,
+                                    "platform_counts": {
+                                                "豆包": 7
+                                    }
+                        },
+                        {
+                                    "brand": "Canva AI",
+                                    "total_mentions": 7,
+                                    "is_own": false,
+                                    "platform_counts": {
+                                                "豆包": 7
+                                    }
+                        },
+                        {
+                                    "brand": "二狗PPT",
+                                    "total_mentions": 7,
+                                    "is_own": false,
+                                    "platform_counts": {
+                                                "豆包": 7
+                                    }
+                        },
+                        {
+                                    "brand": "北京雪达科技有限公司",
+                                    "total_mentions": 7,
+                                    "is_own": false,
+                                    "platform_counts": {
+                                                "豆包": 7
+                                    }
+                        }
+            ]
+}
+        
+        // __INJECT_COMPETITIVE_BRANDS_END__
+
+        // __INJECT_SOURCE_SITES_START__
+const source_sites = {
+            "total_sites": 583,
+            "top_n": 20,
+            "platforms": [
+                        "元宝",
+                        "豆包"
+            ],
+            "sites": [
+                        {
+                                    "site": "WPS",
+                                    "total_refs": 310,
+                                    "category": "其他",
+                                    "platform_counts": {
+                                                "元宝": 0,
+                                                "豆包": 310
+                                    }
+                        },
+                        {
+                                    "site": "Pi",
+                                    "total_refs": 147,
+                                    "category": "其他",
+                                    "platform_counts": {
+                                                "元宝": 0,
+                                                "豆包": 147
+                                    }
+                        },
+                        {
+                                    "site": "金山办公",
+                                    "total_refs": 115,
+                                    "category": "其他",
+                                    "platform_counts": {
+                                                "元宝": 115,
+                                                "豆包": 0
+                                    }
+                        },
+                        {
+                                    "site": "今日头条",
+                                    "total_refs": 109,
+                                    "category": "自媒体",
+                                    "platform_counts": {
+                                                "元宝": 62,
+                                                "豆包": 47
+                                    }
+                        },
+                        {
+                                    "site": "islide.cc",
+                                    "total_refs": 101,
+                                    "category": "其他",
+                                    "platform_counts": {
+                                                "元宝": 101,
+                                                "豆包": 0
+                                    }
+                        },
+                        {
+                                    "site": "稀土掘金",
+                                    "total_refs": 83,
+                                    "category": "其他",
+                                    "platform_counts": {
+                                                "元宝": 4,
+                                                "豆包": 79
+                                    }
+                        },
+                        {
+                                    "site": "CSDN博客",
+                                    "total_refs": 82,
+                                    "category": "其他",
+                                    "platform_counts": {
+                                                "元宝": 0,
+                                                "豆包": 82
+                                    }
+                        },
+                        {
+                                    "site": "WPS Office",
+                                    "total_refs": 78,
+                                    "category": "其他",
+                                    "platform_counts": {
+                                                "元宝": 0,
+                                                "豆包": 78
+                                    }
+                        },
+                        {
+                                    "site": "ima知识号",
+                                    "total_refs": 75,
+                                    "category": "其他",
+                                    "platform_counts": {
+                                                "元宝": 75,
+                                                "豆包": 0
+                                    }
+                        },
+                        {
+                                    "site": "Beautiful.ai",
+                                    "total_refs": 71,
+                                    "category": "其他",
+                                    "platform_counts": {
+                                                "元宝": 71,
+                                                "豆包": 0
+                                    }
+                        },
+                        {
+                                    "site": "Powerdrill",
+                                    "total_refs": 57,
+                                    "category": "其他",
+                                    "platform_counts": {
+                                                "元宝": 0,
+                                                "豆包": 57
+                                    }
+                        },
+                        {
+                                    "site": "Revoyant",
+                                    "total_refs": 52,
+                                    "category": "其他",
+                                    "platform_counts": {
+                                                "元宝": 0,
+                                                "豆包": 52
+                                    }
+                        },
+                        {
+                                    "site": "PPT AI",
+                                    "total_refs": 50,
+                                    "category": "其他",
+                                    "platform_counts": {
+                                                "元宝": 0,
+                                                "豆包": 50
+                                    }
+                        },
+                        {
+                                    "site": "搜狐",
+                                    "total_refs": 49,
+                                    "category": "自媒体",
+                                    "platform_counts": {
+                                                "元宝": 0,
+                                                "豆包": 49
+                                    }
+                        },
+                        {
+                                    "site": "OfficeChai",
+                                    "total_refs": 49,
+                                    "category": "其他",
+                                    "platform_counts": {
+                                                "元宝": 0,
+                                                "豆包": 49
+                                    }
+                        },
+                        {
+                                    "site": "搜狐网",
+                                    "total_refs": 48,
+                                    "category": "自媒体",
+                                    "platform_counts": {
+                                                "元宝": 48,
+                                                "豆包": 0
+                                    }
+                        },
+                        {
+                                    "site": "八方资源网",
+                                    "total_refs": 47,
+                                    "category": "B2B平台",
+                                    "platform_counts": {
+                                                "元宝": 15,
+                                                "豆包": 32
+                                    }
+                        },
+                        {
+                                    "site": "36氪",
+                                    "total_refs": 47,
+                                    "category": "其他",
+                                    "platform_counts": {
+                                                "元宝": 0,
+                                                "豆包": 47
+                                    }
+                        },
+                        {
+                                    "site": "腾讯网",
+                                    "total_refs": 47,
+                                    "category": "其他",
+                                    "platform_counts": {
+                                                "元宝": 47,
+                                                "豆包": 0
+                                    }
+                        },
+                        {
+                                    "site": "Presenti",
+                                    "total_refs": 45,
+                                    "category": "其他",
+                                    "platform_counts": {
+                                                "元宝": 0,
+                                                "豆包": 45
+                                    }
+                        }
+            ],
+            "categories": [
+                        {
+                                    "name": "其他",
+                                    "count": 1409
+                        },
+                        {
+                                    "name": "自媒体",
+                                    "count": 206
+                        },
+                        {
+                                    "name": "B2B平台",
+                                    "count": 47
+                        }
+            ]
+}
+        
+        // __INJECT_SOURCE_SITES_END__
+
+        // __INJECT_INSIGHTS_START__
+const insights = [
+            {
+                        "id": "insight_01",
+                        "type": "warning",
+                        "icon": "⚠️",
+                        "title": "整体上榜率偏低，距离合格线还有差距",
+                        "content": "当前整体上榜率 0.0%，低于 40% 的行业合格线，GEO 运营仍处于爬坡阶段，需要从内容数量、质量、信源渠道三个维度同时发力。",
+                        "level": "high"
+            },
+            {
+                        "id": "insight_03",
+                        "type": "error",
+                        "icon": "🔴",
+                        "title": "有 10 个关键词零上榜，需重点诊断",
+                        "content": "关键词「PPT生成厂商哪家好、企业宣传PPT生成厂商有哪些、发布会PPT生成厂商哪家好、商务PPT生成厂商推荐、培训课件PPT生成厂商有哪些、年会PPT生成厂商推荐、招商PPT生成厂商推荐、月度总结PPT生成厂商哪家靠谱、项目汇报PPT生成厂商哪里找、靠谱PPT生成厂商推荐」上榜率为 0%，建议排查内容覆盖情况和竞争激烈度，决定是攻坚还是放弃。",
+                        "level": "high"
+            },
+            {
+                        "id": "insight_04",
+                        "type": "info",
+                        "icon": "💡",
+                        "title": "明星词偏少，中部词是增量优化主力",
+                        "content": "当前上榜率≥60%的明星词仅 0 个，中部词（20-40%）有 0 个，建议重点优化「」等中部词，每个提升10个百分点可拉动整体上榜率上升。",
+                        "level": "medium"
+            }
+]
+        
+        // __INJECT_INSIGHTS_END__
+
+        // __INJECT_ACTION_PLAN_START__
+const action_plan = [
+            {
+                        "id": "action_p0_1",
+                        "priority": "P0",
+                        "title": "内容深度升级",
+                        "description": "将内容从平均 500-800 字提升至 2500-4000 字，增加数据表格、对比清单、参数锚点、FAQ 区块，提升信息密度。",
+                        "expected_effect": "上榜率 +10~15 个百分点",
+                        "duration": "2-4周",
+                        "effort": "高"
+            },
+            {
+                        "id": "action_p0_4",
+                        "priority": "P0",
+                        "title": "零上榜词诊断：PPT生成厂商哪家好、企业宣传PPT生成厂商有哪些、发布会PPT生成厂商哪家好、商务PPT生成厂商推荐、培训课件PPT生成厂商有哪些、年会PPT生成厂商推荐、招商PPT生成厂商推荐、月度总结PPT生成厂商哪家靠谱、项目汇报PPT生成厂商哪里找、靠谱PPT生成厂商推荐",
+                        "description": "有 10 个关键词上榜率为 0%，需排查原因：是内容完全没覆盖？还是竞争对手太强？诊断后决定攻坚还是放弃。",
+                        "expected_effect": "明确资源投入方向",
+                        "duration": "3天",
+                        "effort": "低"
+            },
+            {
+                        "id": "action_p1_2",
+                        "priority": "P1",
+                        "title": "内容类型优化：加大「选购指南型」，停发「底线筛选型」",
+                        "description": "「选购指南型」上榜率 0.0% 效果最好，建议增加 50% 产能；「底线筛选型」0% 上榜率，建议停发或全面改版。",
+                        "expected_effect": "内容 ROI 提升 30%",
+                        "duration": "2周",
+                        "effort": "中"
+            },
+            {
+                        "id": "action_p2_1",
+                        "priority": "P2",
+                        "title": "权威信源建设",
+                        "description": "EEAT 权威度占信源权重 30%。建议争取行业头部媒体深度合作，在高权重技术社区建立品牌阵地，增加内容中的引用来源。",
+                        "expected_effect": "品牌信任分提升，长期上榜率提升",
+                        "duration": "4-8周",
+                        "effort": "高"
+            },
+            {
+                        "id": "action_p2_2",
+                        "priority": "P2",
+                        "title": "竞品对标分析：Beautiful.ai、Gamma、WPS AI",
+                        "description": "分析头部竞品（Beautiful.ai、Gamma、WPS AI）的内容策略和信源布局，识别他们的优势渠道和内容类型，找到差异化突破口。",
+                        "expected_effect": "明确竞争策略，找到差异化机会",
+                        "duration": "1周",
+                        "effort": "中"
+            }
+]
+        
+        // __INJECT_ACTION_PLAN_END__
+
+        const app = createApp({
+            setup() {
+                // 发布追踪表格列定义
+                const trackerColumns = [
+                    { title: '关键词', key: 'question_word', dataIndex: 'question_word' },
+                    { title: '类型', key: 'type', dataIndex: 'type', width: 120 },
+                    { title: '媒体', key: 'media', dataIndex: 'media', width: 100 },
+                    { title: '字数', key: 'word_count', dataIndex: 'word_count', width: 70, align: 'right' },
+                    { title: '品牌词', key: 'brand_count', dataIndex: 'brand_count', width: 70, align: 'center' },
+                    { title: '状态', key: 'status', dataIndex: 'published', width: 80, align: 'center' },
+                    { title: '发布时间', key: 'publish_time', dataIndex: 'publish_time', width: 120 },
+                    { title: '链接', key: 'action', dataIndex: 'publish_url', width: 80 },
+                ]
+
+                // 行动清单表格列定义
+                const actionPlanColumns = [
+                    { title: '优先级', key: 'priority', dataIndex: 'priority', width: 80 },
+                    { title: '行动项', key: 'title', dataIndex: 'title' },
+                    { title: '预期效果', key: 'expected_effect', dataIndex: 'expected_effect', width: 160 },
+                    { title: '周期', key: 'duration', dataIndex: 'duration', width: 90 },
+                    { title: '投入', key: 'effort', dataIndex: 'effort', width: 70, align: 'center' },
+                ]
+
+                // 颜色映射
+                const colorMap = {
+                    success: '#10b981',
+                    warning: '#f59e0b',
+                    danger: '#ef4444',
+                    neutral: '#6366f1',
+                }
+
+                // 渲染 KPI TinyLine 图表
+                const renderKpiCharts = () => {
+                    if (!kpis) return
+                    const chartKeys = ['overall_hit_rate', 'doubao_hit_rate', 'yuanbao_hit_rate', 'article_inclusion_rate']
+                    chartKeys.forEach(key => {
+                        const kpi = kpis[key]
+                        if (!kpi || !kpi.has_chart || !kpi.chart_data || !kpi.chart_data.length) return
+                        const container = document.getElementById('kpi-chart-' + key)
+                        if (!container) return
+
+                        const color = colorMap[kpi.trend_type] || colorMap.neutral
+                        const data = kpi.chart_data
+                        const avg = kpi.chart_avg
+
+                        if (window.G2Plot && window.G2Plot.TinyLine) {
+                            try {
+                                const plot = new G2Plot.TinyLine(container, {
+                                    data: data,
+                                    height: 50,
+                                    autoFit: true,
+                                    smooth: true,
+                                    color: color,
+                                    lineStyle: { lineWidth: 2 },
+                                    area: {
+                                        fill: color,
+                                        fillOpacity: 0.15,
+                                    },
+                                    tooltip: false,
+                                    annotations: [
+                                        {
+                                            type: 'line',
+                                            start: ['min', 'mean'],
+                                            end: ['max', 'mean'],
+                                            style: {
+                                                stroke: color,
+                                                lineDash: [3, 3],
+                                                lineWidth: 1,
+                                                opacity: 0.6,
+                                            },
+                                            text: {
+                                                content: '均值 ' + avg.toFixed(1) + '%',
+                                                offsetY: -2,
+                                                style: {
+                                                    textAlign: 'left',
+                                                    fontSize: 10,
+                                                    fill: color,
+                                                    textBaseline: 'bottom',
+                                                },
+                                            },
+                                        },
+                                    ],
+                                })
+                                plot.render()
+                            } catch (e) {
+                                console.error('KPI TinyLine render error:', key, e)
+                            }
+                        }
+                    })
+                }
+
+                // 渲染每日写文/发布/上榜趋势图
+                const renderDailyTrendChart = () => {
+                    if (!daily_trend || !daily_trend.data || !daily_trend.data.length) return
+                    const container = document.getElementById('chart-daily-trend')
+                    if (!container || !window.G2Plot) return
+
+                    const data = []
+                    daily_trend.data.forEach(d => {
+                        data.push({ name: '写文章数', 日期: d.date, 数量: d.write_count })
+                        data.push({ name: '发布成功数', 日期: d.date, 数量: d.publish_count })
+                        data.push({ name: '文章上榜数', 日期: d.date, 数量: d.hit_count })
+                    })
+
+                    try {
+                        const plot = new G2Plot.Column(container, {
+                            data: data,
+                            isGroup: true,
+                            xField: '日期',
+                            yField: '数量',
+                            seriesField: 'name',
+                            color: ['#93c5fd', '#10b981', '#6366f1'],
+                            label: {
+                                position: 'middle',
+                                layout: [
+                                    { type: 'interval-adjust-position' },
+                                    { type: 'interval-hide-overlap' },
+                                    { type: 'adjust-color' },
+                                ],
+                            },
+                            xAxis: { label: { style: { fontSize: 11 } } },
+                            yAxis: { label: { style: { fontSize: 11 } }, title: { text: '单位：篇', style: { fontSize: 11 } } },
+                            legend: { position: 'top' },
+                            columnStyle: { radius: [2, 2, 0, 0] },
+                        })
+                        plot.render()
+                    } catch (e) {
+                        console.error('Daily trend chart error:', e)
+                    }
+                }
+
+                // 渲染关键词排行双轴图
+                const renderKeywordRankingChart = () => {
+                    if (!keyword_ranking || !keyword_ranking.keywords || !keyword_ranking.keywords.length) return
+                    const container = document.getElementById('chart-keyword-ranking')
+                    if (!container || !window.G2Plot) return
+
+                    // 柱状图数据：发文数量 + 收录数量 + 上榜数量
+                    const barData = []
+                    keyword_ranking.keywords.forEach(k => {
+                        barData.push({ name: '发文数量', 关键词: k.question, 数量: k.publish_count })
+                        barData.push({ name: '收录数量', 关键词: k.question, 数量: k.inclusion_count })
+                        barData.push({ name: '上榜数量', 关键词: k.question, 数量: k.total_hit })
+                    })
+
+                    // 折线数据：收录率 + 上榜率（合并为带 seriesField 的数组）
+                    const lineData = []
+                    keyword_ranking.keywords.forEach(k => {
+                        lineData.push({ name: '收录率', 关键词: k.question, 比率: k.inclusion_rate })
+                        lineData.push({ name: '上榜率', 关键词: k.question, 比率: k.hit_rate })
+                    })
+
+                    try {
+                        const plot = new G2Plot.DualAxes(container, {
+                            data: [barData, lineData],
+                            xField: '关键词',
+                            yField: ['数量', '比率'],
+                            geometryOptions: [
+                                {
+                                    geometry: 'column',
+                                    isGroup: true,
+                                    seriesField: 'name',
+                                    color: ['#8b5cf6', '#10b981', '#f59e0b'],
+                                    label: {
+                                        position: 'middle',
+                                        layout: [
+                                            { type: 'interval-adjust-position' },
+                                            { type: 'interval-hide-overlap' },
+                                            { type: 'adjust-color' },
+                                        ],
+                                    },
+                                },
+                                {
+                                    geometry: 'line',
+                                    seriesField: 'name',
+                                    color: ['#3b82f6', '#ef4444'],
+                                    lineStyle: { lineWidth: 2 },
+                                    point: {
+                                        shape: 'circle',
+                                        size: 4,
+                                        style: { stroke: '#fff', lineWidth: 1 },
+                                    },
+                                    label: {
+                                        formatter: (d) => d.比率 + '%',
+                                        style: { fontSize: 10 },
+                                    },
+                                },
+                            ],
+                            xAxis: { label: { style: { fontSize: 11 }, autoRotate: true, autoEllipsis: true } },
+                            yAxis: {
+                                数量: { label: { style: { fontSize: 11 } }, position: 'left' },
+                                比率: {
+                                    label: { style: { fontSize: 11 }, formatter: (v) => v + '%' },
+                                    position: 'right',
+                                    min: 0,
+                                    max: 100,
+                                },
+                            },
+                            tooltip: { shared: true },
+                            legend: { position: 'top' },
+                        })
+                        plot.render()
+                    } catch (e) {
+                        console.error('Keyword ranking chart error:', e)
+                        // 降级：用 Column 分组柱状图
+                        try {
+                            const plot2 = new G2Plot.Column(container, {
+                                data: barData,
+                                isGroup: true,
+                                xField: '关键词',
+                                yField: '数量',
+                                seriesField: 'name',
+                                color: ['#8b5cf6', '#10b981', '#f59e0b'],
+                                label: {
+                                    position: 'middle',
+                                    layout: [
+                                        { type: 'interval-adjust-position' },
+                                        { type: 'interval-hide-overlap' },
+                                        { type: 'adjust-color' },
+                                    ],
+                                },
+                                xAxis: { label: { style: { fontSize: 11 } } },
+                                yAxis: { label: { style: { fontSize: 11 } } },
+                            })
+                            plot2.render()
+                        } catch (e2) {
+                            console.error('Keyword ranking fallback chart error:', e2)
+                        }
+                    }
+                }
+
+                // 渲染内容类型效果条形图
+                const renderContentTypeChart = () => {
+                    if (!content_type || !content_type.types || !content_type.types.length) return
+                    const container = document.getElementById('chart-content-type')
+                    if (!container || !window.G2Plot) return
+
+                    // 柱状图数据：发文数量 + 收录数量
+                    const barData = []
+                    content_type.types.forEach(t => {
+                        barData.push({ name: '发文数量', 类型: t.type, 数量: t.published })
+                        barData.push({ name: '收录数量', 类型: t.type, 数量: t.hit })
+                    })
+
+                    // 折线数据：收录率
+                    const lineData = content_type.types.map(t => ({
+                        类型: t.type,
+                        收录率: t.hit_rate,
+                    }))
+
+                    try {
+                        // 用 DualAxes 双轴图：柱状+折线
+                        const plot = new G2Plot.DualAxes(container, {
+                            data: [barData, lineData],
+                            xField: '类型',
+                            yField: ['数量', '收录率'],
+                            yField1: '数量',
+                            yField2: '收录率',
+                            geometryOptions: [
+                                {
+                                    geometry: 'column',
+                                    isGroup: true,
+                                    seriesField: 'name',
+                                    color: ['#8b5cf6', '#10b981'],
+                                    label: {
+                                        position: 'middle',
+                                        layout: [
+                                            { type: 'interval-adjust-position' },
+                                            { type: 'interval-hide-overlap' },
+                                            { type: 'adjust-color' },
+                                        ],
+                                    },
+                                },
+                                {
+                                    geometry: 'line',
+                                    color: '#f59e0b',
+                                    lineStyle: { lineWidth: 2 },
+                                    point: {
+                                        shape: 'circle',
+                                        size: 4,
+                                        style: { fill: '#f59e0b', stroke: '#fff', lineWidth: 1 },
+                                    },
+                                    label: {
+                                        formatter: (d) => d.收录率 + '%',
+                                        style: { fontSize: 10, fill: '#f59e0b' },
+                                    },
+                                },
+                            ],
+                            xAxis: { label: { style: { fontSize: 11 } } },
+                            yAxis: {
+                                数量: { label: { style: { fontSize: 11 } }, position: 'left' },
+                                收录率: {
+                                    label: { style: { fontSize: 11 }, formatter: (v) => v + '%' },
+                                    position: 'right',
+                                    min: 0,
+                                    max: 100,
+                                },
+                            },
+                            tooltip: { shared: true },
+                            legend: { position: 'top' },
+                        })
+                        plot.render()
+                    } catch (e) {
+                        console.error('Content type chart error:', e)
+                    }
+                }
+
+                // 渲染媒体渠道ROI条形图
+                const renderMediaRoiChart = () => {
+                    if (!media_roi || !media_roi.medias || !media_roi.medias.length) return
+                    const container = document.getElementById('chart-media-roi')
+                    if (!container || !window.G2Plot) return
+
+                    const data = media_roi.medias.map(m => ({
+                        media: m.media,
+                        上榜率: m.hit_rate,
+                        grade: m.grade,
+                    }))
+
+                    const gradeColor = { 'S': '#10b981', 'A': '#3b82f6', 'B': '#f59e0b', 'C': '#ef4444', 'D': '#9ca3af' }
+
+                    try {
+                        const plot = new G2Plot.Bar(container, {
+                            data: data,
+                            xField: '上榜率',
+                            yField: 'media',
+                            colorField: 'grade',
+                            color: (d) => gradeColor[d.grade] || '#6366f1',
+                            label: {
+                                position: 'right',
+                                formatter: (d) => d.上榜率 + '% [' + d.grade + ']',
+                                style: { fontSize: 11 },
+                            },
+                            xAxis: { max: 100, label: { formatter: (v) => v + '%' } },
+                            yAxis: { label: { style: { fontSize: 11 } } },
+                            meta: { media: { type: 'cat' }, 上榜率: { min: 0, max: 100 } },
+                        })
+                        plot.render()
+                    } catch (e) {
+                        console.error('Media ROI chart error:', e)
+                    }
+                }
+
+                // 渲染竞品品牌排行条形图
+                const renderCompetitiveBrandsChart = () => {
+                    if (!competitive_brands || !competitive_brands.brands || !competitive_brands.brands.length) return
+                    const container = document.getElementById('chart-competitive-brands')
+                    if (!container || !window.G2Plot) return
+
+                    const data = competitive_brands.brands.slice(0, 10).map(b => ({
+                        brand: b.brand,
+                        提及次数: b.total_mentions,
+                        is_own: b.is_own,
+                    }))
+
+                    try {
+                        const plot = new G2Plot.Bar(container, {
+                            data: data,
+                            xField: '提及次数',
+                            yField: 'brand',
+                            colorField: 'is_own',
+                            color: (d) => d.is_own ? '#ef4444' : '#8b5cf6',
+                            label: {
+                                position: 'right',
+                                formatter: (d) => d.提及次数 + '次',
+                                style: { fontSize: 11 },
+                            },
+                            yAxis: { label: { style: { fontSize: 11 } } },
+                            meta: { brand: { type: 'cat' } },
+                        })
+                        plot.render()
+                    } catch (e) {
+                        console.error('Competitive brands chart error:', e)
+                    }
+                }
+
+                // 渲染信源站点分布条形图
+                const renderSourceSitesChart = () => {
+                    if (!source_sites || !source_sites.sites || !source_sites.sites.length) return
+                    const container = document.getElementById('chart-source-sites')
+                    if (!container || !window.G2Plot) return
+
+                    const data = source_sites.sites.slice(0, 10).map(s => ({
+                        site: s.site,
+                        引用次数: s.total_refs,
+                        category: s.category,
+                    }))
+
+                    const catColor = {
+                        'B2B平台': '#6366f1',
+                        '行业媒体': '#10b981',
+                        '地方门户': '#f59e0b',
+                        '文档平台': '#8b5cf6',
+                        '企业官网': '#06b6d4',
+                        '自媒体': '#ec4899',
+                        '其他': '#9ca3af',
+                    }
+
+                    try {
+                        const plot = new G2Plot.Bar(container, {
+                            data: data,
+                            xField: '引用次数',
+                            yField: 'site',
+                            colorField: 'category',
+                            color: (d) => catColor[d.category] || '#6366f1',
+                            label: {
+                                position: 'right',
+                                formatter: (d) => d.引用次数 + '次',
+                                style: { fontSize: 11 },
+                            },
+                            yAxis: { label: { style: { fontSize: 11 } } },
+                            meta: { site: { type: 'cat' } },
+                        })
+                        plot.render()
+                    } catch (e) {
+                        console.error('Source sites chart error:', e)
+                    }
+                }
+
+                // 组件挂载后渲染图表
+                Vue.onMounted(() => {
+                    // 延迟一点确保 DOM 渲染完成
+                    setTimeout(() => {
+                        renderKpiCharts()
+                        renderDailyTrendChart()
+                        renderKeywordRankingChart()
+                        renderContentTypeChart()
+                        renderMediaRoiChart()
+                        renderCompetitiveBrandsChart()
+                        renderSourceSitesChart()
+                    }, 100)
+                })
+
+                return {
+                    header,
+                    kpis,
+                    daily_publish_tracker,
+                    daily_trend,
+                    trackerColumns,
+                    keyword_ranking,
+                    content_type,
+                    media_roi,
+                    competitive_brands,
+                    source_sites,
+                    insights,
+                    action_plan,
+                    actionPlanColumns,
+                }
+            }
+        })
+        app.use(antd).mount('#app')
+    </script>
+</body>
+</html>
+

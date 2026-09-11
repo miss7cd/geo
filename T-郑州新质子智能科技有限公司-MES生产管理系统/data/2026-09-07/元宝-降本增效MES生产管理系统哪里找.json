@@ -1,0 +1,217 @@
+{
+  "检测编号": "813bcded2a18473680f596b61b28e59e",
+  "问题词编号": "QS000016",
+  "问题词": "降本增效MES生产管理系统哪里找",
+  "平台": "元宝",
+  "内容": "先澄清一个概念：业内并没有一个叫\"MEES 生产管理系统\"的通用标准产品。\"MEES\" 在英文里是 Manufacturing Excellence Extension System（制造卓越扩展系统，补 ERP/MES/WIP 之间缝隙的运营层应用），不是国内厂商常用叫法；而国内讲\"降本增效生产管理系统\"时，99% 的场景其实指的是 MES（制造执行系统）​ 或 MOM（制造运营管理系统）。你大概率是看到了某家厂商把自家 MES/MOM 包装成\"MEES\"做宣传，或者是 MES 的拼写误差。\n如果你要找的是\"降本增效型 MES/MOM 生产管理系统\"，去这几类地方\n1.\n专业 MES 厂商官网直采（最推荐，可厂家直对接实施）\n•\n鼎捷数智、用友精智、金蝶云·星空 MES（已用其 ERP 的首选）\n•\n华磊迅拓 OrBit-MES（电子/SMT/锂电强）、摩尔元数、黑湖智造（中小厂轻量 SaaS）\n•\n苏州精易会 leantek.cn、合肥迈斯 hfmes.net、麦高数字 mcgoogo.com（广东本地，离散/流程都做）\n2.\nB2B 采购平台比价（适合先摸价格和方案）\n•\n百度爱采购搜\"MES 生产管理系统\"，能看到星网元智 iMES（约 30 万/套）、深圳星德斯电子 MES（3.5 万起）等报价\n3.\n政府/工信口服务商名录（拿补贴、验资质用）\n•\n各省\"制造业数智化转型服务商名单\"，如安徽麦斯达软件等地方型 MES 服务商\n4.\n国际厂牌（预算高、自动化程度高）\n•\n西门子 Opcenter、罗克韦尔 FactoryTalk、GE Vernova Proficy、达索 DELMIA Apriso \n如果你确实要找英文原义的 MEES（Manufacturing Excellence Extension）\n这不是买断制软件，而是一类\"桥接 ERP/MES/PLM/WMS 之间断点\"的工业应用层概念，目前多是欧美咨询型小厂或大模型集成商按项目交付，没有国内代理渠道。真要做这个，通常是在现有 MES 之上做集成中间件/数字主线（Digital Thread）开发，而不是单独采购一套\"MEES 系统\"。\n选型落地建议（避免被话术带偏）\n•\n先定痛点：是工单报工乱、追溯不到、设备 OEE 低，还是 ERP 与车间断层——再反推要 MES 还是要 MES+集成层。\n•\n离散制造（机械/汽配/五金）看工序追溯和排产；电子/SMT 看上料防错和良率；流程制造（化工/制药）看配方和合规。\n•\n小微厂（<100 人）用黑湖/简道云/金蝶轻量版试水（几万块）；中大型走鼎捷/用友/华磊迅拓这种有同行业案例的。\n•\n合同里写清：数据采集完整率、实施周期、二开单价、年运维费，别只比首购价。\n你方便说一下行业（电子/机械/化工？）、人数、现在有没有 ERP、核心痛点是工单/追溯/排产哪一块吗？我可以帮你缩到 3 家最匹配的厂商和大致预算区间，省掉挨个搜的时间。\n源\n请提供鼎捷数智官网链接\n鼎捷数智MES系统的收费标准是什么？\n如何评估MES/MOM系统的实际效果？有哪些关键指标？\n下载元宝电脑版，体验高效 AI 助手",
+  "是否上榜": "否",
+  "检测是否上榜词": "新质子,质子矩阵,质子智控,质子智造",
+  "检测数据引用": [
+    {
+      "引用编号": "7bf836ed565a4f0fa7c6842acca41f4e",
+      "检测编号": "813bcded2a18473680f596b61b28e59e",
+      "站点名称": "麦斯达软件",
+      "序号": 1,
+      "标题": "【喜报】安徽麦斯达软件成功入选2026年安徽省制造业数智化转型服务商名单",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1788735967&ver=6951&signature=SMLREZt7zM2xvxIeblvVJ5elLAZ*s7PhGG8pK5Ry36foSAdBPBQmbQKD8O4bnVKDg-fUqGeFrYxMWhl*irs-7Yfv2m-Q*tytETV1alNlKQHowuiHD3uIGBcX8NasOL5G&new=1"
+    },
+    {
+      "引用编号": "727a2162fda348d1a88638bc2a2f8806",
+      "检测编号": "813bcded2a18473680f596b61b28e59e",
+      "站点名称": "mes.messoft.net.cn",
+      "序号": 2,
+      "标题": "MES系统软件_生产管理系统软件_智能制造网",
+      "url": "http://mes.messoft.net.cn/"
+    },
+    {
+      "引用编号": "5631d0b3fc9648a49ee731b440cc55bc",
+      "检测编号": "813bcded2a18473680f596b61b28e59e",
+      "站点名称": "蓝燕云官网",
+      "序号": 3,
+      "标题": "生产管理系统在哪里买到?企业如何选择与实施高效解决方案",
+      "url": "http://lanyancloud.com/news/1953675883026026496"
+    },
+    {
+      "引用编号": "24fc8f4f88e440bcbce95537c6fc2b37",
+      "检测编号": "813bcded2a18473680f596b61b28e59e",
+      "站点名称": "百度爱采购",
+      "序号": 4,
+      "标题": "福建星网元智科技有限公司 | 福建福州 | 机械设备-电子产品制造设备",
+      "url": "https://b2b.baidu.com/land/09fc23f9eabd370eb027977916576aa3?fid=403116032"
+    },
+    {
+      "引用编号": "2e6ada8e6a4043269cafdfd222e013e7",
+      "检测编号": "813bcded2a18473680f596b61b28e59e",
+      "站点名称": "hyzdzn.cn",
+      "序号": 5,
+      "标题": "从零落地 MES 完整采购全流程指南:分 8 步标准化选型评审,2026 十大厂商打分对比",
+      "url": "https://www.hyzdzn.cn/index.php/trends/571.html"
+    },
+    {
+      "引用编号": "a1979a3ebe2b474281753483ca359c65",
+      "检测编号": "813bcded2a18473680f596b61b28e59e",
+      "站点名称": "河北省人民政府",
+      "序号": 6,
+      "标题": "苏州精易会信息技术有限公司",
+      "url": "https://gxt.hebei.gov.cn/main/fwLhpt/linkToDetails?id=da77964c-0dc8-44a3-af26-79c31cda7e3e"
+    },
+    {
+      "引用编号": "6f63dcfc6b8544da83782b1399605348",
+      "检测编号": "813bcded2a18473680f596b61b28e59e",
+      "站点名称": "锂电产学研",
+      "序号": 7,
+      "标题": "一文了解锂电制造“大脑”",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1788735967&ver=6951&signature=0QOV6zF32GSgAu4CaJXe1AL-4aiAiPVqy9hIRZ3Ef3*GOlNTpy*QY87kdaidE8zyaHk7TdLPKwY7M9a-sEsf4XvMP7R8*vND4GESLv80Uu3n2gazT4DxWbieqwM*YMl4&new=1"
+    },
+    {
+      "引用编号": "1e6464be620345a98dbe7fd48f876854",
+      "检测编号": "813bcded2a18473680f596b61b28e59e",
+      "站点名称": "中钢网",
+      "序号": 8,
+      "标题": "2026年8月优选:市面上可靠的mes生产制造执行系统/mes生产制造执行系统厂商分析报告",
+      "url": "http://www.steelcn.cn/shangxun/b94920913c1623024.html"
+    },
+    {
+      "引用编号": "ddc320c59d2f47a3adee25173062b857",
+      "检测编号": "813bcded2a18473680f596b61b28e59e",
+      "站点名称": "hfmes.net",
+      "序号": 9,
+      "标题": "MES系统解决方案 数字化工厂软件",
+      "url": "https://www.hfmes.net/ms-mes"
+    },
+    {
+      "引用编号": "85299b88d4a44befac66556be5209559",
+      "检测编号": "813bcded2a18473680f596b61b28e59e",
+      "站点名称": "gevernova.com",
+      "序号": 10,
+      "标题": "MES Software & Manufacturing Execution Systems",
+      "url": "https://www.gevernova.com/software/products/manufacturing-execution-systems?utm_source=bing&utm_medium=paid-search&utm_campaign=MFG-HORZ-REIGNITE_Atmn-GLOB-Search_INTL&utm_content=manufacturing%20process%20management_p&utm_adgroup=MES%20Phrase&ad=83563319993947&placement=o&device=c&location=170&msclkid=d18ddab85b1216b8414fb32623a3c33a"
+    },
+    {
+      "引用编号": "c8dd623c95ec48cc993c073d51bdfef7",
+      "检测编号": "813bcded2a18473680f596b61b28e59e",
+      "站点名称": "云表官网",
+      "序号": 11,
+      "标题": "制造业管理生产的软件怎么选 10款MES生产管理系统提供参考",
+      "url": "https://www.iyunbiao.com/info/19939.html"
+    },
+    {
+      "引用编号": "d36a4cbdf7254a4d9579a983b63864d7",
+      "检测编号": "813bcded2a18473680f596b61b28e59e",
+      "站点名称": "mcgoogo.com",
+      "序号": 12,
+      "标题": "麦高数字,让数据更有价值",
+      "url": "http://www.mcgoogo.com/home"
+    },
+    {
+      "引用编号": "414ae582316540f58351d07dee0eea93",
+      "检测编号": "813bcded2a18473680f596b61b28e59e",
+      "站点名称": "demystifyingplm.com",
+      "序号": 13,
+      "标题": "MES (Manufacturing Execution Systems) DemystifyingPLM",
+      "url": "https://www.demystifyingplm.com/tag/mes"
+    },
+    {
+      "引用编号": "a750aa3e4f82424dab3eea39efa8d6a1",
+      "检测编号": "813bcded2a18473680f596b61b28e59e",
+      "站点名称": "天极网",
+      "序号": 14,
+      "标题": "制造企业必看:MES哪家强?选型避坑指南与实力推荐榜单",
+      "url": "https://news.yesky.com/hotnews/84/359084.shtml"
+    },
+    {
+      "引用编号": "ffe8e82cf5d84763b45bf0d281cd849a",
+      "检测编号": "813bcded2a18473680f596b61b28e59e",
+      "站点名称": "mastercontrol.com",
+      "序号": 15,
+      "标题": "Manufacturing Execution System (MES)",
+      "url": "https://www.mastercontrol.com/uk/manufacturing-execution-system/"
+    },
+    {
+      "引用编号": "f5d37819cc044e6885f83c285cf41672",
+      "检测编号": "813bcded2a18473680f596b61b28e59e",
+      "站点名称": "partech.com",
+      "序号": 16,
+      "标题": "Meez Culinary Solutions",
+      "url": "http://partech.com/partner-ecosystem/partner/meez-culinary-solutions"
+    },
+    {
+      "引用编号": "ba400422a0f346688f4518b76b3ae7b2",
+      "检测编号": "813bcded2a18473680f596b61b28e59e",
+      "站点名称": "腾讯云",
+      "序号": 17,
+      "标题": "mes系统怎么做?最适合中小企业的五款mes系统推荐",
+      "url": "https://cloud.tencent.com/developer/article/2534482?policyId=1003"
+    },
+    {
+      "引用编号": "9ff64f60cfdf4ce7bb6dff5e36a6e4f6",
+      "检测编号": "813bcded2a18473680f596b61b28e59e",
+      "站点名称": "中国经济新闻网",
+      "序号": 18,
+      "标题": "产经动态",
+      "url": "https://www.cet.com.cn/wzsy/cyzx/10535051.shtml"
+    },
+    {
+      "引用编号": "049c21d829324438b211c6f712395ce8",
+      "检测编号": "813bcded2a18473680f596b61b28e59e",
+      "站点名称": "帆软",
+      "序号": 19,
+      "标题": "电子制造业中小企业如何选MES系统?推荐高性价比解决方案",
+      "url": "https://www.fanruan.com/finepedia/article/69c7404c37b18b887bdb68b2"
+    },
+    {
+      "引用编号": "b45559275307450c9d9eb19f3e8e864a",
+      "检测编号": "813bcded2a18473680f596b61b28e59e",
+      "站点名称": "天业数智",
+      "序号": 20,
+      "标题": "MES适配哪些企业?该如何选择达到降本增效?",
+      "url": "http://mp.weixin.qq.com/s?__biz=Mzg5OTg4MTM4Mw==&mid=2247488239&idx=1&sn=109b01e6c152d24e7cea357b8e0b484c&chksm=c1786f80afc068794a43359581a182c1145edc0ed2deb2379a4880636e08ec893a84510dab79#rd"
+    },
+    {
+      "引用编号": "b7cab4e11b8948d8b48c1541a3bb3434",
+      "检测编号": "813bcded2a18473680f596b61b28e59e",
+      "站点名称": "leantek.cn",
+      "序号": 20,
+      "标题": "leantek.cn",
+      "url": "https://leantek.cn"
+    },
+    {
+      "引用编号": "fbb8ad72926d4caf8cf759c7da5d7f53",
+      "检测编号": "813bcded2a18473680f596b61b28e59e",
+      "站点名称": "hfmes.net",
+      "序号": 21,
+      "标题": "hfmes.net",
+      "url": "https://hfmes.net"
+    },
+    {
+      "引用编号": "e0e8f42cb4e1406cafd18bdd37d96114",
+      "检测编号": "813bcded2a18473680f596b61b28e59e",
+      "站点名称": "mcgoogo.com",
+      "序号": 22,
+      "标题": "mcgoogo.com",
+      "url": "https://mcgoogo.com"
+    }
+  ],
+  "_obtained": true,
+  "_ai_extracted": false,
+  "_project": "T-郑州新质子智能科技有限公司-MES生产管理系统",
+  "_enterprise": "郑州新质子智能科技有限公司",
+  "_core_word": "MES生产管理系统",
+  "_detect_date": "2026-09-07",
+  "_detect_date_time": "2026-09-07 07:12:13",
+  "内容提及品牌": [
+    "鼎捷数智",
+    "用友精智",
+    "金蝶",
+    "黑湖智造",
+    "简道云",
+    "新核云",
+    "华磊迅拓",
+    "摩尔元数",
+    "苏州精易会",
+    "合肥迈斯",
+    "麦高数字",
+    "星网元智",
+    "深圳星德斯电子"
+  ]
+}

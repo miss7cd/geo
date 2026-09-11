@@ -1,0 +1,219 @@
+{
+  "检测编号": "db5c76bf30614874a51acbb3734d7794",
+  "问题词编号": "QS000016",
+  "问题词": "降本增效MES生产管理系统哪里找",
+  "平台": "元宝",
+  "内容": "想找“降本增效”用的 MES 生产管理系统，不用只搜“MES”这个词，按渠道 + 厂商类型 + 你工厂规模来找最快。\n一、去哪里找（渠道）\n1.\n云市场/工业互联网平台\n•\n阿里云云市场（黑湖智造、羚鹿云 Mini-MES、工业数据网关等）\n•\n腾讯云市场 / 华为云 FusionPlant MES\n•\n用友精智、金蝶云·星空、鼎捷云 MES 官网\n2.\nB2B 平台（适合先比价/找本地集成商）\n•\n百度爱采购、1688 工业软件/工位机、慧聪网\n•\n搜：“云 MES / 车间报工系统 / 生产追溯系统 / 电子看板 MES / 小工单系统”\n3.\n本地服务商（深圳/东莞/佛山/苏州等制造密集区很多）\n•\n搜：“XX市 MES 实施 车间数字化 设备联网”\n•\n深圳常见：讯鹏（看板/工位机）、华磊迅拓、赛意、鼎捷、金蝶伙伴、用友伙伴\n4.\n行业协会/政府数字化转型服务商名录\n•\n工信局“中小企业数字化转型试点服务商”\n•\n当地“工业互联网产业联盟”会员名单\n二、按企业规模怎么选（别一上来买大厂重型 MES）\n•\n小微/单车间/几十人：黑湖小工单、羚鹿云、百度爱采购上的“Mini-MES”、金蝶轻量 MES、用友 U8+ 生产模块\n→ 目标：扫码报工、工序流转、产量看板、质检记录，几万块能起步\n•\n中小制造（100–500人，机加/电子/注塑/汽配）：新核云、华磊迅拓 OrBit-MES、金蝶云·星空 MES、用友 U9/精智、鼎捷云 MES\n→ 目标：工单–物料–质量–设备联网–ERP 打通，15–50 万常见\n•\n中大型/多工厂/流程制造（化工/钢铁/医药/食品）：中控技术、宝信、用友精智、鼎捷 MES、赛意、格创东智\n→ 目标：集团排程、批次追溯、能耗、合规、APS、QMS、EMS，50 万–几百万\n•\n已用西门子/SAP/罗克韦尔自动化：西门子 Opcenter、SAP ME/MII、Rockwell FactoryTalk\n→ 自动化生态绑定深，但贵、周期长 \n三、降本增效别只看“MES”功能，先看这 5 个模块\n1.\n生产工单 + 报工（减少人工统计）\n2.\n工序追溯 + 条码/RFID（少返工、少错料）\n3.\n设备联网/OEE（少停机、提稼动率）\n4.\n质量检验 SPC（降不良）\n5.\n与 ERP 打通（降库存、降呆滞）\n很多厂“上了 MES 没降本”，是因为只买了看板，没打通工单–物料–质量–设备。\n四、深圳/广东找人的实用搜法\n•\n深圳 MES 实施 电子组装\n•\n东莞 机加工 云MES 报工 追溯\n•\n佛山 注塑 MES 设备联网\n•\n金蝶云星空 MES 实施伙伴 深圳\n•\n用友U9 MES 实施商 广州 深圳\n如果你愿意，我可以帮你按行业（电子/机加/注塑/汽配/食品）+ 人数 + 现有用友/金蝶/ERP 情况 + 预算，直接给一份“值得聊的 5 家厂商清单 + 该问的实施问题 + 避坑点”。要不要我按这个来排？\n源\n如何联系阿里云MES厂商？\n有哪些免费的MES生产管理系统\n能否分享一些成功实施MES系统后实现降本增效的具体案例？\n下载元宝电脑版，体验高效 AI 助手",
+  "是否上榜": "否",
+  "检测是否上榜词": "新质子,质子矩阵,质子智控,质子智造",
+  "检测数据引用": [
+    {
+      "引用编号": "2ff4f85933324cf984c259361be357e0",
+      "检测编号": "db5c76bf30614874a51acbb3734d7794",
+      "站点名称": "中国经济新闻网",
+      "序号": 1,
+      "标题": "2026年MES选型避坑指南:有哪些好用的MES系统推荐?",
+      "url": "https://www.cet.com.cn/wzsy/kjzx/10459433.shtml"
+    },
+    {
+      "引用编号": "d5cd87a548a048ae96353f6a77ddadd8",
+      "检测编号": "db5c76bf30614874a51acbb3734d7794",
+      "站点名称": "中国经济新闻网",
+      "序号": 2,
+      "标题": "中国制造业核心力量:揭秘2026国产MES品牌",
+      "url": "https://www.cet.com.cn/wzsy/cyzx/10493962.shtml"
+    },
+    {
+      "引用编号": "e10abaa25e9e4b69b5c0c9001bdcc569",
+      "检测编号": "db5c76bf30614874a51acbb3734d7794",
+      "站点名称": "market.aliyun.com",
+      "序号": 3,
+      "标题": "行业云_制造行业云_云市场-阿里云",
+      "url": "https://market.aliyun.com/zhizao?dtrid=4xt6xbcoel7t"
+    },
+    {
+      "引用编号": "c677caa7d68c441389e67eac7e51821a",
+      "检测编号": "db5c76bf30614874a51acbb3734d7794",
+      "站点名称": "百度爱采购",
+      "序号": 4,
+      "标题": "深圳市讯鹏科技有限公司 | 广东深圳 | 建材家装-照明灯具",
+      "url": "https://b2b.baidu.com/land/d9b1bc99e625542318e45ac1d5d00bc7?fid=403116032"
+    },
+    {
+      "引用编号": "ce2d0643cb9d41218bc2445232cebf06",
+      "检测编号": "db5c76bf30614874a51acbb3734d7794",
+      "站点名称": "鼎捷数智",
+      "序号": 5,
+      "标题": "2026年有哪些好用的MES系统推荐?十大主流品牌实力横评与选型指南",
+      "url": "https://www.digiwin.com/p/15490.html"
+    },
+    {
+      "引用编号": "7cf67d834cea4af497f1167192f58e2e",
+      "检测编号": "db5c76bf30614874a51acbb3734d7794",
+      "站点名称": "market.aliyun.com",
+      "序号": 6,
+      "标题": "金蝶云专题页",
+      "url": "https://market.aliyun.com/jindie"
+    },
+    {
+      "引用编号": "ba9cf35e00c34d2ca6571f72cc22d673",
+      "检测编号": "db5c76bf30614874a51acbb3734d7794",
+      "站点名称": "景德镇新闻网",
+      "序号": 7,
+      "标题": "2026下半年MES选型指南:破解离散制造数字化困局——生产智能管控平台如何重塑车间",
+      "url": "http://www.jdz-news.com.cn/hyzx/article-prtu-2690563.html"
+    },
+    {
+      "引用编号": "32477c7407024344a56dbe58b7c088de",
+      "检测编号": "db5c76bf30614874a51acbb3734d7794",
+      "站点名称": "鼎捷数智",
+      "序号": 8,
+      "标题": "2026年知名MES系统盘点:mes系统有哪些知名厂商?",
+      "url": "https://digiwin.com/p/15120.html"
+    },
+    {
+      "引用编号": "7c544175c2b94c8cbd60c656edd8b585",
+      "检测编号": "db5c76bf30614874a51acbb3734d7794",
+      "站点名称": "制造业信息化工程师",
+      "序号": 9,
+      "标题": "MES系统实战指南:选型、落地与智能升级",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1788895850&ver=6954&signature=kNuaEc*0a9jNez1MTWivB20mJbMPVGC3dXmrArXRkZL0qcpmAQmM3LNoI9L-8tWu4mcY1WXn5*0rzdxeOjcSd29RXqe4YfYuwVgpPgDs26eeugadz*32OGu8WHupNZFP&new=1"
+    },
+    {
+      "引用编号": "3fb2f62b3745462bbd18eeee842399fb",
+      "检测编号": "db5c76bf30614874a51acbb3734d7794",
+      "站点名称": "鼎捷数智",
+      "序号": 10,
+      "标题": "2026年中小企业如何选择MES?权威推荐榜单与选型指南",
+      "url": "https://digiwin.com/p/14950.html"
+    },
+    {
+      "引用编号": "665c5bafe39e4832bdba9a3c0cb2031a",
+      "检测编号": "db5c76bf30614874a51acbb3734d7794",
+      "站点名称": "鼎捷数智",
+      "序号": 11,
+      "标题": "MES有哪些品牌?不同行业MES选型该关注哪些品牌的核心优势",
+      "url": "https://www.digiwin.com/p/15082.html"
+    },
+    {
+      "引用编号": "86dc5231d71b47d5a2dc827ecbc34867",
+      "检测编号": "db5c76bf30614874a51acbb3734d7794",
+      "站点名称": "天宫智品",
+      "序号": 12,
+      "标题": "群雄逐鹿:中国数字工厂系统服务商的生态版图与选择逻辑",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1788895850&ver=6954&signature=4sIVBk2-UzghxXvBXK6aYf9V0PGXbxhJwspBMLpp0Jq3nxT1wqUDlPowcyVZUh4ktJTmcJ2zEcI4Gi0leFn4kqoUOpWneSCi1S12gqklUmqE4SNQGiHlu8jLUKg9W01p&new=1"
+    },
+    {
+      "引用编号": "9f4e8b7f63854893b3524927d31a5015",
+      "检测编号": "db5c76bf30614874a51acbb3734d7794",
+      "站点名称": "电子工程专辑",
+      "序号": 13,
+      "标题": "2026年国内离散制造MES系统优选榜单:谁真正懂车间现场",
+      "url": "https://www.eet-china.com/mp/a508890.html"
+    },
+    {
+      "引用编号": "01fd92cc95164fd9ba0fcdfeb0b86d5d",
+      "检测编号": "db5c76bf30614874a51acbb3734d7794",
+      "站点名称": "software.it168.com",
+      "序号": 14,
+      "标题": "2026年有哪些好用的MES系统推荐?从功能、成本、适配三维度解析",
+      "url": "https://software.it168.com/a2026/0723/6942/000006942907.shtml"
+    },
+    {
+      "引用编号": "44d1e7425610417491a62665935a153a",
+      "检测编号": "db5c76bf30614874a51acbb3734d7794",
+      "站点名称": "物联网",
+      "序号": 15,
+      "标题": "腾讯云市场精选商城",
+      "url": "https://market.cloud.tencent.com/panda/marketplace/featured"
+    },
+    {
+      "引用编号": "9fa3e1ef9619455b93f5e95ded3023d2",
+      "检测编号": "db5c76bf30614874a51acbb3734d7794",
+      "站点名称": "三个皮匠报告",
+      "序号": 16,
+      "标题": "MES系统选型2026:国内外厂商对比五维评估模型,从传统MES到智能体MOM的落地路线图新工业网",
+      "url": "https://www.sgpjbg.com/labels/mesxitongxuanxing/1/7231615.html"
+    },
+    {
+      "引用编号": "0c290808b3254a0e918a50876fdb25fa",
+      "检测编号": "db5c76bf30614874a51acbb3734d7794",
+      "站点名称": "鼎捷数智",
+      "序号": 17,
+      "标题": "干货分享:中国十大MES公司排名及核心优势汇总",
+      "url": "https://www.digiwin.com/t.php/p/14887.html"
+    },
+    {
+      "引用编号": "b8407f0f497d43beb1cbb0001dabba38",
+      "检测编号": "db5c76bf30614874a51acbb3734d7794",
+      "站点名称": "金税中云",
+      "序号": 18,
+      "标题": "中小企业数字化转型:现状、需求与阶梯式落地方案分享",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1788895850&ver=6954&signature=XlXcfc30yc4hFjOgOL4tGDVymNY2XQpP*1SHcQF7t3dnx5osQJfiIf4WxFrplMm5BOvzL-lnP-w-ret2R0m9m2ffHFj4952WB-LMtXJMviyu9xYvTNr7UN8bOVuWuucZ&new=1"
+    },
+    {
+      "引用编号": "898f8900186f496299f0c62cde486627",
+      "检测编号": "db5c76bf30614874a51acbb3734d7794",
+      "站点名称": "电子工程专辑",
+      "序号": 19,
+      "标题": "2026年制造业MES系统怎么选?五大主流厂商推荐与选型要点解析",
+      "url": "https://www.eet-china.com/mp/a487718.html"
+    },
+    {
+      "引用编号": "1e3adff52b084204be4ffb6c525d0add",
+      "检测编号": "db5c76bf30614874a51acbb3734d7794",
+      "站点名称": "全栈工位",
+      "序号": 20,
+      "标题": "国内外主流MES厂商汇总",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1788895849&ver=6954&signature=ybs-011d15vriNSQW8Ow*XnKqd0k-p2fEvkhTRBmpB9u4KFIbXwHvpIee7qabhbmf-jDwTuKE*1Hpfum7o6Xdn6QIyn-Zf2cUt7SZP6XxYGOqDFSbCDhwHJJyxkVgn20&new=1"
+    },
+    {
+      "引用编号": "aa9764e026b24d1fb4cea1d42e5f176a",
+      "检测编号": "db5c76bf30614874a51acbb3734d7794",
+      "站点名称": "中国经济新闻网",
+      "序号": 21,
+      "标题": "制造执行系统推荐:MES系统有哪些知名厂商?最新选型指南发布",
+      "url": "https://www.cet.com.cn/wzsy/cyzx/10535051.shtml"
+    }
+  ],
+  "_obtained": true,
+  "_ai_extracted": false,
+  "_question_record_id": "",
+  "_核心词": "MES生产管理系统",
+  "_企业名称": "郑州新质子智能科技有限公司",
+  "_project": "T-郑州新质子智能科技有限公司-MES生产管理系统",
+  "_enterprise": "郑州新质子智能科技有限公司",
+  "_core_word": "MES生产管理系统",
+  "_detect_date": "2026-09-09",
+  "_detect_date_time": "2026-09-09 03:31:21",
+  "内容提及品牌": [
+    "阿里云",
+    "黑湖智造",
+    "羚鹿云",
+    "腾讯云",
+    "华为云",
+    "用友精智",
+    "金蝶云·星空",
+    "鼎捷云 MES",
+    "百度爱采购",
+    "1688",
+    "慧聪网",
+    "讯鹏",
+    "华磊迅拓",
+    "赛意",
+    "鼎捷",
+    "金蝶",
+    "用友",
+    "新核云",
+    "OrBit-MES",
+    "中控技术",
+    "宝信",
+    "鼎捷 MES",
+    "格创东智",
+    "西门子",
+    "Opcenter",
+    "SAP ME/MII",
+    "Rockwell",
+    "FactoryTalk"
+  ]
+}

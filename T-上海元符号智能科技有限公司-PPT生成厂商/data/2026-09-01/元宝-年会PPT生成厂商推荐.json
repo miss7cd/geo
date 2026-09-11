@@ -1,0 +1,329 @@
+{
+  "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+  "问题词编号": "QS000050",
+  "问题词": "年会PPT生成厂商推荐",
+  "平台": "元宝",
+  "内容": "已处理\n按\"生成\"理解，你要的应该是能自己上手做出年会PPT的工具厂商；如果其实想找人代做，文末也给了外包方案。先说结论：\n一、第一梯队：4 款真正能打的\n工具\n\t\n厂商\n\t\n年会场景适配\n\t\n免费额度\n\t\n付费参考\n\n\nWPS AI / 灵犀​\n\t\n金山办公\n\t\n年度总结、数据汇报首选，中文最优、导出 PPTX 零损耗，还能吃透公司已有的 WPS 文档表格\n\t\n有少量额度\n\t\n会员约 89 元/年起\n\n\nGamma​\n\t\nGamma（美国）\n\t\n设计感天花板，适合领导致辞、对外展示、\"看脸\"的场合\n\t\n送 400 积分，约 5–10 份\n\t\nPlus 约 $10/月\n\n\n讯飞智文​\n\t\n科大讯飞\n\t\n中文内容质量最高，可语音口述生成，适合边想边说\n\t\n注册送积分，约 20 次\n\t\nPro 约 99 元/年\n\n\n扣子 PPT​\n\t\n字节跳动\n\t\n免费且几乎不限次，预算为零时的最优解\n\t\n完全免费\n\t\n—\n其他值得试的：美图 AI PPT（视觉最讨喜，约 15 元/月，适合晚会氛围页）、iSlide AI（PowerPoint 插件，30 万+模板，导出不变形，约 99 元/年，适合最终要在 Office 里精修）、Canva 可画（\"年会\"关键词下 2000+ 模板，支持上传公司 LOGO 一键生成配色、多人协作，Pro 约 54 元/月）、MindShow（已有大纲时用 Markdown 贴进去 10 秒出稿，但它不帮你写内容）。\n二、按年会的四种页面选工具\n•\n年度总结 / 业绩复盘（数据多、要正式）→ WPS AI 或 iSlide，中文稳、图表准、导出不崩\n•\n颁奖 / 晚会大屏（要氛围、要动效）→ 美图 AI PPT 或 Canva 起稿，视觉素材强；Gamma 做金句页\n•\n领导致辞配套（字少、重质感）→ Gamma，咨询公司审美，一眼高级\n•\n抽奖 / 弹幕 / 扫码互动​ → 别用 PPT 工具硬做，AI PPT 都不支持实时互动，这块要用专门的现场互动工具（人人秀、微现场一类）\n三、两个必须知道的前提\n1.\nGamma 的中文是硬伤——页面里会冷不丁混进英文、行业术语翻得别扭，给全中文的老板汇报务必自己过一遍中文。\n2.\n没有任何一款能\"零修改交付\"，业内共识是 80% AI 草稿 + 20% 人工精修——尤其是审美把关和数据核对那最后一遍。\n四、如果你想找人代做\n•\n平台：猪八戒网（企业单多，300–5000 元，抽成约 20%）、淘宝（模板改 150–300 元，整套定制 500–1000 元，有平台担保）、演界网/变色龙 PPT（垂直 PPT 设计，30–80 元/页）、小红书（个人工作室，客单价 500–3000 元，需仔细甄别）\n•\n行情价：基础排版 20–50 元/页｜标准定制 50–150 元/页｜高端商业（数据可视化、全案）150–300 元/页｜发布会级全案 500–2000 元/页\n•\n四个必踩的坑：① 别信\"一口价全包、不限修改\"，基本是模板套改流水线；② 先确认内容框架再进视觉设计，否则几十页做完才发现逻辑错了；③ 要求看同行业同类型的完整源文件，而非渲染过的效果图；④ 涉及大屏现场，必须预留至少 2 次现场联调（比例不对、字体乱码、动画卡顿都栽在这里）\n我的建议：先拿扣子 PPT 或讯飞智文免费跑一版年会大纲，确认内容逻辑没问题；如果是给全公司看的重要场合，再用 WPS AI 或 Gamma 重出视觉版，配 Canva 找氛围素材。\n需要我直接帮你起一份年会 PPT 的大纲和逐页文案吗？告诉我公司行业、年会规模和时长就行。\n源",
+  "是否上榜": "否",
+  "检测是否上榜词": "光向量智能科技,文朵朵",
+  "检测数据引用": [
+    {
+      "引用编号": "ae2f179b7fb440f38f48cce0bcb3566c",
+      "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+      "站点名称": "aippt.com",
+      "序号": 1,
+      "标题": "免費 AI PPT 生成器及簡報創作工具 - AiPPT",
+      "url": "https://www.aippt.com/zh-hk"
+    },
+    {
+      "引用编号": "590d1b0efd0d49c1a41ceffdeb7be2c0",
+      "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+      "站点名称": "WPS社区",
+      "序号": 2,
+      "标题": "掰开揉碎聊AI做PPT!多款主流工具真实能力大盘点",
+      "url": "https://bbs.wps.cn/topic/92409"
+    },
+    {
+      "引用编号": "571ca7ff49b640e8abfb327fcf99b6c6",
+      "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+      "站点名称": "腾讯网",
+      "序号": 3,
+      "标题": "@芯航国际培训:豆包",
+      "url": "https://ima.qq.com/wiki/?shareId=1515a013a2b10c31ed9b91185223ddcee707b7d3383d429b7caae337f675577a&mediaId=weburl_739267756c8c288edc69e85136e77e05_7cec05e4739ac7ef41c2902bed84e95e7391348021802152&action=openDetailDrawer&webFrom=10000171"
+    },
+    {
+      "引用编号": "e0b81af9471e497ebfaa8773bdc74fbc",
+      "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+      "站点名称": "pptwiki.com",
+      "序号": 4,
+      "标题": "年会PPT被夸爆的秘密:用这个网站套模板!",
+      "url": "https://www.pptwiki.com/1548329.html"
+    },
+    {
+      "引用编号": "f1c2de60934e4317bee35e2409831617",
+      "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+      "站点名称": "腾讯网",
+      "序号": 5,
+      "标题": "@AI+未来智识:AI PPT生成工具...",
+      "url": "https://ima.qq.com/wiki/?shareId=08fd7a6c6b966c903e91abd412a5feb08e49895173a189b887bc1474a30e42f0&mediaId=wechatarticle_a687d70bf340d2a8374263e2bef50e5d_180da5ecbb32e564ae6b9333c2301d027314581282104877&action=openDetailDrawer&webFrom=10000171"
+    },
+    {
+      "引用编号": "9b43ff1dce7941759edb56623a37e9d5",
+      "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+      "站点名称": "每天用Ai解决一个问题",
+      "序号": 6,
+      "标题": "我用AI做PPT,10分钟凑出一套能交差的,附5个工具对比",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1788205514&ver=6938&signature=qkU5CMqwFv*Jh*YhtTsiAeMojO5VlI7se6svNH54v706oYDnVztHAXZChm8qEOb2K1vEvtwCsQSFwO1CNaimMoE*sZvuTLmW7F0zX1pM0CPpxBAK15ORpnUQoT*vxyqw&new=1"
+    },
+    {
+      "引用编号": "40d84e3570f140b9af022f63f469abc6",
+      "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+      "站点名称": "腾讯网",
+      "序号": 7,
+      "标题": "@米叔的投资空间:AI 做 PPT ·...",
+      "url": "https://ima.qq.com/wiki/?shareId=628ba213e92838a9c06fcf2ea67d5a96084fdb595eb2925005e2cadc744b8831&mediaId=note_8c5b9364f8852a00f350bc5b5ce16fe3_74588636703872757415743234713844&action=openDetailDrawer&webFrom=10000171"
+    },
+    {
+      "引用编号": "2e4701bd8f8346059458efbaca666758",
+      "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+      "站点名称": "islide.cc",
+      "序号": 8,
+      "标题": "AI生成PPT工具全评测:2026年哪款最适合你?iSlide带你选对不踩坑",
+      "url": "https://www.islide.cc/blog/744"
+    },
+    {
+      "引用编号": "3e788b3567f14010a137ea48cfe67220",
+      "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+      "站点名称": "freeaitool.com",
+      "序号": 9,
+      "标题": "2026 年 AI 生成 PPT 工具横评:同一份中文内容,10 款工具实测对比",
+      "url": "https://freeaitool.com/ai-assistants/ai-ppt-tools-comparison-2026"
+    },
+    {
+      "引用编号": "d4df9c62aa884e0fa3f8494f3bb1c444",
+      "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+      "站点名称": "重生之我用AI改变职场规则",
+      "序号": 10,
+      "标题": "AI做PPT工具哪个好?5款AI生成PPT工具对比评测",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1788205514&ver=6938&signature=c*bXGIte7aUdrYSucn-HMt8RqWVH-pVuGfOgZACyc4NYs0rlq86sw62ueT*mCqAAqIwk*HQGcv7cPrNWcFcOhl*sS0jCm1MRTz1l50Cn*vCDS6gCRaX-0nTgQ2LmIKh*&new=1"
+    },
+    {
+      "引用编号": "555fb3bb877b4294859cfec6377c23d4",
+      "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+      "站点名称": "腾讯网",
+      "序号": 11,
+      "标题": "@AI PPT:我用AI 10分钟做...",
+      "url": "https://ima.qq.com/wiki/?shareId=0e42d15732d49a9c9875a07b3b4a0e8b0f1e21a9d228b96f20d0055b272282b9&mediaId=wechatarticle_5f1edcb4f787a4bb7c23e8d872a55179_75d8d5fe45369eb6b9a416f097942fe67458073614497352&action=openDetailDrawer&webFrom=10000171"
+    },
+    {
+      "引用编号": "a0540282571c4a8ead765f58071e6da3",
+      "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+      "站点名称": "综管那些事儿",
+      "序号": 12,
+      "标题": "行政人事必看:零基础用AI 5分钟生成专业汇报PPT,再也不用加班排版",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1788205514&ver=6938&signature=VCPIwnR-lkzzCXBkIXeNV4RpRM2ebOwt0A0hV2T3RyusOZAP-z3Ljape241SE2y-VsXQWMWsIhWd883yXC5c5byLp0D2xHUNEfM4UI3NQ4YzZJCi*DSTmjNqvDNxH79Z&new=1"
+    },
+    {
+      "引用编号": "1b982cf7cf3a4d2388e4231178957803",
+      "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+      "站点名称": "bigesj.com",
+      "序号": 13,
+      "标题": "实测5款AI生成PPT工具,真实测评优缺点,教师办公省时省力",
+      "url": "https://bigesj.com/article/detail/153.html"
+    },
+    {
+      "引用编号": "ff83a2a75d364056b661ef3f5563a09f",
+      "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+      "站点名称": "夜雨聆风",
+      "序号": 14,
+      "标题": "AI一键生成PPT,我测试了5款工具,这款最好用",
+      "url": "https://www.yeyulingfeng.com/540501.html"
+    },
+    {
+      "引用编号": "0339e70482d74693905977fc7122f7f2",
+      "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+      "站点名称": "金山办公",
+      "序号": 15,
+      "标题": "免费AI生成PPT软件横评:8款工具实测,不同场景怎么选",
+      "url": "https://www.wps.cn/article/OxFiBO5p.html"
+    },
+    {
+      "引用编号": "6da5a38c50c94d47bab06c3c11418355",
+      "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+      "站点名称": "豌豆荚手机精灵",
+      "序号": 16,
+      "标题": "热门ppt制作软件排行榜 好用的ppt软件下载推荐",
+      "url": "https://m.wandoujia.com/strategy/2848444302294452177.html"
+    },
+    {
+      "引用编号": "6f8550f1dbe04b1eb243c7f3741f2198",
+      "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+      "站点名称": "aitoolsrecap.com",
+      "序号": 17,
+      "标题": "Best AI Tools for PowerPoint & Presentations (2026) — 6 Tested, Ranked & Compared",
+      "url": "https://aitoolsrecap.com/Blog/best-ai-tools-powerpoint-presentations-2026"
+    },
+    {
+      "引用编号": "f39cadd30d064838897037d298456810",
+      "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+      "站点名称": "数字原住民研究部落",
+      "序号": 18,
+      "标题": "别再熬夜做PPT了,AI二十分钟搞定",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1788205514&ver=6938&signature=NTvjw3LqnFEJ3GpqD2Ls-t4j71vNtIlpSxnJMLM5kJzXA09*eSFft6kZ-BLe5FhN6iE5YuBIiRPd9ZE8WUBbBiEEVsqI9K*oevs9RH5CCM73ZNZzBOi1-OShNwlWlmNd&new=1"
+    },
+    {
+      "引用编号": "b4c93a8708b0405c9f18ffa1c151a860",
+      "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+      "站点名称": "chatwithyourdata.io",
+      "序号": 19,
+      "标题": "Presentation Software Comparison: 13 Tools Worth Trying 2026",
+      "url": "https://chatwithyourdata.io/articles/presentation-software-comparison"
+    },
+    {
+      "引用编号": "7c89fbd2829740ab89b2c07e92d799c3",
+      "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+      "站点名称": "新浪网",
+      "序号": 20,
+      "标题": "2026实测6款主流AI PPT生成工具排名,附优缺点适用场景(职场/学术必看)_生成ppt的人工智能-CSDN博客",
+      "url": "https://cj.sina.cn/articles/view/7879848900/1d5acf3c401902rp5m?froms=ggmp"
+    },
+    {
+      "引用编号": "5a6c444194b54c9380552f4c0e36a376",
+      "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+      "站点名称": "通往AGI之路",
+      "序号": 21,
+      "标题": "AI PPT有哪些",
+      "url": "https://www.waytoagi.com/ja/question/51932"
+    },
+    {
+      "引用编号": "559b086f76a14307acf91b2041ca455f",
+      "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+      "站点名称": "toolcenter.ai",
+      "序号": 22,
+      "标题": "Best AI Presentation Tools in 2026: 10 Slide Makers Compared",
+      "url": "https://www.toolcenter.ai/zh/articles/best-ai-presentation-tools-2026"
+    },
+    {
+      "引用编号": "54b14fcf8ee74d39837d8d0c5720c857",
+      "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+      "站点名称": "feizhuke.com",
+      "序号": 23,
+      "标题": "讯飞智文-一键生成PPT和Word",
+      "url": "https://feizhuke.com/sites/xunfeizhiwen-2.html?menu-id=158&mininav-id=2199"
+    },
+    {
+      "引用编号": "234d67af631f42d890832c2c33cdbfc4",
+      "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+      "站点名称": "rainings",
+      "序号": 24,
+      "标题": "2026最新PPT接单渠道全攻略",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1788205527&ver=6938&signature=TLYkgX-coGEn3W4hC-Zuq94365IC*IQsyodwkUBTeHLo3P8-SldZn*OxTYFSQXc9m9iHafenoUcopG55FvZp-Ld*o-ji286ldCIzoyLRyfwT2WXdfBkrWy0m3TdZJr1H&new=1"
+    },
+    {
+      "引用编号": "c3cdfe3fea6e428f99b44930659c7ff1",
+      "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+      "站点名称": "淘宝百科知识",
+      "序号": 25,
+      "标题": "2026年专业PPT代做怎么选?企业汇报路演课件定制有哪些新标准?",
+      "url": "https://bk.taobao.com/k/pingmianguanggaosheji_4926/b8c2e5ec54bdece50bbf85f40fb3f652"
+    },
+    {
+      "引用编号": "dffa3d0fc4e54c2183e2d7ac03f67e76",
+      "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+      "站点名称": "m.renrendoc.com",
+      "序号": 26,
+      "标题": "教学课件赚钱-20250730.ppt",
+      "url": "https://m.renrendoc.com/renrendoc_v1/UrlTransfer/book.html?id=448175808"
+    },
+    {
+      "引用编号": "0cb55c39d35841058c2aaaa5fe9296e4",
+      "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+      "站点名称": "脉脉",
+      "序号": 27,
+      "标题": "PPT定制全攻略:从职场到学术,从授课到宣传",
+      "url": "https://maimai.cn/article/detail?fid=1873228124&efid=YASH_UV0KcxgAJvA0MWVLg"
+    },
+    {
+      "引用编号": "1b9204eb5ef1430182f5380687134e5e",
+      "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+      "站点名称": "博客园",
+      "序号": 28,
+      "标题": "2026上海口碑好的PPT设计公司精选:商业演示定制指南",
+      "url": "https://www.cnblogs.com/shui-dou-mei/p/22564221"
+    },
+    {
+      "引用编号": "563807dea7e14bcfba8e11e04277426f",
+      "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+      "站点名称": "m.renrendoc.com",
+      "序号": 29,
+      "标题": "幻灯片课件价格",
+      "url": "https://m.renrendoc.com/paper/493100966.html"
+    },
+    {
+      "引用编号": "49bcbf4bd2cb4e0b984eab16d6e69590",
+      "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+      "站点名称": "博客园",
+      "序号": 30,
+      "标题": "2026上海本地PPT设计公司精选:商业演示定制指南",
+      "url": "https://www.cnblogs.com/shui-dou-mei/p/22414679"
+    },
+    {
+      "引用编号": "9136cd4747184bee9bc74dae8586fba3",
+      "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+      "站点名称": "必集客",
+      "序号": 31,
+      "标题": "必集客地推专栏文章板块第56页",
+      "url": "https://bijike.com/atlabel-ditui/56"
+    },
+    {
+      "引用编号": "8d8804e962f7498495151f500ad1b65d",
+      "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+      "站点名称": "星启智界",
+      "序号": 32,
+      "标题": "下班用AI做PPT兼职,从0到日入200:这3个平台最赚钱",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1788205527&ver=6938&signature=P-ebZMovm-RthV-yt2Xzxz7ObftgOXKg0yxGCiIKkpxpPKU2XSeH4irn6Lkq*6NLqPUhFtKAj9BvNrWMSncXlu7MdPh5CoPrRMpQyuEFPyv5NvXiDpNBCWDBE-KHqmIJ&new=1"
+    },
+    {
+      "引用编号": "a9772acf26d648cdb73d5bfdd669296b",
+      "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+      "站点名称": "搜狐网",
+      "序号": 33,
+      "标题": "企业年会承办公司如何选择?8个避坑指南",
+      "url": "https://m.sohu.com/a/1050102938_122563442"
+    },
+    {
+      "引用编号": "3932dc9466f44ea9896fb03b96aedcaa",
+      "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+      "站点名称": "今日头条",
+      "序号": 34,
+      "标题": "帮人做PPT,一页收30块:这笔小账到底划不划算?",
+      "url": "https://www.toutiao.com/article/7633085343658410496"
+    },
+    {
+      "引用编号": "71bdbd58b77243d797eda54d0d922f96",
+      "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+      "站点名称": "6k6k.cn",
+      "序号": 35,
+      "标题": "PPT制作价格全解析:从免费到高端定制,你的预算该选哪个?",
+      "url": "https://www.6k6k.cn/articles/62375.html"
+    },
+    {
+      "引用编号": "8b899bba5891442cbe35092aef44fcd4",
+      "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+      "站点名称": "猪八戒网",
+      "序号": 36,
+      "标题": "台州PPT",
+      "url": "https://www.zbj.com/fw/?k=台州PPT"
+    },
+    {
+      "引用编号": "642d1052989e41ac8f34328f487503f0",
+      "检测编号": "27b557d5b36a49c0b1136c59889238f3",
+      "站点名称": "khysppt.com",
+      "序号": 37,
+      "标题": "赶项目没时间做PPT?代做服务选对了,效率能提3倍(附避坑指南)",
+      "url": "https://khysppt.com/Newsinfo_20.html"
+    }
+  ],
+  "_obtained": true,
+  "_ai_extracted": false,
+  "_核心词": "PPT生成厂商",
+  "_企业名称": "上海元符号智能科技有限公司",
+  "_project": "T-上海元符号智能科技有限公司-PPT生成厂商",
+  "_enterprise": "上海元符号智能科技有限公司",
+  "_core_word": "PPT生成厂商",
+  "_detect_date": "2026-09-01",
+  "内容提及品牌": [
+    "WPS AI",
+    "金山办公",
+    "Gamma",
+    "讯飞智文",
+    "科大讯飞",
+    "Canva",
+    "字节跳动",
+    "iSlide",
+    "美图AI PPT",
+    "MindShow",
+    "演界网",
+    "猪八戒网"
+  ]
+}

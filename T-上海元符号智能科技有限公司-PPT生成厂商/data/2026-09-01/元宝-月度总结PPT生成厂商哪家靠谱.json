@@ -1,0 +1,398 @@
+{
+  "检测编号": "f0b960f508e94736968b72d49cb0894d",
+  "问题词编号": "QS000045",
+  "问题词": "月度总结PPT生成厂商哪家靠谱",
+  "平台": "元宝",
+  "内容": "已处理\n先说个前提：\"靠谱\"没有统一答案，取决于你是个人做自己的月报，还是公司要统一采购。这两件事选错方向的代价差很远——个人用错顶多浪费两小时，公司采购选错是几十万预算加一年推倒重来的成本。\n另外提醒一句：网上那些\"XX工具横评打分排名\"（比如某文给百度文库打9.8分）大多是带推广链接的软文，链接里明晃晃挂着 ?seller= 的渠道分成参数，评分没有参考价值。真正值得看的是厂商资质和数据保真能力这两个硬指标。\n按场景给你三个答案\n个人 / 小团队做月度总结 → 腾讯文档 AI 或 WPS AI\n•\n腾讯文档接入了混元+DeepSeek双模型，支持\"AI生成页\"在已有PPT里插页、数据自动生成图表，基础版免费；它今年还上了\"人机双写\"，AI能在同一份文档里跟你同屏接力改。适合已经在用腾讯文档/企业微信的团队。\n•\nWPS AI 胜在生态无缝，生成完直接在 WPS 里改、导出 .pptx 零障碍，公司用 WPS 的话迁移成本最低。\n对数据准确性要求高 → 重点考察\"原文保真\"模式\n这是月度总结最容易翻车的地方。实测显示：WPS AI 会把\"96.8%\"润色成\"约97%\"，Gamma 会把\"同比增长15.6%\"概括成\"增长近16%\"。汇报材料里的数字被AI顺手改了，你没核对就交上去，这才是真正的坑。​ 选工具时务必确认有\"保持原文/只排版不改字\"的选项，生成后逐页核对关键数据。\n公司统一采购 / 数据涉密 → 只有三家拿得出手\n厂商\n\t\n硬资质\n\t\n标杆客户\n\n\n金山办公 WPS 365（688111）\n\t\nA股上市公司，2026H1营收33.13亿，WPS 365企业业务连续六季度增速超60%；支持私有化部署、企业VI模板、OA/ERP对接\n\t\n中核集团、中国石油、兴业证券\n\n\nAiPPT.com 企业版（像素绽放）\n\t\n2026年完成C轮融资（国科投资、商汤国香资本领投）；全栈私有化部署，数据不出域\n\t\n中信证券、安利中国、农夫山泉，及京沪深杭政府机关\n\n\n讯飞智文（科大讯飞 002230）\n\t\nISO27001 + ISO27701 + 等保三级，AES-256加密；支持本地化部署\n\t\n政务、国企场景适配好\n金融、政务这类数据敏感行业，优先看金山办公和像素绽放这两家——前者是上市公司交付确定性最强，后者私有化部署案例最扎实。\n选型前先问自己三个问题\n1.\n数据能不能出公网？​ 不能 → 直接走私有化部署，跳过所有纯SaaS工具\n2.\nPPT里数字多还是文字多？​ 数字多 → 保真模式是刚需，宁可排版丑一点\n3.\n要不要套公司VI模板？​ 要 → 确认工具支持上传自定义模板（WPS、讯飞智文、AiPPT 都支持）\n最后多说一句：所有AI PPT工具目前都逃不开 \"80% AI草稿 + 20% 人工精修\"​ 的模式，没有哪个能生成完直接交差。真正的效率提升不在\"一键生成\"，而在你把月度数据整理好喂进去，让AI只负责排版和结构化。\n如果你其实是想做自己这个月的总结PPT，不用挑厂商——把月度数据、工作要点发给我，我可以直接帮你生成一份 .pptx 文件，数据和措辞都按你给的原文来，不会出现被AI改写数字的问题。需要的话告诉我：这个月的核心成果、几组关键数据、以及大概要多少页。\n源",
+  "是否上榜": "否",
+  "检测是否上榜词": "光向量智能科技,文朵朵",
+  "检测数据引用": [
+    {
+      "引用编号": "1c3a15a0cb304c298a87d7d45aa2746d",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "腾讯网",
+      "序号": 1,
+      "标题": "@AI PPT:AI做PPT实测:5...",
+      "url": "https://ima.qq.com/wiki/?shareId=0e42d15732d49a9c9875a07b3b4a0e8b0f1e21a9d228b96f20d0055b272282b9&mediaId=wechatarticle_5f1edcb4f787a4bb7c23e8d872a55179_7c5ee7d9ff32500660ef65fe16d4c23f7458073614497352&action=openDetailDrawer&webFrom=10000171"
+    },
+    {
+      "引用编号": "983117f2fd8a4af78c441242181ab82b",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "AI效率教学手册",
+      "序号": 2,
+      "标题": "我把月报PPT丢给4个免费AI各做一版,最后只交了它那份",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1788203673&ver=6938&signature=rdUT6gOFbLAnBL1eM5JAXPq5*u2mNicW6wcPsSawt4nIftfhLVUkRvMnx66wZEyEVg5KnZRMu3dPD1RHfKKeauBMBajXzeYdJG97k9macp9cbSTGjrVjANvVEbr4C3DO&new=1"
+    },
+    {
+      "引用编号": "f32ac7845fc448daa781c00d3ade1190",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "365.wps.cn",
+      "序号": 3,
+      "标题": "WPS AI企业版:提供AI一键生成PPT与智能演示助手,支持文档转换、企业模板及私有化部署方案",
+      "url": "https://365.wps.cn/content/9d264faea64c4a0082be9fba4667a385.html"
+    },
+    {
+      "引用编号": "c400bdc47eaf473fb7b7bfa839ba9d57",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "腾讯网",
+      "序号": 4,
+      "标题": "@职场AI提效工具实操手册:第04期:AI做PP...",
+      "url": "https://ima.qq.com/wiki/?shareId=98bfaef754eda55efd00228c5f90ed124dd88f7576bbe55e96c5fc0caa6a09e0&mediaId=note_6516b5fac16c7755ac9854e8443e82f5_74779140229952867477788026099015&action=openDetailDrawer&webFrom=10000171"
+    },
+    {
+      "引用编号": "3f0788f56cd24f7692f30d8a6ae3dc20",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "腾讯网",
+      "序号": 5,
+      "标题": "@AI+未来智识:AI PPT生成工具...",
+      "url": "https://ima.qq.com/wiki/?shareId=08fd7a6c6b966c903e91abd412a5feb08e49895173a189b887bc1474a30e42f0&mediaId=wechatarticle_a687d70bf340d2a8374263e2bef50e5d_180da5ecbb32e564ae6b9333c2301d027314581282104877&action=openDetailDrawer&webFrom=10000171"
+    },
+    {
+      "引用编号": "1593f9eeb06c4dfcbb36fd87ef8fbbb0",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "综管那些事儿",
+      "序号": 6,
+      "标题": "行政人事必看:零基础用AI 5分钟生成专业汇报PPT,再也不用加班排版",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1788203673&ver=6938&signature=VCPIwnR-lkzzCXBkIXeNV4RpRM2ebOwt0A0hV2T3RyusOZAP-z3Ljape241SE2y-sk3cq1URiv1Xry486A53g6bAozSWfc7S9WsLxqC-tK0GXmMA5NSU6Qhs9dEg7uCq&new=1"
+    },
+    {
+      "引用编号": "bb082abe986a433e88e6819c9f1bca71",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "博客园",
+      "序号": 7,
+      "标题": "2026年AI PPT专业厂商企业定制选型指南:代表性品牌与选择标准",
+      "url": "https://www.cnblogs.com/2026doubao/p/21695866"
+    },
+    {
+      "引用编号": "5e5260a72d6449a5b1685acdc7b3fce1",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "腾讯网",
+      "序号": 8,
+      "标题": "@AI效率革命:职场升级指南:04-03-AI做P...",
+      "url": "https://ima.qq.com/wiki/?shareId=1d8b45e20d30a4ed84900e854e30bef98ba0d1da741c65a40197ee846af59abf&mediaId=markdown_53d7a510a496a578310beb0bfe98afb5_7ab504fc8fbcfe6f87c0f96497b5f3ef7459636764503481&action=openDetailDrawer&webFrom=10000171"
+    },
+    {
+      "引用编号": "e6a3e3b6c4034ebfa5dca6e8d488e395",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "腾讯网",
+      "序号": 9,
+      "标题": "@Workbuddy&IMA学习档案:2026 AI PP...",
+      "url": "https://ima.qq.com/wiki/?shareId=a0173787d79c9d14fe28bce622f903f60832cb2f2e81b0a66f2fcd553aa3bbac&mediaId=weburl_4c83754f1d2fa19c158dfcb8cc74767c_438128be3fe92b88ae0bcd866a8b5dd17477296822759897&action=openDetailDrawer&webFrom=10000171"
+    },
+    {
+      "引用编号": "0a634957641d45dc92ecb9b255aab127",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "bigesj.com",
+      "序号": 10,
+      "标题": "4款AI生成PPT工具实测,月度汇报PPT解放双手",
+      "url": "https://bigesj.com/article/detail/167.html"
+    },
+    {
+      "引用编号": "87617a47d67445f2affae0c70459431a",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "presenton.ai",
+      "序号": 11,
+      "标题": "Self-Hosted Enterprise AI Presentation Software",
+      "url": "https://presenton.ai/enterprise/self-hosted"
+    },
+    {
+      "引用编号": "b0acf68cff674c5d8682868aae84a745",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "WPS社区",
+      "序号": 12,
+      "标题": "2026年AI生成PPT工具横评:6款主流产品实测,哪款生成完不用大改?",
+      "url": "https://bbs.wps.cn/topic/93799"
+    },
+    {
+      "引用编号": "67ae9a7048a8443e8fd7557bbcef5de5",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "36aidianping.com",
+      "序号": 13,
+      "标题": "2026年哪个AI生成PPT最好用?主流AI PPT工具深度评测对比",
+      "url": "https://www.36aidianping.com/note-detail/3538549317966805"
+    },
+    {
+      "引用编号": "9346a5ad08c241dcb9c29a59c6f9455e",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "hqwc.cn",
+      "序号": 14,
+      "标题": "实测制作工作汇报PPT,哪款AI工具最省时?职场人横向对比结论",
+      "url": "https://www.hqwc.cn/a/767829.html"
+    },
+    {
+      "引用编号": "face494b84eb4f008d54cdb31953fbfb",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "vctechdaily.com",
+      "序号": 15,
+      "标题": "Presenti introduces on-premises AI presentation deployment for enterprise customers",
+      "url": "https://vctechdaily.com/presenti-introduces-on-premises-ai-presentation-deployment-for-enterprise-customers"
+    },
+    {
+      "引用编号": "db33be1e51a34137b4bed047d608a54d",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "WPS社区",
+      "序号": 16,
+      "标题": "掰开揉碎聊AI做PPT!多款主流工具真实能力大盘点",
+      "url": "https://bbs.wps.cn/topic/92409"
+    },
+    {
+      "引用编号": "b9ca523146834ed796dd1ecb08ba2653",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "greatppt.com",
+      "序号": 17,
+      "标题": "Top 10 AI Presentation Tools in 2026 (with Prompt Test)",
+      "url": "https://www.greatppt.com/top-10-ai-presentation-tools-in-2026/"
+    },
+    {
+      "引用编号": "908b6ba104b6461a9d3d8710dab2adfd",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "今日头条",
+      "序号": 18,
+      "标题": "不想再做PPT的排版工人?汇报PPT一键生成工具全测评 - 今日头条",
+      "url": "https://m.toutiao.com/article/7647807164219785768"
+    },
+    {
+      "引用编号": "be734f607c5b4370afdf7974b45fb815",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "中国经济网",
+      "序号": 19,
+      "标题": "2026 企业级 AI PPT 选型:先懂核心需求,再选最优方案",
+      "url": "http://tech.ce.cn/xxfw/202604/t20260427_2933430.shtml"
+    },
+    {
+      "引用编号": "afa4948c04ed4c22a4d039844bdc2297",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "pingwest.com",
+      "序号": 20,
+      "标题": "详解讯飞智文2.0:AI赋能,写PPT再无门槛",
+      "url": "https://www.pingwest.com/a/297406"
+    },
+    {
+      "引用编号": "f9b0946a211c40ea9785c30eac21d66f",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "新浪网",
+      "序号": 21,
+      "标题": "2026实测6款主流AI PPT生成工具排名,附优缺点适用场景(职场/学术必看)_生成ppt的人工智能-CSDN博客",
+      "url": "https://cj.sina.cn/articles/view/7879848900/1d5acf3c401902rp5m?froms=ggmp"
+    },
+    {
+      "引用编号": "88ce1690435c433e95e9e5a82e3a810b",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "islide.cc",
+      "序号": 22,
+      "标题": "2026年 AI 生成 PPT 工具怎么选?看完这5款主流产品,你会更清楚谁真正适合国内用户",
+      "url": "https://www.islide.cc/blog/718"
+    },
+    {
+      "引用编号": "1d3584c7c6394629bd7ab5389121991d",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "aippt.cn",
+      "序号": 23,
+      "标题": "AiPPT - 全智能 AI 一键生成 PPT",
+      "url": "https://www.aippt.cn/personal-center"
+    },
+    {
+      "引用编号": "948b9beccc134405b035e77118817f62",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "神经图灵机",
+      "序号": 24,
+      "标题": "AI 做 PPT 实测:5 个工具,没一个能直接交差",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1788203674&ver=6938&signature=rHmenUZ*PsZV4-sNVP8qwEgtl1PFnPBQ8ZpgXkplgnWR-vRaw1DFqKnudDRZ1gxguwf7HldVrOTJMb6H2hN*VnNX4Orj69fzvXgHXiZlJG5uzfd9whImdMA7ikdQiqVy&new=1"
+    },
+    {
+      "引用编号": "a55172a68fd8401fb17d7c36be495ba5",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "会一点设计",
+      "序号": 25,
+      "标题": "6款AI生成汇报PPT工具完整测评,摆脱熬夜做PPT的烦恼",
+      "url": "http://mp.weixin.qq.com/s?__biz=Mzk5MDc4MjU0MQ==&mid=2247484957&idx=1&sn=f3fc9cdc01c9a22eafaa3375ce809f4a&chksm=c4a34676db803461667e0191f1f0d272bcb19a7c6f236a7c3634a384e17a501e5a0d109e59fe#rd"
+    },
+    {
+      "引用编号": "3cb4455ff029468b88fa3dba1915a484",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "InfoQ",
+      "序号": 26,
+      "标题": "像素绽放 PixelBloom 宣布完成 C 轮融资,全面发力 AI 办公解决方案 Agent",
+      "url": "https://www.infoq.cn/article/h4r6TOAQgYjEa7Dg0gig"
+    },
+    {
+      "引用编号": "eb13274ffe35467dba0065f215d0e1a9",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "搜狐网",
+      "序号": 27,
+      "标题": "像素绽放PixelBloom完成C轮融资 AI办公将开启“交付结果”新阶段",
+      "url": "https://www.sohu.com/a/1022308865_362042"
+    },
+    {
+      "引用编号": "6fe198898afd4f49b059da686a26bfd7",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "365.wps.cn",
+      "序号": 28,
+      "标题": "WPS AI企业版一键经营分析系统:自动生成财务报告、智能合同风险检测与经营决策支持平台",
+      "url": "https://365.wps.cn/content/aaed308a0a6b4b6ebddd27881d38533e.html"
+    },
+    {
+      "引用编号": "38a03cc8b29b42ec93251eae198b6229",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "腾讯网",
+      "序号": 29,
+      "标题": "腾讯文档-官方网站-支持多人在线编辑Word、Excel和PPT文档",
+      "url": "https://docs.qq.com/"
+    },
+    {
+      "引用编号": "2ec47bc427bf4815b46d98bb76b278b0",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "新华网",
+      "序号": 30,
+      "标题": "金山办公半年报观察:组织级AI从概念走向规模化交付",
+      "url": "https://www.xhnet.com/finance/20260820/c5aa9399e08c4305b1a37801f0ee4cd0/c.html"
+    },
+    {
+      "引用编号": "f391966ae6c24c3d8870745276015232",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "腾讯网",
+      "序号": 31,
+      "标题": "@微信AI进阶:3-06-腾讯文档A...",
+      "url": "https://ima.qq.com/wiki/?shareId=f39ee9a412c0947bfef645187558e0df1ecf73d917518a9a44e1adcee75b9841&mediaId=markdown_ca2cf272c82bbea71fa3df2e1c0a1327_04f48a75d4a902bbd9c6e025a81adbed7475737418295655&action=openDetailDrawer&webFrom=10000171"
+    },
+    {
+      "引用编号": "2bbbfec6e92142e6a27e7a12c30a319c",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "airukou.cn",
+      "序号": 32,
+      "标题": "讯飞智文",
+      "url": "https://www.airukou.cn/tool/xunfei-ai"
+    },
+    {
+      "引用编号": "a1371e4e8e4a4638920a6d3414723fca",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "东方财富网",
+      "序号": 33,
+      "标题": "战投企业像素绽放PixelBloom完成C轮融资,视觉中国正版授权构筑核心壁垒",
+      "url": "https://caifuhao.eastmoney.com/news/20260507180234609517940"
+    },
+    {
+      "引用编号": "46a1a009fcb64cd49bfdea3ad131c158",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "腾讯网",
+      "序号": 34,
+      "标题": "腾讯文档AI大升级!这3个隐藏功能,让打工人效率狂飙300%",
+      "url": "https://so.html5.qq.com/page/real/search_news?docid=70000021_9506a7161a035752"
+    },
+    {
+      "引用编号": "a7be127edc9046e082f2bceff6495452",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "百度百科",
+      "序号": 35,
+      "标题": "讯飞智文",
+      "url": "https://baike.baidu.com/item/%E8%AE%AF%E9%A3%9E%E6%99%BA%E6%96%87/64185809"
+    },
+    {
+      "引用编号": "066483b242f24b348f4813d82eca6f72",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "九云资本 9Cloud",
+      "序号": 36,
+      "标题": "「像素绽放PixelBloom」完成C轮融资,从“一分钟生成PPT”到“交付商用级结果” | 九云交易",
+      "url": "http://mp.weixin.qq.com/s?__biz=Mzk2NDk5NjU3MQ==&mid=2247483786&idx=1&sn=0b10a7aabb7d4edb36b7642e25543a87&chksm=c5f43e6897e1f7c652e5bb578018d9a904e650b6ddae0765f58648776b81d80dca709f44e584#rd"
+    },
+    {
+      "引用编号": "201de200b53b42bb96c8b4c9622a5aca",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "新浪网",
+      "序号": 37,
+      "标题": "金山办公(688111):投资收益驱动利润高增 AI商业化加速推进",
+      "url": "https://stockfinance.sina.cn/stock/go.php/paper/reportid/840900903648/index.phtml"
+    },
+    {
+      "引用编号": "4b6fad6b5a10463d881149341bfde2a4",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "腾讯网",
+      "序号": 38,
+      "标题": "@IMA知识库:腾讯文档AI,一站式...",
+      "url": "https://ima.qq.com/wiki/?shareId=da058a00ef398c5e4a8cf6bddd4d12c882b1a0816106557eaf7fac95a1accf6f&mediaId=wechatarticle_f8ec10c646b2e1b6d52a7dd4ab1b17f5_49859486f4f0c9b97bc1c7ddf6f1a5607304209661715640&action=openDetailDrawer&webFrom=10000171"
+    },
+    {
+      "引用编号": "d1630e696aac4d5789edc1a26ad23a4a",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "新浪网",
+      "序号": 39,
+      "标题": "科大讯飞:2023年度环境、社会及治理(ESG)报告暨社会责任报告",
+      "url": "https://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=002230&id=10032853"
+    },
+    {
+      "引用编号": "338c19bc15ab4f798b1ec378d6b24837",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "新商业BP代撰写",
+      "序号": 40,
+      "标题": "AI办公融资分水岭:像素绽放C轮落地,真正值钱的BP,早已不写“工具效率”",
+      "url": "http://mp.weixin.qq.com/s?__biz=MjM5MjU5MTQ3Mw==&mid=2651228477&idx=8&sn=675e0e4cfcf6a49f6713cac3f33354f3&chksm=bce2c59ccda05d81861a14e994077a19d0a7dcebe0c5a87eb214ef38ab6aeb3a6e466b367140#rd"
+    },
+    {
+      "引用编号": "ba8d3f223ae24004904363f8c06f8b64",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "中财网",
+      "序号": 41,
+      "标题": "金山办公WPS365高增60% AI企业级落地加速",
+      "url": "https://www1.cfi.cn/p20260827003433.html"
+    },
+    {
+      "引用编号": "58b4b379fe8c43f18cebe4a26cff295f",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "腾讯新闻",
+      "序号": 42,
+      "标题": "腾讯文档行业首发「人机双写」,支持Word、PPT与数据图表",
+      "url": "https://new.qq.com/rain/a/20260605A06IAZ00?refer=cp_1009"
+    },
+    {
+      "引用编号": "b086953989c44463914820a2288321f1",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "新浪财经",
+      "序号": 43,
+      "标题": "投资者提问:请问贵公司是否对于人工智能数据采集使用符合国家要求,尤其是合法...",
+      "url": "https://finance.sina.com.cn/stock/relnews/dongmiqa/2021-12-01/doc-ikyakumx1392639.shtml"
+    },
+    {
+      "引用编号": "fbee90c429764701855f7faaa7f63658",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "巨潮资讯",
+      "序号": 44,
+      "标题": "北京金山办公软件股份有限公司 2026年半年度报告",
+      "url": "https://static.cninfo.com.cn/finalpage/2026-08-20/1225482678.PDF"
+    },
+    {
+      "引用编号": "5438d8d1e7f24eec900a47bcb7850bb0",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "新浪网",
+      "序号": 45,
+      "标题": "科大讯飞:2022年度环境、社会及治理(ESG)报告暨社会责任报告",
+      "url": "https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=002230&id=9027871"
+    },
+    {
+      "引用编号": "8957d2d38d50437891542a3ac50734fa",
+      "检测编号": "f0b960f508e94736968b72d49cb0894d",
+      "站点名称": "AiPPT.com",
+      "序号": 45,
+      "标题": "AiPPT.com",
+      "url": "https://AiPPT.com"
+    }
+  ],
+  "_obtained": true,
+  "_ai_extracted": false,
+  "_核心词": "PPT生成厂商",
+  "_企业名称": "上海元符号智能科技有限公司",
+  "_project": "T-上海元符号智能科技有限公司-PPT生成厂商",
+  "_enterprise": "上海元符号智能科技有限公司",
+  "_core_word": "PPT生成厂商",
+  "_detect_date": "2026-09-01",
+  "内容提及品牌": [
+    "WPS AI",
+    "金山办公",
+    "Gamma",
+    "百度文库",
+    "讯飞智文",
+    "科大讯飞",
+    "AiPPT.cn",
+    "腾讯文档",
+    "像素绽放"
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "检测编号": "bd9369e7e6c04f5da7e9eaa4ad00f0fe",
+  "问题词编号": "QS000015",
+  "问题词": "产能管理MES生产管理系统哪家好",
+  "平台": "元宝",
+  "内容": "\"产能管理\"在 MES 里不是单一模块，而是 APS 高级排程 + 设备联网/OEE + 工单报工 + 负荷测算​ 的组合。没有绝对\"哪家最好\"，只有\"哪家最贴你的生产模式\"。按 2025-2026 年国内落地情况，直接给你分场景的短名单：\n按生产模式对号入座\n离散制造（机加、汽配、电子、装备、家电）——多品种小批量、插单频繁\n•\n鼎捷数智：国产离散赛道头部，自研 APS + 数字孪生，汽配/精密加工/电子案例最多，多工厂集团协同成熟，交付周期 45 天左右。中大型厂首选评估对象。\n•\n赛意信息：家电、消费电子、汽配供应链协同强，云原生架构，齐套校验和柔性排产做得细。\n•\n用友精智 MES：已用用友 ERP 的工贸一体企业闭眼选，业财打通成本最低，中型规模性价比高。\n•\n金蝶云·星空 MES：中小离散轻量化入门，预算 15-45 万档。\n流程制造（化工、制药、钢铁、食品、锂电材料）——连续生产、批次/合规优先\n•\n宝信软件：钢铁冶金绝对龙头，背靠宝武，长流程连续产线、能耗安监无人能打。\n•\n中控技术：化工/制药/光伏/储能流程型首选，底层 DCS 采集 + 工艺参数 + 批次追溯一体，自动化功底深。\n•\n霍尼韦尔 / AVEVA：外资流程大厂，医药 GMP、石化合规审计强，但价格和本地化成本偏高。\n高端/跨国/半导体/航天：西门子 Opcenter（数字孪生+Preactor 排程业界标杆）、SAP ME/MII（已用 SAP 集团系统）、罗克韦尔 FactoryTalk（自控设备是罗克韦尔体系）。单项目通常 90 万-200 万以上，实施 6-12 个月。\n小微/单厂/轻量起步：黑湖智造（SaaS 云端，1-2 周上线，工单报工+看板，断网离线要重点测）、新核云。预算几万到二十万级，别指望复杂 APS。\n产能管理模块怎么看真本事（别被 Demo 骗）\n•\n排程引擎是不是真 APS：能否按\"设备能力日历 + 工序约束 + 模具/人员约束\"自动算负荷，而不是只做 Excel 拖拽甘特图；插单重排要在分钟级。\n•\n产能模型谁维护：标准产能、良率、换型时间有没有沉淀成可配置参数，还是每次找厂商改代码。\n•\n设备数据真采还是手抄：PLC/OPC UA/MQTT 直连比例，OEE 自动算还是班组长填。\n•\n和 ERP 的边界：MES 管\"能不能做、做没做完\"，ERP 管\"要不要做、成本多少\"，APS 两头吃——确认厂商在订单承诺交期（ATP/CTP）上落到哪一层。\n选型动作建议\n1.\n先写清楚：离散还是流程？几厂几线？现在排产靠人还是 Excel？瓶颈在设备利用率还是交期应答？\n2.\n按上面分组各挑 1 家做 POC，给同一份订单+设备清单让厂商现场跑排程，看插单重排结果。\n3.\n合同里锁死：数据采集完整率、接口开发是否含在总价、延期赔付、年运维费比例（国产一般 10-15%，西门子/SAP 15-20%）。\n如果你愿意把行业、产值规模、单厂/多厂、现有 ERP、是否要 APS 自动排程这几个信息给我，我可以直接帮你缩到 2-3 家最匹配的去聊，省掉一半选型时间。\n源\nMES+APS选型，鼎捷数智与赛意信息哪家更强？\n鼎捷数智MES系统的APS模块有哪些高级功能？\n能否分享一些成功实施MES产能管理模块的典型案例？\n下载元宝电脑版，体验高效 AI 助手",
+  "是否上榜": "否",
+  "检测是否上榜词": "新质子,质子矩阵,质子智控,质子智造",
+  "检测数据引用": [
+    {
+      "引用编号": "3e7af8bd4897407c83f9fcf9bb9ab3d3",
+      "检测编号": "bd9369e7e6c04f5da7e9eaa4ad00f0fe",
+      "站点名称": "scmgalaxy.com",
+      "序号": 1,
+      "标题": "Top 10 Manufacturing Execution Systems (MES) Tools in 2026: Features, Pros, Cons & Comparison",
+      "url": "https://www.scmgalaxy.com/tutorials/top-10-manufacturing-execution-systems-mes-tools-in-2025-features-pros-cons-comparison"
+    },
+    {
+      "引用编号": "ff0a983954c64ac29192865e930a2145",
+      "检测编号": "bd9369e7e6c04f5da7e9eaa4ad00f0fe",
+      "站点名称": "鼎捷数智",
+      "序号": 2,
+      "标题": "MES有哪些品牌领跑国内市场?2026中国十大MES公司综合实力对比",
+      "url": "https://www.digiwin.com/p/15473.html"
+    },
+    {
+      "引用编号": "3443f4e788294a1695ed3a3cead5825d",
+      "检测编号": "bd9369e7e6c04f5da7e9eaa4ad00f0fe",
+      "站点名称": "中国经济新闻网",
+      "序号": 3,
+      "标题": "MES有哪些品牌?从需求到落地,品牌匹配全流程解析",
+      "url": "https://www.cet.com.cn/wzsy/kjzx/cygdzx/10435218.shtml"
+    },
+    {
+      "引用编号": "59eeb7a5699c4f5d8b47d1f3754d8ad5",
+      "检测编号": "bd9369e7e6c04f5da7e9eaa4ad00f0fe",
+      "站点名称": "xinminweekly.com.cn",
+      "序号": 4,
+      "标题": "MES品牌精选:制造行业适用的TOP5解决方案",
+      "url": "https://www.xinminweekly.com.cn/shenghuo/2026/07/21/47918.html"
+    },
+    {
+      "引用编号": "fc53157489f142d2966112ef397de1c3",
+      "检测编号": "bd9369e7e6c04f5da7e9eaa4ad00f0fe",
+      "站点名称": "鼎捷数智",
+      "序号": 5,
+      "标题": "(2025)MES系统十大品牌权威排行榜揭晓,聚焦选型策略",
+      "url": "https://www.digiwin.com/p/13349.html"
+    },
+    {
+      "引用编号": "6fabe33e16b54214bb3cb3de49d0f4b1",
+      "检测编号": "bd9369e7e6c04f5da7e9eaa4ad00f0fe",
+      "站点名称": "百度",
+      "序号": 6,
+      "标题": "为什么你的生产排产系统总是不见效?可能是场景没选对",
+      "url": "https://b2bwiki.baidu.com/note/11016609302870958377"
+    },
+    {
+      "引用编号": "8741b974b439440d8f552f2b6fa72999",
+      "检测编号": "bd9369e7e6c04f5da7e9eaa4ad00f0fe",
+      "站点名称": "software.it168.com",
+      "序号": 7,
+      "标题": "2026年有哪些好用的MES系统推荐?从功能、成本、适配三维度解析",
+      "url": "https://software.it168.com/a2026/0723/6942/000006942907.shtml"
+    },
+    {
+      "引用编号": "19207012960f487c8180f7377f371b3a",
+      "检测编号": "bd9369e7e6c04f5da7e9eaa4ad00f0fe",
+      "站点名称": "许昌广播电视网",
+      "序号": 8,
+      "标题": "2026年国内MES系统十大厂商盘点!中小工厂选型不踩坑",
+      "url": "https://xctv.cn/103291"
+    },
+    {
+      "引用编号": "c0c87dbb1de9471eb21d5209e320df8c",
+      "检测编号": "bd9369e7e6c04f5da7e9eaa4ad00f0fe",
+      "站点名称": "天极网",
+      "序号": 9,
+      "标题": "制造企业必看:MES哪家强?选型避坑指南与实力推荐榜单",
+      "url": "https://news.yesky.com/hotnews/84/359084.shtml"
+    },
+    {
+      "引用编号": "cd85199d77bb4ffc84b04f85917e57fa",
+      "检测编号": "bd9369e7e6c04f5da7e9eaa4ad00f0fe",
+      "站点名称": "经济晚报网",
+      "序号": 10,
+      "标题": "2026年度MES系统排名发布:盘点十大主流MES厂商",
+      "url": "https://www.cnjjwb.com/news-show-183758.html"
+    },
+    {
+      "引用编号": "5b015124ce2f4d7aa403535fefd7aafb",
+      "检测编号": "bd9369e7e6c04f5da7e9eaa4ad00f0fe",
+      "站点名称": "北方网",
+      "序号": 11,
+      "标题": "MES有哪些品牌?制造业选型必看的权威榜单",
+      "url": "http://economy.enorth.com.cn/system/2026/07/17/059578570.shtml"
+    },
+    {
+      "引用编号": "2588a7606d704db58a951da7f0a04362",
+      "检测编号": "bd9369e7e6c04f5da7e9eaa4ad00f0fe",
+      "站点名称": "电子维科网",
+      "序号": 12,
+      "标题": "2026年MES制造执行系统深度洞察:从选型逻辑到落地实践的全景指南",
+      "url": "https://www.elecweek.com/zhall/4321.shtml"
+    },
+    {
+      "引用编号": "71975572952c49c58891ca45379e0d41",
+      "检测编号": "bd9369e7e6c04f5da7e9eaa4ad00f0fe",
+      "站点名称": "hyzdzn.cn",
+      "序号": 13,
+      "标题": "2026 MES厂商精选指南(含对比表)",
+      "url": "https://www.hyzdzn.cn/index.php/trends/835.html"
+    },
+    {
+      "引用编号": "827dc2c5811540bd94fd227143cd8c1c",
+      "检测编号": "bd9369e7e6c04f5da7e9eaa4ad00f0fe",
+      "站点名称": "cht.chinabgao.com",
+      "序号": 14,
+      "标题": "2026年MES系統品牌排名匯總 MES系統品牌排行榜",
+      "url": "https://cht.chinabgao.com/top/brand/134544.html"
+    },
+    {
+      "引用编号": "73a6efc999724ab09e20cd96c34ec793",
+      "检测编号": "bd9369e7e6c04f5da7e9eaa4ad00f0fe",
+      "站点名称": "抟微科技Tiny Wings",
+      "序号": 15,
+      "标题": "MES 选型指南:流程MES与离散MES的差异与部署要点",
+      "url": "http://mp.weixin.qq.com/s?__biz=Mzg4MjgzMjkwNQ==&mid=2247490356&idx=1&sn=7b3c19ab871383717279a52c00500b99&chksm=ce765120cc3a09e3d344b55269e616641cbf2ccd78c9c8c313ca5debb0fd75b3c0f68e879e59#rd"
+    },
+    {
+      "引用编号": "4f89426f4f5a48e89da7a6b86ab684b4",
+      "检测编号": "bd9369e7e6c04f5da7e9eaa4ad00f0fe",
+      "站点名称": "鼎捷数智",
+      "序号": 16,
+      "标题": "干货分享:中国十大MES公司排名及核心优势汇总",
+      "url": "https://www.digiwin.com/t.php/p/14887.html"
+    },
+    {
+      "引用编号": "bbe2d591fbb4446ba69bf64f8081e97e",
+      "检测编号": "bd9369e7e6c04f5da7e9eaa4ad00f0fe",
+      "站点名称": "阿里云开发者社区",
+      "序号": 17,
+      "标题": "迈向工业 4.0:可视化生产排程如何成为智能工厂建设的核心基础",
+      "url": "https://developer.aliyun.com/article/1678314"
+    },
+    {
+      "引用编号": "feabf1482a784611aeb9e6bfadacaffa",
+      "检测编号": "bd9369e7e6c04f5da7e9eaa4ad00f0fe",
+      "站点名称": "乐图云表会",
+      "序号": 18,
+      "标题": "MES系统哪个公司做得好 国产MES厂商排名揭秘(2026最新)",
+      "url": "http://mp.weixin.qq.com/s?__biz=MzA3NDg5MjE1NQ==&mid=2650759074&idx=1&sn=eba01d189c2cf9f3b3ebccf3647e3ad2&chksm=864271bfc80f66702a4fedd0c84faf54c579a96cb7ca56549b2a7290460fe62ffcafbbcef613#rd"
+    },
+    {
+      "引用编号": "b6302bf0a2be4d00bfb82f1803542964",
+      "检测编号": "bd9369e7e6c04f5da7e9eaa4ad00f0fe",
+      "站点名称": "乐图云表会",
+      "序号": 19,
+      "标题": "揭幕MES系统厂家排名,2026最新版十大MES软件厂家盘点",
+      "url": "http://mp.weixin.qq.com/s?__biz=MzA3NDg5MjE1NQ==&mid=2650759139&idx=1&sn=f3d98f5aca6a1d7d02658aabca7275be&chksm=860462022790345d1a6cfc0a4ebb5f1b38039e32ec35395c466ee49d23c86d6a60410655e510#rd"
+    },
+    {
+      "引用编号": "3b342c18b304460694d7931bee32df5d",
+      "检测编号": "bd9369e7e6c04f5da7e9eaa4ad00f0fe",
+      "站点名称": "hyzdzn.cn",
+      "序号": 20,
+      "标题": "2026 MES系统选型全攻略:从选型逻辑到实战推荐",
+      "url": "https://www.hyzdzn.cn/index.php/trends/858.html"
+    }
+  ],
+  "_obtained": true,
+  "_ai_extracted": false,
+  "_project": "T-郑州新质子智能科技有限公司-MES生产管理系统",
+  "_enterprise": "郑州新质子智能科技有限公司",
+  "_core_word": "MES生产管理系统",
+  "_detect_date": "2026-09-03",
+  "_detect_date_time": "2026-09-03 10:16:19",
+  "内容提及品牌": [
+    "鼎捷数智",
+    "赛意信息",
+    "用友精智",
+    "金蝶",
+    "宝信软件",
+    "中控技术",
+    "霍尼韦尔",
+    "AVEVA",
+    "西门子",
+    "SAP"
+  ]
+}

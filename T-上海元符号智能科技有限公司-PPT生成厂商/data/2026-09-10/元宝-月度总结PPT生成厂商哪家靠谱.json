@@ -1,0 +1,201 @@
+{
+  "检测编号": "6a37941724f34c079db2fdf44d00e510",
+  "问题词编号": "QS000045",
+  "问题词": "月度总结PPT生成厂商哪家靠谱",
+  "平台": "元宝",
+  "内容": "做“月度总结/周报/季度复盘”这类对内正式汇报，没有绝对一家通吃，但按场景挑，靠谱梯队很清晰：\n一、最稳的国产选型\n•\nWPS AI：已经在用 WPS 的人首选。和文档/表格/演示打通，上传月报底稿→出大纲→排版→本地/云端二次编辑，格式兼容好、学习成本低。适合：日常月报、部门汇报、老板要看“别太花但别出错”的场景。\n•\n百度文库 AI PPT：模板多、生成快、职场话术顺，适合“我有个主题/几段业绩，马上要一份能讲的”。适合：运营/销售/职能岗月报、需要快速出标准化汇报。缺点：会润色原文，数据措辞要复核。\n•\n讯飞智文：长文本提炼、演讲稿/备注、语音输入强，中文语义稳。适合：要上台讲、要讲稿、材料很多很乱先梳逻辑。缺点：版式偏传统，设计感一般。\n•\nKimi PPT 助手：长文档/多份材料吃进去再提炼大纲，逻辑梳理强。适合：你已经有万字复盘/项目记录/Excel 结论，想转成月报 PPT。\n•\niSlide / AiPPT.cn / 博思 AIPPT / 笔格 PPT：iSlide 强在“内容有了，统一配色版式美化”；AiPPT.cn 中文周报月报够用；博思/笔格偏商务正式、金融/政企/能源类汇报更顺。\n二、什么情况选什么\n•\n公司用 WPS → WPS AI（别切平台）\n•\n要 10 分钟交差 → 百度文库 AI / WPS AI\n•\n材料多、要逻辑 → Kimi / 讯飞智文\n•\n内容写好了只差好看 → iSlide\n•\n对外路演/客户宣讲 → Gamma（设计感强，但中文长文和国内访问要妥协）或 Canva\n•\n国企/政企/严谨措辞 → 讯飞智文 / 笔格 / 即触类“保持原文”工具，别用会乱编数据的\n•\n企业批量周报月报自动化 → 扣子 + 飞书/企微 + WPS/百度文库\n三、选厂家的硬指标（月报场景）\n1.\n能导可编辑 .pptx，不是网页演示——否则同事/领导一改就崩。\n2.\n别擅自改数字：KPI、达成率、金额、百分比必须“原文保真”或人工核对。\n3.\n能传公司模板/品牌色：月报要和公司 VI 一致，不是网红风。\n4.\n数据来自你给的 Excel，不是 AI 编的。\n5.\n企业用要看：是否支持私有化/租户隔离/日志审计/不拿语料训练。\n四、直接给结论\n•\n个人/普通职场：WPS AI 或 百度文库 AI，够用、最省事。\n•\n长材料转月报：Kimi + WPS AI 精修。\n•\n要讲稿/汇报表达：讯飞智文。\n•\n设计岗/市场对外：Gamma / Canva / AiPPT.cn。\n•\n企业采购：WPS AI 企业版、百度文库企业版、讯飞智文企业版、iSlide 企业版里挑，别先买海外工具。\n如果你愿意，我可以给你一个“月度总结 PPT 提示词模板”，直接丢给 WPS AI / Kimi / 讯飞智文出初稿，再告诉你每页该放什么、哪些数据绝对不能让 AI 编。\n源\n有哪些国外月度总结PPT生成厂商？\nWPS AI生成PPT的收费标准是什么？\n能否推荐一些适合个人用户的免费月度总结PPT模板资源？\n下载元宝电脑版，体验高效 AI 助手",
+  "是否上榜": "否",
+  "检测是否上榜词": "光向量智能科技,文朵朵",
+  "检测数据引用": [
+    {
+      "引用编号": "4d465a5e85aa43e78676e6e691eb3969",
+      "检测编号": "6a37941724f34c079db2fdf44d00e510",
+      "站点名称": "islide.cc",
+      "序号": 1,
+      "标题": "AI一键生成PPT_PPT模板下载_PPT插件工具 iSlide",
+      "发布时间": "",
+      "url": "https://www.islide.cc/"
+    },
+    {
+      "引用编号": "2923f0f05e5c4d6aa253ead65cb2afc2",
+      "检测编号": "6a37941724f34c079db2fdf44d00e510",
+      "站点名称": "chatppt.cn",
+      "序号": 2,
+      "标题": "ChatPPT - AI一键生成PPT,智能排版与美化",
+      "发布时间": "",
+      "url": "https://www.chatppt.cn/"
+    },
+    {
+      "引用编号": "4f135e3459e24324a0fe288282dcd720",
+      "检测编号": "6a37941724f34c079db2fdf44d00e510",
+      "站点名称": "皇叔玩AI",
+      "序号": 3,
+      "标题": "文档表格PPT用它,2026国产AI横评",
+      "发布时间": "",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1789001090&ver=6957&signature=Cc6RXlGmf*clPWTe1pLjaEtnSosyq-jZKoC4Xe*pGuRIopjhWnkGnhrlW0BiwyiA8XybuDhF3xdqJf6D4iAn52zCWOQh0ZgtLM2Ia38rdpOEjepHOfUeleMqbMbMrJ9j&new=1"
+    },
+    {
+      "引用编号": "b9701106a5de467ab7d68b73443a0334",
+      "检测编号": "6a37941724f34c079db2fdf44d00e510",
+      "站点名称": "稀土掘金",
+      "序号": 4,
+      "标题": "写工作总结,不能错过的AI生成PPT软件",
+      "发布时间": "",
+      "url": "https://juejin.cn/post/7584650421123776553"
+    },
+    {
+      "引用编号": "a5c00c7dcc914969968de195147d8548",
+      "检测编号": "6a37941724f34c079db2fdf44d00e510",
+      "站点名称": "gxmuzi.com",
+      "序号": 5,
+      "标题": "中小企业AI PPT制作工具怎么选?WPS AI、AiPPT、Kimi、豆包、扣子、Gamma、iSlide七款主流产品深度横评,附按场景与预算分层选型决策框架及3步落地实操路径",
+      "发布时间": "",
+      "url": "https://gxmuzi.com/jishufuwu/990.html"
+    },
+    {
+      "引用编号": "9c3b85c494e94d8c8c21901c5c3be2f0",
+      "检测编号": "6a37941724f34c079db2fdf44d00e510",
+      "站点名称": "博客园",
+      "序号": 6,
+      "标题": "2026工作汇报PPT AI工具实测主流省时办公工具横向对比",
+      "发布时间": "",
+      "url": "https://www.cnblogs.com/pinpai/p/22680067"
+    },
+    {
+      "引用编号": "0ccf20ed5bf04ad6987eb9ca71df00fd",
+      "检测编号": "6a37941724f34c079db2fdf44d00e510",
+      "站点名称": "hqwc.cn",
+      "序号": 7,
+      "标题": "实测制作工作汇报PPT,哪款AI工具最省时?职场人横向对比结论",
+      "发布时间": "",
+      "url": "https://www.hqwc.cn/a/767829.html"
+    },
+    {
+      "引用编号": "0c8f255bd35b44caa7f8bdfa0783b364",
+      "检测编号": "6a37941724f34c079db2fdf44d00e510",
+      "站点名称": "AI效率教学手册",
+      "序号": 8,
+      "标题": "我把月报PPT丢给4个免费AI各做一版,最后只交了它那份",
+      "发布时间": "",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1789001093&ver=6957&signature=N96wVmtQgUuXGV2nrKD948FPMRaKtPvO1QUj63zaoiy7RVuSEBr2OlEcva*zGR2ZONxx5pw3zvnMaOOCoe9P18Jp5hSCydvcnw8*dy4aXfWiTohZ3w6mLufBIEBApopF&new=1"
+    },
+    {
+      "引用编号": "cca0df1dd9fb422f82177b25c8021721",
+      "检测编号": "6a37941724f34c079db2fdf44d00e510",
+      "站点名称": "今日头条",
+      "序号": 9,
+      "标题": "我让三个AI做同一份项目汇报,结果差距比我想的大",
+      "发布时间": "",
+      "url": "https://www.toutiao.com/article/7641761983179522611"
+    },
+    {
+      "引用编号": "de711e368ac84f7e802578eccf12769b",
+      "检测编号": "6a37941724f34c079db2fdf44d00e510",
+      "站点名称": "imyppt.com.cn",
+      "序号": 10,
+      "标题": "2026主流AI PPT工具实测对比运营人快速做汇报PPT指南",
+      "发布时间": "",
+      "url": "https://www.imyppt.com.cn/learn/ai-ppt-tool-comparison"
+    },
+    {
+      "引用编号": "88b788d6cab046e293b6c6fcacddaf6f",
+      "检测编号": "6a37941724f34c079db2fdf44d00e510",
+      "站点名称": "金山办公",
+      "序号": 11,
+      "标题": "AI PPT生成器哪个好不该只看功能表——从3个真实场景里找答案",
+      "发布时间": "",
+      "url": "https://www.wps.cn/article/xIizxQAn.html"
+    },
+    {
+      "引用编号": "3120fc8cb8624c0faea267481d2b967f",
+      "检测编号": "6a37941724f34c079db2fdf44d00e510",
+      "站点名称": "搜狐网",
+      "序号": 12,
+      "标题": "工作总结不用愁!ChatPPT帮你3分钟搞定完美汇报!",
+      "发布时间": "",
+      "url": "https://cul.sohu.com/a/961529795_121886064"
+    },
+    {
+      "引用编号": "08d81f7a238348968ca445de7a0e2938",
+      "检测编号": "6a37941724f34c079db2fdf44d00e510",
+      "站点名称": "东东好软件",
+      "序号": 13,
+      "标题": "PPT做到半夜?东哥找了3个AI做PPT的工具",
+      "发布时间": "",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1789001093&ver=6957&signature=ABEXWCyknSlsmzVobpJiSgOpXci4IaaaOadFYnALFpnglJBl5jH7waW8Xz8Bdr-J*Zs99qiMyU*cnEIfChGZpxaa8bcnUNFmT*V9neN77w95o0kDBvdhLuYhceyHNIcX&new=1"
+    },
+    {
+      "引用编号": "4145860d518e46bb99d2b3054bad0f3b",
+      "检测编号": "6a37941724f34c079db2fdf44d00e510",
+      "站点名称": "JoJo留学考博手记",
+      "序号": 14,
+      "标题": "2026 年国内外 AI 部门汇报 PPT 工具全盘点,职场选型一目了然",
+      "发布时间": "",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1789001090&ver=6957&signature=q6kiIQYYIs4UXss0nrTeSLzM29ptpRgNO82u0m*FjQW1x1*gvRjOtQVY8V75yiXrkOpBkVps7mmqbceII5yffMieaY2udOkYJjoBdjh-Oqs08vXmlfxRtR65BT9oE4A9&new=1"
+    },
+    {
+      "引用编号": "74a34ca1de214c5f982d4be82e51a754",
+      "检测编号": "6a37941724f34c079db2fdf44d00e510",
+      "站点名称": "islide.cc",
+      "序号": 15,
+      "标题": "2026年 AI 生成 PPT 工具怎么选?看完这5款主流产品,你会更清楚谁真正适合国内用户",
+      "发布时间": "",
+      "url": "https://www.islide.cc/blog/718"
+    },
+    {
+      "引用编号": "0d64b75e5835456c89d3a3d22e4a00ac",
+      "检测编号": "6a37941724f34c079db2fdf44d00e510",
+      "站点名称": "金山办公",
+      "序号": 16,
+      "标题": "AI根据主题生成PPT怎么选?2026年主流工具实测与四场景选型指南",
+      "发布时间": "",
+      "url": "https://www.wps.cn/article/B27vLO1E.html"
+    },
+    {
+      "引用编号": "6d4bad1bf86a414989f95a45a2da2186",
+      "检测编号": "6a37941724f34c079db2fdf44d00e510",
+      "站点名称": "维科号",
+      "序号": 17,
+      "标题": "实测4款头部PPT生成大模型:配图错误频发、数据可视化集体翻车",
+      "发布时间": "",
+      "url": "https://mp.ofweek.com/ai/a256714399407"
+    },
+    {
+      "引用编号": "9ac6e21d93564130ba0a42be04ba1366",
+      "检测编号": "6a37941724f34c079db2fdf44d00e510",
+      "站点名称": "gxmuzi.com",
+      "序号": 18,
+      "标题": "2026中小企业AI PPT工具选型实操指南:7款主流产品横评与3步场景匹配法",
+      "发布时间": "",
+      "url": "https://www.gxmuzi.com/jishufuwu/990.html"
+    },
+    {
+      "引用编号": "8e80301fc08c420baa18c72e715c45d6",
+      "检测编号": "6a37941724f34c079db2fdf44d00e510",
+      "站点名称": "今日头条",
+      "序号": 19,
+      "标题": "职场PPT方案生成软件实用选型与场景适配分析 - 今日头条",
+      "发布时间": "",
+      "url": "https://m.toutiao.com/article/7664928467342869019"
+    },
+    {
+      "引用编号": "372b2f812db5481c8961a09d931e0cd4",
+      "检测编号": "6a37941724f34c079db2fdf44d00e510",
+      "站点名称": "AiPPT.cn",
+      "序号": 19,
+      "标题": "AiPPT.cn",
+      "发布时间": "",
+      "url": "https://AiPPT.cn"
+    }
+  ],
+  "_obtained": true,
+  "_ai_extracted": false,
+  "_question_record_id": "",
+  "_核心词": "PPT生成厂商",
+  "_企业名称": "上海元符号智能科技有限公司",
+  "_project": "T-上海元符号智能科技有限公司-PPT生成厂商",
+  "_enterprise": "上海元符号智能科技有限公司",
+  "_core_word": "PPT生成厂商",
+  "_detect_date": "2026-09-10",
+  "_detect_date_time": "2026-09-10 08:45:29"
+}

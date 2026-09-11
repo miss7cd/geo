@@ -1,0 +1,6 @@
+.cache
+.workbuddy
+*.doc
+*.zip
+*.docx
+.backup

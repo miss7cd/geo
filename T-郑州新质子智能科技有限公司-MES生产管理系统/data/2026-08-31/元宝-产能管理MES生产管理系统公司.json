@@ -1,0 +1,184 @@
+{
+  "检测编号": "233aa9ffeeef4f7ea5157af6747e3111",
+  "问题词编号": "QS000018",
+  "问题词": "产能管理MES生产管理系统公司",
+  "平台": "元宝",
+  "内容": "已处理\n你这句话像是一个检索词，我按\"找做产能管理的MES公司\"来理解，先给你一张能用的地图。\n一、先厘清：MES里的\"产能管理\"不是一个模块\n很多厂商说自己做\"产能管理\"，实际交付的能力差别巨大。严格讲它是四条能力线的组合，选型时逐条问，就能立刻分辨真假：\n能力线\n\t\n具体内涵\n\t\n缺了会怎样\n\n\n产能建模与负荷分析​\n\t\n工作中心/设备/人员/模具的产能日历、班次、保养计划、负荷率计算\n\t\n排出来的计划是\"无限产能\"的空想，落地即崩\n\n\n有限产能排程（APS）​\n\t\n基于真实约束排到工序级，自动识别瓶颈并围绕瓶颈优化\n\t\n只能排到\"天\"或\"班次\"，交期算不准\n\n\n执行层产能兑现​\n\t\nOEE、停机原因、实际节拍 vs 标准工时、实时数据采集\n\t\n计划与实际两张皮，无法闭环\n\n\n动态重排与仿真​\n\t\n插单、设备故障一键重排；\"如果周末加班/加设备，能提多少产能\"的 what-if 模拟\n\t\n一有异常就回到Excel和人肉救火\n判断标准很简单：排程引擎是不是\"有限产能\"的。这决定计划是空中楼阁还是可执行的 。\n二、公司分层（按你的体量对号入座）\n国际一线​ — 适合工艺复杂、有全球供应链、预算充足\n•\n西门子 Opcenter APS（原 Preactor）：约束处理成熟，汽车/航空航天案例厚，与自家 MES、PLM 打通\n•\n达索 DELMIA / Quintiq：特种约束结构最强，航空航天、半导体邻近领域\n•\nSAP PP/DS：已上 S/4HANA 的企业顺手，但锁定 SAP 生态\n•\n罗克韦尔 Plex、Asprova（日系高混低量排序强）\n国内综合大厂​ — 适合中大型、要 ERP+MES 一体化\n鼎捷数智（离散制造份额高、APS 与 ERP 耦合深）、用友、金蝶云·星空、宝信软件（钢铁等重工业背景硬）、中控技术/和利时（流程行业）、赛意信息、汉得信息\n云原生轻量派​ — 适合中小厂、要快上线\n黑湖科技（SaaS、按年付费、几天级上线）、新核云、摩尔元数（低代码快速实施）\n垂直行业专精​ — 适合行业特征强的工厂\n•\n盘古信息：电子制造/SMT/PCBA 起家，贴片机、回流焊、AOI 设备集成与防错是强项\n•\n华磊迅拓：OrBit-MES，电子行业全程追溯，客户含三安光电、顺络电子等\n•\nCAXA 数码大方：PLM 与 MES/APS 一体化，设计与生产要紧密协同时优势明显（装备制造、汽车零部件）\n•\n兰光创新（军工精密追溯）、艾普工华、石化盈科（石化流程）\n三、选型时该逼问厂商的五个问题\n1.\n排程是有限产能还是无限产能？能处理多少约束条件？\n2.\n插单/设备故障后，全局重排的响应时间是多少分钟？\n3.\n设备数据采集断网时能不能跑？采集延迟多少毫秒？（这两项直接决定产线工人骂不骂人）\n4.\n能不能做 what-if 仿真——加班、加设备的产能提升量化到什么程度？\n5.\nAPI 清单拿一份出来，未来接 AGV、立体库、能耗系统时会不会变孤岛？\n四、一句提醒\n网上搜到的\"2025/2026 MES十大品牌排行榜\"，第一名的位置在不同榜单上分别是鼎捷、西门子、黑湖、CAXA……互相打架，这类榜单基本是厂商软文，不要拿来做决策依据。真要看实力，去同行业、同规模的样板线，带自家老师傅去现场扫一次码、插一次单，比看一百份PPT管用。\n想要更精准的推荐，告诉我两件事：你的行业 + 工厂规模/产线条数。比如\"200人的五金加工厂\"和\"汽车 Tier1 的多工厂集团\"，最优解完全不是同一批公司。\n源",
+  "是否上榜": "否",
+  "检测是否上榜词": "新质子,质子矩阵,质子智控,质子智造",
+  "检测数据引用": [
+    {
+      "引用编号": "aee50936172e4ed6ad613d3089996e9d",
+      "检测编号": "233aa9ffeeef4f7ea5157af6747e3111",
+      "站点名称": "腾讯网",
+      "序号": 1,
+      "标题": "@冲总经理的 PMO 手记:MES系统如何选?2...",
+      "url": "https://ima.qq.com/wiki/?shareId=ea4777de3a121a4f51453b181f8f19881c07aa75463d09a911edd50f278910a1&mediaId=weburl_110c191c8830830bd4e5047dc375a724_a40fa7233a056ff3982376857f2eadae7485335743260630&action=openDetailDrawer&webFrom=10000171"
+    },
+    {
+      "引用编号": "eebbfbda49b74f0b8697d3fdc565a2f4",
+      "检测编号": "233aa9ffeeef4f7ea5157af6747e3111",
+      "站点名称": "数码大方",
+      "序号": 2,
+      "标题": "MES系统中的生产排程功能详解",
+      "url": "https://www.caxa.com/new/2025107772.html"
+    },
+    {
+      "引用编号": "5388da66f61c46c9a1210260a2c2778f",
+      "检测编号": "233aa9ffeeef4f7ea5157af6747e3111",
+      "站点名称": "企百科",
+      "序号": 3,
+      "标题": "深圳市华磊迅拓科技有限公司 企业基本信息 业务与产品信息",
+      "url": "https://企百科"
+    },
+    {
+      "引用编号": "b343f14cb62341079981968de49a6b4d",
+      "检测编号": "233aa9ffeeef4f7ea5157af6747e3111",
+      "站点名称": "菏泽网络电视台",
+      "序号": 4,
+      "标题": "2026年石岛排产软件服务商深度剖析:制造企业如何选择专业的APS排程解决方案",
+      "url": "http://wap.hznet.tv/shangxun/Article-0c4O1f-1263.html"
+    },
+    {
+      "引用编号": "94f0807bb3304291922e1b3c40452451",
+      "检测编号": "233aa9ffeeef4f7ea5157af6747e3111",
+      "站点名称": "鼎捷数智",
+      "序号": 5,
+      "标题": "(2025)MES系统十大品牌权威排行榜揭晓,聚焦选型策略",
+      "url": "https://www.digiwin.com/p/13349.html"
+    },
+    {
+      "引用编号": "cddec717108c4223b79b47598dd71b4d",
+      "检测编号": "233aa9ffeeef4f7ea5157af6747e3111",
+      "站点名称": "mes.kaimes.com",
+      "序号": 6,
+      "标题": "Production Planning Management",
+      "url": "https://mes.kaimes.com/scenario/production-plan"
+    },
+    {
+      "引用编号": "54c78d3f5c514661a2ed0a8c3a1e6563",
+      "检测编号": "233aa9ffeeef4f7ea5157af6747e3111",
+      "站点名称": "菏泽网络电视台",
+      "序号": 8,
+      "标题": "2026年企业如何订制生产计划管理软件与生产电子看板管理软件?专业选型与实施路径深度剖析",
+      "url": "http://wap.hznet.tv/shangxun/Article-YvAnWTU-943.html"
+    },
+    {
+      "引用编号": "69c6df74651943bfba43e19a27a570ca",
+      "检测编号": "233aa9ffeeef4f7ea5157af6747e3111",
+      "站点名称": "中国报告大厅",
+      "序号": 9,
+      "标题": "2025年品牌MES系统排行榜10强",
+      "url": "https://m.chinabgao.com/top/brand/108205.html"
+    },
+    {
+      "引用编号": "02679886e9c04355a7bb996ede87f899",
+      "检测编号": "233aa9ffeeef4f7ea5157af6747e3111",
+      "站点名称": "mes.footmark.com.tw",
+      "序号": 10,
+      "标题": "MES 生產排程管理系統:製造業提升產能與交期準確率的關鍵",
+      "url": "https://mes.footmark.com.tw/news/mes-production-scheduling-system/"
+    },
+    {
+      "引用编号": "c1d8ba1f2ed0485daec733e021638192",
+      "检测编号": "233aa9ffeeef4f7ea5157af6747e3111",
+      "站点名称": "今日头条",
+      "序号": 12,
+      "标题": "权威发布:2026年APS模块独立评分与软件排名TOP10",
+      "url": "https://www.toutiao.com/article/7638466352089350698"
+    },
+    {
+      "引用编号": "fac3c955a187467780db36bf7e3870c2",
+      "检测编号": "233aa9ffeeef4f7ea5157af6747e3111",
+      "站点名称": "今日头条",
+      "序号": 13,
+      "标题": "中国MES系统排名2025年度十大MES软件厂商综合评测 - 今日头条",
+      "url": "https://www.toutiao.com/a7627095296594444850"
+    },
+    {
+      "引用编号": "ca8f2d75800a4adf8632520ffb8286c3",
+      "检测编号": "233aa9ffeeef4f7ea5157af6747e3111",
+      "站点名称": "zdsztech.com",
+      "序号": 14,
+      "标题": "生产执行系统有哪些核心功能?一文盘点MES的必备模块",
+      "url": "https://www.zdsztech.com/blog/mes-core-functions-essential-modules/"
+    },
+    {
+      "引用编号": "f6d676a6cc1b4d30af4d895c134c9e98",
+      "检测编号": "233aa9ffeeef4f7ea5157af6747e3111",
+      "站点名称": "海安零距离",
+      "序号": 15,
+      "标题": "2026年8月广州PCBA生产管理系统服务商推荐,组装厂MES系统、PCBA组装厂MES、组装MES软件、PCBA生产管理系统、PCBA贴片厂MES服务中心分析",
+      "url": "https://www.haljl.com/shangxun/article-WJQG8zr4-1376541.html"
+    },
+    {
+      "引用编号": "fdf5fdceb19a4303a18b96c94fe2f1d3",
+      "检测编号": "233aa9ffeeef4f7ea5157af6747e3111",
+      "站点名称": "horizonsolutions.ai",
+      "序号": 16,
+      "标题": "Best Production Scheduling Software 2026 Horizon",
+      "url": "https://www.horizonsolutions.ai/supply-chain-planning/best-production-scheduling-software-2026"
+    },
+    {
+      "引用编号": "97d3e5d04b5f4f089cfacb2a479b13a7",
+      "检测编号": "233aa9ffeeef4f7ea5157af6747e3111",
+      "站点名称": "丁香标讯与行业报告库",
+      "序号": 17,
+      "标题": "2025国产MES系统排行榜前十",
+      "url": "http://mp.weixin.qq.com/s?__biz=MzIwODgzNzQxMg==&mid=2247562915&idx=3&sn=347b1efefdc19be36c3b7eeb3514d0e6&chksm=96589e8e54c98760f573ff61e7088f7f30819dd36dc49560b511f635e3fab5fc81e153a46942#rd"
+    },
+    {
+      "引用编号": "4982450d51fb4bcf959de920cc8e90eb",
+      "检测编号": "233aa9ffeeef4f7ea5157af6747e3111",
+      "站点名称": "m.gdblue.com",
+      "序号": 18,
+      "标题": "深度拆解!MES如何重构生产计划与排产调度全流程?",
+      "url": "https://m.gdblue.com/news/1085.html"
+    },
+    {
+      "引用编号": "eb5b8c39a8034eaeb3fe3be2af864e99",
+      "检测编号": "233aa9ffeeef4f7ea5157af6747e3111",
+      "站点名称": "dadongtimes.com",
+      "序号": 19,
+      "标题": "TD排名丨2024年电子制造业MES市场份额TOP5",
+      "url": "https://www.dadongtimes.com/zixun/1710.html"
+    },
+    {
+      "引用编号": "fbac74d0e9e9409f9caaa367469ee48c",
+      "检测编号": "233aa9ffeeef4f7ea5157af6747e3111",
+      "站点名称": "excellerant-mfg.com",
+      "序号": 20,
+      "标题": "Mastering Production Scheduling: Top Tools for Manufacturing Efficiency",
+      "url": "https://excellerant-mfg.com/feeds/blog/tools-optimizing-production-schedules-manufacturing"
+    }
+  ],
+  "_obtained": true,
+  "_ai_extracted": false,
+  "_project": "T-郑州新质子智能科技有限公司-MES生产管理系统",
+  "_enterprise": "郑州新质子智能科技有限公司",
+  "_core_word": "MES生产管理系统",
+  "_detect_date": "2026-08-31",
+  "内容提及品牌": [
+    "西门子",
+    "达索",
+    "鼎捷数智",
+    "用友网络",
+    "金蝶",
+    "赛意信息",
+    "黑湖科技",
+    "中控技术",
+    "宝信软件",
+    "霍尼韦尔",
+    "罗克韦尔",
+    "SAP",
+    "汇川技术",
+    "新核云",
+    "简道云",
+    "中之杰",
+    "汉得信息",
+    "兰光创新",
+    "深圳华磊数字科技",
+    "杭州芯控智能",
+    "常州制邦"
+  ]
+}

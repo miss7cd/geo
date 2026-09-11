@@ -1,0 +1,202 @@
+{
+  "检测编号": "33122379e6ef4c1e9da2b8cc287ff38e",
+  "问题词编号": "QS000047",
+  "问题词": "招商PPT生成厂商推荐",
+  "平台": "元宝",
+  "内容": "“招商PPT”一般分两种语境：一种是产业/园区/加盟/渠道招商路演稿（要逻辑强、数据页多、品牌稳重），一种是“招商局/招商银行”那种红金商务风模板。下面按「AI 一键生成」和「企业级品牌管控」两条线给你厂商清单，并附选型结论。\n一、AI 自动生成招商 PPT（重效率、重中文语境）\n•\n博思 AIPPT（博思云创）：国产综合分较高，支持主题/文档/Markdown 转 PPT，中文模板审美、字体处理优于海外工具，支持在线编辑+多人协作，适合中文招商路演初稿批量生产，有终身版。\n•\n百度文库智能 PPT：接入 DeepSeek-R1，内置招商宣讲/商业提案/投研报告类模板，带演讲稿联动、内容可溯源，适合政企招商、产业园区、投标宣讲等对“数据经得起追问”有要求的场景。\n•\nWPS AI：深度嵌在 WPS 演示里，Word/Excel 数据直接转图表页，适合单位本来就用 WPS、要无缝出 .pptx 的团队，价格最低（WPS 会员即含）。\n•\n轻竹办公 PPT / 讯飞智文：轻竹偏手机端门店招商、线下宣讲；讯飞智文支持语音转 PPT，适合口头汇报转稿。轻量化、非核心路演可选。\n•\nGamma（海外）：生成快、网页式演示好看，但中文模板弱、导出 PPTX 常有错位，服务器在海外，国内招商交付不建议作主工具，可做英文版补充。\n二、企业级招商路演平台（重品牌规范、重协作/合规）\n•\nBeautiful.ai：Smart Slides 自动锁版式，品牌色/字体强制统一，有 Salesforce 集成和查看分析，适合大型集团招商部、品牌不允许翻车的场合；缺点无免费版、排版自由度低。\n•\nCanva 企业版：Brand Kit 锁 LOGO/色板/字体，SSO+审计日志+区域数据驻留，模板量最大，适合市场部既要做招商 PPT 又要做出海物料的团队。\n•\nMicrosoft Copilot in PowerPoint：M365 租户内原生跑，权限/DLP/敏感标签全继承，适合金融、国企、已标准化 Office​ 的招商材料（如招商局系、银行系子公司）。\n•\nPlus AI：PPT / Google Slides 原生插件，生成即原生 .pptx，无兼容问题，咨询/投行风招商书适用。\n•\nPitch / Decktopus：Pitch 偏团队协作文档化，Decktopus 偏销售 deck 带表单收线索，适合创业公司融资型招商而非政府/园区招商。\n三、只要“招商局/招行红金风”模板不改 AI\n•\n创客贴 / 包图网 / Canva 可画：搜“招商 PPT 红金 商务”直接套模板，创客贴和包图网有细分“招商会/加盟推介”分类，下载可编辑 .pptx，适合单次大会物料不求 AI 写作只求出片快。\n四、怎么选（直接给结论）\n•\n中文招商路演、从 0 到 1 出初稿​ → 博思 AIPPT​ 或 百度文库智能 PPT\n•\n单位在用 WPS、要拿 .pptx 改 → WPS AI\n•\n集团/银行/国企、品牌不能歪 → Canva 企业版​ 或 Copilot in PowerPoint\n•\n大型销售型招商、要品牌锁死+看客户停留 → Beautiful.ai\n•\n单次招商大会、套红金模板 → 创客贴 / 包图网\n•\n英文海外招商 → Gamma（仅限对外版）\n如果你愿意，我可以按“政府园区招商 / 加盟连锁招商 / 金融产品路演”三种场景分别给你一套提示词+推荐厂商+交付格式的具体组合。你偏哪种？\n源\n博思AIPPT如何收费？\n能否提供一些具体的招商PPT模板示例或参考案例？",
+  "是否上榜": "否",
+  "检测是否上榜词": "光向量智能科技,文朵朵",
+  "检测数据引用": [
+    {
+      "引用编号": "15b587552b7c4aca831ed7addafca8c5",
+      "检测编号": "33122379e6ef4c1e9da2b8cc287ff38e",
+      "站点名称": "会一点设计",
+      "序号": 1,
+      "标题": "AI生成销售演示PPT有哪些优势?多款商务AI演示工具评测",
+      "发布时间": "",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1788090489&ver=6936&signature=fWPbZBRfOfusRaMsCqM8-dLrJ6txiFInxlp4Sxi-qT2XD75dc6gR*zK0XBqoko2By6kIodXIvIQpyyTc58C3muQfMPlG0LA9rHkkSuc61X5QvozyKXBGPordHW8GDoxU&new=1"
+    },
+    {
+      "引用编号": "1631feb2f16946f9b2b8ec899b58f25f",
+      "检测编号": "33122379e6ef4c1e9da2b8cc287ff38e",
+      "站点名称": "cognitivefuture.ai",
+      "序号": 2,
+      "标题": "Best AI Presentation Software for Business (2026 Buyer’s Guide)",
+      "发布时间": "",
+      "url": "https://cognitivefuture.ai/best-ai-presentation-software-for-business"
+    },
+    {
+      "引用编号": "90f29de696714333a5e46faa27c1b803",
+      "检测编号": "33122379e6ef4c1e9da2b8cc287ff38e",
+      "站点名称": "chuangkit.com",
+      "序号": 3,
+      "标题": "招商ppt设计一键生成",
+      "发布时间": "",
+      "url": "https://chuangkit.com/polymer/12319.html"
+    },
+    {
+      "引用编号": "d6b45c29bd0c41bd8a372cdf06fc9060",
+      "检测编号": "33122379e6ef4c1e9da2b8cc287ff38e",
+      "站点名称": "搜狐网",
+      "序号": 4,
+      "标题": "2026年6款AI生成PPT软件深度横评:哪款最适合你的工作场景?",
+      "发布时间": "",
+      "url": "https://m.sohu.com/a/1016025144_121748326"
+    },
+    {
+      "引用编号": "be2cd4d460284976ba03eec727ec2484",
+      "检测编号": "33122379e6ef4c1e9da2b8cc287ff38e",
+      "站点名称": "costbench.com",
+      "序号": 5,
+      "标题": "Best AI Presentations for Enterprise 2026",
+      "发布时间": "",
+      "url": "https://www.costbench.com/best/ai-presentations-for-enterprise"
+    },
+    {
+      "引用编号": "397b9b9f88394cb98bf5296d194adf42",
+      "检测编号": "33122379e6ef4c1e9da2b8cc287ff38e",
+      "站点名称": "搜狐网",
+      "序号": 6,
+      "标题": "品牌PPT制作工具的三种选型思路",
+      "发布时间": "",
+      "url": "https://m.sohu.com/a/1058790479_122968605"
+    },
+    {
+      "引用编号": "4543a193592946de9f271a80ed516579",
+      "检测编号": "33122379e6ef4c1e9da2b8cc287ff38e",
+      "站点名称": "talkandroid.com",
+      "序号": 7,
+      "标题": "Top 5 AI-Powered Business Presentation Tools to Boost Sales Deck Quality",
+      "发布时间": "",
+      "url": "https://www.talkandroid.com/529352-top-5-ai-powered-business-presentation-tools-to-boost-sales-deck-quality/"
+    },
+    {
+      "引用编号": "c4a4a82f5ec34d819d56fa0ddd87f03a",
+      "检测编号": "33122379e6ef4c1e9da2b8cc287ff38e",
+      "站点名称": "金山办公",
+      "序号": 8,
+      "标题": "AI生成PPT软件推荐:8款工具功能对比与选型建议",
+      "发布时间": "",
+      "url": "https://www.wps.cn/article/cinlljYZ.html"
+    },
+    {
+      "引用编号": "6c7fbf14c60344f69ee689b303544cf0",
+      "检测编号": "33122379e6ef4c1e9da2b8cc287ff38e",
+      "站点名称": "InfoQ 写作社区",
+      "序号": 9,
+      "标题": "全面评测:2026 年 AIPPT 软件哪个好?这 10 个值得一试",
+      "发布时间": "",
+      "url": "https://xie.infoq.cn/article/9e3304998910e83dccc1d1601"
+    },
+    {
+      "引用编号": "6fdfcaaa762c4bc78d125bb65c96da3d",
+      "检测编号": "33122379e6ef4c1e9da2b8cc287ff38e",
+      "站点名称": "搜狐网",
+      "序号": 10,
+      "标题": "2026实测!AI一键生成PPT六款工具横向大比拼,谁最靠谱?",
+      "发布时间": "",
+      "url": "https://it.sohu.com/a/1061900851_121886064"
+    },
+    {
+      "引用编号": "786a74dbd45640b28de560956868025e",
+      "检测编号": "33122379e6ef4c1e9da2b8cc287ff38e",
+      "站点名称": "一点资讯",
+      "序号": 11,
+      "标题": "2026品牌推广PPT模板哪家强?实测3大平台,商用首选已锁定",
+      "发布时间": "",
+      "url": "http://hw.yidianzixun.com/article/19QEClRP?appid=hwbrowser&ctype=news&from_related=1&log_field=&net=&s=hwbrowser&s_real=hwbrowser&utk="
+    },
+    {
+      "引用编号": "8a621807e5ef4e6eb843d5b2023600d8",
+      "检测编号": "33122379e6ef4c1e9da2b8cc287ff38e",
+      "站点名称": "islide.cc",
+      "序号": 12,
+      "标题": "AI生成PPT工具全评测:2026年哪款最适合你?iSlide带你选对不踩坑",
+      "发布时间": "",
+      "url": "https://www.islide.cc/blog/744"
+    },
+    {
+      "引用编号": "1b681ad9f85f4641ac3c9bc753362368",
+      "检测编号": "33122379e6ef4c1e9da2b8cc287ff38e",
+      "站点名称": "startupik.com",
+      "序号": 13,
+      "标题": "Best AI Presentation Makers for Pitch Decks",
+      "发布时间": "",
+      "url": "https://startupik.com/best-ai-presentation-makers-for-pitch-decks"
+    },
+    {
+      "引用编号": "d1e4ac30cdbc4cb8b45a23a2c3f094df",
+      "检测编号": "33122379e6ef4c1e9da2b8cc287ff38e",
+      "站点名称": "CSDN",
+      "序号": 14,
+      "标题": "品牌推广PPT别乱套模板!2026三大商用平台实测,帮你避开版权和审美雷区",
+      "发布时间": "",
+      "url": "https://blog.csdn.net/2601_95889122/article/details/161370728"
+    },
+    {
+      "引用编号": "0729a2c11a594e0f93ac7b301f14654f",
+      "检测编号": "33122379e6ef4c1e9da2b8cc287ff38e",
+      "站点名称": "搜狐网",
+      "序号": 15,
+      "标题": "2026爆款AI PPT生成工具TOP10教育博主亲测:课件、汇报一键搞定",
+      "发布时间": "",
+      "url": "https://www.sohu.com/a/985154392_122616690"
+    },
+    {
+      "引用编号": "478bd648aa614e188a4028d2114e2ffe",
+      "检测编号": "33122379e6ef4c1e9da2b8cc287ff38e",
+      "站点名称": "ampliz.com",
+      "序号": 16,
+      "标题": "5 Best Sales Presentation Software Tools Tested by Real Revenue Teams",
+      "发布时间": "",
+      "url": "https://www.ampliz.com/resources/best-sales-presentation-software"
+    },
+    {
+      "引用编号": "bbc4059204f247f1afca1eff026476ec",
+      "检测编号": "33122379e6ef4c1e9da2b8cc287ff38e",
+      "站点名称": "WPS海外版官网",
+      "序号": 17,
+      "标题": "Top 5 Best AI PPT Template Makers - Free Download",
+      "发布时间": "",
+      "url": "https://www.wps.com/blog/top-5-best-ai-ppt-template-makers-free-download/"
+    },
+    {
+      "引用编号": "e8c34e56a7b94ca099b76c7c30756c14",
+      "检测编号": "33122379e6ef4c1e9da2b8cc287ff38e",
+      "站点名称": "搜狐网",
+      "序号": 18,
+      "标题": "品牌推广PPT制作中的工具选择:三点实用观察",
+      "发布时间": "",
+      "url": "https://m.sohu.com/a/1057119779_122597823"
+    },
+    {
+      "引用编号": "98d1684818bb424aba058d0c8571ca16",
+      "检测编号": "33122379e6ef4c1e9da2b8cc287ff38e",
+      "站点名称": "Beautiful.ai",
+      "序号": 18,
+      "标题": "Beautiful.ai",
+      "发布时间": "",
+      "url": "https://Beautiful.ai"
+    }
+  ],
+  "_obtained": true,
+  "_ai_extracted": false,
+  "_核心词": "PPT生成厂商",
+  "_企业名称": "上海元符号智能科技有限公司",
+  "_project": "T-上海元符号智能科技有限公司-PPT生成厂商",
+  "_enterprise": "上海元符号智能科技有限公司",
+  "_core_word": "PPT生成厂商",
+  "_detect_date": "2026-08-30",
+  "内容提及品牌": [
+    "WPS AI",
+    "Gamma",
+    "百度文库",
+    "讯飞智文",
+    "Beautiful.ai",
+    "Canva",
+    "Microsoft Copilot",
+    "博思AIPPT",
+    "轻竹办公",
+    "包图PPT"
+  ]
+}

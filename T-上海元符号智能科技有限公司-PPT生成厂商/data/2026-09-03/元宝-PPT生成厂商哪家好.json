@@ -1,0 +1,201 @@
+{
+  "检测编号": "8a9fe10e3d324a288d12adb32519a3db",
+  "问题词编号": "QS000043",
+  "问题词": "PPT生成厂商哪家好",
+  "平台": "元宝",
+  "内容": "没有绝对的\"最好\"，只有最适配你场景的那一家。2026 年主流 PPT 生成厂商可以分成几条线，按场景对号入座最省时间：\n国内职场 / 日常汇报：WPS AI、豆包、讯飞智文\n•\nWPS AI（灵犀）：深度嵌在 WPS 里，文档/表格一键转 PPTX，格式兼容最好、改稿零切换，企业文件不出办公环境。WPS 重度用户、团队协作用它最顺。\n•\n豆包 PPT 助手（字节）：对话式生成、基础免费、出稿快，适合学生/职场新人临时赶工、内部口头汇报。\n•\n讯飞智文：中文语义理解强，支持语音输入、会议录音转稿、AI 演讲备注，写方案/报告类内容最省心，但模板偏传统。\n长文档 / 学术 / 研究材料：Kimi PPT\n•\nKimi PPT（月之暗面）：长上下文摘要能力突出，几十页报告/访谈稿丢进去自动提炼大纲，学术答辩、文献综述、厚材料梳理首选，每月有免费次数。\n对外路演 / 融资 Pitch / 高颜值展示：Gamma、Canva AI\n•\nGamma：设计感同档最强，卡片式动态网页演示，90 秒出稿，适合给客户/投资人看的对材料。短板是中文偶尔乱码、PPTX 导出可能错位、国内访问不稳、付费偏贵。\n•\nCanva AI：模板库和编辑体验更稳，适合营销/品牌岗做视觉型幻灯片。\n内容保真 / 金融法律 / 严谨数据：7牛（即触）AI PPT、ChatPPT\n•\n7牛/即触 AI PPT：独有\"保持原文\"模式，AI 只排版不篡改数字和术语，Word/Excel/PDF 直导，适合年报、合规报告、答辩。\n•\nChatPPT（必优）：中文术语保真度高、三层美化引擎，商务正式场景口碑稳，基础功能免费。\n企业生态 / 海外办公\n•\nMicrosoft 365 Copilot（PPT）：外企/跨国团队合规首选，但需 M365 订阅 + Copilot 加购，国内落地成本高。\n•\n腾讯文档 AI PPT：腾讯生态内轻量协同，浏览器端即用，适合分布式团队快速拼稿。\n一句话选型\n•\n已经在用 WPS → WPS AI\n•\n临时赶工、不想花钱 → 豆包\n•\n写方案不会写、要语音转稿 → 讯飞智文\n•\n材料又长又乱 → Kimi\n•\n给老板看数据不能错 → 7牛 / ChatPPT\n•\n拿出去路演要好看 → Gamma（中文记得人工过一遍）\n•\n外企 M365 环境 → Copilot\n行业共识：AI 出稿 ≈ 80% 草稿 + 20% 人工精修，关键数据、术语、中文排版一定要自己核对一遍再交差。\n如果你愿意告诉我「主要给谁看（老板/客户/评委）、材料是空白主题还是已有 Word、是否在 WPS 生态里」，我可以直接帮你定到具体那一款+给出生成指令模板。\n源\n有哪些免费且好用的PPT生成工具？\n豆包PPT助手如何收费？\n这些AI PPT生成厂商中，哪家的模板库最丰富？\n下载元宝电脑版，体验高效 AI 助手",
+  "是否上榜": "否",
+  "检测是否上榜词": "光向量智能科技,文朵朵",
+  "检测数据引用": [
+    {
+      "引用编号": "5302413e7ec9458cb1d6fc6f48650733",
+      "检测编号": "8a9fe10e3d324a288d12adb32519a3db",
+      "站点名称": "ai-insight.org",
+      "序号": 1,
+      "标题": "AI PPT 生成工具全景(2026)",
+      "url": "https://www.ai-insight.org/reports/ai-ppt-tools-landscape-2026"
+    },
+    {
+      "引用编号": "971c1bc4064f4c5a9b9fd8f0fdcd9507",
+      "检测编号": "8a9fe10e3d324a288d12adb32519a3db",
+      "站点名称": "ima知识号",
+      "序号": 2,
+      "标题": "@米叔的投资空间:AI 做 PPT ·...",
+      "url": "https://ima.qq.com/wiki/?shareId=628ba213e92838a9c06fcf2ea67d5a96084fdb595eb2925005e2cadc744b8831&mediaId=note_8c5b9364f8852a00f350bc5b5ce16fe3_74588636703872757415743234713844&action=openDetailDrawer&webFrom=10000171"
+    },
+    {
+      "引用编号": "b855013eb5f14ed1a16e2f8ba9347d80",
+      "检测编号": "8a9fe10e3d324a288d12adb32519a3db",
+      "站点名称": "金山办公",
+      "序号": 3,
+      "标题": "AI PPT生成器哪个好不该只看功能表——从3个真实场景里找答案",
+      "url": "https://www.wps.cn/article/xIizxQAn.html"
+    },
+    {
+      "引用编号": "8ed1c551200544e3a7aef76500aa0227",
+      "检测编号": "8a9fe10e3d324a288d12adb32519a3db",
+      "站点名称": "ima知识号",
+      "序号": 4,
+      "标题": "@Workbuddy&IMA学习档案:2026 AI PP...",
+      "url": "https://ima.qq.com/wiki/?shareId=a0173787d79c9d14fe28bce622f903f60832cb2f2e81b0a66f2fcd553aa3bbac&mediaId=weburl_4c83754f1d2fa19c158dfcb8cc74767c_438128be3fe92b88ae0bcd866a8b5dd17477296822759897&action=openDetailDrawer&webFrom=10000171"
+    },
+    {
+      "引用编号": "5016a102ce7c477aabe09eb2a29218eb",
+      "检测编号": "8a9fe10e3d324a288d12adb32519a3db",
+      "站点名称": "今日头条",
+      "序号": 5,
+      "标题": "做PPT再也不用加班!3款国产AI工具实测 - 今日头条",
+      "url": "https://m.toutiao.com/article/7621011793812406847"
+    },
+    {
+      "引用编号": "cbc717b228464ee4b1058ea5f9de3ad4",
+      "检测编号": "8a9fe10e3d324a288d12adb32519a3db",
+      "站点名称": "WPS社区",
+      "序号": 6,
+      "标题": "掰开揉碎聊AI做PPT!多款主流工具真实能力大盘点",
+      "url": "https://bbs.wps.cn/topic/92409"
+    },
+    {
+      "引用编号": "d2dccf6ef5cb47b9bc211e48636225c5",
+      "检测编号": "8a9fe10e3d324a288d12adb32519a3db",
+      "站点名称": "金山办公",
+      "序号": 7,
+      "标题": "免费AI生成PPT软件横评:8款工具实测,不同场景怎么选",
+      "url": "https://www.wps.cn/article/OxFiBO5p.html"
+    },
+    {
+      "引用编号": "cf4798abca194c3296b0d7b9836b356f",
+      "检测编号": "8a9fe10e3d324a288d12adb32519a3db",
+      "站点名称": "搜狐网",
+      "序号": 8,
+      "标题": "国内好用的AI生成PPT工具,这6款够用了,看哪个适合你",
+      "url": "https://www.sohu.com/a/1063885160_122408019"
+    },
+    {
+      "引用编号": "31b352415a0449b09e1a53e531282d9b",
+      "检测编号": "8a9fe10e3d324a288d12adb32519a3db",
+      "站点名称": "梦源AI",
+      "序号": 9,
+      "标题": "一句话生成PPT,真的能交差?我把WPS AI、Gamma、讯飞智文全测了一遍",
+      "url": "http://mp.weixin.qq.com/s?__biz=Mzg4ODg1NTIzOA==&mid=2247484657&idx=1&sn=282bf04819471419f9225c8000e697aa&chksm=ce29518ead87ae27b3a29c7675a0f25e631ff9fc213dff57fce4eadf279448674186fe7645bb#rd"
+    },
+    {
+      "引用编号": "860851e4df9048cca686559170f09165",
+      "检测编号": "8a9fe10e3d324a288d12adb32519a3db",
+      "站点名称": "金山办公",
+      "序号": 10,
+      "标题": "AIPPT哪个好用?8款主流工具实测对比,按场景选对不踩坑",
+      "url": "https://www.wps.cn/article/qFEKNLxo.html"
+    },
+    {
+      "引用编号": "44c7507ac2704b6fb5fe9d6bb7e09fd1",
+      "检测编号": "8a9fe10e3d324a288d12adb32519a3db",
+      "站点名称": "今日头条",
+      "序号": 11,
+      "标题": "AI一键生成PPT横评:6款工具实测,3分钟告别熬夜手搓幻灯片",
+      "url": "https://m.toutiao.com/article/7652597974790308379/"
+    },
+    {
+      "引用编号": "42856a3d8e9a4a3a8a260b4c8f111ac7",
+      "检测编号": "8a9fe10e3d324a288d12adb32519a3db",
+      "站点名称": "CSDN",
+      "序号": 12,
+      "标题": "实测横评花 3 小时手搓 PPT VS AI 三分钟出稿,智在 PPT 深度第三方测评,不吹不黑",
+      "url": "https://blog.csdn.net/zzzhhhhhh_/article/details/163307230"
+    },
+    {
+      "引用编号": "dda5fb4c140a4212acd33706b7187db1",
+      "检测编号": "8a9fe10e3d324a288d12adb32519a3db",
+      "站点名称": "alloypress.com",
+      "序号": 13,
+      "标题": "I Tested 20 AI PPT Generators & Picked the 5 Best (2026)",
+      "url": "https://alloypress.com/blogs/best-ai-ppt-generators"
+    },
+    {
+      "引用编号": "b67f4ba32a1848f0a9c199f30061efd6",
+      "检测编号": "8a9fe10e3d324a288d12adb32519a3db",
+      "站点名称": "什么值得买",
+      "序号": 14,
+      "标题": "告别加班做PPT:5款国产AI PPT工具实测",
+      "url": "https://post.smzdm.com/p/a3r9wwvd"
+    },
+    {
+      "引用编号": "3a021268ff034fa98b559dd77004afc6",
+      "检测编号": "8a9fe10e3d324a288d12adb32519a3db",
+      "站点名称": "今日头条",
+      "序号": 15,
+      "标题": "用AI做PPT太慢?5个工具实测对比3步实操,10分钟出一份专业PPT - 今日头条",
+      "url": "https://m.toutiao.com/article/7667215667724075539"
+    },
+    {
+      "引用编号": "d4b720b7adc647dd8944e9b3fb66f679",
+      "检测编号": "8a9fe10e3d324a288d12adb32519a3db",
+      "站点名称": "文雅子AI设计",
+      "序号": 16,
+      "标题": "2026年做可编辑的PPT,AI工具怎么选? 最近实测了7款AI做PPT工具,按真实使用场景分成6个梯队: 豆包/千问:临时汇报急救包,免费、快、够用。 WPS AI:适合传统公司,直接在熟悉界面里提效。 Gamma:90秒出高颜值PPT,快且好看。 Kimi:长文档整理专家,适合先搭大纲。 Claude:逻辑架构师,适合商业计划、复杂方案。 Codex:高定制交付级选手,可复刻风格、对齐品牌模板。 工具不在多,找到真正趁手的就够了。 #AI做PPT #AI工具推荐 #PPT制作 #职场提效 #AI办公 #AI设计",
+      "url": "https://wv.video.qq.com/export/UzFfBgAAxNqCQDIWFxr2jMzT4DBZDfkPtwD2RRWfRhiAaX2QWzk"
+    },
+    {
+      "引用编号": "85491d88e4d344f0bba0e93816488b0c",
+      "检测编号": "8a9fe10e3d324a288d12adb32519a3db",
+      "站点名称": "forum.wps.cn",
+      "序号": 17,
+      "标题": "实测7款主流AI PPT工具2026真实选型攻略,办公刚需不踩坑",
+      "url": "https://forum.wps.cn/topic/94853"
+    },
+    {
+      "引用编号": "2fcb1d46096a4b4e8f520d2c3a6e4084",
+      "检测编号": "8a9fe10e3d324a288d12adb32519a3db",
+      "站点名称": "WPS海外版官网",
+      "序号": 18,
+      "标题": "How to Create a PowerPoint with AI Presentation Maker [2026]",
+      "url": "https://www.wps.com/academy/apply-ppt-templates-to-existing-presentations-quick-tutorials-1868027"
+    },
+    {
+      "引用编号": "7bd37ec3ac1d4dbd9d519aa9cbe194ae",
+      "检测编号": "8a9fe10e3d324a288d12adb32519a3db",
+      "站点名称": "模湖智能",
+      "序号": 19,
+      "标题": "2026年AI PPT生成工具全景解析",
+      "url": "http://mp.weixin.qq.com/s?__biz=MzE5ODA4MjA0MA==&mid=2247484846&idx=1&sn=34ee8d4b3d4ce8e967cff0bc14fef116&chksm=973ef2a02e93213e95ff9f8c71c5b73adcbf71c8f968ccf62e182713b750f396f97a88a36e24#rd"
+    },
+    {
+      "引用编号": "b304992718524a1c8cf9782939091cbc",
+      "检测编号": "8a9fe10e3d324a288d12adb32519a3db",
+      "站点名称": "答案玩AI",
+      "序号": 20,
+      "标题": "测试国产AI的牛马力,你常用哪一个?#ai技巧 #ppt #实用技巧 #测试 #AI评测",
+      "url": "https://wv.video.qq.com/export/UzFfBgAAxKeiBH42XgKRjczT4DBZDRZS6NwWns2abV-UuOd_VnI"
+    },
+    {
+      "引用编号": "211e91929fed4b4aa65791364e79b793",
+      "检测编号": "8a9fe10e3d324a288d12adb32519a3db",
+      "站点名称": "每天用Ai解决一个问题",
+      "序号": 21,
+      "标题": "我用AI做PPT,10分钟凑出一套能交差的,附5个工具对比",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1788397326&ver=6943&signature=IBc3GykIPF*wd1iRxjmkM9P57yuf8PrBYV-QkMmFedKKoGC6uqws3qBvjwip1E*4yGwuhKUZR*WlUqqe0iggC6jB5GT0*jcOG3memdF3DAoxw2jtB0jU*IaEuk27Hei0&new=1"
+    }
+  ],
+  "_obtained": true,
+  "_ai_extracted": false,
+  "_核心词": "PPT生成厂商",
+  "_企业名称": "上海元符号智能科技有限公司",
+  "_project": "T-上海元符号智能科技有限公司-PPT生成厂商",
+  "_enterprise": "上海元符号智能科技有限公司",
+  "_core_word": "PPT生成厂商",
+  "_detect_date": "2026-09-03",
+  "_detect_date_time": "2026-09-03 09:07:13",
+  "内容提及品牌": [
+    "WPS AI",
+    "Gamma",
+    "讯飞智文",
+    "ChatPPT",
+    "Canva",
+    "Microsoft Copilot",
+    "即触AI PPT",
+    "7牛AI PPT",
+    "Kimi PPT",
+    "月之暗面",
+    "腾讯文档"
+  ]
+}

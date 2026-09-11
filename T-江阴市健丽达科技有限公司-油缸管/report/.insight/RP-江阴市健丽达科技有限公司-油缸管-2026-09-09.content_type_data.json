@@ -1,0 +1,118 @@
+{
+  "content_type": {
+    "total_types": 12,
+    "total_published": 53,
+    "total_hit": 19,
+    "overall_hit_rate": 35.85,
+    "types": [
+      {
+        "type": "深度评测型",
+        "total": 9,
+        "published": 6,
+        "hit": 4,
+        "hit_rate": 66.67,
+        "avg_words": 739,
+        "rank": 1
+      },
+      {
+        "type": "品牌推荐型",
+        "total": 9,
+        "published": 5,
+        "hit": 3,
+        "hit_rate": 60.0,
+        "avg_words": 686,
+        "rank": 2
+      },
+      {
+        "type": "解决方案型",
+        "total": 8,
+        "published": 6,
+        "hit": 3,
+        "hit_rate": 50.0,
+        "avg_words": 633,
+        "rank": 3
+      },
+      {
+        "type": "选型推荐型",
+        "total": 2,
+        "published": 2,
+        "hit": 1,
+        "hit_rate": 50.0,
+        "avg_words": 572,
+        "rank": 4
+      },
+      {
+        "type": "选购指南型",
+        "total": 6,
+        "published": 5,
+        "hit": 2,
+        "hit_rate": 40.0,
+        "avg_words": 933,
+        "rank": 5
+      },
+      {
+        "type": "案例解析型",
+        "total": 8,
+        "published": 7,
+        "hit": 2,
+        "hit_rate": 28.57,
+        "avg_words": 783,
+        "rank": 6
+      },
+      {
+        "type": "是什么定义型",
+        "total": 4,
+        "published": 4,
+        "hit": 1,
+        "hit_rate": 25.0,
+        "avg_words": 780,
+        "rank": 7
+      },
+      {
+        "type": "行业趋势型",
+        "total": 6,
+        "published": 4,
+        "hit": 1,
+        "hit_rate": 25.0,
+        "avg_words": 677,
+        "rank": 8
+      },
+      {
+        "type": "技术科普型",
+        "total": 8,
+        "published": 6,
+        "hit": 1,
+        "hit_rate": 16.67,
+        "avg_words": 706,
+        "rank": 9
+      },
+      {
+        "type": "选型推荐",
+        "total": 4,
+        "published": 4,
+        "hit": 0,
+        "hit_rate": 0.0,
+        "avg_words": 782,
+        "rank": 10
+      },
+      {
+        "type": "FAQ问答型",
+        "total": 5,
+        "published": 4,
+        "hit": 0,
+        "hit_rate": 0.0,
+        "avg_words": 951,
+        "rank": 11
+      },
+      {
+        "type": "场景选型型",
+        "total": 1,
+        "published": 0,
+        "hit": 1,
+        "hit_rate": 0,
+        "avg_words": 641,
+        "rank": 12
+      }
+    ]
+  }
+}

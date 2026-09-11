@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="Mx1GUfnsiBiabtzXXxWdx8">
+
+<head data-page-node-id="wpVzgCjJnNjryuzI8S9lzU">
+    <meta charset="UTF-8" data-page-node-id="VfzCA6QnWtyD4xdu2u56ob">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="ApE0hU8hTGIdCb1bPDOD79">
+    <title>GEO 数据洞察报告</title>
+    <link rel="stylesheet" href="https://unpkg.com/ant-design-vue/dist/reset.css" data-page-node-id="ddfLGaQ4rY18X5mlk1UqiD">
+    <style>
+        :root {
+            --bg: #0b1220;
+            --panel: #131c2e;
+            --panel-2: #182338;
+            --line: #243249;
+            --ink: #dfe7f3;
+            --ink-2: #93a4bd;
+            --ink-3: #64748f;
+            --cyan: #22d3ee;
+            --green: #2dd4a7;
+            --amber: #fbbf24;
+            --red: #f87171;
+            --violet: #a78bfa;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--ink);
+            font-family: -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .wrap {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 24px 20px 64px;
+        }
+
+        .head {
+            background: linear-gradient(120deg, #16233b 0%, #101a2c 60%, #0d1626 100%);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 22px 24px;
+            margin-bottom: 18px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .head::after {
+            content: "";
+            position: absolute;
+            right: -60px;
+            top: -60px;
+            width: 220px;
+            height: 220px;
+            background: radial-gradient(circle, rgba(34, 211, 238, .14), transparent 70%);
+        }
+
+        .head .tag {
+            display: inline-block;
+            font-size: 12px;
+            letter-spacing: 1px;
+            color: var(--cyan);
+            border: 1px solid rgba(34, 211, 238, .35);
+            padding: 2px 10px;
+            border-radius: 999px;
+            margin-bottom: 8px;
+        }
+
+        .head h1 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .head .sub {
+            color: var(--ink-2);
+            margin-top: 6px;
+            font-size: 13px;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        .meta-cell {
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            padding: 8px 12px;
+        }
+
+        .meta-cell .k {
+            font-size: 12px;
+            color: var(--ink-3);
+        }
+
+        .meta-cell .v {
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 2px;
+        }
+
+        .notice {
+            margin-top: 14px;
+            font-size: 12px;
+            color: var(--ink-2);
+            border-left: 3px solid var(--amber);
+            background: rgba(251, 191, 36, .07);
+            border-radius: 6px;
+            padding: 8px 12px;
+        }
+
+        .panel {
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 16px 18px;
+            margin-bottom: 16px;
+        }
+
+        .panel .p-title {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .panel .p-sub {
+            font-size: 12px;
+            color: var(--ink-3);
+            margin-bottom: 12px;
+        }
+
+        .kpi-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .kpi-card {
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 14px 16px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .kpi-card .k {
+            font-size: 12px;
+            color: var(--ink-2);
+        }
+
+        .kpi-card .v {
+            font-size: 26px;
+            font-weight: 800;
+            margin: 4px 0 2px;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .kpi-card .d-up {
+            color: var(--green);
+        }
+
+        .kpi-card .d-down {
+            color: var(--red);
+        }
+
+        .kpi-card .d-flat {
+            color: var(--ink-3);
+        }
+
+        .kpi-card .d {
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .kpi-card .d .lbl {
+            color: var(--ink-3);
+            font-weight: 400;
+        }
+
+        .kpi-card .bar {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--cyan);
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        @media (max-width: 900px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .chart-box {
+            width: 100%;
+            min-height: 260px;
+        }
+
+        table.tbl {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        table.tbl th {
+            text-align: left;
+            color: var(--ink-2);
+            font-weight: 600;
+            padding: 7px 10px;
+            border-bottom: 1px solid var(--line);
+            white-space: nowrap;
+            background: rgba(255, 255, 255, .03);
+        }
+
+        table.tbl td {
+            padding: 6px 10px;
+            border-bottom: 1px solid rgba(36, 50, 73, .5);
+            vertical-align: top;
+        }
+
+        table.tbl tr:hover td {
+            background: rgba(34, 211, 238, .04);
+        }
+
+        .badge-on {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 1px 8px;
+            border-radius: 999px;
+            background: rgba(45, 212, 167, .15);
+            color: var(--green);
+            border: 1px solid rgba(45, 212, 167, .35);
+        }
+
+        .badge-off {
+            display: inline-block;
+            font-size: 12px;
+            padding: 1px 8px;
+            border-radius: 999px;
+            background: rgba(148, 163, 184, .12);
+            color: var(--ink-2);
+            border: 1px solid rgba(148, 163, 184, .3);
+        }
+
+        .badge-new {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 1px 8px;
+            border-radius: 999px;
+            background: rgba(34, 211, 238, .14);
+            color: var(--cyan);
+            border: 1px solid rgba(34, 211, 238, .35);
+        }
+
+        .badge-lost {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 1px 8px;
+            border-radius: 999px;
+            background: rgba(248, 113, 113, .13);
+            color: var(--red);
+            border: 1px solid rgba(248, 113, 113, .35);
+        }
+
+        .summary-box {
+            background: linear-gradient(120deg, rgba(34, 211, 238, .08), rgba(167, 139, 250, .06));
+            border: 1px solid rgba(34, 211, 238, .25);
+            border-radius: 12px;
+            padding: 14px 18px;
+            margin-bottom: 16px;
+            font-size: 15px;
+        }
+
+        .summary-box .sl {
+            color: var(--cyan);
+            font-weight: 700;
+            margin-right: 6px;
+        }
+
+        .insight-card {
+            background: var(--panel-2);
+            border: 1px solid var(--line);
+            border-left: 4px solid var(--ink-3);
+            border-radius: 10px;
+            padding: 14px 16px;
+            margin-bottom: 12px;
+        }
+
+        .insight-card.tone-positive {
+            border-left-color: var(--green);
+        }
+
+        .insight-card.tone-negative {
+            border-left-color: var(--red);
+        }
+
+        .insight-card.tone-warning {
+            border-left-color: var(--amber);
+        }
+
+        .insight-card.tone-neutral {
+            border-left-color: var(--ink-3);
+        }
+
+        .insight-card .i-head {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 4px;
+        }
+
+        .insight-card .i-dim {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--violet);
+            background: rgba(167, 139, 250, .12);
+            border: 1px solid rgba(167, 139, 250, .3);
+            padding: 0 8px;
+            border-radius: 6px;
+        }
+
+        .insight-card .i-title {
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .insight-card .i-conf {
+            font-size: 11px;
+            color: var(--ink-3);
+            border: 1px solid var(--line);
+            padding: 0 6px;
+            border-radius: 4px;
+            margin-left: auto;
+        }
+
+        .insight-card .i-summary {
+            color: var(--ink);
+            margin-top: 4px;
+        }
+
+        .insight-card .i-evidence {
+            margin-top: 8px;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .insight-card .i-evidence li {
+            font-size: 13px;
+            color: var(--ink-2);
+            position: relative;
+            padding-left: 16px;
+            margin-bottom: 3px;
+        }
+
+        .insight-card .i-evidence li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--cyan);
+        }
+
+        .insight-card .i-action {
+            margin-top: 10px;
+            font-size: 13px;
+            background: rgba(34, 211, 238, .08);
+            border: 1px dashed rgba(34, 211, 238, .35);
+            border-radius: 8px;
+            padding: 8px 12px;
+        }
+
+        .insight-card .i-action .al {
+            color: var(--cyan);
+            font-weight: 700;
+            margin-right: 6px;
+        }
+
+        .empty-insight {
+            text-align: center;
+            color: var(--ink-3);
+            border: 1px dashed var(--line);
+            border-radius: 10px;
+            padding: 28px;
+        }
+
+        .foot {
+            text-align: center;
+            color: var(--ink-3);
+            font-size: 12px;
+            margin-top: 24px;
+            border-top: 1px solid var(--line);
+            padding-top: 14px;
+        }
+    </style>
+</head>
+
+<body data-page-node-id="VNrVet3EEtVx7MplSkstdn">
+    <!-- 注入点：脚本将 window.__INSIGHT__ 的 JSON 序列化后替换占位符 null -->
+    <div id="app" data-page-node-id="G2LV1LAGGKglLHnRzDoHIJ">
+        <div class="wrap" v-if="R.meta" data-page-node-id="BR5HfHExzdWPi7PJ00s5Bu">
+            <!-- 头部 -->
+            <div class="head" data-page-node-id="e8BFU80HAnrsqeMe0R1Hh1">
+                <span class="tag" data-page-node-id="IYWgdsR9A1D6urUbheaNEF">{{ R.meta.tag || 'GEO DATA INSIGHT' }}</span>
+                <h1 data-page-node-id="HJyFctVamOqwMCSEACQNBC">{{ R.meta.title }}</h1>
+                <div class="sub" v-if="R.meta.subtitle" data-page-node-id="YARdWtJy4tyn38RjQSudC8">{{ R.meta.subtitle }}</div>
+                <div class="meta-grid" data-page-node-id="SH23xCtA2VNXFKXbkn2TuJ">
+                    <div class="meta-cell" v-for="(m, i) in R.meta.cells" :key="i" data-page-node-id="lBFek9vAS4BY2xVd151ZxP">
+                        <div class="k" data-page-node-id="KAWaucArMobXe5ePRVUipS">{{ m.k }}</div>
+                        <div class="v" data-page-node-id="T3I5HF95EZXLYdSPAEQMyo">{{ m.v }}</div>
+                    </div>
+                </div>
+                <div class="notice" v-if="R.meta.notice" data-page-node-id="r6hhIQ3CqHPNEuVaxuver0">
+                    <b data-page-node-id="7ni8uHIoxxyuIe0HlVEGuY">时序口径：</b>{{ R.meta.notice }}
+                </div>
+            </div>
+
+            <!-- 数据版提示 -->
+            <div class="panel" v-if="R.data_only" style="border-color: rgba(251,191,36,.4);" data-page-node-id="lKWA8iDHonEV152MNedQIs">
+                <div class="p-title" style="color:var(--amber)" data-page-node-id="BXh6JQF8HhcvOaDajeNT5L">⚠ 数据版（尚未注入 AI 洞察）</div>
+                <div class="p-sub" data-page-node-id="EtfQm4KbyF9PMfkm7Lo1QG">以下为脚本梳理的例行数据底座。如需完整报告，请先由 AI 依据数据 JSON 生成
+                    <code data-page-node-id="gv9hnzDX4ipZXAj2iXPVAH">.insight.json</code>，再执行 render 重新注入。
+                </div>
+            </div>
+
+            <!-- AI 总述 -->
+            <div class="summary-box" v-if="R.summary" data-page-node-id="G1vBGl6IJq9DDcK3hQkANq">
+                <span class="sl" data-page-node-id="P9PYhuoiwMPT5ikSetihLF">报告总述</span>{{ R.summary }}
+            </div>
+
+            <!-- KPI -->
+            <div class="kpi-row" v-if="R.kpis && R.kpis.length" data-page-node-id="uYQK1FEKf68haDGGdl7idA">
+                <div class="kpi-card" v-for="k in R.kpis" :key="k.id" data-page-node-id="4bPGaFQXuOoLB1VfPrXHme">
+                    <div class="bar" :style="{background: k.accent || 'var(--cyan)'}" data-page-node-id="1bmR8JwNiPFMv7ANtVDASa"></div>
+                    <div class="k" data-page-node-id="eQ2xsDHSnbDjCviIkbhZrg">{{ k.label }}</div>
+                    <div class="v" data-page-node-id="lsNsFIO7eKvngkWW4NEHOL">{{ k.value }}</div>
+                    <div class="d" v-if="k.delta_txt" data-page-node-id="ONmBxodRFUNYEDSGrsVZN8">
+                        <span :class="k.delta_cls || 'd-flat'" data-page-node-id="2C67jJCdhwraCulWxIw4oJ">{{ k.delta_txt }}</span>
+                        <span class="lbl" v-if="k.delta_lbl" data-page-node-id="5GVJAJCNN2BKT4rZx2YxeY"> {{ k.delta_lbl }}</span>
+                    </div>
+                    <div class="d" v-else-if="k.sub" data-page-node-id="dAz9PGQwar5lgUG9BBaGxD"><span class="lbl" data-page-node-id="GyleLXA1sVtXAC74Q6AwZR">{{ k.sub }}</span></div>
+                </div>
+            </div>
+
+            <!-- 图表区 -->
+            <div class="grid-2" v-if="R.charts && R.charts.length" data-page-node-id="gxBHotdZ6jFLxa7GVW2791">
+                <div class="panel" v-for="c in R.charts" :key="c.id" :style="c.span==='full' ? 'grid-column:1/-1' : ''" data-page-node-id="MoUiz3uoXcihhUDapEgynn">
+                    <div class="p-title" data-page-node-id="mB2mPlPicgUWnExkJG68Gc">{{ c.title }}</div>
+                    <div class="p-sub" v-if="c.sub" data-page-node-id="z0r4td58Fqysu3oMqVJhKo">{{ c.sub }}</div>
+                    <div class="chart-box" :id="c.id" data-page-node-id="dqH42rpCN3Kqs4C975cYWL"></div>
+                </div>
+            </div>
+
+            <!-- 表格区 -->
+            <div class="panel" v-for="t in R.tables" :key="t.id" data-page-node-id="DyKGhPz6A9obt7X6sBKCgL">
+                <div class="p-title" data-page-node-id="Oa1jJsI0I5sopoeIXHAkBK">{{ t.title }}</div>
+                <div class="p-sub" v-if="t.sub" data-page-node-id="YhphlS9Kk3vbgd5bocbyP6">{{ t.sub }}</div>
+                <div style="overflow-x:auto" data-page-node-id="SLeviWCPgO3RR6EyQZritu">
+                    <table class="tbl" data-page-node-id="woGNkorvEWdwiZpvj9F0EB">
+                        <thead data-page-node-id="Y3LBp7xocdnkHQn3okaWhP">
+                            <tr data-page-node-id="DHz7QoOsqwGkvYGCCEEaPB">
+                                <th v-for="col in t.cols" :key="col.key" data-page-node-id="CrJA3QZ5CQYVUBmJMIlqRQ">{{ col.title }}</th>
+                            </tr>
+                        </thead>
+                        <tbody data-page-node-id="DLcDGOB7c9Y9DZ7XQ6HEGK">
+                            <tr v-for="(r, ri) in t.rows" :key="ri" data-page-node-id="mhatiYPTdZoMFWa5oFdXVm">
+                                <td v-for="col in t.cols" :key="col.key" data-page-node-id="X4hk1xVnKwTdQFbaP66nju">
+                                    <a v-if="col.type==='link' && r[col.key]" :href="r[col.key]" target="_blank" rel="noopener" style="color:var(--cyan)" data-page-node-id="sIclev8SxlfU9eeStXRE4A">链接</a>
+                                    <span v-else-if="col.type==='badge'" :class="badgeCls(r[col.key])" data-page-node-id="432wRAEtuI5uNkKj1bzqUE">{{ r[col.key] || '—' }}</span>
+                                    <span v-else-if="col.type==='num'" style="font-variant-numeric:tabular-nums" data-page-node-id="GwBQCFT64BVhBuvwZy5xI9">{{ r[col.key] }}</span>
+                                    <template v-else data-page-node-id="60ORMQYBXnEwn7wcOpGALC">{{ r[col.key] === '' || r[col.key] == null ? '—' : r[col.key] }}</template>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- AI 洞察卡 -->
+            <div v-if="R.insights && R.insights.length" data-page-node-id="KTQox5BMaLLAqOFzUGSzVi">
+                <div class="panel" style="margin-top:4px" data-page-node-id="FfZJQ8OlWv9mkna1k47vpl">
+                    <div class="p-title" data-page-node-id="a2xsVI7cU74DXvgbF3S0LY">🧭 AI 分维度洞察</div>
+                    <div class="p-sub" data-page-node-id="GlFGjHWuCrHPMVbSjUOzWQ">由会话内 AI 依据数据 JSON 生成；每条含证据与可执行建议。</div>
+                    <div class="insight-card" v-for="ins in R.insights" :key="ins.id" :class="'tone-' + (ins.tone || 'neutral')" data-page-node-id="DQiUqgHgn2j1AThJWCVgof">
+                        <div class="i-head" data-page-node-id="0HWGxzM3gvo2rN2NEB9Xp1">
+                            <span class="i-dim" data-page-node-id="fkNqqRLv4qPFfrQS0gZboX">{{ ins.dimension }}</span>
+                            <span class="i-title" data-page-node-id="WDLNlTbFF4icoFcqoJUlg3">{{ ins.title }}</span>
+                            <span class="i-conf" data-page-node-id="g9GztV1O9CQa1NLunKro3o">置信 {{ confText(ins.confidence) }}</span>
+                        </div>
+                        <div class="i-summary" data-page-node-id="mTULJ4uVgYdg8bXP5xE6Fi">{{ ins.summary }}</div>
+                        <ul class="i-evidence" v-if="ins.evidence && ins.evidence.length" data-page-node-id="iZ2vAxeNVpDRrZyZL6DVKO">
+                            <li v-for="(e, ei) in ins.evidence" :key="ei" data-page-node-id="hZZjOiMl0TXrb1mDDcpH7E">{{ e }}</li>
+                        </ul>
+                        <div class="i-action" v-if="ins.action" data-page-node-id="foks3mnS2H1hRnFUQhoKii">
+                            <span class="al" data-page-node-id="phuiZERAd1G2XTeeHDAur0">建议行动</span>{{ ins.action }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div v-else-if="!R.data_only" data-page-node-id="wHfEaiLKmNODW4dKHq1XgL">
+                <div class="empty-insight" data-page-node-id="dSvmdEdJeMbHJrN3CrM0oN">暂无 AI 洞察内容</div>
+            </div>
+
+            <div class="foot" data-page-node-id="nCNqCkR1yqmfAJ2g4GiPtB">
+                {{ R.meta.foot || 'GEO-洞察与报告专家 · geo-insight · 数据由脚本梳理，洞察由 AI 生成' }}
+            </div>
+        </div>
+        <div class="wrap" v-else style="color:var(--ink-2)" data-page-node-id="VRJUWfxXGhbAn2iU0tdBWQ">报告数据为空。</div>
+    </div>
+
+    <!-- 库 -->
+    <script src="https://unpkg.com/@antv/g2/dist/g2.min.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.13/dayjs.min.js"></script>
+    <script src="https://unpkg.com/ant-design-vue/dist/antd.min.js"></script>
+
+    <script>
+        // ===== 注入的数据 =====
+        window.__INSIGHT__ = {"scope":"project","meta":{"tag":"GEO ROUTINE + INSIGHT","title":"江阴市健丽达科技有限公司 · 油缸管 · GEO 数据洞察报告","subtitle":"最新检测 2026-09-07（凌晨） vs 2026-09-06（前一日）；当日(2026-09-07)文章仅统计。","cells":[{"k":"企业","v":"江阴市健丽达科技有限公司"},{"k":"核心词","v":"油缸管"},{"k":"最新检测日 L","v":"2026-09-07"},{"k":"对比基准 L-1","v":"2026-09-06"},{"k":"检测平台","v":"豆包、元宝"},{"k":"覆盖问句","v":"10 个"},{"k":"数据日范围","v":"2026-08-30 ~ 2026-09-07"},{"k":"生成时间","v":"2026-09-07 17:21"}],"notice":"最新检测数据 L=2026-09-07 于当日凌晨生成，彼时 2026-09-07 的文章尚未发布；因此 L 仅与 2026-09-06 对比，归因仅使用发布时间 ≤2026-09-06 的文章；当日(2026-09-07) 文章只统计写文与发布，不参与洞察。","foot":"GEO-洞察与报告专家 · geo-insight v2 · 数据由 insight_report.py 梳理，洞察由 AI 生成"},"kpis":[{"id":"k-hit","label":"上榜率(2026-09-07)","value":"25.0%","delta_txt":"较 L-1 →","delta_cls":"d-flat","delta_lbl":"vs 2026-09-06","sub":"5/20 条检测命中","accent":"#22d3ee"},{"id":"k-豆包","label":"豆包上榜率(2026-09-07)","value":"30.0%","delta_txt":"较 L-1 ↑10.0pp","delta_cls":"d-up","delta_lbl":"vs 2026-09-06","sub":"3/10 命中","accent":"#a78bfa"},{"id":"k-元宝","label":"元宝上榜率(2026-09-07)","value":"20.0%","delta_txt":"较 L-1 ↓10.0pp","delta_cls":"d-down","delta_lbl":"vs 2026-09-06","sub":"2/10 命中","accent":"#a78bfa"},{"id":"k-close-pub","label":"闭环发布(≤2026-09-06)","value":"53/60","delta_txt":null,"delta_lbl":"","sub":"成功/写文 · 6 个发文日","accent":"#2dd4a7"},{"id":"k-today","label":"当日(2026-09-07)写文","value":"10 篇","delta_txt":null,"delta_lbl":"","sub":"已发布 0 · 仅统计不参与洞察","accent":"#fbbf24"}],"charts":[{"id":"c-trend","title":"各平台上榜率趋势（检测日 2026-08-30 ~ 2026-09-07）","sub":"综合/豆包/元宝 上榜率%；最新检测日 L 仅与 L-1 对比，更早日期仅作趋势。","kind":"line","x":"x","y":"y","series":"series","data":[{"x":"2026-08-30","y":30.0,"series":"元宝"},{"x":"2026-08-30","y":60.0,"series":"豆包"},{"x":"2026-08-30","y":45.0,"series":"综合"},{"x":"2026-08-31","y":20.0,"series":"元宝"},{"x":"2026-08-31","y":50.0,"series":"豆包"},{"x":"2026-08-31","y":35.0,"series":"综合"},{"x":"2026-09-01","y":50.0,"series":"元宝"},{"x":"2026-09-01","y":50.0,"series":"豆包"},{"x":"2026-09-01","y":50.0,"series":"综合"},{"x":"2026-09-02","y":10.0,"series":"元宝"},{"x":"2026-09-02","y":40.0,"series":"豆包"},{"x":"2026-09-02","y":25.0,"series":"综合"},{"x":"2026-09-03","y":10.0,"series":"元宝"},{"x":"2026-09-03","y":20.0,"series":"豆包"},{"x":"2026-09-03","y":15.0,"series":"综合"},{"x":"2026-09-04","y":40.0,"series":"元宝"},{"x":"2026-09-04","y":30.0,"series":"豆包"},{"x":"2026-09-04","y":35.0,"series":"综合"},{"x":"2026-09-05","y":30.0,"series":"元宝"},{"x":"2026-09-05","y":20.0,"series":"豆包"},{"x":"2026-09-05","y":25.0,"series":"综合"},{"x":"2026-09-06","y":30.0,"series":"元宝"},{"x":"2026-09-06","y":20.0,"series":"豆包"},{"x":"2026-09-06","y":25.0,"series":"综合"},{"x":"2026-09-07","y":20.0,"series":"元宝"},{"x":"2026-09-07","y":30.0,"series":"豆包"},{"x":"2026-09-07","y":25.0,"series":"综合"}],"span":"full"},{"id":"c-source","title":"引用来源站点 Top12（2026-09-07）","sub":"豆包+元宝当日全部回答引用的站点计数（去重引用条目前）。","kind":"barH","x":"x","y":"y","data":[{"x":"中国工控网","y":29},{"x":"菏泽广电网","y":23},{"x":"顺企网","y":18},{"x":"菏泽网络电视台","y":18},{"x":"中钢网","y":14},{"x":"百度爱采购","y":14},{"x":"大众网","y":14},{"x":"豆丁网","y":14},{"x":"八方资源网","y":12},{"x":"b2bdata.baidu.com","y":11},{"x":"亮点黔西南","y":9},{"x":"henglihydraulics.com","y":7}]},{"id":"c-pub","title":"媒体发布结构（闭环 ≤2026-09-06）","sub":"已闭环发文日内的写文 vs 发布成功篇数。","kind":"barV","x":"x","y":"y","series":"series","data":[{"x":"列举网","y":42,"series":"已发布"},{"x":"列举网","y":0,"series":"未发布"},{"x":"今日头条","y":0,"series":"已发布"},{"x":"今日头条","y":6,"series":"未发布"},{"x":"国脉网","y":4,"series":"已发布"},{"x":"国脉网","y":0,"series":"未发布"},{"x":"博客园","y":3,"series":"已发布"},{"x":"博客园","y":1,"series":"未发布"},{"x":"采招网","y":3,"series":"已发布"},{"x":"采招网","y":0,"series":"未发布"},{"x":"中国采购","y":1,"series":"已发布"},{"x":"中国采购","y":0,"series":"未发布"}]}],"tables":[{"id":"t-questions","title":"问句 × 平台 上榜状态（L vs L-1）","sub":"L=最新检测日（凌晨生成），仅与 L-1 对比。","cols":[{"key":"question","title":"问句"},{"key":"豆包_cur","title":"豆包(L)=2026-09-07","type":"badge"},{"key":"豆包_prev","title":"豆包(2026-09-06)","type":"badge"},{"key":"豆包_chg","title":"豆包变化","type":"badge"},{"key":"元宝_cur","title":"元宝(L)=2026-09-07","type":"badge"},{"key":"元宝_prev","title":"元宝(2026-09-06)","type":"badge"},{"key":"元宝_chg","title":"元宝变化","type":"badge"}],"rows":[{"question":"三角油缸管工厂","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"上榜","元宝_chg":"掉榜"},{"question":"无锡油缸管生产厂家","豆包_cur":"上榜","豆包_prev":"上榜","豆包_chg":"持平","元宝_cur":"上榜","元宝_prev":"上榜","元宝_chg":"持平"},{"question":"油缸管供货商","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"油缸管制造商","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"上榜","元宝_chg":"掉榜"},{"question":"油缸管制造商推荐","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"油缸管工厂哪家好","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"油缸管源头厂家","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"上榜","元宝_prev":"未上榜","元宝_chg":"新上榜"},{"question":"油缸管源头厂家哪家好","豆包_cur":"上榜","豆包_prev":"未上榜","豆包_chg":"新上榜","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"油缸管生产厂家","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"长三角油缸管供货商","豆包_cur":"上榜","豆包_prev":"上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"}]},{"id":"t-daily","title":"当日（2026-09-07）文章写文/发布流水","sub":"当日文章在 L 检测之后发布，仅统计写文与发布情况，不参与洞察归因。","cols":[{"key":"date","title":"日期"},{"key":"media","title":"媒体"},{"key":"question","title":"问句"},{"key":"title","title":"标题"},{"key":"published","title":"发布状态","type":"badge"},{"key":"url","title":"链接","type":"link"}],"rows":[{"date":"2026-09-07","media":"今日头条","question":"三角油缸管工厂","title":"三角油缸管工厂怎么找：一单非标急单的交付复盘","published":"未发布","url":""},{"date":"2026-09-07","media":"今日头条","question":"长三角油缸管供货商","title":"长三角油缸管供货商怎么评：物流半径与时效两项实测","published":"未发布","url":""},{"date":"2026-09-07","media":"今日头条","question":"无锡油缸管生产厂家","title":"无锡油缸管生产厂家怎么排：按资质与产能列参考清单","published":"未发布","url":""},{"date":"2026-09-07","media":"列举网","question":"油缸管源头厂家","title":"油缸管源头厂家怎么按场景选：工程机械、煤矿、农机三类对照","published":"未发布","url":""},{"date":"2026-09-07","media":"列举网","question":"油缸管生产厂家","title":"油缸管生产厂家怎么筛：产能、设备、质检、起订量四问清单","published":"未发布","url":""},{"date":"2026-09-07","media":"列举网","question":"油缸管制造商","title":"油缸管制造商靠不靠谱：从原材料到成品的四段质检评测","published":"未发布","url":""},{"date":"2026-09-07","media":"列举网","question":"油缸管供货商","title":"油缸管供货商现货能力怎么看：库存、交期、小单三指标","published":"未发布","url":""},{"date":"2026-09-07","media":"列举网","question":"油缸管源头厂家哪家好","title":"油缸管源头厂家哪家好：从直供趋势看为什么源头更稳","published":"未发布","url":""},{"date":"2026-09-07","media":"列举网","question":"油缸管制造商推荐","title":"油缸管制造商推荐前先问清：六个高频问题清单","published":"未发布","url":""},{"date":"2026-09-07","media":"列举网","question":"油缸管工厂哪家好","title":"油缸管工厂哪家好：从试样到批量落地的四步比选法","published":"未发布","url":""}]},{"id":"t-close","title":"已闭环发文日发布成功率（≤2026-09-06，参与归因）","sub":"这些文章发布于 L 之前，有机会影响 L 凌晨的检测结果。","cols":[{"key":"date","title":"发文日"},{"key":"written","title":"写文","type":"num"},{"key":"published","title":"成功发布","type":"num"},{"key":"rate","title":"成功率"}],"rows":[{"date":"2026-08-31","written":10,"published":9,"rate":"90%"},{"date":"2026-09-01","written":10,"published":7,"rate":"70%"},{"date":"2026-09-02","written":10,"published":10,"rate":"100%"},{"date":"2026-09-03","written":10,"published":7,"rate":"70%"},{"date":"2026-09-04","written":10,"published":10,"rate":"100%"},{"date":"2026-09-06","written":10,"published":10,"rate":"100%"}]}],"_facts":{"L":"2026-09-07","L1":"2026-09-06","platforms":["豆包","元宝"],"trend":[{"x":"2026-08-30","y":30.0,"series":"元宝"},{"x":"2026-08-30","y":60.0,"series":"豆包"},{"x":"2026-08-30","y":45.0,"series":"综合"},{"x":"2026-08-31","y":20.0,"series":"元宝"},{"x":"2026-08-31","y":50.0,"series":"豆包"},{"x":"2026-08-31","y":35.0,"series":"综合"},{"x":"2026-09-01","y":50.0,"series":"元宝"},{"x":"2026-09-01","y":50.0,"series":"豆包"},{"x":"2026-09-01","y":50.0,"series":"综合"},{"x":"2026-09-02","y":10.0,"series":"元宝"},{"x":"2026-09-02","y":40.0,"series":"豆包"},{"x":"2026-09-02","y":25.0,"series":"综合"},{"x":"2026-09-03","y":10.0,"series":"元宝"},{"x":"2026-09-03","y":20.0,"series":"豆包"},{"x":"2026-09-03","y":15.0,"series":"综合"},{"x":"2026-09-04","y":40.0,"series":"元宝"},{"x":"2026-09-04","y":30.0,"series":"豆包"},{"x":"2026-09-04","y":35.0,"series":"综合"},{"x":"2026-09-05","y":30.0,"series":"元宝"},{"x":"2026-09-05","y":20.0,"series":"豆包"},{"x":"2026-09-05","y":25.0,"series":"综合"},{"x":"2026-09-06","y":30.0,"series":"元宝"},{"x":"2026-09-06","y":20.0,"series":"豆包"},{"x":"2026-09-06","y":25.0,"series":"综合"},{"x":"2026-09-07","y":20.0,"series":"元宝"},{"x":"2026-09-07","y":30.0,"series":"豆包"},{"x":"2026-09-07","y":25.0,"series":"综合"}],"questions":[{"question":"三角油缸管工厂","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"上榜","元宝_chg":"掉榜"},{"question":"无锡油缸管生产厂家","豆包_cur":"上榜","豆包_prev":"上榜","豆包_chg":"持平","元宝_cur":"上榜","元宝_prev":"上榜","元宝_chg":"持平"},{"question":"油缸管供货商","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"油缸管制造商","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"上榜","元宝_chg":"掉榜"},{"question":"油缸管制造商推荐","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"油缸管工厂哪家好","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"油缸管源头厂家","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"上榜","元宝_prev":"未上榜","元宝_chg":"新上榜"},{"question":"油缸管源头厂家哪家好","豆包_cur":"上榜","豆包_prev":"未上榜","豆包_chg":"新上榜","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"油缸管生产厂家","豆包_cur":"未上榜","豆包_prev":"未上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"},{"question":"长三角油缸管供货商","豆包_cur":"上榜","豆包_prev":"上榜","豆包_chg":"持平","元宝_cur":"未上榜","元宝_prev":"未上榜","元宝_chg":"持平"}],"closed_article_dates":["2026-08-31","2026-09-01","2026-09-02","2026-09-03","2026-09-04","2026-09-06"],"closed_written":60,"closed_published":53,"today_written":10,"today_published":0,"top_sites":[["中国工控网",29],["菏泽广电网",23],["顺企网",18],["菏泽网络电视台",18],["中钢网",14],["百度爱采购",14],["大众网",14],["豆丁网",14],["八方资源网",12],["b2bdata.baidu.com",11],["亮点黔西南",9],["henglihydraulics.com",7]]},"data_only":false,"summary":"综合上榜率 25% 与 L-1 持平，豆包（30%，↑10pp）上行、元宝（20%，↓10pp）回落；「源头厂家」类问句新增 2 处上榜，元宝「制造商/三角油缸管工厂」类掉榜 2 处；当日 10 篇已写未发，成效需待明日 L+1 检测验证。","insights":[{"id":"I1","dimension":"趋势","title":"综合上榜率持平，豆包元宝剪刀差扩大","tone":"neutral","summary":"最新检测日 L（2026-09-07）综合上榜率 25.0%，与 L-1（2026-09-06）持平。结构上豆包从 20% 升至 30%，元宝从 30% 回落至 20%，两平台差距由 +0pp 扩大为 +10pp，平台间表现分化是本期主要特征。","evidence":["综合：L-1 25.0% → L 25.0%（20 条检测命中 5 条）","豆包：L-1 20.0% → L 30.0%（10 条命中 3 条）","元宝：L-1 30.0% → L 20.0%（10 条命中 2 条）"],"chart_ref":"c-trend","table_ref":null,"action":"把豆包的上行归因沉淀成可复现打法（新增上榜集中在「源头厂家哪家好」类问句），同时排查元宝掉榜问句是否存在内容被覆盖或时效衰减。","confidence":"high"},{"id":"I2","dimension":"平台","title":"元宝出现 2 处掉榜，需优先干预","tone":"warning","summary":"元宝在「三角油缸管工厂」「油缸管制造商」两个问句上从上榜跌回未上榜；豆包在「油缸管源头厂家哪家好」新上榜。掉榜集中于元宝的『工厂/制造商』语义类问句，与今日元宝无新发文章直接相关（当日文章晚于 L 检测，不能解释该变化）。","evidence":["元宝-三角油缸管工厂：L-1 上榜 → L 未上榜（掉榜）","元宝-油缸管制造商：L-1 上榜 → L 未上榜（掉榜）","豆包-油缸管源头厂家哪家好：L-1 未上榜 → L 上榜（新上榜）"],"chart_ref":null,"table_ref":"t-questions","action":"对元宝「三角油缸管工厂」「油缸管制造商」两问句补发针对性文章（三角/非标交付案例、制造商工艺对比角度），目标在 L+1 检测中恢复上榜。","confidence":"high"},{"id":"I3","dimension":"问句","title":"「源头厂家」语义类问句开始起效","tone":"positive","summary":"本期 2 处新增上榜均落在『源头厂家/源头厂家哪家好』语义带（豆包+元宝各 1 处），说明近期围绕源头厂家身份的内容在双平台获得推荐位。这是自 08-30 以来该语义带首次出现双平台同步上榜。","evidence":["元宝-油缸管源头厂家：新上榜","豆包-油缸管源头厂家哪家好：新上榜","闭环 6 个发文日中源头厂家类文章持续发布（列举网为主）"],"chart_ref":null,"table_ref":"t-questions","action":"乘势扩充「源头厂家」长尾变体问句（源头直供、源头实力、源头资质），并在一周内保持该语义带发布频次，防止上榜位被竞品替换。","confidence":"medium"},{"id":"I4","dimension":"引用来源","title":"Top 引用源均为第三方站点，自有内容未被 AI 直接引用","tone":"warning","summary":"L 日豆包+元宝回答的引用来源 Top 为中国工控网（29）、菏泽广电网（23）、顺企网（18）等第三方 B2B/资讯站；Top12 中未见健丽达官网与自有发布媒体（列举网等），仅出现竞品站 henglihydraulics.com（恒立液压，7 次）。自有内容进入 AI 引用池的证据仍然薄弱。","evidence":["Top3 引用源：中国工控网 29 / 菏泽广电网 23 / 顺企网 18","Top12 中自有官网/自有媒体 0 席","竞品恒立官网 henglihydraulics.com 出现 7 次"],"chart_ref":"c-source","table_ref":null,"action":"短期：在工控网、顺企网等已被 AI 高频引用的站点强化企业词与官网链接露出；长期：验证自有站点是否被引擎排除（robots/收录），推动官网+列举网内容进入引用候选。","confidence":"medium"},{"id":"I5","dimension":"发布闭环","title":"闭环发布成功率 88%，发布链路健康","tone":"positive","summary":"已闭环的 6 个发文日（≤L-1）共写文 60 篇、成功发布 53 篇（88%），发布链路整体稳定；未发布 7 篇集中在 09-01/09-03 的今日头条位（各缺 3 篇），为渠道侧偶发失败，非系统性风险。","evidence":["闭环发文日 6 天：写文 60 / 成功发布 53（88%）","未发布 7 篇：09-01 缺 3、09-03 缺 3（今日头条渠道）","列举网渠道闭环成功率 100%（42/42）"],"chart_ref":"c-pub","table_ref":"t-close","action":"补查今日头条 09-01/09-03 失败原因（账号/审核/重复），修复后按原链接补发，避免渠道空窗拖累头条系收录样本。","confidence":"high"},{"id":"I6","dimension":"盲区机会","title":"双平台盲区仍集中，今日文章恰好覆盖其中 4 问","tone":"neutral","summary":"双平台均未上榜的盲区问句仍有 5 个：油缸管供货商、油缸管制造商、油缸管制造商推荐、油缸管工厂哪家好、油缸管生产厂家。当日（L）已写 10 篇、尚未发布，其中列举网 7 篇覆盖供货商/制造商/生产厂家等盲区问句——这批文章晚于 L 检测，其效果最早在明日（L+1）检测中可见，本期数据无法评估。","evidence":["双平台盲区 5 问：供货商、制造商、制造商推荐、工厂哪家好、生产厂家","当日已写 10 篇（列举网 7 + 今日头条 3），已发布 0","当日文章仅统计，不参与本期 insight 归因（时序口径）"],"chart_ref":null,"table_ref":"t-daily","action":"明日 L+1 检测后，用本报告同口径对比盲区问句上榜变化，验证今日发布的 10 篇是否撬动「制造商/供货商/生产厂家」类问句。","confidence":"high"}]};
+
+        const { createApp } = Vue;
+
+        const app = createApp({
+            data() {
+                return {
+                    R: window.__INSIGHT__ || {}
+                };
+            },
+            methods: {
+                confText(c) {
+                    return { high: '高', medium: '中', low: '低' }[c] || (c || '—');
+                },
+                badgeCls(v) {
+                    if (v === '上榜' || v === '是') return 'badge-on';
+                    if (v === '未上榜' || v === '否') return 'badge-off';
+                    if (v === '新上榜') return 'badge-new';
+                    if (v === '掉榜') return 'badge-lost';
+                    return '';
+                },
+                // 统一图表渲染入口：由模板按 payload 生成 G2 spec，业务无关
+                buildChart(c) {
+                    const el = document.getElementById(c.id);
+                    if (!el || !window.G2) return;
+                    const G2 = window.G2;
+                    const kind = c.kind || 'line';
+                    const palette = ['#22d3ee', '#a78bfa', '#2dd4a7', '#fbbf24', '#f87171', '#60a5fa', '#f472b6', '#4ade80'];
+                    try {
+                        const enc = { x: c.x || 'x', y: c.y || 'y' };
+                        if (c.series) enc.color = c.series;
+                        let spec;
+                        if (kind === 'line') {
+                            spec = {
+                                type: 'line', encode: Object.assign({}, enc, { shape: 'smooth' }),
+                                style: { lineWidth: 3 },
+                                scale: { color: { range: palette } },
+                                axis: { x: { title: false }, y: { title: false, labelFormatter: (v) => v + '%' } },
+                                legend: { color: { position: 'top' } }
+                            };
+                        } else if (kind === 'barH') {
+                            spec = {
+                                type: 'interval',
+                                encode: enc,
+                                coordinate: { transform: [{ type: 'transpose' }] },
+                                scale: { color: { range: palette } },
+                                axis: { x: { title: false }, y: { title: false } },
+                                legend: c.series ? { color: { position: 'top' } } : false,
+                                style: { maxWidth: c.maxWidth || 34 }
+                            };
+                        } else { // barV
+                            spec = {
+                                type: 'interval',
+                                encode: enc,
+                                scale: { color: { range: palette } },
+                                axis: { x: { title: false }, y: { title: false } },
+                                legend: c.series ? { color: { position: 'top' } } : false,
+                                style: { maxWidth: c.maxWidth || 46 }
+                            };
+                        }
+                        const chart = new G2.Chart({ container: c.id, autoFit: true });
+                        // 尝试套用内置暗色主题；失败则退回默认
+                        try { chart.theme({ type: 'classicDark' }); } catch (_e) { /* ignore */ }
+                        chart.options(spec);
+                        chart.data(c.data || []);
+                        chart.render();
+                    } catch (e) {
+                        el.innerHTML = '<div style="color:#f87171;font-size:13px;padding:20px">图表渲染失败：' +
+                            (e && e.message ? e.message : String(e)) + '</div>';
+                    }
+                }
+            },
+            mounted() {
+                this.$nextTick(() => {
+                    (this.R.charts || []).forEach(c => this.buildChart(c));
+                    // Tailwind 浏览器构建会重扫 DOM，不影响本模板样式
+                });
+            }
+        });
+        app.use(antd).mount('#app');
+    </script>
+</body>
+
+</html>

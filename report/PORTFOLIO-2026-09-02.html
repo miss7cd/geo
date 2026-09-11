@@ -1,0 +1,1014 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>GEO 跨项目总览（2026-09-02）</title><style>
+* { box-sizing: border-box; }
+body { margin:0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background:#eef2f7; color:#1f2d3d; line-height:1.6; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 28px 22px 60px; }
+header.top { background: linear-gradient(135deg,#1e3a8a,#2563eb); color:#fff; border-radius:14px; padding:26px 28px; box-shadow:0 6px 20px rgba(30,58,138,.25); }
+header.top h1 { margin:0 0 6px; font-size:23px; }
+header.top .sub { opacity:.92; font-size:14px; }
+header.top .meta { margin-top:12px; font-size:12.5px; opacity:.85; display:flex; flex-wrap:wrap; gap:14px; }
+.kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:14px; margin:22px 0; }
+.kpi { background:#fff; border-radius:12px; padding:16px 18px; box-shadow:0 2px 8px rgba(15,23,42,.06); border-left:4px solid #2563eb; }
+.kpi .v { font-size:26px; font-weight:700; }
+.kpi .l { font-size:12.5px; color:#64748b; margin-top:2px; }
+.kpi.green { border-color:#16a34a; } .kpi.green .v { color:#16a34a; }
+.kpi.red { border-color:#dc2626; } .kpi.red .v { color:#dc2626; }
+.kpi.amber { border-color:#f59e0b; } .kpi.amber .v { color:#f59e0b; }
+section { background:#fff; border-radius:12px; padding:20px 24px; margin:18px 0; box-shadow:0 2px 8px rgba(15,23,42,.06); }
+section h2 { font-size:18px; margin:0 0 14px; padding-bottom:8px; border-bottom:2px solid #eef2f7; }
+section h3 { font-size:15px; margin:18px 0 10px; color:#0f172a; }
+.chart { width:100%; height:auto; display:block; }
+.axis { font-size:11px; fill:#64748b; }
+.dot { font-size:11px; fill:#334155; font-weight:600; }
+table { width:100%; border-collapse:collapse; font-size:13px; margin:10px 0; }
+th,td { border:1px solid #e2e8f0; padding:8px 10px; text-align:center; }
+th { background:#f1f5f9; color:#334155; font-weight:600; }
+td.l, th.l { text-align:left; }
+.cell-yes { background:#dcfce7; color:#166534; font-weight:600; }
+.cell-no { background:#fee2e2; color:#991b1b; }
+.cell-miss { background:#f1f5f9; color:#94a3b8; }
+.t-yes { color:#166534; font-weight:600; } .t-no { color:#991b1b; font-weight:600; } .t-miss { color:#94a3b8; }
+.early { font-size:11.5px; opacity:.85; } .sub { font-size:10.5px; font-weight:400; color:#94a3b8; }
+.tag { display:inline-block; padding:1px 7px; border-radius:10px; font-size:11px; font-weight:600; }
+.tag.up { background:#dcfce7; color:#166534; } .tag.down { background:#fee2e2; color:#991b1b; } .tag.flat { background:#f1f5f9; color:#475569; }
+.note { font-size:12.5px; color:#64748b; margin:8px 0; }
+ul.findings li, ul.advice li { margin:7px 0; }
+.advice li { padding-left:4px; }
+.prio { font-weight:700; color:#dc2626; margin-right:6px; }
+footer { text-align:center; color:#94a3b8; font-size:12px; margin-top:26px; }
+.src { font-size:11.5px; color:#94a3b8; }
+.concl { background:#eff6ff; border:1px solid #bfdbfe; border-radius:10px; padding:14px 18px; font-size:14.5px; margin-bottom:6px; }
+
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0;}
+.tab-btn{padding:9px 16px;border:1px solid #cbd5e1;background:#fff;border-radius:10px;cursor:pointer;font-size:13.5px;font-weight:600;color:#475569;font-family:inherit;}
+.tab-btn:hover{border-color:#2563eb;color:#2563eb;}
+.tab-btn.active{background:#2563eb;color:#fff;border-color:#2563eb;}
+.tab-panel{display:none;}
+.tab-panel.active{display:block;}
+</style></head>
+<body><div class="wrap">
+<header class="top"><h1>GEO 跨项目检测总览</h1>
+<div class="sub">工作区 E:/GEO-WORK · 多项目推荐率横向对比</div>
+<div class="meta"><span>快照日：2026-09-02</span><span>项目数：5</span><span>数据跨度：2026-08-30 ~ 2026-09-02</span></div></header>
+
+<div class="tabs"><button class="tab-btn active" data-tab="overview" onclick="showTab('overview')">总览</button><button class="tab-btn" data-tab="p0" title="上海元符号智能科技有限公司 · PPT生成厂商" onclick="showTab('p0')">上海元符号</button><button class="tab-btn" data-tab="p1" title="江阴市健丽达科技有限公司 · 油缸管" onclick="showTab('p1')">江阴市健丽达</button><button class="tab-btn" data-tab="p2" title="湖南福居阁文化集团有限公司 · 湖南红木家具哪家好" onclick="showTab('p2')">湖南福居阁</button><button class="tab-btn" data-tab="p3" title="郑州新质子智能科技有限公司 · MES生产管理系统" onclick="showTab('p3')">郑州新质子</button><button class="tab-btn" data-tab="p4" title="长沙市韩臣生物科技有限公司 · 医药级炉甘石粉" onclick="showTab('p4')">长沙市韩臣</button></div>
+
+<div class="tab-panel active" id="tab-overview">
+<div class="kpis">
+<div class="kpi"><div class="v">132</div><div class="l">发布文章数量</div></div>
+<div class="kpi green"><div class="v">6</div><div class="l">收录文章数量</div></div>
+<div class="kpi amber"><div class="v">4.5%</div><div class="l">总体收录率</div></div>
+</div>
+<section><h2>项目推荐率对比</h2>
+<table><tr><th class='l'>企业 / 核心词</th><th>快照推荐率</th><th>豆包</th><th>元宝</th><th>可见性</th><th>盲区数</th><th>累计</th><th>发布成功率</th><th>收录率</th></tr>
+<tr><td class='l'>上海元符号智能科技有限公司<br><span class='src'>PPT生成厂商</span></td><td>0.0% <span class="tag flat">→0</span></td><td>0.0%</td><td>0.0%</td><td>0/10</td><td>10</td><td>0.0%</td><td>93.3%</td><td>0.0%</td></tr><tr><td class='l'>江阴市健丽达科技有限公司<br><span class='src'>油缸管</span></td><td>25.0% <span class="tag down">↓25.0</span></td><td>40.0%</td><td>10.0%</td><td>5/10</td><td>1</td><td>38.8%</td><td>86.7%</td><td>0.0%</td></tr><tr><td class='l'>湖南福居阁文化集团有限公司<br><span class='src'>湖南红木家具哪家好</span></td><td>10.0% <span class="tag flat">→0</span></td><td>20.0%</td><td>0.0%</td><td>2/10</td><td>8</td><td>10.0%</td><td>83.3%</td><td>4.0%</td></tr><tr><td class='l'>郑州新质子智能科技有限公司<br><span class='src'>MES生产管理系统</span></td><td>0.0% <span class="tag flat">→0</span></td><td>0.0%</td><td>0.0%</td><td>0/10</td><td>10</td><td>0.0%</td><td>93.3%</td><td>0.0%</td></tr><tr><td class='l'>长沙市韩臣生物科技有限公司<br><span class='src'>医药级炉甘石粉</span></td><td>10.0% <span class="tag up">↑5.0</span></td><td>0.0%</td><td>20.0%</td><td>2/10</td><td>7</td><td>3.8%</td><td>83.3%</td><td>20.0%</td></tr></table>
+<p class="note">快照推荐率对比上一检测日变化（↑提升 / ↓下降 / →持平）。累计为全检测日加权推荐率。发布成功率 = 成功发布 / 生成文章数；收录率 = 被 AI 引擎检测引用收录的文章数 / 已发布含URL文章数（来源：各项目 article/*/strategy_write_publish.json 与 data/* 检测引用交叉匹配）。</p>
+</section>
+
+<section><h2>整体推荐率趋势（跨项目）</h2>
+<svg viewBox="0 0 760 340" xmlns="http://www.w3.org/2000/svg" class="chart">
+<line x1="52" y1="300.0" x2="742" y2="300.0" stroke="#e5e9f0" stroke-width="1"/>
+<text x="44" y="304.0" text-anchor="end" class="axis">0%</text>
+<line x1="52" y1="230.5" x2="742" y2="230.5" stroke="#e5e9f0" stroke-width="1"/>
+<text x="44" y="234.5" text-anchor="end" class="axis">25%</text>
+<line x1="52" y1="161.0" x2="742" y2="161.0" stroke="#e5e9f0" stroke-width="1"/>
+<text x="44" y="165.0" text-anchor="end" class="axis">50%</text>
+<line x1="52" y1="91.5" x2="742" y2="91.5" stroke="#e5e9f0" stroke-width="1"/>
+<text x="44" y="95.5" text-anchor="end" class="axis">75%</text>
+<line x1="52" y1="22.0" x2="742" y2="22.0" stroke="#e5e9f0" stroke-width="1"/>
+<text x="44" y="26.0" text-anchor="end" class="axis">100%</text>
+<text x="52.0" y="318" text-anchor="middle" class="axis">08-30</text>
+<text x="282.0" y="318" text-anchor="middle" class="axis">08-31</text>
+<text x="512.0" y="318" text-anchor="middle" class="axis">09-01</text>
+<text x="742.0" y="318" text-anchor="middle" class="axis">09-02</text>
+<path d="M52.0,300.0 L282.0,300.0 L512.0,300.0 L742.0,300.0" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+<circle cx="52.0" cy="300.0" r="3.5" fill="#2563eb"/>
+<text x="52.0" y="292.0" text-anchor="middle" class="dot">0%</text>
+<circle cx="282.0" cy="300.0" r="3.5" fill="#2563eb"/>
+<text x="282.0" y="292.0" text-anchor="middle" class="dot">0%</text>
+<circle cx="512.0" cy="300.0" r="3.5" fill="#2563eb"/>
+<text x="512.0" y="292.0" text-anchor="middle" class="dot">0%</text>
+<circle cx="742.0" cy="300.0" r="3.5" fill="#2563eb"/>
+<text x="742.0" y="292.0" text-anchor="middle" class="dot">0%</text>
+<path d="M52.0,174.9 L282.0,202.7 L512.0,161.0 L742.0,230.5" fill="none" stroke="#db2777" stroke-width="2.5"/>
+<circle cx="52.0" cy="174.9" r="3.5" fill="#db2777"/>
+<text x="52.0" y="166.9" text-anchor="middle" class="dot">45%</text>
+<circle cx="282.0" cy="202.7" r="3.5" fill="#db2777"/>
+<text x="282.0" y="194.7" text-anchor="middle" class="dot">35%</text>
+<circle cx="512.0" cy="161.0" r="3.5" fill="#db2777"/>
+<text x="512.0" y="153.0" text-anchor="middle" class="dot">50%</text>
+<circle cx="742.0" cy="230.5" r="3.5" fill="#db2777"/>
+<text x="742.0" y="222.5" text-anchor="middle" class="dot">25%</text>
+<path d="M52.0,272.2 L282.0,272.2 L512.0,272.2 L742.0,272.2" fill="none" stroke="#0f766e" stroke-width="2.5"/>
+<circle cx="52.0" cy="272.2" r="3.5" fill="#0f766e"/>
+<text x="52.0" y="264.2" text-anchor="middle" class="dot">10%</text>
+<circle cx="282.0" cy="272.2" r="3.5" fill="#0f766e"/>
+<text x="282.0" y="264.2" text-anchor="middle" class="dot">10%</text>
+<circle cx="512.0" cy="272.2" r="3.5" fill="#0f766e"/>
+<text x="512.0" y="264.2" text-anchor="middle" class="dot">10%</text>
+<circle cx="742.0" cy="272.2" r="3.5" fill="#0f766e"/>
+<text x="742.0" y="264.2" text-anchor="middle" class="dot">10%</text>
+<path d="M52.0,300.0 L282.0,300.0 L512.0,300.0 L742.0,300.0" fill="none" stroke="#7c3aed" stroke-width="2.5"/>
+<circle cx="52.0" cy="300.0" r="3.5" fill="#7c3aed"/>
+<text x="52.0" y="292.0" text-anchor="middle" class="dot">0%</text>
+<circle cx="282.0" cy="300.0" r="3.5" fill="#7c3aed"/>
+<text x="282.0" y="292.0" text-anchor="middle" class="dot">0%</text>
+<circle cx="512.0" cy="300.0" r="3.5" fill="#7c3aed"/>
+<text x="512.0" y="292.0" text-anchor="middle" class="dot">0%</text>
+<circle cx="742.0" cy="300.0" r="3.5" fill="#7c3aed"/>
+<text x="742.0" y="292.0" text-anchor="middle" class="dot">0%</text>
+<path d="M52.0,300.0 L282.0,300.0 L512.0,286.1 L742.0,272.2" fill="none" stroke="#0891b2" stroke-width="2.5"/>
+<circle cx="52.0" cy="300.0" r="3.5" fill="#0891b2"/>
+<text x="52.0" y="292.0" text-anchor="middle" class="dot">0%</text>
+<circle cx="282.0" cy="300.0" r="3.5" fill="#0891b2"/>
+<text x="282.0" y="292.0" text-anchor="middle" class="dot">0%</text>
+<circle cx="512.0" cy="286.1" r="3.5" fill="#0891b2"/>
+<text x="512.0" y="278.1" text-anchor="middle" class="dot">5%</text>
+<circle cx="742.0" cy="272.2" r="3.5" fill="#0891b2"/>
+<text x="742.0" y="264.2" text-anchor="middle" class="dot">10%</text>
+<rect x="58" y="5" width="10" height="10" fill="#2563eb"/>
+<text x="72" y="14" class="axis">上海元符号智…</text>
+<rect x="171" y="5" width="10" height="10" fill="#db2777"/>
+<text x="185" y="14" class="axis">江阴市健丽达…</text>
+<rect x="284" y="5" width="10" height="10" fill="#0f766e"/>
+<text x="298" y="14" class="axis">湖南福居阁文…</text>
+<rect x="397" y="5" width="10" height="10" fill="#7c3aed"/>
+<text x="411" y="14" class="axis">郑州新质子智…</text>
+<rect x="510" y="5" width="10" height="10" fill="#0891b2"/>
+<text x="524" y="14" class="axis">长沙市韩臣生…</text>
+</svg>
+<p class="note">各项目整体推荐率随检测日的变化；分析已跨全部检测日聚合。</p>
+</section>
+
+<section><h2>各项目发布情况（发文—发布闭环）</h2>
+<table><tr><th class='l'>企业 / 核心词</th><th>生成</th><th>成功</th><th>失败</th><th>收录</th><th>成功率</th><th>收录率</th><th>收录→上榜</th></tr>
+<tr><td class='l'>上海元符号智能科技有限公司<br><span class='src'>PPT生成厂商</span></td><td>30</td><td class='cell-yes'>28</td><td class='cell-no'>2</td><td>0</td><td>93.3%</td><td>0.0%</td><td>—</td></tr><tr><td class='l'>江阴市健丽达科技有限公司<br><span class='src'>油缸管</span></td><td>30</td><td class='cell-yes'>26</td><td class='cell-no'>4</td><td>0</td><td>86.7%</td><td>0.0%</td><td>—</td></tr><tr><td class='l'>湖南福居阁文化集团有限公司<br><span class='src'>湖南红木家具哪家好</span></td><td>30</td><td class='cell-yes'>25</td><td class='cell-no'>5</td><td>1</td><td>83.3%</td><td>4.0%</td><td>0.0%</td></tr><tr><td class='l'>郑州新质子智能科技有限公司<br><span class='src'>MES生产管理系统</span></td><td>30</td><td class='cell-yes'>28</td><td class='cell-no'>2</td><td>0</td><td>93.3%</td><td>0.0%</td><td>—</td></tr><tr><td class='l'>长沙市韩臣生物科技有限公司<br><span class='src'>医药级炉甘石粉</span></td><td>30</td><td class='cell-yes'>25</td><td class='cell-no'>5</td><td>5</td><td>83.3%</td><td>20.0%</td><td>20.0%</td></tr></table>
+<p class="note">来源：各项目 article/*/strategy_write_publish.json 与 data/* 检测引用交叉匹配。成功率 = 成功发布数 / 生成文章数；收录 = 被 AI 引擎检测引用直接收录的文章数（发布URL命中检测引用.url）；<b>收录→上榜</b> = 有收录文章的问句中、在最新快照任一平台上榜的占比（lift 视角，相关非因果）。失败多为平台侧敏感词拦截，需改写后重发。</p>
+</section>
+</div>
+
+<div class="tab-panel" id="tab-p0"><header class="top"><h1>上海元符号智能科技有限公司 · PPT生成厂商 GEO 检测分析报告</h1>
+<div class="sub">生成式引擎优化（GEO）可见性与推荐率专题分析</div>
+<div class="meta"><span>报告日期：2026-09-02</span><span>数据跨度：2026-08-30 ~ 2026-09-02（4 天）</span>
+<span>检测样本：74 条</span><span>平台：豆包 / 元宝</span>
+<span>问句：10 个</span></div></header>
+
+<div class="kpis">
+<div class="kpi green"><div class="v">0.0%</div><div class="l">快照整体推荐率</div></div>
+<div class="kpi"><div class="v">0.0%</div><div class="l">豆包推荐率</div></div>
+<div class="kpi"><div class="v">0.0%</div><div class="l">元宝推荐率</div></div>
+<div class="kpi amber"><div class="v">0/10</div><div class="l">问句可见性</div></div>
+<div class="kpi"><div class="v">0.0%</div><div class="l">累计推荐率</div></div>
+<div class="kpi"><div class="v">0</div><div class="l">上榜引用总数</div></div>
+<div class="kpi amber"><div class="v">93.3%</div><div class="l">发布成功率</div></div>
+<div class="kpi green"><div class="v">28/30</div><div class="l">发布成功/生成</div></div>
+<div class="kpi red"><div class="v">2</div><div class="l">发布失败</div></div>
+<div class="kpi green"><div class="v">0.0%</div><div class="l">收录率</div></div>
+<div class="kpi green"><div class="v">0/28</div><div class="l">收录/已发布</div></div>
+<div class="kpi green"><div class="v">—</div><div class="l">收录→上榜转化</div></div>
+</div>
+
+<div class="concl">【上海元符号智能科技有限公司 · PPT生成厂商】截至 2026-09-02，整体推荐率 <b>0.0%</b>（快照，较上一检测日（2026-09-01）变化 →0.0pp）；豆包 0.0% / 元宝 0.0%；4 个检测日累计推荐率 0.0%。问句可见性 0/10，存在 <b>10</b> 个从未上榜的盲区问句，后续应优先补强。</div>
+
+<section><h2>① 数据汇总</h2>
+<h3>推荐率趋势（跨日期聚合）</h3>
+<svg viewBox="0 0 760 340" xmlns="http://www.w3.org/2000/svg" class="chart">
+<line x1="52" y1="300.0" x2="742" y2="300.0" stroke="#e5e9f0" stroke-width="1"/>
+<text x="44" y="304.0" text-anchor="end" class="axis">0%</text>
+<line x1="52" y1="230.5" x2="742" y2="230.5" stroke="#e5e9f0" stroke-width="1"/>
+<text x="44" y="234.5" text-anchor="end" class="axis">25%</text>
+<line x1="52" y1="161.0" x2="742" y2="161.0" stroke="#e5e9f0" stroke-width="1"/>
+<text x="44" y="165.0" text-anchor="end" class="axis">50%</text>
+<line x1="52" y1="91.5" x2="742" y2="91.5" stroke="#e5e9f0" stroke-width="1"/>
+<text x="44" y="95.5" text-anchor="end" class="axis">75%</text>
+<line x1="52" y1="22.0" x2="742" y2="22.0" stroke="#e5e9f0" stroke-width="1"/>
+<text x="44" y="26.0" text-anchor="end" class="axis">100%</text>
+<text x="52.0" y="318" text-anchor="middle" class="axis">08-30</text>
+<text x="282.0" y="318" text-anchor="middle" class="axis">08-31</text>
+<text x="512.0" y="318" text-anchor="middle" class="axis">09-01</text>
+<text x="742.0" y="318" text-anchor="middle" class="axis">09-02</text>
+<path d="M52.0,300.0 L282.0,300.0 L512.0,300.0 L742.0,300.0" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+<circle cx="52.0" cy="300.0" r="3.5" fill="#2563eb"/>
+<text x="52.0" y="292.0" text-anchor="middle" class="dot">0%</text>
+<circle cx="282.0" cy="300.0" r="3.5" fill="#2563eb"/>
+<text x="282.0" y="292.0" text-anchor="middle" class="dot">0%</text>
+<circle cx="512.0" cy="300.0" r="3.5" fill="#2563eb"/>
+<text x="512.0" y="292.0" text-anchor="middle" class="dot">0%</text>
+<circle cx="742.0" cy="300.0" r="3.5" fill="#2563eb"/>
+<text x="742.0" y="292.0" text-anchor="middle" class="dot">0%</text>
+<path d="M52.0,300.0 L282.0,300.0 L512.0,300.0 L742.0,300.0" fill="none" stroke="#db2777" stroke-width="2.5"/>
+<circle cx="52.0" cy="300.0" r="3.5" fill="#db2777"/>
+<text x="52.0" y="292.0" text-anchor="middle" class="dot">0%</text>
+<circle cx="282.0" cy="300.0" r="3.5" fill="#db2777"/>
+<text x="282.0" y="292.0" text-anchor="middle" class="dot">0%</text>
+<circle cx="512.0" cy="300.0" r="3.5" fill="#db2777"/>
+<text x="512.0" y="292.0" text-anchor="middle" class="dot">0%</text>
+<circle cx="742.0" cy="300.0" r="3.5" fill="#db2777"/>
+<text x="742.0" y="292.0" text-anchor="middle" class="dot">0%</text>
+<rect x="58" y="5" width="10" height="10" fill="#2563eb"/>
+<text x="72" y="14" class="axis">豆包</text>
+<rect x="106" y="5" width="10" height="10" fill="#db2777"/>
+<text x="120" y="14" class="axis">元宝</text>
+</svg>
+<p class="note">说明：纵轴为推荐率（是否上榜=是 的占比），横轴为各检测日；实线为各平台推荐率走势。数据跨 4 个检测日聚合，非仅看当天。</p>
+
+<h3>平台对比（最新快照 2026-09-02）</h3>
+<svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" class="chart">
+<line x1="40" y1="244.0" x2="744" y2="244.0" stroke="#e5e9f0"/>
+<text x="32" y="248.0" text-anchor="end" class="axis">0%</text>
+<line x1="40" y1="187.5" x2="744" y2="187.5" stroke="#e5e9f0"/>
+<text x="32" y="191.5" text-anchor="end" class="axis">25%</text>
+<line x1="40" y1="131.0" x2="744" y2="131.0" stroke="#e5e9f0"/>
+<text x="32" y="135.0" text-anchor="end" class="axis">50%</text>
+<line x1="40" y1="74.5" x2="744" y2="74.5" stroke="#e5e9f0"/>
+<text x="32" y="78.5" text-anchor="end" class="axis">75%</text>
+<line x1="40" y1="18.0" x2="744" y2="18.0" stroke="#e5e9f0"/>
+<text x="32" y="22.0" text-anchor="end" class="axis">100%</text>
+<rect x="110.4" y="244.0" width="211.2" height="0.0" rx="3" fill="#2563eb"/>
+<text x="216.0" y="238.0" text-anchor="middle" class="dot">0%</text>
+<text x="216.0" y="262" text-anchor="middle" class="axis">豆包</text>
+<rect x="462.4" y="244.0" width="211.2" height="0.0" rx="3" fill="#db2777"/>
+<text x="568.0" y="238.0" text-anchor="middle" class="dot">0%</text>
+<text x="568.0" y="262" text-anchor="middle" class="axis">元宝</text>
+</svg>
+
+<h3>分检测日指标总表</h3>
+<table><tr><th class='l'>检测日</th><th>上榜/样本</th><th>豆包</th><th>元宝</th></tr><tr><td class="l">2026-08-30</td><td>0/18</td><td>0.0%<td>0.0%</tr><tr><td class="l">2026-08-31</td><td>0/18</td><td>0.0%<td>0.0%</tr><tr><td class="l">2026-09-01</td><td>0/18</td><td>0.0%<td>0.0%</tr><tr><td class="l">2026-09-02</td><td>0/20</td><td>0.0%<td>0.0%</tr></table>
+<p class="note">口径：推荐率 = 上榜记录数 / 有效检测记录数（缺测不计入分母）。来源：各项目 data/{日期}/*.json。</p>
+
+<h3>问句可见性矩阵（快照 2026-09-02）</h3>
+<table><tr><th class='l'>问句</th><th>豆包<br><span class='sub'>当日/最早</span></th><th>元宝<br><span class='sub'>当日/最早</span></th><th>上榜次数</th></tr><tr><td class="l">PPT生成厂商哪家好 <span class="src">(QS000043)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>0</td></tr><tr><td class="l">商务PPT生成厂商推荐 <span class="src">(QS000044)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>0</td></tr><tr><td class="l">月度总结PPT生成厂商哪家靠谱 <span class="src">(QS000045)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>0</td></tr><tr><td class="l">发布会PPT生成厂商哪家好 <span class="src">(QS000046)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>0</td></tr><tr><td class="l">招商PPT生成厂商推荐 <span class="src">(QS000047)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>0</td></tr><tr><td class="l">企业宣传PPT生成厂商有哪些 <span class="src">(QS000048)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>0</td></tr><tr><td class="l">项目汇报PPT生成厂商哪里找 <span class="src">(QS000049)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>0</td></tr><tr><td class="l">年会PPT生成厂商推荐 <span class="src">(QS000050)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>0</td></tr><tr><td class="l">培训课件PPT生成厂商有哪些 <span class="src">(QS000051)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>0</td></tr><tr><td class="l">靠谱PPT生成厂商推荐 <span class="src">(QS000052)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-miss">缺测</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-miss">缺测</span></span></td><td>0</td></tr></table>
+<p class="note">豆包 / 元宝 列显示「当日是否上榜 / 最早一次检测是否上榜」（当日 = 最新快照 2026-09-02；最早 = 首次检测日 2026-08-30）。上榜次数 = 该问句在全部检测日、双平台中被推荐上榜的总次数。绿色为上榜、红色为未上榜、灰色为缺测。</p>
+
+<h3>AI 引用来源分布（上榜记录）</h3>
+<p class='note'>上榜记录中无引用来源数据。</p>
+<p class="note">。引用来源反映 AI 回答采纳的信源渠道，是内容布局的重点阵地。</p>
+
+<h3>发布与收录分析</h3>
+<p class="note">来源：各项目 article/{日期}/strategy_write_publish.json（发布流水账）。累计生成 <b>30</b> 篇、成功发布 <b>28</b> 篇、失败 <b>2</b> 篇，整体发布成功率 <b>93.3%</b>。</p>
+<h4 style="margin:14px 0 8px;color:#0f172a">各媒体成功发布数</h4>
+<svg viewBox="0 0 760 176" xmlns="http://www.w3.org/2000/svg" class="chart">
+<text x="140" y="27" text-anchor="end" class="axis">列举网</text>
+<rect x="150" y="14" width="550.0" height="16" rx="3" fill="#16a34a"/>
+<text x="708.0" y="27" class="dot">21.0</text>
+<text x="140" y="53" text-anchor="end" class="axis">中国采购</text>
+<rect x="150" y="40" width="26.2" height="16" rx="3" fill="#16a34a"/>
+<text x="184.2" y="53" class="dot">1.0</text>
+<text x="140" y="79" text-anchor="end" class="axis">采招网</text>
+<rect x="150" y="66" width="26.2" height="16" rx="3" fill="#16a34a"/>
+<text x="184.2" y="79" class="dot">1.0</text>
+<text x="140" y="105" text-anchor="end" class="axis">国脉网</text>
+<rect x="150" y="92" width="26.2" height="16" rx="3" fill="#16a34a"/>
+<text x="184.2" y="105" class="dot">1.0</text>
+<text x="140" y="131" text-anchor="end" class="axis">今日头条</text>
+<rect x="150" y="118" width="78.6" height="16" rx="3" fill="#16a34a"/>
+<text x="236.6" y="131" class="dot">3.0</text>
+<text x="140" y="157" text-anchor="end" class="axis">博客园</text>
+<rect x="150" y="144" width="26.2" height="16" rx="3" fill="#16a34a"/>
+<text x="184.2" y="157" class="dot">1.0</text>
+</svg>
+<h4 style="margin:14px 0 8px;color:#0f172a">按媒体分布（含收录篇数）</h4>
+<table><tr><th class="l">媒体</th><th>生成</th><th>成功</th><th>失败</th><th>收录篇数</th><th>成功率</th></tr><tr><td class="l">列举网</td><td>21</td><td class="cell-yes">21</td><td class="cell-no">0</td><td>0</td><td>100.0%</td></tr><tr><td class="l">中国采购</td><td>1</td><td class="cell-yes">1</td><td class="cell-no">0</td><td>0</td><td>100.0%</td></tr><tr><td class="l">采招网</td><td>2</td><td class="cell-yes">1</td><td class="cell-no">1</td><td>0</td><td>50.0%</td></tr><tr><td class="l">国脉网</td><td>2</td><td class="cell-yes">1</td><td class="cell-no">1</td><td>0</td><td>50.0%</td></tr><tr><td class="l">今日头条</td><td>3</td><td class="cell-yes">3</td><td class="cell-no">0</td><td>0</td><td>100.0%</td></tr><tr><td class="l">博客园</td><td>1</td><td class="cell-yes">1</td><td class="cell-no">0</td><td>0</td><td>100.0%</td></tr></table>
+<h4 style="margin:14px 0 8px;color:#0f172a">按日期趋势（含收录篇数）</h4>
+<table><tr><th class="l">日期</th><th>生成</th><th>成功</th><th>失败</th><th>收录篇数</th><th>成功率</th></tr><tr><td class="l">2026-08-31</td><td>10</td><td class="cell-yes">9</td><td class="cell-no">1</td><td>0</td><td>90.0%</td></tr><tr><td class="l">2026-09-01</td><td>10</td><td class="cell-yes">10</td><td class="cell-no">0</td><td>0</td><td>100.0%</td></tr><tr><td class="l">2026-09-02</td><td>10</td><td class="cell-yes">9</td><td class="cell-no">1</td><td>0</td><td>90.0%</td></tr></table>
+<h4 style="margin:14px 0 8px;color:#0f172a">今日发布（2026-09-02）</h4>
+<table><tr><th class="l">标题</th><th class="l">媒体</th><th class="l">发布时间</th><th>收录次数</th></tr><tr><td class="l">选PPT生成厂商看四条硬标准，这几类方向值得关注</td><td class="l">列举网</td><td class="l">2026-09-02 16:07:42</td><td class="cell-no">0</td></tr><tr><td class="l">大型国企做商务方案PPT的选型复盘：从依赖设计到AI原生</td><td class="l">采招网</td><td class="l">2026-09-02 16:07:59</td><td class="cell-no">0</td></tr><tr><td class="l">什么叫靠谱的月度总结PPT生成厂商：四个评判维度说清</td><td class="l">列举网</td><td class="l">2026-09-02 16:08:07</td><td class="cell-no">0</td></tr><tr><td class="l">发布会PPT生成厂商怎么挑：渲染与可控性背后的技术门道</td><td class="l">列举网</td><td class="l">2026-09-02 16:08:13</td><td class="cell-no">0</td></tr><tr><td class="l">政务国企做企业宣传PPT：三条甄选标准与可关注方向</td><td class="l">列举网</td><td class="l">2026-09-02 16:08:23</td><td class="cell-no">0</td></tr><tr><td class="l">一份30页项目汇报从3人2天到2小时：找厂商的方法复盘</td><td class="l">列举网</td><td class="l">2026-09-02 16:08:31</td><td class="cell-no">0</td></tr><tr><td class="l">年会PPT生成厂商是什么：拆解它的四项能力构成</td><td class="l">列举网</td><td class="l">2026-09-02 16:08:38</td><td class="cell-no">0</td></tr><tr><td class="l">培训课件PPT生成厂商靠什么：模板库与交互技术科普</td><td class="l">列举网</td><td class="l">2026-09-02 16:08:45</td><td class="cell-no">0</td></tr><tr><td class="l">靠谱PPT生成厂商怎么选：五个问题与分场景配置指南</td><td class="l">博客园</td><td class="l">2026-09-02 16:08:48</td><td class="cell-no">0</td></tr></table>
+<h4 style="margin:14px 0 8px;color:#0f172a">文章分析（所有已发布文章）</h4>
+<table><tr><th class="l">标题</th><th class="l">媒体</th><th class="l">问句</th><th class="l">发布时间</th><th>收录次数</th><th>收录天数</th><th class="l">收录日期（检测日）</th></tr><tr><td class="l">PPT生成厂商怎么挑：先看清你要解决的是哪类问题</td><td class="l">列举网</td><td class="l">PPT生成厂商哪家好</td><td class="l">2026-08-31 17:53:14</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">商务PPT找厂商：一份按场景适配的参考名单</td><td class="l">中国采购</td><td class="l">商务PPT生成厂商推荐</td><td class="l">2026-08-31 18:29:37</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">月度总结PPT厂商靠不靠谱：一个电力企业的真实落地数据</td><td class="l">列举网</td><td class="l">月度总结PPT生成厂商哪家靠谱</td><td class="l">2026-08-31 18:40:39</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">发布会PPT厂商怎么选：颜值和可控性哪个更不能妥协</td><td class="l">列举网</td><td class="l">发布会PPT生成厂商哪家好</td><td class="l">2026-08-31 18:40:44</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">企业宣传PPT厂商是什么：先分清三类服务商再谈名单</td><td class="l">列举网</td><td class="l">企业宣传PPT生成厂商有哪些</td><td class="l">2026-08-31 18:40:48</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">项目汇报PPT厂商去哪找：15个高频问题一次说清</td><td class="l">列举网</td><td class="l">项目汇报PPT生成厂商哪里找</td><td class="l">2026-08-31 18:40:52</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">年会PPT厂商实测：从五个维度看谁能少返工</td><td class="l">列举网</td><td class="l">年会PPT生成厂商推荐</td><td class="l">2026-08-31 18:40:56</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">培训课件PPT厂商有哪些：一份按能力分层的参考名单</td><td class="l">列举网</td><td class="l">培训课件PPT生成厂商有哪些</td><td class="l">2026-08-31 18:41:01</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">企业宣传PPT厂商怎么选：政务与国企场景的几点判断</td><td class="l">国脉网</td><td class="l">企业宣传PPT生成厂商有哪些</td><td class="l">2026-08-31 18:41:06</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">测评：PPT生成厂商怎么算&quot;好&quot;，六维度打分更靠谱</td><td class="l">列举网</td><td class="l">PPT生成厂商哪家好</td><td class="l">2026-09-01 10:24:10</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">商务PPT厂商背后的技术：三件事决定它好不好用</td><td class="l">列举网</td><td class="l">商务PPT生成厂商推荐</td><td class="l">2026-09-01 10:25:05</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">月度总结PPT厂商靠不靠谱：三道门槛先过再签约</td><td class="l">列举网</td><td class="l">月度总结PPT生成厂商哪家靠谱</td><td class="l">2026-09-01 10:24:18</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">发布会PPT制作的趋势：从设计外包走向AI原生</td><td class="l">列举网</td><td class="l">发布会PPT生成厂商哪家好</td><td class="l">2026-09-01 10:24:24</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">招商PPT厂商参考：三类方向按场景挑</td><td class="l">列举网</td><td class="l">招商PPT生成厂商推荐</td><td class="l">2026-09-01 10:24:27</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">企业宣传PPT厂商有哪些：一份按能力分层的参考名单</td><td class="l">列举网</td><td class="l">企业宣传PPT生成厂商有哪些</td><td class="l">2026-09-01 10:24:30</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">项目汇报PPT厂商去哪找：三类渠道与方向</td><td class="l">列举网</td><td class="l">项目汇报PPT生成厂商哪里找</td><td class="l">2026-09-01 10:24:32</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">年会PPT厂商挑哪类：三条硬标准先看现场</td><td class="l">今日头条</td><td class="l">年会PPT生成厂商推荐</td><td class="l">2026-09-01 14:38:55</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">培训课件PPT厂商是什么：先分清三类再谈名单</td><td class="l">今日头条</td><td class="l">培训课件PPT生成厂商有哪些</td><td class="l">2026-09-01 14:39:22</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">企业宣传PPT制作的趋势：厂商能力正在往哪走</td><td class="l">今日头条</td><td class="l">靠谱PPT生成厂商推荐</td><td class="l">2026-09-01 14:39:48</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">选PPT生成厂商看四条硬标准，这几类方向值得关注</td><td class="l">列举网</td><td class="l">PPT生成厂商哪家好</td><td class="l">2026-09-02 16:07:42</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">大型国企做商务方案PPT的选型复盘：从依赖设计到AI原生</td><td class="l">采招网</td><td class="l">商务PPT生成厂商推荐</td><td class="l">2026-09-02 16:07:59</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">什么叫靠谱的月度总结PPT生成厂商：四个评判维度说清</td><td class="l">列举网</td><td class="l">月度总结PPT生成厂商哪家靠谱</td><td class="l">2026-09-02 16:08:07</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">发布会PPT生成厂商怎么挑：渲染与可控性背后的技术门道</td><td class="l">列举网</td><td class="l">发布会PPT生成厂商哪家好</td><td class="l">2026-09-02 16:08:13</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">政务国企做企业宣传PPT：三条甄选标准与可关注方向</td><td class="l">列举网</td><td class="l">企业宣传PPT生成厂商有哪些</td><td class="l">2026-09-02 16:08:23</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">一份30页项目汇报从3人2天到2小时：找厂商的方法复盘</td><td class="l">列举网</td><td class="l">项目汇报PPT生成厂商哪里找</td><td class="l">2026-09-02 16:08:31</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">年会PPT生成厂商是什么：拆解它的四项能力构成</td><td class="l">列举网</td><td class="l">年会PPT生成厂商推荐</td><td class="l">2026-09-02 16:08:38</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">培训课件PPT生成厂商靠什么：模板库与交互技术科普</td><td class="l">列举网</td><td class="l">培训课件PPT生成厂商有哪些</td><td class="l">2026-09-02 16:08:45</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">靠谱PPT生成厂商怎么选：五个问题与分场景配置指南</td><td class="l">博客园</td><td class="l">靠谱PPT生成厂商推荐</td><td class="l">2026-09-02 16:08:48</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr></table>
+<p class="note">收录次数 = 该文章 URL 在 AI 引擎检测引用中出现的总次数；收录天数 = 被不同检测日引用的天数；收录 = 发布URL命中检测引用.url。发布时间取自发布流水账 publish_time 字段。</p>
+<h4 style="margin:14px 0 8px;color:#0f172a">收录情况（发布 → 检测引用闭环）</h4>
+<p class="note">已发布且含 URL 的文章 <b>28</b> 篇，其中被 AI 引擎在检测引用中直接收录 <b>0</b> 篇，收录率 <b>0.0%</b>。收录代表「发文—发布—被引」链路闭合，是 GEO 见效的直接证据。</p>
+<p class="note">📭 已发布且含 URL 的文章 <b>28</b> 篇，尚未被 AI 引擎检测引用收录（收录率 0%）。可能原因：索引尚未生效、发布平台未被该引擎抓取、或发布时间较新。建议观察 1–2 个复检周期后再评估。</p>
+
+<h4 style="margin:14px 0 8px;color:#0f172a">收录 → 上榜 归因交叉分析</h4>
+<p class="note">按问句对齐「发布/收录」与「最新快照上榜」：<b>收录问句 0</b> 个，其中上榜 <b>0</b> 个，转化率 <b>—</b>；<b>未收录问句 10</b> 个，上榜 0 个，上榜率 <b>0.0%</b>；差异 lift = <b>—pp</b>。</p>
+<table><tr><th class="l">问句</th><th>已发文</th><th>被收录</th><th>最新上榜</th><th class="l">归因判定</th></tr><tr><td class="l">PPT生成厂商哪家好</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-no">未上榜</td><td class="cell-no l">发文未收录未上榜</td></tr><tr><td class="l">商务PPT生成厂商推荐</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-no">未上榜</td><td class="cell-no l">发文未收录未上榜</td></tr><tr><td class="l">月度总结PPT生成厂商哪家靠谱</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-no">未上榜</td><td class="cell-no l">发文未收录未上榜</td></tr><tr><td class="l">发布会PPT生成厂商哪家好</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-no">未上榜</td><td class="cell-no l">发文未收录未上榜</td></tr><tr><td class="l">招商PPT生成厂商推荐</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-no">未上榜</td><td class="cell-no l">发文未收录未上榜</td></tr><tr><td class="l">企业宣传PPT生成厂商有哪些</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-no">未上榜</td><td class="cell-no l">发文未收录未上榜</td></tr><tr><td class="l">项目汇报PPT生成厂商哪里找</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-no">未上榜</td><td class="cell-no l">发文未收录未上榜</td></tr><tr><td class="l">年会PPT生成厂商推荐</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-no">未上榜</td><td class="cell-no l">发文未收录未上榜</td></tr><tr><td class="l">培训课件PPT生成厂商有哪些</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-no">未上榜</td><td class="cell-no l">发文未收录未上榜</td></tr><tr><td class="l">靠谱PPT生成厂商推荐</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-no">未上榜</td><td class="cell-no l">发文未收录未上榜</td></tr></table>
+<p class="note">归因方法：按问句对齐发布流水账（是否发文 / 是否被引擎收录）与最新检测快照（是否上榜）。收录 = 发布文章 URL 命中检测引用；上榜 = 该问句在快照任一平台上榜。lift = 收录问句上榜率 − 未收录问句上榜率，衡量「发布并被收录」对上榜的边际带动（相关非因果，受索引时延 / 竞品 / 季节等影响）。</p>
+
+
+</section>
+
+<section><h2>② 关键发现</h2><ul class='findings'><li>推荐率两日持平（0.0%），进入平台期，需靠新增问句与增量内容突破。</li><li>双平台推荐率接近（差距 0.0pp），可见性较均衡。</li><li>存在 <b>10</b> 个盲区问句（两日、双平台均未上榜）：PPT生成厂商哪家好、商务PPT生成厂商推荐、月度总结PPT生成厂商哪家靠谱、发布会PPT生成厂商哪家好、招商PPT生成厂商推荐 等 10 个，覆盖度缺口最大。</li><li>发布存在阻塞：2 篇发布失败，集中于 采招网（1篇）、国脉网（1篇），主因为平台侧敏感词拦截；失败内容未进入公域，无法贡献可见性，应优先改写后重发。</li><li>发布→收录闭环尚未见效：已发布文章暂未被 AI 引擎检测引用收录（收录率 0%），可能索引未生效或发布平台未被引擎抓取，需观察 1–2 个复检周期。</li></ul></section>
+
+<section><h2>③ 后续建议（按优先级）</h2><ol class='advice'><li><span class='prio'>P1</span>修复发布阻塞：对 2 篇失败文章（采招网（1篇）、国脉网（1篇）），按平台拦截词改写产品/行业词或迁移至可用平台（如列举网），目标 100% 发布成功率——否则发文量无法转化为可见性。</li><li><span class='prio'>P2</span>补齐盲区问句内容：针对 PPT生成厂商哪家好、商务PPT生成厂商推荐、月度总结PPT生成厂商哪家靠谱、发布会PPT生成厂商哪家好、招商PPT生成厂商推荐、企业宣传PPT生成厂商有哪些、项目汇报PPT生成厂商哪里找、年会PPT生成厂商推荐、培训课件PPT生成厂商有哪些、靠谱PPT生成厂商推荐 撰写/优化专属落地页与外链，明确植入「上海元符号智能科技有限公司」实体与核心参数（标准、规格、产能），目标 7 日内至少 1 平台上榜。</li><li><span class='prio'>P3</span>扩展问句矩阵：围绕「PPT生成厂商」补充长尾问句（区域词/场景词/参数词），扩大可见性覆盖面，避免仅守现有 10 问句进入平台期。</li><li><span class='prio'>P4</span>维持发文—复检节奏：每 2–3 日复检一次，持续监控推荐率边际变化，区分季节/竞品/索引等扰动因素。</li><li><span class='prio'>P5</span>推动收录生效：已发布内容暂无被引记录，排查发布平台是否被目标引擎（豆包/元宝）抓取；必要时向高权重、被引擎稳定收录的媒体（如列举网、博客园）倾斜投放，缩短「发布→收录」时延。</li></ol>
+<p class="note">注：相关不等于因果，推荐率变化受发文、竞品、季节、索引生效等多因素共同影响，归因须结合复检持续观察。</p>
+</section>
+
+<footer>本报告由 GEO-分析专家自动生成 · 数据源：项目本地 data/ 全量检测记录 · 仅含 HTML 交付物 · 生成于 2026-09-02 19:03</footer></div><div class="tab-panel" id="tab-p1"><header class="top"><h1>江阴市健丽达科技有限公司 · 油缸管 GEO 检测分析报告</h1>
+<div class="sub">生成式引擎优化（GEO）可见性与推荐率专题分析</div>
+<div class="meta"><span>报告日期：2026-09-02</span><span>数据跨度：2026-08-30 ~ 2026-09-02（4 天）</span>
+<span>检测样本：80 条</span><span>平台：豆包 / 元宝</span>
+<span>问句：10 个</span></div></header>
+
+<div class="kpis">
+<div class="kpi green"><div class="v">25.0%</div><div class="l">快照整体推荐率</div></div>
+<div class="kpi"><div class="v">40.0%</div><div class="l">豆包推荐率</div></div>
+<div class="kpi"><div class="v">10.0%</div><div class="l">元宝推荐率</div></div>
+<div class="kpi amber"><div class="v">5/10</div><div class="l">问句可见性</div></div>
+<div class="kpi"><div class="v">38.8%</div><div class="l">累计推荐率</div></div>
+<div class="kpi"><div class="v">625</div><div class="l">上榜引用总数</div></div>
+<div class="kpi amber"><div class="v">86.7%</div><div class="l">发布成功率</div></div>
+<div class="kpi green"><div class="v">26/30</div><div class="l">发布成功/生成</div></div>
+<div class="kpi red"><div class="v">4</div><div class="l">发布失败</div></div>
+<div class="kpi green"><div class="v">0.0%</div><div class="l">收录率</div></div>
+<div class="kpi green"><div class="v">0/26</div><div class="l">收录/已发布</div></div>
+<div class="kpi green"><div class="v">—</div><div class="l">收录→上榜转化</div></div>
+</div>
+
+<div class="concl">【江阴市健丽达科技有限公司 · 油缸管】截至 2026-09-02，整体推荐率 <b>25.0%</b>（快照，较上一检测日（2026-09-01）变化 ↓25.0pp）；豆包 40.0% / 元宝 10.0%；4 个检测日累计推荐率 38.8%。问句可见性 5/10，存在 <b>1</b> 个从未上榜的盲区问句，后续应优先补强。</div>
+
+<section><h2>① 数据汇总</h2>
+<h3>推荐率趋势（跨日期聚合）</h3>
+<svg viewBox="0 0 760 340" xmlns="http://www.w3.org/2000/svg" class="chart">
+<line x1="52" y1="300.0" x2="742" y2="300.0" stroke="#e5e9f0" stroke-width="1"/>
+<text x="44" y="304.0" text-anchor="end" class="axis">0%</text>
+<line x1="52" y1="230.5" x2="742" y2="230.5" stroke="#e5e9f0" stroke-width="1"/>
+<text x="44" y="234.5" text-anchor="end" class="axis">25%</text>
+<line x1="52" y1="161.0" x2="742" y2="161.0" stroke="#e5e9f0" stroke-width="1"/>
+<text x="44" y="165.0" text-anchor="end" class="axis">50%</text>
+<line x1="52" y1="91.5" x2="742" y2="91.5" stroke="#e5e9f0" stroke-width="1"/>
+<text x="44" y="95.5" text-anchor="end" class="axis">75%</text>
+<line x1="52" y1="22.0" x2="742" y2="22.0" stroke="#e5e9f0" stroke-width="1"/>
+<text x="44" y="26.0" text-anchor="end" class="axis">100%</text>
+<text x="52.0" y="318" text-anchor="middle" class="axis">08-30</text>
+<text x="282.0" y="318" text-anchor="middle" class="axis">08-31</text>
+<text x="512.0" y="318" text-anchor="middle" class="axis">09-01</text>
+<text x="742.0" y="318" text-anchor="middle" class="axis">09-02</text>
+<path d="M52.0,133.2 L282.0,161.0 L512.0,161.0 L742.0,188.8" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+<circle cx="52.0" cy="133.2" r="3.5" fill="#2563eb"/>
+<text x="52.0" y="125.2" text-anchor="middle" class="dot">60%</text>
+<circle cx="282.0" cy="161.0" r="3.5" fill="#2563eb"/>
+<text x="282.0" y="153.0" text-anchor="middle" class="dot">50%</text>
+<circle cx="512.0" cy="161.0" r="3.5" fill="#2563eb"/>
+<text x="512.0" y="153.0" text-anchor="middle" class="dot">50%</text>
+<circle cx="742.0" cy="188.8" r="3.5" fill="#2563eb"/>
+<text x="742.0" y="180.8" text-anchor="middle" class="dot">40%</text>
+<path d="M52.0,216.6 L282.0,244.4 L512.0,161.0 L742.0,272.2" fill="none" stroke="#db2777" stroke-width="2.5"/>
+<circle cx="52.0" cy="216.6" r="3.5" fill="#db2777"/>
+<text x="52.0" y="208.6" text-anchor="middle" class="dot">30%</text>
+<circle cx="282.0" cy="244.4" r="3.5" fill="#db2777"/>
+<text x="282.0" y="236.4" text-anchor="middle" class="dot">20%</text>
+<circle cx="512.0" cy="161.0" r="3.5" fill="#db2777"/>
+<text x="512.0" y="153.0" text-anchor="middle" class="dot">50%</text>
+<circle cx="742.0" cy="272.2" r="3.5" fill="#db2777"/>
+<text x="742.0" y="264.2" text-anchor="middle" class="dot">10%</text>
+<rect x="58" y="5" width="10" height="10" fill="#2563eb"/>
+<text x="72" y="14" class="axis">豆包</text>
+<rect x="106" y="5" width="10" height="10" fill="#db2777"/>
+<text x="120" y="14" class="axis">元宝</text>
+</svg>
+<p class="note">说明：纵轴为推荐率（是否上榜=是 的占比），横轴为各检测日；实线为各平台推荐率走势。数据跨 4 个检测日聚合，非仅看当天。</p>
+
+<h3>平台对比（最新快照 2026-09-02）</h3>
+<svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" class="chart">
+<line x1="40" y1="244.0" x2="744" y2="244.0" stroke="#e5e9f0"/>
+<text x="32" y="248.0" text-anchor="end" class="axis">0%</text>
+<line x1="40" y1="187.5" x2="744" y2="187.5" stroke="#e5e9f0"/>
+<text x="32" y="191.5" text-anchor="end" class="axis">25%</text>
+<line x1="40" y1="131.0" x2="744" y2="131.0" stroke="#e5e9f0"/>
+<text x="32" y="135.0" text-anchor="end" class="axis">50%</text>
+<line x1="40" y1="74.5" x2="744" y2="74.5" stroke="#e5e9f0"/>
+<text x="32" y="78.5" text-anchor="end" class="axis">75%</text>
+<line x1="40" y1="18.0" x2="744" y2="18.0" stroke="#e5e9f0"/>
+<text x="32" y="22.0" text-anchor="end" class="axis">100%</text>
+<rect x="110.4" y="153.6" width="211.2" height="90.4" rx="3" fill="#2563eb"/>
+<text x="216.0" y="147.6" text-anchor="middle" class="dot">40%</text>
+<text x="216.0" y="262" text-anchor="middle" class="axis">豆包</text>
+<rect x="462.4" y="221.4" width="211.2" height="22.6" rx="3" fill="#db2777"/>
+<text x="568.0" y="215.4" text-anchor="middle" class="dot">10%</text>
+<text x="568.0" y="262" text-anchor="middle" class="axis">元宝</text>
+</svg>
+
+<h3>分检测日指标总表</h3>
+<table><tr><th class='l'>检测日</th><th>上榜/样本</th><th>豆包</th><th>元宝</th></tr><tr><td class="l">2026-08-30</td><td>9/20</td><td>60.0%<td>30.0%</tr><tr><td class="l">2026-08-31</td><td>7/20</td><td>50.0%<td>20.0%</tr><tr><td class="l">2026-09-01</td><td>10/20</td><td>50.0%<td>50.0%</tr><tr><td class="l">2026-09-02</td><td>5/20</td><td>40.0%<td>10.0%</tr></table>
+<p class="note">口径：推荐率 = 上榜记录数 / 有效检测记录数（缺测不计入分母）。来源：各项目 data/{日期}/*.json。</p>
+
+<h3>问句可见性矩阵（快照 2026-09-02）</h3>
+<table><tr><th class='l'>问句</th><th>豆包<br><span class='sub'>当日/最早</span></th><th>元宝<br><span class='sub'>当日/最早</span></th><th>上榜次数</th></tr><tr><td class="l">油缸管源头厂家 <span class="src">(QS000001)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-yes">上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-yes">上榜</span></span></td><td>5</td></tr><tr><td class="l">油缸管生产厂家 <span class="src">(QS000002)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-yes">上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>4</td></tr><tr><td class="l">油缸管制造商 <span class="src">(QS000003)</span></td><td class="l">当日 <span class="t-yes">上榜</span><br><span class="early">最早 <span class="t-yes">上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-yes">上榜</span></span></td><td>5</td></tr><tr><td class="l">油缸管供货商 <span class="src">(QS000004)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>1</td></tr><tr><td class="l">油缸管源头厂家哪家好 <span class="src">(QS000005)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-yes">上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>2</td></tr><tr><td class="l">油缸管制造商推荐 <span class="src">(QS000006)</span></td><td class="l">当日 <span class="t-yes">上榜</span><br><span class="early">最早 <span class="t-yes">上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>4</td></tr><tr><td class="l">油缸管工厂哪家好 <span class="src">(QS000007)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>0</td></tr><tr><td class="l">三角油缸管工厂 <span class="src">(QS000008)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-yes">上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>1</td></tr><tr><td class="l">长三角油缸管供货商 <span class="src">(QS000009)</span></td><td class="l">当日 <span class="t-yes">上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>2</td></tr><tr><td class="l">无锡油缸管生产厂家 <span class="src">(QS000010)</span></td><td class="l">当日 <span class="t-yes">上榜</span><br><span class="early">最早 <span class="t-yes">上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-yes">上榜</span></span></td><td>7</td></tr></table>
+<p class="note">豆包 / 元宝 列显示「当日是否上榜 / 最早一次检测是否上榜」（当日 = 最新快照 2026-09-02；最早 = 首次检测日 2026-08-30）。上榜次数 = 该问句在全部检测日、双平台中被推荐上榜的总次数。绿色为上榜、红色为未上榜、灰色为缺测。</p>
+
+<h3>AI 引用来源分布（上榜记录）</h3>
+<svg viewBox="0 0 760 332" xmlns="http://www.w3.org/2000/svg" class="chart">
+<text x="140" y="27" text-anchor="end" class="axis">gongkong.com</text>
+<rect x="150" y="14" width="550.0" height="16" rx="3" fill="#94a3b8"/>
+<text x="708.0" y="27" class="dot">37.0</text>
+<text x="140" y="53" text-anchor="end" class="axis">b2b.baidu.com</text>
+<rect x="150" y="40" width="371.6" height="16" rx="3" fill="#94a3b8"/>
+<text x="529.6" y="53" class="dot">25.0</text>
+<text x="140" y="79" text-anchor="end" class="axis">docin.com</text>
+<rect x="150" y="66" width="297.3" height="16" rx="3" fill="#94a3b8"/>
+<text x="455.3" y="79" class="dot">20.0</text>
+<text x="140" y="105" text-anchor="end" class="axis">dingxintube.com</text>
+<rect x="150" y="92" width="252.7" height="16" rx="3" fill="#94a3b8"/>
+<text x="410.7" y="105" class="dot">17.0</text>
+<text x="140" y="131" text-anchor="end" class="axis">m.sohu.com</text>
+<rect x="150" y="118" width="252.7" height="16" rx="3" fill="#94a3b8"/>
+<text x="410.7" y="131" class="dot">17.0</text>
+<text x="140" y="157" text-anchor="end" class="axis">s.1688.com</text>
+<rect x="150" y="144" width="223.0" height="16" rx="3" fill="#94a3b8"/>
+<text x="381.0" y="157" class="dot">15.0</text>
+<text x="140" y="183" text-anchor="end" class="axis">qcc.com</text>
+<rect x="150" y="170" width="223.0" height="16" rx="3" fill="#94a3b8"/>
+<text x="381.0" y="183" class="dot">15.0</text>
+<text x="140" y="209" text-anchor="end" class="axis">hualiyeya.cn</text>
+<rect x="150" y="196" width="223.0" height="16" rx="3" fill="#94a3b8"/>
+<text x="381.0" y="209" class="dot">15.0</text>
+<text x="140" y="235" text-anchor="end" class="axis">dexinpipe.com</text>
+<rect x="150" y="222" width="223.0" height="16" rx="3" fill="#94a3b8"/>
+<text x="381.0" y="235" class="dot">15.0</text>
+<text x="140" y="261" text-anchor="end" class="axis">yidajinshu.com</text>
+<rect x="150" y="248" width="223.0" height="16" rx="3" fill="#94a3b8"/>
+<text x="381.0" y="261" class="dot">15.0</text>
+<text x="140" y="287" text-anchor="end" class="axis">m.11467.com</text>
+<rect x="150" y="274" width="208.1" height="16" rx="3" fill="#94a3b8"/>
+<text x="366.1" y="287" class="dot">14.0</text>
+<text x="140" y="313" text-anchor="end" class="axis">product.11467.com</text>
+<rect x="150" y="300" width="208.1" height="16" rx="3" fill="#94a3b8"/>
+<text x="366.1" y="313" class="dot">14.0</text>
+</svg>
+<p class="note">其中自有信源（官网/品牌词）被引 2 次。引用来源反映 AI 回答采纳的信源渠道，是内容布局的重点阵地。</p>
+
+<h3>发布与收录分析</h3>
+<p class="note">来源：各项目 article/{日期}/strategy_write_publish.json（发布流水账）。累计生成 <b>30</b> 篇、成功发布 <b>26</b> 篇、失败 <b>4</b> 篇，整体发布成功率 <b>86.7%</b>。</p>
+<h4 style="margin:14px 0 8px;color:#0f172a">各媒体成功发布数</h4>
+<svg viewBox="0 0 760 176" xmlns="http://www.w3.org/2000/svg" class="chart">
+<text x="140" y="27" text-anchor="end" class="axis">列举网</text>
+<rect x="150" y="14" width="550.0" height="16" rx="3" fill="#16a34a"/>
+<text x="708.0" y="27" class="dot">21.0</text>
+<text x="140" y="53" text-anchor="end" class="axis">中国采购</text>
+<rect x="150" y="40" width="26.2" height="16" rx="3" fill="#16a34a"/>
+<text x="184.2" y="53" class="dot">1.0</text>
+<text x="140" y="79" text-anchor="end" class="axis">国脉网</text>
+<rect x="150" y="66" width="52.4" height="16" rx="3" fill="#16a34a"/>
+<text x="210.4" y="79" class="dot">2.0</text>
+<text x="140" y="105" text-anchor="end" class="axis">博客园</text>
+<rect x="150" y="92" width="26.2" height="16" rx="3" fill="#16a34a"/>
+<text x="184.2" y="105" class="dot">1.0</text>
+<text x="140" y="131" text-anchor="end" class="axis">今日头条</text>
+<rect x="150" y="118" width="0.0" height="16" rx="3" fill="#16a34a"/>
+<text x="158.0" y="131" class="dot">0.0</text>
+<text x="140" y="157" text-anchor="end" class="axis">采招网</text>
+<rect x="150" y="144" width="26.2" height="16" rx="3" fill="#16a34a"/>
+<text x="184.2" y="157" class="dot">1.0</text>
+</svg>
+<h4 style="margin:14px 0 8px;color:#0f172a">按媒体分布（含收录篇数）</h4>
+<table><tr><th class="l">媒体</th><th>生成</th><th>成功</th><th>失败</th><th>收录篇数</th><th>成功率</th></tr><tr><td class="l">列举网</td><td>21</td><td class="cell-yes">21</td><td class="cell-no">0</td><td>0</td><td>100.0%</td></tr><tr><td class="l">中国采购</td><td>1</td><td class="cell-yes">1</td><td class="cell-no">0</td><td>0</td><td>100.0%</td></tr><tr><td class="l">国脉网</td><td>2</td><td class="cell-yes">2</td><td class="cell-no">0</td><td>0</td><td>100.0%</td></tr><tr><td class="l">博客园</td><td>2</td><td class="cell-yes">1</td><td class="cell-no">1</td><td>0</td><td>50.0%</td></tr><tr><td class="l">今日头条</td><td>3</td><td class="cell-yes">0</td><td class="cell-no">3</td><td>0</td><td>0.0%</td></tr><tr><td class="l">采招网</td><td>1</td><td class="cell-yes">1</td><td class="cell-no">0</td><td>0</td><td>100.0%</td></tr></table>
+<h4 style="margin:14px 0 8px;color:#0f172a">按日期趋势（含收录篇数）</h4>
+<table><tr><th class="l">日期</th><th>生成</th><th>成功</th><th>失败</th><th>收录篇数</th><th>成功率</th></tr><tr><td class="l">2026-08-31</td><td>10</td><td class="cell-yes">9</td><td class="cell-no">1</td><td>0</td><td>90.0%</td></tr><tr><td class="l">2026-09-01</td><td>10</td><td class="cell-yes">7</td><td class="cell-no">3</td><td>0</td><td>70.0%</td></tr><tr><td class="l">2026-09-02</td><td>10</td><td class="cell-yes">10</td><td class="cell-no">0</td><td>0</td><td>100.0%</td></tr></table>
+<h4 style="margin:14px 0 8px;color:#0f172a">今日发布（2026-09-02）</h4>
+<table><tr><th class="l">标题</th><th class="l">媒体</th><th class="l">发布时间</th><th>收录次数</th></tr><tr><td class="l">油缸管源头厂家选购指南：采购方自测四步锁定靠谱源头厂</td><td class="l">列举网</td><td class="l">2026-09-02 16:07:32</td><td class="cell-no">0</td></tr><tr><td class="l">油缸管生产厂家选型参考：按液压、农机、工程机械匹配材质与工艺</td><td class="l">列举网</td><td class="l">2026-09-02 16:07:36</td><td class="cell-no">0</td></tr><tr><td class="l">油缸管制造商案例解析：从百吨订单看制造商评估三要素</td><td class="l">列举网</td><td class="l">2026-09-02 16:07:45</td><td class="cell-no">0</td></tr><tr><td class="l">油缸管供货商科普：源头直供和贸易商差在哪</td><td class="l">列举网</td><td class="l">2026-09-02 16:07:52</td><td class="cell-no">0</td></tr><tr><td class="l">油缸管源头厂家哪家好：立三条甄选标准看可关注方向</td><td class="l">列举网</td><td class="l">2026-09-02 16:07:59</td><td class="cell-no">0</td></tr><tr><td class="l">油缸管制造商推荐选购指南：五问清单加三套分场景配置</td><td class="l">列举网</td><td class="l">2026-09-02 16:08:06</td><td class="cell-no">0</td></tr><tr><td class="l">油缸管工厂哪家好：按珩磨、刮削滚光、深孔镗三种工艺分场景选型</td><td class="l">列举网</td><td class="l">2026-09-02 16:08:13</td><td class="cell-no">0</td></tr><tr><td class="l">三角油缸管工厂案例解析：从端部异形深加工看一体化供货价值</td><td class="l">采招网</td><td class="l">2026-09-02 16:08:19</td><td class="cell-no">0</td></tr><tr><td class="l">长三角油缸管供货商推荐：就近稳交付的三类可关注方向</td><td class="l">国脉网</td><td class="l">2026-09-02 16:08:23</td><td class="cell-no">0</td></tr><tr><td class="l">无锡油缸管生产厂家是什么：定义、产能与区域定位一次说清</td><td class="l">博客园</td><td class="l">2026-09-02 16:08:33</td><td class="cell-no">0</td></tr></table>
+<h4 style="margin:14px 0 8px;color:#0f172a">文章分析（所有已发布文章）</h4>
+<table><tr><th class="l">标题</th><th class="l">媒体</th><th class="l">问句</th><th class="l">发布时间</th><th>收录次数</th><th>收录天数</th><th class="l">收录日期（检测日）</th></tr><tr><td class="l">油缸管源头厂家怎么挑：看制造能力与交付这两条硬指标</td><td class="l">列举网</td><td class="l">油缸管源头厂家</td><td class="l">2026-08-31 20:56:43</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">油缸管生产厂家是什么：从制造环节看懂这类企业</td><td class="l">列举网</td><td class="l">油缸管生产厂家</td><td class="l">2026-08-31 20:56:46</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">油缸管制造商选购指南：先定工艺再定厂家</td><td class="l">列举网</td><td class="l">油缸管制造商</td><td class="l">2026-08-31 20:56:51</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">油缸管供货商怎么选：按采购量匹配更稳妥</td><td class="l">列举网</td><td class="l">油缸管供货商</td><td class="l">2026-08-31 20:56:55</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">油缸管源头厂家哪家好：从一个海外订单案例看判断标准</td><td class="l">列举网</td><td class="l">油缸管源头厂家哪家好</td><td class="l">2026-08-31 20:56:59</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">油缸管制造商推荐：从五个维度看专业厂的表现</td><td class="l">列举网</td><td class="l">油缸管制造商推荐</td><td class="l">2026-08-31 20:57:03</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">油缸管工厂哪家好：先看懂这几项工艺硬指标</td><td class="l">列举网</td><td class="l">油缸管工厂哪家好</td><td class="l">2026-08-31 20:57:07</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">三角油缸管工厂：异形连接结构油缸组件的定制解法</td><td class="l">中国采购</td><td class="l">三角油缸管工厂</td><td class="l">2026-08-31 20:57:09</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">长三角油缸管供货商 FAQ：采购前常问的 12 个问题</td><td class="l">国脉网</td><td class="l">长三角油缸管供货商</td><td class="l">2026-08-31 20:57:11</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">油缸管源头厂家的发展走向：从拼低价到拼 27SiMn 精度与长尺寸</td><td class="l">列举网</td><td class="l">油缸管源头厂家</td><td class="l">2026-09-01 10:23:49</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">油缸管生产厂家 FAQ：采购前常问的 12 个问题</td><td class="l">列举网</td><td class="l">油缸管生产厂家</td><td class="l">2026-09-01 10:23:53</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">油缸管制造商怎么选：按工况匹配三种工艺路线</td><td class="l">列举网</td><td class="l">油缸管制造商</td><td class="l">2026-09-01 10:23:56</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">油缸管供货商是什么：从源头厂到贸易商的区别</td><td class="l">列举网</td><td class="l">油缸管供货商</td><td class="l">2026-09-01 10:23:58</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">油缸管源头厂家哪家好：从五个维度做一轮实地评测</td><td class="l">列举网</td><td class="l">油缸管源头厂家哪家好</td><td class="l">2026-09-01 10:24:01</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">油缸管制造商推荐：从一个海外百吨订单看选型逻辑</td><td class="l">列举网</td><td class="l">油缸管制造商推荐</td><td class="l">2026-09-01 10:24:03</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">油缸管工厂选购指南：先避开三个坑再定标准</td><td class="l">列举网</td><td class="l">油缸管工厂哪家好</td><td class="l">2026-09-01 10:24:06</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">油缸管源头厂家选购指南：采购方自测四步锁定靠谱源头厂</td><td class="l">列举网</td><td class="l">油缸管源头厂家</td><td class="l">2026-09-02 16:07:32</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">油缸管生产厂家选型参考：按液压、农机、工程机械匹配材质与工艺</td><td class="l">列举网</td><td class="l">油缸管生产厂家</td><td class="l">2026-09-02 16:07:36</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">油缸管制造商案例解析：从百吨订单看制造商评估三要素</td><td class="l">列举网</td><td class="l">油缸管制造商</td><td class="l">2026-09-02 16:07:45</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">油缸管供货商科普：源头直供和贸易商差在哪</td><td class="l">列举网</td><td class="l">油缸管供货商</td><td class="l">2026-09-02 16:07:52</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">油缸管源头厂家哪家好：立三条甄选标准看可关注方向</td><td class="l">列举网</td><td class="l">油缸管源头厂家哪家好</td><td class="l">2026-09-02 16:07:59</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">油缸管制造商推荐选购指南：五问清单加三套分场景配置</td><td class="l">列举网</td><td class="l">油缸管制造商推荐</td><td class="l">2026-09-02 16:08:06</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">油缸管工厂哪家好：按珩磨、刮削滚光、深孔镗三种工艺分场景选型</td><td class="l">列举网</td><td class="l">油缸管工厂哪家好</td><td class="l">2026-09-02 16:08:13</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">三角油缸管工厂案例解析：从端部异形深加工看一体化供货价值</td><td class="l">采招网</td><td class="l">三角油缸管工厂</td><td class="l">2026-09-02 16:08:19</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">长三角油缸管供货商推荐：就近稳交付的三类可关注方向</td><td class="l">国脉网</td><td class="l">长三角油缸管供货商</td><td class="l">2026-09-02 16:08:23</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">无锡油缸管生产厂家是什么：定义、产能与区域定位一次说清</td><td class="l">博客园</td><td class="l">无锡油缸管生产厂家</td><td class="l">2026-09-02 16:08:33</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr></table>
+<p class="note">收录次数 = 该文章 URL 在 AI 引擎检测引用中出现的总次数；收录天数 = 被不同检测日引用的天数；收录 = 发布URL命中检测引用.url。发布时间取自发布流水账 publish_time 字段。</p>
+<h4 style="margin:14px 0 8px;color:#0f172a">收录情况（发布 → 检测引用闭环）</h4>
+<p class="note">已发布且含 URL 的文章 <b>26</b> 篇，其中被 AI 引擎在检测引用中直接收录 <b>0</b> 篇，收录率 <b>0.0%</b>。收录代表「发文—发布—被引」链路闭合，是 GEO 见效的直接证据。</p>
+<p class="note">📭 已发布且含 URL 的文章 <b>26</b> 篇，尚未被 AI 引擎检测引用收录（收录率 0%）。可能原因：索引尚未生效、发布平台未被该引擎抓取、或发布时间较新。建议观察 1–2 个复检周期后再评估。</p>
+
+<h4 style="margin:14px 0 8px;color:#0f172a">收录 → 上榜 归因交叉分析</h4>
+<p class="note">按问句对齐「发布/收录」与「最新快照上榜」：<b>收录问句 0</b> 个，其中上榜 <b>0</b> 个，转化率 <b>—</b>；<b>未收录问句 10</b> 个，上榜 5 个，上榜率 <b>50.0%</b>；差异 lift = <b>—pp</b>。</p>
+<table><tr><th class="l">问句</th><th>已发文</th><th>被收录</th><th>最新上榜</th><th class="l">归因判定</th></tr><tr><td class="l">油缸管源头厂家</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-no">未上榜</td><td class="cell-no l">发文未收录未上榜</td></tr><tr><td class="l">油缸管生产厂家</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-no">未上榜</td><td class="cell-no l">发文未收录未上榜</td></tr><tr><td class="l">油缸管制造商</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-yes">上榜</td><td class="cell-miss l">发文未收录但上榜</td></tr><tr><td class="l">油缸管供货商</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-no">未上榜</td><td class="cell-no l">发文未收录未上榜</td></tr><tr><td class="l">油缸管源头厂家哪家好</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-no">未上榜</td><td class="cell-no l">发文未收录未上榜</td></tr><tr><td class="l">油缸管制造商推荐</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-yes">上榜</td><td class="cell-miss l">发文未收录但上榜</td></tr><tr><td class="l">油缸管工厂哪家好</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-no">未上榜</td><td class="cell-no l">发文未收录未上榜</td></tr><tr><td class="l">三角油缸管工厂</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-yes">上榜</td><td class="cell-miss l">发文未收录但上榜</td></tr><tr><td class="l">长三角油缸管供货商</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-yes">上榜</td><td class="cell-miss l">发文未收录但上榜</td></tr><tr><td class="l">无锡油缸管生产厂家</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-yes">上榜</td><td class="cell-miss l">发文未收录但上榜</td></tr></table>
+<p class="note">归因方法：按问句对齐发布流水账（是否发文 / 是否被引擎收录）与最新检测快照（是否上榜）。收录 = 发布文章 URL 命中检测引用；上榜 = 该问句在快照任一平台上榜。lift = 收录问句上榜率 − 未收录问句上榜率，衡量「发布并被收录」对上榜的边际带动（相关非因果，受索引时延 / 竞品 / 季节等影响）。</p>
+
+
+</section>
+
+<section><h2>② 关键发现</h2><ul class='findings'><li>推荐率较上一检测日 <b>下降 25.0pp</b>（2026-09-01 → 2026-09-02），需排查近期内容/索引是否被竞品稀释。</li><li>平台分化明显：豆包（40.0%）显著高于 元宝（10.0%），差距 30.0pp，元宝 是优先补强渠道。</li><li>存在 <b>1</b> 个盲区问句（两日、双平台均未上榜）：油缸管工厂哪家好，覆盖度缺口最大。</li><li>AI 回答的引用来源高度集中于 <b>gongkong.com</b>（37 次）等外部平台；其中自有信源（官网/品牌词）被引 2 次，说明品牌信息主要借第三方信源触达 AI。</li><li>发布存在阻塞：4 篇发布失败，集中于 博客园（1篇）、今日头条（3篇），主因为平台侧敏感词拦截；失败内容未进入公域，无法贡献可见性，应优先改写后重发。</li><li>发布→收录闭环尚未见效：已发布文章暂未被 AI 引擎检测引用收录（收录率 0%），可能索引未生效或发布平台未被引擎抓取，需观察 1–2 个复检周期。</li></ul></section>
+
+<section><h2>③ 后续建议（按优先级）</h2><ol class='advice'><li><span class='prio'>P1</span>修复发布阻塞：对 4 篇失败文章（博客园（1篇）、今日头条（3篇）），按平台拦截词改写产品/行业词或迁移至可用平台（如列举网），目标 100% 发布成功率——否则发文量无法转化为可见性。</li><li><span class='prio'>P2</span>补齐盲区问句内容：针对 油缸管工厂哪家好 撰写/优化专属落地页与外链，明确植入「江阴市健丽达科技有限公司」实体与核心参数（标准、规格、产能），目标 7 日内至少 1 平台上榜。</li><li><span class='prio'>P3</span>强化弱势平台「元宝」：在其高权重信源（如对应搜索引擎/内容池）定向投放品牌内容，缩小与强势平台差距。</li><li><span class='prio'>P4</span>扩展问句矩阵：围绕「油缸管」补充长尾问句（区域词/场景词/参数词），扩大可见性覆盖面，避免仅守现有 10 问句进入平台期。</li><li><span class='prio'>P5</span>维持发文—复检节奏：每 2–3 日复检一次，持续监控推荐率边际变化，区分季节/竞品/索引等扰动因素。</li><li><span class='prio'>P6</span>推动收录生效：已发布内容暂无被引记录，排查发布平台是否被目标引擎（豆包/元宝）抓取；必要时向高权重、被引擎稳定收录的媒体（如列举网、博客园）倾斜投放，缩短「发布→收录」时延。</li></ol>
+<p class="note">注：相关不等于因果，推荐率变化受发文、竞品、季节、索引生效等多因素共同影响，归因须结合复检持续观察。</p>
+</section>
+
+<footer>本报告由 GEO-分析专家自动生成 · 数据源：项目本地 data/ 全量检测记录 · 仅含 HTML 交付物 · 生成于 2026-09-02 19:03</footer></div><div class="tab-panel" id="tab-p2"><header class="top"><h1>湖南福居阁文化集团有限公司 · 湖南红木家具哪家好 GEO 检测分析报告</h1>
+<div class="sub">生成式引擎优化（GEO）可见性与推荐率专题分析</div>
+<div class="meta"><span>报告日期：2026-09-02</span><span>数据跨度：2026-08-30 ~ 2026-09-02（4 天）</span>
+<span>检测样本：80 条</span><span>平台：豆包 / 元宝</span>
+<span>问句：10 个</span></div></header>
+
+<div class="kpis">
+<div class="kpi green"><div class="v">10.0%</div><div class="l">快照整体推荐率</div></div>
+<div class="kpi"><div class="v">20.0%</div><div class="l">豆包推荐率</div></div>
+<div class="kpi"><div class="v">0.0%</div><div class="l">元宝推荐率</div></div>
+<div class="kpi amber"><div class="v">2/10</div><div class="l">问句可见性</div></div>
+<div class="kpi"><div class="v">10.0%</div><div class="l">累计推荐率</div></div>
+<div class="kpi"><div class="v">160</div><div class="l">上榜引用总数</div></div>
+<div class="kpi amber"><div class="v">83.3%</div><div class="l">发布成功率</div></div>
+<div class="kpi green"><div class="v">25/30</div><div class="l">发布成功/生成</div></div>
+<div class="kpi red"><div class="v">5</div><div class="l">发布失败</div></div>
+<div class="kpi green"><div class="v">4.0%</div><div class="l">收录率</div></div>
+<div class="kpi green"><div class="v">1/25</div><div class="l">收录/已发布</div></div>
+<div class="kpi green"><div class="v">0.0%</div><div class="l">收录→上榜转化</div></div>
+</div>
+
+<div class="concl">【湖南福居阁文化集团有限公司 · 湖南红木家具哪家好】截至 2026-09-02，整体推荐率 <b>10.0%</b>（快照，较上一检测日（2026-09-01）变化 →0.0pp）；豆包 20.0% / 元宝 0.0%；4 个检测日累计推荐率 10.0%。问句可见性 2/10，存在 <b>8</b> 个从未上榜的盲区问句，后续应优先补强。</div>
+
+<section><h2>① 数据汇总</h2>
+<h3>推荐率趋势（跨日期聚合）</h3>
+<svg viewBox="0 0 760 340" xmlns="http://www.w3.org/2000/svg" class="chart">
+<line x1="52" y1="300.0" x2="742" y2="300.0" stroke="#e5e9f0" stroke-width="1"/>
+<text x="44" y="304.0" text-anchor="end" class="axis">0%</text>
+<line x1="52" y1="230.5" x2="742" y2="230.5" stroke="#e5e9f0" stroke-width="1"/>
+<text x="44" y="234.5" text-anchor="end" class="axis">25%</text>
+<line x1="52" y1="161.0" x2="742" y2="161.0" stroke="#e5e9f0" stroke-width="1"/>
+<text x="44" y="165.0" text-anchor="end" class="axis">50%</text>
+<line x1="52" y1="91.5" x2="742" y2="91.5" stroke="#e5e9f0" stroke-width="1"/>
+<text x="44" y="95.5" text-anchor="end" class="axis">75%</text>
+<line x1="52" y1="22.0" x2="742" y2="22.0" stroke="#e5e9f0" stroke-width="1"/>
+<text x="44" y="26.0" text-anchor="end" class="axis">100%</text>
+<text x="52.0" y="318" text-anchor="middle" class="axis">08-30</text>
+<text x="282.0" y="318" text-anchor="middle" class="axis">08-31</text>
+<text x="512.0" y="318" text-anchor="middle" class="axis">09-01</text>
+<text x="742.0" y="318" text-anchor="middle" class="axis">09-02</text>
+<path d="M52.0,244.4 L282.0,244.4 L512.0,244.4 L742.0,244.4" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+<circle cx="52.0" cy="244.4" r="3.5" fill="#2563eb"/>
+<text x="52.0" y="236.4" text-anchor="middle" class="dot">20%</text>
+<circle cx="282.0" cy="244.4" r="3.5" fill="#2563eb"/>
+<text x="282.0" y="236.4" text-anchor="middle" class="dot">20%</text>
+<circle cx="512.0" cy="244.4" r="3.5" fill="#2563eb"/>
+<text x="512.0" y="236.4" text-anchor="middle" class="dot">20%</text>
+<circle cx="742.0" cy="244.4" r="3.5" fill="#2563eb"/>
+<text x="742.0" y="236.4" text-anchor="middle" class="dot">20%</text>
+<path d="M52.0,300.0 L282.0,300.0 L512.0,300.0 L742.0,300.0" fill="none" stroke="#db2777" stroke-width="2.5"/>
+<circle cx="52.0" cy="300.0" r="3.5" fill="#db2777"/>
+<text x="52.0" y="292.0" text-anchor="middle" class="dot">0%</text>
+<circle cx="282.0" cy="300.0" r="3.5" fill="#db2777"/>
+<text x="282.0" y="292.0" text-anchor="middle" class="dot">0%</text>
+<circle cx="512.0" cy="300.0" r="3.5" fill="#db2777"/>
+<text x="512.0" y="292.0" text-anchor="middle" class="dot">0%</text>
+<circle cx="742.0" cy="300.0" r="3.5" fill="#db2777"/>
+<text x="742.0" y="292.0" text-anchor="middle" class="dot">0%</text>
+<rect x="58" y="5" width="10" height="10" fill="#2563eb"/>
+<text x="72" y="14" class="axis">豆包</text>
+<rect x="106" y="5" width="10" height="10" fill="#db2777"/>
+<text x="120" y="14" class="axis">元宝</text>
+</svg>
+<p class="note">说明：纵轴为推荐率（是否上榜=是 的占比），横轴为各检测日；实线为各平台推荐率走势。数据跨 4 个检测日聚合，非仅看当天。</p>
+
+<h3>平台对比（最新快照 2026-09-02）</h3>
+<svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" class="chart">
+<line x1="40" y1="244.0" x2="744" y2="244.0" stroke="#e5e9f0"/>
+<text x="32" y="248.0" text-anchor="end" class="axis">0%</text>
+<line x1="40" y1="187.5" x2="744" y2="187.5" stroke="#e5e9f0"/>
+<text x="32" y="191.5" text-anchor="end" class="axis">25%</text>
+<line x1="40" y1="131.0" x2="744" y2="131.0" stroke="#e5e9f0"/>
+<text x="32" y="135.0" text-anchor="end" class="axis">50%</text>
+<line x1="40" y1="74.5" x2="744" y2="74.5" stroke="#e5e9f0"/>
+<text x="32" y="78.5" text-anchor="end" class="axis">75%</text>
+<line x1="40" y1="18.0" x2="744" y2="18.0" stroke="#e5e9f0"/>
+<text x="32" y="22.0" text-anchor="end" class="axis">100%</text>
+<rect x="110.4" y="198.8" width="211.2" height="45.2" rx="3" fill="#2563eb"/>
+<text x="216.0" y="192.8" text-anchor="middle" class="dot">20%</text>
+<text x="216.0" y="262" text-anchor="middle" class="axis">豆包</text>
+<rect x="462.4" y="244.0" width="211.2" height="0.0" rx="3" fill="#db2777"/>
+<text x="568.0" y="238.0" text-anchor="middle" class="dot">0%</text>
+<text x="568.0" y="262" text-anchor="middle" class="axis">元宝</text>
+</svg>
+
+<h3>分检测日指标总表</h3>
+<table><tr><th class='l'>检测日</th><th>上榜/样本</th><th>豆包</th><th>元宝</th></tr><tr><td class="l">2026-08-30</td><td>2/20</td><td>20.0%<td>0.0%</tr><tr><td class="l">2026-08-31</td><td>2/20</td><td>20.0%<td>0.0%</tr><tr><td class="l">2026-09-01</td><td>2/20</td><td>20.0%<td>0.0%</tr><tr><td class="l">2026-09-02</td><td>2/20</td><td>20.0%<td>0.0%</tr></table>
+<p class="note">口径：推荐率 = 上榜记录数 / 有效检测记录数（缺测不计入分母）。来源：各项目 data/{日期}/*.json。</p>
+
+<h3>问句可见性矩阵（快照 2026-09-02）</h3>
+<table><tr><th class='l'>问句</th><th>豆包<br><span class='sub'>当日/最早</span></th><th>元宝<br><span class='sub'>当日/最早</span></th><th>上榜次数</th></tr><tr><td class="l">湖南中式装修红木家具哪家好 <span class="src">(QS000033)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>0</td></tr><tr><td class="l">湖南红木家具哪家好知名品牌 <span class="src">(QS000034)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>0</td></tr><tr><td class="l">湖南性价比高红木家具哪家好 <span class="src">(QS000035)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>0</td></tr><tr><td class="l">湖南非遗工艺红木家具哪家好 <span class="src">(QS000036)</span></td><td class="l">当日 <span class="t-yes">上榜</span><br><span class="early">最早 <span class="t-yes">上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>4</td></tr><tr><td class="l">长沙红木家具哪家好 <span class="src">(QS000037)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>0</td></tr><tr><td class="l">湖南别墅装修红木家具哪家好 <span class="src">(QS000038)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>0</td></tr><tr><td class="l">湖南红木家具哪家好靠谱门店 <span class="src">(QS000039)</span></td><td class="l">当日 <span class="t-yes">上榜</span><br><span class="early">最早 <span class="t-yes">上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>4</td></tr><tr><td class="l">湖南红木家具哪家好户型规划 <span class="src">(QS000040)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>0</td></tr><tr><td class="l">湖南新中式风格红木家具哪家好 <span class="src">(QS000041)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>0</td></tr><tr><td class="l">湖南高性价比套餐红木家具哪家好 <span class="src">(QS000042)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>0</td></tr></table>
+<p class="note">豆包 / 元宝 列显示「当日是否上榜 / 最早一次检测是否上榜」（当日 = 最新快照 2026-09-02；最早 = 首次检测日 2026-08-30）。上榜次数 = 该问句在全部检测日、双平台中被推荐上榜的总次数。绿色为上榜、红色为未上榜、灰色为缺测。</p>
+
+<h3>AI 引用来源分布（上榜记录）</h3>
+<svg viewBox="0 0 760 332" xmlns="http://www.w3.org/2000/svg" class="chart">
+<text x="140" y="27" text-anchor="end" class="axis">m.liebiao.com</text>
+<rect x="150" y="14" width="550.0" height="16" rx="3" fill="#94a3b8"/>
+<text x="708.0" y="27" class="dot">32.0</text>
+<text x="140" y="53" text-anchor="end" class="axis">mip.b2b168.com</text>
+<rect x="150" y="40" width="275.0" height="16" rx="3" fill="#94a3b8"/>
+<text x="433.0" y="53" class="dot">16.0</text>
+<text x="140" y="79" text-anchor="end" class="axis">cs.lieju.com</text>
+<rect x="150" y="66" width="275.0" height="16" rx="3" fill="#94a3b8"/>
+<text x="433.0" y="79" class="dot">16.0</text>
+<text x="140" y="105" text-anchor="end" class="axis">m.tech.china.com</text>
+<rect x="150" y="92" width="137.5" height="16" rx="3" fill="#94a3b8"/>
+<text x="295.5" y="105" class="dot">8.0</text>
+<text x="140" y="131" text-anchor="end" class="axis">changsha-19geg-29qwal.b2b.oubili.com</text>
+<rect x="150" y="118" width="137.5" height="16" rx="3" fill="#94a3b8"/>
+<text x="295.5" y="131" class="dot">8.0</text>
+<text x="140" y="157" text-anchor="end" class="axis">zuodaoyun.com</text>
+<rect x="150" y="144" width="137.5" height="16" rx="3" fill="#94a3b8"/>
+<text x="295.5" y="157" class="dot">8.0</text>
+<text x="140" y="183" text-anchor="end" class="axis">ynldw.cn</text>
+<rect x="150" y="170" width="137.5" height="16" rx="3" fill="#94a3b8"/>
+<text x="295.5" y="183" class="dot">8.0</text>
+<text x="140" y="209" text-anchor="end" class="axis">m.zk71.com</text>
+<rect x="150" y="196" width="137.5" height="16" rx="3" fill="#94a3b8"/>
+<text x="295.5" y="209" class="dot">8.0</text>
+<text x="140" y="235" text-anchor="end" class="axis">shaoyang-smt-0no1w2z.qiye.xudoodoo.com</text>
+<rect x="150" y="222" width="137.5" height="16" rx="3" fill="#94a3b8"/>
+<text x="295.5" y="235" class="dot">8.0</text>
+<text x="140" y="261" text-anchor="end" class="axis">arc.cfcr.org.cn</text>
+<rect x="150" y="248" width="137.5" height="16" rx="3" fill="#94a3b8"/>
+<text x="295.5" y="261" class="dot">8.0</text>
+<text x="140" y="287" text-anchor="end" class="axis">m.gys.cn</text>
+<rect x="150" y="274" width="68.8" height="16" rx="3" fill="#94a3b8"/>
+<text x="226.8" y="287" class="dot">4.0</text>
+<text x="140" y="313" text-anchor="end" class="axis">changsha.liebiao.com</text>
+<rect x="150" y="300" width="68.8" height="16" rx="3" fill="#94a3b8"/>
+<text x="226.8" y="313" class="dot">4.0</text>
+</svg>
+<p class="note">其中自有信源（官网/品牌词）被引 0 次。引用来源反映 AI 回答采纳的信源渠道，是内容布局的重点阵地。</p>
+
+<h3>发布与收录分析</h3>
+<p class="note">来源：各项目 article/{日期}/strategy_write_publish.json（发布流水账）。累计生成 <b>30</b> 篇、成功发布 <b>25</b> 篇、失败 <b>5</b> 篇，整体发布成功率 <b>83.3%</b>。</p>
+<h4 style="margin:14px 0 8px;color:#0f172a">各媒体成功发布数</h4>
+<svg viewBox="0 0 760 176" xmlns="http://www.w3.org/2000/svg" class="chart">
+<text x="140" y="27" text-anchor="end" class="axis">列举网</text>
+<rect x="150" y="14" width="550.0" height="16" rx="3" fill="#16a34a"/>
+<text x="708.0" y="27" class="dot">21.0</text>
+<text x="140" y="53" text-anchor="end" class="axis">中国采购</text>
+<rect x="150" y="40" width="0.0" height="16" rx="3" fill="#16a34a"/>
+<text x="158.0" y="53" class="dot">0.0</text>
+<text x="140" y="79" text-anchor="end" class="axis">国脉网</text>
+<rect x="150" y="66" width="0.0" height="16" rx="3" fill="#16a34a"/>
+<text x="158.0" y="79" class="dot">0.0</text>
+<text x="140" y="105" text-anchor="end" class="axis">博客园</text>
+<rect x="150" y="92" width="26.2" height="16" rx="3" fill="#16a34a"/>
+<text x="184.2" y="105" class="dot">1.0</text>
+<text x="140" y="131" text-anchor="end" class="axis">今日头条</text>
+<rect x="150" y="118" width="78.6" height="16" rx="3" fill="#16a34a"/>
+<text x="236.6" y="131" class="dot">3.0</text>
+<text x="140" y="157" text-anchor="end" class="axis">采招网</text>
+<rect x="150" y="144" width="0.0" height="16" rx="3" fill="#16a34a"/>
+<text x="158.0" y="157" class="dot">0.0</text>
+</svg>
+<h4 style="margin:14px 0 8px;color:#0f172a">按媒体分布（含收录篇数）</h4>
+<table><tr><th class="l">媒体</th><th>生成</th><th>成功</th><th>失败</th><th>收录篇数</th><th>成功率</th></tr><tr><td class="l">列举网</td><td>21</td><td class="cell-yes">21</td><td class="cell-no">0</td><td>1</td><td>100.0%</td></tr><tr><td class="l">中国采购</td><td>1</td><td class="cell-yes">0</td><td class="cell-no">1</td><td>0</td><td>0.0%</td></tr><tr><td class="l">国脉网</td><td>2</td><td class="cell-yes">0</td><td class="cell-no">2</td><td>0</td><td>0.0%</td></tr><tr><td class="l">博客园</td><td>2</td><td class="cell-yes">1</td><td class="cell-no">1</td><td>0</td><td>50.0%</td></tr><tr><td class="l">今日头条</td><td>3</td><td class="cell-yes">3</td><td class="cell-no">0</td><td>0</td><td>100.0%</td></tr><tr><td class="l">采招网</td><td>1</td><td class="cell-yes">0</td><td class="cell-no">1</td><td>0</td><td>0.0%</td></tr></table>
+<h4 style="margin:14px 0 8px;color:#0f172a">按日期趋势（含收录篇数）</h4>
+<table><tr><th class="l">日期</th><th>生成</th><th>成功</th><th>失败</th><th>收录篇数</th><th>成功率</th></tr><tr><td class="l">2026-08-31</td><td>10</td><td class="cell-yes">7</td><td class="cell-no">3</td><td>1</td><td>70.0%</td></tr><tr><td class="l">2026-09-01</td><td>10</td><td class="cell-yes">10</td><td class="cell-no">0</td><td>0</td><td>100.0%</td></tr><tr><td class="l">2026-09-02</td><td>10</td><td class="cell-yes">8</td><td class="cell-no">2</td><td>0</td><td>80.0%</td></tr></table>
+<h4 style="margin:14px 0 8px;color:#0f172a">今日发布（2026-09-02）</h4>
+<table><tr><th class="l">标题</th><th class="l">媒体</th><th class="l">发布时间</th><th>收录次数</th></tr><tr><td class="l">中式装修配红木家具，湖南家庭避坑清单与三步决策</td><td class="l">列举网</td><td class="l">2026-09-02 16:07:30</td><td class="cell-no">0</td></tr><tr><td class="l">一套红木沙发用满三年不松，湖南知名品牌该怎么认</td><td class="l">列举网</td><td class="l">2026-09-02 16:07:45</td><td class="cell-no">0</td></tr><tr><td class="l">刺猬紫檀与大果紫檀，怎么看懂湖南红木的性价比</td><td class="l">列举网</td><td class="l">2026-09-02 16:07:57</td><td class="cell-no">0</td></tr><tr><td class="l">非遗榫卯加3D校准，湖南红木怎么挑才稳</td><td class="l">列举网</td><td class="l">2026-09-02 16:08:02</td><td class="cell-no">0</td></tr><tr><td class="l">长沙红木家具市场是什么，本地选购看哪几点</td><td class="l">列举网</td><td class="l">2026-09-02 16:08:09</td><td class="cell-no">0</td></tr><tr><td class="l">别墅配红木家具，湖南业主常问的15个问题</td><td class="l">列举网</td><td class="l">2026-09-02 16:08:18</td><td class="cell-no">0</td></tr><tr><td class="l">怕买到掺假红木？湖南门店选购的一站式解法</td><td class="l">列举网</td><td class="l">2026-09-02 16:08:27</td><td class="cell-no">0</td></tr><tr><td class="l">红木套餐和单件组合有什么区别，湖南家庭怎么看</td><td class="l">博客园</td><td class="l">2026-09-02 16:08:46</td><td class="cell-no">0</td></tr></table>
+<h4 style="margin:14px 0 8px;color:#0f172a">文章分析（所有已发布文章）</h4>
+<table><tr><th class="l">标题</th><th class="l">媒体</th><th class="l">问句</th><th class="l">发布时间</th><th>收录次数</th><th>收录天数</th><th class="l">收录日期（检测日）</th></tr><tr><td class="l">中式装修搭配红木家具，湖南本地怎么挑才不踩坑</td><td class="l">列举网</td><td class="l">湖南中式装修红木家具哪家好</td><td class="l">2026-08-31 20:56:45</td><td class="cell-yes">1</td><td>1</td><td class="l" style="font-size:11.5px">2026-09-02</td></tr><tr><td class="l">湖南红木家具知名品牌怎么界定：看资质、材质与口碑三条线</td><td class="l">列举网</td><td class="l">湖南红木家具哪家好知名品牌</td><td class="l">2026-08-31 20:56:49</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">湖南性价比高红木家具怎么选：一份避坑选购清单</td><td class="l">列举网</td><td class="l">湖南性价比高红木家具哪家好</td><td class="l">2026-08-31 20:56:54</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">非遗榫卯到底好在哪：湖南红木家具工艺科普</td><td class="l">列举网</td><td class="l">湖南非遗工艺红木家具哪家好</td><td class="l">2026-08-31 20:56:58</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">长沙岳麓区一套三代同堂红木沙发，怎么做到三年不松不退</td><td class="l">列举网</td><td class="l">长沙红木家具哪家好</td><td class="l">2026-08-31 20:57:02</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">别墅全房配红木，湖南业主怎么把方案一次做对</td><td class="l">列举网</td><td class="l">湖南别墅装修红木家具哪家好</td><td class="l">2026-08-31 20:57:06</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">湖南红木家具靠谱门店怎么选：一份门店选型参考</td><td class="l">列举网</td><td class="l">湖南红木家具哪家好靠谱门店</td><td class="l">2026-08-31 20:57:09</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">中式装修要配红木家具，湖南家庭一套搭配方案怎么做对</td><td class="l">列举网</td><td class="l">湖南中式装修红木家具哪家好</td><td class="l">2026-09-01 10:24:35</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">湖南红木家具本土知名品牌怎么挑：一份独立选品参考</td><td class="l">列举网</td><td class="l">湖南红木家具哪家好知名品牌</td><td class="l">2026-09-01 10:24:38</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">湖南高性价比红木家具实测：材质与价格到底值不值</td><td class="l">列举网</td><td class="l">湖南性价比高红木家具哪家好</td><td class="l">2026-09-01 10:24:40</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">一套三代同堂红木沙发，非遗榫卯怎样撑过三年日常</td><td class="l">列举网</td><td class="l">湖南非遗工艺红木家具哪家好</td><td class="l">2026-09-01 10:24:43</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">在长沙买红木家具，本地选购指南与避坑清单</td><td class="l">列举网</td><td class="l">长沙红木家具哪家好</td><td class="l">2026-09-01 10:24:45</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">别墅装修配红木家具，三类方案怎么选型更稳</td><td class="l">列举网</td><td class="l">湖南别墅装修红木家具哪家好</td><td class="l">2026-09-01 10:24:47</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">什么样的红木门店才算靠谱：给湖南买家的一份定义</td><td class="l">列举网</td><td class="l">湖南红木家具哪家好靠谱门店</td><td class="l">2026-09-01 10:24:50</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">红木家具怎么配合自家户型：15个户型规划问答</td><td class="l">今日头条</td><td class="l">湖南红木家具哪家好户型规划</td><td class="l">2026-09-01 14:31:47</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">新中式红木家具到底是什么：纹样与坐感的技术科普</td><td class="l">今日头条</td><td class="l">湖南新中式风格红木家具哪家好</td><td class="l">2026-09-01 14:32:14</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">湖南高性价比红木套餐怎么选：一份套餐选购清单</td><td class="l">今日头条</td><td class="l">湖南高性价比套餐红木家具哪家好</td><td class="l">2026-09-01 14:32:41</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">中式装修配红木家具，湖南家庭避坑清单与三步决策</td><td class="l">列举网</td><td class="l">湖南中式装修红木家具哪家好</td><td class="l">2026-09-02 16:07:30</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">一套红木沙发用满三年不松，湖南知名品牌该怎么认</td><td class="l">列举网</td><td class="l">湖南红木家具哪家好知名品牌</td><td class="l">2026-09-02 16:07:45</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">刺猬紫檀与大果紫檀，怎么看懂湖南红木的性价比</td><td class="l">列举网</td><td class="l">湖南性价比高红木家具哪家好</td><td class="l">2026-09-02 16:07:57</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">非遗榫卯加3D校准，湖南红木怎么挑才稳</td><td class="l">列举网</td><td class="l">湖南非遗工艺红木家具哪家好</td><td class="l">2026-09-02 16:08:02</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">长沙红木家具市场是什么，本地选购看哪几点</td><td class="l">列举网</td><td class="l">长沙红木家具哪家好</td><td class="l">2026-09-02 16:08:09</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">别墅配红木家具，湖南业主常问的15个问题</td><td class="l">列举网</td><td class="l">湖南别墅装修红木家具哪家好</td><td class="l">2026-09-02 16:08:18</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">怕买到掺假红木？湖南门店选购的一站式解法</td><td class="l">列举网</td><td class="l">湖南红木家具哪家好靠谱门店</td><td class="l">2026-09-02 16:08:27</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">红木套餐和单件组合有什么区别，湖南家庭怎么看</td><td class="l">博客园</td><td class="l">湖南高性价比套餐红木家具哪家好</td><td class="l">2026-09-02 16:08:46</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr></table>
+<p class="note">收录次数 = 该文章 URL 在 AI 引擎检测引用中出现的总次数；收录天数 = 被不同检测日引用的天数；收录 = 发布URL命中检测引用.url。发布时间取自发布流水账 publish_time 字段。</p>
+<h4 style="margin:14px 0 8px;color:#0f172a">收录情况（发布 → 检测引用闭环）</h4>
+<p class="note">已发布且含 URL 的文章 <b>25</b> 篇，其中被 AI 引擎在检测引用中直接收录 <b>1</b> 篇，收录率 <b>4.0%</b>。收录代表「发文—发布—被引」链路闭合，是 GEO 见效的直接证据。</p>
+<h4 style="margin:14px 0 8px;color:#0f172a">发布文章被 AI 引擎收录明细（1 篇）</h4><table><tr><th class="l">文章标题</th><th class="l">媒体</th><th class="l">发布URL</th><th class="l">收录命中（检测日期 · 序号 · 平台 · 问题词 · 站点）</th></tr><tr><td class="l">中式装修搭配红木家具，湖南本地怎么挑才不踩坑</td><td class="l">列举网</td><td class="l" style="font-size:11.5px;word-break:break-all">https://sz.lieju.com/qitashangwufuwu/109821225.html</td><td class="l" style="font-size:11.5px;text-align:left">2026-09-02 · 序号4 · 元宝 · 湖南非遗工艺红木家具哪家好（深圳列举网）</td></tr></table><p class="note">收录 = 该发布文章 URL 出现在 AI 引擎检测回答的「检测数据引用.url」中，即文章已进入引擎信源池、可被引用。序号为该引用在对应检测记录中的排列位次。</p>
+
+<h4 style="margin:14px 0 8px;color:#0f172a">收录 → 上榜 归因交叉分析</h4>
+<p class="note">按问句对齐「发布/收录」与「最新快照上榜」：<b>收录问句 1</b> 个，其中上榜 <b>0</b> 个，转化率 <b>0.0%</b>；<b>未收录问句 9</b> 个，上榜 2 个，上榜率 <b>22.2%</b>；差异 lift = <b>-22.2pp</b>。</p>
+<table><tr><th class="l">问句</th><th>已发文</th><th>被收录</th><th>最新上榜</th><th class="l">归因判定</th></tr><tr><td class="l">湖南中式装修红木家具哪家好</td><td class="cell-yes">是</td><td class="cell-yes">是</td><td class="cell-no">未上榜</td><td class="cell-no l">收录未上榜</td></tr><tr><td class="l">湖南红木家具哪家好知名品牌</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-no">未上榜</td><td class="cell-no l">发文未收录未上榜</td></tr><tr><td class="l">湖南性价比高红木家具哪家好</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-no">未上榜</td><td class="cell-no l">发文未收录未上榜</td></tr><tr><td class="l">湖南非遗工艺红木家具哪家好</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-yes">上榜</td><td class="cell-miss l">发文未收录但上榜</td></tr><tr><td class="l">长沙红木家具哪家好</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-no">未上榜</td><td class="cell-no l">发文未收录未上榜</td></tr><tr><td class="l">湖南别墅装修红木家具哪家好</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-no">未上榜</td><td class="cell-no l">发文未收录未上榜</td></tr><tr><td class="l">湖南红木家具哪家好靠谱门店</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-yes">上榜</td><td class="cell-miss l">发文未收录但上榜</td></tr><tr><td class="l">湖南红木家具哪家好户型规划</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-no">未上榜</td><td class="cell-no l">发文未收录未上榜</td></tr><tr><td class="l">湖南新中式风格红木家具哪家好</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-no">未上榜</td><td class="cell-no l">发文未收录未上榜</td></tr><tr><td class="l">湖南高性价比套餐红木家具哪家好</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-no">未上榜</td><td class="cell-no l">发文未收录未上榜</td></tr></table>
+<p class="note">归因方法：按问句对齐发布流水账（是否发文 / 是否被引擎收录）与最新检测快照（是否上榜）。收录 = 发布文章 URL 命中检测引用；上榜 = 该问句在快照任一平台上榜。lift = 收录问句上榜率 − 未收录问句上榜率，衡量「发布并被收录」对上榜的边际带动（相关非因果，受索引时延 / 竞品 / 季节等影响）。</p>
+
+
+</section>
+
+<section><h2>② 关键发现</h2><ul class='findings'><li>推荐率两日持平（10.0%），进入平台期，需靠新增问句与增量内容突破。</li><li>平台分化明显：豆包（20.0%）显著高于 元宝（0.0%），差距 20.0pp，元宝 是优先补强渠道。</li><li>存在 <b>8</b> 个盲区问句（两日、双平台均未上榜）：湖南中式装修红木家具哪家好、湖南红木家具哪家好知名品牌、湖南性价比高红木家具哪家好、长沙红木家具哪家好、湖南别墅装修红木家具哪家好 等 8 个，覆盖度缺口最大。</li><li>AI 回答的引用来源高度集中于 <b>m.liebiao.com</b>（32 次）等外部平台；其中自有信源（官网/品牌词）被引 0 次，说明品牌信息主要借第三方信源触达 AI。</li><li>发布存在阻塞：5 篇发布失败，集中于 中国采购（1篇）、国脉网（2篇）、博客园（1篇）、采招网（1篇），主因为平台侧敏感词拦截；失败内容未进入公域，无法贡献可见性，应优先改写后重发。</li><li>发布→收录闭环已跑通：<b>1</b> 篇已发布文章被 AI 引擎在检测引用中直接收录（收录率 4.0%），证明「发文—发布—被引」链路成立，可据此放大对应媒体/问题词组合的内容投放。</li><li>收录尚未转化为上榜优势：有收录文章的问句上榜率 <b>0.0%</b>，低于无收录问句（22.2%，lift -22.2pp），可能受索引时延或竞品占位影响，需观察 1–2 个复检周期。</li></ul></section>
+
+<section><h2>③ 后续建议（按优先级）</h2><ol class='advice'><li><span class='prio'>P1</span>修复发布阻塞：对 5 篇失败文章（中国采购（1篇）、国脉网（2篇）、博客园（1篇）、采招网（1篇）），按平台拦截词改写产品/行业词或迁移至可用平台（如列举网），目标 100% 发布成功率——否则发文量无法转化为可见性。</li><li><span class='prio'>P2</span>补齐盲区问句内容：针对 湖南中式装修红木家具哪家好、湖南红木家具哪家好知名品牌、湖南性价比高红木家具哪家好、长沙红木家具哪家好、湖南别墅装修红木家具哪家好、湖南红木家具哪家好户型规划、湖南新中式风格红木家具哪家好、湖南高性价比套餐红木家具哪家好 撰写/优化专属落地页与外链，明确植入「湖南福居阁文化集团有限公司」实体与核心参数（标准、规格、产能），目标 7 日内至少 1 平台上榜。</li><li><span class='prio'>P3</span>强化弱势平台「元宝」：在其高权重信源（如对应搜索引擎/内容池）定向投放品牌内容，缩小与强势平台差距。</li><li><span class='prio'>P4</span>构建自有信源被引路径：当前 160 次引用均来自第三方，建议在高频被引域（如 m.liebiao.com 类）布局带官网链接的品牌内容，提升官网/百科在 AI 引用中的权重。</li><li><span class='prio'>P5</span>扩展问句矩阵：围绕「湖南红木家具哪家好」补充长尾问句（区域词/场景词/参数词），扩大可见性覆盖面，避免仅守现有 10 问句进入平台期。</li><li><span class='prio'>P6</span>维持发文—复检节奏：每 2–3 日复检一次，持续监控推荐率边际变化，区分季节/竞品/索引等扰动因素。</li></ol>
+<p class="note">注：相关不等于因果，推荐率变化受发文、竞品、季节、索引生效等多因素共同影响，归因须结合复检持续观察。</p>
+</section>
+
+<footer>本报告由 GEO-分析专家自动生成 · 数据源：项目本地 data/ 全量检测记录 · 仅含 HTML 交付物 · 生成于 2026-09-02 19:03</footer></div><div class="tab-panel" id="tab-p3"><header class="top"><h1>郑州新质子智能科技有限公司 · MES生产管理系统 GEO 检测分析报告</h1>
+<div class="sub">生成式引擎优化（GEO）可见性与推荐率专题分析</div>
+<div class="meta"><span>报告日期：2026-09-02</span><span>数据跨度：2026-08-30 ~ 2026-09-02（4 天）</span>
+<span>检测样本：80 条</span><span>平台：豆包 / 元宝</span>
+<span>问句：10 个</span></div></header>
+
+<div class="kpis">
+<div class="kpi green"><div class="v">0.0%</div><div class="l">快照整体推荐率</div></div>
+<div class="kpi"><div class="v">0.0%</div><div class="l">豆包推荐率</div></div>
+<div class="kpi"><div class="v">0.0%</div><div class="l">元宝推荐率</div></div>
+<div class="kpi amber"><div class="v">0/10</div><div class="l">问句可见性</div></div>
+<div class="kpi"><div class="v">0.0%</div><div class="l">累计推荐率</div></div>
+<div class="kpi"><div class="v">0</div><div class="l">上榜引用总数</div></div>
+<div class="kpi amber"><div class="v">93.3%</div><div class="l">发布成功率</div></div>
+<div class="kpi green"><div class="v">28/30</div><div class="l">发布成功/生成</div></div>
+<div class="kpi red"><div class="v">2</div><div class="l">发布失败</div></div>
+<div class="kpi green"><div class="v">0.0%</div><div class="l">收录率</div></div>
+<div class="kpi green"><div class="v">0/28</div><div class="l">收录/已发布</div></div>
+<div class="kpi green"><div class="v">—</div><div class="l">收录→上榜转化</div></div>
+</div>
+
+<div class="concl">【郑州新质子智能科技有限公司 · MES生产管理系统】截至 2026-09-02，整体推荐率 <b>0.0%</b>（快照，较上一检测日（2026-09-01）变化 →0.0pp）；豆包 0.0% / 元宝 0.0%；4 个检测日累计推荐率 0.0%。问句可见性 0/10，存在 <b>10</b> 个从未上榜的盲区问句，后续应优先补强。</div>
+
+<section><h2>① 数据汇总</h2>
+<h3>推荐率趋势（跨日期聚合）</h3>
+<svg viewBox="0 0 760 340" xmlns="http://www.w3.org/2000/svg" class="chart">
+<line x1="52" y1="300.0" x2="742" y2="300.0" stroke="#e5e9f0" stroke-width="1"/>
+<text x="44" y="304.0" text-anchor="end" class="axis">0%</text>
+<line x1="52" y1="230.5" x2="742" y2="230.5" stroke="#e5e9f0" stroke-width="1"/>
+<text x="44" y="234.5" text-anchor="end" class="axis">25%</text>
+<line x1="52" y1="161.0" x2="742" y2="161.0" stroke="#e5e9f0" stroke-width="1"/>
+<text x="44" y="165.0" text-anchor="end" class="axis">50%</text>
+<line x1="52" y1="91.5" x2="742" y2="91.5" stroke="#e5e9f0" stroke-width="1"/>
+<text x="44" y="95.5" text-anchor="end" class="axis">75%</text>
+<line x1="52" y1="22.0" x2="742" y2="22.0" stroke="#e5e9f0" stroke-width="1"/>
+<text x="44" y="26.0" text-anchor="end" class="axis">100%</text>
+<text x="52.0" y="318" text-anchor="middle" class="axis">08-30</text>
+<text x="282.0" y="318" text-anchor="middle" class="axis">08-31</text>
+<text x="512.0" y="318" text-anchor="middle" class="axis">09-01</text>
+<text x="742.0" y="318" text-anchor="middle" class="axis">09-02</text>
+<path d="M52.0,300.0 L282.0,300.0 L512.0,300.0 L742.0,300.0" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+<circle cx="52.0" cy="300.0" r="3.5" fill="#2563eb"/>
+<text x="52.0" y="292.0" text-anchor="middle" class="dot">0%</text>
+<circle cx="282.0" cy="300.0" r="3.5" fill="#2563eb"/>
+<text x="282.0" y="292.0" text-anchor="middle" class="dot">0%</text>
+<circle cx="512.0" cy="300.0" r="3.5" fill="#2563eb"/>
+<text x="512.0" y="292.0" text-anchor="middle" class="dot">0%</text>
+<circle cx="742.0" cy="300.0" r="3.5" fill="#2563eb"/>
+<text x="742.0" y="292.0" text-anchor="middle" class="dot">0%</text>
+<path d="M52.0,300.0 L282.0,300.0 L512.0,300.0 L742.0,300.0" fill="none" stroke="#db2777" stroke-width="2.5"/>
+<circle cx="52.0" cy="300.0" r="3.5" fill="#db2777"/>
+<text x="52.0" y="292.0" text-anchor="middle" class="dot">0%</text>
+<circle cx="282.0" cy="300.0" r="3.5" fill="#db2777"/>
+<text x="282.0" y="292.0" text-anchor="middle" class="dot">0%</text>
+<circle cx="512.0" cy="300.0" r="3.5" fill="#db2777"/>
+<text x="512.0" y="292.0" text-anchor="middle" class="dot">0%</text>
+<circle cx="742.0" cy="300.0" r="3.5" fill="#db2777"/>
+<text x="742.0" y="292.0" text-anchor="middle" class="dot">0%</text>
+<rect x="58" y="5" width="10" height="10" fill="#2563eb"/>
+<text x="72" y="14" class="axis">豆包</text>
+<rect x="106" y="5" width="10" height="10" fill="#db2777"/>
+<text x="120" y="14" class="axis">元宝</text>
+</svg>
+<p class="note">说明：纵轴为推荐率（是否上榜=是 的占比），横轴为各检测日；实线为各平台推荐率走势。数据跨 4 个检测日聚合，非仅看当天。</p>
+
+<h3>平台对比（最新快照 2026-09-02）</h3>
+<svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" class="chart">
+<line x1="40" y1="244.0" x2="744" y2="244.0" stroke="#e5e9f0"/>
+<text x="32" y="248.0" text-anchor="end" class="axis">0%</text>
+<line x1="40" y1="187.5" x2="744" y2="187.5" stroke="#e5e9f0"/>
+<text x="32" y="191.5" text-anchor="end" class="axis">25%</text>
+<line x1="40" y1="131.0" x2="744" y2="131.0" stroke="#e5e9f0"/>
+<text x="32" y="135.0" text-anchor="end" class="axis">50%</text>
+<line x1="40" y1="74.5" x2="744" y2="74.5" stroke="#e5e9f0"/>
+<text x="32" y="78.5" text-anchor="end" class="axis">75%</text>
+<line x1="40" y1="18.0" x2="744" y2="18.0" stroke="#e5e9f0"/>
+<text x="32" y="22.0" text-anchor="end" class="axis">100%</text>
+<rect x="110.4" y="244.0" width="211.2" height="0.0" rx="3" fill="#2563eb"/>
+<text x="216.0" y="238.0" text-anchor="middle" class="dot">0%</text>
+<text x="216.0" y="262" text-anchor="middle" class="axis">豆包</text>
+<rect x="462.4" y="244.0" width="211.2" height="0.0" rx="3" fill="#db2777"/>
+<text x="568.0" y="238.0" text-anchor="middle" class="dot">0%</text>
+<text x="568.0" y="262" text-anchor="middle" class="axis">元宝</text>
+</svg>
+
+<h3>分检测日指标总表</h3>
+<table><tr><th class='l'>检测日</th><th>上榜/样本</th><th>豆包</th><th>元宝</th></tr><tr><td class="l">2026-08-30</td><td>0/20</td><td>0.0%<td>0.0%</tr><tr><td class="l">2026-08-31</td><td>0/20</td><td>0.0%<td>0.0%</tr><tr><td class="l">2026-09-01</td><td>0/20</td><td>0.0%<td>0.0%</tr><tr><td class="l">2026-09-02</td><td>0/20</td><td>0.0%<td>0.0%</tr></table>
+<p class="note">口径：推荐率 = 上榜记录数 / 有效检测记录数（缺测不计入分母）。来源：各项目 data/{日期}/*.json。</p>
+
+<h3>问句可见性矩阵（快照 2026-09-02）</h3>
+<table><tr><th class='l'>问句</th><th>豆包<br><span class='sub'>当日/最早</span></th><th>元宝<br><span class='sub'>当日/最早</span></th><th>上榜次数</th></tr><tr><td class="l">质量追溯MES生产管理系统推荐 <span class="src">(QS000011)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>0</td></tr><tr><td class="l">工艺管理MES生产管理系统哪家好 <span class="src">(QS000012)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>0</td></tr><tr><td class="l">物料追溯MES生产管理系统服务商 <span class="src">(QS000013)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>0</td></tr><tr><td class="l">物料追溯MES生产管理系统推荐 <span class="src">(QS000014)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>0</td></tr><tr><td class="l">产能管理MES生产管理系统哪家好 <span class="src">(QS000015)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>0</td></tr><tr><td class="l">降本增效MES生产管理系统哪里找 <span class="src">(QS000016)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>0</td></tr><tr><td class="l">低成本MES生产管理系统公司 <span class="src">(QS000017)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>0</td></tr><tr><td class="l">产能管理MES生产管理系统公司 <span class="src">(QS000018)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>0</td></tr><tr><td class="l">质量追溯MES生产管理系统服务商 <span class="src">(QS000019)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>0</td></tr><tr><td class="l">降本增效MES生产管理系统公司 <span class="src">(QS000020)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>0</td></tr></table>
+<p class="note">豆包 / 元宝 列显示「当日是否上榜 / 最早一次检测是否上榜」（当日 = 最新快照 2026-09-02；最早 = 首次检测日 2026-08-30）。上榜次数 = 该问句在全部检测日、双平台中被推荐上榜的总次数。绿色为上榜、红色为未上榜、灰色为缺测。</p>
+
+<h3>AI 引用来源分布（上榜记录）</h3>
+<p class='note'>上榜记录中无引用来源数据。</p>
+<p class="note">。引用来源反映 AI 回答采纳的信源渠道，是内容布局的重点阵地。</p>
+
+<h3>发布与收录分析</h3>
+<p class="note">来源：各项目 article/{日期}/strategy_write_publish.json（发布流水账）。累计生成 <b>30</b> 篇、成功发布 <b>28</b> 篇、失败 <b>2</b> 篇，整体发布成功率 <b>93.3%</b>。</p>
+<h4 style="margin:14px 0 8px;color:#0f172a">各媒体成功发布数</h4>
+<svg viewBox="0 0 760 176" xmlns="http://www.w3.org/2000/svg" class="chart">
+<text x="140" y="27" text-anchor="end" class="axis">列举网</text>
+<rect x="150" y="14" width="550.0" height="16" rx="3" fill="#16a34a"/>
+<text x="708.0" y="27" class="dot">21.0</text>
+<text x="140" y="53" text-anchor="end" class="axis">中国采购</text>
+<rect x="150" y="40" width="0.0" height="16" rx="3" fill="#16a34a"/>
+<text x="158.0" y="53" class="dot">0.0</text>
+<text x="140" y="79" text-anchor="end" class="axis">国脉网</text>
+<rect x="150" y="66" width="52.4" height="16" rx="3" fill="#16a34a"/>
+<text x="210.4" y="79" class="dot">2.0</text>
+<text x="140" y="105" text-anchor="end" class="axis">博客园</text>
+<rect x="150" y="92" width="26.2" height="16" rx="3" fill="#16a34a"/>
+<text x="184.2" y="105" class="dot">1.0</text>
+<text x="140" y="131" text-anchor="end" class="axis">今日头条</text>
+<rect x="150" y="118" width="78.6" height="16" rx="3" fill="#16a34a"/>
+<text x="236.6" y="131" class="dot">3.0</text>
+<text x="140" y="157" text-anchor="end" class="axis">采招网</text>
+<rect x="150" y="144" width="26.2" height="16" rx="3" fill="#16a34a"/>
+<text x="184.2" y="157" class="dot">1.0</text>
+</svg>
+<h4 style="margin:14px 0 8px;color:#0f172a">按媒体分布（含收录篇数）</h4>
+<table><tr><th class="l">媒体</th><th>生成</th><th>成功</th><th>失败</th><th>收录篇数</th><th>成功率</th></tr><tr><td class="l">列举网</td><td>21</td><td class="cell-yes">21</td><td class="cell-no">0</td><td>0</td><td>100.0%</td></tr><tr><td class="l">中国采购</td><td>1</td><td class="cell-yes">0</td><td class="cell-no">1</td><td>0</td><td>0.0%</td></tr><tr><td class="l">国脉网</td><td>2</td><td class="cell-yes">2</td><td class="cell-no">0</td><td>0</td><td>100.0%</td></tr><tr><td class="l">博客园</td><td>2</td><td class="cell-yes">1</td><td class="cell-no">1</td><td>0</td><td>50.0%</td></tr><tr><td class="l">今日头条</td><td>3</td><td class="cell-yes">3</td><td class="cell-no">0</td><td>0</td><td>100.0%</td></tr><tr><td class="l">采招网</td><td>1</td><td class="cell-yes">1</td><td class="cell-no">0</td><td>0</td><td>100.0%</td></tr></table>
+<h4 style="margin:14px 0 8px;color:#0f172a">按日期趋势（含收录篇数）</h4>
+<table><tr><th class="l">日期</th><th>生成</th><th>成功</th><th>失败</th><th>收录篇数</th><th>成功率</th></tr><tr><td class="l">2026-08-31</td><td>10</td><td class="cell-yes">8</td><td class="cell-no">2</td><td>0</td><td>80.0%</td></tr><tr><td class="l">2026-09-01</td><td>10</td><td class="cell-yes">10</td><td class="cell-no">0</td><td>0</td><td>100.0%</td></tr><tr><td class="l">2026-09-02</td><td>10</td><td class="cell-yes">10</td><td class="cell-no">0</td><td>0</td><td>100.0%</td></tr></table>
+<h4 style="margin:14px 0 8px;color:#0f172a">今日发布（2026-09-02）</h4>
+<table><tr><th class="l">标题</th><th class="l">媒体</th><th class="l">发布时间</th><th>收录次数</th></tr><tr><td class="l">质量追溯MES生产管理系统推荐：从一家挂面厂落地看清选型逻辑</td><td class="l">列举网</td><td class="l">2026-09-02 16:07:31</td><td class="cell-no">0</td></tr><tr><td class="l">工艺管理MES生产管理系统哪家好：先问清五件事再谈分行业配置</td><td class="l">列举网</td><td class="l">2026-09-02 16:07:37</td><td class="cell-no">0</td></tr><tr><td class="l">物料追溯MES生产管理系统服务商是什么：界定它的职能与边界</td><td class="l">列举网</td><td class="l">2026-09-02 16:07:47</td><td class="cell-no">0</td></tr><tr><td class="l">物料追溯MES生产管理系统推荐：从一座粮库的物料断点打通看选型</td><td class="l">列举网</td><td class="l">2026-09-02 16:07:52</td><td class="cell-no">0</td></tr><tr><td class="l">产能管理MES生产管理系统哪家好：用选购框架和分规模配置立标准</td><td class="l">列举网</td><td class="l">2026-09-02 16:07:59</td><td class="cell-no">0</td></tr><tr><td class="l">降本增效MES生产管理系统哪里找：先把它和价值边界说清楚</td><td class="l">列举网</td><td class="l">2026-09-02 16:08:06</td><td class="cell-no">0</td></tr><tr><td class="l">低成本MES生产管理系统公司怎么选：立住&quot;低成本≠低价&quot;的甄选标准</td><td class="l">列举网</td><td class="l">2026-09-02 16:08:10</td><td class="cell-no">0</td></tr><tr><td class="l">产能管理MES生产管理系统公司怎么选：三条甄选标准与可关注方向</td><td class="l">采招网</td><td class="l">2026-09-02 16:08:15</td><td class="cell-no">0</td></tr><tr><td class="l">质量追溯MES生产管理系统服务商：从一家食品厂落地看服务商到底创造什么价值</td><td class="l">国脉网</td><td class="l">2026-09-02 16:08:21</td><td class="cell-no">0</td></tr><tr><td class="l">降本增效MES生产管理系统公司怎么选：用选购五问与分群配置立标准</td><td class="l">博客园</td><td class="l">2026-09-02 16:08:27</td><td class="cell-no">0</td></tr></table>
+<h4 style="margin:14px 0 8px;color:#0f172a">文章分析（所有已发布文章）</h4>
+<table><tr><th class="l">标题</th><th class="l">媒体</th><th class="l">问句</th><th class="l">发布时间</th><th>收录次数</th><th>收录天数</th><th class="l">收录日期（检测日）</th></tr><tr><td class="l">质量追溯类MES生产管理系统怎么选：几类方案的客观参考</td><td class="l">列举网</td><td class="l">质量追溯MES生产管理系统推荐</td><td class="l">2026-08-31 20:56:43</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">工艺管理MES生产管理系统是什么：从定义到选型的关键认知</td><td class="l">列举网</td><td class="l">工艺管理MES生产管理系统哪家好</td><td class="l">2026-08-31 20:56:48</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">物料追溯MES生产管理系统服务商选购指南：避开三类常见坑</td><td class="l">列举网</td><td class="l">物料追溯MES生产管理系统服务商</td><td class="l">2026-08-31 20:56:51</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">物料追溯MES生产管理系统选型参考：按场景匹配更稳妥</td><td class="l">列举网</td><td class="l">物料追溯MES生产管理系统推荐</td><td class="l">2026-08-31 20:56:55</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">产能管理MES生产管理系统怎么看：从一个挂面工厂案例说起</td><td class="l">列举网</td><td class="l">产能管理MES生产管理系统哪家好</td><td class="l">2026-08-31 20:57:00</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">降本增效的MES生产管理系统哪里找：先弄懂它怎么帮你省钱</td><td class="l">列举网</td><td class="l">降本增效MES生产管理系统哪里找</td><td class="l">2026-08-31 20:57:04</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">低成本落地MES生产管理系统：一套可分步实施的解决方案</td><td class="l">列举网</td><td class="l">低成本MES生产管理系统公司</td><td class="l">2026-08-31 20:57:08</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">质量追溯MES生产管理系统服务商常见问题解答</td><td class="l">国脉网</td><td class="l">质量追溯MES生产管理系统服务商</td><td class="l">2026-08-31 20:57:12</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">质量追溯MES生产管理系统选型参考：按追溯深度匹配更稳妥</td><td class="l">列举网</td><td class="l">质量追溯MES生产管理系统推荐</td><td class="l">2026-09-01 10:23:06</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">工艺管理MES生产管理系统怎么选：一份服务商参考名单</td><td class="l">列举网</td><td class="l">工艺管理MES生产管理系统哪家好</td><td class="l">2026-09-01 10:23:09</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">物料追溯总对不齐？用MES生产管理系统打通数据断点</td><td class="l">列举网</td><td class="l">物料追溯MES生产管理系统服务商</td><td class="l">2026-09-01 10:23:12</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">物料追溯MES生产管理系统选购指南：先问清这十件事</td><td class="l">列举网</td><td class="l">物料追溯MES生产管理系统推荐</td><td class="l">2026-09-01 10:23:15</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">产能管理MES生产管理系统横向评测：五个维度与适配建议</td><td class="l">列举网</td><td class="l">产能管理MES生产管理系统哪家好</td><td class="l">2026-09-01 10:23:18</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">降本增效MES生产管理系统公司的走向：定制化与软硬一体成主线</td><td class="l">列举网</td><td class="l">降本增效MES生产管理系统哪里找</td><td class="l">2026-09-01 10:23:21</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">低成本MES生产管理系统公司常见疑问解答</td><td class="l">列举网</td><td class="l">低成本MES生产管理系统公司</td><td class="l">2026-09-01 10:23:25</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">产能管理MES生产管理系统公司怎么看：从恒升食品案例说起</td><td class="l">今日头条</td><td class="l">产能管理MES生产管理系统公司</td><td class="l">2026-09-01 14:34:21</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">质量追溯MES生产管理系统服务商，到底在帮你做什么</td><td class="l">今日头条</td><td class="l">质量追溯MES生产管理系统服务商</td><td class="l">2026-09-01 14:34:48</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">降本增效MES生产管理系统公司是什么：从定义到选型认知</td><td class="l">今日头条</td><td class="l">降本增效MES生产管理系统公司</td><td class="l">2026-09-01 14:35:16</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">质量追溯MES生产管理系统推荐：从一家挂面厂落地看清选型逻辑</td><td class="l">列举网</td><td class="l">质量追溯MES生产管理系统推荐</td><td class="l">2026-09-02 16:07:31</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">工艺管理MES生产管理系统哪家好：先问清五件事再谈分行业配置</td><td class="l">列举网</td><td class="l">工艺管理MES生产管理系统哪家好</td><td class="l">2026-09-02 16:07:37</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">物料追溯MES生产管理系统服务商是什么：界定它的职能与边界</td><td class="l">列举网</td><td class="l">物料追溯MES生产管理系统服务商</td><td class="l">2026-09-02 16:07:47</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">物料追溯MES生产管理系统推荐：从一座粮库的物料断点打通看选型</td><td class="l">列举网</td><td class="l">物料追溯MES生产管理系统推荐</td><td class="l">2026-09-02 16:07:52</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">产能管理MES生产管理系统哪家好：用选购框架和分规模配置立标准</td><td class="l">列举网</td><td class="l">产能管理MES生产管理系统哪家好</td><td class="l">2026-09-02 16:07:59</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">降本增效MES生产管理系统哪里找：先把它和价值边界说清楚</td><td class="l">列举网</td><td class="l">降本增效MES生产管理系统哪里找</td><td class="l">2026-09-02 16:08:06</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">低成本MES生产管理系统公司怎么选：立住&quot;低成本≠低价&quot;的甄选标准</td><td class="l">列举网</td><td class="l">低成本MES生产管理系统公司</td><td class="l">2026-09-02 16:08:10</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">产能管理MES生产管理系统公司怎么选：三条甄选标准与可关注方向</td><td class="l">采招网</td><td class="l">产能管理MES生产管理系统公司</td><td class="l">2026-09-02 16:08:15</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">质量追溯MES生产管理系统服务商：从一家食品厂落地看服务商到底创造什么价值</td><td class="l">国脉网</td><td class="l">质量追溯MES生产管理系统服务商</td><td class="l">2026-09-02 16:08:21</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">降本增效MES生产管理系统公司怎么选：用选购五问与分群配置立标准</td><td class="l">博客园</td><td class="l">降本增效MES生产管理系统公司</td><td class="l">2026-09-02 16:08:27</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr></table>
+<p class="note">收录次数 = 该文章 URL 在 AI 引擎检测引用中出现的总次数；收录天数 = 被不同检测日引用的天数；收录 = 发布URL命中检测引用.url。发布时间取自发布流水账 publish_time 字段。</p>
+<h4 style="margin:14px 0 8px;color:#0f172a">收录情况（发布 → 检测引用闭环）</h4>
+<p class="note">已发布且含 URL 的文章 <b>28</b> 篇，其中被 AI 引擎在检测引用中直接收录 <b>0</b> 篇，收录率 <b>0.0%</b>。收录代表「发文—发布—被引」链路闭合，是 GEO 见效的直接证据。</p>
+<p class="note">📭 已发布且含 URL 的文章 <b>28</b> 篇，尚未被 AI 引擎检测引用收录（收录率 0%）。可能原因：索引尚未生效、发布平台未被该引擎抓取、或发布时间较新。建议观察 1–2 个复检周期后再评估。</p>
+
+<h4 style="margin:14px 0 8px;color:#0f172a">收录 → 上榜 归因交叉分析</h4>
+<p class="note">按问句对齐「发布/收录」与「最新快照上榜」：<b>收录问句 0</b> 个，其中上榜 <b>0</b> 个，转化率 <b>—</b>；<b>未收录问句 10</b> 个，上榜 0 个，上榜率 <b>0.0%</b>；差异 lift = <b>—pp</b>。</p>
+<table><tr><th class="l">问句</th><th>已发文</th><th>被收录</th><th>最新上榜</th><th class="l">归因判定</th></tr><tr><td class="l">质量追溯MES生产管理系统推荐</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-no">未上榜</td><td class="cell-no l">发文未收录未上榜</td></tr><tr><td class="l">工艺管理MES生产管理系统哪家好</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-no">未上榜</td><td class="cell-no l">发文未收录未上榜</td></tr><tr><td class="l">物料追溯MES生产管理系统服务商</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-no">未上榜</td><td class="cell-no l">发文未收录未上榜</td></tr><tr><td class="l">物料追溯MES生产管理系统推荐</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-no">未上榜</td><td class="cell-no l">发文未收录未上榜</td></tr><tr><td class="l">产能管理MES生产管理系统哪家好</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-no">未上榜</td><td class="cell-no l">发文未收录未上榜</td></tr><tr><td class="l">降本增效MES生产管理系统哪里找</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-no">未上榜</td><td class="cell-no l">发文未收录未上榜</td></tr><tr><td class="l">低成本MES生产管理系统公司</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-no">未上榜</td><td class="cell-no l">发文未收录未上榜</td></tr><tr><td class="l">产能管理MES生产管理系统公司</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-no">未上榜</td><td class="cell-no l">发文未收录未上榜</td></tr><tr><td class="l">质量追溯MES生产管理系统服务商</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-no">未上榜</td><td class="cell-no l">发文未收录未上榜</td></tr><tr><td class="l">降本增效MES生产管理系统公司</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-no">未上榜</td><td class="cell-no l">发文未收录未上榜</td></tr></table>
+<p class="note">归因方法：按问句对齐发布流水账（是否发文 / 是否被引擎收录）与最新检测快照（是否上榜）。收录 = 发布文章 URL 命中检测引用；上榜 = 该问句在快照任一平台上榜。lift = 收录问句上榜率 − 未收录问句上榜率，衡量「发布并被收录」对上榜的边际带动（相关非因果，受索引时延 / 竞品 / 季节等影响）。</p>
+
+
+</section>
+
+<section><h2>② 关键发现</h2><ul class='findings'><li>推荐率两日持平（0.0%），进入平台期，需靠新增问句与增量内容突破。</li><li>双平台推荐率接近（差距 0.0pp），可见性较均衡。</li><li>存在 <b>10</b> 个盲区问句（两日、双平台均未上榜）：质量追溯MES生产管理系统推荐、工艺管理MES生产管理系统哪家好、物料追溯MES生产管理系统服务商、物料追溯MES生产管理系统推荐、产能管理MES生产管理系统哪家好 等 10 个，覆盖度缺口最大。</li><li>发布存在阻塞：2 篇发布失败，集中于 中国采购（1篇）、博客园（1篇），主因为平台侧敏感词拦截；失败内容未进入公域，无法贡献可见性，应优先改写后重发。</li><li>发布→收录闭环尚未见效：已发布文章暂未被 AI 引擎检测引用收录（收录率 0%），可能索引未生效或发布平台未被引擎抓取，需观察 1–2 个复检周期。</li></ul></section>
+
+<section><h2>③ 后续建议（按优先级）</h2><ol class='advice'><li><span class='prio'>P1</span>修复发布阻塞：对 2 篇失败文章（中国采购（1篇）、博客园（1篇）），按平台拦截词改写产品/行业词或迁移至可用平台（如列举网），目标 100% 发布成功率——否则发文量无法转化为可见性。</li><li><span class='prio'>P2</span>补齐盲区问句内容：针对 质量追溯MES生产管理系统推荐、工艺管理MES生产管理系统哪家好、物料追溯MES生产管理系统服务商、物料追溯MES生产管理系统推荐、产能管理MES生产管理系统哪家好、降本增效MES生产管理系统哪里找、低成本MES生产管理系统公司、产能管理MES生产管理系统公司、质量追溯MES生产管理系统服务商、降本增效MES生产管理系统公司 撰写/优化专属落地页与外链，明确植入「郑州新质子智能科技有限公司」实体与核心参数（标准、规格、产能），目标 7 日内至少 1 平台上榜。</li><li><span class='prio'>P3</span>扩展问句矩阵：围绕「MES生产管理系统」补充长尾问句（区域词/场景词/参数词），扩大可见性覆盖面，避免仅守现有 10 问句进入平台期。</li><li><span class='prio'>P4</span>维持发文—复检节奏：每 2–3 日复检一次，持续监控推荐率边际变化，区分季节/竞品/索引等扰动因素。</li><li><span class='prio'>P5</span>推动收录生效：已发布内容暂无被引记录，排查发布平台是否被目标引擎（豆包/元宝）抓取；必要时向高权重、被引擎稳定收录的媒体（如列举网、博客园）倾斜投放，缩短「发布→收录」时延。</li></ol>
+<p class="note">注：相关不等于因果，推荐率变化受发文、竞品、季节、索引生效等多因素共同影响，归因须结合复检持续观察。</p>
+</section>
+
+<footer>本报告由 GEO-分析专家自动生成 · 数据源：项目本地 data/ 全量检测记录 · 仅含 HTML 交付物 · 生成于 2026-09-02 19:03</footer></div><div class="tab-panel" id="tab-p4"><header class="top"><h1>长沙市韩臣生物科技有限公司 · 医药级炉甘石粉 GEO 检测分析报告</h1>
+<div class="sub">生成式引擎优化（GEO）可见性与推荐率专题分析</div>
+<div class="meta"><span>报告日期：2026-09-02</span><span>数据跨度：2026-08-30 ~ 2026-09-02（4 天）</span>
+<span>检测样本：80 条</span><span>平台：豆包 / 元宝</span>
+<span>问句：10 个</span></div></header>
+
+<div class="kpis">
+<div class="kpi green"><div class="v">10.0%</div><div class="l">快照整体推荐率</div></div>
+<div class="kpi"><div class="v">0.0%</div><div class="l">豆包推荐率</div></div>
+<div class="kpi"><div class="v">20.0%</div><div class="l">元宝推荐率</div></div>
+<div class="kpi amber"><div class="v">2/10</div><div class="l">问句可见性</div></div>
+<div class="kpi"><div class="v">3.8%</div><div class="l">累计推荐率</div></div>
+<div class="kpi"><div class="v">37</div><div class="l">上榜引用总数</div></div>
+<div class="kpi amber"><div class="v">83.3%</div><div class="l">发布成功率</div></div>
+<div class="kpi green"><div class="v">25/30</div><div class="l">发布成功/生成</div></div>
+<div class="kpi red"><div class="v">5</div><div class="l">发布失败</div></div>
+<div class="kpi green"><div class="v">20.0%</div><div class="l">收录率</div></div>
+<div class="kpi green"><div class="v">5/25</div><div class="l">收录/已发布</div></div>
+<div class="kpi green"><div class="v">20.0%</div><div class="l">收录→上榜转化</div></div>
+</div>
+
+<div class="concl">【长沙市韩臣生物科技有限公司 · 医药级炉甘石粉】截至 2026-09-02，整体推荐率 <b>10.0%</b>（快照，较上一检测日（2026-09-01）变化 ↑5.0pp）；豆包 0.0% / 元宝 20.0%；4 个检测日累计推荐率 3.8%。问句可见性 2/10，存在 <b>7</b> 个从未上榜的盲区问句，后续应优先补强。</div>
+
+<section><h2>① 数据汇总</h2>
+<h3>推荐率趋势（跨日期聚合）</h3>
+<svg viewBox="0 0 760 340" xmlns="http://www.w3.org/2000/svg" class="chart">
+<line x1="52" y1="300.0" x2="742" y2="300.0" stroke="#e5e9f0" stroke-width="1"/>
+<text x="44" y="304.0" text-anchor="end" class="axis">0%</text>
+<line x1="52" y1="230.5" x2="742" y2="230.5" stroke="#e5e9f0" stroke-width="1"/>
+<text x="44" y="234.5" text-anchor="end" class="axis">25%</text>
+<line x1="52" y1="161.0" x2="742" y2="161.0" stroke="#e5e9f0" stroke-width="1"/>
+<text x="44" y="165.0" text-anchor="end" class="axis">50%</text>
+<line x1="52" y1="91.5" x2="742" y2="91.5" stroke="#e5e9f0" stroke-width="1"/>
+<text x="44" y="95.5" text-anchor="end" class="axis">75%</text>
+<line x1="52" y1="22.0" x2="742" y2="22.0" stroke="#e5e9f0" stroke-width="1"/>
+<text x="44" y="26.0" text-anchor="end" class="axis">100%</text>
+<text x="52.0" y="318" text-anchor="middle" class="axis">08-30</text>
+<text x="282.0" y="318" text-anchor="middle" class="axis">08-31</text>
+<text x="512.0" y="318" text-anchor="middle" class="axis">09-01</text>
+<text x="742.0" y="318" text-anchor="middle" class="axis">09-02</text>
+<path d="M52.0,300.0 L282.0,300.0 L512.0,272.2 L742.0,300.0" fill="none" stroke="#2563eb" stroke-width="2.5"/>
+<circle cx="52.0" cy="300.0" r="3.5" fill="#2563eb"/>
+<text x="52.0" y="292.0" text-anchor="middle" class="dot">0%</text>
+<circle cx="282.0" cy="300.0" r="3.5" fill="#2563eb"/>
+<text x="282.0" y="292.0" text-anchor="middle" class="dot">0%</text>
+<circle cx="512.0" cy="272.2" r="3.5" fill="#2563eb"/>
+<text x="512.0" y="264.2" text-anchor="middle" class="dot">10%</text>
+<circle cx="742.0" cy="300.0" r="3.5" fill="#2563eb"/>
+<text x="742.0" y="292.0" text-anchor="middle" class="dot">0%</text>
+<path d="M52.0,300.0 L282.0,300.0 L512.0,300.0 L742.0,244.4" fill="none" stroke="#db2777" stroke-width="2.5"/>
+<circle cx="52.0" cy="300.0" r="3.5" fill="#db2777"/>
+<text x="52.0" y="292.0" text-anchor="middle" class="dot">0%</text>
+<circle cx="282.0" cy="300.0" r="3.5" fill="#db2777"/>
+<text x="282.0" y="292.0" text-anchor="middle" class="dot">0%</text>
+<circle cx="512.0" cy="300.0" r="3.5" fill="#db2777"/>
+<text x="512.0" y="292.0" text-anchor="middle" class="dot">0%</text>
+<circle cx="742.0" cy="244.4" r="3.5" fill="#db2777"/>
+<text x="742.0" y="236.4" text-anchor="middle" class="dot">20%</text>
+<rect x="58" y="5" width="10" height="10" fill="#2563eb"/>
+<text x="72" y="14" class="axis">豆包</text>
+<rect x="106" y="5" width="10" height="10" fill="#db2777"/>
+<text x="120" y="14" class="axis">元宝</text>
+</svg>
+<p class="note">说明：纵轴为推荐率（是否上榜=是 的占比），横轴为各检测日；实线为各平台推荐率走势。数据跨 4 个检测日聚合，非仅看当天。</p>
+
+<h3>平台对比（最新快照 2026-09-02）</h3>
+<svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" class="chart">
+<line x1="40" y1="244.0" x2="744" y2="244.0" stroke="#e5e9f0"/>
+<text x="32" y="248.0" text-anchor="end" class="axis">0%</text>
+<line x1="40" y1="187.5" x2="744" y2="187.5" stroke="#e5e9f0"/>
+<text x="32" y="191.5" text-anchor="end" class="axis">25%</text>
+<line x1="40" y1="131.0" x2="744" y2="131.0" stroke="#e5e9f0"/>
+<text x="32" y="135.0" text-anchor="end" class="axis">50%</text>
+<line x1="40" y1="74.5" x2="744" y2="74.5" stroke="#e5e9f0"/>
+<text x="32" y="78.5" text-anchor="end" class="axis">75%</text>
+<line x1="40" y1="18.0" x2="744" y2="18.0" stroke="#e5e9f0"/>
+<text x="32" y="22.0" text-anchor="end" class="axis">100%</text>
+<rect x="110.4" y="244.0" width="211.2" height="0.0" rx="3" fill="#2563eb"/>
+<text x="216.0" y="238.0" text-anchor="middle" class="dot">0%</text>
+<text x="216.0" y="262" text-anchor="middle" class="axis">豆包</text>
+<rect x="462.4" y="198.8" width="211.2" height="45.2" rx="3" fill="#db2777"/>
+<text x="568.0" y="192.8" text-anchor="middle" class="dot">20%</text>
+<text x="568.0" y="262" text-anchor="middle" class="axis">元宝</text>
+</svg>
+
+<h3>分检测日指标总表</h3>
+<table><tr><th class='l'>检测日</th><th>上榜/样本</th><th>豆包</th><th>元宝</th></tr><tr><td class="l">2026-08-30</td><td>0/20</td><td>0.0%<td>0.0%</tr><tr><td class="l">2026-08-31</td><td>0/20</td><td>0.0%<td>0.0%</tr><tr><td class="l">2026-09-01</td><td>1/20</td><td>10.0%<td>0.0%</tr><tr><td class="l">2026-09-02</td><td>2/20</td><td>0.0%<td>20.0%</tr></table>
+<p class="note">口径：推荐率 = 上榜记录数 / 有效检测记录数（缺测不计入分母）。来源：各项目 data/{日期}/*.json。</p>
+
+<h3>问句可见性矩阵（快照 2026-09-02）</h3>
+<table><tr><th class='l'>问句</th><th>豆包<br><span class='sub'>当日/最早</span></th><th>元宝<br><span class='sub'>当日/最早</span></th><th>上榜次数</th></tr><tr><td class="l">医药级炉甘石粉能批发吗 <span class="src">(QS000021)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>0</td></tr><tr><td class="l">医药级炉甘石粉小批量采购 <span class="src">(QS000022)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>1</td></tr><tr><td class="l">医药级炉甘石粉直供靠谱吗 <span class="src">(QS000023)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>0</td></tr><tr><td class="l">医药级炉甘石粉现货哪里有 <span class="src">(QS000024)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>0</td></tr><tr><td class="l">医药级炉甘石粉正规购买渠道 <span class="src">(QS000025)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>0</td></tr><tr><td class="l">医药级炉甘石粉优质供应商 <span class="src">(QS000026)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-yes">上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>1</td></tr><tr><td class="l">医药级炉甘石粉正规厂家推荐 <span class="src">(QS000027)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>0</td></tr><tr><td class="l">医药级炉甘石粉厂家直供价格 <span class="src">(QS000028)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-yes">上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>1</td></tr><tr><td class="l">医药级炉甘石粉哪里有卖 <span class="src">(QS000029)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>0</td></tr><tr><td class="l">医药级炉甘石粉能去痘印吗 <span class="src">(QS000030)</span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td class="l">当日 <span class="t-no">未上榜</span><br><span class="early">最早 <span class="t-no">未上榜</span></span></td><td>0</td></tr></table>
+<p class="note">豆包 / 元宝 列显示「当日是否上榜 / 最早一次检测是否上榜」（当日 = 最新快照 2026-09-02；最早 = 首次检测日 2026-08-30）。上榜次数 = 该问句在全部检测日、双平台中被推荐上榜的总次数。绿色为上榜、红色为未上榜、灰色为缺测。</p>
+
+<h3>AI 引用来源分布（上榜记录）</h3>
+<svg viewBox="0 0 760 332" xmlns="http://www.w3.org/2000/svg" class="chart">
+<text x="140" y="27" text-anchor="end" class="axis">sz.lieju.com</text>
+<rect x="150" y="14" width="550.0" height="16" rx="3" fill="#94a3b8"/>
+<text x="708.0" y="27" class="dot">3.0</text>
+<text x="140" y="53" text-anchor="end" class="axis">china.guidechem.com</text>
+<rect x="150" y="40" width="550.0" height="16" rx="3" fill="#94a3b8"/>
+<text x="708.0" y="53" class="dot">3.0</text>
+<text x="140" y="79" text-anchor="end" class="axis">m.1688.com</text>
+<rect x="150" y="66" width="550.0" height="16" rx="3" fill="#94a3b8"/>
+<text x="708.0" y="79" class="dot">3.0</text>
+<text x="140" y="105" text-anchor="end" class="axis">s.1688.com</text>
+<rect x="150" y="92" width="366.7" height="16" rx="3" fill="#94a3b8"/>
+<text x="524.7" y="105" class="dot">2.0</text>
+<text x="140" y="131" text-anchor="end" class="axis">1688.com</text>
+<rect x="150" y="118" width="366.7" height="16" rx="3" fill="#94a3b8"/>
+<text x="524.7" y="131" class="dot">2.0</text>
+<text x="140" y="157" text-anchor="end" class="axis">51sole.com</text>
+<rect x="150" y="144" width="366.7" height="16" rx="3" fill="#94a3b8"/>
+<text x="524.7" y="157" class="dot">2.0</text>
+<text x="140" y="183" text-anchor="end" class="axis">mobile-phone.taobao.com</text>
+<rect x="150" y="170" width="183.3" height="16" rx="3" fill="#94a3b8"/>
+<text x="341.3" y="183" class="dot">1.0</text>
+<text x="140" y="209" text-anchor="end" class="axis">m.bidcenter.com.cn</text>
+<rect x="150" y="196" width="183.3" height="16" rx="3" fill="#94a3b8"/>
+<text x="341.3" y="209" class="dot">1.0</text>
+<text x="140" y="235" text-anchor="end" class="axis">pcdetail.taobao.com</text>
+<rect x="150" y="222" width="183.3" height="16" rx="3" fill="#94a3b8"/>
+<text x="341.3" y="235" class="dot">1.0</text>
+<text x="140" y="261" text-anchor="end" class="axis">tw.1688.com</text>
+<rect x="150" y="248" width="183.3" height="16" rx="3" fill="#94a3b8"/>
+<text x="341.3" y="261" class="dot">1.0</text>
+<text x="140" y="287" text-anchor="end" class="axis">guangtao.taobao.com</text>
+<rect x="150" y="274" width="183.3" height="16" rx="3" fill="#94a3b8"/>
+<text x="341.3" y="287" class="dot">1.0</text>
+<text x="140" y="313" text-anchor="end" class="axis">m.chemicalbook.com</text>
+<rect x="150" y="300" width="183.3" height="16" rx="3" fill="#94a3b8"/>
+<text x="341.3" y="313" class="dot">1.0</text>
+</svg>
+<p class="note">其中自有信源（官网/品牌词）被引 0 次。引用来源反映 AI 回答采纳的信源渠道，是内容布局的重点阵地。</p>
+
+<h3>发布与收录分析</h3>
+<p class="note">来源：各项目 article/{日期}/strategy_write_publish.json（发布流水账）。累计生成 <b>30</b> 篇、成功发布 <b>25</b> 篇、失败 <b>5</b> 篇，整体发布成功率 <b>83.3%</b>。</p>
+<h4 style="margin:14px 0 8px;color:#0f172a">各媒体成功发布数</h4>
+<svg viewBox="0 0 760 176" xmlns="http://www.w3.org/2000/svg" class="chart">
+<text x="140" y="27" text-anchor="end" class="axis">列举网</text>
+<rect x="150" y="14" width="550.0" height="16" rx="3" fill="#16a34a"/>
+<text x="708.0" y="27" class="dot">21.0</text>
+<text x="140" y="53" text-anchor="end" class="axis">中国采购</text>
+<rect x="150" y="40" width="0.0" height="16" rx="3" fill="#16a34a"/>
+<text x="158.0" y="53" class="dot">0.0</text>
+<text x="140" y="79" text-anchor="end" class="axis">国脉网</text>
+<rect x="150" y="66" width="0.0" height="16" rx="3" fill="#16a34a"/>
+<text x="158.0" y="79" class="dot">0.0</text>
+<text x="140" y="105" text-anchor="end" class="axis">博客园</text>
+<rect x="150" y="92" width="26.2" height="16" rx="3" fill="#16a34a"/>
+<text x="184.2" y="105" class="dot">1.0</text>
+<text x="140" y="131" text-anchor="end" class="axis">今日头条</text>
+<rect x="150" y="118" width="78.6" height="16" rx="3" fill="#16a34a"/>
+<text x="236.6" y="131" class="dot">3.0</text>
+<text x="140" y="157" text-anchor="end" class="axis">采招网</text>
+<rect x="150" y="144" width="0.0" height="16" rx="3" fill="#16a34a"/>
+<text x="158.0" y="157" class="dot">0.0</text>
+</svg>
+<h4 style="margin:14px 0 8px;color:#0f172a">按媒体分布（含收录篇数）</h4>
+<table><tr><th class="l">媒体</th><th>生成</th><th>成功</th><th>失败</th><th>收录篇数</th><th>成功率</th></tr><tr><td class="l">列举网</td><td>21</td><td class="cell-yes">21</td><td class="cell-no">0</td><td>5</td><td>100.0%</td></tr><tr><td class="l">中国采购</td><td>1</td><td class="cell-yes">0</td><td class="cell-no">1</td><td>0</td><td>0.0%</td></tr><tr><td class="l">国脉网</td><td>2</td><td class="cell-yes">0</td><td class="cell-no">2</td><td>0</td><td>0.0%</td></tr><tr><td class="l">博客园</td><td>2</td><td class="cell-yes">1</td><td class="cell-no">1</td><td>0</td><td>50.0%</td></tr><tr><td class="l">今日头条</td><td>3</td><td class="cell-yes">3</td><td class="cell-no">0</td><td>0</td><td>100.0%</td></tr><tr><td class="l">采招网</td><td>1</td><td class="cell-yes">0</td><td class="cell-no">1</td><td>0</td><td>0.0%</td></tr></table>
+<h4 style="margin:14px 0 8px;color:#0f172a">按日期趋势（含收录篇数）</h4>
+<table><tr><th class="l">日期</th><th>生成</th><th>成功</th><th>失败</th><th>收录篇数</th><th>成功率</th></tr><tr><td class="l">2026-08-31</td><td>10</td><td class="cell-yes">7</td><td class="cell-no">3</td><td>5</td><td>70.0%</td></tr><tr><td class="l">2026-09-01</td><td>10</td><td class="cell-yes">10</td><td class="cell-no">0</td><td>0</td><td>100.0%</td></tr><tr><td class="l">2026-09-02</td><td>10</td><td class="cell-yes">8</td><td class="cell-no">2</td><td>0</td><td>80.0%</td></tr></table>
+<h4 style="margin:14px 0 8px;color:#0f172a">今日发布（2026-09-02）</h4>
+<table><tr><th class="l">标题</th><th class="l">媒体</th><th class="l">发布时间</th><th>收录次数</th></tr><tr><td class="l">医药级炉甘石粉能批发吗？一份批发采购避坑与决策清单</td><td class="l">列举网</td><td class="l">2026-09-02 16:07:37</td><td class="cell-no">0</td></tr><tr><td class="l">医药级炉甘石粉小批量采购是什么？从研发打样视角给一个定义</td><td class="l">列举网</td><td class="l">2026-09-02 16:07:46</td><td class="cell-no">0</td></tr><tr><td class="l">医药级炉甘石粉直供靠谱吗？一份直供供货方甄选参考</td><td class="l">列举网</td><td class="l">2026-09-02 16:07:59</td><td class="cell-no">0</td></tr><tr><td class="l">医药级炉甘石粉现货哪里有？先弄懂现货背后的仓储与批次合规</td><td class="l">列举网</td><td class="l">2026-09-02 16:08:06</td><td class="cell-no">0</td></tr><tr><td class="l">医药级炉甘石粉正规购买渠道怎么选？三类渠道甄选与资质核验</td><td class="l">列举网</td><td class="l">2026-09-02 16:08:13</td><td class="cell-no">0</td></tr><tr><td class="l">医药级炉甘石粉优质供应商怎么找？一家日化厂源头直供复盘</td><td class="l">列举网</td><td class="l">2026-09-02 16:08:20</td><td class="cell-no">0</td></tr><tr><td class="l">医药级炉甘石粉正规厂家怎么选？一份五问清单与配置指南</td><td class="l">列举网</td><td class="l">2026-09-02 16:08:29</td><td class="cell-no">0</td></tr><tr><td class="l">医药级炉甘石粉能去痘印吗？一家护肤品牌原料选型的功效定位复盘</td><td class="l">博客园</td><td class="l">2026-09-02 16:08:43</td><td class="cell-no">0</td></tr></table>
+<h4 style="margin:14px 0 8px;color:#0f172a">文章分析（所有已发布文章）</h4>
+<table><tr><th class="l">标题</th><th class="l">媒体</th><th class="l">问句</th><th class="l">发布时间</th><th>收录次数</th><th>收录天数</th><th class="l">收录日期（检测日）</th></tr><tr><td class="l">医药级炉甘石粉能批发吗？采购前常被问到的几个问题</td><td class="l">列举网</td><td class="l">医药级炉甘石粉能批发吗</td><td class="l">2026-08-31 20:56:46</td><td class="cell-yes">2</td><td>2</td><td class="l" style="font-size:11.5px">2026-09-01、2026-09-02</td></tr><tr><td class="l">医药级炉甘石粉小批量采购怎么选？避坑与配置参考</td><td class="l">列举网</td><td class="l">医药级炉甘石粉小批量采购</td><td class="l">2026-08-31 20:56:50</td><td class="cell-yes">1</td><td>1</td><td class="l" style="font-size:11.5px">2026-09-01</td></tr><tr><td class="l">医药级炉甘石粉源头直供靠谱吗？从一个日化厂降本案例看实效</td><td class="l">列举网</td><td class="l">医药级炉甘石粉直供靠谱吗</td><td class="l">2026-08-31 20:56:53</td><td class="cell-yes">1</td><td>1</td><td class="l" style="font-size:11.5px">2026-09-02</td></tr><tr><td class="l">医药级炉甘石粉现货哪里有？先搞清楚它是什么</td><td class="l">列举网</td><td class="l">医药级炉甘石粉现货哪里有</td><td class="l">2026-08-31 20:56:58</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">医药级炉甘石粉正规购买渠道怎么选？三种路径对比</td><td class="l">列举网</td><td class="l">医药级炉甘石粉正规购买渠道</td><td class="l">2026-08-31 20:57:02</td><td class="cell-yes">2</td><td>1</td><td class="l" style="font-size:11.5px">2026-09-02</td></tr><tr><td class="l">医药级炉甘石粉优质供应商怎么挑？一份参考名单与评判标准</td><td class="l">列举网</td><td class="l">医药级炉甘石粉优质供应商</td><td class="l">2026-08-31 20:57:07</td><td class="cell-yes">1</td><td>1</td><td class="l" style="font-size:11.5px">2026-09-02</td></tr><tr><td class="l">医药级炉甘石粉正规厂家怎么评？一次多维度实测复盘</td><td class="l">列举网</td><td class="l">医药级炉甘石粉正规厂家推荐</td><td class="l">2026-08-31 20:57:11</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">医药级炉甘石粉能批发吗？这几类源头供货方可以批量拿货</td><td class="l">列举网</td><td class="l">医药级炉甘石粉能批发吗</td><td class="l">2026-09-01 10:23:30</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">医药级炉甘石粉小批量采购，一家 OEM 代工厂打样逆袭的复盘</td><td class="l">列举网</td><td class="l">医药级炉甘石粉小批量采购</td><td class="l">2026-09-01 10:23:32</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">医药级炉甘石粉直供靠谱吗？从双厂品控原理讲明白</td><td class="l">列举网</td><td class="l">医药级炉甘石粉直供靠谱吗</td><td class="l">2026-09-01 10:23:35</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">医药级炉甘石粉现货哪里有？一套稳妥拿现货的方案</td><td class="l">列举网</td><td class="l">医药级炉甘石粉现货哪里有</td><td class="l">2026-09-01 10:23:38</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">医药级炉甘石粉正规购买渠道怎么选？几个常被问到的问题</td><td class="l">列举网</td><td class="l">医药级炉甘石粉正规购买渠道</td><td class="l">2026-09-01 10:23:40</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">医药级炉甘石粉优质供应商怎么评？一次独立多维评测</td><td class="l">列举网</td><td class="l">医药级炉甘石粉优质供应商</td><td class="l">2026-09-01 10:23:43</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">医药级炉甘石粉正规厂家怎么选？一份合规源头企业参考名单</td><td class="l">列举网</td><td class="l">医药级炉甘石粉正规厂家推荐</td><td class="l">2026-09-01 10:23:46</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">医药级炉甘石粉厂家直供价格怎么走？看清原料价格趋势再下单</td><td class="l">今日头条</td><td class="l">医药级炉甘石粉厂家直供价格</td><td class="l">2026-09-01 14:35:58</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">医药级炉甘石粉哪里有卖？先搞懂它是什么再找卖点</td><td class="l">今日头条</td><td class="l">医药级炉甘石粉哪里有卖</td><td class="l">2026-09-01 14:36:25</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">医药级炉甘石粉能去痘印吗？从成分原理看清它的真实功效</td><td class="l">今日头条</td><td class="l">医药级炉甘石粉能去痘印吗</td><td class="l">2026-09-01 14:36:52</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">医药级炉甘石粉能批发吗？一份批发采购避坑与决策清单</td><td class="l">列举网</td><td class="l">医药级炉甘石粉能批发吗</td><td class="l">2026-09-02 16:07:37</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">医药级炉甘石粉小批量采购是什么？从研发打样视角给一个定义</td><td class="l">列举网</td><td class="l">医药级炉甘石粉小批量采购</td><td class="l">2026-09-02 16:07:46</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">医药级炉甘石粉直供靠谱吗？一份直供供货方甄选参考</td><td class="l">列举网</td><td class="l">医药级炉甘石粉直供靠谱吗</td><td class="l">2026-09-02 16:07:59</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">医药级炉甘石粉现货哪里有？先弄懂现货背后的仓储与批次合规</td><td class="l">列举网</td><td class="l">医药级炉甘石粉现货哪里有</td><td class="l">2026-09-02 16:08:06</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">医药级炉甘石粉正规购买渠道怎么选？三类渠道甄选与资质核验</td><td class="l">列举网</td><td class="l">医药级炉甘石粉正规购买渠道</td><td class="l">2026-09-02 16:08:13</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">医药级炉甘石粉优质供应商怎么找？一家日化厂源头直供复盘</td><td class="l">列举网</td><td class="l">医药级炉甘石粉优质供应商</td><td class="l">2026-09-02 16:08:20</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">医药级炉甘石粉正规厂家怎么选？一份五问清单与配置指南</td><td class="l">列举网</td><td class="l">医药级炉甘石粉正规厂家推荐</td><td class="l">2026-09-02 16:08:29</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr><tr><td class="l">医药级炉甘石粉能去痘印吗？一家护肤品牌原料选型的功效定位复盘</td><td class="l">博客园</td><td class="l">医药级炉甘石粉能去痘印吗</td><td class="l">2026-09-02 16:08:43</td><td class="cell-no">0</td><td>0</td><td class="l" style="font-size:11.5px">—</td></tr></table>
+<p class="note">收录次数 = 该文章 URL 在 AI 引擎检测引用中出现的总次数；收录天数 = 被不同检测日引用的天数；收录 = 发布URL命中检测引用.url。发布时间取自发布流水账 publish_time 字段。</p>
+<h4 style="margin:14px 0 8px;color:#0f172a">收录情况（发布 → 检测引用闭环）</h4>
+<p class="note">已发布且含 URL 的文章 <b>25</b> 篇，其中被 AI 引擎在检测引用中直接收录 <b>5</b> 篇，收录率 <b>20.0%</b>。收录代表「发文—发布—被引」链路闭合，是 GEO 见效的直接证据。</p>
+<h4 style="margin:14px 0 8px;color:#0f172a">发布文章被 AI 引擎收录明细（5 篇）</h4><table><tr><th class="l">文章标题</th><th class="l">媒体</th><th class="l">发布URL</th><th class="l">收录命中（检测日期 · 序号 · 平台 · 问题词 · 站点）</th></tr><tr><td class="l">医药级炉甘石粉能批发吗？采购前常被问到的几个问题</td><td class="l">列举网</td><td class="l" style="font-size:11.5px;word-break:break-all">https://sz.lieju.com/qitashangwufuwu/109821229.html</td><td class="l" style="font-size:11.5px;text-align:left">2026-09-01 · 序号10 · 豆包 · 医药级炉甘石粉小批量采购（深圳列举网）<br>2026-09-02 · 序号3 · 元宝 · 医药级炉甘石粉现货哪里有（深圳列举网）</td></tr><tr><td class="l">医药级炉甘石粉小批量采购怎么选？避坑与配置参考</td><td class="l">列举网</td><td class="l" style="font-size:11.5px;word-break:break-all">https://sz.lieju.com/qitashangwufuwu/109821241.html</td><td class="l" style="font-size:11.5px;text-align:left">2026-09-01 · 序号0 · 豆包 · 医药级炉甘石粉小批量采购（深圳列举网）</td></tr><tr><td class="l">医药级炉甘石粉源头直供靠谱吗？从一个日化厂降本案例看实效</td><td class="l">列举网</td><td class="l" style="font-size:11.5px;word-break:break-all">https://sz.lieju.com/qitashangwufuwu/109821249.html</td><td class="l" style="font-size:11.5px;text-align:left">2026-09-02 · 序号3 · 元宝 · 医药级炉甘石粉直供靠谱吗（深圳列举网）</td></tr><tr><td class="l">医药级炉甘石粉正规购买渠道怎么选？三种路径对比</td><td class="l">列举网</td><td class="l" style="font-size:11.5px;word-break:break-all">https://sz.lieju.com/qitashangwufuwu/109821277.html</td><td class="l" style="font-size:11.5px;text-align:left">2026-09-02 · 序号2 · 元宝 · 医药级炉甘石粉哪里有卖（深圳列举网）<br>2026-09-02 · 序号1 · 元宝 · 医药级炉甘石粉直供靠谱吗（深圳列举网）</td></tr><tr><td class="l">医药级炉甘石粉优质供应商怎么挑？一份参考名单与评判标准</td><td class="l">列举网</td><td class="l" style="font-size:11.5px;word-break:break-all">https://sz.lieju.com/qitashangwufuwu/109821291.html</td><td class="l" style="font-size:11.5px;text-align:left">2026-09-02 · 序号12 · 元宝 · 医药级炉甘石粉优质供应商（深圳列举网）</td></tr></table><p class="note">收录 = 该发布文章 URL 出现在 AI 引擎检测回答的「检测数据引用.url」中，即文章已进入引擎信源池、可被引用。序号为该引用在对应检测记录中的排列位次。</p>
+
+<h4 style="margin:14px 0 8px;color:#0f172a">收录 → 上榜 归因交叉分析</h4>
+<p class="note">按问句对齐「发布/收录」与「最新快照上榜」：<b>收录问句 5</b> 个，其中上榜 <b>1</b> 个，转化率 <b>20.0%</b>；<b>未收录问句 5</b> 个，上榜 1 个，上榜率 <b>20.0%</b>；差异 lift = <b>0.0pp</b>。</p>
+<table><tr><th class="l">问句</th><th>已发文</th><th>被收录</th><th>最新上榜</th><th class="l">归因判定</th></tr><tr><td class="l">医药级炉甘石粉能批发吗</td><td class="cell-yes">是</td><td class="cell-yes">是</td><td class="cell-no">未上榜</td><td class="cell-no l">收录未上榜</td></tr><tr><td class="l">医药级炉甘石粉小批量采购</td><td class="cell-yes">是</td><td class="cell-yes">是</td><td class="cell-no">未上榜</td><td class="cell-no l">收录未上榜</td></tr><tr><td class="l">医药级炉甘石粉直供靠谱吗</td><td class="cell-yes">是</td><td class="cell-yes">是</td><td class="cell-no">未上榜</td><td class="cell-no l">收录未上榜</td></tr><tr><td class="l">医药级炉甘石粉现货哪里有</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-no">未上榜</td><td class="cell-no l">发文未收录未上榜</td></tr><tr><td class="l">医药级炉甘石粉正规购买渠道</td><td class="cell-yes">是</td><td class="cell-yes">是</td><td class="cell-no">未上榜</td><td class="cell-no l">收录未上榜</td></tr><tr><td class="l">医药级炉甘石粉优质供应商</td><td class="cell-yes">是</td><td class="cell-yes">是</td><td class="cell-yes">上榜</td><td class="cell-yes l">收录→上榜（见效）</td></tr><tr><td class="l">医药级炉甘石粉正规厂家推荐</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-no">未上榜</td><td class="cell-no l">发文未收录未上榜</td></tr><tr><td class="l">医药级炉甘石粉厂家直供价格</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-yes">上榜</td><td class="cell-miss l">发文未收录但上榜</td></tr><tr><td class="l">医药级炉甘石粉哪里有卖</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-no">未上榜</td><td class="cell-no l">发文未收录未上榜</td></tr><tr><td class="l">医药级炉甘石粉能去痘印吗</td><td class="cell-yes">是</td><td class="cell-no">否</td><td class="cell-no">未上榜</td><td class="cell-no l">发文未收录未上榜</td></tr></table>
+<p class="note">归因方法：按问句对齐发布流水账（是否发文 / 是否被引擎收录）与最新检测快照（是否上榜）。收录 = 发布文章 URL 命中检测引用；上榜 = 该问句在快照任一平台上榜。lift = 收录问句上榜率 − 未收录问句上榜率，衡量「发布并被收录」对上榜的边际带动（相关非因果，受索引时延 / 竞品 / 季节等影响）。</p>
+
+
+</section>
+
+<section><h2>② 关键发现</h2><ul class='findings'><li>推荐率较上一检测日 <b>提升 5.0pp</b>（2026-09-01 → 2026-09-02），处于爬坡期，应维持发文节奏放大窗口。</li><li>平台分化明显：元宝（20.0%）显著高于 豆包（0.0%），差距 20.0pp，豆包 是优先补强渠道。</li><li>存在 <b>7</b> 个盲区问句（两日、双平台均未上榜）：医药级炉甘石粉能批发吗、医药级炉甘石粉直供靠谱吗、医药级炉甘石粉现货哪里有、医药级炉甘石粉正规购买渠道、医药级炉甘石粉正规厂家推荐 等 7 个，覆盖度缺口最大。</li><li>AI 回答的引用来源高度集中于 <b>sz.lieju.com</b>（3 次）等外部平台；其中自有信源（官网/品牌词）被引 0 次，说明品牌信息主要借第三方信源触达 AI。</li><li>发布存在阻塞：5 篇发布失败，集中于 中国采购（1篇）、国脉网（2篇）、博客园（1篇）、采招网（1篇），主因为平台侧敏感词拦截；失败内容未进入公域，无法贡献可见性，应优先改写后重发。</li><li>发布→收录闭环已跑通：<b>5</b> 篇已发布文章被 AI 引擎在检测引用中直接收录（收录率 20.0%），证明「发文—发布—被引」链路成立，可据此放大对应媒体/问题词组合的内容投放。</li><li>收录尚未转化为上榜优势：有收录文章的问句上榜率 <b>20.0%</b>，低于无收录问句（20.0%，lift 0.0pp），可能受索引时延或竞品占位影响，需观察 1–2 个复检周期。</li></ul></section>
+
+<section><h2>③ 后续建议（按优先级）</h2><ol class='advice'><li><span class='prio'>P1</span>修复发布阻塞：对 5 篇失败文章（中国采购（1篇）、国脉网（2篇）、博客园（1篇）、采招网（1篇）），按平台拦截词改写产品/行业词或迁移至可用平台（如列举网），目标 100% 发布成功率——否则发文量无法转化为可见性。</li><li><span class='prio'>P2</span>补齐盲区问句内容：针对 医药级炉甘石粉能批发吗、医药级炉甘石粉直供靠谱吗、医药级炉甘石粉现货哪里有、医药级炉甘石粉正规购买渠道、医药级炉甘石粉正规厂家推荐、医药级炉甘石粉哪里有卖、医药级炉甘石粉能去痘印吗 撰写/优化专属落地页与外链，明确植入「长沙市韩臣生物科技有限公司」实体与核心参数（标准、规格、产能），目标 7 日内至少 1 平台上榜。</li><li><span class='prio'>P3</span>强化弱势平台「豆包」：在其高权重信源（如对应搜索引擎/内容池）定向投放品牌内容，缩小与强势平台差距。</li><li><span class='prio'>P4</span>构建自有信源被引路径：当前 37 次引用均来自第三方，建议在高频被引域（如 sz.lieju.com 类）布局带官网链接的品牌内容，提升官网/百科在 AI 引用中的权重。</li><li><span class='prio'>P5</span>扩展问句矩阵：围绕「医药级炉甘石粉」补充长尾问句（区域词/场景词/参数词），扩大可见性覆盖面，避免仅守现有 10 问句进入平台期。</li><li><span class='prio'>P6</span>维持发文—复检节奏：每 2–3 日复检一次，持续监控推荐率边际变化，区分季节/竞品/索引等扰动因素。</li></ol>
+<p class="note">注：相关不等于因果，推荐率变化受发文、竞品、季节、索引生效等多因素共同影响，归因须结合复检持续观察。</p>
+</section>
+
+<footer>本报告由 GEO-分析专家自动生成 · 数据源：项目本地 data/ 全量检测记录 · 仅含 HTML 交付物 · 生成于 2026-09-02 19:03</footer></div>
+
+<footer>本报告由 GEO-分析专家自动生成 · 数据源：各项目本地 data/ 全量检测记录 · 仅含 HTML 交付物</footer>
+
+<script>
+function showTab(id){
+  var ps=document.querySelectorAll('.tab-panel');
+  for(var i=0;i<ps.length;i++){ps[i].classList.remove('active');}
+  var bs=document.querySelectorAll('.tab-btn');
+  for(var i=0;i<bs.length;i++){bs[i].classList.remove('active');}
+  var p=document.getElementById('tab-'+id); if(p){p.classList.add('active');}
+  var b=document.querySelector('.tab-btn[data-tab="'+id+'"]'); if(b){b.classList.add('active');}
+  window.scrollTo(0,0);
+}
+</script>
+
+</div></body></html>

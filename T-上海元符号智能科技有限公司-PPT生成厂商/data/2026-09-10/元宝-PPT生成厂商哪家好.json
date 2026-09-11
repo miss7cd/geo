@@ -1,0 +1,210 @@
+{
+  "检测编号": "5c45b64b2ae049f3a8abab6d16ee00f1",
+  "问题词编号": "QS000043",
+  "问题词": "PPT生成厂商哪家好",
+  "平台": "元宝",
+  "内容": "没有“绝对最好”的 PPT 生成厂商，主要看你是个人办公、企业部署、设计路演，还是长文档转 PPT。2025–2026 年主流格局如下：\n一、国内中文办公：最稳\n•\nWPS AI（金山办公）：和 WPS 文字/表格/演示打通，中文汇报、周报、总结、课件最省心，导出 PPTX 兼容性好，企业/政企/学校接受度最高。\n→ 日常办公、已用 WPS 的团队，首选。\n•\n百度文库 AI PPT：背靠文库资源，内容素材多、出稿快，适合课件、资料型 PPT、标准化汇报。\n•\n讯飞智文（科大讯飞）：中文语义稳，支持语音转 PPT、演讲辅助，公文/商务/会议记录场景好用，企业合规和中文表达强。\n•\n通义千问 / 豆包 / Kimi：\n•\n通义：阿里系，轻量出稿、和钉钉生态近；\n•\n豆包：零门槛、免费友好、临时应急；\n•\nKimi：长文档/研报/论文提炼最强，但排版偏朴素。\n二、设计和路演：好看但需返工\n•\nGamma：海外代表，设计感、卡片式演示、叙事感最强，适合产品发布、融资路演、对外分享。\n缺点：中文排版一般，国内访问不稳定，导出 PPTX 后常要修字体/版式。\n•\nCanva 可画：模板和素材强，适合品牌宣传、市场、活动、社媒风演示。\n•\nBeautiful.ai：自动排版、商业提案感强，英文企业环境更顺。\n三、企业/团队/私有化：看集成与数据安全\n•\nWPS AI 企业版：国产办公栈最顺，权限、云文档、模板统一。\n•\n讯飞智文企业版：语音、中文汇报、行业模板、合规场景。\n•\n文多多 / 笔格 / 博思 AIPPT 等：部分支持私有化部署、行业模板、政务/金融/能源/医疗场景。\n•\nMicrosoft 365 Copilot：如果公司本来就用 Office，PowerPoint 原生工作流最稳，但按席位订阅、价格高。\n•\nGamma / Beautiful.ai / Pitch：适合跨境、设计驱动、初创团队，不是传统政企首选。\n四、快速结论\n•\n日常中文汇报：WPS AI\n•\n长文档/论文/研报转 PPT：Kimi\n•\n语音口述/会议记录：讯飞智文\n•\n课件/资料型内容：百度文库 AI PPT\n•\n路演/融资/产品发布：Gamma / Canva\n•\n公司用 Office 不想换栈：Microsoft 365 Copilot\n•\n企业私有化/数据安全：讯飞智文企业版、文多多、笔格、博思等国产方案\n•\n零成本试试：豆包、通义千问、Kimi 免费额度\n关键别只看“一键生成”：要看能否导出可编辑 PPTX、字体图表会不会崩、内容会不会瞎编数据、能不能套公司模板。\n如果你愿意，我可以按「个人/小团队/中大企业 + 中文汇报/路演/长文档/私有化」给你直接出一张选型表。\n源\n有哪些国外PPT生成厂商？\nWPS AI PPT生成后如何修改\nWPS AI和讯飞智文在中文排版和数据准确性上的具体区别是什么？\n下载元宝电脑版，体验高效 AI 助手",
+  "是否上榜": "否",
+  "检测是否上榜词": "光向量智能科技,文朵朵",
+  "检测数据引用": [
+    {
+      "引用编号": "2fea0f9dfd80416ca9e8c366a359f419",
+      "检测编号": "5c45b64b2ae049f3a8abab6d16ee00f1",
+      "站点名称": "ima知识号",
+      "序号": 1,
+      "标题": "@职场AI提效工具实操手册:第04期:AI做PP...",
+      "发布时间": "",
+      "url": "https://ima.qq.com/wiki/?shareId=98bfaef754eda55efd00228c5f90ed124dd88f7576bbe55e96c5fc0caa6a09e0&mediaId=note_6516b5fac16c7755ac9854e8443e82f5_74779140229952867477788026099015&action=openDetailDrawer&webFrom=10000171"
+    },
+    {
+      "引用编号": "e3cb71ae0cae4b53b750b429cfbc6f00",
+      "检测编号": "5c45b64b2ae049f3a8abab6d16ee00f1",
+      "站点名称": "islide.cc",
+      "序号": 2,
+      "标题": "AI生成PPT工具全评测:2026年哪款最适合你?iSlide带你选对不踩坑",
+      "发布时间": "",
+      "url": "https://www.islide.cc/blog/744"
+    },
+    {
+      "引用编号": "dbdacf52e80e4f34b14b51ec7c7193c3",
+      "检测编号": "5c45b64b2ae049f3a8abab6d16ee00f1",
+      "站点名称": "bigesj.com",
+      "序号": 3,
+      "标题": "实测5款AI生成PPT工具,真实测评优缺点,教师办公省时省力",
+      "发布时间": "",
+      "url": "https://bigesj.com/article/detail/153.html"
+    },
+    {
+      "引用编号": "ca2a88204cd044cab045f1c441690075",
+      "检测编号": "5c45b64b2ae049f3a8abab6d16ee00f1",
+      "站点名称": "ima知识号",
+      "序号": 4,
+      "标题": "@AI PPT:我用AI 10分钟做...",
+      "发布时间": "",
+      "url": "https://ima.qq.com/wiki/?shareId=0e42d15732d49a9c9875a07b3b4a0e8b0f1e21a9d228b96f20d0055b272282b9&mediaId=wechatarticle_5f1edcb4f787a4bb7c23e8d872a55179_75d8d5fe45369eb6b9a416f097942fe67458073614497352&action=openDetailDrawer&webFrom=10000171"
+    },
+    {
+      "引用编号": "81c3f37b625140668ac4cd0a6fb0cf8c",
+      "检测编号": "5c45b64b2ae049f3a8abab6d16ee00f1",
+      "站点名称": "bigesj.com",
+      "序号": 5,
+      "标题": "实测6款AI生成PPT工具 省时天花板!",
+      "发布时间": "",
+      "url": "https://bigesj.com/article/detail/133.html"
+    },
+    {
+      "引用编号": "562fb9603f794257bb26cd355d262024",
+      "检测编号": "5c45b64b2ae049f3a8abab6d16ee00f1",
+      "站点名称": "chatexcel.com",
+      "序号": 6,
+      "标题": "Nano Banana爆火之后:国产AI PPT工具的真实使用对比与选择建议",
+      "发布时间": "",
+      "url": "https://chatexcel.com/blog/domestic-ai-ppt-tool/"
+    },
+    {
+      "引用编号": "357225af30aa41b3b6151097a780e137",
+      "检测编号": "5c45b64b2ae049f3a8abab6d16ee00f1",
+      "站点名称": "优方水务智能体",
+      "序号": 7,
+      "标题": "AI颠覆传统PPT制作!7大工具横评:WPS、KIMI、通义、GAMMA谁是最强职场神器?",
+      "发布时间": "",
+      "url": "http://mp.weixin.qq.com/s?__biz=Mzk2NDc4MzQ1Mg==&mid=2247484468&idx=1&sn=c7fce2183ae8329029598fceb96ca1a5&chksm=c5350457c1f0257b4f029f56ffe0429d78c9e061cf78b53161b6d1cec8ac9a4d8412c6ef4474#rd"
+    },
+    {
+      "引用编号": "b9cee87368da4e5f8abab686de8f700d",
+      "检测编号": "5c45b64b2ae049f3a8abab6d16ee00f1",
+      "站点名称": "digitfeast.com",
+      "序号": 8,
+      "标题": "Best AI Presentation Makers for Enterprise - 4 Tools Tested and Ranked (2026)",
+      "发布时间": "",
+      "url": "https://www.digitfeast.com/2026/06/best-ai-presentation-makers-for-enterprise.html"
+    },
+    {
+      "引用编号": "bbb1fedc78b94ae4b0cf57d97c7e568c",
+      "检测编号": "5c45b64b2ae049f3a8abab6d16ee00f1",
+      "站点名称": "木叶上",
+      "序号": 9,
+      "标题": "AI PPT 工具横向评测:别被一键生成骗了,2026 年到底该用哪款?",
+      "发布时间": "",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1789000703&ver=6957&signature=FJLXvqMxB4HnIREjF3jEA4Gmbpf9qU7dnlkKQX3QUi24vWVWfHMdPOCLFOYFlOXWE2GczBRlvPJ7sD4Iyzo6dgV5sXn0Mp305MxOGYFlCJFYtWfPE3dGn0KNw-FSdr2x&new=1"
+    },
+    {
+      "引用编号": "2745cd10566948398a13bcf978acdde9",
+      "检测编号": "5c45b64b2ae049f3a8abab6d16ee00f1",
+      "站点名称": "PPT定制设计",
+      "序号": 10,
+      "标题": "2026年AI做PPT哪家强?9款主流工具实测,看完不花冤枉钱",
+      "发布时间": "",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1789000703&ver=6957&signature=P79ZFoJocQtQ8agBBtrhAKaYTdpvgWUINlgXe-0dwGnRUysuUu5wEEZvW6xp0SLbdJm-ITAim*8Apnf5QASckTBNMIXY5BranpUYPrQi9p4G8dLLL-f6rcHdIhQo9VCh&new=1"
+    },
+    {
+      "引用编号": "0565bea6a1ed45a4a925c3119907328d",
+      "检测编号": "5c45b64b2ae049f3a8abab6d16ee00f1",
+      "站点名称": "aitoolsbusiness.com",
+      "序号": 11,
+      "标题": "Best AI Presentation Tools 2026 - Slides, Decks, PPT, Templates",
+      "发布时间": "",
+      "url": "https://aitoolsbusiness.com/ai-presentation-tools/"
+    },
+    {
+      "引用编号": "5827721b553847d59cf1f49872b39f87",
+      "检测编号": "5c45b64b2ae049f3a8abab6d16ee00f1",
+      "站点名称": "金山办公",
+      "序号": 12,
+      "标题": "AI PPT生成器哪个好不该只看功能表——从3个真实场景里找答案",
+      "发布时间": "",
+      "url": "https://www.wps.cn/article/xIizxQAn.html"
+    },
+    {
+      "引用编号": "8352979785244cb495663c2237a9c9b3",
+      "检测编号": "5c45b64b2ae049f3a8abab6d16ee00f1",
+      "站点名称": "韩少日记",
+      "序号": 13,
+      "标题": "AI生成PPT,哪个工具更好用?(主流AI工具大盘点)",
+      "发布时间": "",
+      "url": "http://mp.weixin.qq.com/s?__biz=Mzk5MDMzODQ3MA==&mid=2247484753&idx=1&sn=924a58602979f1e1fe8e92da48c34cdc&chksm=c409a6a3dc3b79209cda47ea37e8e4edf965f6a6a6fdaef10e04d061cf892671c9adb25cd3ad#rd"
+    },
+    {
+      "引用编号": "214116a59f204d09ad6302cee887c18a",
+      "检测编号": "5c45b64b2ae049f3a8abab6d16ee00f1",
+      "站点名称": "gxmuzi.com",
+      "序号": 14,
+      "标题": "中小企业AI PPT制作工具怎么选?WPS AI、AiPPT、Kimi、豆包、扣子、Gamma、iSlide七款主流产品深度横评,附按场景与预算分层选型决策框架及3步落地实操路径",
+      "发布时间": "",
+      "url": "https://gxmuzi.com/jishufuwu/990.html"
+    },
+    {
+      "引用编号": "8fe4c4fdc85a4f43a530b60ca9f5d1a7",
+      "检测编号": "5c45b64b2ae049f3a8abab6d16ee00f1",
+      "站点名称": "金山办公",
+      "序号": 15,
+      "标题": "免费AI生成PPT软件横评:8款工具实测,不同场景怎么选",
+      "发布时间": "",
+      "url": "https://www.wps.cn/article/OxFiBO5p.html"
+    },
+    {
+      "引用编号": "637f282b5f0443708299cc944966de6c",
+      "检测编号": "5c45b64b2ae049f3a8abab6d16ee00f1",
+      "站点名称": "金山办公",
+      "序号": 16,
+      "标题": "AI 一键生成 PPT 软件哪个好?想少改稿,选工具前先看这几点",
+      "发布时间": "",
+      "url": "https://www.wps.cn/article/jin-shan-ban-gong-ban-gong-mu-ban-2026-T8xDDyMY.html"
+    },
+    {
+      "引用编号": "98ba5ff0d877494f9a10f63580dd7aa9",
+      "检测编号": "5c45b64b2ae049f3a8abab6d16ee00f1",
+      "站点名称": "金山办公",
+      "序号": 17,
+      "标题": "输入主题自动生成 PPT 的软件有哪些?一份“试用报告式”推荐",
+      "发布时间": "",
+      "url": "https://www.wps.cn/article/ban-gong-ruan-jian-yan-shi-wen-gao-2026-6kfK2qeN.html"
+    },
+    {
+      "引用编号": "4221c74d23ec452cb8e29709ad8e42af",
+      "检测编号": "5c45b64b2ae049f3a8abab6d16ee00f1",
+      "站点名称": "AI学习帮Master",
+      "序号": 18,
+      "标题": "2026年 AI PPT 工具深度图鉴,9 款热门主流产品多维度测评 , 一起挑选最最合适你的一款,精准匹配你的办公场景。 #AI#AI工具测评 #PPT #PPT工具选购#效率提升#职场干货#打工人必备@wps@旁门左道PPT",
+      "发布时间": "",
+      "url": "https://wv.video.qq.com/export/UzFfAgtgekIEAQAAAAAAcekhNxw9lQAAAAstQy6ubaLX4KHWvLEZgBPEhIIAIC0WJ5yOzNPgMFkNCqQuuvqp1QnhHUgphbrwog"
+    },
+    {
+      "引用编号": "59cdae9f642941948a809074243d253a",
+      "检测编号": "5c45b64b2ae049f3a8abab6d16ee00f1",
+      "站点名称": "36aidianping.com",
+      "序号": 19,
+      "标题": "2026年哪个AI生成PPT最好用?主流AI PPT工具深度评测对比",
+      "发布时间": "",
+      "url": "https://www.36aidianping.com/note-detail/3538549317966805"
+    },
+    {
+      "引用编号": "0c07888338d14212affa17206710e60d",
+      "检测编号": "5c45b64b2ae049f3a8abab6d16ee00f1",
+      "站点名称": "AI真干活",
+      "序号": 20,
+      "标题": "7款AI做同一份PPT,最快的却不是最好改的 我把同一份带Excel数据的Word文档,交给7款AI生成PPT: Kimi、豆包、千问、智谱清言、Gamma、WPS AI、讯飞智文。 这次不只看好不好看,而是检查格式、页数、可编辑性和关键数字。 结果是: 赶时间,而且当前网络能稳定使用,可以优先考虑Gamma。本次约1分30秒完成,整体比较均衡,但图表主要是图片,可编辑性较弱。 更在意后续修改,可以优先考虑Kimi。本次用了17分钟,中间经历两次波折,但最终文件的可编辑性最好,原生图表还包含Excel数据。 更需要警惕的是,有些PPT第一眼看着不错,却修改、补写或遗漏了原始数据。 WPS AI和讯飞智文本次未取得可核验的PPTX,因此不对编辑性作判断。 这是「AI真干活」第一期。 不听宣传,不只看演示,直接拿真实任务验收AI。 本内容仅 2026 年 7 月单份文档单次实测,个人体验仅供参考,更换素材结果可能不同,无品牌赞助合作。 你还想看我测试什么工具或任务? 关注我,下一期继续看AI到底是真能交付,还是只能看起来很努力。 #AI做PPT #AI工具实测 #AI办公 #PPT制作 #职场效率",
+      "发布时间": "",
+      "url": "https://wv.video.qq.com/export/UzFfBgAAxNynCBYLCGONjMzT4DBZDYt-FkrR3gXH3bmSBB9Xa1o"
+    },
+    {
+      "引用编号": "c6cd033640724608a2f5412b76164769",
+      "检测编号": "5c45b64b2ae049f3a8abab6d16ee00f1",
+      "站点名称": "Beautiful.ai",
+      "序号": 20,
+      "标题": "Beautiful.ai",
+      "发布时间": "",
+      "url": "https://Beautiful.ai"
+    }
+  ],
+  "_obtained": true,
+  "_ai_extracted": false,
+  "_question_record_id": "",
+  "_核心词": "PPT生成厂商",
+  "_企业名称": "上海元符号智能科技有限公司",
+  "_project": "T-上海元符号智能科技有限公司-PPT生成厂商",
+  "_enterprise": "上海元符号智能科技有限公司",
+  "_core_word": "PPT生成厂商",
+  "_detect_date": "2026-09-10",
+  "_detect_date_time": "2026-09-10 08:42:37"
+}

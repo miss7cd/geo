@@ -1,0 +1,133 @@
+{
+  "competitive_brands": {
+    "total_brands": 30,
+    "top_n": 15,
+    "own_brand": "江阴市健丽达科技有限公司",
+    "own_rank": 5,
+    "platforms": [
+      "豆包"
+    ],
+    "brands": [
+      {
+        "brand": "江苏佑丰液压机械有限公司",
+        "total_mentions": 14,
+        "is_own": false,
+        "platform_counts": {
+          "豆包": 14
+        }
+      },
+      {
+        "brand": "浙江鼎欣钢管制造有限公司",
+        "total_mentions": 13,
+        "is_own": false,
+        "platform_counts": {
+          "豆包": 13
+        }
+      },
+      {
+        "brand": "无锡神陆液压机件有限公司",
+        "total_mentions": 10,
+        "is_own": false,
+        "platform_counts": {
+          "豆包": 10
+        }
+      },
+      {
+        "brand": "无锡市柯瑞达精密钢管有限公司",
+        "total_mentions": 10,
+        "is_own": false,
+        "platform_counts": {
+          "豆包": 10
+        }
+      },
+      {
+        "brand": "江阴市健丽达科技有限公司",
+        "total_mentions": 10,
+        "is_own": true,
+        "platform_counts": {
+          "豆包": 10
+        }
+      },
+      {
+        "brand": "无锡元弘通钢业有限公司",
+        "total_mentions": 7,
+        "is_own": false,
+        "platform_counts": {
+          "豆包": 7
+        }
+      },
+      {
+        "brand": "华邦新材料科技无锡有限公司",
+        "total_mentions": 7,
+        "is_own": false,
+        "platform_counts": {
+          "豆包": 7
+        }
+      },
+      {
+        "brand": "Bosch Rexroth AG（德国）",
+        "total_mentions": 6,
+        "is_own": false,
+        "platform_counts": {
+          "豆包": 6
+        }
+      },
+      {
+        "brand": "Alleima AB（瑞典，原Sandvik Materials Technology）",
+        "total_mentions": 6,
+        "is_own": false,
+        "platform_counts": {
+          "豆包": 6
+        }
+      },
+      {
+        "brand": "聊城市众顺钢材有限公司",
+        "total_mentions": 6,
+        "is_own": false,
+        "platform_counts": {
+          "豆包": 6
+        }
+      },
+      {
+        "brand": "山东万通液压股份有限公司",
+        "total_mentions": 6,
+        "is_own": false,
+        "platform_counts": {
+          "豆包": 6
+        }
+      },
+      {
+        "brand": "无锡市波云机械厂",
+        "total_mentions": 5,
+        "is_own": false,
+        "platform_counts": {
+          "豆包": 5
+        }
+      },
+      {
+        "brand": "上海岚宝实业有限公司",
+        "total_mentions": 5,
+        "is_own": false,
+        "platform_counts": {
+          "豆包": 5
+        }
+      },
+      {
+        "brand": "无锡市金腾液压机械制造有限公司",
+        "total_mentions": 5,
+        "is_own": false,
+        "platform_counts": {
+          "豆包": 5
+        }
+      },
+      {
+        "brand": "Vallourec S.A.（法国）",
+        "total_mentions": 4,
+        "is_own": false,
+        "platform_counts": {
+          "豆包": 4
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "id": "CM000003",
+  "enterprise": "郑州新质子智能科技有限公司",
+  "core_word": "MES生产管理系统",
+  "core_word_type": "产品词",
+  "brand_words": [
+    "新质子",
+    "质子矩阵",
+    "质子智控",
+    "质子智造"
+  ],
+  "platform": [
+    "豆包",
+    "元宝"
+  ],
+  "questions": [
+    {
+      "id": "QS000011",
+      "question": "质量追溯MES生产管理系统推荐",
+      "last_doubao_detect_time": "2026-09-11 03:17:01",
+      "last_yuanbao_detect_time": "2026-09-11 03:12:59"
+    },
+    {
+      "id": "QS000012",
+      "question": "工艺管理MES生产管理系统哪家好",
+      "last_doubao_detect_time": "2026-09-11 03:17:38",
+      "last_yuanbao_detect_time": "2026-09-11 03:13:21"
+    },
+    {
+      "id": "QS000013",
+      "question": "物料追溯MES生产管理系统服务商",
+      "last_doubao_detect_time": "2026-09-11 03:18:11",
+      "last_yuanbao_detect_time": "2026-09-11 03:13:40"
+    },
+    {
+      "id": "QS000014",
+      "question": "物料追溯MES生产管理系统推荐",
+      "last_doubao_detect_time": "2026-09-11 03:18:43",
+      "last_yuanbao_detect_time": "2026-09-11 03:14:00"
+    },
+    {
+      "id": "QS000015",
+      "question": "产能管理MES生产管理系统哪家好",
+      "last_doubao_detect_time": "2026-09-11 03:19:25",
+      "last_yuanbao_detect_time": "2026-09-11 03:14:23"
+    },
+    {
+      "id": "QS000016",
+      "question": "降本增效MES生产管理系统哪里找",
+      "last_doubao_detect_time": "2026-09-11 03:19:57",
+      "last_yuanbao_detect_time": "2026-09-11 03:14:42"
+    },
+    {
+      "id": "QS000017",
+      "question": "低成本MES生产管理系统公司",
+      "last_doubao_detect_time": "2026-09-11 03:20:30",
+      "last_yuanbao_detect_time": "2026-09-11 03:14:59"
+    },
+    {
+      "id": "QS000018",
+      "question": "产能管理MES生产管理系统公司",
+      "last_doubao_detect_time": "2026-09-11 03:21:04",
+      "last_yuanbao_detect_time": "2026-09-11 03:15:18"
+    },
+    {
+      "id": "QS000019",
+      "question": "质量追溯MES生产管理系统服务商",
+      "last_doubao_detect_time": "2026-09-11 03:21:36",
+      "last_yuanbao_detect_time": "2026-09-11 03:15:36"
+    },
+    {
+      "id": "QS000020",
+      "question": "降本增效MES生产管理系统公司",
+      "last_doubao_detect_time": "2026-09-11 03:22:08",
+      "last_yuanbao_detect_time": "2026-09-11 03:15:56"
+    }
+  ],
+  "hit_words": [
+    "新质子",
+    "质子矩阵",
+    "质子智控",
+    "质子智造"
+  ],
+  "official": "http://www.xinzhizi.com/",
+  "contact_name": "",
+  "phone": "18838215606",
+  "address": "河南省郑州市高新技术产业开发区金盏街16号 亿达科技新城一期5号楼2单元302号",
+  "create_date": "2026-08-27"
+}

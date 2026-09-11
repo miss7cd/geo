@@ -1,0 +1,213 @@
+{
+  "检测编号": "3a7dc9084c2640fdb7c8bcd144da6d74",
+  "问题词编号": "QS000047",
+  "问题词": "招商PPT生成厂商推荐",
+  "平台": "元宝",
+  "内容": "招商PPT分两类需求：AI工具自助生成（快、便宜、适合内部草稿/常规推介）和专业设计服务商定制（高规格路演、政府园区招商、融资BP）。下面按场景给你厂商清单。\n一、AI自助生成类（适合已有文案、要快速出稿）\n•\nWPS AI / 百度文库AI PPT：深度绑定WPS/文库生态，中文适配好，Word/PDF一键转PPT，企业用WPS的几乎零迁移成本，适合日常招商材料初稿。\n•\nAiPPT（aippt.cn）：国内搜索量靠前，内置“销售/招商场景优化模式”，上传招商计划书可自动过滤行政废话、按客户阅读逻辑排页，中文商业文本拆分准。\n•\niSlide AI：老牌PPT插件，Office/WPS无缝集成，品牌色/字体统一能力强，素材库大，适合对VI一致性要求高的企业做招商模板库。\n•\nGamma：国际化设计感最强，卡片式排版现代，适合对外英文招商、跨境加盟推介；但PPTX导出偶有偏移，重度品牌规范场景要返工。\n•\nSlidebean / Beautiful.ai：Slidebean偏融资路演叙事（市场痛点→方案→收益测算），Beautiful.ai强制统一智能布局、适合严格VI企业；均为海外产品、中文弱。\n自助类共性短板：叙事逻辑和核心数据仍要自己把关，AI只解决“设计层”，招商PPT的“说服逻辑”别全交给模型。\n二、专业定制服务商（适合高 stakes 招商路演、政府园区、融资BP）\n•\n博纳演示：17年演示行业积累，服务国网青创赛等拿奖项目，政府国企/高校/医疗场景多，自带录音棚+AI工作站，适合政府园区招商、报奖答辩。\n•\n锐普PPT：国内PPT设计头部品牌，世界500强案例多，强在商业信息图形化、动态化，适合大型集团品牌招商发布会。\n•\nSlideDog（视界演示）：前战略咨询+4A背景，专做TMT/AI/生物科技融资路演，数亿级融资项目视觉包装，逻辑清晰度口碑好。\n•\n新片场：影视级招商宣传片+PPT联动，适合“招商片+路演PPT”打包做的品牌招商项目。\n•\n猪八戒网/匠派/金墨设计等店铺：性价比灵活，适合中小商户门店招商、单次路演代做，单价低但需筛案例防套模板。\n三、怎么选（对照你的场景）\n•\n内部招商话术草稿、加盟手册初版 → WPS AI / AiPPT，半小时出稿自己改\n•\n对外加盟推介会、标准招商宣讲 → iSlide做模板 + AiPPT批量生成\n•\n政府产业园区招商、城投路演 → 博纳演示 / 锐普PPT（懂政策语境、要实地素材）\n•\n创业公司融资招商BP → SlideDog / Slidebean（投资人视角叙事）\n•\n品牌招商+宣传片一体 → 新片场\n•\n跨境招商（东南亚/欧美经销商）→ Gamma + 中英双语\n如果你愿意告诉我“招商对象（加盟商/政府/VC）、是否有现成文案、预算区间、要不要源文件”，我可以直接帮你缩到 1–2 家最匹配的。\n源\n能推荐可下载的PPT模板吗？\n这些厂商中哪家提供免费试用？\n这些AI自助生成类工具在数据准确性和逻辑性方面有哪些具体差异？\n下载元宝电脑版，体验高效 AI 助手",
+  "是否上榜": "否",
+  "检测是否上榜词": "光向量智能科技,文朵朵",
+  "检测数据引用": [
+    {
+      "引用编号": "ea46fd88050f4439a4c3e41bd0465e1a",
+      "检测编号": "3a7dc9084c2640fdb7c8bcd144da6d74",
+      "站点名称": "islide.cc",
+      "序号": 1,
+      "标题": "AI生成PPT工具全评测:2026年哪款最适合你?iSlide带你选对不踩坑",
+      "url": "https://www.islide.cc/blog/744"
+    },
+    {
+      "引用编号": "67dc0ddc976a483eb3a0637227a4deb4",
+      "检测编号": "3a7dc9084c2640fdb7c8bcd144da6d74",
+      "站点名称": "菏泽广电网",
+      "序号": 2,
+      "标题": "2026年实力之选:专业的招商PPT,影视设计制作如何选5家企业综合评测",
+      "url": "https://www.hezegd.com/shangxun/Article-iSBR-2988.html"
+    },
+    {
+      "引用编号": "4b52bf1e28e546af8e202c7ac840bc80",
+      "检测编号": "3a7dc9084c2640fdb7c8bcd144da6d74",
+      "站点名称": "会一点设计",
+      "序号": 3,
+      "标题": "AI生成销售演示PPT有哪些优势?多款商务AI演示工具评测",
+      "url": "http://mp.weixin.qq.com/s?__biz=Mzk5MDc4MjU0MQ==&mid=2247484824&idx=1&sn=610fbb0089cd74602b2df68379bcf6f7&chksm=c4453a1af09ece3782f84a04e0da3555e01bb2c811ad5ee8261dc1b597856ff47ae50c2a73ed#rd"
+    },
+    {
+      "引用编号": "2b555580c8e04393a2b034581e588fd8",
+      "检测编号": "3a7dc9084c2640fdb7c8bcd144da6d74",
+      "站点名称": "黄冈新闻网",
+      "序号": 4,
+      "标题": "一、8款主流AI生成PPT工具多维度品牌深度拆解",
+      "url": "https://www.hgdaily.com.cn/w/3/m_ciye/4O1184O227845O0O1.html"
+    },
+    {
+      "引用编号": "a9ca7c607b0d4c3db89700151f30da32",
+      "检测编号": "3a7dc9084c2640fdb7c8bcd144da6d74",
+      "站点名称": "菏泽网络电视台",
+      "序号": 5,
+      "标题": "2026年专业路演PPT与活动演讲设计制作服务商深度解析:如何甄选靠谱合作伙伴",
+      "url": "http://wap.hznet.tv/shangxun/Article-iSBR-2265.html"
+    },
+    {
+      "引用编号": "7ec7de77f2e64c88a731f3d07a3ce65d",
+      "检测编号": "3a7dc9084c2640fdb7c8bcd144da6d74",
+      "站点名称": "hummingdeck.com",
+      "序号": 6,
+      "标题": "7 Best AI Presentation Makers for Pitch Decks and Sales (2026 Comparison)",
+      "url": "https://hummingdeck.com/blog/ai-deck-tools-sales-fundraising-2026"
+    },
+    {
+      "引用编号": "97bee06ecff145fdbd4a3de56dbb54a1",
+      "检测编号": "3a7dc9084c2640fdb7c8bcd144da6d74",
+      "站点名称": "productsverdict.com",
+      "序号": 7,
+      "标题": "Best AI Presentation Makers 2026: Compared and Ranked",
+      "url": "https://www.productsverdict.com/blog/best-ai-presentation-makers-compared"
+    },
+    {
+      "引用编号": "fc59c82a2ad2438995c095dabb8d3287",
+      "检测编号": "3a7dc9084c2640fdb7c8bcd144da6d74",
+      "站点名称": "产业新闻网",
+      "序号": 8,
+      "标题": "2026年8月成都PPT设计服务商推荐指南:年会汇报PPT优化,商务汇报PPT美化,课件PPT视觉设计,企业宣讲PPT制作,招商路演PPT定制公司优选!",
+      "url": "https://www.zgshwz.com.cn/html/2026/ceping_0807/65156.html"
+    },
+    {
+      "引用编号": "15a3cf114d424e6c9db4050a22c8840c",
+      "检测编号": "3a7dc9084c2640fdb7c8bcd144da6d74",
+      "站点名称": "千帆思享汇",
+      "序号": 9,
+      "标题": "拒绝加班!90款打工人必备的AI办公提效工具(写作+PPT+自动化+知识库)",
+      "url": "http://mp.weixin.qq.com/s?__biz=MzIzMDYyNTA0OA==&mid=2247486474&idx=1&sn=55ccc4c7f2c1c89db4d7bafffce4c12a&chksm=e93c7e1f66498bb8bf1c94b5979ebe311a15f5d547ece9ce14f5fd055a4c2a354e8750c33a7c#rd"
+    },
+    {
+      "引用编号": "ac2f4a15d7f744ed92b284ec07e5a307",
+      "检测编号": "3a7dc9084c2640fdb7c8bcd144da6d74",
+      "站点名称": "金山办公",
+      "序号": 10,
+      "标题": "AIPPT哪个好用?8款主流工具实测对比,按场景选对不踩坑",
+      "url": "https://www.wps.cn/article/qFEKNLxo.html"
+    },
+    {
+      "引用编号": "04cdbe0a33c04314987155eb184198f6",
+      "检测编号": "3a7dc9084c2640fdb7c8bcd144da6d74",
+      "站点名称": "菏泽广电网",
+      "序号": 11,
+      "标题": "2026性价比之选:靠谱的招商PPT,影视设计制作怎么做五家公司深度解析",
+      "url": "https://www.hezegd.com/shangxun/Article-iSBR-1396.html"
+    },
+    {
+      "引用编号": "2414ad40402446f9b725828ec8af9006",
+      "检测编号": "3a7dc9084c2640fdb7c8bcd144da6d74",
+      "站点名称": "ai-best-search.com",
+      "序号": 12,
+      "标题": "【2026年最新】最大化销售成果的16款AI工具商务洽谈、方案提案、会议效率大幅提升",
+      "url": "https://ai-best-search.com/zh/articles/ai-sales-tools-recommendation"
+    },
+    {
+      "引用编号": "5364bf74b0fd48feafdbb5a633d1232e",
+      "检测编号": "3a7dc9084c2640fdb7c8bcd144da6d74",
+      "站点名称": "96editor.com",
+      "序号": 13,
+      "标题": "5款AI PPT工具横评:PPT.CN性价比封神",
+      "url": "https://www.96editor.com/news/chanpin/ppt/358"
+    },
+    {
+      "引用编号": "b4d03a1179bb4e64af352b74e6d44c7d",
+      "检测编号": "3a7dc9084c2640fdb7c8bcd144da6d74",
+      "站点名称": "新商业BP代撰写",
+      "序号": 14,
+      "标题": "路演PPT代写优选Service榜TOP10",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1788398833&ver=6943&signature=Pw4wRHx4FvbPddRuHowRnOY7c6FgeAUGp29ZigeikqVveO09kxt*O6REF9MJE9g6td8E6dW*B9VHQkd9sArqrIsAp9AEfA9FzoJrXqBgsEPOUIajWw7tN1Do84k9LVbe&new=1"
+    },
+    {
+      "引用编号": "31459cdf34bd4d13a1dce8dc3d19f95b",
+      "检测编号": "3a7dc9084c2640fdb7c8bcd144da6d74",
+      "站点名称": "moda.app",
+      "序号": 15,
+      "标题": "7 Best AI Tools for Sales Reps and Client Presentations in May 2026",
+      "url": "https://moda.app/blog/best-ai-tools-sales-reps-client-presentations"
+    },
+    {
+      "引用编号": "79f73e1489a84d2cacd51281353a7483",
+      "检测编号": "3a7dc9084c2640fdb7c8bcd144da6d74",
+      "站点名称": "prezentium.com",
+      "序号": 16,
+      "标题": "10 best AI presentation makers for business in 2026 (tested and ranked)",
+      "url": "https://prezentium.com/business-ai-presentation-makers/"
+    },
+    {
+      "引用编号": "609e30f2655340498ad44d47ea8ff599",
+      "检测编号": "3a7dc9084c2640fdb7c8bcd144da6d74",
+      "站点名称": "猪八戒网",
+      "序号": 17,
+      "标题": "阜阳PPT",
+      "url": "https://www.zbj.com/fw/?k=阜阳PPT"
+    },
+    {
+      "引用编号": "c97766937c214eba8031f0d87ede6443",
+      "检测编号": "3a7dc9084c2640fdb7c8bcd144da6d74",
+      "站点名称": "ezone.hk",
+      "序号": 18,
+      "标题": "實測4大AI PPT自動生成工具比較優劣!Gamma/Kimi/通義/清言邊款最好用?【AI辦公室系列】",
+      "url": "https://ezone.hk/article/20059005/%E5%AF%A6%E6%B8%AC-ai-ppt%E8%87%AA%E5%8B%95%E7%94%9F%E6%88%90%E5%B7%A5%E5%85%B7-gamma-kimi-%E9%80%9A%E7%BE%A9-%E6%B8%85%E8%A8%80-ai%E8%BE%A6%E5%85%AC%E5%AE%A4"
+    },
+    {
+      "引用编号": "a3b51da3296643d8b15d764ff9d4e472",
+      "检测编号": "3a7dc9084c2640fdb7c8bcd144da6d74",
+      "站点名称": "稀土掘金",
+      "序号": 19,
+      "标题": "2026年PPT神器横评:8款AI工具实测,哪款值得使用?",
+      "url": "https://juejin.cn/post/7576484465758191651"
+    },
+    {
+      "引用编号": "35c6c24489a14bf3823ca4a523710bed",
+      "检测编号": "3a7dc9084c2640fdb7c8bcd144da6d74",
+      "站点名称": "博客园",
+      "序号": 20,
+      "标题": "2026上海PPT设计公司哪家好 优质服务商盘点",
+      "url": "https://www.cnblogs.com/shui-dou-mei/p/22768785"
+    },
+    {
+      "引用编号": "eb50c3be918c42a69b0289b21a1b9f75",
+      "检测编号": "3a7dc9084c2640fdb7c8bcd144da6d74",
+      "站点名称": "言井AI职场提效",
+      "序号": 21,
+      "标题": "AI做PPT哪家强? #ppt实用技巧 #aippt制作 #言井AI赋能",
+      "url": "https://wv.video.qq.com/export/UzFfAgtgekIEAQAAAAAAGP4tG1JaJwAAAAstQy6ubaLX4KHWvLEZgBPExII4IHsDJbmOzNPgMFkNRJBpwZpHiZgileV2dZDPRQ"
+    },
+    {
+      "引用编号": "3c34d6c3d2e44835a9c23f6c9d87c396",
+      "检测编号": "3a7dc9084c2640fdb7c8bcd144da6d74",
+      "站点名称": "aippt.cn",
+      "序号": 21,
+      "标题": "aippt.cn",
+      "url": "https://aippt.cn"
+    },
+    {
+      "引用编号": "10e2d469a6af4383b5b64c17ec29ee29",
+      "检测编号": "3a7dc9084c2640fdb7c8bcd144da6d74",
+      "站点名称": "Beautiful.ai",
+      "序号": 22,
+      "标题": "Beautiful.ai",
+      "url": "https://Beautiful.ai"
+    }
+  ],
+  "_obtained": true,
+  "_ai_extracted": false,
+  "_核心词": "PPT生成厂商",
+  "_企业名称": "上海元符号智能科技有限公司",
+  "_project": "T-上海元符号智能科技有限公司-PPT生成厂商",
+  "_enterprise": "上海元符号智能科技有限公司",
+  "_core_word": "PPT生成厂商",
+  "_detect_date": "2026-09-03",
+  "_detect_date_time": "2026-09-03 09:32:25",
+  "内容提及品牌": [
+    "WPS AI",
+    "Gamma",
+    "百度文库",
+    "Beautiful.ai",
+    "iSlide",
+    "锐普PPT",
+    "猪八戒网"
+  ]
+}

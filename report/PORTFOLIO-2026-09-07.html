@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-page-node-id="7hcDVNIfkRzZul7AmdSTkf">
+
+<head data-page-node-id="8AVenEpPM20fvzu80GSaKl">
+    <meta charset="UTF-8" data-page-node-id="JmsDqCYTngpshFfbVawK6l">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" data-page-node-id="HMdTrGcdMUfBNeufKFZ0IV">
+    <title>GEO 数据洞察报告</title>
+    <link rel="stylesheet" href="https://unpkg.com/ant-design-vue/dist/reset.css" data-page-node-id="RrZDNuNqQJh67S49quROlo">
+    <style>
+        :root {
+            --bg: #0b1220;
+            --panel: #131c2e;
+            --panel-2: #182338;
+            --line: #243249;
+            --ink: #dfe7f3;
+            --ink-2: #93a4bd;
+            --ink-3: #64748f;
+            --cyan: #22d3ee;
+            --green: #2dd4a7;
+            --amber: #fbbf24;
+            --red: #f87171;
+            --violet: #a78bfa;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--ink);
+            font-family: -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .wrap {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 24px 20px 64px;
+        }
+
+        .head {
+            background: linear-gradient(120deg, #16233b 0%, #101a2c 60%, #0d1626 100%);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 22px 24px;
+            margin-bottom: 18px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .head::after {
+            content: "";
+            position: absolute;
+            right: -60px;
+            top: -60px;
+            width: 220px;
+            height: 220px;
+            background: radial-gradient(circle, rgba(34, 211, 238, .14), transparent 70%);
+        }
+
+        .head .tag {
+            display: inline-block;
+            font-size: 12px;
+            letter-spacing: 1px;
+            color: var(--cyan);
+            border: 1px solid rgba(34, 211, 238, .35);
+            padding: 2px 10px;
+            border-radius: 999px;
+            margin-bottom: 8px;
+        }
+
+        .head h1 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .head .sub {
+            color: var(--ink-2);
+            margin-top: 6px;
+            font-size: 13px;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        .meta-cell {
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            padding: 8px 12px;
+        }
+
+        .meta-cell .k {
+            font-size: 12px;
+            color: var(--ink-3);
+        }
+
+        .meta-cell .v {
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 2px;
+        }
+
+        .notice {
+            margin-top: 14px;
+            font-size: 12px;
+            color: var(--ink-2);
+            border-left: 3px solid var(--amber);
+            background: rgba(251, 191, 36, .07);
+            border-radius: 6px;
+            padding: 8px 12px;
+        }
+
+        .panel {
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 16px 18px;
+            margin-bottom: 16px;
+        }
+
+        .panel .p-title {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .panel .p-sub {
+            font-size: 12px;
+            color: var(--ink-3);
+            margin-bottom: 12px;
+        }
+
+        .kpi-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .kpi-card {
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 14px 16px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .kpi-card .k {
+            font-size: 12px;
+            color: var(--ink-2);
+        }
+
+        .kpi-card .v {
+            font-size: 26px;
+            font-weight: 800;
+            margin: 4px 0 2px;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .kpi-card .d-up {
+            color: var(--green);
+        }
+
+        .kpi-card .d-down {
+            color: var(--red);
+        }
+
+        .kpi-card .d-flat {
+            color: var(--ink-3);
+        }
+
+        .kpi-card .d {
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .kpi-card .d .lbl {
+            color: var(--ink-3);
+            font-weight: 400;
+        }
+
+        .kpi-card .bar {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--cyan);
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        @media (max-width: 900px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .chart-box {
+            width: 100%;
+            min-height: 260px;
+        }
+
+        table.tbl {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        table.tbl th {
+            text-align: left;
+            color: var(--ink-2);
+            font-weight: 600;
+            padding: 7px 10px;
+            border-bottom: 1px solid var(--line);
+            white-space: nowrap;
+            background: rgba(255, 255, 255, .03);
+        }
+
+        table.tbl td {
+            padding: 6px 10px;
+            border-bottom: 1px solid rgba(36, 50, 73, .5);
+            vertical-align: top;
+        }
+
+        table.tbl tr:hover td {
+            background: rgba(34, 211, 238, .04);
+        }
+
+        .badge-on {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 1px 8px;
+            border-radius: 999px;
+            background: rgba(45, 212, 167, .15);
+            color: var(--green);
+            border: 1px solid rgba(45, 212, 167, .35);
+        }
+
+        .badge-off {
+            display: inline-block;
+            font-size: 12px;
+            padding: 1px 8px;
+            border-radius: 999px;
+            background: rgba(148, 163, 184, .12);
+            color: var(--ink-2);
+            border: 1px solid rgba(148, 163, 184, .3);
+        }
+
+        .badge-new {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 1px 8px;
+            border-radius: 999px;
+            background: rgba(34, 211, 238, .14);
+            color: var(--cyan);
+            border: 1px solid rgba(34, 211, 238, .35);
+        }
+
+        .badge-lost {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 600;
+            padding: 1px 8px;
+            border-radius: 999px;
+            background: rgba(248, 113, 113, .13);
+            color: var(--red);
+            border: 1px solid rgba(248, 113, 113, .35);
+        }
+
+        .summary-box {
+            background: linear-gradient(120deg, rgba(34, 211, 238, .08), rgba(167, 139, 250, .06));
+            border: 1px solid rgba(34, 211, 238, .25);
+            border-radius: 12px;
+            padding: 14px 18px;
+            margin-bottom: 16px;
+            font-size: 15px;
+        }
+
+        .summary-box .sl {
+            color: var(--cyan);
+            font-weight: 700;
+            margin-right: 6px;
+        }
+
+        .insight-card {
+            background: var(--panel-2);
+            border: 1px solid var(--line);
+            border-left: 4px solid var(--ink-3);
+            border-radius: 10px;
+            padding: 14px 16px;
+            margin-bottom: 12px;
+        }
+
+        .insight-card.tone-positive {
+            border-left-color: var(--green);
+        }
+
+        .insight-card.tone-negative {
+            border-left-color: var(--red);
+        }
+
+        .insight-card.tone-warning {
+            border-left-color: var(--amber);
+        }
+
+        .insight-card.tone-neutral {
+            border-left-color: var(--ink-3);
+        }
+
+        .insight-card .i-head {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 4px;
+        }
+
+        .insight-card .i-dim {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--violet);
+            background: rgba(167, 139, 250, .12);
+            border: 1px solid rgba(167, 139, 250, .3);
+            padding: 0 8px;
+            border-radius: 6px;
+        }
+
+        .insight-card .i-title {
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .insight-card .i-conf {
+            font-size: 11px;
+            color: var(--ink-3);
+            border: 1px solid var(--line);
+            padding: 0 6px;
+            border-radius: 4px;
+            margin-left: auto;
+        }
+
+        .insight-card .i-summary {
+            color: var(--ink);
+            margin-top: 4px;
+        }
+
+        .insight-card .i-evidence {
+            margin-top: 8px;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .insight-card .i-evidence li {
+            font-size: 13px;
+            color: var(--ink-2);
+            position: relative;
+            padding-left: 16px;
+            margin-bottom: 3px;
+        }
+
+        .insight-card .i-evidence li::before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: var(--cyan);
+        }
+
+        .insight-card .i-action {
+            margin-top: 10px;
+            font-size: 13px;
+            background: rgba(34, 211, 238, .08);
+            border: 1px dashed rgba(34, 211, 238, .35);
+            border-radius: 8px;
+            padding: 8px 12px;
+        }
+
+        .insight-card .i-action .al {
+            color: var(--cyan);
+            font-weight: 700;
+            margin-right: 6px;
+        }
+
+        .empty-insight {
+            text-align: center;
+            color: var(--ink-3);
+            border: 1px dashed var(--line);
+            border-radius: 10px;
+            padding: 28px;
+        }
+
+        .foot {
+            text-align: center;
+            color: var(--ink-3);
+            font-size: 12px;
+            margin-top: 24px;
+            border-top: 1px solid var(--line);
+            padding-top: 14px;
+        }
+    </style>
+</head>
+
+<body data-page-node-id="YlaY0FCuWm9H4Ojz8i3c2f">
+    <!-- 注入点：脚本将 window.__INSIGHT__ 的 JSON 序列化后替换占位符 null -->
+    <div id="app" data-page-node-id="2eJKQr9Gw3Cy684B4hx2oF">
+        <div class="wrap" v-if="R.meta" data-page-node-id="Mq7du9DpvQfMxXDNZNDxfo">
+            <!-- 头部 -->
+            <div class="head" data-page-node-id="jhdi25YuJgpKF9rHZNUfDq">
+                <span class="tag" data-page-node-id="f6p9r8h7gmJsBM02LGDcIX">{{ R.meta.tag || 'GEO DATA INSIGHT' }}</span>
+                <h1 data-page-node-id="OOGaVLEPDYNGhkBMWCF0s2">{{ R.meta.title }}</h1>
+                <div class="sub" v-if="R.meta.subtitle" data-page-node-id="83IetQHHsywLlj649HeqTI">{{ R.meta.subtitle }}</div>
+                <div class="meta-grid" data-page-node-id="GC1mCxuhxJL2AKRw6weLQk">
+                    <div class="meta-cell" v-for="(m, i) in R.meta.cells" :key="i" data-page-node-id="Uk4LjhPxdP9oycWYs3z6cG">
+                        <div class="k" data-page-node-id="otLkP2MxGRNCcr2DP5S6oj">{{ m.k }}</div>
+                        <div class="v" data-page-node-id="UlnyHl6Q0Klrldbo5tHADE">{{ m.v }}</div>
+                    </div>
+                </div>
+                <div class="notice" v-if="R.meta.notice" data-page-node-id="QG6muN9A5pikLYVaJXGRDc">
+                    <b data-page-node-id="qecO84eh14UVHEpg2VGlGy">时序口径：</b>{{ R.meta.notice }}
+                </div>
+            </div>
+
+            <!-- 数据版提示 -->
+            <div class="panel" v-if="R.data_only" style="border-color: rgba(251,191,36,.4);" data-page-node-id="AK9PD11UsfSC4dU8b26A4K">
+                <div class="p-title" style="color:var(--amber)" data-page-node-id="81Qb0OlbdDcc7PHRrj1q3F">⚠ 数据版（尚未注入 AI 洞察）</div>
+                <div class="p-sub" data-page-node-id="Jb9hBLhIzWfqGHMyTF8c9J">以下为脚本梳理的例行数据底座。如需完整报告，请先由 AI 依据数据 JSON 生成
+                    <code data-page-node-id="YURy2JHQRDFu6txPpZPKr1">.insight.json</code>，再执行 render 重新注入。
+                </div>
+            </div>
+
+            <!-- AI 总述 -->
+            <div class="summary-box" v-if="R.summary" data-page-node-id="w7nZaaObLLBGtRGAmdWYAZ">
+                <span class="sl" data-page-node-id="UScuAM083uDCa6uCnyjkIY">报告总述</span>{{ R.summary }}
+            </div>
+
+            <!-- KPI -->
+            <div class="kpi-row" v-if="R.kpis && R.kpis.length" data-page-node-id="UXfrXJ3SSMc5JByPNzrhoJ">
+                <div class="kpi-card" v-for="k in R.kpis" :key="k.id" data-page-node-id="oTYmnc0t6h8hB7zrBVHmDF">
+                    <div class="bar" :style="{background: k.accent || 'var(--cyan)'}" data-page-node-id="Him8ETGotJlvCVS4tB0kjB"></div>
+                    <div class="k" data-page-node-id="lBZNzTMdsOxXfCY8gzyQVp">{{ k.label }}</div>
+                    <div class="v" data-page-node-id="BEHwU1iVFuImklxCr9TJ7F">{{ k.value }}</div>
+                    <div class="d" v-if="k.delta_txt" data-page-node-id="bMDp90mfLOygpjdxe2WmCN">
+                        <span :class="k.delta_cls || 'd-flat'" data-page-node-id="m8KqvCk7r50mcmLnUSSWzZ">{{ k.delta_txt }}</span>
+                        <span class="lbl" v-if="k.delta_lbl" data-page-node-id="7JuUVRsLl8gMk7pLnb2vm7"> {{ k.delta_lbl }}</span>
+                    </div>
+                    <div class="d" v-else-if="k.sub" data-page-node-id="CQtTfUtmpHZsD9lLEeObau"><span class="lbl" data-page-node-id="sLvB6qdHgIFvIEYQuvLvwy">{{ k.sub }}</span></div>
+                </div>
+            </div>
+
+            <!-- 图表区 -->
+            <div class="grid-2" v-if="R.charts && R.charts.length" data-page-node-id="Fbff746cFzKJdRcQqZxEc2">
+                <div class="panel" v-for="c in R.charts" :key="c.id" :style="c.span==='full' ? 'grid-column:1/-1' : ''" data-page-node-id="liGX7hEeTT5lmFlCCB99kw">
+                    <div class="p-title" data-page-node-id="ITEWgGRDi2YDpwGl4qjFdm">{{ c.title }}</div>
+                    <div class="p-sub" v-if="c.sub" data-page-node-id="nET49l4ZIaSmqrrgDok4hP">{{ c.sub }}</div>
+                    <div class="chart-box" :id="c.id" data-page-node-id="b1DBm4SetcSipAnEd29VdG"></div>
+                </div>
+            </div>
+
+            <!-- 表格区 -->
+            <div class="panel" v-for="t in R.tables" :key="t.id" data-page-node-id="MrVtZ49wlLRJsndhHfDPiE">
+                <div class="p-title" data-page-node-id="1oYEilxSSF5xQOczeOy7FH">{{ t.title }}</div>
+                <div class="p-sub" v-if="t.sub" data-page-node-id="ibl6q35V7LXOVMVOJ5HUCm">{{ t.sub }}</div>
+                <div style="overflow-x:auto" data-page-node-id="iQXTHo7xX4ZCFkcoPTnHNA">
+                    <table class="tbl" data-page-node-id="luEON7OySBuNiIlgfCIYZR">
+                        <thead data-page-node-id="YQ0owu5E9b372Ofw3CT9Du">
+                            <tr data-page-node-id="4MUXf3XaL8dvjdyjjVQjEz">
+                                <th v-for="col in t.cols" :key="col.key" data-page-node-id="3UOyOVDVRHzdBQ5Qc7gOot">{{ col.title }}</th>
+                            </tr>
+                        </thead>
+                        <tbody data-page-node-id="cTHZXibnSABKOuLt4qE6iH">
+                            <tr v-for="(r, ri) in t.rows" :key="ri" data-page-node-id="Cv5JufiDAeix446m66H9pK">
+                                <td v-for="col in t.cols" :key="col.key" data-page-node-id="b7FoT3isRzRYe3AGI7vNu8">
+                                    <a v-if="col.type==='link' && r[col.key]" :href="r[col.key]" target="_blank" rel="noopener" style="color:var(--cyan)" data-page-node-id="SOvPmFnKIKCfe5k6RGMane">链接</a>
+                                    <span v-else-if="col.type==='badge'" :class="badgeCls(r[col.key])" data-page-node-id="XrTPQzJs63xIU4E9zeewrk">{{ r[col.key] || '—' }}</span>
+                                    <span v-else-if="col.type==='num'" style="font-variant-numeric:tabular-nums" data-page-node-id="Chtd3cJ1INQr9APEcoUceZ">{{ r[col.key] }}</span>
+                                    <template v-else data-page-node-id="qb3c65ZyFZiLkEsPqtyDAd">{{ r[col.key] === '' || r[col.key] == null ? '—' : r[col.key] }}</template>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- AI 洞察卡 -->
+            <div v-if="R.insights && R.insights.length" data-page-node-id="XdAIBXTnoZ5qNVNoWI9EuK">
+                <div class="panel" style="margin-top:4px" data-page-node-id="CtOZZtigQ5FYEWfGGfWnM4">
+                    <div class="p-title" data-page-node-id="IoP2qPIlo6d8AEpksfwqES">🧭 AI 分维度洞察</div>
+                    <div class="p-sub" data-page-node-id="ZNvaPvGZ0lyYECBLyfIDHT">由会话内 AI 依据数据 JSON 生成；每条含证据与可执行建议。</div>
+                    <div class="insight-card" v-for="ins in R.insights" :key="ins.id" :class="'tone-' + (ins.tone || 'neutral')" data-page-node-id="GBumFrPLcoLQQBlsO80JMs">
+                        <div class="i-head" data-page-node-id="0HBVxaisJ0ABypfhRPPSJX">
+                            <span class="i-dim" data-page-node-id="7L5ygYR3xZjNoG5trJGWU1">{{ ins.dimension }}</span>
+                            <span class="i-title" data-page-node-id="T6YoA0BGxKwpRx2xaYlEKB">{{ ins.title }}</span>
+                            <span class="i-conf" data-page-node-id="5fpGrEOGhVjvDfHKdUQxWz">置信 {{ confText(ins.confidence) }}</span>
+                        </div>
+                        <div class="i-summary" data-page-node-id="KIcnj4hGltDkrVqw5DxGc6">{{ ins.summary }}</div>
+                        <ul class="i-evidence" v-if="ins.evidence && ins.evidence.length" data-page-node-id="xfxoV2dnSe12TlJmEL8dHc">
+                            <li v-for="(e, ei) in ins.evidence" :key="ei" data-page-node-id="G742RFrKlbQ0FpMeVT3C7a">{{ e }}</li>
+                        </ul>
+                        <div class="i-action" v-if="ins.action" data-page-node-id="ZVslFwBurTQ7cZc3DiRWui">
+                            <span class="al" data-page-node-id="XbiONkdcWRhB6CLgeBUIeY">建议行动</span>{{ ins.action }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div v-else-if="!R.data_only" data-page-node-id="tFWKMkQNRWj9GErKM45L6U">
+                <div class="empty-insight" data-page-node-id="FjqlT4sisqFhPkygwsHwDA">暂无 AI 洞察内容</div>
+            </div>
+
+            <div class="foot" data-page-node-id="dTFG4lc390CCA1TEwm361Y">
+                {{ R.meta.foot || 'GEO-洞察与报告专家 · geo-insight · 数据由脚本梳理，洞察由 AI 生成' }}
+            </div>
+        </div>
+        <div class="wrap" v-else style="color:var(--ink-2)" data-page-node-id="sEdcBLUF5J9ao4sd9rEwoQ">报告数据为空。</div>
+    </div>
+
+    <!-- 库 -->
+    <script src="https://unpkg.com/@antv/g2/dist/g2.min.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.13/dayjs.min.js"></script>
+    <script src="https://unpkg.com/ant-design-vue/dist/antd.min.js"></script>
+
+    <script>
+        // ===== 注入的数据 =====
+        window.__INSIGHT__ = {"scope":"portfolio","meta":{"tag":"GEO PORTFOLIO","title":"工作区 GEO 项目总览","subtitle":"跨项目横向对比：最新检测日综合上榜率、环比与发布闭环。","cells":[{"k":"工作区","v":"E:/GEO-WORK"},{"k":"项目数","v":"5"},{"k":"数据日期","v":"2026-09-07"},{"k":"生成时间","v":"2026-09-07 17:21"}],"notice":"各项目 L 为该目录 data/ 下最新检测日期（凌晨生成）；每个项目仅与自身 L-1 对比；PORTFOLIO 展示用各自 L 的最新快照。","foot":"GEO-洞察与报告专家 · geo-insight v2 · PORTFOLIO"},"kpis":[{"id":"p-proj","label":"覆盖项目","value":"5","accent":"#22d3ee"},{"id":"p-w","label":"工作区","value":"GEO-WORK","accent":"#a78bfa"},{"id":"p-date","label":"数据日期","value":"2026-09-07","accent":"#2dd4a7"}],"charts":[{"id":"c-cross","title":"各项目最新上榜率对比","sub":"综合上榜率（最新检测日 L）；L 仅与各自 L-1 对比。","kind":"barH","x":"x","y":"y","data":[{"x":"PPT生成厂商","y":0.0},{"x":"油缸管","y":25.0},{"x":"湖南红木家具哪家好","y":10.0},{"x":"MES生产管理系统","y":0.0},{"x":"医药级炉甘石粉","y":0.0}]}],"tables":[{"id":"t-proj","title":"跨项目总览矩阵","cols":[{"key":"enterprise","title":"企业"},{"key":"core","title":"核心词"},{"key":"L","title":"最新检测 L"},{"key":"rate","title":"综合上榜率(L)"},{"key":"delta_txt","title":"环比 L-1"},{"key":"close_pub","title":"闭环发布"},{"key":"today","title":"当日写文"}],"rows":[{"proj":"T-上海元符号智能科技有限公司-PPT生成厂商","enterprise":"上海元符号智能科技有限公司","core":"PPT生成厂商","L":"2026-09-07","rate":"0.0%","delta_txt":"较 L-1 →","delta_cls":"d-flat","close_pub":"55/60","today":"10 篇"},{"proj":"T-江阴市健丽达科技有限公司-油缸管","enterprise":"江阴市健丽达科技有限公司","core":"油缸管","L":"2026-09-07","rate":"25.0%","delta_txt":"较 L-1 →","delta_cls":"d-flat","close_pub":"53/60","today":"10 篇"},{"proj":"T-湖南福居阁文化集团有限公司-湖南红木家具哪家好","enterprise":"湖南福居阁文化集团有限公司","core":"湖南红木家具哪家好","L":"2026-09-07","rate":"10.0%","delta_txt":"较 L-1 →","delta_cls":"d-flat","close_pub":"51/60","today":"10 篇"},{"proj":"T-郑州新质子智能科技有限公司-MES生产管理系统","enterprise":"郑州新质子智能科技有限公司","core":"MES生产管理系统","L":"2026-09-07","rate":"0.0%","delta_txt":"较 L-1 →","delta_cls":"d-flat","close_pub":"55/60","today":"10 篇"},{"proj":"T-长沙市韩臣生物科技有限公司-医药级炉甘石粉","enterprise":"长沙市韩臣生物科技有限公司","core":"医药级炉甘石粉","L":"2026-09-07","rate":"0.0%","delta_txt":"较 L-1 ↓5.0pp","delta_cls":"d-down","close_pub":"50/60","today":"10 篇"}]}],"_facts":{"projects":[{"proj":"T-上海元符号智能科技有限公司-PPT生成厂商","enterprise":"上海元符号智能科技有限公司","core":"PPT生成厂商","L":"2026-09-07","rate":"0.0%","delta_txt":"较 L-1 →","delta_cls":"d-flat","close_pub":"55/60","today":"10 篇"},{"proj":"T-江阴市健丽达科技有限公司-油缸管","enterprise":"江阴市健丽达科技有限公司","core":"油缸管","L":"2026-09-07","rate":"25.0%","delta_txt":"较 L-1 →","delta_cls":"d-flat","close_pub":"53/60","today":"10 篇"},{"proj":"T-湖南福居阁文化集团有限公司-湖南红木家具哪家好","enterprise":"湖南福居阁文化集团有限公司","core":"湖南红木家具哪家好","L":"2026-09-07","rate":"10.0%","delta_txt":"较 L-1 →","delta_cls":"d-flat","close_pub":"51/60","today":"10 篇"},{"proj":"T-郑州新质子智能科技有限公司-MES生产管理系统","enterprise":"郑州新质子智能科技有限公司","core":"MES生产管理系统","L":"2026-09-07","rate":"0.0%","delta_txt":"较 L-1 →","delta_cls":"d-flat","close_pub":"55/60","today":"10 篇"},{"proj":"T-长沙市韩臣生物科技有限公司-医药级炉甘石粉","enterprise":"长沙市韩臣生物科技有限公司","core":"医药级炉甘石粉","L":"2026-09-07","rate":"0.0%","delta_txt":"较 L-1 ↓5.0pp","delta_cls":"d-down","close_pub":"50/60","today":"10 篇"}]},"data_only":false,"summary":"5 个项目最新检测日均落在 2026-09-07；综合上榜率梯队分化明显——江阴健丽达 25% 领跑、湖南福居阁 10% 居中、其余 3 项目（元符号/新质子/韩臣）为 0%，其中韩臣较 L-1 回落 5pp；闭环发布普遍健康（50~55/60 篇），当日 5 项目各写 10 篇待发。","insights":[{"id":"P1","dimension":"横向对比","title":"上榜率呈『1 领跑 / 1 跟跑 / 3 归零』格局","tone":"warning","summary":"最新检测日 2026-09-07，江阴健丽达（油缸管）综合上榜率 25.0% 为全工作区唯一显著跑出的项目；湖南福居阁 10.0%；上海元符号、郑州新质子、长沙韩臣均为 0.0%。0% 三项目的共同点是核心词以厂商/服务类语义为主，与健丽达差异不在发布量（闭环均 50~55 篇），而在内容被 AI 引用与推荐的能力。","evidence":["健丽达 25.0%（较 L-1 持平，双平台 3+2 命中）","福居阁 10.0%、元符号 0%、新质子 0%、韩臣 0%（较 L-1 ↓5pp）","闭环发布量各项目差异小：50~55/60 篇"],"chart_ref":"c-cross","table_ref":"t-proj","action":"把健丽达「源头厂家」语义带双平台上榜的方法（问句结构、首段结论、数据锚点）提炼为模板，优先复制到同为 B2B 厂商类的元符号/新质子项目。","confidence":"high"},{"id":"P2","dimension":"风险项","title":"长沙韩臣为唯一环比下滑项目，需当日排查","tone":"negative","summary":"5 项目中仅长沙韩臣（医药级炉甘石粉）最新上榜率较 L-1 下降 5pp（降至 0.0%）。考虑到该词受平台敏感词过滤影响较大（采招/国脉渠道此前需规避行业词），下滑可能与可用渠道收窄或内容被降权有关。","evidence":["韩臣：L-1 有上榜 → L 0.0%（↓5pp）","其余 4 项目较 L-1 均持平（含 0% 三项目）"],"chart_ref":"c-cross","table_ref":"t-proj","action":"单独调取韩臣最新 L 检测原始 JSON，核对是否上榜词被命中但答案引用源更换，排查敏感词过滤是否波及推荐位。","confidence":"medium"},{"id":"P3","dimension":"发布闭环","title":"闭环发布链路 5 项目普遍健康，未发布集中在今日头条位","tone":"positive","summary":"截至 L-1 的已闭环发文日，5 项目写文 60 篇、成功发布 50~55 篇，发布成功率 83%~92%，发布链路整体稳定；各项目当日（L）均写 10 篇、尚未发布，进入明日 L+1 检测的验证窗口。","evidence":["闭环成功率：元符号 55/60、新质子 55/60、健丽达 53/60、福居阁 51/60、韩臣 50/60","当日 5 项目各 10 篇（列举网 7 + 今日头条 3），已发布 0"],"chart_ref":null,"table_ref":"t-proj","action":"关注各项目今日头条位既往未发布记录（09-01/09-03 有集中失败），在补发与审核问题上做渠道级排查，避免空窗期累计。","confidence":"high"},{"id":"P4","dimension":"建议","title":"下一检测日（L+1）是验证当日 50 篇投放的关键窗口","tone":"neutral","summary":"5 项目当日合计写文 50 篇且均未发布，按时序口径这批内容最早在明日（L+1，2026-09-08）凌晨检测中生效。今日报告无法评估其效果，明日应用同口径重跑本 PORTFOLIO，重点看 0% 三项目与韩臣是否出现首上榜。","evidence":["当日合计：5 项目 × 10 篇 = 50 篇待发布","最早生效窗口：L+1 = 2026-09-08 检测"],"chart_ref":null,"table_ref":null,"action":"在 2026-09-08 检测数据落地后，对全工作区重跑 prepare+render，对比 0% 项目是否破零、韩臣是否恢复、健丽达是否守住 25%。","confidence":"high"}]};
+
+        const { createApp } = Vue;
+
+        const app = createApp({
+            data() {
+                return {
+                    R: window.__INSIGHT__ || {}
+                };
+            },
+            methods: {
+                confText(c) {
+                    return { high: '高', medium: '中', low: '低' }[c] || (c || '—');
+                },
+                badgeCls(v) {
+                    if (v === '上榜' || v === '是') return 'badge-on';
+                    if (v === '未上榜' || v === '否') return 'badge-off';
+                    if (v === '新上榜') return 'badge-new';
+                    if (v === '掉榜') return 'badge-lost';
+                    return '';
+                },
+                // 统一图表渲染入口：由模板按 payload 生成 G2 spec，业务无关
+                buildChart(c) {
+                    const el = document.getElementById(c.id);
+                    if (!el || !window.G2) return;
+                    const G2 = window.G2;
+                    const kind = c.kind || 'line';
+                    const palette = ['#22d3ee', '#a78bfa', '#2dd4a7', '#fbbf24', '#f87171', '#60a5fa', '#f472b6', '#4ade80'];
+                    try {
+                        const enc = { x: c.x || 'x', y: c.y || 'y' };
+                        if (c.series) enc.color = c.series;
+                        let spec;
+                        if (kind === 'line') {
+                            spec = {
+                                type: 'line', encode: Object.assign({}, enc, { shape: 'smooth' }),
+                                style: { lineWidth: 3 },
+                                scale: { color: { range: palette } },
+                                axis: { x: { title: false }, y: { title: false, labelFormatter: (v) => v + '%' } },
+                                legend: { color: { position: 'top' } }
+                            };
+                        } else if (kind === 'barH') {
+                            spec = {
+                                type: 'interval',
+                                encode: enc,
+                                coordinate: { transform: [{ type: 'transpose' }] },
+                                scale: { color: { range: palette } },
+                                axis: { x: { title: false }, y: { title: false } },
+                                legend: c.series ? { color: { position: 'top' } } : false,
+                                style: { maxWidth: c.maxWidth || 34 }
+                            };
+                        } else { // barV
+                            spec = {
+                                type: 'interval',
+                                encode: enc,
+                                scale: { color: { range: palette } },
+                                axis: { x: { title: false }, y: { title: false } },
+                                legend: c.series ? { color: { position: 'top' } } : false,
+                                style: { maxWidth: c.maxWidth || 46 }
+                            };
+                        }
+                        const chart = new G2.Chart({ container: c.id, autoFit: true });
+                        // 尝试套用内置暗色主题；失败则退回默认
+                        try { chart.theme({ type: 'classicDark' }); } catch (_e) { /* ignore */ }
+                        chart.options(spec);
+                        chart.data(c.data || []);
+                        chart.render();
+                    } catch (e) {
+                        el.innerHTML = '<div style="color:#f87171;font-size:13px;padding:20px">图表渲染失败：' +
+                            (e && e.message ? e.message : String(e)) + '</div>';
+                    }
+                }
+            },
+            mounted() {
+                this.$nextTick(() => {
+                    (this.R.charts || []).forEach(c => this.buildChart(c));
+                    // Tailwind 浏览器构建会重扫 DOM，不影响本模板样式
+                });
+            }
+        });
+        app.use(antd).mount('#app');
+    </script>
+</body>
+
+</html>

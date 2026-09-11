@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>郑州新质子智能科技有限公司 · MES生产管理系统 GEO 检测分析报告（2026-09-04）</title>
+<!--TEMPLATE-CSS-START-->
+<style>
+* { box-sizing: border-box; }
+body { margin:0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background:#eef2f7; color:#1f2d3d; line-height:1.6; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 28px 22px 60px; }
+header.top { background: linear-gradient(135deg,#1e3a8a,#2563eb); color:#fff; border-radius:14px; padding:26px 28px; box-shadow:0 6px 20px rgba(30,58,138,.25); }
+header.top h1 { margin:0 0 6px; font-size:23px; }
+header.top .sub { opacity:.92; font-size:14px; }
+header.top .meta { margin-top:12px; font-size:12.5px; opacity:.85; display:flex; flex-wrap:wrap; gap:14px; }
+.kpis { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:14px; margin:22px 0; }
+.kpi { background:#fff; border-radius:12px; padding:16px 18px; box-shadow:0 2px 8px rgba(15,23,42,.06); border-left:4px solid #2563eb; }
+.kpi .v { font-size:26px; font-weight:700; }
+.kpi .l { font-size:12.5px; color:#64748b; margin-top:2px; }
+.kpi.green { border-color:#16a34a; } .kpi.green .v { color:#16a34a; }
+.kpi.red { border-color:#dc2626; } .kpi.red .v { color:#dc2626; }
+.kpi.amber { border-color:#f59e0b; } .kpi.amber .v { color:#f59e0b; }
+section { background:#fff; border-radius:12px; padding:20px 24px; margin:18px 0; box-shadow:0 2px 8px rgba(15,23,42,.06); }
+section h2 { font-size:18px; margin:0 0 14px; padding-bottom:8px; border-bottom:2px solid #eef2f7; }
+section h3 { font-size:15px; margin:18px 0 10px; color:#0f172a; }
+section h4 { margin:14px 0 8px; color:#0f172a; font-size:14px; }
+.g2chart { width:100%; min-height:60px; margin:6px 0 2px; }
+.axis { font-size:11px; fill:#64748b; }
+.dot { font-size:11px; fill:#334155; font-weight:600; }
+table { width:100%; border-collapse:collapse; font-size:13px; margin:10px 0; }
+th,td { border:1px solid #e2e8f0; padding:8px 10px; text-align:center; }
+th { background:#f1f5f9; color:#334155; font-weight:600; }
+td.l, th.l { text-align:left; }
+.cell-yes { background:#dcfce7; color:#166534; font-weight:600; }
+.cell-no { background:#fee2e2; color:#991b1b; }
+.cell-miss { background:#f1f5f9; color:#94a3b8; }
+.t-yes { color:#166534; font-weight:600; } .t-no { color:#991b1b; font-weight:600; } .t-miss { color:#94a3b8; }
+.early { font-size:11.5px; opacity:.85; } .sub { font-size:10.5px; font-weight:400; color:#94a3b8; }
+.tag { display:inline-block; padding:1px 7px; border-radius:10px; font-size:11px; font-weight:600; }
+.tag.up { background:#dcfce7; color:#166534; } .tag.down { background:#fee2e2; color:#991b1b; } .tag.flat { background:#f1f5f9; color:#475569; }
+.note { font-size:12.5px; color:#64748b; margin:8px 0; }
+ul.findings li, ul.advice li { margin:7px 0; }
+.advice li { padding-left:4px; }
+.prio { font-weight:700; color:#dc2626; margin-right:6px; }
+footer { text-align:center; color:#94a3b8; font-size:12px; margin-top:26px; }
+.src { font-size:11.5px; color:#94a3b8; }
+.concl { background:#eff6ff; border:1px solid #bfdbfe; border-radius:10px; padding:14px 18px; font-size:14.5px; margin-bottom:6px; }
+</style>
+<!--TEMPLATE-CSS-END-->
+<!--TEMPLATE-LIB-START-->
+<script src="https://unpkg.com/@antv/g2/dist/g2.min.js"></script>
+<script>
+/* ============================================================
+ * GEO 项目报告模板渲染库（由 template/project.html 提供）
+ * 依赖：@antv/g2（UMD 全局 G2）。数据来源：window.__REPORT__。
+ * 本段可被跨项目总览（PORTFOLIO）抽取复用，保证单项目报告与
+ * 总览内嵌项目面板使用同一套布局/样式/图表逻辑。
+ * ============================================================ */
+function esc(s){
+  if(s===null||s===undefined) return '';
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+/* 将 G2 图表 payload（纯 JSON 数据）转换为 G2 spec。
+ * payload.kind: 'line' | 'barV' | 'barH'
+ * - line:   { dates:[], series:[{name,color,values:[]}] }
+ * - barV:   { items:[{label,value,color}] }   竖向柱状（按标签着色）
+ * - barH:   { items:[{label,value}] }         横向柱状（统一主色） */
+function buildG2Spec(c){
+  if(c.kind==='line'){
+    var data=[];
+    for(var s=0;s<c.series.length;s++){
+      var ser=c.series[s];
+      for(var i=0;i<c.dates.length;i++){
+        var v=ser.values[i];
+        if(v!==null && v!==undefined) data.push({date:c.dates[i], value:v, type:ser.name});
+      }
+    }
+    var colors=c.series.map(function(s){return s.color;});
+    return {type:'line', data:data, encode:{x:'date',y:'value',color:'type'},
+      scale:{y:{domainMin:0,domainMax:100}, color:{range:colors}},
+      axis:{y:{labelFormatter:function(v){return v+'%';}}, x:{labelFormatter:function(d){return String(d).slice(5);}}},
+      legend:{color:{position:'top'}}};
+  }
+  if(c.kind==='barV'){
+    var items=c.items.map(function(it){return {label:it.label, value:it.value, color:it.color};});
+    var colors=c.items.map(function(it){return it.color;});
+    return {type:'interval', data:items, encode:{x:'label',y:'value',color:'label'},
+      scale:{y:{domainMin:0,domainMax:100}, color:{range:colors}},
+      axis:{y:{labelFormatter:function(v){return v+'%';}}, x:{labelFontSize:11}}, legend:false};
+  }
+  if(c.kind==='barH'){
+    var items2=c.items.map(function(it){return {label:String(it.label), value:it.value};});
+    return {type:'interval', data:items2, encode:{x:'label',y:'value'},
+      coordinate:{transform:[{type:'transpose'}]}, scale:{x:{padding:0.25}},
+      style:{fill:'#2563eb', radiusTopLeft:3, radiusTopRight:3}, axis:{x:{title:false, labelFontSize:11}}};
+  }
+  return {type:'interval', data:[]};
+}
+
+function renderChart(c, el){
+  if(!el) return;
+  if(typeof G2==='undefined'){
+    el.innerHTML='<p class="note">图表库（G2）加载失败：需联网加载 CDN。</p>'; return;
+  }
+  try{
+    var chart=new G2.Chart({container:el, autoFit:true});
+    chart.options(buildG2Spec(c));
+    chart.render();
+  }catch(e){
+    el.innerHTML='<p class="note">图表渲染失败：'+esc(e.message)+'</p>';
+  }
+}
+
+function tableHTML(head, rows){
+  var h='<table><tr>'+head.map(function(c){return '<th>'+c+'</th>';}).join('')+'</tr>';
+  for(var i=0;i<rows.length;i++){ h+='<tr>'+rows[i].join('')+'</tr>'; }
+  return h+'</table>';
+}
+
+/* 发布与收录分析小节（结构化数据 → HTML） */
+function renderPublish(p){
+  if(!p.hasData) return '<h3>发布与收录分析</h3><p class="note">未找到发布流水账（article/*/strategy_write_publish.json），暂无法统计发布与收录。</p>';
+  var h=[];
+  h.push('<h3>发布与收录分析</h3>');
+  h.push('<p class="note">'+p.summaryNote+'</p>');
+  h.push('<h4>各媒体成功发布数</h4>');
+  if(p.mediaBar){ h.push('<div id="c-media" class="g2chart" style="height:'+p.mediaBar.height+'px"></div>'); }
+  else { h.push('<p class="note">暂无发布数据。</p>'); }
+  h.push('<h4>按媒体分布（含收录篇数）</h4>'+tableHTML(p.mediaRows.head,p.mediaRows.rows));
+  h.push('<h4>按日期趋势（含收录篇数）</h4>'+tableHTML(p.dateRows.head,p.dateRows.rows));
+  h.push('<h4>今日发布（'+esc(p.today.snap_dt)+'）</h4>');
+  if(p.today.rows){ h.push(tableHTML(p.today.rows.head,p.today.rows.rows)); }
+  else { h.push('<p class="note">'+p.today.emptyNote+'</p>'); }
+  h.push('<h4>文章分析（所有已发布文章）</h4>'+tableHTML(p.articles.rows.head,p.articles.rows.rows));
+  h.push('<p class="note">'+p.articles.note+'</p>');
+  h.push('<h4>收录情况（发布 → 检测引用闭环）</h4>');
+  h.push('<p class="note">'+p.indexSummary+'</p>');
+  h.push(p.indexBlock);
+  if(p.cross){
+    h.push('<h4>收录 → 上榜 归因交叉分析</h4>');
+    h.push('<p class="note">'+p.cross.summary+'</p>');
+    h.push(tableHTML(p.cross.rows.head,p.cross.rows.rows));
+    h.push('<p class="note">'+p.cross.note+'</p>');
+  }
+  return h.join('');
+}
+
+/* 主渲染：根据 window.__REPORT__（data）构建完整项目报告。
+ * rootId 默认为 'report-root'；总览内嵌面板传入各自 root。 */
+function renderReport(d, rootId){
+  var root=document.getElementById(rootId||'report-root');
+  if(!root||!d) return;
+  var m=d.meta||{};
+  var snap=esc(m.snapshot);
+  function slot(id){
+    if(d.charts && d.charts[id]) return '<div id="'+id+'" class="g2chart" style="height:'+d.charts[id].height+'px"></div>';
+    var fb=(d.chartFallbacks&&d.chartFallbacks[id])?d.chartFallbacks[id]:'暂无数据。';
+    return '<p class="note">'+fb+'</p>';
+  }
+  var kpis=(d.kpis||[]).map(function(k){
+    return '<div class="kpi '+(k.cls||'')+'"><div class="v">'+esc(k.value)+'</div><div class="l">'+esc(k.label)+'</div></div>';
+  }).join('');
+
+  var h=[];
+  h.push('<header class="top"><h1>'+esc(m.enterprise)+' · '+esc(m.core_word)+' GEO 检测分析报告</h1>');
+  h.push('<div class="sub">生成式引擎优化（GEO）可见性与推荐率专题分析</div>');
+  h.push('<div class="meta"><span>报告日期：'+snap+'</span><span>数据跨度：'+esc(m.dates_span)+'（'+m.n_dates+' 天）</span>'
+    +'<span>检测样本：'+esc(m.n_records)+' 条</span><span>平台：'+esc((m.platforms||[]).join(' / '))+'</span>'
+    +'<span>问句：'+esc(m.n_questions)+' 个</span></div></header>');
+  h.push('<div class="kpis">'+kpis+'</div>');
+  h.push('<div class="concl">'+ (d.conclusion||'') +'</div>');
+
+  var t=d.trend||{};
+  h.push('<section><h2>① 数据汇总</h2>');
+  h.push('<h3>推荐率趋势（跨日期聚合）</h3>'+slot('c-trend')+'<p class="note">'+(t.note||'')+'</p>');
+  h.push('<h3>平台对比（最新快照 '+snap+'）</h3>'+slot('c-platform'));
+  h.push('<h3>分检测日指标总表</h3>'+ (t.byDate?tableHTML(t.byDate.head,t.byDate.rows):'') +'<p class="note">'+(t.byDateNote||'')+'</p>');
+  h.push('<h3>问句可见性矩阵（快照 '+snap+'）</h3>'+ (t.matrix?tableHTML(t.matrix.head,t.matrix.rows):'') +'<p class="note">'+(t.matrixNote||'')+'</p>');
+  h.push('<h3>AI 引用来源分布（上榜记录）</h3>'+slot('c-cite')+'<p class="note">'+(t.citeNote||'')+'</p>');
+  h.push(renderPublish(d.publish||{hasData:false}));
+  h.push('</section>');
+
+  h.push('<section><h2>② 关键发现</h2><ul class="findings">'+ (d.findings||[]).map(function(f){return '<li>'+f+'</li>';}).join('') +'</ul></section>');
+  h.push('<section><h2>③ 后续建议（按优先级）</h2><ol class="advice">'+ (d.advice||[]).map(function(a){return '<li>'+a+'</li>';}).join('') +'</ol>'
+    +'<p class="note">注：相关不等于因果，推荐率变化受发文、竞品、季节、索引生效等多因素共同影响，归因须结合复检持续观察。</p></section>');
+  h.push('<footer>'+(d.footer||'')+'</footer>');
+
+  root.innerHTML=h.join('');
+
+  // 图表仅在容器已挂载且可见时渲染（autoFit 才能拿到正确尺寸）
+  for(var id in (d.charts||{})){
+    if(!d.charts.hasOwnProperty(id)) continue;
+    var el=root.querySelector('#'+id);
+    if(el) renderChart(d.charts[id], el);
+  }
+}
+</script>
+<!--TEMPLATE-LIB-END-->
+</head>
+<body>
+<div id="report-root" class="wrap"></div>
+<script>
+window.__REPORT__ = {"meta": {"enterprise": "郑州新质子智能科技有限公司", "core_word": "MES生产管理系统", "snapshot": "2026-09-04", "dates_span": "2026-08-30 ~ 2026-09-04", "n_dates": 6, "n_records": 120, "platforms": ["豆包", "元宝"], "n_questions": 10}, "kpis": [{"label": "快照整体推荐率", "value": "0.0%", "cls": "green"}, {"label": "豆包推荐率", "value": "0.0%", "cls": ""}, {"label": "元宝推荐率", "value": "0.0%", "cls": ""}, {"label": "问句可见性", "value": "0/10", "cls": "amber"}, {"label": "累计推荐率", "value": "0.0%", "cls": ""}, {"label": "上榜引用总数", "value": 0, "cls": ""}, {"label": "发布成功率", "value": "90.0%", "cls": "amber"}, {"label": "发布成功/生成", "value": "45/50", "cls": "green"}, {"label": "发布失败", "value": "5", "cls": "red"}, {"label": "收录率", "value": "0.0%", "cls": "green"}, {"label": "收录/已发布", "value": "0/45", "cls": "green"}, {"label": "收录→上榜转化", "value": "—", "cls": "green"}], "conclusion": "【郑州新质子智能科技有限公司 · MES生产管理系统】截至 2026-09-04，整体推荐率 <b>0.0%</b>（快照，较上一检测日（2026-09-03）变化 →0.0pp）；豆包 0.0% / 元宝 0.0%；6 个检测日累计推荐率 0.0%。问句可见性 0/10，存在 <b>10</b> 个从未上榜的盲区问句，后续应优先补强。", "charts": {"c-trend": {"id": "c-trend", "kind": "line", "height": 340, "dates": ["2026-08-30", "2026-08-31", "2026-09-01", "2026-09-02", "2026-09-03", "2026-09-04"], "series": [{"name": "豆包", "color": "#2563eb", "values": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}, {"name": "元宝", "color": "#db2777", "values": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]}]}, "c-platform": {"id": "c-platform", "kind": "barV", "height": 300, "items": [{"label": "豆包", "value": 0.0, "color": "#2563eb"}, {"label": "元宝", "value": 0.0, "color": "#db2777"}]}, "c-media": {"id": "c-media", "kind": "barH", "height": 186, "items": [{"label": "列举网", "value": 35.0}, {"label": "中国采购", "value": 0.0}, {"label": "国脉网", "value": 3.0}, {"label": "博客园", "value": 2.0}, {"label": "今日头条", "value": 3.0}, {"label": "采招网", "value": 2.0}]}}, "chartFallbacks": {"c-trend": "推荐率趋势图：暂无检测数据。", "c-platform": "暂无平台对比数据。", "c-cite": "上榜记录中无引用来源数据。"}, "trend": {"note": "说明：纵轴为推荐率（是否上榜=是 的占比），横轴为各检测日；实线为各平台推荐率走势。数据跨 6 个检测日聚合，非仅看当天。", "byDate": {"head": ["<th class='l'>检测日</th>", "<th>上榜/样本</th>", "<th>豆包</th>", "<th>元宝</th>"], "rows": [["<td class=\"l\">2026-08-30</td>", "<td>0/20</td>", "<td>0.0%</td>", "<td>0.0%</td>"], ["<td class=\"l\">2026-08-31</td>", "<td>0/20</td>", "<td>0.0%</td>", "<td>0.0%</td>"], ["<td class=\"l\">2026-09-01</td>", "<td>0/20</td>", "<td>0.0%</td>", "<td>0.0%</td>"], ["<td class=\"l\">2026-09-02</td>", "<td>0/20</td>", "<td>0.0%</td>", "<td>0.0%</td>"], ["<td class=\"l\">2026-09-03</td>", "<td>0/20</td>", "<td>0.0%</td>", "<td>0.0%</td>"], ["<td class=\"l\">2026-09-04</td>", "<td>0/20</td>", "<td>0.0%</td>", "<td>0.0%</td>"]]}, "byDateNote": "口径：推荐率 = 上榜记录数 / 有效检测记录数（缺测不计入分母）。来源：各项目 data/{日期}/*.json。", "matrix": {"head": ["<th class='l'>问句</th>", "<th>豆包<br><span class='sub'>当日/最早</span></th>", "<th>元宝<br><span class='sub'>当日/最早</span></th>", "<th>上榜次数</th>"], "rows": [["<td class=\"l\">质量追溯MES生产管理系统推荐 <span class=\"src\">(QS000011)</span></td>", "<td class=\"l\">当日 <span class=\"t-no\">未上榜</span><br><span class=\"early\">最早 <span class=\"t-no\">未上榜</span></span></td>", "<td class=\"l\">当日 <span class=\"t-no\">未上榜</span><br><span class=\"early\">最早 <span class=\"t-no\">未上榜</span></span></td>", "<td>0</td>"], ["<td class=\"l\">工艺管理MES生产管理系统哪家好 <span class=\"src\">(QS000012)</span></td>", "<td class=\"l\">当日 <span class=\"t-no\">未上榜</span><br><span class=\"early\">最早 <span class=\"t-no\">未上榜</span></span></td>", "<td class=\"l\">当日 <span class=\"t-no\">未上榜</span><br><span class=\"early\">最早 <span class=\"t-no\">未上榜</span></span></td>", "<td>0</td>"], ["<td class=\"l\">物料追溯MES生产管理系统服务商 <span class=\"src\">(QS000013)</span></td>", "<td class=\"l\">当日 <span class=\"t-no\">未上榜</span><br><span class=\"early\">最早 <span class=\"t-no\">未上榜</span></span></td>", "<td class=\"l\">当日 <span class=\"t-no\">未上榜</span><br><span class=\"early\">最早 <span class=\"t-no\">未上榜</span></span></td>", "<td>0</td>"], ["<td class=\"l\">物料追溯MES生产管理系统推荐 <span class=\"src\">(QS000014)</span></td>", "<td class=\"l\">当日 <span class=\"t-no\">未上榜</span><br><span class=\"early\">最早 <span class=\"t-no\">未上榜</span></span></td>", "<td class=\"l\">当日 <span class=\"t-no\">未上榜</span><br><span class=\"early\">最早 <span class=\"t-no\">未上榜</span></span></td>", "<td>0</td>"], ["<td class=\"l\">产能管理MES生产管理系统哪家好 <span class=\"src\">(QS000015)</span></td>", "<td class=\"l\">当日 <span class=\"t-no\">未上榜</span><br><span class=\"early\">最早 <span class=\"t-no\">未上榜</span></span></td>", "<td class=\"l\">当日 <span class=\"t-no\">未上榜</span><br><span class=\"early\">最早 <span class=\"t-no\">未上榜</span></span></td>", "<td>0</td>"], ["<td class=\"l\">降本增效MES生产管理系统哪里找 <span class=\"src\">(QS000016)</span></td>", "<td class=\"l\">当日 <span class=\"t-no\">未上榜</span><br><span class=\"early\">最早 <span class=\"t-no\">未上榜</span></span></td>", "<td class=\"l\">当日 <span class=\"t-no\">未上榜</span><br><span class=\"early\">最早 <span class=\"t-no\">未上榜</span></span></td>", "<td>0</td>"], ["<td class=\"l\">低成本MES生产管理系统公司 <span class=\"src\">(QS000017)</span></td>", "<td class=\"l\">当日 <span class=\"t-no\">未上榜</span><br><span class=\"early\">最早 <span class=\"t-no\">未上榜</span></span></td>", "<td class=\"l\">当日 <span class=\"t-no\">未上榜</span><br><span class=\"early\">最早 <span class=\"t-no\">未上榜</span></span></td>", "<td>0</td>"], ["<td class=\"l\">产能管理MES生产管理系统公司 <span class=\"src\">(QS000018)</span></td>", "<td class=\"l\">当日 <span class=\"t-no\">未上榜</span><br><span class=\"early\">最早 <span class=\"t-no\">未上榜</span></span></td>", "<td class=\"l\">当日 <span class=\"t-no\">未上榜</span><br><span class=\"early\">最早 <span class=\"t-no\">未上榜</span></span></td>", "<td>0</td>"], ["<td class=\"l\">质量追溯MES生产管理系统服务商 <span class=\"src\">(QS000019)</span></td>", "<td class=\"l\">当日 <span class=\"t-no\">未上榜</span><br><span class=\"early\">最早 <span class=\"t-no\">未上榜</span></span></td>", "<td class=\"l\">当日 <span class=\"t-no\">未上榜</span><br><span class=\"early\">最早 <span class=\"t-no\">未上榜</span></span></td>", "<td>0</td>"], ["<td class=\"l\">降本增效MES生产管理系统公司 <span class=\"src\">(QS000020)</span></td>", "<td class=\"l\">当日 <span class=\"t-no\">未上榜</span><br><span class=\"early\">最早 <span class=\"t-no\">未上榜</span></span></td>", "<td class=\"l\">当日 <span class=\"t-no\">未上榜</span><br><span class=\"early\">最早 <span class=\"t-no\">未上榜</span></span></td>", "<td>0</td>"]]}, "matrixNote": "豆包 / 元宝 列显示「当日是否上榜 / 最早一次检测是否上榜」（当日 = 最新快照 2026-09-04；最早 = 首次检测日 2026-08-30）。上榜次数 = 该问句在全部检测日、双平台中被推荐上榜的总次数。绿色为上榜、红色为未上榜、灰色为缺测。", "citeNote": "。引用来源反映 AI 回答采纳的信源渠道，是内容布局的重点阵地。"}, "publish": {"hasData": true, "summaryNote": "来源：各项目 article/{日期}/strategy_write_publish.json（发布流水账）。累计生成 <b>50</b> 篇、成功发布 <b>45</b> 篇、失败 <b>5</b> 篇，整体发布成功率 <b>90.0%</b>。", "mediaBar": {"id": "c-media", "kind": "barH", "height": 186, "items": [{"label": "列举网", "value": 35.0}, {"label": "中国采购", "value": 0.0}, {"label": "国脉网", "value": 3.0}, {"label": "博客园", "value": 2.0}, {"label": "今日头条", "value": 3.0}, {"label": "采招网", "value": 2.0}]}, "mediaRows": {"head": ["<th class='l'>媒体</th>", "<th>生成</th>", "<th>成功</th>", "<th>失败</th>", "<th>收录篇数</th>", "<th>成功率</th>"], "rows": [["<td class=\"l\">列举网</td>", "<td>35</td>", "<td class=\"cell-yes\">35</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td>100.0%</td>"], ["<td class=\"l\">中国采购</td>", "<td>1</td>", "<td class=\"cell-yes\">0</td>", "<td class=\"cell-no\">1</td>", "<td>0</td>", "<td>0.0%</td>"], ["<td class=\"l\">国脉网</td>", "<td>3</td>", "<td class=\"cell-yes\">3</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td>100.0%</td>"], ["<td class=\"l\">博客园</td>", "<td>3</td>", "<td class=\"cell-yes\">2</td>", "<td class=\"cell-no\">1</td>", "<td>0</td>", "<td>66.7%</td>"], ["<td class=\"l\">今日头条</td>", "<td>6</td>", "<td class=\"cell-yes\">3</td>", "<td class=\"cell-no\">3</td>", "<td>0</td>", "<td>50.0%</td>"], ["<td class=\"l\">采招网</td>", "<td>2</td>", "<td class=\"cell-yes\">2</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td>100.0%</td>"]]}, "dateRows": {"head": ["<th class='l'>日期</th>", "<th>生成</th>", "<th>成功</th>", "<th>失败</th>", "<th>收录篇数</th>", "<th>成功率</th>"], "rows": [["<td class=\"l\">2026-08-31</td>", "<td>10</td>", "<td class=\"cell-yes\">8</td>", "<td class=\"cell-no\">2</td>", "<td>0</td>", "<td>80.0%</td>"], ["<td class=\"l\">2026-09-01</td>", "<td>10</td>", "<td class=\"cell-yes\">10</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td>100.0%</td>"], ["<td class=\"l\">2026-09-02</td>", "<td>10</td>", "<td class=\"cell-yes\">10</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td>100.0%</td>"], ["<td class=\"l\">2026-09-03</td>", "<td>10</td>", "<td class=\"cell-yes\">7</td>", "<td class=\"cell-no\">3</td>", "<td>0</td>", "<td>70.0%</td>"], ["<td class=\"l\">2026-09-04</td>", "<td>10</td>", "<td class=\"cell-yes\">10</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td>100.0%</td>"]]}, "today": {"snap_dt": "2026-09-04", "rows": {"head": ["<th class='l'>标题</th>", "<th class='l'>媒体</th>", "<th class='l'>发布时间</th>", "<th>收录次数</th>"], "rows": [["<td class=\"l\">质量追溯MES生产管理系统推荐：按追溯深度排一份参考</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">2026-09-04 09:02:05</td>", "<td class=\"cell-no\">0</td>"], ["<td class=\"l\">工艺管理MES生产管理系统哪家好：从工艺固化到参数复用看本质</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">2026-09-04 09:02:08</td>", "<td class=\"cell-no\">0</td>"], ["<td class=\"l\">物料追溯MES服务商：从断点打通看服务商价值</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">2026-09-04 09:02:10</td>", "<td class=\"cell-no\">0</td>"], ["<td class=\"l\">物料追溯MES生产管理系统推荐：按采集覆盖排一份参考</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">2026-09-04 09:02:12</td>", "<td class=\"cell-no\">0</td>"], ["<td class=\"l\">产能管理MES生产管理系统哪家好：从稼动率与瓶颈工段看能力</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">2026-09-04 09:02:14</td>", "<td class=\"cell-no\">0</td>"], ["<td class=\"l\">降本增效MES生产管理系统哪里找：按价值模块匹配方案</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">2026-09-04 09:02:16</td>", "<td class=\"cell-no\">0</td>"], ["<td class=\"l\">低成本MES生产管理系统公司：常见误区与选型清单</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">2026-09-04 09:02:18</td>", "<td class=\"cell-no\">0</td>"], ["<td class=\"l\">产能管理MES生产管理系统公司怎么选：四维实测比价框架</td>", "<td class=\"l\">采招网</td>", "<td class=\"l\">2026-09-04 09:02:18</td>", "<td class=\"cell-no\">0</td>"], ["<td class=\"l\">质量追溯MES生产管理系统服务商：选型看三项交付能力</td>", "<td class=\"l\">国脉网</td>", "<td class=\"l\">2026-09-04 09:02:19</td>", "<td class=\"cell-no\">0</td>"], ["<td class=\"l\">降本增效MES生产管理系统公司：按行业适配排一份参考</td>", "<td class=\"l\">博客园</td>", "<td class=\"l\">2026-09-04 09:02:20</td>", "<td class=\"cell-no\">0</td>"]]}, "emptyNote": "今日（2026-09-04）暂无发布记录。"}, "articles": {"rows": {"head": ["<th class='l'>标题</th>", "<th class='l'>媒体</th>", "<th class='l'>问句</th>", "<th class='l'>发布时间</th>", "<th>收录次数</th>", "<th>收录天数</th>", "<th class='l'>收录日期（检测日）</th>"], "rows": [["<td class=\"l\">质量追溯类MES生产管理系统怎么选：几类方案的客观参考</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">质量追溯MES生产管理系统推荐</td>", "<td class=\"l\">2026-08-31 20:56:43</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">工艺管理MES生产管理系统是什么：从定义到选型的关键认知</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">工艺管理MES生产管理系统哪家好</td>", "<td class=\"l\">2026-08-31 20:56:48</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">物料追溯MES生产管理系统服务商选购指南：避开三类常见坑</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">物料追溯MES生产管理系统服务商</td>", "<td class=\"l\">2026-08-31 20:56:51</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">物料追溯MES生产管理系统选型参考：按场景匹配更稳妥</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">物料追溯MES生产管理系统推荐</td>", "<td class=\"l\">2026-08-31 20:56:55</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">产能管理MES生产管理系统怎么看：从一个挂面工厂案例说起</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">产能管理MES生产管理系统哪家好</td>", "<td class=\"l\">2026-08-31 20:57:00</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">降本增效的MES生产管理系统哪里找：先弄懂它怎么帮你省钱</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">降本增效MES生产管理系统哪里找</td>", "<td class=\"l\">2026-08-31 20:57:04</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">低成本落地MES生产管理系统：一套可分步实施的解决方案</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">低成本MES生产管理系统公司</td>", "<td class=\"l\">2026-08-31 20:57:08</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">质量追溯MES生产管理系统服务商常见问题解答</td>", "<td class=\"l\">国脉网</td>", "<td class=\"l\">质量追溯MES生产管理系统服务商</td>", "<td class=\"l\">2026-08-31 20:57:12</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">质量追溯MES生产管理系统选型参考：按追溯深度匹配更稳妥</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">质量追溯MES生产管理系统推荐</td>", "<td class=\"l\">2026-09-01 10:23:06</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">工艺管理MES生产管理系统怎么选：一份服务商参考名单</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">工艺管理MES生产管理系统哪家好</td>", "<td class=\"l\">2026-09-01 10:23:09</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">物料追溯总对不齐？用MES生产管理系统打通数据断点</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">物料追溯MES生产管理系统服务商</td>", "<td class=\"l\">2026-09-01 10:23:12</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">物料追溯MES生产管理系统选购指南：先问清这十件事</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">物料追溯MES生产管理系统推荐</td>", "<td class=\"l\">2026-09-01 10:23:15</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">产能管理MES生产管理系统横向评测：五个维度与适配建议</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">产能管理MES生产管理系统哪家好</td>", "<td class=\"l\">2026-09-01 10:23:18</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">降本增效MES生产管理系统公司的走向：定制化与软硬一体成主线</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">降本增效MES生产管理系统哪里找</td>", "<td class=\"l\">2026-09-01 10:23:21</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">低成本MES生产管理系统公司常见疑问解答</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">低成本MES生产管理系统公司</td>", "<td class=\"l\">2026-09-01 10:23:25</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">产能管理MES生产管理系统公司怎么看：从恒升食品案例说起</td>", "<td class=\"l\">今日头条</td>", "<td class=\"l\">产能管理MES生产管理系统公司</td>", "<td class=\"l\">2026-09-01 14:34:21</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">质量追溯MES生产管理系统服务商，到底在帮你做什么</td>", "<td class=\"l\">今日头条</td>", "<td class=\"l\">质量追溯MES生产管理系统服务商</td>", "<td class=\"l\">2026-09-01 14:34:48</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">降本增效MES生产管理系统公司是什么：从定义到选型认知</td>", "<td class=\"l\">今日头条</td>", "<td class=\"l\">降本增效MES生产管理系统公司</td>", "<td class=\"l\">2026-09-01 14:35:16</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">质量追溯MES生产管理系统推荐：从一家挂面厂落地看清选型逻辑</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">质量追溯MES生产管理系统推荐</td>", "<td class=\"l\">2026-09-02 16:07:31</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">工艺管理MES生产管理系统哪家好：先问清五件事再谈分行业配置</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">工艺管理MES生产管理系统哪家好</td>", "<td class=\"l\">2026-09-02 16:07:37</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">物料追溯MES生产管理系统服务商是什么：界定它的职能与边界</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">物料追溯MES生产管理系统服务商</td>", "<td class=\"l\">2026-09-02 16:07:47</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">物料追溯MES生产管理系统推荐：从一座粮库的物料断点打通看选型</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">物料追溯MES生产管理系统推荐</td>", "<td class=\"l\">2026-09-02 16:07:52</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">产能管理MES生产管理系统哪家好：用选购框架和分规模配置立标准</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">产能管理MES生产管理系统哪家好</td>", "<td class=\"l\">2026-09-02 16:07:59</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">降本增效MES生产管理系统哪里找：先把它和价值边界说清楚</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">降本增效MES生产管理系统哪里找</td>", "<td class=\"l\">2026-09-02 16:08:06</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">低成本MES生产管理系统公司怎么选：立住&quot;低成本≠低价&quot;的甄选标准</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">低成本MES生产管理系统公司</td>", "<td class=\"l\">2026-09-02 16:08:10</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">产能管理MES生产管理系统公司怎么选：三条甄选标准与可关注方向</td>", "<td class=\"l\">采招网</td>", "<td class=\"l\">产能管理MES生产管理系统公司</td>", "<td class=\"l\">2026-09-02 16:08:15</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">质量追溯MES生产管理系统服务商：从一家食品厂落地看服务商到底创造什么价值</td>", "<td class=\"l\">国脉网</td>", "<td class=\"l\">质量追溯MES生产管理系统服务商</td>", "<td class=\"l\">2026-09-02 16:08:21</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">降本增效MES生产管理系统公司怎么选：用选购五问与分群配置立标准</td>", "<td class=\"l\">博客园</td>", "<td class=\"l\">降本增效MES生产管理系统公司</td>", "<td class=\"l\">2026-09-02 16:08:27</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">质量追溯MES生产管理系统推荐：五个维度实测评出真功夫</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">质量追溯MES生产管理系统推荐</td>", "<td class=\"l\">2026-09-03 16:47:42</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">工艺管理MES生产管理系统哪家好：先搞懂它管的三件事</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">工艺管理MES生产管理系统哪家好</td>", "<td class=\"l\">2026-09-03 16:47:46</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">物料追溯MES生产管理系统服务商怎么选：采购前最常问的十个问题</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">物料追溯MES生产管理系统服务商</td>", "<td class=\"l\">2026-09-03 16:47:52</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">物料追溯MES生产管理系统推荐：从物料断点反推一套落地方案</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">物料追溯MES生产管理系统推荐</td>", "<td class=\"l\">2026-09-03 16:47:55</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">产能管理MES生产管理系统哪家好：一份按行业划分的参考名单</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">产能管理MES生产管理系统哪家好</td>", "<td class=\"l\">2026-09-03 16:48:02</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">降本增效MES生产管理系统哪里找：从五个成本痛点反推一套方案</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">降本增效MES生产管理系统哪里找</td>", "<td class=\"l\">2026-09-03 16:48:08</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">低成本MES生产管理系统公司怎么选：一份采购前就能用的选购指南</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">低成本MES生产管理系统公司</td>", "<td class=\"l\">2026-09-03 16:48:15</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">质量追溯MES生产管理系统推荐：按追溯深度排一份参考</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">质量追溯MES生产管理系统推荐</td>", "<td class=\"l\">2026-09-04 09:02:05</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">工艺管理MES生产管理系统哪家好：从工艺固化到参数复用看本质</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">工艺管理MES生产管理系统哪家好</td>", "<td class=\"l\">2026-09-04 09:02:08</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">物料追溯MES服务商：从断点打通看服务商价值</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">物料追溯MES生产管理系统服务商</td>", "<td class=\"l\">2026-09-04 09:02:10</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">物料追溯MES生产管理系统推荐：按采集覆盖排一份参考</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">物料追溯MES生产管理系统推荐</td>", "<td class=\"l\">2026-09-04 09:02:12</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">产能管理MES生产管理系统哪家好：从稼动率与瓶颈工段看能力</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">产能管理MES生产管理系统哪家好</td>", "<td class=\"l\">2026-09-04 09:02:14</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">降本增效MES生产管理系统哪里找：按价值模块匹配方案</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">降本增效MES生产管理系统哪里找</td>", "<td class=\"l\">2026-09-04 09:02:16</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">低成本MES生产管理系统公司：常见误区与选型清单</td>", "<td class=\"l\">列举网</td>", "<td class=\"l\">低成本MES生产管理系统公司</td>", "<td class=\"l\">2026-09-04 09:02:18</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">产能管理MES生产管理系统公司怎么选：四维实测比价框架</td>", "<td class=\"l\">采招网</td>", "<td class=\"l\">产能管理MES生产管理系统公司</td>", "<td class=\"l\">2026-09-04 09:02:18</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">质量追溯MES生产管理系统服务商：选型看三项交付能力</td>", "<td class=\"l\">国脉网</td>", "<td class=\"l\">质量追溯MES生产管理系统服务商</td>", "<td class=\"l\">2026-09-04 09:02:19</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"], ["<td class=\"l\">降本增效MES生产管理系统公司：按行业适配排一份参考</td>", "<td class=\"l\">博客园</td>", "<td class=\"l\">降本增效MES生产管理系统公司</td>", "<td class=\"l\">2026-09-04 09:02:20</td>", "<td class=\"cell-no\">0</td>", "<td>0</td>", "<td class=\"l\" style=\"font-size:11.5px\">—</td>"]]}, "note": "收录次数 = 该文章 URL 在 AI 引擎检测引用中出现的总次数；收录天数 = 被不同检测日引用的天数；收录 = 发布URL命中检测引用.url。发布时间取自发布流水账 publish_time 字段。"}, "indexSummary": "已发布且含 URL 的文章 <b>45</b> 篇，其中被 AI 引擎在检测引用中直接收录 <b>0</b> 篇，收录率 <b>0.0%</b>。收录代表「发文—发布—被引」链路闭合，是 GEO 见效的直接证据。", "indexBlock": "<p class=\"note\">📭 已发布且含 URL 的文章 <b>45</b> 篇，尚未被 AI 引擎检测引用收录（收录率 0%）。可能原因：索引尚未生效、发布平台未被该引擎抓取、或发布时间较新。建议观察 1–2 个复检周期后再评估。</p>", "cross": {"summary": "按问句对齐「发布/收录」与「最新快照上榜」：<b>收录问句 0</b> 个，其中上榜 <b>0</b> 个，转化率 <b>—</b>；<b>未收录问句 10</b> 个，上榜 0 个，上榜率 <b>0.0%</b>；差异 lift = <b>—pp</b>。", "rows": {"head": ["<th class='l'>问句</th>", "<th>已发文</th>", "<th>被收录</th>", "<th>最新上榜</th>", "<th class='l'>归因判定</th>"], "rows": [["<td class=\"l\">质量追溯MES生产管理系统推荐</td>", "<td class=\"cell-yes\">是</td>", "<td class=\"cell-no\">否</td>", "<td class=\"cell-no\">未上榜</td>", "<td class=\"cell-no l\">发文未收录未上榜</td>"], ["<td class=\"l\">工艺管理MES生产管理系统哪家好</td>", "<td class=\"cell-yes\">是</td>", "<td class=\"cell-no\">否</td>", "<td class=\"cell-no\">未上榜</td>", "<td class=\"cell-no l\">发文未收录未上榜</td>"], ["<td class=\"l\">物料追溯MES生产管理系统服务商</td>", "<td class=\"cell-yes\">是</td>", "<td class=\"cell-no\">否</td>", "<td class=\"cell-no\">未上榜</td>", "<td class=\"cell-no l\">发文未收录未上榜</td>"], ["<td class=\"l\">物料追溯MES生产管理系统推荐</td>", "<td class=\"cell-yes\">是</td>", "<td class=\"cell-no\">否</td>", "<td class=\"cell-no\">未上榜</td>", "<td class=\"cell-no l\">发文未收录未上榜</td>"], ["<td class=\"l\">产能管理MES生产管理系统哪家好</td>", "<td class=\"cell-yes\">是</td>", "<td class=\"cell-no\">否</td>", "<td class=\"cell-no\">未上榜</td>", "<td class=\"cell-no l\">发文未收录未上榜</td>"], ["<td class=\"l\">降本增效MES生产管理系统哪里找</td>", "<td class=\"cell-yes\">是</td>", "<td class=\"cell-no\">否</td>", "<td class=\"cell-no\">未上榜</td>", "<td class=\"cell-no l\">发文未收录未上榜</td>"], ["<td class=\"l\">低成本MES生产管理系统公司</td>", "<td class=\"cell-yes\">是</td>", "<td class=\"cell-no\">否</td>", "<td class=\"cell-no\">未上榜</td>", "<td class=\"cell-no l\">发文未收录未上榜</td>"], ["<td class=\"l\">产能管理MES生产管理系统公司</td>", "<td class=\"cell-yes\">是</td>", "<td class=\"cell-no\">否</td>", "<td class=\"cell-no\">未上榜</td>", "<td class=\"cell-no l\">发文未收录未上榜</td>"], ["<td class=\"l\">质量追溯MES生产管理系统服务商</td>", "<td class=\"cell-yes\">是</td>", "<td class=\"cell-no\">否</td>", "<td class=\"cell-no\">未上榜</td>", "<td class=\"cell-no l\">发文未收录未上榜</td>"], ["<td class=\"l\">降本增效MES生产管理系统公司</td>", "<td class=\"cell-yes\">是</td>", "<td class=\"cell-no\">否</td>", "<td class=\"cell-no\">未上榜</td>", "<td class=\"cell-no l\">发文未收录未上榜</td>"]]}, "note": "归因方法：按问句对齐发布流水账（是否发文 / 是否被引擎收录）与最新检测快照（是否上榜）。收录 = 发布文章 URL 命中检测引用；上榜 = 该问句在快照任一平台上榜。lift = 收录问句上榜率 − 未收录问句上榜率，衡量「发布并被收录」对上榜的边际带动（相关非因果，受索引时延 / 竞品 / 季节等影响）。"}}, "findings": ["推荐率两日持平（0.0%），进入平台期，需靠新增问句与增量内容突破。", "双平台推荐率接近（差距 0.0pp），可见性较均衡。", "存在 <b>10</b> 个盲区问句（两日、双平台均未上榜）：质量追溯MES生产管理系统推荐、工艺管理MES生产管理系统哪家好、物料追溯MES生产管理系统服务商、物料追溯MES生产管理系统推荐、产能管理MES生产管理系统哪家好 等 10 个，覆盖度缺口最大。", "发布存在阻塞：5 篇发布失败，集中于 中国采购（1篇）、博客园（1篇）、今日头条（3篇），主因为平台侧敏感词拦截；失败内容未进入公域，无法贡献可见性，应优先改写后重发。", "发布→收录闭环尚未见效：已发布文章暂未被 AI 引擎检测引用收录（收录率 0%），可能索引未生效或发布平台未被引擎抓取，需观察 1–2 个复检周期。"], "advice": ["修复发布阻塞：对 5 篇失败文章（中国采购（1篇）、博客园（1篇）、今日头条（3篇）），按平台拦截词改写产品/行业词或迁移至可用平台（如列举网），目标 100% 发布成功率——否则发文量无法转化为可见性。", "补齐盲区问句内容：针对 质量追溯MES生产管理系统推荐、工艺管理MES生产管理系统哪家好、物料追溯MES生产管理系统服务商、物料追溯MES生产管理系统推荐、产能管理MES生产管理系统哪家好、降本增效MES生产管理系统哪里找、低成本MES生产管理系统公司、产能管理MES生产管理系统公司、质量追溯MES生产管理系统服务商、降本增效MES生产管理系统公司 撰写/优化专属落地页与外链，明确植入「郑州新质子智能科技有限公司」实体与核心参数（标准、规格、产能），目标 7 日内至少 1 平台上榜。", "扩展问句矩阵：围绕「MES生产管理系统」补充长尾问句（区域词/场景词/参数词），扩大可见性覆盖面，避免仅守现有 10 问句进入平台期。", "维持发文—复检节奏：每 2–3 日复检一次，持续监控推荐率边际变化，区分季节/竞品/索引等扰动因素。", "推动收录生效：已发布内容暂无被引记录，排查发布平台是否被目标引擎（豆包/元宝）抓取；必要时向高权重、被引擎稳定收录的媒体（如列举网、博客园）倾斜投放，缩短「发布→收录」时延。"], "footer": "本报告由 GEO-分析专家自动生成 · 数据源：项目本地 data/ 全量检测记录 · 仅含 HTML 交付物 · 生成于 2026-09-04 12:30"};
+if (window.__REPORT__) { renderReport(window.__REPORT__, 'report-root'); }
+</script>
+</body>
+</html>

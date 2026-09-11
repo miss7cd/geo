@@ -1,0 +1,173 @@
+{
+  "检测编号": "b0ecfd57d66046a28064217a239ad77f",
+  "问题词编号": "QS000048",
+  "问题词": "企业宣传PPT生成厂商有哪些",
+  "平台": "元宝",
+  "内容": "做「企业宣传 / 企业介绍 PPT」的自动生成，现在主要分为国产 AI PPT 厂商、国际 AI PPT 厂商、办公套件内嵌 AI​ 三类。下面按阵营给你梳理主流厂商和典型产品，并标注各自适合的宣传场景。\n一、国产 AI PPT 生成厂商（中文+企业模板适配好）\n•\n金山办公 WPS AI：内嵌 WPS，输入主题/大纲/文档自动拆页排版，支持多人协作、商务风模板，中文体验最顺；适合内部宣讲、政企汇报。\n•\n博思云创（博思 AIPPT / PPTGO）：深圳博思云创出品，一键生成+在线编辑+多人协作，和 Pixso/boardmix 同账号体系，国产企业工作流闭环。\n•\n墨刀 AIPPT：北京磨刀刻石科技，从原型设计工具延伸过来，适合产品经理/UX 团队做产品型宣传册式 PPT。\n•\nChatPPT：强调内容溯源与原子级美化，结构化生成+正式商务模板，适合商用宣讲、企业述职。\n•\n豆包 PPT（字节跳动）：豆包大模型内置，一句话出稿、免费额度友好，轻量宣传/日常短汇报够用，但精细度一般。\n•\n即触 AI PPT：主打「保持原文」模式，数据不瞎改，支持传公司模板标注，适合销售/运营/财务类宣传汇报。\n•\n百度文库 AI PPT：背靠文库范文库，套模板快，适合行政、党建、教育类企业宣传。\n•\nAiPPT、歌者 PPT：国产新兴 AIPPT，提供免费额度与中文模板。\n二、国际 AI PPT 生成厂商（视觉/叙事强，中文需校对）\n•\nGamma（Gamma Tech）：卡片式网页化演示，视觉和叙事最强，适合品牌发布、融资路演；PPTX 导出偶有偏移，中文排版需人工修。\n•\nBeautiful.ai：Smart Slides 自动调布局，品牌 VI 锁死、风格统一，适合中大型企业销售/市场宣传册。\n•\nCanva（Magic Design）：可画，模板和素材库极大，Magic Design 一句话出 deck，Brand Kit 管品牌色/字体，偏营销视觉类宣传。\n•\nPlus AI：Google Slides / PowerPoint 插件，Remix 重排、文档转 PPT，适合已经在 Workspace 或 Office 里的团队。\n•\nPresentations.AI：专利 agent 从 prompt/URL 出 deck，Brand Sync 做品牌一致性，SOC2 合规，偏企业级。\n•\nPitch、Prezi、SlidesAI、Decktopus、Tome（已转垂类）：Pitch 偏 startup sales deck；Prezi 非线性缩放演示；SlidesAI 是 GSlides 插件；Tome 已停主产品转营销垂类。\n三、办公套件 / 大模型厂内嵌能力\n•\nMicrosoft Copilot for PowerPoint：M365 内从 Word/PDF 生成、套企业模板，合规强但需 M365+Copilot 订阅，适合已用微软的大企业。\n•\nAdobe Express（Firefly）：AI 宣传册/演示生成，接 Adobe 字体和素材，适合有 Adobe 授权设计团队。\n•\nMicrosoft Designer（DALL·E）：M365 生态做数字资产，不建议做正式印刷宣传册。\n•\nKimi、通义、清言：国内大模型，可配合 DeepSeek 出大纲再丢给 Gamma/博思等排版，本身不是完整 PPT 厂商但常被组合使用。\n四、按「企业宣传」场景怎么选\n•\n中文企业介绍、要套自己 VI 模板 → WPS AI、博思 AIPPT、即触 AI PPT\n•\n品牌发布会 / 招商路演 / 高颜值对外宣传 → Gamma、Canva、Beautiful.ai\n•\n已用 M365、要合规和 Word 转 PPT → Copilot for PowerPoint\n•\n海外路演、英文宣传册 → Gamma、Presentations.AI、Plus AI\n•\n零预算快速出初稿 → 豆包 PPT、WPS AI 免费版、Canva 免费版\n注意：所有 AI 生成的宣传 PPT，公司名、数据、资质证书、Logo 位置、CMYK 印刷输出都要人工核对一遍；Gamma/国际工具中文断行和字体容易翻车，正式对外建议留 30 分钟精修。\n如果你愿意，我可以按「你们公司是否有现成 PPT 模板 / 是否要中英双语 / 预算每人每月多少」给你缩到 2–3 个最匹配厂商。\n源\nCanva Magic Design 如何收费？\n这些AI PPT生成厂商中哪个最安全？\n这些AI PPT生成厂商在版权方面的政策是怎样的？\n下载元宝电脑版，体验高效 AI 助手",
+  "是否上榜": "否",
+  "检测是否上榜词": "光向量智能科技,文朵朵",
+  "检测数据引用": [
+    {
+      "引用编号": "4091b4d1a2e0427ea1b00b59ea3fc427",
+      "检测编号": "b0ecfd57d66046a28064217a239ad77f",
+      "站点名称": "deckary.com",
+      "序号": 1,
+      "标题": "Best AI Presentation Makers 2026: 12 Tools Tested",
+      "url": "https://deckary.com/blog/best-ai-presentation-maker"
+    },
+    {
+      "引用编号": "f6dc905fdb014fbe8b4e44c30e16d1e8",
+      "检测编号": "b0ecfd57d66046a28064217a239ad77f",
+      "站点名称": "autoppt.com",
+      "序号": 2,
+      "标题": "2026 年 15 款最佳 AI 宣传册生成器工具(免费和付费选项,助您像专业人士一样设计)",
+      "url": "https://autoppt.com/zh/blog/ai-brochure-generator-tools-2026/"
+    },
+    {
+      "引用编号": "2a852755c11f4474ae4762ceee6a4cb7",
+      "检测编号": "b0ecfd57d66046a28064217a239ad77f",
+      "站点名称": "搜狐网",
+      "序号": 3,
+      "标题": "2026实测!AI一键生成PPT六款工具横向大比拼,谁最靠谱?",
+      "url": "https://it.sohu.com/a/1061900851_121886064"
+    },
+    {
+      "引用编号": "f4df6afb95534f2f83e38bd1e29f89a3",
+      "检测编号": "b0ecfd57d66046a28064217a239ad77f",
+      "站点名称": "pmarketresearch.com",
+      "序号": 4,
+      "标题": "Worldwide AI PPT Generation Software Market 2026",
+      "url": "https://pmarketresearch.com?p=2331213/"
+    },
+    {
+      "引用编号": "e9298d275c7d493697cc6a1a119806c9",
+      "检测编号": "b0ecfd57d66046a28064217a239ad77f",
+      "站点名称": "softcircles.com",
+      "序号": 5,
+      "标题": "Best AI Presentation Design Tools",
+      "url": "https://www.softcircles.com/blog/best-ai-presentation-tools"
+    },
+    {
+      "引用编号": "efbe6ebebe9f41f6a82411cad7a6fb21",
+      "检测编号": "b0ecfd57d66046a28064217a239ad77f",
+      "站点名称": "金山办公",
+      "序号": 6,
+      "标题": "AIPPT哪个好用?8款主流工具实测对比,按场景选对不踩坑",
+      "url": "https://www.wps.cn/article/qFEKNLxo.html"
+    },
+    {
+      "引用编号": "53e5801f9fc842e6a85169055c33c6a5",
+      "检测编号": "b0ecfd57d66046a28064217a239ad77f",
+      "站点名称": "prezent.ai",
+      "序号": 7,
+      "标题": "18 best AI presentation makers to choose from (2026)",
+      "url": "https://www.prezent.ai/blog/best-ai-presentation-makers"
+    },
+    {
+      "引用编号": "e45f548cb6a04b0b937aa6a649e59c22",
+      "检测编号": "b0ecfd57d66046a28064217a239ad77f",
+      "站点名称": "addmagazine.co.uk",
+      "序号": 8,
+      "标题": "9 Best AI Presentation Generators for Marketers: Slide Makers Reviewed for 2027",
+      "url": "https://addmagazine.co.uk/best-ai-presentation-generators-for-marketers-2027/"
+    },
+    {
+      "引用编号": "f5f82805032d4e1e98829e47620a8ccf",
+      "检测编号": "b0ecfd57d66046a28064217a239ad77f",
+      "站点名称": "futurepicker.com",
+      "序号": 9,
+      "标题": "AI Presentation Tools Compared: Gamma vs Beautiful.ai vs Canva vs PowerPoint Copilot (2026)",
+      "url": "https://futurepicker.com/en/ai-presentation-tools-gamma-beautifulai-canva-powerpoint-copilot-2026-2"
+    },
+    {
+      "引用编号": "45d7bd66f321461f9928e8d8907b8c29",
+      "检测编号": "b0ecfd57d66046a28064217a239ad77f",
+      "站点名称": "博客园",
+      "序号": 10,
+      "标题": "别再乱找!2026品牌推广PPT模板平台实测,AI一键出商用大片",
+      "url": "https://www.cnblogs.com/pinpai/p/20335546"
+    },
+    {
+      "引用编号": "0ef178d91b014dea81280ca9ecc96669",
+      "检测编号": "b0ecfd57d66046a28064217a239ad77f",
+      "站点名称": "高教数智在线",
+      "序号": 11,
+      "标题": "2026年AI生成PPT工具最全测评:按你的汇报场景选,别再瞎忙了",
+      "url": "http://mp.weixin.qq.com/s?__biz=Mzk2NDM2OTI1NQ==&mid=2247495529&idx=1&sn=cd00ae52780ce9b7b4a0b039e4b6e6bf&chksm=c5dd5ecdf336273a49a9982fcabac60fc5668e7023590f36b0609735ddca711964ef7d6ca147#rd"
+    },
+    {
+      "引用编号": "12184c55496d415282bd1400caa1c7c9",
+      "检测编号": "b0ecfd57d66046a28064217a239ad77f",
+      "站点名称": "金山办公",
+      "序号": 12,
+      "标题": "免费AI生成PPT软件横评:8款工具实测,不同场景怎么选",
+      "url": "https://www.wps.cn/article/OxFiBO5p.html"
+    },
+    {
+      "引用编号": "9494e432fd984e0b8edae28464a9a7c6",
+      "检测编号": "b0ecfd57d66046a28064217a239ad77f",
+      "站点名称": "quizcat.ai",
+      "序号": 13,
+      "标题": "Top 5 AI Tools for Document-to-Slide Conversion",
+      "url": "https://www.quizcat.ai/blog/top-5-ai-tools-for-document-to-slide-conversion"
+    },
+    {
+      "引用编号": "b478443627534bfc9992ee795d9f350f",
+      "检测编号": "b0ecfd57d66046a28064217a239ad77f",
+      "站点名称": "ezone.hk",
+      "序号": 14,
+      "标题": "實測4大AI PPT自動生成工具比較優劣!Gamma/Kimi/通義/清言邊款最好用?【AI辦公室系列】",
+      "url": "https://ezone.hk/article/20059005/%E5%AF%A6%E6%B8%AC-ai-ppt%E8%87%AA%E5%8B%95%E7%94%9F%E6%88%90%E5%B7%A5%E5%85%B7-gamma-kimi-%E9%80%9A%E7%BE%A9-%E6%B8%85%E8%A8%80-ai%E8%BE%A6%E5%85%AC%E5%AE%A4"
+    },
+    {
+      "引用编号": "29de847072734f9fadf360e730eb2f50",
+      "检测编号": "b0ecfd57d66046a28064217a239ad77f",
+      "站点名称": "fliphtml5.com",
+      "序号": 15,
+      "标题": "十大 AI 宣傳冊產生器和創作器,幾分鐘內即可製作出精美宣傳冊",
+      "url": "https://fliphtml5.com/blog/zh_tw/top-10-ai-brochure-generators-creators-for-crafting-stunning-brochures-in-minutes/"
+    },
+    {
+      "引用编号": "cecc58e42025460a9c47f29a7af055e6",
+      "检测编号": "b0ecfd57d66046a28064217a239ad77f",
+      "站点名称": "Beautiful.ai",
+      "序号": 15,
+      "标题": "Beautiful.ai",
+      "url": "https://Beautiful.ai"
+    },
+    {
+      "引用编号": "4fb576e8869f4f6cb3cda96a948fc4e1",
+      "检测编号": "b0ecfd57d66046a28064217a239ad77f",
+      "站点名称": "Presentations.AI",
+      "序号": 16,
+      "标题": "Presentations.AI",
+      "url": "https://Presentations.AI"
+    }
+  ],
+  "_obtained": true,
+  "_ai_extracted": false,
+  "_核心词": "PPT生成厂商",
+  "_企业名称": "上海元符号智能科技有限公司",
+  "_project": "T-上海元符号智能科技有限公司-PPT生成厂商",
+  "_enterprise": "上海元符号智能科技有限公司",
+  "_core_word": "PPT生成厂商",
+  "_detect_date": "2026-09-02",
+  "_detect_date_time": "2026-09-02 09:17:26",
+  "内容提及品牌": [
+    "WPS AI",
+    "金山办公",
+    "Gamma",
+    "百度文库",
+    "ChatPPT",
+    "Beautiful.ai",
+    "Canva",
+    "Tome",
+    "Microsoft Copilot",
+    "字节跳动",
+    "即触AI PPT",
+    "Kimi PPT",
+    "博思AIPPT",
+    "墨刀",
+    "微软"
+  ]
+}

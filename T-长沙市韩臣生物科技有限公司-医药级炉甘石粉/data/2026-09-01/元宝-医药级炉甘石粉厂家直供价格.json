@@ -1,0 +1,208 @@
+{
+  "检测编号": "7c545ce03236423884a5d076ac3c190d",
+  "问题词编号": "QS000028",
+  "问题词": "医药级炉甘石粉厂家直供价格",
+  "平台": "元宝",
+  "内容": "已处理\n查完了。先给你一个关键提醒：\"厂家直供\"这四个字在炉甘石这个品类里水分很大——平台上挂\"直供\"的绝大多数是西安的贸易商，真正的源头厂家就那么两三家。价格从 12元/kg 到 190元/kg 都有，差 15 倍，核心不在\"是不是厂家\"，而在资质、粒度、包装和采购量。\n一、最可信的锚点：2026年医院公开招标限价\n这是唯一能反映真实成交水平的数据（带量、带资质、公开可查）：\n采购方\n\t\n价格\n\t\n折算\n\n\n东莞市人民医院（350kg/年，5kg/桶）\n\t\n108.4元/kg\n\t\n108元/kg，硬性要求CDE\"A\"状态\n\n\n宁德市中医院（指定上海京华）\n\t\n58元/500g包\n\t\n≈116元/kg\n\n\n中山市第二人民医院（2026.01）\n\t\n67.30元/500g袋\n\t\n≈135元/kg\n\n\n首都儿童医学中心（政府采购）\n\t\n91元/500g袋\n\t\n≈182元/kg，含配送服务\n医院端集采落地价集中在 100–140元/kg，这是有CDE备案、走药典标准的正规制剂级价格带。\n二、B2B平台的\"直供\"报价（2026年8月更新）\n供应商\n\t\n报价\n\t\n备注\n\n\n山东泰诚\n\t\n16元\n\t\n规格资质不明，慎\n\n\n陕西正一\n\t\n18元/袋(500g)\n\t\n直供粉红粉末\n\n\n睿诚康\n\t\n26元 / 130元/袋\n\t\n同为99%，价差5倍\n\n\n陕西盘龙翊海\n\t\n30元/袋(500g)\n\t\n有CDE备案号，但平台标注\"是否源头工厂：否\"\n\n\n陕西唐尧 / 铭铖\n\t\n35元/袋\n\t\nCP2020，含量99%\n\n\nChemicalBook\n\t\n45元/袋\n\t\n99%，有质检单\n\n\n山西锦洋 / 西安众森\n\t\n85元 / 95元/袋\n\t\n—\n\n\n湘尔康（GMP）\n\t\n98–120元/kg\n\t\n医药级\n三、价差 15 倍的五个核心变量\n1.\nCDE登记状态——能做制剂关联审评必须是\"A\"状态。有无登记，价差一倍以上；医院招标直接把CDE\"A\"截图列为★硬性条款\n2.\n粒度目数——80目以下约50–80元/kg，200目约80–120元/kg，400目以上超细粉 150元/kg起​\n3.\n包装规格——500g小袋 vs 25kg桶，单公斤价差 1–2 倍\n4.\n纯度与杂质——ZnCO₃含量、重金属、酸不溶物、微生物\n5.\n锌价传导——氧化锌2025年10月报 $3,730/吨（环比+6%），这是成本底层 \n四、真正值得去谈直供的源头厂家\n•\n上海京华化工厂有限公司——持有炉甘石原料药国药准字 H20103587，是各家医院招标里反复出现的指定厂家\n•\n湖南尔康制药——药用辅料龙头，国内主要供应商之一 \n国际口径参考：2022年大宗炉甘石粉 $1,500–2,100/吨，中国合同买家低至 $1,200/吨 。但请注意这是矿源/工业级散装口径，折合仅约 1万元/吨，与国内叠加了CDE登记、GMP、药典检验和小包装分装的制剂级完全不是一个口径，不能直接比价。\n五、三个必须避开的坑\n•\n12–15元/kg 的\"碱式碳酸锌\"是工业级（湖北吉业升12元/kg 、东莞三丰13.6元/kg ），只能用于配制或工业，不能药用\n•\n索 COA，重点核查锌含量、酸不溶物、重金属、微生物四项\n•\n拿到 CDE 登记号后自己去CDE官网核状态，别只看供应商截图\n要我帮你按具体的年采购量、目数要求、是否必须A状态这三个参数，去核上海京华、湖南尔康这几家的实际直供价吗？把这三个数告诉我，价格就能从\"60–190元/kg\"这个模糊区间收敛到一个可谈的锚点。\n源",
+  "是否上榜": "否",
+  "检测是否上榜词": "韩臣",
+  "检测数据引用": [
+    {
+      "引用编号": "d4c4930b65014418856eee3250a643b7",
+      "检测编号": "7c545ce03236423884a5d076ac3c190d",
+      "站点名称": "盖德化工网",
+      "序号": 1,
+      "标题": "药用炉甘石医用药典级炉甘石粉CDE备案登记状态A",
+      "url": "https://china.guidechem.com/trade/pdetail34706890.html"
+    },
+    {
+      "引用编号": "d1d2c90127994d6a989f2234585b0f4f",
+      "检测编号": "7c545ce03236423884a5d076ac3c190d",
+      "站点名称": "国际机电设备招标采购平台",
+      "序号": 2,
+      "标题": "东莞市人民医院制剂室药用原辅料采购项目(二次公告)",
+      "url": "https://www.chinamae.com/purchases/7c91a0b36a3f5d59df592636eadd5adf.html"
+    },
+    {
+      "引用编号": "4a701e128ebd459dbf8e1c9c650b1ea0",
+      "检测编号": "7c545ce03236423884a5d076ac3c190d",
+      "站点名称": "jeiferpharm.com",
+      "序号": 3,
+      "标题": "Calamine Powder BP EP USP Pharma Grade: Price, Technology, and Supply Chain Insights in the Top 50 Global Economies",
+      "url": "https://www.jeiferpharm.com/knowledge/information/calamine-powder-bp-ep-usp-pharma-grade-supplier-china-supply-manufacturer-gmp-factory-price-china.html"
+    },
+    {
+      "引用编号": "263bc836f426416ba7e52a45c44c5f88",
+      "检测编号": "7c545ce03236423884a5d076ac3c190d",
+      "站点名称": "百度",
+      "序号": 4,
+      "标题": "云英炉甘石",
+      "url": "https://b2bwiki.baidu.com/encyclopedic/calamine"
+    },
+    {
+      "引用编号": "f74f767a5dcb4550b8fff62acf132901",
+      "检测编号": "7c545ce03236423884a5d076ac3c190d",
+      "站点名称": "盖德化工网",
+      "序号": 5,
+      "标题": "炉甘石 8011-96-9",
+      "url": "https://china.guidechem.com/cas/279723.html"
+    },
+    {
+      "引用编号": "a8c5f0f365bf44618a01ec7725e394b1",
+      "检测编号": "7c545ce03236423884a5d076ac3c190d",
+      "站点名称": "百度爱采购",
+      "序号": 6,
+      "标题": "炉甘石粉 药用级 参考价格 30元/袋",
+      "url": "https://b2b.baidu.com/land/d044357e7501d9f6b55ef5e62eb6a9ed?fid=403116032"
+    },
+    {
+      "引用编号": "ec6da144b13a4401b3bcb7c71974d580",
+      "检测编号": "7c545ce03236423884a5d076ac3c190d",
+      "站点名称": "pmarketresearch.com",
+      "序号": 7,
+      "标题": "Calamine API Market",
+      "url": "https://pmarketresearch.com/hc/calamine-api-market/"
+    },
+    {
+      "引用编号": "0a451ea9d74b4df0babbe34acf0aaff6",
+      "检测编号": "7c545ce03236423884a5d076ac3c190d",
+      "站点名称": "布克化工网",
+      "序号": 8,
+      "标题": "炉甘石原料粉剂消字号,500g每袋起售,有质检单",
+      "url": "https://chemicalbook.com/SupplyInfo_2419267.htm"
+    },
+    {
+      "引用编号": "fbcea8ec97134a53a6df18a0aba286f4",
+      "检测编号": "7c545ce03236423884a5d076ac3c190d",
+      "站点名称": "布克化工网",
+      "序号": 9,
+      "标题": "炉甘石,500g/25kg,研发可用,新批号,库存充足",
+      "url": "https://mip.chemicalbook.com/SupplyInfo_2003204.htm"
+    },
+    {
+      "引用编号": "920f9075c355410d92374afc300a4d0c",
+      "检测编号": "7c545ce03236423884a5d076ac3c190d",
+      "站点名称": "百度",
+      "序号": 10,
+      "标题": "炉甘石粉",
+      "url": "https://b2bwiki.baidu.com/encyclopedic/calamine-powder"
+    },
+    {
+      "引用编号": "e943982524dc421f868a904df4cb9fab",
+      "检测编号": "7c545ce03236423884a5d076ac3c190d",
+      "站点名称": "datavagyanik.com",
+      "序号": 11,
+      "标题": "Global Calamine Powder Market Trends: Rising Consumer Awareness",
+      "url": "https://datavagyanik.com/reports/calamine-powder-market/"
+    },
+    {
+      "引用编号": "f6baeed097c74c95b0264dd009745781",
+      "检测编号": "7c545ce03236423884a5d076ac3c190d",
+      "站点名称": "960化工网",
+      "序号": 12,
+      "标题": "碱式碳酸锌(5970-47-8)",
+      "url": "https://m.chem960.com/offer/27693330"
+    },
+    {
+      "引用编号": "c97fef81a8b349719c17b82852e77a80",
+      "检测编号": "7c545ce03236423884a5d076ac3c190d",
+      "站点名称": "ChemicalBook",
+      "序号": 13,
+      "标题": "炉甘石,有质检单",
+      "url": "https://www.chemicalbook.com/SupplyInfo_2110479.htm"
+    },
+    {
+      "引用编号": "5714d9f069424776bde0d30b450b45a2",
+      "检测编号": "7c545ce03236423884a5d076ac3c190d",
+      "站点名称": "zssph.com",
+      "序号": 14,
+      "标题": "中山市第二人民医院制剂用原辅料供货及服务采购项目澄清公告",
+      "url": "https://www.zssph.com/article/3567"
+    },
+    {
+      "引用编号": "8a94692aa2a347b39bf25187ade67fed",
+      "检测编号": "7c545ce03236423884a5d076ac3c190d",
+      "站点名称": "ChemicalBook",
+      "序号": 15,
+      "标题": "CALAMINE Chemical Properties,Uses,Production",
+      "url": "https://www.chemicalbook.com/ChemicalProductProperty_EN_CB2369138.htm"
+    },
+    {
+      "引用编号": "0e0efdd7dcd04916bef04b31909d02af",
+      "检测编号": "7c545ce03236423884a5d076ac3c190d",
+      "站点名称": "八方资源网",
+      "序号": 16,
+      "标题": "东莞碱式碳酸锌供应商",
+      "url": "https://wap.b2b168.com/wvs152828911.html"
+    },
+    {
+      "引用编号": "940d0260616f49c3bad1b5a91c148144",
+      "检测编号": "7c545ce03236423884a5d076ac3c190d",
+      "站点名称": "yaochangyun.com",
+      "序号": 17,
+      "标题": "【宁德市中医院】福建省宁德市中医院关于制剂生产用原辅料供应商遴选的通知(重新遴选)",
+      "url": "https://yaochangyun.com/ZbPublish/Itemdec5d21b9124ea51.html"
+    },
+    {
+      "引用编号": "8add48575221410b9822044bb6b6b4ec",
+      "检测编号": "7c545ce03236423884a5d076ac3c190d",
+      "站点名称": "dir.indiamart.com",
+      "序号": 18,
+      "标题": "Calamine Powder - Calamine BP Latest Price, Manufacturers & Suppliers",
+      "url": "https://dir.indiamart.com/impcat/calamine-powder.html"
+    },
+    {
+      "引用编号": "eb3e27f06a24426197286ceb6901950d",
+      "检测编号": "7c545ce03236423884a5d076ac3c190d",
+      "站点名称": "顺企网",
+      "序号": 19,
+      "标题": "碱式碳酸锌湖北 轻型收敛剂",
+      "url": "https://m.11467.com/product/d16051564.htm"
+    },
+    {
+      "引用编号": "5355624b422b40108ecb6d22a2bcf0c1",
+      "检测编号": "7c545ce03236423884a5d076ac3c190d",
+      "站点名称": "盖德化工网",
+      "序号": 20,
+      "标题": "炉甘石粉 CAS:8011-96-9 炉甘石洗剂 淡粉色粉末品牌:仕林陕西包装规格:1KG/铝箔袋,25公斤/纸板桶-盖德化工网",
+      "url": "https://china.guidechem.com/trade/pdetail35053382.html"
+    },
+    {
+      "引用编号": "abd35c82203a42339cb2564aa74e7f21",
+      "检测编号": "7c545ce03236423884a5d076ac3c190d",
+      "站点名称": "一亩田",
+      "序号": 21,
+      "标题": "炉甘石中药材矿石类药材大全批发零售货真价实",
+      "url": "https://m.ymt.com/supply/66451130"
+    },
+    {
+      "引用编号": "1f6299b001124a3db1d742de3faaac46",
+      "检测编号": "7c545ce03236423884a5d076ac3c190d",
+      "站点名称": "中国政府采购网",
+      "序号": 22,
+      "标题": "首都医科大学附属首都儿童医学中心制剂配制所需原辅料采购项目公开招标公告",
+      "url": "https://www.ccgp.gov.cn/cggg/dfgg/gkzb/202606/t20260618_26775701.htm"
+    }
+  ],
+  "_obtained": true,
+  "_ai_extracted": false,
+  "_project": "T-长沙市韩臣生物科技有限公司-医药级炉甘石粉",
+  "_enterprise": "长沙市韩臣生物科技有限公司",
+  "_core_word": "医药级炉甘石粉",
+  "_detect_date": "2026-09-01",
+  "内容提及品牌": [
+    "上海京华化工厂有限公司",
+    "湖南尔康制药",
+    "山东泰诚",
+    "陕西正一",
+    "睿诚康",
+    "陕西盘龙翊海",
+    "陕西唐尧",
+    "铭铖",
+    "山西锦洋",
+    "西安众森",
+    "湘尔康",
+    "湖北吉业升",
+    "东莞三丰"
+  ]
+}

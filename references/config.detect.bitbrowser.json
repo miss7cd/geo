@@ -1,0 +1,47 @@
+{
+    "元宝": {
+        "profiles": [
+            "dca42865169e4673b9f4dcbf641232ef"
+        ],
+        "round_robin": true,
+        "cooldown_sec": 30,
+        "close_after": true,
+        "headless": false
+    },
+    "千问": {
+        "profiles": [
+            "145e33bc958445eeba991fcaa7806697"
+        ],
+        "round_robin": true,
+        "cooldown_sec": 30,
+        "close_after": true,
+        "headless": false
+    },
+    "DeepSeek": {
+        "profiles": [
+            "8746778e27404ff89a5cd2a0eba5c004"
+        ],
+        "round_robin": true,
+        "cooldown_sec": 30,
+        "close_after": true,
+        "headless": false
+    },
+    "KiMi": {
+        "profiles": [
+            "6eaab419506b4f6cb8e2554a1a7270ad"
+        ],
+        "round_robin": true,
+        "cooldown_sec": 30,
+        "close_after": true,
+        "headless": false
+    },
+    "豆包": {
+        "profiles": [
+            "17eae2eaf1ce4428b21c5355d8e34ba1"
+        ],
+        "round_robin": true,
+        "cooldown_sec": 30,
+        "close_after": true,
+        "headless": false
+    }
+}

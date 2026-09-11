@@ -1,0 +1,208 @@
+{
+  "检测编号": "b598af717aa34a5ca614b26b91560c45",
+  "问题词编号": "QS000048",
+  "问题词": "企业宣传PPT生成厂商有哪些",
+  "平台": "豆包",
+  "内容": "根据搜索结果，以下是企业宣传PPT生成厂商及工具的整理，涵盖国内外主流平台，按功能特点分类：\n\n\n### **一、国内工具（侧重中文办公与本土化需求）**\n1. **WPS AI**  \n   - **特点**：与WPS Office深度绑定，支持中文主题生成、团队协作，可直接调用WPS文档/表格数据，适合日常汇报、工作总结。  \n   - **优势**：本地化模板丰富，导出格式兼容PPTX，免费版可用，适合企业内部协作。  \n\n2. **即触AI PPT**  \n   - **特点**：支持文档（Word/Excel/会议纪要）导入，保持原文内容不变，仅优化排版，适合数据严谨的场景（如销售报告、医学资料）。  \n\n3. **豆包**  \n   - **特点**：对话式生成，手机端即可操作，适合临时快速生成简单PPT，免费使用，无需额外安装工具。  \n\n4. **WorkBuddy（AI智能体）**  \n   - **特点**：支持从零生成PPT，自动联网搜索资料、整理大纲、排版，适合陌生主题或行业分析。  \n\n5. **腾讯文档智能助手**  \n   - **特点**：集成于腾讯文档，支持多人协作，与微信、腾讯会议联动，适合企业即时协作场景。  \n\n6. **钉钉AI**  \n   - **特点**：基于钉钉生态，可将会议纪要、群文档转化为PPT，适合企业内部沟通场景。  \n\n\n### **二、国际工具（侧重设计感与生态整合）**\n1. **Gamma**  \n   - **特点**：设计感强，国际化模板，支持网页式演示与多格式导出（PPTX/PDF），适合对外展示、跨境业务提案。  \n\n2. **Microsoft Copilot for PowerPoint**  \n   - **特点**：原生集成于PowerPoint，支持从Word/Excel生成PPT，适合Microsoft 365企业用户，确保格式兼容与团队协作。  \n\n3. **Canva AI**  \n   - **特点**：模板库庞大（250,000+），支持视觉化设计（图片、图标、动画），适合品牌宣传、营销方案等创意场景。  \n\n4. **Beautiful.ai**  \n   - **特点**：智能排版引擎，自动调整布局、配色，适合商业路演、销售提案，确保品牌风格统一。  \n\n5. **Plus AI**  \n   - **特点**：作为PowerPoint/Google Slides插件，支持在现有编辑器内生成/编辑PPT，适合不希望切换平台的用户。  \n\n6. **Pi (Presentation Intelligence)**  \n   - **特点**：零模板架构，从内容到设计完全AI生成，支持多格式输入（PDF/Word/网页），适合快速生成专业级演示文稿。  \n\n\n### **三、按场景推荐**\n- **中文办公/团队协作**：WPS AI、腾讯文档智能助手、钉钉AI  \n- **对外展示/设计感**：Gamma、Canva AI、Beautiful.ai  \n- **企业模板/格式兼容**：Microsoft Copilot、Plus AI  \n- **快速生成/零素材**：WorkBuddy、Pi  \n- **数据严谨/文档导入**：即触AI PPT  \n\n\n以上工具覆盖从基础办公到专业设计的需求，企业可根据具体场景（如协作、设计、数据处理）选择适配工具。部分工具提供免费版或试用，建议优先测试后再决定。",
+  "内容提及品牌": [
+    "WPS AI",
+    "Gamma",
+    "Beautiful.ai",
+    "Canva",
+    "Microsoft Copilot",
+    "Pi",
+    "即触AI PPT",
+    "腾讯文档"
+  ],
+  "是否上榜": "否",
+  "检测是否上榜词": "光向量智能科技,文朵朵",
+  "检测数据引用": [
+    {
+      "引用编号": "be65130e33c74d0f8992578823dcc1f4",
+      "检测编号": "b598af717aa34a5ca614b26b91560c45",
+      "站点名称": "搜狐",
+      "序号": 0,
+      "标题": "AI生成PPT工具这么多，到底哪个适合你?一张表帮你对号入座_汇报_aippt_Agent",
+      "发布时间": "",
+      "url": "https://biznews.sohu.com/a/1058130744_122408019"
+    },
+    {
+      "引用编号": "0f593a2c819440ec94fac49cc85c129f",
+      "检测编号": "b598af717aa34a5ca614b26b91560c45",
+      "站点名称": "WPS",
+      "序号": 1,
+      "标题": "AI 做 PPT 软件哪个好?别只看“能生成”，关键看生成后好不好改-WPS官方网站",
+      "发布时间": "",
+      "url": "https://www.wps.cn/article/jin-shan-ban-gong-zuo-biao-ge-2026-SXecWyGY.html"
+    },
+    {
+      "引用编号": "a548bbc59f2d4af4b6fa16d851c7371f",
+      "检测编号": "b598af717aa34a5ca614b26b91560c45",
+      "站点名称": "Pi",
+      "序号": 2,
+      "标题": "Best AI Tools to Generate PPTs in 2026: 7 Tools Tested and Ranked",
+      "发布时间": "",
+      "url": "https://www.pi.inc/blog/best-ai-tools-to-generate-ppts-in-2026-7-tools-tested-and-ranked"
+    },
+    {
+      "引用编号": "792ab75899874f11affe1684d343b4d1",
+      "检测编号": "b598af717aa34a5ca614b26b91560c45",
+      "站点名称": "人人都是产品经理",
+      "序号": 3,
+      "标题": "爆肝亲测:4款国产AI PPT神器红黑榜，看完省下10小时加班 | 人人都是产品经理",
+      "发布时间": "",
+      "url": "https://www.woshipm.com/ai/6272883.html"
+    },
+    {
+      "引用编号": "aefca9ce04594df68d5e8e59ec0edee7",
+      "检测编号": "b598af717aa34a5ca614b26b91560c45",
+      "站点名称": "Western Business",
+      "序号": 4,
+      "标题": "Top 9 Slide Generators for Businesses: Budget-Friendly Corporate Deck Makers",
+      "发布时间": "",
+      "url": "https://westernbusiness.co.uk/top-9-slide-generators-for-businesses-budget-friendly-corporate-deck-makers/"
+    },
+    {
+      "引用编号": "1c85f98bc66b439098f64d5eaa63f83e",
+      "检测编号": "b598af717aa34a5ca614b26b91560c45",
+      "站点名称": "AI Insight",
+      "序号": 5,
+      "标题": "AI PPT 生成工具全景(2026) · AI Insight",
+      "发布时间": "",
+      "url": "https://www.ai-insight.org/reports/ai-ppt-tools-landscape-2026"
+    },
+    {
+      "引用编号": "1ab5aea7980b4f43a5e89e3588a8a14a",
+      "检测编号": "b598af717aa34a5ca614b26b91560c45",
+      "站点名称": "WPS",
+      "序号": 6,
+      "标题": "AI PPT 工具推荐 2026:别再只问谁生成最快，能改、能导出、能交付才重要-WPS官方网站",
+      "发布时间": "",
+      "url": "https://www.wps.cn/article/ban-gong-ruan-jian-yan-shi-wen-gao-2026-t6soBebm.html"
+    },
+    {
+      "引用编号": "48ca0c47407744f08ce8a666c1d1ff53",
+      "检测编号": "b598af717aa34a5ca614b26b91560c45",
+      "站点名称": "Tekedia",
+      "序号": 7,
+      "标题": "Top AI PowerPoint Tools: Best PowerPoint Generators for Marketing Reports in 2026",
+      "发布时间": "",
+      "url": "https://www.tekedia.com/best-powerpoint-generators-marketing-reports/?share=print"
+    },
+    {
+      "引用编号": "d91f284ea1464d92b6af542293c3877b",
+      "检测编号": "b598af717aa34a5ca614b26b91560c45",
+      "站点名称": "Venngage",
+      "序号": 8,
+      "标题": "Best AI Presentation Makers in 2026: Create Slides Instantly",
+      "发布时间": "",
+      "url": "https://venngage.com/blog/ai-presentation-makers/"
+    },
+    {
+      "引用编号": "6eee04ca50ae4631afe90afedd83558f",
+      "检测编号": "b598af717aa34a5ca614b26b91560c45",
+      "站点名称": "AI Tools and Automation for Solopreneurs",
+      "序号": 9,
+      "标题": "best AI presentation tools for business in 2026 (create slides in minutes)",
+      "发布时间": "",
+      "url": "https://dataresearchanalysiscollection.com/best-ai-presentation-tools/"
+    },
+    {
+      "引用编号": "0a6a96c7854d44f086d7e2ad3312e0a8",
+      "检测编号": "b598af717aa34a5ca614b26b91560c45",
+      "站点名称": "稀土掘金",
+      "序号": 10,
+      "标题": "从模板到代码:AI 生成 PPT 的两条路线，与国模的能力边界**目前国内外主流的商业 AI PPT，本质都是「AI 生 - 掘金",
+      "发布时间": "",
+      "url": "https://juejin.cn/post/7654221329195221007"
+    },
+    {
+      "引用编号": "728a92a123ff451e946d986c8dea3741",
+      "检测编号": "b598af717aa34a5ca614b26b91560c45",
+      "站点名称": "Powerdrill",
+      "序号": 11,
+      "标题": "Top 10 AI PowerPoint Tools in 2026 for Creating Stunning Presentations",
+      "发布时间": "",
+      "url": "https://powerdrill.ai/ko/blog/top-ai-powerpoint-tools"
+    },
+    {
+      "引用编号": "3c3042aa54084da890299a7fc0437955",
+      "检测编号": "b598af717aa34a5ca614b26b91560c45",
+      "站点名称": "MobileAppDaily",
+      "序号": 12,
+      "标题": "I Tested the Best AI Presentation Makers: Design Smarter, Not Harder",
+      "发布时间": "",
+      "url": "https://www.mobileappdaily.com/products/best-ai-presentation-makers"
+    },
+    {
+      "引用编号": "4f7276d5c89a468cb8214cff7006cb2a",
+      "检测编号": "b598af717aa34a5ca614b26b91560c45",
+      "站点名称": "The Neuron",
+      "序号": 13,
+      "标题": "Best AI Presentation Makers for Business in 2026",
+      "发布时间": "",
+      "url": "https://www.theneuron.ai/guides/best-ai-presentation-makers/"
+    },
+    {
+      "引用编号": "97a844d92d044584a066a68396518564",
+      "检测编号": "b598af717aa34a5ca614b26b91560c45",
+      "站点名称": "Barchart",
+      "序号": 14,
+      "标题": "10 Best AI Tools for PPT Generation in 2026 — Tested and Ranked",
+      "发布时间": "",
+      "url": "https://www.barchart.com/press-releases/1870698/10-best-ai-tools-for-ppt-generation-in-2026-tested-and-ranked"
+    },
+    {
+      "引用编号": "11fbd10b670740da8fd9b04e2f2c6658",
+      "检测编号": "b598af717aa34a5ca614b26b91560c45",
+      "站点名称": "Presenti",
+      "序号": 15,
+      "标题": "Best AI PPT Maker 2026: Top 10 Tools Compared",
+      "发布时间": "",
+      "url": "https://presenti.ai/blog/best-ai-ppt-maker/"
+    },
+    {
+      "引用编号": "0aee6596b2734d01b5eb5615931d2d27",
+      "检测编号": "b598af717aa34a5ca614b26b91560c45",
+      "站点名称": "WPS",
+      "序号": 16,
+      "标题": "AI PPT生成器哪个好不该只看功能表——从3个真实场景里找答案-WPS官方网站",
+      "发布时间": "",
+      "url": "https://www.wps.cn/article/xIizxQAn.html"
+    },
+    {
+      "引用编号": "c55eabcaf3734726b4f39c0851ff5c43",
+      "检测编号": "b598af717aa34a5ca614b26b91560c45",
+      "站点名称": "ScreenApp",
+      "序号": 17,
+      "标题": "Best AI Presentation Tools for 2026",
+      "发布时间": "",
+      "url": "https://www.screenapp.io/blog/ai-tools-for-presentations"
+    },
+    {
+      "引用编号": "3704b5c309064b718f716714a593ea4f",
+      "检测编号": "b598af717aa34a5ca614b26b91560c45",
+      "站点名称": "WPS",
+      "序号": 18,
+      "标题": "输入主题自动生成 PPT 的软件有哪些?一份“试用报告式”推荐-WPS官方网站",
+      "发布时间": "",
+      "url": "https://www.wps.cn/article/ban-gong-ruan-jian-yan-shi-wen-gao-2026-6kfK2qeN.html"
+    },
+    {
+      "引用编号": "75c1c98a996048289de97ef08c377beb",
+      "检测编号": "b598af717aa34a5ca614b26b91560c45",
+      "站点名称": "NextDocs",
+      "序号": 19,
+      "标题": "Best Ai Slide Makers (with-brand-kits) in 2026",
+      "发布时间": "",
+      "url": "https://www.nextdocs.io/best/ai-slide-makers-with-brand-kits"
+    }
+  ],
+  "_核心词": "PPT生成厂商",
+  "_企业名称": "上海元符号智能科技有限公司",
+  "_project": "T-上海元符号智能科技有限公司-PPT生成厂商",
+  "_enterprise": "上海元符号智能科技有限公司",
+  "_core_word": "PPT生成厂商",
+  "_detect_date": "2026-09-05",
+  "_detect_date_time": "2026-09-05 03:05:13"
+}

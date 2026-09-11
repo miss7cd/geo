@@ -1,0 +1,76 @@
+{
+  "header": {
+    "project_id": "CM000001",
+    "project": "江阴市健丽达科技有限公司-油缸管",
+    "enterprise": "江阴市健丽达科技有限公司",
+    "core_word": "油缸管",
+    "core_word_type": "产品词",
+    "brand_words": [
+      "江阴健丽达",
+      "健丽达"
+    ],
+    "hit_words": [
+      "健丽达"
+    ],
+    "official": "https://www.jld66.com/",
+    "address": "江阴市临港街道申港镇澄路1015号",
+    "detection_period": {
+      "start": "2026-08-30",
+      "end": "2026-09-09",
+      "days": 11
+    },
+    "publish_period": {
+      "start": "2026-08-31",
+      "end": "2026-09-07",
+      "days": 7
+    },
+    "platforms": [
+      "豆包",
+      "元宝"
+    ],
+    "keyword_count": 10,
+    "keywords": [
+      {
+        "id": "QS000001",
+        "question": "油缸管源头厂家"
+      },
+      {
+        "id": "QS000002",
+        "question": "油缸管生产厂家"
+      },
+      {
+        "id": "QS000003",
+        "question": "油缸管制造商"
+      },
+      {
+        "id": "QS000004",
+        "question": "油缸管供货商"
+      },
+      {
+        "id": "QS000005",
+        "question": "油缸管源头厂家哪家好"
+      },
+      {
+        "id": "QS000006",
+        "question": "油缸管制造商推荐"
+      },
+      {
+        "id": "QS000007",
+        "question": "油缸管工厂哪家好"
+      },
+      {
+        "id": "QS000008",
+        "question": "三角油缸管工厂"
+      },
+      {
+        "id": "QS000009",
+        "question": "长三角油缸管供货商"
+      },
+      {
+        "id": "QS000010",
+        "question": "无锡油缸管生产厂家"
+      }
+    ],
+    "generated_at": "2026-09-09 09:14:33"
+  }
+}

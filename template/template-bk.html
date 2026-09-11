@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/ant-design-vue/dist/reset.css">
+    <title>报告</title>
+</head>
+
+<body>
+    <div id="app">
+        <header id="gao-insight-header">
+            <!-- 绑定 header 数据 -->
+        </header>
+        <div id="gao-insight-fixed-anchor"></div>
+        </header>
+        <a-card :bordered="false" title="核心指标概览">
+            <div id="geo-insight-kpis">
+                <!-- 绑定 kpis 数据 -->
+            </div>
+        </a-card>
+        <a-card :bordered="false" title="核心指标概览"></a-card>
+        <div id="geo-insight-?"></div>
+        <div id="geo-insight-?"></div>
+        <div id="geo-insight-?"></div>
+        <div id="geo-insight-?"></div>
+        <div id="geo-insight-?"></div>
+        <div id="geo-insight-?"></div>
+        <div id="geo-insight-?"></div>
+        <div id="geo-insight-?"></div>
+        <div id="geo-insight-?"></div>
+        <div id="geo-insight-?"></div>
+        <div id="geo-insight-?"></div>
+        <div id="geo-insight-?"></div>
+        <footer id="geo-insight-footer"></footer>
+    </div>
+    <script src="https://unpkg.com/@antv/g2/dist/g2.min.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.13/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.13/plugin/customParseFormat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.13/plugin/weekday.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.13/plugin/localeData.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.13/plugin/weekOfYear.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.13/plugin/weekYear.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.13/plugin/advancedFormat.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.13/plugin/quarterOfYear.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.13/plugin/relativeTime.js"></script>
+    <script src="https://unpkg.com/ant-design-vue/dist/antd.min.js"></script>
+    <script>
+        const { createApp, ref } = Vue
+        // header.py脚本读取json文件，转为需要的数据格式，注入header变量
+        const header = {}
+        // kpis.py脚本读取json文件，转为需要的数据格式，注入kpis变量
+        const kpis = {}
+        const insight_data = {}
+
+        const app = createApp({
+            setup() {
+                return {
+                    header,
+                    kpis
+                }
+            }
+        })
+        app.use(antd).mount('#app')
+    </script>
+</body>
+
+</html>
