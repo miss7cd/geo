@@ -1,0 +1,231 @@
+{
+  "检测编号": "3c438a43e8c34f5399f587797384ebc9",
+  "问题词编号": "QS000046",
+  "问题词": "发布会PPT生成厂商哪家好",
+  "平台": "元宝",
+  "内容": "“发布会 PPT 生成”分两种需求：AI 一键出初稿​ 和 企业级品牌化/可交付发布会物料。没有一家通吃，按场景选更靠谱。\n一、产品发布会 / 路演 / 对外大屏：要“好看+有叙事”\n•\nGamma：设计感最强、卡片式排版现代，适合产品发布、品牌宣讲、融资路演；支持大纲/文档生成、AI 配图、动效。\n缺点：中文排版不如国产工具，数据会被“润色”，导出 PPTX 后常要返工。\n•\nBeautiful.ai：智能排版+品牌锁样，适合设计团队做“视觉一致”的对外 deck。\n缺点：中文弱、自由度低。\n•\nCanva 可画：海报/主视觉/发布会物料一起做，市场部友好；PPT 逻辑弱一点。\n•\nPitch：团队协作文案型路演强，品牌管控比 Gamma 好。\n海外发布会/英文场景：Gamma、Beautiful.ai、Pitch\n国内科技发布会视觉稿：Gamma 出风格 → 设计师进 PPT/Keynote 精修\n二、国内企业发布会 / 中文汇报 / 已有 WPS 体系\n•\nWPS AI：和 WPS 文档/表格打通，中文语境顺，适合“已有产品稿/参数表 → 转 PPT”。\n缺点：设计感中等，高级模板要会员。\n•\n讯飞智文：中文/语音输入强，适合老板口述、会议记录转提纲；模板偏传统，不够“发布会展”。\n•\n百度文库 AI PPT：参考资料多、文档转 PPT 方便，适合“白皮书/行业报告改发布会摘要”。\n•\n通义千问 PPT / 豆包 PPT：快速出草稿还行，适合内部对齐，不建议直接上大屏。\n•\nAiPPT / 即触 PPT / ChatPPT：国产 AI PPT 里，AiPPT​ 模板多、即触​ 强调“原文保留”、ChatPPT​ 做政企/金融模板和演讲备注；要“数据别乱编”选即触，要“快出多版”选 AiPPT。\n三、企业级：品牌规范、权限、私有化、批量出 deck\n•\nPrezent.ai / Alai / ChatSlide：企业品牌库、SSO、审计、模板锁死、真实数据图表，适合大厂市场/战略/销售 enablement。\n•\nMicrosoft 365 Copilot：微软生态企业，PPT 里直接改稿、读 Word/Excel，合规好；设计感一般。\n•\nZoho Show / 博思白板类：偏协作和私有化，技术型发布会可用。\n•\n国内政企/大厂还可看 ChatPPT 企业版、百度文库企业版、WPS 365 企业版。\n四、实战推荐组合（最稳）\n1.\nKimi / 通义 / 豆包​ 先写发布会大纲与台词\n2.\nGamma​ 出高颜值初稿（定视觉语言）\n3.\n导回 PowerPoint / WPS​ 由设计师锁字体、动画、舞台比例\n4.\n数据页用 Excel/BI 截图或 Beautiful.ai/Prezent​ 做真实图表\n5.\n最终由人审：参数、价格、时间、竞品表述、版权图\n五、一句话结论\n•\n要最帅初稿：Gamma\n•\n要中文省事：WPS AI / 讯飞智文\n•\n要数据不乱编：即触 AI PPT / 人工校对流程\n•\n要企业品牌管控：Prezent.ai / Alai / Copilot / ChatSlide\n•\n要真上发布会大屏：AI 只做 0→1，专业设计师做 1→100\n如果你愿意，我可以按「硬件发布会 / SaaS 产品发布 / 政府国企发布 / 融资路演」分别给你一套工具+模板结构+交付清单。\n源\n哪些工具可免费使用？\nGamma PPT生成后如何修改\n如何评估一场发布会PPT的效果？有哪些关键指标？\n下载元宝电脑版，体验高效 AI 助手",
+  "是否上榜": "否",
+  "检测是否上榜词": "光向量智能科技,文朵朵",
+  "检测数据引用": [
+    {
+      "引用编号": "fc903521596d4a17abcf3758092930d4",
+      "检测编号": "3c438a43e8c34f5399f587797384ebc9",
+      "站点名称": "intelliparadigm.com",
+      "序号": 1,
+      "标题": "2026年主流AI PPT生成工具实测与评测",
+      "发布时间": "",
+      "url": "https://intelliparadigm.com/article/weixin_29061531/2102563"
+    },
+    {
+      "引用编号": "a9ea66c2f89440e3a4f8b7521c2f6c8b",
+      "检测编号": "3c438a43e8c34f5399f587797384ebc9",
+      "站点名称": "cognitivefuture.ai",
+      "序号": 2,
+      "标题": "Best AI Presentation Software for Business (2026 Buyer’s Guide)",
+      "发布时间": "",
+      "url": "https://cognitivefuture.ai/?p=5963/"
+    },
+    {
+      "引用编号": "2c72e9948cc243deb26dbcae7a8a6408",
+      "检测编号": "3c438a43e8c34f5399f587797384ebc9",
+      "站点名称": "islide.cc",
+      "序号": 3,
+      "标题": "AI生成PPT工具全评测:2026年哪款最适合你?iSlide带你选对不踩坑",
+      "发布时间": "",
+      "url": "https://www.islide.cc/blog/744"
+    },
+    {
+      "引用编号": "dc493d7d345d4e35b214193ac8133a21",
+      "检测编号": "3c438a43e8c34f5399f587797384ebc9",
+      "站点名称": "今日头条",
+      "序号": 4,
+      "标题": "用AI做PPT太慢?5个工具实测对比3步实操,10分钟出一份专业PPT - 今日头条",
+      "发布时间": "",
+      "url": "https://m.toutiao.com/article/7667215667724075539"
+    },
+    {
+      "引用编号": "cf54ab78635e4b44b9defb9c59a69c84",
+      "检测编号": "3c438a43e8c34f5399f587797384ebc9",
+      "站点名称": "digitfeast.com",
+      "序号": 5,
+      "标题": "Best AI Presentation Makers for Enterprise - 4 Tools Tested and Ranked (2026)",
+      "发布时间": "",
+      "url": "https://www.digitfeast.com/2026/06/best-ai-presentation-makers-for-enterprise.html"
+    },
+    {
+      "引用编号": "7bce9888238546d2bebb9deb78cf4cad",
+      "检测编号": "3c438a43e8c34f5399f587797384ebc9",
+      "站点名称": "模湖智能",
+      "序号": 6,
+      "标题": "2026年AI PPT生成工具全景解析",
+      "发布时间": "",
+      "url": "http://mp.weixin.qq.com/s?__biz=MzE5ODA4MjA0MA==&mid=2247484846&idx=1&sn=34ee8d4b3d4ce8e967cff0bc14fef116&chksm=973ef2a02e93213e95ff9f8c71c5b73adcbf71c8f968ccf62e182713b750f396f97a88a36e24#rd"
+    },
+    {
+      "引用编号": "972480a2113442d599da7946efe27046",
+      "检测编号": "3c438a43e8c34f5399f587797384ebc9",
+      "站点名称": "今日头条",
+      "序号": 7,
+      "标题": "2026年AI生成PPT工具横评:6款主流产品实测,哪款生成完不用大改",
+      "发布时间": "",
+      "url": "https://www.toutiao.com/article/7679759712086213162"
+    },
+    {
+      "引用编号": "463bcb10ca4e4fd48905f5096cfdcabc",
+      "检测编号": "3c438a43e8c34f5399f587797384ebc9",
+      "站点名称": "aitoolpick.org",
+      "序号": 8,
+      "标题": "Best AI Presentation Tools in 2026: Gamma, Pitch, Beautiful.ai, Tome & More Ranked",
+      "发布时间": "",
+      "url": "https://aitoolpick.org/blog/best-presentation-ai-tools-2026"
+    },
+    {
+      "引用编号": "4a41b3203833444d93da26f0d014c99c",
+      "检测编号": "3c438a43e8c34f5399f587797384ebc9",
+      "站点名称": "木叶上",
+      "序号": 9,
+      "标题": "AI PPT 工具横向评测:别被一键生成骗了,2026 年到底该用哪款?",
+      "发布时间": "",
+      "url": "http://mp.weixin.qq.com/s?src=11&timestamp=1789156056&ver=6960&signature=bLXmYy8YaL3HF-ccP0O1tAAWsJWZqFWQ10mgoJo63O8LgLR1mnPKEV2sksKll5QuHnJD6Xg9lh3T-g29T4HJ4DUYgL6fLL4KcrZOp8tnKjtq8RLYTSRbKjOwIR5StIg0&new=1"
+    },
+    {
+      "引用编号": "15ca5d277b5043e49bd0087addf7c715",
+      "检测编号": "3c438a43e8c34f5399f587797384ebc9",
+      "站点名称": "CSDN",
+      "序号": 10,
+      "标题": "做PPT的AI工具怎么挑?6款主流产品横向评测与选型决策树(2026)-CSDN博客",
+      "发布时间": "",
+      "url": "https://blog.csdn.net/jiashaokun/article/details/164114868"
+    },
+    {
+      "引用编号": "06029bcee4af41bfb679f1380c4621ed",
+      "检测编号": "3c438a43e8c34f5399f587797384ebc9",
+      "站点名称": "bestin2026.com",
+      "序号": 11,
+      "标题": "The Best Enterprise AI Presentation Software in 2026",
+      "发布时间": "",
+      "url": "https://www.bestin2026.com/articles/best-enterprise-ai-presentation-software-2026"
+    },
+    {
+      "引用编号": "ad3fb9af852844f1bb6e21a210614305",
+      "检测编号": "3c438a43e8c34f5399f587797384ebc9",
+      "站点名称": "perceptis.ai",
+      "序号": 12,
+      "标题": "Best AI Presentation Makers and Slide Generators in 2026 (14 Tools Tested)",
+      "发布时间": "",
+      "url": "https://perceptis.ai/blog/best-ai-presentation-makers-and-slide-generators-in-2026-14-tools-tested"
+    },
+    {
+      "引用编号": "8922cfe57e8f4d2a9310ce9e99eecfd1",
+      "检测编号": "3c438a43e8c34f5399f587797384ebc9",
+      "站点名称": "博客园",
+      "序号": 13,
+      "标题": "根据文字内容自动生成PPT,推荐哪个AI工具?",
+      "发布时间": "",
+      "url": "https://www.cnblogs.com/pinpai/p/22841882"
+    },
+    {
+      "引用编号": "e2d7d720f7204e7cbaeef5bd1a225114",
+      "检测编号": "3c438a43e8c34f5399f587797384ebc9",
+      "站点名称": "prezentium.com",
+      "序号": 14,
+      "标题": "10 Best AI Presentation Makers for Business in 2026 (Tested)",
+      "发布时间": "",
+      "url": "https://prezentium.com/business-ai-presentation-makers/"
+    },
+    {
+      "引用编号": "bb6f6981af7a46a2889c28c727466db3",
+      "检测编号": "3c438a43e8c34f5399f587797384ebc9",
+      "站点名称": "WPS海外版官网",
+      "序号": 15,
+      "标题": "WPS AI Slides: Complete 2026 Guide WPS Office Academy",
+      "发布时间": "",
+      "url": "https://www.wps.com/academy/wps-ai-slides-guide-quick-tutorials-1898624/"
+    },
+    {
+      "引用编号": "dd74edb9e5ee43d297d521ca9bf78af5",
+      "检测编号": "3c438a43e8c34f5399f587797384ebc9",
+      "站点名称": "超聚变数字技术有限公司官网",
+      "序号": 16,
+      "标题": "超聚变xRAY联手ChatPPT,共创企业PPT智能创作新范式",
+      "发布时间": "",
+      "url": "https://www.xfusion.com/cn/news/xray-chatppt"
+    },
+    {
+      "引用编号": "4df388a0b6ce42e98b9dea8afcdfb321",
+      "检测编号": "3c438a43e8c34f5399f587797384ebc9",
+      "站点名称": "cbinsights.com",
+      "序号": 17,
+      "标题": "Visme",
+      "发布时间": "",
+      "url": "https://www.cbinsights.com/company/easy-webcontent"
+    },
+    {
+      "引用编号": "e0bda7c120744baba2a99b67a962c960",
+      "检测编号": "3c438a43e8c34f5399f587797384ebc9",
+      "站点名称": "嗨少大呲花",
+      "序号": 18,
+      "标题": "产品演示PPT总被说不专业?试试这几款生成软件",
+      "发布时间": "",
+      "url": "http://mp.weixin.qq.com/s?__biz=MzE5ODc0NjY4Mw==&mid=2247485688&idx=1&sn=c5009fe40ac3f5267c968dc0918f40e2&chksm=97f949a20053f3c60110d6fd17c16033206cf2c1020a9b26e23bf0cecdd694e259cbe647f27c#rd"
+    },
+    {
+      "引用编号": "57b8f827fa6f4c33bb8bf3d73141e5c8",
+      "检测编号": "3c438a43e8c34f5399f587797384ebc9",
+      "站点名称": "Beautiful.ai",
+      "序号": 18,
+      "标题": "Beautiful.ai",
+      "发布时间": "",
+      "url": "https://Beautiful.ai"
+    },
+    {
+      "引用编号": "865bbf2daebc4fffb0aa8462bc822784",
+      "检测编号": "3c438a43e8c34f5399f587797384ebc9",
+      "站点名称": "Prezent.ai",
+      "序号": 19,
+      "标题": "Prezent.ai",
+      "发布时间": "",
+      "url": "https://Prezent.ai"
+    },
+    {
+      "引用编号": "881ca5c2d81745fcb4dadf04f8604106",
+      "检测编号": "3c438a43e8c34f5399f587797384ebc9",
+      "站点名称": "Beautiful.ai",
+      "序号": 20,
+      "标题": "Beautiful.ai",
+      "发布时间": "",
+      "url": "https://Beautiful.ai/Prezent​"
+    }
+  ],
+  "_obtained": true,
+  "_ai_extracted": false,
+  "_question_record_id": "",
+  "_核心词": "PPT生成厂商",
+  "_企业名称": "上海元符号智能科技有限公司",
+  "_project": "T-上海元符号智能科技有限公司-PPT生成厂商",
+  "_enterprise": "上海元符号智能科技有限公司",
+  "_core_word": "PPT生成厂商",
+  "_detect_date": "2026-09-12",
+  "_detect_date_time": "2026-09-12 03:53:03",
+  "内容提及品牌": [
+    "Gamma",
+    "Beautiful.ai",
+    "Canva 可画",
+    "Pitch",
+    "WPS AI",
+    "讯飞智文",
+    "百度文库",
+    "通义千问",
+    "豆包",
+    "AiPPT",
+    "即触",
+    "ChatPPT",
+    "Prezent.ai",
+    "Alai",
+    "ChatSlide",
+    "Microsoft 365 Copilot",
+    "Zoho Show",
+    "博思白板",
+    "Kimi"
+  ]
+}

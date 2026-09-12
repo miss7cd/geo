@@ -1,0 +1,206 @@
+{
+  "检测编号": "951c97667c06483998e9fdbbe1f7f3fc",
+  "问题词编号": "QS000047",
+  "问题词": "招商PPT生成厂商推荐",
+  "平台": "元宝",
+  "内容": "“招商 PPT”通常分两类：企业融资/加盟招商路演（给投资人、加盟商看）和政府/园区招商推介（给企业、项目方看）。下面按“国内可用 + 海外路演向 + 企业/政务私有化”三档给你厂商推荐。\n一、国内 AI PPT 生成（中文招商材料最顺手）\n•\nAiPPT.cn / AiPPT.com（像素绽放 PixelBloom）：国内头部 AI PPT 厂商，一句话/文档生成，模板偏商务路演、企业介绍；支持企业/政务私有化部署，接 OA、知识库、内部数据中台，中信/农夫山泉/部分政府机关有落地。\n•\n轻竹办公 PPT：基于国内大模型，轻量好用，适合门店招商、渠道推广、线下活动宣讲，手机/小程序也能改。\n•\n笔格 PPT：创赛/路演场景口碑不错，商业叙事结构（痛点—方案—模式—回报—案例）比较贴招商路演。\n•\n通义/钉钉 AI PPT、WPS AI PPT：如果你们已经在阿里/钉钉或 WPS 办公体系里，优先用，协作和导出最稳，但“招商专业度”要靠自己喂资料。\n二、海外/融资路演向（做英文 Pitch / 投资人材料）\n•\nGamma：最快出初稿，网页分享、路演链接、打开率分析好用，适合融资路演第一版草稿。\n•\nBeautiful.ai：自动排版不崩，品牌规范强，适合非设计岗做“像咨询公司”的招商材料。\n•\nSlidebean：初创融资/招商逻辑强，内置投资人视角结构（市场、模式、 traction、用款计划）。\n•\nPlus AI：直接在 PowerPoint / Google Slides 里生成改写，适合“最终还要回 PPT 精修”的团队。\n•\nPitch：团队协作、投资人跟进、deck 分享分析，适合销售/BD/招商团队共用。\n•\nStorydoc：做交互式招商手册/投资人对接页，不是传统 PPT，但转化跟踪很强。\n三、企业级 / 政府园区招商（要私有化、品牌母版、合规）\n•\n像素绽放 PixelBloom（AiPPT 企业版）：国内私有化、API、OA 插件、知识库对接最成熟之一。\n•\nPrezent：企业级品牌模板 + 金字塔逻辑，适合大集团/央国企/园区平台公司。\n•\nDeliverables AI / Hebbia：偏投行/并购/CIM/招商手册生成，贵，适合产投集团、金控、招商局做“项目招引包”。\n•\n微软 365 Copilot / Google Gemini：已有 Office 365 / Workspace 的大型组织可用，但别让 AI 编市场数据和政策数据。\n四、怎么选（直接给结论）\n•\n创业公司做加盟招商/融资路演：Gamma 打草稿 → AiPPT.cn 出中文终稿 → PowerPoint 精修。\n•\n园区/城投/招商局做产业推介：AiPPT 企业版 / WPS AI / 轻竹；要保密就私有化部署。\n•\n给外资/出海项目招商：Gamma + Beautiful.ai + Plus AI。\n•\n大集团品牌严管：Beautiful.ai / Prezent / Plus AI（绑 PPT 母版）。\n•\n销售铁军批量出招商方案：Pitch / Decktopus / Storydoc（重跟踪转化）。\n五、招商 PPT 厂商选型 6 个硬指标\n1.\n能否吃进项目可研、园区政策、租金/税收、产业链图谱等资料\n2.\n是否支持企业 VI/政府母版（Logo、色值、字体、页眉页脚）\n3.\n导出是不是真可编辑 PPTX（别是图片平铺）\n4.\n数据图表（市场规模、返投、产值、就业、税收）会不会瞎编​\n5.\n是否支持私有化/内网/知识库对接​\n6.\n有没有招商话术→演讲稿→一页纸→长版路演全链路\n如果你愿意，我可以下一步直接给你：\n•\n《招商 PPT 标准 18 页结构模板》\n•\n或按“政府园区 / 消费加盟 / 硬科技融资”三种场景分别列推荐厂商 + 提示词 + 页面大纲。\n你这边是政府园区招商、企业加盟招商、还是融资路演？\n源\n请提供政府园区招商PPT厂商推荐及提示词\n这些厂商的收费标准是什么？\n如何评估招商PPT厂商生成内容的质量？有哪些具体的评估指标？\n下载元宝电脑版，体验高效 AI 助手",
+  "是否上榜": "否",
+  "检测是否上榜词": "光向量智能科技,文朵朵",
+  "检测数据引用": [
+    {
+      "引用编号": "0a9c7794ca7b4eb49e11c9652b5de0df",
+      "检测编号": "951c97667c06483998e9fdbbe1f7f3fc",
+      "站点名称": "chatwithyourdata.io",
+      "序号": 1,
+      "标题": "13 Best AI Pitch Deck Generators for Pro Presentations in 2026",
+      "发布时间": "",
+      "url": "https://chatwithyourdata.io/articles/ai-pitch-deck-generator"
+    },
+    {
+      "引用编号": "aff972b601764d058d3a4f1a0098828b",
+      "检测编号": "951c97667c06483998e9fdbbe1f7f3fc",
+      "站点名称": "deliverables.ai",
+      "序号": 2,
+      "标题": "Best AI tools for pitch decks in 2026: the definitive comparison",
+      "发布时间": "",
+      "url": "https://deliverables.ai/guides/best-ai-tools-for-pitch-decks-2026?utm_medium=blog&utm_source=kostja"
+    },
+    {
+      "引用编号": "44b7c668e6a648b0bed2072859e8a68b",
+      "检测编号": "951c97667c06483998e9fdbbe1f7f3fc",
+      "站点名称": "eliteai.tools",
+      "序号": 3,
+      "标题": "generate business pitch slides - AI tools",
+      "发布时间": "",
+      "url": "https://eliteai.tools/search/popular/generate-business-pitch-slides"
+    },
+    {
+      "引用编号": "946c148006e9401f835df3c4f9369140",
+      "检测编号": "951c97667c06483998e9fdbbe1f7f3fc",
+      "站点名称": "en.ai-pedias.com",
+      "序号": 4,
+      "标题": "AI Pitch Deck Generator Complete Guide 2026: Gamma, Beautiful.ai, and Plus AI Explained",
+      "发布时间": "",
+      "url": "https://en.ai-pedias.com/blog/ai-pitch-deck-generator-2026"
+    },
+    {
+      "引用编号": "3ed8277e10034c579a3897bd60b3a48a",
+      "检测编号": "951c97667c06483998e9fdbbe1f7f3fc",
+      "站点名称": "anygen.io",
+      "序号": 5,
+      "标题": "Best Pitch Deck Software 2026",
+      "发布时间": "",
+      "url": "https://www.anygen.io/showcase/best-pitch-deck-software-2026/index.html"
+    },
+    {
+      "引用编号": "47bc94923f3b412ebd687f8be35881ed",
+      "检测编号": "951c97667c06483998e9fdbbe1f7f3fc",
+      "站点名称": "网易",
+      "序号": 6,
+      "标题": "像素绽放PixelBloom完成C轮融资,全面发力AI办公解决方案Agent",
+      "发布时间": "",
+      "url": "https://www.163.com/tech/article/KSB95D1D00097U7T.html"
+    },
+    {
+      "引用编号": "8d928d7399f54b909645351ea425bf42",
+      "检测编号": "951c97667c06483998e9fdbbe1f7f3fc",
+      "站点名称": "roundfunded.com",
+      "序号": 7,
+      "标题": "Best AI Pitch Deck Generators for Founders (2026)",
+      "发布时间": "",
+      "url": "https://www.roundfunded.com/en/blogs/ai-pitch-deck-generators-2026"
+    },
+    {
+      "引用编号": "226e23063baa47c59dc167e20392eb1e",
+      "检测编号": "951c97667c06483998e9fdbbe1f7f3fc",
+      "站点名称": "perceptis.ai",
+      "序号": 8,
+      "标题": "Best AI Pitch Deck Generators for Client- and Board-Facing Decks in 2026",
+      "发布时间": "",
+      "url": "https://perceptis.ai/blog/best-ai-pitch-deck-generators-for-client--and-board-facing-decks-in-2026"
+    },
+    {
+      "引用编号": "5837a7eefafe4d038ba3327ecb7e5ec1",
+      "检测编号": "951c97667c06483998e9fdbbe1f7f3fc",
+      "站点名称": "今日头条",
+      "序号": 9,
+      "标题": "AI生成销售演示PPT软件怎么选?多款AI工具选购完整指南",
+      "发布时间": "",
+      "url": "https://www.toutiao.com/article/7651616551384252938/"
+    },
+    {
+      "引用编号": "6e731d1c04f74b4a84e35002acb39534",
+      "检测编号": "951c97667c06483998e9fdbbe1f7f3fc",
+      "站点名称": "powerdrill.ai",
+      "序号": 10,
+      "标题": "2026 年最佳路演演示文稿 AI 工具 10 强(深度评测)",
+      "发布时间": "",
+      "url": "https://powerdrill.ai/zh-CN/blog/best-ai-tools-for-pitch-deck-creation"
+    },
+    {
+      "引用编号": "0b0eec8695ba46279bb7ba0233205df2",
+      "检测编号": "951c97667c06483998e9fdbbe1f7f3fc",
+      "站点名称": "unite.ai",
+      "序号": 11,
+      "标题": "10 Best AI Pitch Deck Generators (September 2026)",
+      "发布时间": "",
+      "url": "https://www.unite.ai/lb/pitch-deck-generators/"
+    },
+    {
+      "引用编号": "ea6cb995132b42d0be74169b71e19ed5",
+      "检测编号": "951c97667c06483998e9fdbbe1f7f3fc",
+      "站点名称": "cyberlink.com",
+      "序号": 12,
+      "标题": "8 Best Free AI Presentation Makers in 2026 (Tested & Reviewed)",
+      "发布时间": "",
+      "url": "https://www.cyberlink.com/blog/photo-editing-online-tools/5459/best-ai-presentation-maker"
+    },
+    {
+      "引用编号": "bbe181434705463c95c43d050d7e4e59",
+      "检测编号": "951c97667c06483998e9fdbbe1f7f3fc",
+      "站点名称": "bigesj.com",
+      "序号": 13,
+      "标题": "创赛党亲测5款AI生成PPT!路演神器还是坑?数据说话不踩雷",
+      "发布时间": "",
+      "url": "https://bigesj.com/article/detail/91.html"
+    },
+    {
+      "引用编号": "fcdc3c4d7920406eb757d6444063c73c",
+      "检测编号": "951c97667c06483998e9fdbbe1f7f3fc",
+      "站点名称": "36氪",
+      "序号": 14,
+      "标题": "「像素绽放PixelBloom(AiPPT.com)」完成国家队B2轮融资,打造全球AI办公软件超级工场 36氪首发",
+      "发布时间": "",
+      "url": "https://eu.36kr.com/zh/p/3091292751116423"
+    },
+    {
+      "引用编号": "3ba2701f25b84bae921a56ce4c795818",
+      "检测编号": "951c97667c06483998e9fdbbe1f7f3fc",
+      "站点名称": "ampliz.com",
+      "序号": 15,
+      "标题": "5 Best Sales Presentation Software Tools Tested by Real Revenue Teams",
+      "发布时间": "",
+      "url": "https://www.ampliz.com/resources/best-sales-presentation-software/"
+    },
+    {
+      "引用编号": "5583eb1a430d4e7580412d5c0742b9ff",
+      "检测编号": "951c97667c06483998e9fdbbe1f7f3fc",
+      "站点名称": "AiPPT.cn",
+      "序号": 15,
+      "标题": "AiPPT.cn",
+      "发布时间": "",
+      "url": "https://AiPPT.cn"
+    },
+    {
+      "引用编号": "f454606c94074c66b85ebb14ae8838e3",
+      "检测编号": "951c97667c06483998e9fdbbe1f7f3fc",
+      "站点名称": "AiPPT.com",
+      "序号": 16,
+      "标题": "AiPPT.com",
+      "发布时间": "",
+      "url": "https://AiPPT.com"
+    },
+    {
+      "引用编号": "69fcd5c4347c467aab8a4195f9e84ace",
+      "检测编号": "951c97667c06483998e9fdbbe1f7f3fc",
+      "站点名称": "Beautiful.ai",
+      "序号": 17,
+      "标题": "Beautiful.ai",
+      "发布时间": "",
+      "url": "https://Beautiful.ai"
+    }
+  ],
+  "_obtained": true,
+  "_ai_extracted": false,
+  "_question_record_id": "",
+  "_核心词": "PPT生成厂商",
+  "_企业名称": "上海元符号智能科技有限公司",
+  "_project": "T-上海元符号智能科技有限公司-PPT生成厂商",
+  "_enterprise": "上海元符号智能科技有限公司",
+  "_core_word": "PPT生成厂商",
+  "_detect_date": "2026-09-12",
+  "_detect_date_time": "2026-09-12 03:59:50",
+  "内容提及品牌": [
+    "AiPPT.cn",
+    "像素绽放 PixelBloom",
+    "中信",
+    "农夫山泉",
+    "轻竹办公",
+    "笔格 PPT",
+    "通义",
+    "钉钉",
+    "WPS AI",
+    "Gamma",
+    "Beautiful.ai",
+    "Slidebean",
+    "Plus AI",
+    "Pitch",
+    "Storydoc",
+    "Prezent",
+    "Deliverables AI",
+    "Hebbia",
+    "微软",
+    "Google Gemini",
+    "Decktopus"
+  ]
+}
